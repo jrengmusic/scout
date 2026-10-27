@@ -1,0 +1,5 @@
+#!/bin/bash
+REAL_USER=$(stat -f "%Su" /dev/console)
+REAL_HOME=$(eval echo ~$REAL_USER)
+mkdir -p "$REAL_HOME/.local/bin"
+ln -sf "/opt/scout/scout" "$REAL_HOME/.local/bin/scout"

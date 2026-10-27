@@ -1,0 +1,132 @@
+/* ==================================== JUCER_BINARY_RESOURCE ====================================
+
+   This is an auto-generated file: Any edits you make may be overwritten!
+
+*/
+
+#include <cstring>
+
+namespace BinaryData
+{
+
+//================== HELP.md ==================
+static const unsigned char temp_binary_data_0[] =
+"# scout\n"
+"\n"
+"Systematic Context Observer for Unit Telemetry.\n"
+"\n"
+"## Command Line\n"
+"\n"
+"```\n"
+"scout <manifest>.md\n"
+"```\n"
+"\n"
+"Scout takes one argument: the path of the manifest. Scout runs the benchmarks the manifest names. Scout writes the report to the `output` file.\n"
+"\n"
+"## Manifest\n"
+"\n"
+"The manifest is a markdown file with two tables.\n"
+"\n"
+"The `run` table sets the run. Each row is one key.\n"
+"\n"
+"| key      | type    | meaning                                                  |\n"
+"|:---------|:--------|:---------------------------------------------------------|\n"
+"| epochs   | int     | The number of epochs each benchmark runs.                |\n"
+"| seed     | int     | The seed for the random numbers of the run.              |\n"
+"| output   | string  | The report file. The path is relative to the manifest.   |\n"
+"| baseline | string  | An earlier report to compare with. Leave empty for none. |\n"
+"\n"
+"The `benchmark` table names the benchmarks. Each row has one `name`. The name is a registered benchmark.\n"
+"\n"
+"## Report\n"
+"\n"
+"The report has one `##` table for each benchmark. Each row is one zone.\n"
+"\n"
+"| column       | meaning                              |\n"
+"|:-------------|:-------------------------------------|\n"
+"| key          | The name of the zone.                |\n"
+"| type         | The type of the value.               |\n"
+"| value        | The median time per epoch, in ns.    |\n"
+"| errorPercent | The error of the median, in percent. |\n"
+"| min          | The shortest time.                   |\n"
+"| max          | The longest time.                    |\n"
+"| calls        | The number of calls of the zone.     |\n"
+"| samples      | The time of each epoch, in ns.       |\n"
+"\n"
+"With a baseline, each row also has these columns:\n"
+"\n"
+"| column      | meaning                                       |\n"
+"|:------------|:----------------------------------------------|\n"
+"| baseline    | The median of the baseline.                   |\n"
+"| change      | The change from the baseline.                 |\n"
+"| probability | The probability that the change is noise.     |\n"
+"\n"
+"Each benchmark also has one mermaid xychart.\n"
+"\n"
+"## Example\n"
+"\n"
+"## run\n"
+"\n"
+"+----------+---------+---------------+\n"
+"| key      | type    | value         |\n"
+"+==========+=========+===============+\n"
+"| epochs   | int     | 11            |\n"
+"+----------+---------+---------------+\n"
+"| seed     | int     | 0             |\n"
+"+----------+---------+---------------+\n"
+"| output   | string  | eve-report.md |\n"
+"+----------+---------+---------------+\n"
+"| baseline | string  |               |\n"
+"+----------+---------+---------------+\n"
+"\n"
+"## benchmark\n"
+"\n"
+"+----------+\n"
+"| name     |\n"
+"+==========+\n"
+"| Terminal |\n"
+"+----------+\n";
+
+const char* HELP_md = (const char*) temp_binary_data_0;
+
+
+const char* getNamedResource (const char* resourceNameUTF8, int& numBytes);
+const char* getNamedResource (const char* resourceNameUTF8, int& numBytes)
+{
+    unsigned int hash = 0;
+
+    if (resourceNameUTF8 != nullptr)
+        while (*resourceNameUTF8 != 0)
+            hash = 31 * hash + (unsigned int) *resourceNameUTF8++;
+
+    switch (hash)
+    {
+        case 0x5ad3d755:  numBytes = 2555; return HELP_md;
+        default: break;
+    }
+
+    numBytes = 0;
+    return nullptr;
+}
+
+const char* namedResourceList[] =
+{
+    "HELP_md"
+};
+
+const char* originalFilenames[] =
+{
+    "HELP.md"
+};
+
+const char* getNamedResourceOriginalFilename (const char* resourceNameUTF8);
+const char* getNamedResourceOriginalFilename (const char* resourceNameUTF8)
+{
+    for (unsigned int i = 0; i < (sizeof (namedResourceList) / sizeof (namedResourceList[0])); ++i)
+        if (strcmp (namedResourceList[i], resourceNameUTF8) == 0)
+            return originalFilenames[i];
+
+    return nullptr;
+}
+
+}

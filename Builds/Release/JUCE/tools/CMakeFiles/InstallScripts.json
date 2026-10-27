@@ -1,0 +1,10 @@
+{
+	"InstallScripts" : 
+	[
+		"/Users/jreng/Documents/Poems/dev/scout/Builds/Release/JUCE/tools/cmake_install.cmake",
+		"/Users/jreng/Documents/Poems/dev/scout/Builds/Release/JUCE/tools/modules/cmake_install.cmake",
+		"/Users/jreng/Documents/Poems/dev/scout/Builds/Release/JUCE/tools/extras/Build/cmake_install.cmake",
+		"/Users/jreng/Documents/Poems/dev/scout/Builds/Release/JUCE/tools/extras/Build/juceaide/cmake_install.cmake"
+	],
+	"Parallel" : false
+}

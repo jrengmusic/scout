@@ -1,0 +1,184 @@
+/*
+ * markdown.css — terminal stylesheet of the scout help text.
+ *
+ * The consumer is jam::StyleMarkdown. The file is embedded in BinaryData and
+ * named files::markdownStyleSheet; printHelp() parses it into the config tree
+ * under the `markdown` sheet. One unit is one terminal cell. The sheet declares
+ * no fontSize, so the base font size takes the owner default of 1 and every em
+ * metric below is a count of cells.
+ *
+ * Section index:
+ *   1. :root        — palette customs
+ *   2. .appearance  — LookAndFeel colour id and font id customs
+ *   3. .metrics     — numeric layout metrics, in em (listIndentCharacters has no unit)
+ *   4. @font-face   — one rule per font role: typeface name, style, height, kerning
+ */
+:root {
+    /* palette
+     * Named colour customs, named verbatim as authored (no casing
+     * transform). Consumed by both renderers: the browser resolves var()
+     * references directly; the runtime parses this block into its palette
+     * registry, keyed by these same custom-property names.
+     */
+    --white: #FFFFFF;
+    --cyan: #00FFFF;
+    --magenta: #FF00FF;
+    --yellow: #FFFF00;
+    --black: #121212;
+    --blank: #00000000;
+}
+
+.appearance {
+    /* appearance
+     * LookAndFeel colour id customs. Each name is an unprefixed,
+     * two-segment custom-property spelling of the colour id (e.g.
+     * --Markdown--textColourId for "Markdown::textColourId"). Values
+     * resolve through var() to a palette colour above. The runtime matches
+     * the custom-property spelling verbatim against the generated
+     * ColourIdMap to resolve the colour id; the browser resolves these as
+     * ordinary CSS variables.
+     */
+    --Markdown--textColourId: var(--white);
+    --Markdown--ruleColourId: var(--white);
+    --Markdown--quoteBarColourId: var(--white);
+    --Markdown--tableLineColourId: var(--white);
+    --Markdown--checkboxColourId: var(--white);
+    --Markdown--syntaxCommentColourId: var(--white);
+    --Markdown--syntaxPunctuationColourId: var(--white);
+    --Markdown--headingColourId: var(--cyan);
+    --Markdown--linkColourId: var(--cyan);
+    --Markdown--syntaxKeywordColourId: var(--cyan);
+    --Markdown--syntaxTypeColourId: var(--cyan);
+    --Markdown--codeTextColourId: var(--magenta);
+    --Markdown--syntaxStringColourId: var(--magenta);
+    --Markdown--tableHeaderColourId: var(--yellow);
+    --Markdown--syntaxNumberColourId: var(--yellow);
+    --Markdown--codeBackgroundColourId: var(--black);
+    --Markdown--quoteBackgroundColourId: var(--black);
+    --Markdown--codeBlockBackgroundColourId: var(--black);
+    --Markdown--tableHeaderBackgroundColourId: var(--black);
+    --Markdown--backgroundColourId: var(--blank);
+    --Markdown--metadataColourId: var(--white);
+    --Markdown--listMarkerColourId: var(--white);
+    --Markdown--taskDoneColourId: var(--white);
+    --Markdown--tagColourId: var(--cyan);
+    --Markdown--tagBackgroundColourId: var(--black);
+    --TextEditor--backgroundColourId: var(--blank);
+    --TextEditor--textColourId: var(--white);
+    --TextEditor--highlightColourId: var(--black);
+    --Markdown--textFontId: var(--text);
+    --Markdown--boldFontId: var(--textSemibold);
+    --Markdown--italicFontId: var(--textItalic);
+    --Markdown--boldItalicFontId: var(--textBoldItalic);
+    --Markdown--codeFontId: var(--mono);
+    --Markdown--heading1FontId: var(--textBold);
+    --Markdown--heading2FontId: var(--textSemibold);
+    --Markdown--heading3FontId: var(--textSemibold);
+    --Markdown--heading4FontId: var(--textSemibold);
+    --Markdown--heading5FontId: var(--textSemibold);
+    --Markdown--heading6FontId: var(--textSemibold);
+    --Markdown--tableHeaderFontId: var(--textSemibold);
+}
+
+.metrics {
+    lineHeight: 1em;
+    heading1Size: 1em;
+    heading2Size: 1em;
+    heading3Size: 1em;
+    heading4Size: 1em;
+    heading5Size: 1em;
+    heading6Size: 1em;
+    heading1LineHeight: 1em;
+    heading2LineHeight: 1em;
+    heading3LineHeight: 1em;
+    heading4LineHeight: 1em;
+    heading5LineHeight: 1em;
+    heading6LineHeight: 1em;
+    heading1LetterSpacing: -0.015;
+    heading2LetterSpacing: -0.011;
+    heading3LetterSpacing: -0.008;
+    heading4LetterSpacing: -0.005;
+    heading5LetterSpacing: -0.002;
+    heading6LetterSpacing: 0;
+    codeSize: 1em;
+    codeLineHeight: 1em;
+    ruleHeight: 1em;
+    paragraphSpacing: 1em;
+    headingSpacing: 2.5em;
+    listIndent: 2.25em;
+    quoteIndent: 1.5em;
+    quoteBarThickness: 0.125em;
+    ruleThickness: 0.125em;
+    codePaddingVertical: 0.75em;
+    codePaddingHorizontal: 1em;
+    codeRadius: 0.25em;
+    inlineCodePaddingHorizontal: 0.2625em;
+    tableCellPaddingVertical: 0.25em;
+    tableCellPaddingHorizontal: 0.5em;
+    tableLineThickness: 0.0625em;
+    tableLineHeight: 1em;
+    maxLineWidth: 100em;
+    margin: 2em;
+    metadataSize: 1em;
+    metadataPaddingVertical: 0.5em;
+    metadataSpacing: 1em;
+    listItemPadding: 0.075em;
+    listIndentCharacters: 3;
+    listBulletSize: 0.3em;
+    metadataLabelWidth: 9em;
+    metadataLineHeight: 1em;
+    metadataGap: 0.5em;
+    metadataIconSize: 1.125em;
+    metadataIconStroke: 0.109375em;
+    tagPaddingHorizontal: 0.56875em;
+    tagPaddingVertical: 0.21875em;
+    tagRadius: 0.618em;
+}
+
+@font-face {
+    font-family: "--text";
+    --typefaceName: system-ui;
+    --typefaceStyle: Regular;
+    --height: 16;
+    --kerning: 0;
+}
+
+@font-face {
+    font-family: "--textBold";
+    --typefaceName: system-ui;
+    --typefaceStyle: Bold;
+    --height: 16;
+    --kerning: 0;
+}
+
+@font-face {
+    font-family: "--textSemibold";
+    --typefaceName: system-ui;
+    --typefaceStyle: Bold;
+    --height: 16;
+    --kerning: 0;
+}
+
+@font-face {
+    font-family: "--textItalic";
+    --typefaceName: system-ui;
+    --typefaceStyle: Italic;
+    --height: 16;
+    --kerning: 0;
+}
+
+@font-face {
+    font-family: "--textBoldItalic";
+    --typefaceName: system-ui;
+    --typefaceStyle: "Bold Italic";
+    --height: 16;
+    --kerning: 0;
+}
+
+@font-face {
+    font-family: "--mono";
+    --typefaceName: system-ui;
+    --typefaceStyle: Regular;
+    --height: 16;
+    --kerning: 0;
+}
