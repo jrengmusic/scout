@@ -140,7 +140,7 @@ Every field is a complete literal; nothing downstream derives, concatenates, or 
 | @user-module | jam_markdown_graphics | Markdown and mermaid materialisation, layout and view component                                  |
 | @user-module | jam_terminal          | VT read-side engine, TTY, protocol vocabulary, keyboard encoding                                 |
 | @user-module | jam_profiler          | Profiler zones — per-thread rings drained to durations per zone                                  |
-| @user-module | jam_unit_test         | Benchmarks on juce::UnitTest — statistics and the profile report                                 |
+| @user-module | jam_subprocess        | JUCE-based subprocess launcher with streaming output and byte-cap truncation                     |
 +--------------+-----------------------+--------------------------------------------------------------------------------------------------+
 
 ## source glob
@@ -170,7 +170,6 @@ Every field is a complete literal; nothing downstream derives, concatenates, or 
 | juceCoreIncludeComSmartPtr         | `$<$<PLATFORM_ID:Windows>:JUCE_CORE_INCLUDE_COM_SMART_PTR=1>`        | Windows COM smart pointer helpers                             |
 | haveFreetype                       | HAVE_FREETYPE                                                        | FreeType font backend, consumed by juce_graphics_Harfbuzz.cpp |
 | haveUnistdH                        | `$<$<NOT:$<PLATFORM_ID:Windows>>:HAVE_UNISTD_H>`                     | POSIX unistd.h present, non-Windows                           |
-| usingProfiler                      | JAM_USING_PROFILER=1                                                 | Profiler zones compiled in                                    |
 +------------------------------------+----------------------------------------------------------------------+---------------------------------------------------------------+
 
 ## include

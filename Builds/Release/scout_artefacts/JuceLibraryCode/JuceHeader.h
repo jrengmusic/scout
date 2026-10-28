@@ -35,7 +35,7 @@
 #include <jam_mermaid_diagram/jam_mermaid_diagram.h>
 #include <jam_markdown_graphics/jam_markdown_graphics.h>
 #include <jam_profiler/jam_profiler.h>
-#include <jam_unit_test/jam_unit_test.h>
+#include <jam_subprocess/jam_subprocess.h>
 
 
 #if JUCE_TARGET_HAS_BINARY_DATA

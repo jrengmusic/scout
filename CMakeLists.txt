@@ -194,7 +194,7 @@ juce_add_module("${CMAKE_CURRENT_SOURCE_DIR}/../jam/jam_mermaid_diagram")  # Cle
 juce_add_module("${CMAKE_CURRENT_SOURCE_DIR}/../jam/jam_markdown_graphics")# Markdown and mermaid materialisation, layout and view component
 juce_add_module("${CMAKE_CURRENT_SOURCE_DIR}/../jam/jam_terminal")         # VT read-side engine, TTY, protocol vocabulary, keyboard encoding
 juce_add_module("${CMAKE_CURRENT_SOURCE_DIR}/../jam/jam_profiler")         # Profiler zones — per-thread rings drained to durations per zone
-juce_add_module("${CMAKE_CURRENT_SOURCE_DIR}/../jam/jam_unit_test")        # Benchmarks on juce::UnitTest — statistics and the profile report
+juce_add_module("${CMAKE_CURRENT_SOURCE_DIR}/../jam/jam_subprocess")       # JUCE-based subprocess launcher with streaming output and byte-cap truncation
 
 message(STATUS "CAST: user modules added from ${CMAKE_CURRENT_SOURCE_DIR}/../jam")
 
@@ -238,7 +238,6 @@ JUCE_USE_CURL=0
 "$<$<PLATFORM_ID:Windows>:JUCE_CORE_INCLUDE_COM_SMART_PTR=1>"
 HAVE_FREETYPE
 "$<$<NOT:$<PLATFORM_ID:Windows>>:HAVE_UNISTD_H>"
-JAM_USING_PROFILER=1
 )
 
 target_include_directories(${PROJECT_NAME} PRIVATE
@@ -270,7 +269,7 @@ jam_mermaid_diagram
 jam_markdown_graphics
 jam_terminal
 jam_profiler
-jam_unit_test
+jam_subprocess
     PUBLIC
         juce::juce_recommended_config_flags
 )

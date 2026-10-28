@@ -27,12 +27,16 @@ namespace Id
 
 /** @brief SCOUT manifest vocabulary — the tables and keys of a scout manifest. */
 
-extern const juce::Identifier manifest;
-extern const juce::Identifier run;
-extern const juce::Identifier benchmark;
 extern const juce::Identifier epochs;
-extern const juce::Identifier seed;
 extern const juce::Identifier output;
+extern const juce::Identifier command;
+extern const juce::Identifier profile;
+extern const juce::Identifier epoch;
+extern const juce::Identifier errorPercent;
+extern const juce::Identifier change;
+extern const juce::Identifier probability;
+extern const juce::Identifier percentile;
+extern const juce::Identifier system;
 
 /**______________________________END OF NAMESPACE______________________________*/
 }// namespace Id

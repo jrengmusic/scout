@@ -1,18 +1,8 @@
 #include <JuceHeader.h>
-#include "generated/ProjectInfo.h"
 #include "generated/Identifiers.h"
-#include "TerminalBenchmark.h"
+#include "ProfileReport.h"
+#include "Benchmark.h"
 #include "Help.h"
-
-static juce::Array<juce::UnitTest*> getTests (const jam::ConfigDocument& manifest)
-{
-    juce::Array<juce::UnitTest*> tests;
-
-    for (const auto* row : manifest.getTableRows (Id::benchmark))
-        tests.addArray (juce::UnitTest::getTestsWithName (manifest.getTableValue (*row, Id::name)));
-
-    return tests;
-}
 
 static juce::ValueTree getBaseline (const juce::File& directory, const juce::String& baselineName)
 {
@@ -25,19 +15,44 @@ static juce::ValueTree getBaseline (const juce::File& directory, const juce::Str
     return juce::ValueTree {};
 }
 
-static juce::ValueTree getProfiles (const juce::Array<juce::UnitTest*>& tests)
+static int writeReport (const juce::File& directory, const juce::ValueTree& run, const juce::ValueTree& profiles)
 {
-    juce::ValueTree profiles { Id::profile };
+    const auto outputFile { directory.getChildFile (run[Id::output].toString()) };
+    const auto report { ProfileReport::getText (profiles) };
 
-    for (auto* test : tests)
+    if (outputFile.replaceWithText (report))
+        return EXIT_SUCCESS;
+
+    std::fputs (outputFile.getFullPathName().toRawUTF8(), stderr);
+    return EXIT_FAILURE;
+}
+
+static int runEpochs (const juce::ValueTree& run, const juce::File& file)
+{
+    const auto directory { file.getParentDirectory() };
+    const auto commandFile { directory.getChildFile (run[Id::command].toString()) };
+    const auto samplesFile { directory.getChildFile (run[Id::samples].toString()) };
+    const auto epochs { static_cast<int> (run[Id::epochs]) };
+
+    jassert (epochs > 0);
+
+    Benchmark benchmark { commandFile, samplesFile, file };
+
+    for (int epoch { 0 }; epoch < epochs; ++epoch)
     {
-        jassert (dynamic_cast<jam::Benchmark*> (test) != nullptr);
+        auto result { benchmark.runEpoch() };
 
-        if (auto* benchmark { dynamic_cast<jam::Benchmark*> (test) })
-            profiles.appendChild (benchmark->getProfile(), nullptr);
+        if (result.wasOk())
+            result = benchmark.addEpoch();
+
+        if (result.failed())
+        {
+            std::fputs (result.getErrorMessage().toRawUTF8(), stderr);
+            return EXIT_FAILURE;
+        }
     }
 
-    return profiles;
+    return writeReport (directory, run, benchmark.getProfiles (getBaseline (directory, run[Id::baseline].toString())));
 }
 
 static int runManifest (const juce::File& file)
@@ -47,38 +62,7 @@ static int runManifest (const juce::File& file)
 
     if (result.wasOk())
     {
-        const auto config { manifest.getValueTree (Id::manifest) };
-        const auto run { config.getChildWithName (Id::toType (Id::run)) };
-        const auto tests { getTests (manifest) };
-
-        for (auto* test : tests)
-        {
-            jassert (dynamic_cast<jam::Benchmark*> (test) != nullptr);
-
-            if (auto* benchmark { dynamic_cast<jam::Benchmark*> (test) })
-                benchmark->setEpochs (static_cast<int> (run[Id::epochs]));
-        }
-
-        const auto directory { file.getParentDirectory() };
-
-        juce::UnitTestRunner runner;
-        runner.runTests (tests, static_cast<juce::int64> (run[Id::seed]));
-
-        const auto report { jam::ProfileReport::getText (getProfiles (tests), getBaseline (directory, run[Id::baseline].toString())) };
-        const auto outputFile { directory.getChildFile (run[Id::output].toString()) };
-
-        if (outputFile.replaceWithText (report))
-        {
-            int failures { 0 };
-
-            for (int i { 0 }; i < runner.getNumResults(); ++i)
-                failures += runner.getResult (i)->failures;
-
-            return failures > 0 ? EXIT_FAILURE : EXIT_SUCCESS;
-        }
-
-        std::fputs (outputFile.getFullPathName().toRawUTF8(), stderr);
-        return EXIT_FAILURE;
+        return runEpochs (manifest.getValueTree (Id::manifest).getChildWithName (Id::toType (Id::run)), file);
     }
 
     std::fputs (result.getErrorMessage().toRawUTF8(), stderr);
@@ -92,7 +76,6 @@ int main (int argc, char* argv[])
 #endif
 
     juce::ScopedJuceInitialiser_GUI libraryInitialiser;
-    TerminalBenchmark terminalBenchmark;
 
     static constexpr int manifestArgumentCount { 2 };
 

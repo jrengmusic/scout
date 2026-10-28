@@ -12,7 +12,7 @@ namespace BinaryData
     const int            mermaid_cssSize = 61268;
 
     extern const char*   HELP_md;
-    const int            HELP_mdSize = 2555;
+    const int            HELP_mdSize = 5619;
 
     extern const char*   markdown_css;
     const int            markdown_cssSize = 6066;
