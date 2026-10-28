@@ -1,12 +1,14 @@
 #include "ProfileReport.h"
 #include "generated/Generated.h"
 
-bool ProfileReport::toFile (const juce::ValueTree& profiles, const juce::File& outputFile)
+bool ProfileReport::toFile (const juce::ValueTree& profiles, const juce::NamedValueSet& properties, const juce::File& outputFile)
 {
     auto document { jam::ConfigDocument::toDocument (profiles) };
 
     for (const auto& benchmark : profiles)
         addChart (document, benchmark);
+
+    document.addProperties (properties);
 
     return jam::MarkdownWriter { jam::MarkdownWriter::defaultLineWrap, { { Id::samples, jam::Profiler::samplesColumnWidth }, { Id::bins, jam::Profiler::samplesColumnWidth } } }.toFile (document, outputFile);
 }

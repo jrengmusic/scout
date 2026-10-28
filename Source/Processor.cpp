@@ -89,9 +89,10 @@ juce::Result Processor::runEpochs (const juce::ValueTree& runTable)
 
 juce::Result Processor::writeReport (const juce::ValueTree& runTable, const juce::ValueTree& profiles)
 {
+    static constexpr const char* const dateTimeFormat { "%d-%m-%Y %H:%M" };
     const auto outputFile { documentFile.getParentDirectory().getChildFile (runTable[Id::output].toString()) };
 
-    if (ProfileReport::toFile (profiles, outputFile))
+    if (ProfileReport::toFile (profiles, { { Id::date, juce::Time::getCurrentTime().formatted (dateTimeFormat) } }, outputFile))
         return juce::Result::ok();
 
     return juce::Result::fail (outputFile.getFullPathName() + Id::diagnosticSeparator + text::Diagnostics::failOutputWrite);

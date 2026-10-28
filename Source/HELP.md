@@ -101,12 +101,18 @@ A `dropped` row follows the zone rows. Its unit is `count`. A `run` table follow
 A `baseline` that names a missing file stops the run before the epochs:
 `scout: not found: <baseline path>`.
 
+Scout reads the baseline after the epochs and before it writes the report. Thus a manifest whose
+`baseline` names its own `output` compares each run with the run before it.
+
 Every row of a report table holds one sample for each epoch. A row that an epoch's samples file does
 not hold adds 0 for that epoch.
 
 Scout writes the report to `output`, relative to the manifest. Scout creates the folder of `output`
 when it does not exist. A report that cannot be written stops the run:
 `scout: <report path>: cannot write output`.
+
+The report starts with front matter. It holds `date`, the time that scout writes the report, as
+`DD-MM-YYYY HH:MM`.
 
 The report has these tables:
 

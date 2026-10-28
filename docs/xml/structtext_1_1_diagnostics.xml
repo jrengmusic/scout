@@ -72,7 +72,7 @@
         <inbodydescription>
         </inbodydescription>
         <location file="generated/Text.h" line="34" column="39" bodyfile="generated/Text.h" bodystart="34" bodyend="34"/>
-        <referencedby refid="struct_processor_1aa277929ee4d6480d62fa48d2dd5f2a6c" compoundref="_processor_8cpp" startline="90" endline="98">Processor::writeReport</referencedby>
+        <referencedby refid="struct_processor_1aa277929ee4d6480d62fa48d2dd5f2a6c" compoundref="_processor_8cpp" startline="90" endline="99">Processor::writeReport</referencedby>
       </memberdef>
       <memberdef kind="variable" id="structtext_1_1_diagnostics_1a67a3d4524798361c7272cca4ff5d19ad" prot="public" static="yes" constexpr="yes" mutable="no">
         <type>const char *const</type>

@@ -19,7 +19,7 @@
         <inbodydescription>
         </inbodydescription>
         <location file="Statistics.h" line="15" column="29" bodyfile="Statistics.h" bodystart="15" bodyend="15"/>
-        <referencedby refid="class_profile_report_1a9e7a7ae53d95a8e5be64b31fdbbec3a9" compoundref="_profile_report_8cpp" startline="103" endline="117">ProfileReport::addComparison</referencedby>
+        <referencedby refid="class_profile_report_1a9e7a7ae53d95a8e5be64b31fdbbec3a9" compoundref="_profile_report_8cpp" startline="105" endline="119">ProfileReport::addComparison</referencedby>
         <referencedby refid="class_statistics_1ae7a7695e6372fae494655e034e130670" compoundref="_statistics_8cpp" startline="72" endline="98">getErrorPercent</referencedby>
         <referencedby refid="class_statistics_1a76bab7c34fa8634f2bb4d9efa0efce8b" compoundref="_statistics_8cpp" startline="34" endline="60">getPercentile</referencedby>
       </memberdef>
@@ -222,7 +222,7 @@
         <references refid="class_statistics_1ab13d52cc86561d1087f96bb421dbeb85" compoundref="_statistics_8h" startline="100" endline="100">medianRank</references>
         <references refid="class_statistics_1ad9cc4dd0882c782416f631ad7f4944e2" compoundref="_statistics_8h" startline="115">sorted</references>
         <referencedby refid="class_statistics_1ae7a7695e6372fae494655e034e130670" compoundref="_statistics_8cpp" startline="72" endline="98">getErrorPercent</referencedby>
-        <referencedby refid="class_profile_report_1a7b882e2ebfe719b1e06329583c2f697c" compoundref="_profile_report_8cpp" startline="69" endline="80">ProfileReport::getZone</referencedby>
+        <referencedby refid="class_profile_report_1a7b882e2ebfe719b1e06329583c2f697c" compoundref="_profile_report_8cpp" startline="71" endline="82">ProfileReport::getZone</referencedby>
       </memberdef>
       <memberdef kind="function" id="class_statistics_1a4be445f232c86acf67deba1b7bb9c738" prot="public" static="no" const="yes" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
         <type>double</type>
@@ -249,7 +249,7 @@
         <referencedby refid="class_statistics_1ae7a7695e6372fae494655e034e130670" compoundref="_statistics_8cpp" startline="72" endline="98">getErrorPercent</referencedby>
         <referencedby refid="class_statistics_1ac4a886dcd0d268ec21c20a52a645803f" compoundref="_statistics_8cpp" startline="62" endline="65">getMedian</referencedby>
         <referencedby refid="class_statistics_1a4be445f232c86acf67deba1b7bb9c738" compoundref="_statistics_8cpp" startline="67" endline="70">getPercentile</referencedby>
-        <referencedby refid="class_profile_report_1ab5d472be1a71894bfb4280711959ba11" compoundref="_profile_report_8cpp" startline="39" endline="67">ProfileReport::getProfile</referencedby>
+        <referencedby refid="class_profile_report_1ab5d472be1a71894bfb4280711959ba11" compoundref="_profile_report_8cpp" startline="41" endline="69">ProfileReport::getProfile</referencedby>
       </memberdef>
       <memberdef kind="function" id="class_statistics_1ae7a7695e6372fae494655e034e130670" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>double</type>
@@ -278,7 +278,7 @@
         <references refid="class_statistics_1ac1be2f46ec2507b9e8bf4bd2e3f677df" compoundref="_statistics_8h" startline="15" endline="15">percentScale</references>
         <references refid="classjam_1_1Array_1a15af995542610b93595677080ed7672e">jam::Array&lt; typename ElementType, typename TypeOfCriticalSectionToUse &gt;::size</references>
         <references refid="class_statistics_1ad9cc4dd0882c782416f631ad7f4944e2" compoundref="_statistics_8h" startline="115">sorted</references>
-        <referencedby refid="class_profile_report_1a7b882e2ebfe719b1e06329583c2f697c" compoundref="_profile_report_8cpp" startline="69" endline="80">ProfileReport::getZone</referencedby>
+        <referencedby refid="class_profile_report_1a7b882e2ebfe719b1e06329583c2f697c" compoundref="_profile_report_8cpp" startline="71" endline="82">ProfileReport::getZone</referencedby>
       </memberdef>
       <memberdef kind="function" id="class_statistics_1a666e606366dd589b5c287875593571d3" prot="public" static="no" const="yes" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
         <type><ref refid="namespacejuce_1a6afa306885ea6220ef17d2a02cfa7f0a" kindref="member" external="/Users/jreng/Documents/Poems/JUCE/docs/tagfile.xml">juce::int64</ref></type>
@@ -301,7 +301,7 @@
         <references refid="class_statistics_1afb462f7a6b0bf07d90d0dc41d4405639" compoundref="_statistics_8h" startline="118">counts</references>
         <references refid="classjam_1_1Array_1a7336e35022c8a66e55217a273f0b8808">jam::Array&lt; typename ElementType, typename TypeOfCriticalSectionToUse &gt;::end</references>
         <referencedby refid="class_statistics_1a145cae352e7a57083eddf7c56a13efe1" compoundref="_statistics_8cpp" startline="115" endline="149">getProbability</referencedby>
-        <referencedby refid="class_profile_report_1ab5d472be1a71894bfb4280711959ba11" compoundref="_profile_report_8cpp" startline="39" endline="67">ProfileReport::getProfile</referencedby>
+        <referencedby refid="class_profile_report_1ab5d472be1a71894bfb4280711959ba11" compoundref="_profile_report_8cpp" startline="41" endline="69">ProfileReport::getProfile</referencedby>
       </memberdef>
       <memberdef kind="function" id="class_statistics_1acf7d7c65ee5f370f467871c89d728690" prot="public" static="no" const="yes" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
         <type>double</type>
@@ -322,7 +322,7 @@
         <location file="Statistics.h" line="74" column="12" bodyfile="Statistics.cpp" bodystart="105" bodyend="108"/>
         <references refid="classjam_1_1Array_1a10879699a5b164961982be5124b4709d">jam::Array&lt; typename ElementType, typename TypeOfCriticalSectionToUse &gt;::first</references>
         <references refid="class_statistics_1ad9cc4dd0882c782416f631ad7f4944e2" compoundref="_statistics_8h" startline="115">sorted</references>
-        <referencedby refid="class_profile_report_1a7b882e2ebfe719b1e06329583c2f697c" compoundref="_profile_report_8cpp" startline="69" endline="80">ProfileReport::getZone</referencedby>
+        <referencedby refid="class_profile_report_1a7b882e2ebfe719b1e06329583c2f697c" compoundref="_profile_report_8cpp" startline="71" endline="82">ProfileReport::getZone</referencedby>
       </memberdef>
       <memberdef kind="function" id="class_statistics_1abc85d18cb8087ef0ce838baa8823185e" prot="public" static="no" const="yes" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
         <type>double</type>
@@ -343,7 +343,7 @@
         <location file="Statistics.h" line="81" column="12" bodyfile="Statistics.cpp" bodystart="110" bodyend="113"/>
         <references refid="classjam_1_1Array_1aa06fe830f5fb147900fc281d30384d77">jam::Array&lt; typename ElementType, typename TypeOfCriticalSectionToUse &gt;::last</references>
         <references refid="class_statistics_1ad9cc4dd0882c782416f631ad7f4944e2" compoundref="_statistics_8h" startline="115">sorted</references>
-        <referencedby refid="class_profile_report_1a7b882e2ebfe719b1e06329583c2f697c" compoundref="_profile_report_8cpp" startline="69" endline="80">ProfileReport::getZone</referencedby>
+        <referencedby refid="class_profile_report_1a7b882e2ebfe719b1e06329583c2f697c" compoundref="_profile_report_8cpp" startline="71" endline="82">ProfileReport::getZone</referencedby>
       </memberdef>
     </sectiondef>
     <sectiondef kind="public-static-func">
@@ -400,7 +400,7 @@
         <references refid="class_statistics_1ad9cc4dd0882c782416f631ad7f4944e2" compoundref="_statistics_8h" startline="115">sorted</references>
         <references refid="structjuce_1_1MathConstants_1acb29a0dcb2eaf2a0216d4d7493c4047f">juce::MathConstants&lt; typename FloatType &gt;::sqrt2</references>
         <references refid="class_statistics_1acc8df00f61967048aa906224f5da5c70" compoundref="_statistics_8cpp" startline="3" endline="16">Statistics</references>
-        <referencedby refid="class_profile_report_1a9e7a7ae53d95a8e5be64b31fdbbec3a9" compoundref="_profile_report_8cpp" startline="103" endline="117">ProfileReport::addComparison</referencedby>
+        <referencedby refid="class_profile_report_1a9e7a7ae53d95a8e5be64b31fdbbec3a9" compoundref="_profile_report_8cpp" startline="105" endline="119">ProfileReport::addComparison</referencedby>
       </memberdef>
     </sectiondef>
     <sectiondef kind="private-static-func">

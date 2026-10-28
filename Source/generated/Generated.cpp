@@ -36,6 +36,7 @@ namespace Id
     const juce::Identifier toolchain    { juce::String::fromUTF8 ("toolchain") };
     const juce::Identifier flag         { juce::String::fromUTF8 ("flag") };
     const juce::Identifier help         { juce::String::fromUTF8 ("help") };
+    const juce::Identifier date         { juce::String::fromUTF8 ("date") };
 
 /**______________________________END OF NAMESPACE______________________________*/
 }// namespace Id

@@ -78,7 +78,7 @@ return {
     default = {
       database = "/Users/jreng/Documents/Poems/dev/scout/Builds/Release/compile_commands.json",
       flags = {
-        "-DCAST_COMMIT=\\\"1e1ae90\\\"",
+        "-DCAST_COMMIT=\\\"2330495\\\"",
         "-DDONT_SET_USING_JUCE_NAMESPACE=1",
         "-DHAVE_FREETYPE",
         "-DHAVE_UNISTD_H",
@@ -157,7 +157,7 @@ return {
     ["no-sign"] = {
       database = "/Users/jreng/Documents/Poems/dev/scout/Builds/Release/compile_commands.json",
       flags = {
-        "-DCAST_COMMIT=\\\"1e1ae90\\\"",
+        "-DCAST_COMMIT=\\\"2330495\\\"",
         "-DDONT_SET_USING_JUCE_NAMESPACE=1",
         "-DHAVE_FREETYPE",
         "-DHAVE_UNISTD_H",
@@ -355,13 +355,13 @@ return {
         debug = true,
         run = true,
       },
-      kind = "executable",
       name = "scout",
       product = {
         debug = "/Users/jreng/Documents/Poems/dev/scout/Builds/Debug/scout_artefacts/Debug/scout",
         default = "/Users/jreng/Documents/Poems/dev/scout/Builds/Release/scout_artefacts/Release/scout",
         ["no-sign"] = "/Users/jreng/Documents/Poems/dev/scout/Builds/Release/scout_artefacts/Release/scout",
       },
+      type = "executable",
     },
   },
   toolchain = {

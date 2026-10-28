@@ -40,6 +40,7 @@ extern const juce::Identifier system;
 extern const juce::Identifier toolchain;   ///< Reserved toolchain manifest table.
 extern const juce::Identifier flag;        ///< Toolchain table flag column.
 extern const juce::Identifier help;
+extern const juce::Identifier date;
 
 /**______________________________END OF NAMESPACE______________________________*/
 }// namespace Id

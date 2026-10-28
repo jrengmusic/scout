@@ -95,7 +95,7 @@
         <references refid="namespacefiles_1a185891dbf761ee7dbe2ac83641d633f2">files::mermaidStyleSheet</references>
         <references refid="structjam_1_1MarkdownDocument_1af46000d5b257120c18b18b7b2a05031c">jam::MarkdownDocument::parse</references>
         <references refid="_help_8cpp_1a3f361f138d00c42487776fb13cc5ebe6" compoundref="_help_8cpp" startline="3" endline="35">printHelp</references>
-        <references refid="namespacefiles_1a4f5d1a618a82e735de711d473aa8033b" compoundref="_generated_8cpp" startline="48" endline="48">files::scoutHelp</references>
+        <references refid="namespacefiles_1a4f5d1a618a82e735de711d473aa8033b" compoundref="_generated_8cpp" startline="49" endline="49">files::scoutHelp</references>
         <referencedby refid="_main_8cpp_1a7f683cefdf7f675f09e36661ce8df7cc" compoundref="_main_8cpp" startline="137" endline="145">printBannerAndHelp</referencedby>
         <referencedby refid="_help_8cpp_1a3f361f138d00c42487776fb13cc5ebe6" compoundref="_help_8cpp" startline="3" endline="35">printHelp</referencedby>
       </memberdef>

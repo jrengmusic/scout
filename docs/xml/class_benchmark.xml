@@ -341,7 +341,7 @@
         <references refid="namespaceId_1aabc8e20f92a637e53d57c073ce9e006b">Id::calls</references>
         <references refid="classjuce_1_1String_1a128e862810bc5e3f16cb70c3c9751867">juce::String::charToString</references>
         <references refid="class_benchmark_1ab658fd8c4392653436c288005e1172a4" compoundref="_benchmark_8h" startline="114">epochSamples</references>
-        <references refid="class_profile_report_1a3963d7e774a47639d9b3e42d41d6b8e6" compoundref="_profile_report_8cpp" startline="14" endline="37">ProfileReport::getProfile</references>
+        <references refid="class_profile_report_1a3963d7e774a47639d9b3e42d41d6b8e6" compoundref="_profile_report_8cpp" startline="16" endline="39">ProfileReport::getProfile</references>
         <references refid="namespaceId_1ae725772eead68e70d784b84b1368bed1" compoundref="_generated_8cpp" startline="29" endline="29">Id::profile</references>
         <references refid="class_benchmark_1a17a83e311aa3aa0faff83483b67537e7" compoundref="_benchmark_8h" startline="126">runTable</references>
         <references refid="class_benchmark_1a297f53f732ae4d2d79d474359af97fe6" compoundref="_benchmark_8h" startline="129">tableType</references>

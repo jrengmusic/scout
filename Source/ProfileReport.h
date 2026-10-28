@@ -6,6 +6,7 @@
  * @brief Builds the profile trees and the report text of a scout run.
  *
  * A profile is a table. Its rows are zones. The report writes each profile as a markdown table.
+ * The report starts with front matter.
  * It adds one mermaid median chart for each unit, and one distribution chart for each zone that holds bins.
  * The chart text comes from `jam::MermaidWriter` over `jam::MermaidDiagram::toDocument`.
  */
@@ -17,12 +18,14 @@ public:
      *
      * The function builds the report document from @p profiles and adds the charts of each profile table.
      * It writes the document through `jam::MarkdownWriter`, which creates the parent folder of @p outputFile.
+     * It adds @p properties as the front matter of the document.
      *
      * @param profiles    Tree of the profile tables that Benchmark::getProfiles() returns.
+     * @param properties  The front matter properties of the report.
      * @param outputFile  File that receives the report.
      * @returns @c true when the write succeeds, or @c false when it fails.
      */
-    static bool toFile (const juce::ValueTree& profiles, const juce::File& outputFile);
+    static bool toFile (const juce::ValueTree& profiles, const juce::NamedValueSet& properties, const juce::File& outputFile);
 
     /**
      * @brief Returns one profile table with one row for each zone of @p samples.

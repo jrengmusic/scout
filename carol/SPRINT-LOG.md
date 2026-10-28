@@ -114,6 +114,64 @@
 <!-- The entry format is in /log (commands/log.md). It is the only source. -->
 <!-- Sprint entries go here, written by PRIMARY agents -->
 
+## Sprint 3: Report Date — run date as front matter through the JAM markdown API ✅
+
+**Date:** 2026-10-29
+**Duration:** not recorded
+
+### Agents Participated
+- COUNSELOR — read the RFC, the scout report path and the JAM metadata-block path. Took the six rulings R1-R6 from ARCHITECT, then wrote and locked `PLAN-report-date.md`. Wrote each Engineer brief and validated each return with a Read. Fixed `jam_MarkdownWriter.cpp:586` (ambiguous `add`), filtered the audit into Amendment A, and wrote this log.
+- Pathfinder — read the scout pipeline (`ProfileReport`, `Processor`, `Benchmark`), the JAM metadata-block parse and write paths, `ConfigDocument`, `juce::Time` and the cast lexicons. Gave the git state for the commit message.
+- Engineer — Steps 1-5, the Step 6.1 build, the audit corrections (#1, #3, #5, #7, #11, #12a, #12d) and the Step 6.4 doxygen pass. Ran cast for `Id::date`.
+- Auditor — one sweep over Steps 1-5. It gave 14 findings. The dispositions are in `PLAN-report-date.md` Amendment A.
+
+### Files Modified (14 total)
+- **JAM**
+  - `jam_markdown/document/jam_MarkdownDocument.h:453-472` — new public `addProperties (const juce::NamedValueSet&)` and public static `getFirstProperty`. `:641` private `addProperties` takes the property set. `:647` new private `getMetadataBlock() const`. `:2075` new `BlockParser::addLines`. The `getVersion` prose now matches its body.
+  - `jam_markdown/document/jam_MarkdownDocument.cpp:355-377` — `build` calls `blocks.addLines (tokens)` and `addProperties (*block, getProperties (*block))`. `:1350-1380` both `addProperties` bodies. The private body asserts one-line, non-empty values. The public body asserts that no metadata block exists, and inserts the block as the first root child in the parse shape. `:1395-1428` `getMetadataBlock`, `getFirstProperty`, `getProperties() const` and `getVersion` read the block through the two new functions. `:896-904` `isEnabled (key)` does the same. `addPropertyLines` walks through `getFirstProperty`.
+  - `jam_markdown/document/jam_MarkdownBlockParser.cpp:2489-2515` — `addLines`: the token-to-line split, moved out of `build` (audit #12a).
+  - `jam_markdown/document/jam_MarkdownWriter.h:526-535` — `getMetadataBlockText` and its doxygen. The `getBlocks` brief names the new renderer.
+  - `jam_markdown/document/jam_MarkdownWriter.cpp:567-589` — `getMetadataBlockText` writes `---`, then `key: value` or `key:` + `- item` from the property elements, then `---`. `:1005-1006` the `metadataBlock` entry uses it (ruling R2).
+- **scout**
+  - `Source/Processor.cpp:92-95` — `writeReport` reads the clock once and passes `{ Id::date, "%d-%m-%Y %H:%M" }` to `ProfileReport::toFile` (rulings R3, R4, R5).
+  - `Source/Processor.h:88` — the `writeReport` doc names the `date` front matter.
+  - `Source/ProfileReport.h:9`, `:16-28` — `toFile` takes `properties`. The class and function docs name the front matter.
+  - `Source/ProfileReport.cpp:4`, `:11` — `document.addProperties (properties)` before the write.
+  - `cast/identifiers.md:44-45` — the `date` row. Cast regenerated `Source/generated/Identifiers.h:43` and `Source/generated/Generated.cpp:39`.
+  - `Source/HELP.md:104-105` — scout reads the baseline after the epochs, so a self-baseline compares with the previous run (ruling R6). `:114-115` — the report starts with front matter that holds `date` as `DD-MM-YYYY HH:MM`.
+  - `PLAN-report-date.md` (new) — the locked plan, rulings R1-R6, and Amendment A.
+
+### Alignment Check
+- [x] BLESSED principles followed
+  - S: scout writes no `---` text. JAM writes the block from its property elements (R1, R2).
+  - E: the date reaches `toFile` as a parameter. Preconditions use `jassert` at the owner.
+  - L: `build` went from 46 lines to 24.
+- [x] NAMES.md adhered: each new name comes from a family. `getMetadataBlockText` (from `getHtmlBlockText`), `addProperties` (overload), `addLines` (from `addLine`), `getFirstProperty` and `getMetadataBlock` (from `getProperties`, `isMetadataBlock`), `dateTimeFormat` (`jam/cast/markdown.md:48`). `date` is ARCHITECT's ruling R3.
+- [x] MANIFESTO.md principles applied
+- [x] Audit: each finding was read and named against a clause. Accepted findings are resolved. Each rejection cites the refuting read (Amendment A).
+- [x] Doxygen: 0 warnings for scout `Source/` and for `jam_MarkdownDocument.h` and `jam_MarkdownWriter.h`. The check ran through `~/.config/nvim/doxygen/Doxyfile.project` into the scratchpad. scout has no `doxygen` ninja target.
+
+### Problems Solved
+- **A report had no date of its own.** The report now starts with front matter that holds `date` as `DD-MM-YYYY HH:MM`. scout takes the date at report write.
+- **JAM read front matter but could not write it from data.** `MarkdownWriter` only echoed the parsed raw text. It now writes the block from the property elements. A public `addProperties` builds the block.
+- **`lines.add (Chars::tripleDash)` did not compile.** The call matched all four `jam::Strings::add` overloads (`jam_Strings.h:228`, `:239`, `:245`, `:251`). It now calls the `std::string_view` overload.
+- **The metadata-block search and the property walk appeared four and three times.** Each is now one function.
+
+### State for Continuation
+- Builds: the scout Release build with `-DCAST_SIGN=OFF` is clean. ARCHITECT has not run the new binary on a manifest. Check that the report starts with `---`, `date: …`, `---`, and that a report used as a baseline still reads back.
+- Every metadata block now writes from its property elements, parsed blocks included. A parsed line that is not `key: value`, `key:` or `- item` is not written back (`jam_MarkdownDocument.cpp:1330-1345`).
+- JAM types `29-10-2026 14:03` as text, not as a date (`jam_MarkdownDocument.cpp` `getPropertyType`, `dateCharacters` in `jam/cast/markdown.md:45`).
+- `scout/docs/xml` is regenerated with the new `toFile` signature and `dateTimeFormat` (git diff). `jam/docs/xml` shows no change in `git status`. Check it for `getMetadataBlockText`, `getFirstProperty`, `getMetadataBlock` and `addLines` before you rely on it.
+- The cast run rewrote `.project`: `CAST_COMMIT` `1e1ae90` → `2330495`, and `kind` → `type`.
+- The JAM working tree also holds uncommitted changes from outside this sprint: `jam_core/concurrency/jam_AsyncUpdater.*` and `jam_terminal/tty/` (`isRunning` removed). This log does not attribute them.
+- `~/.carol/skills/profile/SKILL.md` (report grammar, `:205-213`) does not mention the front matter. It was outside this sprint's file set.
+
+### Debts Paid
+- None
+
+### Debts Deferred
+- None
+
 ## Sprint 2: Profiling — scout identical to cast, one command per profile ✅
 
 **Date:** 2026-10-28

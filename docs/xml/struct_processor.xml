@@ -18,10 +18,10 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Processor.h" line="98" column="22" bodyfile="Processor.h" bodystart="98" bodyend="-1"/>
+        <location file="Processor.h" line="99" column="22" bodyfile="Processor.h" bodystart="99" bodyend="-1"/>
         <referencedby refid="struct_processor_1abe5471b3c8a21dfe9bc8e7683eb4868c" compoundref="_processor_8cpp" startline="11" endline="15">Processor</referencedby>
         <referencedby refid="struct_processor_1a88ec28a8e3dd1b6e1f41fbaa315a737e" compoundref="_processor_8cpp" startline="57" endline="88">runEpochs</referencedby>
-        <referencedby refid="struct_processor_1aa277929ee4d6480d62fa48d2dd5f2a6c" compoundref="_processor_8cpp" startline="90" endline="98">writeReport</referencedby>
+        <referencedby refid="struct_processor_1aa277929ee4d6480d62fa48d2dd5f2a6c" compoundref="_processor_8cpp" startline="90" endline="99">writeReport</referencedby>
       </memberdef>
       <memberdef kind="variable" id="struct_processor_1afb131d60d600f95ce7bc382f8d9724e7" prot="private" static="no" mutable="no">
         <type>const <ref refid="structjam_1_1ConfigDocument" kindref="compound" external="/Users/jreng/Documents/Poems/dev/jam/docs/tagfile.xml">jam::ConfigDocument</ref></type>
@@ -36,7 +36,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Processor.h" line="101" column="31" bodyfile="Processor.h" bodystart="101" bodyend="-1"/>
+        <location file="Processor.h" line="102" column="31" bodyfile="Processor.h" bodystart="102" bodyend="-1"/>
         <referencedby refid="struct_processor_1ac2f8ddc17ef15f47f03fa71ce3d381c6" compoundref="_processor_8cpp" startline="17" endline="33">generate</referencedby>
         <referencedby refid="struct_processor_1abe5471b3c8a21dfe9bc8e7683eb4868c" compoundref="_processor_8cpp" startline="11" endline="15">Processor</referencedby>
         <referencedby refid="struct_processor_1a6ace9660425275f32080160c0ae88b2b" compoundref="_processor_8cpp" startline="35" endline="43">run</referencedby>
@@ -72,8 +72,8 @@
         <inbodydescription>
         </inbodydescription>
         <location file="Processor.h" line="26" column="14" bodyfile="Processor.cpp" bodystart="11" bodyend="15"/>
-        <references refid="struct_processor_1a8dbadccb605c3a32f0e5af688b43d652" compoundref="_processor_8h" startline="98">documentFile</references>
-        <references refid="struct_processor_1afb131d60d600f95ce7bc382f8d9724e7" compoundref="_processor_8h" startline="101">manifest</references>
+        <references refid="struct_processor_1a8dbadccb605c3a32f0e5af688b43d652" compoundref="_processor_8h" startline="99">documentFile</references>
+        <references refid="struct_processor_1afb131d60d600f95ce7bc382f8d9724e7" compoundref="_processor_8h" startline="102">manifest</references>
       </memberdef>
       <memberdef kind="function" id="struct_processor_1ac2f8ddc17ef15f47f03fa71ce3d381c6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classjuce_1_1Result" kindref="compound" external="/Users/jreng/Documents/Poems/JUCE/docs/tagfile.xml">juce::Result</ref></type>
@@ -97,7 +97,7 @@
         <references refid="structjam_1_1ConfigDocument_1adec16ec1ad68995d0addd3b78a442b34">jam::ConfigDocument::getValueTree</references>
         <references refid="structjam_1_1Document_1_1Validator_1a1275a95db9c777fcceff5c574c561ae0">jam::Document::Validator::isValid</references>
         <references refid="namespaceId_1a14ad76a66641361dbfbfc9424e6a2f3f">Id::manifest</references>
-        <references refid="struct_processor_1afb131d60d600f95ce7bc382f8d9724e7" compoundref="_processor_8h" startline="101">manifest</references>
+        <references refid="struct_processor_1afb131d60d600f95ce7bc382f8d9724e7" compoundref="_processor_8h" startline="102">manifest</references>
         <references refid="namespaceId_1ae94c00f38c99144148371d4d273c298b">Id::run</references>
         <references refid="struct_processor_1a6ace9660425275f32080160c0ae88b2b" compoundref="_processor_8cpp" startline="35" endline="43">run</references>
         <references refid="struct_processor_1a88ec28a8e3dd1b6e1f41fbaa315a737e" compoundref="_processor_8cpp" startline="57" endline="88">runEpochs</references>
@@ -126,7 +126,7 @@
         <location file="Processor.h" line="52" column="18" bodyfile="Processor.cpp" bodystart="35" bodyend="43"/>
         <references refid="structjam_1_1MarkdownDocument_1ae0e1ecae86b43cd8ffa7be4594f50150">jam::MarkdownDocument::getTableRows</references>
         <references refid="structjam_1_1MarkdownDocument_1a5f9310fc70231c79f9573fb7f9a67ed4">jam::MarkdownDocument::getTables</references>
-        <references refid="struct_processor_1afb131d60d600f95ce7bc382f8d9724e7" compoundref="_processor_8h" startline="101">manifest</references>
+        <references refid="struct_processor_1afb131d60d600f95ce7bc382f8d9724e7" compoundref="_processor_8h" startline="102">manifest</references>
         <references refid="classjuce_1_1Result_1ac2133128eeba510367bfe1b83383ae0f">juce::Result::ok</references>
         <references refid="struct_processor_1a83804663c3ddec5019aad5fa2673bada" compoundref="_processor_8cpp" startline="45" endline="55">runToolchainRow</references>
         <references refid="namespaceId_1a0f9647376c570f4f428258196fa64c61" compoundref="_generated_8cpp" startline="36" endline="36">Id::toolchain</references>
@@ -167,7 +167,7 @@
         <references refid="namespaceId_1ac8f84d92cb02638b89abb87149be1caf" compoundref="_generated_8cpp" startline="37" endline="37">Id::flag</references>
         <references refid="structjam_1_1MarkdownDocument_1a06a09fa79c04fe1fdd553245cb6b6d87">jam::MarkdownDocument::getTableValue</references>
         <references refid="struct_toolchain_1ad96b65cacfb0e4c8d2c1cf75acd01100" compoundref="_toolchain_8cpp" startline="3" endline="13">Toolchain::getToolchainArguments</references>
-        <references refid="struct_processor_1afb131d60d600f95ce7bc382f8d9724e7" compoundref="_processor_8h" startline="101">manifest</references>
+        <references refid="struct_processor_1afb131d60d600f95ce7bc382f8d9724e7" compoundref="_processor_8h" startline="102">manifest</references>
         <references refid="struct_toolchain_1a99335d844ab10df762460e0d2beea4db" compoundref="_toolchain_8cpp" startline="15" endline="41">Toolchain::runProcess</references>
         <references refid="structChars_1a04b9b7227a5cdf082413821f7a1c66de">Chars::space</references>
         <referencedby refid="struct_processor_1a6ace9660425275f32080160c0ae88b2b" compoundref="_processor_8cpp" startline="35" endline="43">run</referencedby>
@@ -207,7 +207,7 @@
         <references refid="namespaceId_1a6f000170fabbf731e725a54a1682b99e">Id::baseline</references>
         <references refid="namespaceId_1a1538a142ed265f60c8fcf1703a106a7d" compoundref="_generated_8cpp" startline="28" endline="28">Id::command</references>
         <references refid="namespaceId_1a5e729b9864fd096462b3f08ef1eb4b1a">Id::diagnosticSeparator</references>
-        <references refid="struct_processor_1a8dbadccb605c3a32f0e5af688b43d652" compoundref="_processor_8h" startline="98">documentFile</references>
+        <references refid="struct_processor_1a8dbadccb605c3a32f0e5af688b43d652" compoundref="_processor_8h" startline="99">documentFile</references>
         <references refid="namespaceId_1af393585104ec335510688180036ff1d6" compoundref="_generated_8cpp" startline="26" endline="26">Id::epochs</references>
         <references refid="classjuce_1_1Result_1a27205a4dc7a973aebd1976270867be80">juce::Result::fail</references>
         <references refid="structtext_1_1_diagnostics_1a614879ccbad6f4edaf1a511bf5a2fa68" compoundref="_text_8h" startline="31" endline="31">text::Diagnostics::failNotFound</references>
@@ -216,7 +216,7 @@
         <references refid="class_benchmark_1ac2758e9667d09cca4fa1c7d0845c7413" compoundref="_benchmark_8cpp" startline="152" endline="164">Benchmark::getProfiles</references>
         <references refid="class_benchmark_1a8b4bab8a038fba5d18366ba23e32923f" compoundref="_benchmark_8cpp" startline="52" endline="77">Benchmark::runEpoch</references>
         <references refid="namespaceId_1a767aceb9bc5d27527f647a9935420ee1">Id::samples</references>
-        <references refid="struct_processor_1aa277929ee4d6480d62fa48d2dd5f2a6c" compoundref="_processor_8cpp" startline="90" endline="98">writeReport</references>
+        <references refid="struct_processor_1aa277929ee4d6480d62fa48d2dd5f2a6c" compoundref="_processor_8cpp" startline="90" endline="99">writeReport</references>
         <referencedby refid="struct_processor_1ac2f8ddc17ef15f47f03fa71ce3d381c6" compoundref="_processor_8cpp" startline="17" endline="33">generate</referencedby>
       </memberdef>
       <memberdef kind="function" id="struct_processor_1aa277929ee4d6480d62fa48d2dd5f2a6c" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
@@ -234,10 +234,10 @@
           <declname>profiles</declname>
         </param>
         <briefdescription>
-<para>Writes the report of <computeroutput>profiles</computeroutput> to the <computeroutput>output</computeroutput> file of <computeroutput>runTable</computeroutput>, through <ref refid="class_profile_report_1aeb4677445b193940dcc411da7c367505" kindref="member">ProfileReport::toFile()</ref>. </para>
+<para>Writes the report of <computeroutput>profiles</computeroutput> to the <computeroutput>output</computeroutput> file of <computeroutput>runTable</computeroutput>, through <ref refid="class_profile_report_1a7d27ee8611bb27c7248defc82b510100" kindref="member">ProfileReport::toFile()</ref>. </para>
         </briefdescription>
         <detaileddescription>
-<para>The <computeroutput>output</computeroutput> path resolves against the folder of the manifest.</para>
+<para>The front matter of the report holds <computeroutput>date</computeroutput>, the time of the write, as <computeroutput>DD-MM-YYYY HH:MM</computeroutput>. The <computeroutput>output</computeroutput> path resolves against the folder of the manifest.</para>
 <para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>runTable</parametername>
@@ -261,16 +261,19 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Processor.h" line="95" column="18" bodyfile="Processor.cpp" bodystart="90" bodyend="98"/>
+        <location file="Processor.h" line="96" column="18" bodyfile="Processor.cpp" bodystart="90" bodyend="99"/>
+        <references refid="namespaceId_1a32ffc7aee9ffe0ba992401c38b1e8243" compoundref="_generated_8cpp" startline="39" endline="39">Id::date</references>
         <references refid="namespaceId_1a5e729b9864fd096462b3f08ef1eb4b1a">Id::diagnosticSeparator</references>
-        <references refid="struct_processor_1a8dbadccb605c3a32f0e5af688b43d652" compoundref="_processor_8h" startline="98">documentFile</references>
+        <references refid="struct_processor_1a8dbadccb605c3a32f0e5af688b43d652" compoundref="_processor_8h" startline="99">documentFile</references>
         <references refid="classjuce_1_1Result_1a27205a4dc7a973aebd1976270867be80">juce::Result::fail</references>
         <references refid="structtext_1_1_diagnostics_1a17a0efaa59e3489e8242be054d6280f5" compoundref="_text_8h" startline="34" endline="34">text::Diagnostics::failOutputWrite</references>
+        <references refid="classjuce_1_1Time_1adee636559a2f33f9e67c56fd0f9a3b2e">juce::Time::formatted</references>
         <references refid="classjuce_1_1File_1a57b992aacb19e09ee5905cd0f0e9bb31">juce::File::getChildFile</references>
+        <references refid="classjuce_1_1Time_1ad8306070f7b89d416fe8dabaa5a2abc2">juce::Time::getCurrentTime</references>
         <references refid="classjuce_1_1File_1ab6bec65fbcf19ce10e38cf9d1015770d">juce::File::getParentDirectory</references>
         <references refid="classjuce_1_1Result_1ac2133128eeba510367bfe1b83383ae0f">juce::Result::ok</references>
         <references refid="namespaceId_1a3c8da0c68c021ababf62dc69bef9488a" compoundref="_identifiers_8h" startline="31">Id::output</references>
-        <references refid="class_profile_report_1aeb4677445b193940dcc411da7c367505" compoundref="_profile_report_8cpp" startline="4" endline="12">ProfileReport::toFile</references>
+        <references refid="class_profile_report_1a7d27ee8611bb27c7248defc82b510100" compoundref="_profile_report_8cpp" startline="4" endline="14">ProfileReport::toFile</references>
         <referencedby refid="struct_processor_1a88ec28a8e3dd1b6e1f41fbaa315a737e" compoundref="_processor_8cpp" startline="57" endline="88">runEpochs</referencedby>
       </memberdef>
     </sectiondef>
@@ -427,7 +430,7 @@
         </childnode>
       </node>
     </collaborationgraph>
-    <location file="Processor.h" line="18" column="1" bodyfile="Processor.h" bodystart="19" bodyend="104"/>
+    <location file="Processor.h" line="18" column="1" bodyfile="Processor.h" bodystart="19" bodyend="105"/>
     <listofallmembers>
       <member refid="struct_processor_1a8dbadccb605c3a32f0e5af688b43d652" prot="private" virt="non-virtual"><scope>Processor</scope><name>documentFile</name></member>
       <member refid="struct_processor_1ac2f8ddc17ef15f47f03fa71ce3d381c6" prot="public" virt="non-virtual"><scope>Processor</scope><name>generate</name></member>

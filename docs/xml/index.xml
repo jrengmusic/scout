@@ -39,7 +39,7 @@
     <member refid="struct_processor_1aa277929ee4d6480d62fa48d2dd5f2a6c" kind="function"><name>writeReport</name></member>
   </compound>
   <compound refid="class_profile_report" kind="class"><name>ProfileReport</name>
-    <member refid="class_profile_report_1aeb4677445b193940dcc411da7c367505" kind="function"><name>toFile</name></member>
+    <member refid="class_profile_report_1a7d27ee8611bb27c7248defc82b510100" kind="function"><name>toFile</name></member>
     <member refid="class_profile_report_1a3963d7e774a47639d9b3e42d41d6b8e6" kind="function"><name>getProfile</name></member>
     <member refid="class_profile_report_1ab5d472be1a71894bfb4280711959ba11" kind="function"><name>getProfile</name></member>
     <member refid="class_profile_report_1a7b882e2ebfe719b1e06329583c2f697c" kind="function"><name>getZone</name></member>

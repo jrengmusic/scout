@@ -543,8 +543,8 @@
       <type>static bool</type>
       <name>toFile</name>
       <anchorfile>class_profile_report.html</anchorfile>
-      <anchor>aeb4677445b193940dcc411da7c367505</anchor>
-      <arglist>(const juce::ValueTree &amp;profiles, const juce::File &amp;outputFile)</arglist>
+      <anchor>a7d27ee8611bb27c7248defc82b510100</anchor>
+      <arglist>(const juce::ValueTree &amp;profiles, const juce::NamedValueSet &amp;properties, const juce::File &amp;outputFile)</arglist>
     </member>
     <member kind="function" static="yes">
       <type>static juce::ValueTree</type>

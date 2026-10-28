@@ -85,6 +85,7 @@ private:
      * @brief Writes the report of @p profiles to the `output` file of
      *        @p runTable, through ProfileReport::toFile().
      *
+     * The front matter of the report holds `date`, the time of the write, as `DD-MM-YYYY HH:MM`.
      * The `output` path resolves against the folder of the manifest.
      *
      * @param runTable  The `run` table of the manifest.

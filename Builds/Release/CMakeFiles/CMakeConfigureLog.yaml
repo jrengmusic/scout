@@ -3606,3 +3606,351 @@ events:
         
       exitCode: 0
 ...
+
+---
+events:
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/CheckIPOSupported.cmake:197 (try_compile)"
+      - "/opt/homebrew/share/cmake/Modules/CheckIPOSupported.cmake:319 (_ipo_run_language_check)"
+      - "CMakeLists.txt:329 (check_ipo_supported)"
+    directories:
+      source: "/Users/jreng/Documents/Poems/dev/scout/Builds/Release/CMakeFiles/_CMakeLTOTest-CXX/src"
+      binary: "/Users/jreng/Documents/Poems/dev/scout/Builds/Release/CMakeFiles/_CMakeLTOTest-CXX/bin"
+    cmakeVariables:
+      CMAKE_CXX_STDLIB_MODULES_JSON: ""
+      CMAKE_OSX_ARCHITECTURES: "x86_64;arm64"
+      CMAKE_OSX_DEPLOYMENT_TARGET: "11.0"
+      CMAKE_OSX_SYSROOT: ""
+    buildResult:
+      variable: "_IPO_LANGUAGE_CHECK_RESULT"
+      cached: false
+      stdout: |
+        Change Dir: '/Users/jreng/Documents/Poems/dev/scout/Builds/Release/CMakeFiles/_CMakeLTOTest-CXX/bin'
+        
+        Run Build Command(s): /opt/homebrew/bin/ninja -v
+        [1/4] /usr/bin/c++   -g -flto=thin -arch x86_64 -arch arm64 -mmacosx-version-min=11.0 -MD -MT CMakeFiles/foo.dir/foo.cpp.o -MF CMakeFiles/foo.dir/foo.cpp.o.d -o CMakeFiles/foo.dir/foo.cpp.o -c /Users/jreng/Documents/Poems/dev/scout/Builds/Release/CMakeFiles/_CMakeLTOTest-CXX/src/foo.cpp
+        [2/4] /usr/bin/c++   -g -flto=thin -arch x86_64 -arch arm64 -mmacosx-version-min=11.0 -MD -MT CMakeFiles/boo.dir/main.cpp.o -MF CMakeFiles/boo.dir/main.cpp.o.d -o CMakeFiles/boo.dir/main.cpp.o -c /Users/jreng/Documents/Poems/dev/scout/Builds/Release/CMakeFiles/_CMakeLTOTest-CXX/src/main.cpp
+        [3/4] : && /opt/homebrew/bin/cmake -E rm -f libfoo.a && "/usr/bin/ar" qc libfoo.a  CMakeFiles/foo.dir/foo.cpp.o && "/usr/bin/ranlib" libfoo.a && /opt/homebrew/bin/cmake -E touch libfoo.a && :
+        [4/4] : && /usr/bin/c++ -g -flto=thin -arch x86_64 -arch arm64 -mmacosx-version-min=11.0 -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/boo.dir/main.cpp.o -o boo  libfoo.a && :
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/CheckIPOSupported.cmake:197 (try_compile)"
+      - "/opt/homebrew/share/cmake/Modules/CheckIPOSupported.cmake:319 (_ipo_run_language_check)"
+      - "CMakeLists.txt:329 (check_ipo_supported)"
+    directories:
+      source: "/Users/jreng/Documents/Poems/dev/scout/Builds/Release/CMakeFiles/_CMakeLTOTest-C/src"
+      binary: "/Users/jreng/Documents/Poems/dev/scout/Builds/Release/CMakeFiles/_CMakeLTOTest-C/bin"
+    cmakeVariables:
+      CMAKE_CXX_STDLIB_MODULES_JSON: ""
+      CMAKE_OSX_ARCHITECTURES: "x86_64;arm64"
+      CMAKE_OSX_DEPLOYMENT_TARGET: "11.0"
+      CMAKE_OSX_SYSROOT: ""
+    buildResult:
+      variable: "_IPO_LANGUAGE_CHECK_RESULT"
+      cached: false
+      stdout: |
+        Change Dir: '/Users/jreng/Documents/Poems/dev/scout/Builds/Release/CMakeFiles/_CMakeLTOTest-C/bin'
+        
+        Run Build Command(s): /opt/homebrew/bin/ninja -v
+        [1/4] /usr/bin/cc   -g -flto=thin -arch x86_64 -arch arm64 -mmacosx-version-min=11.0 -MD -MT CMakeFiles/foo.dir/foo.c.o -MF CMakeFiles/foo.dir/foo.c.o.d -o CMakeFiles/foo.dir/foo.c.o -c /Users/jreng/Documents/Poems/dev/scout/Builds/Release/CMakeFiles/_CMakeLTOTest-C/src/foo.c
+        [2/4] /usr/bin/cc   -g -flto=thin -arch x86_64 -arch arm64 -mmacosx-version-min=11.0 -MD -MT CMakeFiles/boo.dir/main.c.o -MF CMakeFiles/boo.dir/main.c.o.d -o CMakeFiles/boo.dir/main.c.o -c /Users/jreng/Documents/Poems/dev/scout/Builds/Release/CMakeFiles/_CMakeLTOTest-C/src/main.c
+        [3/4] : && /opt/homebrew/bin/cmake -E rm -f libfoo.a && "/usr/bin/ar" qc libfoo.a  CMakeFiles/foo.dir/foo.c.o && "/usr/bin/ranlib" libfoo.a && /opt/homebrew/bin/cmake -E touch libfoo.a && :
+        [4/4] : && /usr/bin/cc -g -flto=thin -arch x86_64 -arch arm64 -mmacosx-version-min=11.0 -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/boo.dir/main.c.o -o boo  libfoo.a && :
+        
+      exitCode: 0
+...
+
+---
+events:
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/CheckIPOSupported.cmake:197 (try_compile)"
+      - "/opt/homebrew/share/cmake/Modules/CheckIPOSupported.cmake:319 (_ipo_run_language_check)"
+      - "CMakeLists.txt:329 (check_ipo_supported)"
+    directories:
+      source: "/Users/jreng/Documents/Poems/dev/scout/Builds/Release/CMakeFiles/_CMakeLTOTest-CXX/src"
+      binary: "/Users/jreng/Documents/Poems/dev/scout/Builds/Release/CMakeFiles/_CMakeLTOTest-CXX/bin"
+    cmakeVariables:
+      CMAKE_CXX_STDLIB_MODULES_JSON: ""
+      CMAKE_OSX_ARCHITECTURES: "x86_64;arm64"
+      CMAKE_OSX_DEPLOYMENT_TARGET: "11.0"
+      CMAKE_OSX_SYSROOT: ""
+    buildResult:
+      variable: "_IPO_LANGUAGE_CHECK_RESULT"
+      cached: false
+      stdout: |
+        Change Dir: '/Users/jreng/Documents/Poems/dev/scout/Builds/Release/CMakeFiles/_CMakeLTOTest-CXX/bin'
+        
+        Run Build Command(s): /opt/homebrew/bin/ninja -v
+        [1/4] /usr/bin/c++   -g -flto=thin -arch x86_64 -arch arm64 -mmacosx-version-min=11.0 -MD -MT CMakeFiles/foo.dir/foo.cpp.o -MF CMakeFiles/foo.dir/foo.cpp.o.d -o CMakeFiles/foo.dir/foo.cpp.o -c /Users/jreng/Documents/Poems/dev/scout/Builds/Release/CMakeFiles/_CMakeLTOTest-CXX/src/foo.cpp
+        [2/4] /usr/bin/c++   -g -flto=thin -arch x86_64 -arch arm64 -mmacosx-version-min=11.0 -MD -MT CMakeFiles/boo.dir/main.cpp.o -MF CMakeFiles/boo.dir/main.cpp.o.d -o CMakeFiles/boo.dir/main.cpp.o -c /Users/jreng/Documents/Poems/dev/scout/Builds/Release/CMakeFiles/_CMakeLTOTest-CXX/src/main.cpp
+        [3/4] : && /opt/homebrew/bin/cmake -E rm -f libfoo.a && "/usr/bin/ar" qc libfoo.a  CMakeFiles/foo.dir/foo.cpp.o && "/usr/bin/ranlib" libfoo.a && /opt/homebrew/bin/cmake -E touch libfoo.a && :
+        [4/4] : && /usr/bin/c++ -g -flto=thin -arch x86_64 -arch arm64 -mmacosx-version-min=11.0 -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/boo.dir/main.cpp.o -o boo  libfoo.a && :
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/CheckIPOSupported.cmake:197 (try_compile)"
+      - "/opt/homebrew/share/cmake/Modules/CheckIPOSupported.cmake:319 (_ipo_run_language_check)"
+      - "CMakeLists.txt:329 (check_ipo_supported)"
+    directories:
+      source: "/Users/jreng/Documents/Poems/dev/scout/Builds/Release/CMakeFiles/_CMakeLTOTest-C/src"
+      binary: "/Users/jreng/Documents/Poems/dev/scout/Builds/Release/CMakeFiles/_CMakeLTOTest-C/bin"
+    cmakeVariables:
+      CMAKE_CXX_STDLIB_MODULES_JSON: ""
+      CMAKE_OSX_ARCHITECTURES: "x86_64;arm64"
+      CMAKE_OSX_DEPLOYMENT_TARGET: "11.0"
+      CMAKE_OSX_SYSROOT: ""
+    buildResult:
+      variable: "_IPO_LANGUAGE_CHECK_RESULT"
+      cached: false
+      stdout: |
+        Change Dir: '/Users/jreng/Documents/Poems/dev/scout/Builds/Release/CMakeFiles/_CMakeLTOTest-C/bin'
+        
+        Run Build Command(s): /opt/homebrew/bin/ninja -v
+        [1/4] /usr/bin/cc   -g -flto=thin -arch x86_64 -arch arm64 -mmacosx-version-min=11.0 -MD -MT CMakeFiles/boo.dir/main.c.o -MF CMakeFiles/boo.dir/main.c.o.d -o CMakeFiles/boo.dir/main.c.o -c /Users/jreng/Documents/Poems/dev/scout/Builds/Release/CMakeFiles/_CMakeLTOTest-C/src/main.c
+        [2/4] /usr/bin/cc   -g -flto=thin -arch x86_64 -arch arm64 -mmacosx-version-min=11.0 -MD -MT CMakeFiles/foo.dir/foo.c.o -MF CMakeFiles/foo.dir/foo.c.o.d -o CMakeFiles/foo.dir/foo.c.o -c /Users/jreng/Documents/Poems/dev/scout/Builds/Release/CMakeFiles/_CMakeLTOTest-C/src/foo.c
+        [3/4] : && /opt/homebrew/bin/cmake -E rm -f libfoo.a && "/usr/bin/ar" qc libfoo.a  CMakeFiles/foo.dir/foo.c.o && "/usr/bin/ranlib" libfoo.a && /opt/homebrew/bin/cmake -E touch libfoo.a && :
+        [4/4] : && /usr/bin/cc -g -flto=thin -arch x86_64 -arch arm64 -mmacosx-version-min=11.0 -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/boo.dir/main.c.o -o boo  libfoo.a && :
+        
+      exitCode: 0
+...
+
+---
+events:
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/CheckIPOSupported.cmake:197 (try_compile)"
+      - "/opt/homebrew/share/cmake/Modules/CheckIPOSupported.cmake:319 (_ipo_run_language_check)"
+      - "CMakeLists.txt:329 (check_ipo_supported)"
+    directories:
+      source: "/Users/jreng/Documents/Poems/dev/scout/Builds/Release/CMakeFiles/_CMakeLTOTest-CXX/src"
+      binary: "/Users/jreng/Documents/Poems/dev/scout/Builds/Release/CMakeFiles/_CMakeLTOTest-CXX/bin"
+    cmakeVariables:
+      CMAKE_CXX_STDLIB_MODULES_JSON: ""
+      CMAKE_OSX_ARCHITECTURES: "x86_64;arm64"
+      CMAKE_OSX_DEPLOYMENT_TARGET: "11.0"
+      CMAKE_OSX_SYSROOT: ""
+    buildResult:
+      variable: "_IPO_LANGUAGE_CHECK_RESULT"
+      cached: false
+      stdout: |
+        Change Dir: '/Users/jreng/Documents/Poems/dev/scout/Builds/Release/CMakeFiles/_CMakeLTOTest-CXX/bin'
+        
+        Run Build Command(s): /opt/homebrew/bin/ninja -v
+        [1/4] /usr/bin/c++   -g -flto=thin -arch x86_64 -arch arm64 -mmacosx-version-min=11.0 -MD -MT CMakeFiles/boo.dir/main.cpp.o -MF CMakeFiles/boo.dir/main.cpp.o.d -o CMakeFiles/boo.dir/main.cpp.o -c /Users/jreng/Documents/Poems/dev/scout/Builds/Release/CMakeFiles/_CMakeLTOTest-CXX/src/main.cpp
+        [2/4] /usr/bin/c++   -g -flto=thin -arch x86_64 -arch arm64 -mmacosx-version-min=11.0 -MD -MT CMakeFiles/foo.dir/foo.cpp.o -MF CMakeFiles/foo.dir/foo.cpp.o.d -o CMakeFiles/foo.dir/foo.cpp.o -c /Users/jreng/Documents/Poems/dev/scout/Builds/Release/CMakeFiles/_CMakeLTOTest-CXX/src/foo.cpp
+        [3/4] : && /opt/homebrew/bin/cmake -E rm -f libfoo.a && "/usr/bin/ar" qc libfoo.a  CMakeFiles/foo.dir/foo.cpp.o && "/usr/bin/ranlib" libfoo.a && /opt/homebrew/bin/cmake -E touch libfoo.a && :
+        [4/4] : && /usr/bin/c++ -g -flto=thin -arch x86_64 -arch arm64 -mmacosx-version-min=11.0 -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/boo.dir/main.cpp.o -o boo  libfoo.a && :
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/CheckIPOSupported.cmake:197 (try_compile)"
+      - "/opt/homebrew/share/cmake/Modules/CheckIPOSupported.cmake:319 (_ipo_run_language_check)"
+      - "CMakeLists.txt:329 (check_ipo_supported)"
+    directories:
+      source: "/Users/jreng/Documents/Poems/dev/scout/Builds/Release/CMakeFiles/_CMakeLTOTest-C/src"
+      binary: "/Users/jreng/Documents/Poems/dev/scout/Builds/Release/CMakeFiles/_CMakeLTOTest-C/bin"
+    cmakeVariables:
+      CMAKE_CXX_STDLIB_MODULES_JSON: ""
+      CMAKE_OSX_ARCHITECTURES: "x86_64;arm64"
+      CMAKE_OSX_DEPLOYMENT_TARGET: "11.0"
+      CMAKE_OSX_SYSROOT: ""
+    buildResult:
+      variable: "_IPO_LANGUAGE_CHECK_RESULT"
+      cached: false
+      stdout: |
+        Change Dir: '/Users/jreng/Documents/Poems/dev/scout/Builds/Release/CMakeFiles/_CMakeLTOTest-C/bin'
+        
+        Run Build Command(s): /opt/homebrew/bin/ninja -v
+        [1/4] /usr/bin/cc   -g -flto=thin -arch x86_64 -arch arm64 -mmacosx-version-min=11.0 -MD -MT CMakeFiles/foo.dir/foo.c.o -MF CMakeFiles/foo.dir/foo.c.o.d -o CMakeFiles/foo.dir/foo.c.o -c /Users/jreng/Documents/Poems/dev/scout/Builds/Release/CMakeFiles/_CMakeLTOTest-C/src/foo.c
+        [2/4] /usr/bin/cc   -g -flto=thin -arch x86_64 -arch arm64 -mmacosx-version-min=11.0 -MD -MT CMakeFiles/boo.dir/main.c.o -MF CMakeFiles/boo.dir/main.c.o.d -o CMakeFiles/boo.dir/main.c.o -c /Users/jreng/Documents/Poems/dev/scout/Builds/Release/CMakeFiles/_CMakeLTOTest-C/src/main.c
+        [3/4] : && /opt/homebrew/bin/cmake -E rm -f libfoo.a && "/usr/bin/ar" qc libfoo.a  CMakeFiles/foo.dir/foo.c.o && "/usr/bin/ranlib" libfoo.a && /opt/homebrew/bin/cmake -E touch libfoo.a && :
+        [4/4] : && /usr/bin/cc -g -flto=thin -arch x86_64 -arch arm64 -mmacosx-version-min=11.0 -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/boo.dir/main.c.o -o boo  libfoo.a && :
+        
+      exitCode: 0
+...
+
+---
+events:
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/CheckIPOSupported.cmake:197 (try_compile)"
+      - "/opt/homebrew/share/cmake/Modules/CheckIPOSupported.cmake:319 (_ipo_run_language_check)"
+      - "CMakeLists.txt:329 (check_ipo_supported)"
+    directories:
+      source: "/Users/jreng/Documents/Poems/dev/scout/Builds/Release/CMakeFiles/_CMakeLTOTest-CXX/src"
+      binary: "/Users/jreng/Documents/Poems/dev/scout/Builds/Release/CMakeFiles/_CMakeLTOTest-CXX/bin"
+    cmakeVariables:
+      CMAKE_CXX_STDLIB_MODULES_JSON: ""
+      CMAKE_OSX_ARCHITECTURES: "x86_64;arm64"
+      CMAKE_OSX_DEPLOYMENT_TARGET: "11.0"
+      CMAKE_OSX_SYSROOT: ""
+    buildResult:
+      variable: "_IPO_LANGUAGE_CHECK_RESULT"
+      cached: false
+      stdout: |
+        Change Dir: '/Users/jreng/Documents/Poems/dev/scout/Builds/Release/CMakeFiles/_CMakeLTOTest-CXX/bin'
+        
+        Run Build Command(s): /opt/homebrew/bin/ninja -v
+        [1/4] /usr/bin/c++   -g -flto=thin -arch x86_64 -arch arm64 -mmacosx-version-min=11.0 -MD -MT CMakeFiles/foo.dir/foo.cpp.o -MF CMakeFiles/foo.dir/foo.cpp.o.d -o CMakeFiles/foo.dir/foo.cpp.o -c /Users/jreng/Documents/Poems/dev/scout/Builds/Release/CMakeFiles/_CMakeLTOTest-CXX/src/foo.cpp
+        [2/4] /usr/bin/c++   -g -flto=thin -arch x86_64 -arch arm64 -mmacosx-version-min=11.0 -MD -MT CMakeFiles/boo.dir/main.cpp.o -MF CMakeFiles/boo.dir/main.cpp.o.d -o CMakeFiles/boo.dir/main.cpp.o -c /Users/jreng/Documents/Poems/dev/scout/Builds/Release/CMakeFiles/_CMakeLTOTest-CXX/src/main.cpp
+        [3/4] : && /opt/homebrew/bin/cmake -E rm -f libfoo.a && "/usr/bin/ar" qc libfoo.a  CMakeFiles/foo.dir/foo.cpp.o && "/usr/bin/ranlib" libfoo.a && /opt/homebrew/bin/cmake -E touch libfoo.a && :
+        [4/4] : && /usr/bin/c++ -g -flto=thin -arch x86_64 -arch arm64 -mmacosx-version-min=11.0 -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/boo.dir/main.cpp.o -o boo  libfoo.a && :
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/CheckIPOSupported.cmake:197 (try_compile)"
+      - "/opt/homebrew/share/cmake/Modules/CheckIPOSupported.cmake:319 (_ipo_run_language_check)"
+      - "CMakeLists.txt:329 (check_ipo_supported)"
+    directories:
+      source: "/Users/jreng/Documents/Poems/dev/scout/Builds/Release/CMakeFiles/_CMakeLTOTest-C/src"
+      binary: "/Users/jreng/Documents/Poems/dev/scout/Builds/Release/CMakeFiles/_CMakeLTOTest-C/bin"
+    cmakeVariables:
+      CMAKE_CXX_STDLIB_MODULES_JSON: ""
+      CMAKE_OSX_ARCHITECTURES: "x86_64;arm64"
+      CMAKE_OSX_DEPLOYMENT_TARGET: "11.0"
+      CMAKE_OSX_SYSROOT: ""
+    buildResult:
+      variable: "_IPO_LANGUAGE_CHECK_RESULT"
+      cached: false
+      stdout: |
+        Change Dir: '/Users/jreng/Documents/Poems/dev/scout/Builds/Release/CMakeFiles/_CMakeLTOTest-C/bin'
+        
+        Run Build Command(s): /opt/homebrew/bin/ninja -v
+        [1/4] /usr/bin/cc   -g -flto=thin -arch x86_64 -arch arm64 -mmacosx-version-min=11.0 -MD -MT CMakeFiles/foo.dir/foo.c.o -MF CMakeFiles/foo.dir/foo.c.o.d -o CMakeFiles/foo.dir/foo.c.o -c /Users/jreng/Documents/Poems/dev/scout/Builds/Release/CMakeFiles/_CMakeLTOTest-C/src/foo.c
+        [2/4] /usr/bin/cc   -g -flto=thin -arch x86_64 -arch arm64 -mmacosx-version-min=11.0 -MD -MT CMakeFiles/boo.dir/main.c.o -MF CMakeFiles/boo.dir/main.c.o.d -o CMakeFiles/boo.dir/main.c.o -c /Users/jreng/Documents/Poems/dev/scout/Builds/Release/CMakeFiles/_CMakeLTOTest-C/src/main.c
+        [3/4] : && /opt/homebrew/bin/cmake -E rm -f libfoo.a && "/usr/bin/ar" qc libfoo.a  CMakeFiles/foo.dir/foo.c.o && "/usr/bin/ranlib" libfoo.a && /opt/homebrew/bin/cmake -E touch libfoo.a && :
+        [4/4] : && /usr/bin/cc -g -flto=thin -arch x86_64 -arch arm64 -mmacosx-version-min=11.0 -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/boo.dir/main.c.o -o boo  libfoo.a && :
+        
+      exitCode: 0
+...
+
+---
+events:
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/CheckIPOSupported.cmake:197 (try_compile)"
+      - "/opt/homebrew/share/cmake/Modules/CheckIPOSupported.cmake:319 (_ipo_run_language_check)"
+      - "CMakeLists.txt:329 (check_ipo_supported)"
+    directories:
+      source: "/Users/jreng/Documents/Poems/dev/scout/Builds/Release/CMakeFiles/_CMakeLTOTest-CXX/src"
+      binary: "/Users/jreng/Documents/Poems/dev/scout/Builds/Release/CMakeFiles/_CMakeLTOTest-CXX/bin"
+    cmakeVariables:
+      CMAKE_CXX_STDLIB_MODULES_JSON: ""
+      CMAKE_OSX_ARCHITECTURES: "x86_64;arm64"
+      CMAKE_OSX_DEPLOYMENT_TARGET: "11.0"
+      CMAKE_OSX_SYSROOT: ""
+    buildResult:
+      variable: "_IPO_LANGUAGE_CHECK_RESULT"
+      cached: false
+      stdout: |
+        Change Dir: '/Users/jreng/Documents/Poems/dev/scout/Builds/Release/CMakeFiles/_CMakeLTOTest-CXX/bin'
+        
+        Run Build Command(s): /opt/homebrew/bin/ninja -v
+        [1/4] /usr/bin/c++   -g -flto=thin -arch x86_64 -arch arm64 -mmacosx-version-min=11.0 -MD -MT CMakeFiles/boo.dir/main.cpp.o -MF CMakeFiles/boo.dir/main.cpp.o.d -o CMakeFiles/boo.dir/main.cpp.o -c /Users/jreng/Documents/Poems/dev/scout/Builds/Release/CMakeFiles/_CMakeLTOTest-CXX/src/main.cpp
+        [2/4] /usr/bin/c++   -g -flto=thin -arch x86_64 -arch arm64 -mmacosx-version-min=11.0 -MD -MT CMakeFiles/foo.dir/foo.cpp.o -MF CMakeFiles/foo.dir/foo.cpp.o.d -o CMakeFiles/foo.dir/foo.cpp.o -c /Users/jreng/Documents/Poems/dev/scout/Builds/Release/CMakeFiles/_CMakeLTOTest-CXX/src/foo.cpp
+        [3/4] : && /opt/homebrew/bin/cmake -E rm -f libfoo.a && "/usr/bin/ar" qc libfoo.a  CMakeFiles/foo.dir/foo.cpp.o && "/usr/bin/ranlib" libfoo.a && /opt/homebrew/bin/cmake -E touch libfoo.a && :
+        [4/4] : && /usr/bin/c++ -g -flto=thin -arch x86_64 -arch arm64 -mmacosx-version-min=11.0 -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/boo.dir/main.cpp.o -o boo  libfoo.a && :
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/CheckIPOSupported.cmake:197 (try_compile)"
+      - "/opt/homebrew/share/cmake/Modules/CheckIPOSupported.cmake:319 (_ipo_run_language_check)"
+      - "CMakeLists.txt:329 (check_ipo_supported)"
+    directories:
+      source: "/Users/jreng/Documents/Poems/dev/scout/Builds/Release/CMakeFiles/_CMakeLTOTest-C/src"
+      binary: "/Users/jreng/Documents/Poems/dev/scout/Builds/Release/CMakeFiles/_CMakeLTOTest-C/bin"
+    cmakeVariables:
+      CMAKE_CXX_STDLIB_MODULES_JSON: ""
+      CMAKE_OSX_ARCHITECTURES: "x86_64;arm64"
+      CMAKE_OSX_DEPLOYMENT_TARGET: "11.0"
+      CMAKE_OSX_SYSROOT: ""
+    buildResult:
+      variable: "_IPO_LANGUAGE_CHECK_RESULT"
+      cached: false
+      stdout: |
+        Change Dir: '/Users/jreng/Documents/Poems/dev/scout/Builds/Release/CMakeFiles/_CMakeLTOTest-C/bin'
+        
+        Run Build Command(s): /opt/homebrew/bin/ninja -v
+        [1/4] /usr/bin/cc   -g -flto=thin -arch x86_64 -arch arm64 -mmacosx-version-min=11.0 -MD -MT CMakeFiles/boo.dir/main.c.o -MF CMakeFiles/boo.dir/main.c.o.d -o CMakeFiles/boo.dir/main.c.o -c /Users/jreng/Documents/Poems/dev/scout/Builds/Release/CMakeFiles/_CMakeLTOTest-C/src/main.c
+        [2/4] /usr/bin/cc   -g -flto=thin -arch x86_64 -arch arm64 -mmacosx-version-min=11.0 -MD -MT CMakeFiles/foo.dir/foo.c.o -MF CMakeFiles/foo.dir/foo.c.o.d -o CMakeFiles/foo.dir/foo.c.o -c /Users/jreng/Documents/Poems/dev/scout/Builds/Release/CMakeFiles/_CMakeLTOTest-C/src/foo.c
+        [3/4] : && /opt/homebrew/bin/cmake -E rm -f libfoo.a && "/usr/bin/ar" qc libfoo.a  CMakeFiles/foo.dir/foo.c.o && "/usr/bin/ranlib" libfoo.a && /opt/homebrew/bin/cmake -E touch libfoo.a && :
+        [4/4] : && /usr/bin/cc -g -flto=thin -arch x86_64 -arch arm64 -mmacosx-version-min=11.0 -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/boo.dir/main.c.o -o boo  libfoo.a && :
+        
+      exitCode: 0
+...
+
+---
+events:
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/CheckIPOSupported.cmake:197 (try_compile)"
+      - "/opt/homebrew/share/cmake/Modules/CheckIPOSupported.cmake:319 (_ipo_run_language_check)"
+      - "CMakeLists.txt:329 (check_ipo_supported)"
+    directories:
+      source: "/Users/jreng/Documents/Poems/dev/scout/Builds/Release/CMakeFiles/_CMakeLTOTest-CXX/src"
+      binary: "/Users/jreng/Documents/Poems/dev/scout/Builds/Release/CMakeFiles/_CMakeLTOTest-CXX/bin"
+    cmakeVariables:
+      CMAKE_CXX_STDLIB_MODULES_JSON: ""
+      CMAKE_OSX_ARCHITECTURES: "x86_64;arm64"
+      CMAKE_OSX_DEPLOYMENT_TARGET: "11.0"
+      CMAKE_OSX_SYSROOT: ""
+    buildResult:
+      variable: "_IPO_LANGUAGE_CHECK_RESULT"
+      cached: false
+      stdout: |
+        Change Dir: '/Users/jreng/Documents/Poems/dev/scout/Builds/Release/CMakeFiles/_CMakeLTOTest-CXX/bin'
+        
+        Run Build Command(s): /opt/homebrew/bin/ninja -v
+        [1/4] /usr/bin/c++   -g -flto=thin -arch x86_64 -arch arm64 -mmacosx-version-min=11.0 -MD -MT CMakeFiles/foo.dir/foo.cpp.o -MF CMakeFiles/foo.dir/foo.cpp.o.d -o CMakeFiles/foo.dir/foo.cpp.o -c /Users/jreng/Documents/Poems/dev/scout/Builds/Release/CMakeFiles/_CMakeLTOTest-CXX/src/foo.cpp
+        [2/4] /usr/bin/c++   -g -flto=thin -arch x86_64 -arch arm64 -mmacosx-version-min=11.0 -MD -MT CMakeFiles/boo.dir/main.cpp.o -MF CMakeFiles/boo.dir/main.cpp.o.d -o CMakeFiles/boo.dir/main.cpp.o -c /Users/jreng/Documents/Poems/dev/scout/Builds/Release/CMakeFiles/_CMakeLTOTest-CXX/src/main.cpp
+        [3/4] : && /opt/homebrew/bin/cmake -E rm -f libfoo.a && "/usr/bin/ar" qc libfoo.a  CMakeFiles/foo.dir/foo.cpp.o && "/usr/bin/ranlib" libfoo.a && /opt/homebrew/bin/cmake -E touch libfoo.a && :
+        [4/4] : && /usr/bin/c++ -g -flto=thin -arch x86_64 -arch arm64 -mmacosx-version-min=11.0 -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/boo.dir/main.cpp.o -o boo  libfoo.a && :
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/CheckIPOSupported.cmake:197 (try_compile)"
+      - "/opt/homebrew/share/cmake/Modules/CheckIPOSupported.cmake:319 (_ipo_run_language_check)"
+      - "CMakeLists.txt:329 (check_ipo_supported)"
+    directories:
+      source: "/Users/jreng/Documents/Poems/dev/scout/Builds/Release/CMakeFiles/_CMakeLTOTest-C/src"
+      binary: "/Users/jreng/Documents/Poems/dev/scout/Builds/Release/CMakeFiles/_CMakeLTOTest-C/bin"
+    cmakeVariables:
+      CMAKE_CXX_STDLIB_MODULES_JSON: ""
+      CMAKE_OSX_ARCHITECTURES: "x86_64;arm64"
+      CMAKE_OSX_DEPLOYMENT_TARGET: "11.0"
+      CMAKE_OSX_SYSROOT: ""
+    buildResult:
+      variable: "_IPO_LANGUAGE_CHECK_RESULT"
+      cached: false
+      stdout: |
+        Change Dir: '/Users/jreng/Documents/Poems/dev/scout/Builds/Release/CMakeFiles/_CMakeLTOTest-C/bin'
+        
+        Run Build Command(s): /opt/homebrew/bin/ninja -v
+        [1/4] /usr/bin/cc   -g -flto=thin -arch x86_64 -arch arm64 -mmacosx-version-min=11.0 -MD -MT CMakeFiles/foo.dir/foo.c.o -MF CMakeFiles/foo.dir/foo.c.o.d -o CMakeFiles/foo.dir/foo.c.o -c /Users/jreng/Documents/Poems/dev/scout/Builds/Release/CMakeFiles/_CMakeLTOTest-C/src/foo.c
+        [2/4] /usr/bin/cc   -g -flto=thin -arch x86_64 -arch arm64 -mmacosx-version-min=11.0 -MD -MT CMakeFiles/boo.dir/main.c.o -MF CMakeFiles/boo.dir/main.c.o.d -o CMakeFiles/boo.dir/main.c.o -c /Users/jreng/Documents/Poems/dev/scout/Builds/Release/CMakeFiles/_CMakeLTOTest-C/src/main.c
+        [3/4] : && /opt/homebrew/bin/cmake -E rm -f libfoo.a && "/usr/bin/ar" qc libfoo.a  CMakeFiles/foo.dir/foo.c.o && "/usr/bin/ranlib" libfoo.a && /opt/homebrew/bin/cmake -E touch libfoo.a && :
+        [4/4] : && /usr/bin/cc -g -flto=thin -arch x86_64 -arch arm64 -mmacosx-version-min=11.0 -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/boo.dir/main.c.o -o boo  libfoo.a && :
+        
+      exitCode: 0
+...
