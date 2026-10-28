@@ -258,6 +258,8 @@ Every field is a complete literal; nothing downstream derives, concatenates, or 
 +-------------------------+--------------------------------+----------------+--------+------------------------------------------+
 | floatToDoubleConversion | -Wno-implicit-float-conversion | /wd4244        |        | DSP double/float conversions             |
 +-------------------------+--------------------------------+----------------+--------+------------------------------------------+
+| macroRedefined          | -Wno-macro-redefined           | /wd4005        |        | Macro redefinition                       |
++-------------------------+--------------------------------+----------------+--------+------------------------------------------+
 | permissiveMinus         |                                | /permissive-   |        | Standards conformance matching clang —   |
 |                         |                                |                |        | Function::Map identity-cast              |
 |                         |                                |                |        |  deductionneeds it                       |
@@ -302,6 +304,8 @@ Every field is a complete literal; nothing downstream derives, concatenates, or 
 |                         |                                |                |       |  casehandled                             |
 +-------------------------+--------------------------------+----------------+-------+------------------------------------------+
 | floatToDoubleConversion | -Wno-implicit-float-conversion | /wd4244        |       | DSP double/float conversions             |
++-------------------------+--------------------------------+----------------+-------+------------------------------------------+
+| macroRedefined          | -Wno-macro-redefined           | /wd4005        |       | Macro redefinition                       |
 +-------------------------+--------------------------------+----------------+-------+------------------------------------------+
 | permissiveMinus         |                                | /permissive-   |       | Standards conformance matching clang —   |
 |                         |                                |                |       | Function::Map identity-cast              |

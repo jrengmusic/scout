@@ -1,14 +1,14 @@
 #include "ProfileReport.h"
-#include "generated/Identifiers.h"
+#include "generated/Generated.h"
 
-juce::String ProfileReport::getText (const juce::ValueTree& profiles)
+bool ProfileReport::toFile (const juce::ValueTree& profiles, const juce::File& outputFile)
 {
     auto document { jam::ConfigDocument::toDocument (profiles) };
 
     for (const auto& benchmark : profiles)
         addChart (document, benchmark);
 
-    return jam::MarkdownWriter { jam::MarkdownWriter::defaultLineWrap, { { Id::samples, jam::Profiler::samplesColumnWidth }, { Id::bins, jam::Profiler::samplesColumnWidth } } }.getText (document);
+    return jam::MarkdownWriter { jam::MarkdownWriter::defaultLineWrap, { { Id::samples, jam::Profiler::samplesColumnWidth }, { Id::bins, jam::Profiler::samplesColumnWidth } } }.toFile (document, outputFile);
 }
 
 juce::ValueTree ProfileReport::getProfile (const juce::Identifier& benchmarkType,

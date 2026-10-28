@@ -85,9 +85,12 @@ set(OLD_GLOB
   "/Users/jreng/Documents/Poems/dev/scout/Source/Benchmark.cpp"
   "/Users/jreng/Documents/Poems/dev/scout/Source/Help.cpp"
   "/Users/jreng/Documents/Poems/dev/scout/Source/Main.cpp"
+  "/Users/jreng/Documents/Poems/dev/scout/Source/Processor.cpp"
   "/Users/jreng/Documents/Poems/dev/scout/Source/ProfileReport.cpp"
   "/Users/jreng/Documents/Poems/dev/scout/Source/Statistics.cpp"
-  "/Users/jreng/Documents/Poems/dev/scout/Source/generated/Identifiers.cpp"
+  "/Users/jreng/Documents/Poems/dev/scout/Source/Toolchain.cpp"
+  "/Users/jreng/Documents/Poems/dev/scout/Source/Validator.cpp"
+  "/Users/jreng/Documents/Poems/dev/scout/Source/generated/Generated.cpp"
   )
 if(NOT "${NEW_GLOB}" STREQUAL "${OLD_GLOB}")
   message("-- GLOB mismatch!")
@@ -115,10 +118,17 @@ file(GLOB_RECURSE NEW_GLOB LIST_DIRECTORIES false "/Users/jreng/Documents/Poems/
 set(OLD_GLOB
   "/Users/jreng/Documents/Poems/dev/scout/Source/Benchmark.h"
   "/Users/jreng/Documents/Poems/dev/scout/Source/Help.h"
+  "/Users/jreng/Documents/Poems/dev/scout/Source/Processor.h"
   "/Users/jreng/Documents/Poems/dev/scout/Source/ProfileReport.h"
   "/Users/jreng/Documents/Poems/dev/scout/Source/Statistics.h"
+  "/Users/jreng/Documents/Poems/dev/scout/Source/Toolchain.h"
+  "/Users/jreng/Documents/Poems/dev/scout/Source/Validator.h"
+  "/Users/jreng/Documents/Poems/dev/scout/Source/generated/Files.h"
+  "/Users/jreng/Documents/Poems/dev/scout/Source/generated/Generated.h"
+  "/Users/jreng/Documents/Poems/dev/scout/Source/generated/HashMaps.h"
   "/Users/jreng/Documents/Poems/dev/scout/Source/generated/Identifiers.h"
   "/Users/jreng/Documents/Poems/dev/scout/Source/generated/ProjectInfo.h"
+  "/Users/jreng/Documents/Poems/dev/scout/Source/generated/Text.h"
   )
 if(NOT "${NEW_GLOB}" STREQUAL "${OLD_GLOB}")
   message("-- GLOB mismatch!")
@@ -5092,8 +5102,11 @@ file(GLOB_RECURSE NEW_GLOB LIST_DIRECTORIES false RELATIVE "/Users/jreng/Documen
 set(OLD_GLOB
   "jam_subprocess/jam_subprocess.cpp"
   "jam_subprocess/jam_subprocess.h"
+  "jam_subprocess/subprocess/jam_ChildProcess.h"
   "jam_subprocess/subprocess/jam_Subprocess.cpp"
   "jam_subprocess/subprocess/jam_Subprocess.h"
+  "jam_subprocess/subprocess/native/jam_ChildProcess_posix.cpp"
+  "jam_subprocess/subprocess/native/jam_ChildProcess_windows.cpp"
   )
 if(NOT "${NEW_GLOB}" STREQUAL "${OLD_GLOB}")
   message("-- GLOB mismatch!")

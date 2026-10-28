@@ -1,0 +1,131 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.18.0" xml:lang="en-US">
+  <compounddef id="_help_8h" kind="file" language="C++">
+    <compoundname>Help.h</compoundname>
+    <includes local="no">JuceHeader.h</includes>
+    <includes refid="_generated_8h" local="yes">generated/Generated.h</includes>
+    <includedby refid="_help_8cpp" local="yes">Help.cpp</includedby>
+    <includedby refid="_main_8cpp" local="yes">Main.cpp</includedby>
+    <incdepgraph>
+      <node id="1">
+        <label>Help.h</label>
+        <link refid="_help_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>Files.h</label>
+        <link refid="_files_8h"/>
+      </node>
+      <node id="3">
+        <label>generated/Generated.h</label>
+        <link refid="_generated_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>HashMaps.h</label>
+        <link refid="_hash_maps_8h"/>
+      </node>
+      <node id="5">
+        <label>Identifiers.h</label>
+        <link refid="_identifiers_8h"/>
+      </node>
+      <node id="4">
+        <label>ProjectInfo.h</label>
+        <link refid="_project_info_8h"/>
+      </node>
+      <node id="6">
+        <label>Text.h</label>
+        <link refid="_text_8h"/>
+      </node>
+      <node id="2">
+        <label>JuceHeader.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="2">
+        <label>Help.cpp</label>
+        <link refid="_help_8cpp"/>
+      </node>
+      <node id="1">
+        <label>Help.h</label>
+        <link refid="_help_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>Main.cpp</label>
+        <link refid="_main_8cpp"/>
+      </node>
+    </invincdepgraph>
+    <sectiondef kind="func">
+      <memberdef kind="function" id="_help_8h_1a3f361f138d00c42487776fb13cc5ebe6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void printHelp</definition>
+        <argsstring>(const juce::String &amp;helpText)</argsstring>
+        <name>printHelp</name>
+        <param>
+          <type>const <ref refid="classjuce_1_1String" kindref="compound" external="/Users/jreng/Documents/Poems/JUCE/docs/tagfile.xml">juce::String</ref> &amp;</type>
+          <declname>helpText</declname>
+        </param>
+        <briefdescription>
+<para>Renders the HELP.md text to stdout through the terminal graphics context. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>The function loads the markdown and mermaid stylesheets into one style manager and parses <computeroutput>helpText</computeroutput> as markdown. The width, in cells, is the column width of the markdown style: the <computeroutput>maxLineWidth</computeroutput> metric plus the <computeroutput>margin</computeroutput> metric on both sides, rounded up. The component is laid out once at that width. The row count is the height of the viewed component. The function prepares a terminal buffer for that grid, with the row count as transit room. It paints the viewed component through a terminal graphics context. The context takes the <computeroutput>Colours</computeroutput> of the style manager. <computeroutput>buffer.writeToStream (frame, styleMarkdown)</computeroutput> then writes the frame as VT bytes to a memory stream. The function writes the stream to stdout.</para>
+<para><simplesect kind="pre"><para>The JUCE GUI initialiser scope is open.</para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>helpText</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The HELP.md text, parsed as markdown. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Help.h" line="22" column="6" bodyfile="Help.cpp" bodystart="3" bodyend="35" declfile="Help.h" declline="22" declcolumn="6"/>
+        <references refid="classjam_1_1TerminalBuffer_1adaf1dc795b75b3eee7100f241134bbbb">jam::TerminalBuffer::getCellLookup</references>
+        <references refid="classjam_1_1TerminalBuffer_1aa6ae34df2c63437939c7555ced2a74f7">jam::TerminalBuffer::getCellMeasure</references>
+        <references refid="classjam_1_1StyleMarkdown_1a2c93456629f62deb63ffbe9c2d92d569">jam::StyleMarkdown::getColumnWidth</references>
+        <references refid="structjam_1_1Instance_1ad5d2bbb58e37d8d260b428b334823140">jam::Instance&lt; Colours &gt;::getInstance</references>
+        <references refid="namespacefiles_1a038e98f00fad7f60cc8815e3dbd0875f">files::markdownStyleSheet</references>
+        <references refid="namespacefiles_1a185891dbf761ee7dbe2ac83641d633f2">files::mermaidStyleSheet</references>
+        <references refid="structjam_1_1MarkdownDocument_1af46000d5b257120c18b18b7b2a05031c">jam::MarkdownDocument::parse</references>
+        <references refid="_help_8cpp_1a3f361f138d00c42487776fb13cc5ebe6" compoundref="_help_8cpp" startline="3" endline="35">printHelp</references>
+        <references refid="namespacefiles_1a4f5d1a618a82e735de711d473aa8033b" compoundref="_generated_8cpp" startline="48" endline="48">files::scoutHelp</references>
+        <referencedby refid="_main_8cpp_1a7f683cefdf7f675f09e36661ce8df7cc" compoundref="_main_8cpp" startline="137" endline="145">printBannerAndHelp</referencedby>
+        <referencedby refid="_help_8cpp_1a3f361f138d00c42487776fb13cc5ebe6" compoundref="_help_8cpp" startline="3" endline="35">printHelp</referencedby>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;JuceHeader.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_generated_8h" kindref="compound">generated/Generated.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_help_8cpp_1a3f361f138d00c42487776fb13cc5ebe6" kindref="member">printHelp</ref><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classjuce_1_1String" kindref="compound" external="/Users/jreng/Documents/Poems/JUCE/docs/tagfile.xml">juce::String</ref>&amp;<sp/>helpText);</highlight></codeline>
+    </programlisting>
+    <location file="Help.h"/>
+  </compounddef>
+</doxygen>

@@ -33,7 +33,13 @@ public:
      */
     explicit Statistics (const jam::Array<juce::int64>& bins);
 
-    /** @brief Returns the median of the weighted values. The rank of the median is `medianRank`. */
+    /**
+     * @brief Returns the median of the weighted values.
+     *
+     * The rank of the median is `medianRank`.
+     *
+     * @returns The median.
+     */
     double getMedian() const noexcept;
 
     /**
@@ -41,19 +47,37 @@ public:
      *
      * The position in the weighted values is `percentileRank / percentScale * (total count - 1)`.
      * The result is the linear interpolation between the two values around that position.
+     *
+     * @returns The value at `percentileRank`.
      */
     double getPercentile() const noexcept;
 
-    /** @brief Returns the weighted median of the absolute deviations from the median, as a percentage of the median. Returns 0 when the median is 0. */
+    /**
+     * @brief Returns the weighted median of the absolute deviations from the median, as a percentage of the median.
+     *
+     * @returns The error in percent of the median, or 0 when the median is 0.
+     */
     double getErrorPercent() const;
 
-    /** @brief Returns the sum of the counts of all values. */
+    /**
+     * @brief Returns the sum of the counts of all values.
+     *
+     * @returns The total count.
+     */
     juce::int64 getCount() const noexcept;
 
-    /** @brief Returns the smallest sample. */
+    /**
+     * @brief Returns the smallest sample.
+     *
+     * @returns The first sorted value.
+     */
     double getMinimum() const noexcept;
 
-    /** @brief Returns the largest sample. */
+    /**
+     * @brief Returns the largest sample.
+     *
+     * @returns The last sorted value.
+     */
     double getMaximum() const noexcept;
 
     /**
@@ -64,10 +88,12 @@ public:
      *
      * @param current   Statistics of the current run.
      * @param baseline  Statistics of the baseline run.
+     * @returns The two-sided p-value.
      */
     static double getProbability (const Statistics& current, const Statistics& baseline);
 
 private:
+    /** @brief Half of one: the offset of a bin centre from the start of its bin, and the factor of the mean rank in the Mann-Whitney U test. */
     static constexpr double half { 0.5 };
 
     /** @brief Rank, in percent, of the median. */
@@ -81,6 +107,7 @@ private:
      * @param sortedValues  Values in ascending order.
      * @param valueCounts   Count of each value, in the order of @p sortedValues.
      * @param rank          Rank in percent.
+     * @returns The interpolated value at @p rank.
      */
     static double getPercentile (const jam::Array<double>& sortedValues, const jam::Array<juce::int64>& valueCounts, double rank) noexcept;
 

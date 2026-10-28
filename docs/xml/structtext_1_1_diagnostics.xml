@@ -1,0 +1,145 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.18.0" xml:lang="en-US">
+  <compounddef id="structtext_1_1_diagnostics" kind="struct" language="C++" prot="public">
+    <compoundname>text::Diagnostics</compoundname>
+    <includes refid="_text_8h" local="no">Text.h</includes>
+    <sectiondef kind="public-static-attrib">
+      <memberdef kind="variable" id="structtext_1_1_diagnostics_1a614879ccbad6f4edaf1a511bf5a2fa68" prot="public" static="yes" constexpr="yes" mutable="no">
+        <type>const char *const</type>
+        <definition>const char* const text::Diagnostics::failNotFound</definition>
+        <argsstring></argsstring>
+        <name>failNotFound</name>
+        <qualifiedname>text::Diagnostics::failNotFound</qualifiedname>
+        <initializer>{ &quot;not found&quot;                     }</initializer>
+        <briefdescription>
+<para>Referenced table, column, symbol, or file does not exist. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="generated/Text.h" line="31" column="39" bodyfile="generated/Text.h" bodystart="31" bodyend="31"/>
+        <referencedby refid="class_benchmark_1a54e743cd8ac66536390608cc09aa355e" compoundref="_benchmark_8cpp" startline="121" endline="150">Benchmark::addEpoch</referencedby>
+        <referencedby refid="_main_8cpp_1a4787e2058107a19104111d385324e45b" compoundref="_main_8cpp" startline="181" endline="186">runDocumentNotFound</referencedby>
+        <referencedby refid="struct_processor_1a88ec28a8e3dd1b6e1f41fbaa315a737e" compoundref="_processor_8cpp" startline="57" endline="88">Processor::runEpochs</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="structtext_1_1_diagnostics_1af3213d85de76f5051147adf231066b11" prot="public" static="yes" constexpr="yes" mutable="no">
+        <type>const char *const</type>
+        <definition>const char* const text::Diagnostics::failToolchain</definition>
+        <argsstring></argsstring>
+        <name>failToolchain</name>
+        <qualifiedname>text::Diagnostics::failToolchain</qualifiedname>
+        <initializer>{ &quot;toolchain <ref refid="juce__UnityPluginInterface_8h_1a485dc2a0e5ed7da3d9f826367b36ee55a6440030ae8284cee96c1c88b356c45a7" kindref="member" external="/Users/jreng/Documents/Poems/JUCE/docs/tagfile.xml">command</ref> failed&quot;      }</initializer>
+        <briefdescription>
+<para>A toolchain row&apos;s process could not start or exited nonzero. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="generated/Text.h" line="32" column="39" bodyfile="generated/Text.h" bodystart="32" bodyend="32"/>
+        <referencedby refid="struct_toolchain_1a99335d844ab10df762460e0d2beea4db" compoundref="_toolchain_8cpp" startline="15" endline="41">Toolchain::runProcess</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="structtext_1_1_diagnostics_1acb39935ba8149723d8a1c9615271f294" prot="public" static="yes" constexpr="yes" mutable="no">
+        <type>const char *const</type>
+        <definition>const char* const text::Diagnostics::failToolchainColumn</definition>
+        <argsstring></argsstring>
+        <name>failToolchainColumn</name>
+        <qualifiedname>text::Diagnostics::failToolchainColumn</qualifiedname>
+        <initializer>{ &quot;toolchain column not declared&quot; }</initializer>
+        <briefdescription>
+<para>A ## toolchain table&apos;s header row declares no command or flag column. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="generated/Text.h" line="33" column="39" bodyfile="generated/Text.h" bodystart="33" bodyend="33"/>
+        <referencedby refid="struct_validator_1af387720572933d5519b0597814433c17" compoundref="_validator_8cpp" startline="3" endline="25">Validator::addRules</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="structtext_1_1_diagnostics_1a17a0efaa59e3489e8242be054d6280f5" prot="public" static="yes" constexpr="yes" mutable="no">
+        <type>const char *const</type>
+        <definition>const char* const text::Diagnostics::failOutputWrite</definition>
+        <argsstring></argsstring>
+        <name>failOutputWrite</name>
+        <qualifiedname>text::Diagnostics::failOutputWrite</qualifiedname>
+        <initializer>{ &quot;cannot write output&quot;           }</initializer>
+        <briefdescription>
+<para>An output file could not be written. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="generated/Text.h" line="34" column="39" bodyfile="generated/Text.h" bodystart="34" bodyend="34"/>
+        <referencedby refid="struct_processor_1aa277929ee4d6480d62fa48d2dd5f2a6c" compoundref="_processor_8cpp" startline="90" endline="98">Processor::writeReport</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="structtext_1_1_diagnostics_1a67a3d4524798361c7272cca4ff5d19ad" prot="public" static="yes" constexpr="yes" mutable="no">
+        <type>const char *const</type>
+        <definition>const char* const text::Diagnostics::failCommand</definition>
+        <argsstring></argsstring>
+        <name>failCommand</name>
+        <qualifiedname>text::Diagnostics::failCommand</qualifiedname>
+        <initializer>{ &quot;command failed&quot;                }</initializer>
+        <briefdescription>
+<para>The run command exited nonzero. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="generated/Text.h" line="35" column="39" bodyfile="generated/Text.h" bodystart="35" bodyend="35"/>
+        <referencedby refid="class_benchmark_1a8b4bab8a038fba5d18366ba23e32923f" compoundref="_benchmark_8cpp" startline="52" endline="77">Benchmark::runEpoch</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="structtext_1_1_diagnostics_1a54030ad642dee1157d22d8255503812d" prot="public" static="yes" constexpr="yes" mutable="no">
+        <type>const char *const</type>
+        <definition>const char* const text::Diagnostics::failFlagUnknown</definition>
+        <argsstring></argsstring>
+        <name>failFlagUnknown</name>
+        <qualifiedname>text::Diagnostics::failFlagUnknown</qualifiedname>
+        <initializer>{ &quot;unknown flag&quot;                  }</initializer>
+        <briefdescription>
+<para>An argument after the manifest that is not <ndash/>help or <ndash/>version. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="generated/Text.h" line="36" column="39" bodyfile="generated/Text.h" bodystart="36" bodyend="36"/>
+        <referencedby refid="_main_8cpp_1a52f1af656d9670faf7049108bef951b9" compoundref="_main_8cpp" startline="220" endline="252">runCommandLine</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="structtext_1_1_diagnostics_1a07b92fba2d678ad4a065f5ebd63d43a7" prot="public" static="yes" constexpr="yes" mutable="no">
+        <type>const char *const</type>
+        <definition>const char* const text::Diagnostics::done</definition>
+        <argsstring></argsstring>
+        <name>done</name>
+        <qualifiedname>text::Diagnostics::done</qualifiedname>
+        <initializer>{ &quot;Fine.&quot;                         }</initializer>
+        <briefdescription>
+<para>Every step of the run succeeded. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="generated/Text.h" line="37" column="39" bodyfile="generated/Text.h" bodystart="37" bodyend="37"/>
+        <referencedby refid="_main_8cpp_1a58cd25047b98ff06d9dc1671ab3ccbed" compoundref="_main_8cpp" startline="122" endline="129">printDone</referencedby>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>scout message texts, emitted verbatim when a run fails or completes. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="generated/Text.h" line="29" column="1" bodyfile="generated/Text.h" bodystart="30" bodyend="38"/>
+    <listofallmembers>
+      <member refid="structtext_1_1_diagnostics_1a07b92fba2d678ad4a065f5ebd63d43a7" prot="public" virt="non-virtual"><scope>text::Diagnostics</scope><name>done</name></member>
+      <member refid="structtext_1_1_diagnostics_1a67a3d4524798361c7272cca4ff5d19ad" prot="public" virt="non-virtual"><scope>text::Diagnostics</scope><name>failCommand</name></member>
+      <member refid="structtext_1_1_diagnostics_1a54030ad642dee1157d22d8255503812d" prot="public" virt="non-virtual"><scope>text::Diagnostics</scope><name>failFlagUnknown</name></member>
+      <member refid="structtext_1_1_diagnostics_1a614879ccbad6f4edaf1a511bf5a2fa68" prot="public" virt="non-virtual"><scope>text::Diagnostics</scope><name>failNotFound</name></member>
+      <member refid="structtext_1_1_diagnostics_1a17a0efaa59e3489e8242be054d6280f5" prot="public" virt="non-virtual"><scope>text::Diagnostics</scope><name>failOutputWrite</name></member>
+      <member refid="structtext_1_1_diagnostics_1af3213d85de76f5051147adf231066b11" prot="public" virt="non-virtual"><scope>text::Diagnostics</scope><name>failToolchain</name></member>
+      <member refid="structtext_1_1_diagnostics_1acb39935ba8149723d8a1c9615271f294" prot="public" virt="non-virtual"><scope>text::Diagnostics</scope><name>failToolchainColumn</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

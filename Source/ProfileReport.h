@@ -13,14 +13,16 @@ class ProfileReport
 {
 public:
     /**
-     * @brief Returns the report text of the profiles.
+     * @brief Writes the report of @p profiles to @p outputFile.
      *
-     * The function only renders. It adds the charts to the document of the profiles, and writes the markdown.
-     * The markdown table shows the `samples` and `bins` columns with the width `jam::Profiler::samplesColumnWidth`.
+     * The function builds the report document from @p profiles and adds the charts of each profile table.
+     * It writes the document through `jam::MarkdownWriter`, which creates the parent folder of @p outputFile.
      *
-     * @param profiles  Tree of profiles. Each profile holds its comparison properties.
+     * @param profiles    Tree of the profile tables that Benchmark::getProfiles() returns.
+     * @param outputFile  File that receives the report.
+     * @returns @c true when the write succeeds, or @c false when it fails.
      */
-    static juce::String getText (const juce::ValueTree& profiles);
+    static bool toFile (const juce::ValueTree& profiles, const juce::File& outputFile);
 
     /**
      * @brief Returns one profile table with one row for each zone of @p samples.
@@ -35,6 +37,7 @@ public:
      * @param calls            Number of calls of each zone.
      * @param units            Unit text of each zone.
      * @param baselineProfile  Table of an earlier report. It may be invalid.
+     * @returns The profile table.
      */
     static juce::ValueTree getProfile (const juce::Identifier& benchmarkType,
                                        const jam::HashMap<juce::Identifier, juce::Array<juce::var>>& samples,
@@ -54,6 +57,7 @@ public:
      * @param bins             Bin counts of each zone. The bin centres are in ns.
      * @param units            Unit text of each zone.
      * @param baselineProfile  Table of an earlier report. It may be invalid.
+     * @returns The profile table.
      */
     static juce::ValueTree getProfile (const juce::Identifier& benchmarkType,
                                        const jam::HashMap<juce::Identifier, jam::Array<juce::int64>>& bins,
@@ -68,6 +72,7 @@ private:
      * @param statistics  Statistics of the zone.
      * @param calls       Number of calls of the zone.
      * @param unit        Unit text of the zone.
+     * @returns The zone row.
      */
     static juce::ValueTree getZone (const juce::Identifier& zoneKey, const Statistics& statistics, int calls, const juce::String& unit);
 
@@ -77,6 +82,7 @@ private:
      * The function reads the `bins` property when the zone holds it. Otherwise it reads the `samples` property.
      *
      * @param baselineZone  Zone of the baseline.
+     * @returns The Statistics of @p baselineZone.
      */
     static Statistics getStatistics (const juce::ValueTree& baselineZone);
 

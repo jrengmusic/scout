@@ -14,25 +14,28 @@
                          FOR YOUR EYES ONLY, DO NOT EDIT
 ********************************************************************************/
 
-#include <JuceHeader.h>
-#include "Identifiers.h"
+/**
+ * @file Text.h
+ * @brief scout message strings — one constant per failure, one for success.
+ */
 
-namespace Id
+#pragma once
+
+namespace text
 {
 /*_____________________________________________________________________________*/
 
-/** @brief SCOUT manifest vocabulary — the tables and keys of a scout manifest. */
-
-    const juce::Identifier epochs       { juce::String::fromUTF8 ("epochs") };
-    const juce::Identifier output       { juce::String::fromUTF8 ("output") };
-    const juce::Identifier command      { juce::String::fromUTF8 ("command") };
-    const juce::Identifier profile      { juce::String::fromUTF8 ("profile") };
-    const juce::Identifier epoch        { juce::String::fromUTF8 ("epoch") };
-    const juce::Identifier errorPercent { juce::String::fromUTF8 ("errorPercent") };
-    const juce::Identifier change       { juce::String::fromUTF8 ("change") };
-    const juce::Identifier probability  { juce::String::fromUTF8 ("probability") };
-    const juce::Identifier percentile   { juce::String::fromUTF8 ("percentile") };
-    const juce::Identifier system       { juce::String::fromUTF8 ("system") };
+/** @brief scout message texts, emitted verbatim when a run fails or completes. */
+struct Diagnostics
+{
+    static constexpr const char* const failNotFound        { "not found"                     };///< Referenced table, column, symbol, or file does not exist.
+    static constexpr const char* const failToolchain       { "toolchain command failed"      };///< A toolchain row's process could not start or exited nonzero.
+    static constexpr const char* const failToolchainColumn { "toolchain column not declared" };///< A ## toolchain table's header row declares no command or flag column.
+    static constexpr const char* const failOutputWrite     { "cannot write output"           };///< An output file could not be written.
+    static constexpr const char* const failCommand         { "command failed"                };///< The run command exited nonzero.
+    static constexpr const char* const failFlagUnknown     { "unknown flag"                  };///< An argument after the manifest that is not --help or --version.
+    static constexpr const char* const done                { "Fine."                         };///< Every step of the run succeeded.
+};
 
 /**______________________________END OF NAMESPACE______________________________*/
-}// namespace Id
+}// namespace text

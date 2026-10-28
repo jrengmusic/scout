@@ -56,23 +56,23 @@ message(STATUS "CAST: configuring ${PROJECT_NAME} ${PROJECT_VERSION}")
 
 if(APPLE)
     set(CAST_RELEASE_COMPILE_FLAGS
--Wno-shadow;-Wno-unused-parameter;-Wno-float-equal;-Wno-sign-conversion;-Wno-switch-enum;-Wno-implicit-float-conversion;-O3;-flto=thin
+-Wno-shadow;-Wno-unused-parameter;-Wno-float-equal;-Wno-sign-conversion;-Wno-switch-enum;-Wno-implicit-float-conversion;-Wno-macro-redefined;-O3;-flto=thin
     )
     set(CAST_RELEASE_LINK_FLAGS
 -dead_strip
     )
     set(CAST_DEBUG_COMPILE_FLAGS
--Wno-shadow;-Wno-unused-parameter;-Wno-float-equal;-Wno-sign-conversion;-Wno-switch-enum;-Wno-implicit-float-conversion;-O0;-g
+-Wno-shadow;-Wno-unused-parameter;-Wno-float-equal;-Wno-sign-conversion;-Wno-switch-enum;-Wno-implicit-float-conversion;-Wno-macro-redefined;-O0;-g
     )
 elseif(WIN32)
     set(CAST_RELEASE_COMPILE_FLAGS
-/wd4456;/wd4100;/wd4244;/permissive-;/Zc:rvalueCast;/W4;/FC;/O2;/GL
+/wd4456;/wd4100;/wd4244;/wd4005;/permissive-;/Zc:rvalueCast;/W4;/FC;/O2;/GL
     )
     set(CAST_RELEASE_LINK_FLAGS
 /LTCG;/OPT:REF;/OPT:ICF
     )
     set(CAST_DEBUG_COMPILE_FLAGS
-/wd4456;/wd4100;/wd4244;/permissive-;/Zc:rvalueCast;/W4;/FC;/Od;/Zi
+/wd4456;/wd4100;/wd4244;/wd4005;/permissive-;/Zc:rvalueCast;/W4;/FC;/Od;/Zi
     )
 endif()
 

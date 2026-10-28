@@ -1,0 +1,142 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.18.0" xml:lang="en-US">
+  <compounddef id="struct_validator" kind="struct" language="C++" prot="public">
+    <compoundname>Validator</compoundname>
+    <basecompoundref refid="structjam_1_1ConfigValidator" prot="public" virt="non-virtual">jam::ConfigValidator</basecompoundref>
+    <includes refid="_validator_8h" local="no">Validator.h</includes>
+    <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="struct_validator_1af387720572933d5519b0597814433c17" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Validator::addRules</definition>
+        <argsstring>(Rules &amp;rules)</argsstring>
+        <name>addRules</name>
+        <qualifiedname>Validator::addRules</qualifiedname>
+        <param>
+          <type><ref refid="structjam_1_1Document_1_1Validator_1a9044acc578b61d303871248373205e32" kindref="member" external="/Users/jreng/Documents/Poems/dev/jam/docs/tagfile.xml">Rules</ref> &amp;</type>
+          <declname>rules</declname>
+        </param>
+        <briefdescription>
+<para>Adds the rules of ConfigValidator, then <computeroutput>toolchain</computeroutput>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>rules</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="structjam_1_1Document_1_1Validator_1a9044acc578b61d303871248373205e32" kindref="member" external="/Users/jreng/Documents/Poems/dev/jam/docs/tagfile.xml">Rules</ref> that receive the entries. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Validator.h" line="21" column="17" bodyfile="Validator.cpp" bodystart="3" bodyend="25"/>
+        <references refid="structjam_1_1Function_1_1Map_1a4c5333e037712bf4fbed00a9d1dcaf34">jam::Function::Map&lt; typename KeyType, typename ReturnType &gt;::add</references>
+        <references refid="structjam_1_1ConfigValidator_1aea72005240dabf7860190dea6e390c54">jam::ConfigValidator::addRules</references>
+        <references refid="namespaceId_1a1538a142ed265f60c8fcf1703a106a7d" compoundref="_generated_8cpp" startline="28" endline="28">Id::command</references>
+        <references refid="namespaceId_1a5e729b9864fd096462b3f08ef1eb4b1a">Id::diagnosticSeparator</references>
+        <references refid="classjuce_1_1Result_1a27205a4dc7a973aebd1976270867be80">juce::Result::fail</references>
+        <references refid="structtext_1_1_diagnostics_1acb39935ba8149723d8a1c9615271f294" compoundref="_text_8h" startline="33" endline="33">text::Diagnostics::failToolchainColumn</references>
+        <references refid="namespaceId_1ac8f84d92cb02638b89abb87149be1caf" compoundref="_generated_8cpp" startline="37" endline="37">Id::flag</references>
+        <references refid="structjam_1_1MarkdownValidator_1ac14242a706f2a9509549ab4313ddb371">jam::MarkdownValidator::getLocation</references>
+        <references refid="namespaceId_1a383ed3d8cd253c137d67732d175e076b">Id::headerRow</references>
+        <references refid="classjuce_1_1Result_1ac2133128eeba510367bfe1b83383ae0f">juce::Result::ok</references>
+        <references refid="namespaceId_1a0f9647376c570f4f428258196fa64c61" compoundref="_generated_8cpp" startline="36" endline="36">Id::toolchain</references>
+        <references refid="classjuce_1_1Identifier_1ab6f0db1de2c36cacd1a9d7280f73aeeb">juce::Identifier::toString</references>
+        <referencedby refid="struct_validator_1a394659562ffe86296738ed5a5b14f80f" compoundref="_validator_8cpp" startline="27" endline="39">getRules</referencedby>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="struct_validator_1a394659562ffe86296738ed5a5b14f80f" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>const <ref refid="structjam_1_1Document_1_1Validator_1a9044acc578b61d303871248373205e32" kindref="member" external="/Users/jreng/Documents/Poems/dev/jam/docs/tagfile.xml">Rules</ref> &amp;</type>
+        <definition>const Validator::Rules &amp; Validator::getRules</definition>
+        <argsstring>() const override</argsstring>
+        <name>getRules</name>
+        <qualifiedname>Validator::getRules</qualifiedname>
+        <reimplements refid="structjam_1_1ConfigValidator_1a5da28d3a930de29b64121066bf776d7d">getRules</reimplements>
+        <briefdescription>
+<para>Returns the eight scout rules: the seven config rules and <computeroutput>toolchain</computeroutput>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><computeroutput>toolchain</computeroutput> fails a <computeroutput>## toolchain</computeroutput> table whose header row lacks a <computeroutput><ref refid="juce__UnityPluginInterface_8h_1a485dc2a0e5ed7da3d9f826367b36ee55a6440030ae8284cee96c1c88b356c45a7" kindref="member" external="/Users/jreng/Documents/Poems/JUCE/docs/tagfile.xml">command</ref></computeroutput> column or a <computeroutput>flag</computeroutput> column. The failure names the table and the header row.</para>
+<para><simplesect kind="return"><para>The rules, keyed by rule name, built once. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Validator.h" line="32" column="17" bodyfile="Validator.cpp" bodystart="27" bodyend="39"/>
+        <references refid="struct_validator_1af387720572933d5519b0597814433c17" compoundref="_validator_8cpp" startline="3" endline="25">addRules</references>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Column-rule validation for a scout manifest <ndash/> the config rules and the toolchain column rule. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><ref refid="struct_validator_1af387720572933d5519b0597814433c17" kindref="member">addRules()</ref> composes ConfigValidator&apos;s seven rules with one more rule: <computeroutput>toolchain</computeroutput> fails a <computeroutput>## toolchain</computeroutput> table whose header row declares no <computeroutput><ref refid="juce__UnityPluginInterface_8h_1a485dc2a0e5ed7da3d9f826367b36ee55a6440030ae8284cee96c1c88b356c45a7" kindref="member" external="/Users/jreng/Documents/Poems/JUCE/docs/tagfile.xml">command</ref></computeroutput> column or no <computeroutput>flag</computeroutput> column. <ref refid="struct_validator_1a394659562ffe86296738ed5a5b14f80f" kindref="member">getRules()</ref> returns the eight rules, built once. </para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>Validator</label>
+        <link refid="struct_validator"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>jam::ConfigValidator</label>
+        <link refid="structjam_1_1ConfigValidator" external="/Users/jreng/Documents/Poems/dev/jam/docs/tagfile.xml"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>jam::Document::Validator</label>
+        <link refid="structjam_1_1Document_1_1Validator" external="/Users/jreng/Documents/Poems/dev/jam/docs/tagfile.xml"/>
+      </node>
+      <node id="3">
+        <label>jam::MarkdownValidator</label>
+        <link refid="structjam_1_1MarkdownValidator" external="/Users/jreng/Documents/Poems/dev/jam/docs/tagfile.xml"/>
+        <childnode refid="4" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>Validator</label>
+        <link refid="struct_validator"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>jam::ConfigValidator</label>
+        <link refid="structjam_1_1ConfigValidator" external="/Users/jreng/Documents/Poems/dev/jam/docs/tagfile.xml"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>jam::Document::Validator</label>
+        <link refid="structjam_1_1Document_1_1Validator" external="/Users/jreng/Documents/Poems/dev/jam/docs/tagfile.xml"/>
+      </node>
+      <node id="3">
+        <label>jam::MarkdownValidator</label>
+        <link refid="structjam_1_1MarkdownValidator" external="/Users/jreng/Documents/Poems/dev/jam/docs/tagfile.xml"/>
+        <childnode refid="4" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="Validator.h" line="15" column="1" bodyfile="Validator.h" bodystart="16" bodyend="33"/>
+    <listofallmembers>
+      <member refid="struct_validator_1af387720572933d5519b0597814433c17" prot="public" virt="non-virtual"><scope>Validator</scope><name>addRules</name></member>
+      <member refid="structjam_1_1MarkdownValidator_1a0e7abdd303fef1bf9ffb1c07338a0997" prot="public" virt="non-virtual"><scope>Validator</scope><name>Element</name></member>
+      <member refid="structjam_1_1MarkdownValidator_1abfafef3a1a5ca1f5d51fcc89389785b5" prot="public" virt="non-virtual"><scope>Validator</scope><name>forEachCell</name></member>
+      <member refid="structjam_1_1Document_1_1Validator_1a6a3f64ff32d39935e480ffc593a73af5" prot="public" virt="non-virtual"><scope>Validator</scope><name>getFailures</name></member>
+      <member refid="structjam_1_1MarkdownValidator_1ac14242a706f2a9509549ab4313ddb371" prot="public" virt="non-virtual"><scope>Validator</scope><name>getLocation</name></member>
+      <member refid="struct_validator_1a394659562ffe86296738ed5a5b14f80f" prot="public" virt="virtual"><scope>Validator</scope><name>getRules</name></member>
+      <member refid="structjam_1_1Document_1_1Validator_1a1275a95db9c777fcceff5c574c561ae0" prot="public" virt="non-virtual"><scope>Validator</scope><name>isValid</name></member>
+      <member refid="structjam_1_1Document_1_1Validator_1a054080969a3ccc5cf7b2fb64792f4707" prot="public" virt="non-virtual"><scope>Validator</scope><name>isValid</name></member>
+      <member refid="structjam_1_1Document_1_1Validator_1a9044acc578b61d303871248373205e32" prot="public" virt="non-virtual"><scope>Validator</scope><name>Rules</name></member>
+      <member refid="structjam_1_1Document_1_1Validator_1a030f3f652455b0cd156ed8ca131fe79b" prot="public" virt="virtual"><scope>Validator</scope><name>~Validator</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

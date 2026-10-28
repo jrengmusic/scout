@@ -1,0 +1,849 @@
+<?xml version='1.0' encoding='UTF-8' standalone='yes' ?>
+<tagfile doxygen_version="1.18.0">
+  <compound kind="file">
+    <name>Benchmark.cpp</name>
+    <path></path>
+    <filename>_benchmark_8cpp.html</filename>
+    <includes id="_benchmark_8h" name="Benchmark.h" local="yes" import="no" module="no" objc="no">Benchmark.h</includes>
+    <includes id="_generated_8h" name="Generated.h" local="yes" import="no" module="no" objc="no">generated/Generated.h</includes>
+    <includes id="_profile_report_8h" name="ProfileReport.h" local="yes" import="no" module="no" objc="no">ProfileReport.h</includes>
+  </compound>
+  <compound kind="file">
+    <name>Benchmark.h</name>
+    <path></path>
+    <filename>_benchmark_8h.html</filename>
+    <class kind="class">Benchmark</class>
+  </compound>
+  <compound kind="file">
+    <name>Files.h</name>
+    <path>generated/</path>
+    <filename>_files_8h.html</filename>
+  </compound>
+  <compound kind="file">
+    <name>Generated.cpp</name>
+    <path>generated/</path>
+    <filename>_generated_8cpp.html</filename>
+    <includes id="_generated_8h" name="Generated.h" local="yes" import="no" module="no" objc="no">Generated.h</includes>
+  </compound>
+  <compound kind="file">
+    <name>Generated.h</name>
+    <path>generated/</path>
+    <filename>_generated_8h.html</filename>
+    <includes id="_project_info_8h" name="ProjectInfo.h" local="yes" import="no" module="no" objc="no">ProjectInfo.h</includes>
+    <includes id="_identifiers_8h" name="Identifiers.h" local="yes" import="no" module="no" objc="no">Identifiers.h</includes>
+    <includes id="_text_8h" name="Text.h" local="yes" import="no" module="no" objc="no">Text.h</includes>
+    <includes id="_files_8h" name="Files.h" local="yes" import="no" module="no" objc="no">Files.h</includes>
+    <includes id="_hash_maps_8h" name="HashMaps.h" local="yes" import="no" module="no" objc="no">HashMaps.h</includes>
+  </compound>
+  <compound kind="file">
+    <name>HashMaps.h</name>
+    <path>generated/</path>
+    <filename>_hash_maps_8h.html</filename>
+  </compound>
+  <compound kind="file">
+    <name>Identifiers.h</name>
+    <path>generated/</path>
+    <filename>_identifiers_8h.html</filename>
+  </compound>
+  <compound kind="file">
+    <name>ProjectInfo.h</name>
+    <path>generated/</path>
+    <filename>_project_info_8h.html</filename>
+    <namespace>ProjectInfo</namespace>
+  </compound>
+  <compound kind="file">
+    <name>Text.h</name>
+    <path>generated/</path>
+    <filename>_text_8h.html</filename>
+    <class kind="struct">text::Diagnostics</class>
+  </compound>
+  <compound kind="file">
+    <name>Help.cpp</name>
+    <path></path>
+    <filename>_help_8cpp.html</filename>
+    <includes id="_help_8h" name="Help.h" local="yes" import="no" module="no" objc="no">Help.h</includes>
+    <member kind="function">
+      <type>void</type>
+      <name>printHelp</name>
+      <anchorfile>_help_8cpp.html</anchorfile>
+      <anchor>a3f361f138d00c42487776fb13cc5ebe6</anchor>
+      <arglist>(const juce::String &amp;helpText)</arglist>
+    </member>
+  </compound>
+  <compound kind="file">
+    <name>Help.h</name>
+    <path></path>
+    <filename>_help_8h.html</filename>
+    <includes id="_generated_8h" name="Generated.h" local="yes" import="no" module="no" objc="no">generated/Generated.h</includes>
+    <member kind="function">
+      <type>void</type>
+      <name>printHelp</name>
+      <anchorfile>_help_8h.html</anchorfile>
+      <anchor>a3f361f138d00c42487776fb13cc5ebe6</anchor>
+      <arglist>(const juce::String &amp;helpText)</arglist>
+    </member>
+  </compound>
+  <compound kind="file">
+    <name>Main.cpp</name>
+    <path></path>
+    <filename>_main_8cpp.html</filename>
+    <includes id="_generated_8h" name="Generated.h" local="yes" import="no" module="no" objc="no">generated/Generated.h</includes>
+    <includes id="_help_8h" name="Help.h" local="yes" import="no" module="no" objc="no">Help.h</includes>
+    <includes id="_processor_8h" name="Processor.h" local="yes" import="no" module="no" objc="no">Processor.h</includes>
+    <member kind="function" static="yes">
+      <type>static void</type>
+      <name>printBanner</name>
+      <anchorfile>_main_8cpp.html</anchorfile>
+      <anchor>a2c040b6a8eba42513dfa5b2a261f442d</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static void</type>
+      <name>printError</name>
+      <anchorfile>_main_8cpp.html</anchorfile>
+      <anchor>a22583549a7d6409f6524a9c73261ba2d</anchor>
+      <arglist>(const juce::String &amp;message)</arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static const juce::String &amp;</type>
+      <name>getVersionFlag</name>
+      <anchorfile>_main_8cpp.html</anchorfile>
+      <anchor>a99fc9c1dfb80bb56c96c411ab9b24313</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static const juce::String &amp;</type>
+      <name>getHelpFlag</name>
+      <anchorfile>_main_8cpp.html</anchorfile>
+      <anchor>ab90618bcc38cb8962e80a5a729a611b1</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static bool</type>
+      <name>isVersion</name>
+      <anchorfile>_main_8cpp.html</anchorfile>
+      <anchor>a03053d92e25bc6f705c27356cd39d228</anchor>
+      <arglist>(int argc, char *argv[])</arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static bool</type>
+      <name>isHelp</name>
+      <anchorfile>_main_8cpp.html</anchorfile>
+      <anchor>a6336581d1e8cbdb8df62474ac9e3fdbb</anchor>
+      <arglist>(int argc, char *argv[])</arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static void</type>
+      <name>writeVersion</name>
+      <anchorfile>_main_8cpp.html</anchorfile>
+      <anchor>a2bbde775f6db9f0e32cf9455a2ead1b7</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static bool</type>
+      <name>isTerminalOutput</name>
+      <anchorfile>_main_8cpp.html</anchorfile>
+      <anchor>a6f06085b02e0ad301adcc85196bbb128</anchor>
+      <arglist>() noexcept</arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static void</type>
+      <name>printDone</name>
+      <anchorfile>_main_8cpp.html</anchorfile>
+      <anchor>a58cd25047b98ff06d9dc1671ab3ccbed</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static void</type>
+      <name>printBannerAndHelp</name>
+      <anchorfile>_main_8cpp.html</anchorfile>
+      <anchor>a7f683cefdf7f675f09e36661ce8df7cc</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static int</type>
+      <name>runDocument</name>
+      <anchorfile>_main_8cpp.html</anchorfile>
+      <anchor>a739f5ce0b26b14496e6eba6d9cb92356</anchor>
+      <arglist>(const juce::File &amp;documentFile)</arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static int</type>
+      <name>runDocumentNotFound</name>
+      <anchorfile>_main_8cpp.html</anchorfile>
+      <anchor>a4787e2058107a19104111d385324e45b</anchor>
+      <arglist>(const juce::File &amp;documentFile)</arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static juce::File</type>
+      <name>getDocumentFile</name>
+      <anchorfile>_main_8cpp.html</anchorfile>
+      <anchor>af6dc96d8ea3eaa82f12e5f8dc0dac218</anchor>
+      <arglist>(char *argv[])</arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static int</type>
+      <name>runCommandLine</name>
+      <anchorfile>_main_8cpp.html</anchorfile>
+      <anchor>a52f1af656d9670faf7049108bef951b9</anchor>
+      <arglist>(int argc, char *argv[])</arglist>
+    </member>
+    <member kind="function">
+      <type>int</type>
+      <name>main</name>
+      <anchorfile>_main_8cpp.html</anchorfile>
+      <anchor>a0ddf1224851353fc92bfbff6f499fa97</anchor>
+      <arglist>(int argc, char *argv[])</arglist>
+    </member>
+    <member kind="variable" static="yes">
+      <type>static constexpr int</type>
+      <name>flagArgIndex</name>
+      <anchorfile>_main_8cpp.html</anchorfile>
+      <anchor>a7eacf8422a0bf113fc72a4ecc24fac25</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" static="yes">
+      <type>static constexpr int</type>
+      <name>postFlagArgIndex</name>
+      <anchorfile>_main_8cpp.html</anchorfile>
+      <anchor>a8d15eab864d23bacb85f66408f136d42</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" static="yes">
+      <type>static constexpr int</type>
+      <name>flagOnlyArgumentCount</name>
+      <anchorfile>_main_8cpp.html</anchorfile>
+      <anchor>ab112c8dd220252b8308c8882da65e1b1</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" static="yes">
+      <type>static constexpr int</type>
+      <name>postFlagArgumentCount</name>
+      <anchorfile>_main_8cpp.html</anchorfile>
+      <anchor>a70f7aa680f93db40562209fd8a608683</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="file">
+    <name>Processor.cpp</name>
+    <path></path>
+    <filename>_processor_8cpp.html</filename>
+    <includes id="_processor_8h" name="Processor.h" local="yes" import="no" module="no" objc="no">Processor.h</includes>
+    <member kind="function" static="yes">
+      <type>static juce::ValueTree</type>
+      <name>getBaseline</name>
+      <anchorfile>_processor_8cpp.html</anchorfile>
+      <anchor>a75659085307119553a8c6b4fd6ba0ac4</anchor>
+      <arglist>(const juce::File &amp;baselineFile)</arglist>
+    </member>
+  </compound>
+  <compound kind="file">
+    <name>Processor.h</name>
+    <path></path>
+    <filename>_processor_8h.html</filename>
+    <includes id="_generated_8h" name="Generated.h" local="yes" import="no" module="no" objc="no">generated/Generated.h</includes>
+    <includes id="_validator_8h" name="Validator.h" local="yes" import="no" module="no" objc="no">Validator.h</includes>
+    <includes id="_toolchain_8h" name="Toolchain.h" local="yes" import="no" module="no" objc="no">Toolchain.h</includes>
+    <includes id="_benchmark_8h" name="Benchmark.h" local="yes" import="no" module="no" objc="no">Benchmark.h</includes>
+    <includes id="_profile_report_8h" name="ProfileReport.h" local="yes" import="no" module="no" objc="no">ProfileReport.h</includes>
+    <class kind="struct">Processor</class>
+  </compound>
+  <compound kind="file">
+    <name>ProfileReport.cpp</name>
+    <path></path>
+    <filename>_profile_report_8cpp.html</filename>
+    <includes id="_profile_report_8h" name="ProfileReport.h" local="yes" import="no" module="no" objc="no">ProfileReport.h</includes>
+    <includes id="_generated_8h" name="Generated.h" local="yes" import="no" module="no" objc="no">generated/Generated.h</includes>
+  </compound>
+  <compound kind="file">
+    <name>ProfileReport.h</name>
+    <path></path>
+    <filename>_profile_report_8h.html</filename>
+    <includes id="_statistics_8h" name="Statistics.h" local="yes" import="no" module="no" objc="no">Statistics.h</includes>
+    <class kind="class">ProfileReport</class>
+  </compound>
+  <compound kind="file">
+    <name>Statistics.cpp</name>
+    <path></path>
+    <filename>_statistics_8cpp.html</filename>
+    <includes id="_statistics_8h" name="Statistics.h" local="yes" import="no" module="no" objc="no">Statistics.h</includes>
+  </compound>
+  <compound kind="file">
+    <name>Statistics.h</name>
+    <path></path>
+    <filename>_statistics_8h.html</filename>
+    <class kind="class">Statistics</class>
+  </compound>
+  <compound kind="file">
+    <name>Toolchain.cpp</name>
+    <path></path>
+    <filename>_toolchain_8cpp.html</filename>
+    <includes id="_toolchain_8h" name="Toolchain.h" local="yes" import="no" module="no" objc="no">Toolchain.h</includes>
+  </compound>
+  <compound kind="file">
+    <name>Toolchain.h</name>
+    <path></path>
+    <filename>_toolchain_8h.html</filename>
+    <includes id="_generated_8h" name="Generated.h" local="yes" import="no" module="no" objc="no">generated/Generated.h</includes>
+    <class kind="struct">Toolchain</class>
+  </compound>
+  <compound kind="file">
+    <name>Validator.cpp</name>
+    <path></path>
+    <filename>_validator_8cpp.html</filename>
+    <includes id="_validator_8h" name="Validator.h" local="yes" import="no" module="no" objc="no">Validator.h</includes>
+  </compound>
+  <compound kind="file">
+    <name>Validator.h</name>
+    <path></path>
+    <filename>_validator_8h.html</filename>
+    <includes id="_generated_8h" name="Generated.h" local="yes" import="no" module="no" objc="no">generated/Generated.h</includes>
+    <class kind="struct">Validator</class>
+  </compound>
+  <compound kind="class">
+    <name>Benchmark</name>
+    <filename>class_benchmark.html</filename>
+    <member kind="function">
+      <type></type>
+      <name>Benchmark</name>
+      <anchorfile>class_benchmark.html</anchorfile>
+      <anchor>a136b7c51f05ca71e7c7595bc8ce9ac5a</anchor>
+      <arglist>(const juce::File &amp;newCommandFile, const juce::File &amp;newSamplesFile, const juce::File &amp;newManifestFile)</arglist>
+    </member>
+    <member kind="function">
+      <type>juce::Result</type>
+      <name>runEpoch</name>
+      <anchorfile>class_benchmark.html</anchorfile>
+      <anchor>a8b4bab8a038fba5d18366ba23e32923f</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>juce::Result</type>
+      <name>addEpoch</name>
+      <anchorfile>class_benchmark.html</anchorfile>
+      <anchor>a54e743cd8ac66536390608cc09aa355e</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>juce::ValueTree</type>
+      <name>getProfiles</name>
+      <anchorfile>class_benchmark.html</anchorfile>
+      <anchor>ac2758e9667d09cca4fa1c7d0845c7413</anchor>
+      <arglist>(const juce::ValueTree &amp;baseline) const</arglist>
+    </member>
+    <member kind="function" protection="private">
+      <type>int</type>
+      <name>runCommand</name>
+      <anchorfile>class_benchmark.html</anchorfile>
+      <anchor>a4f8bafb7b4939b3398f3ba59f198010a</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="private">
+      <type>void</type>
+      <name>addRows</name>
+      <anchorfile>class_benchmark.html</anchorfile>
+      <anchor>a9b9d076f0ec7ea35ca1cb50a2d280f29</anchor>
+      <arglist>(const juce::ValueTree &amp;table)</arglist>
+    </member>
+    <member kind="function" protection="private">
+      <type>void</type>
+      <name>addBins</name>
+      <anchorfile>class_benchmark.html</anchorfile>
+      <anchor>a9ba969f0936909fa42373d48dccf2550</anchor>
+      <arglist>(const juce::Identifier &amp;rowKey, const juce::String &amp;binsText)</arglist>
+    </member>
+    <member kind="function" protection="private">
+      <type>void</type>
+      <name>addChildTime</name>
+      <anchorfile>class_benchmark.html</anchorfile>
+      <anchor>a5d20602a03271cc0aa22560a9e64aad9</anchor>
+      <arglist>(const rusage &amp;before, const rusage &amp;after)</arglist>
+    </member>
+    <member kind="variable" protection="private">
+      <type>const juce::File</type>
+      <name>commandFile</name>
+      <anchorfile>class_benchmark.html</anchorfile>
+      <anchor>a55df5d956a4f1ed943a8b73142dcb509</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="private">
+      <type>const juce::File</type>
+      <name>samplesFile</name>
+      <anchorfile>class_benchmark.html</anchorfile>
+      <anchor>a462aeef6e3aa34999d64fc5f7ec8443c</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="private">
+      <type>const juce::File</type>
+      <name>manifestFile</name>
+      <anchorfile>class_benchmark.html</anchorfile>
+      <anchor>a14f464a6bc7b395ccb9bba782a301661</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="private">
+      <type>jam::HashMap&lt; juce::Identifier, juce::Array&lt; juce::var &gt; &gt;</type>
+      <name>epochSamples</name>
+      <anchorfile>class_benchmark.html</anchorfile>
+      <anchor>ab658fd8c4392653436c288005e1172a4</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="private">
+      <type>jam::HashMap&lt; juce::Identifier, jam::Array&lt; juce::int64 &gt; &gt;</type>
+      <name>bins</name>
+      <anchorfile>class_benchmark.html</anchorfile>
+      <anchor>a342b5af6c51b0dae3b47376b45f42483</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="private">
+      <type>jam::HashMap&lt; juce::Identifier, int &gt;</type>
+      <name>calls</name>
+      <anchorfile>class_benchmark.html</anchorfile>
+      <anchor>a1a7f19f67b053162666235ed365861e7</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="private">
+      <type>jam::HashMap&lt; juce::Identifier, juce::String &gt;</type>
+      <name>units</name>
+      <anchorfile>class_benchmark.html</anchorfile>
+      <anchor>a587a06d967bce6380270036d001c1f5a</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="private">
+      <type>juce::ValueTree</type>
+      <name>runTable</name>
+      <anchorfile>class_benchmark.html</anchorfile>
+      <anchor>a17a83e311aa3aa0faff83483b67537e7</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="private">
+      <type>juce::Identifier</type>
+      <name>tableType</name>
+      <anchorfile>class_benchmark.html</anchorfile>
+      <anchor>a297f53f732ae4d2d79d474359af97fe6</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="struct">
+    <name>text::Diagnostics</name>
+    <filename>structtext_1_1_diagnostics.html</filename>
+    <member kind="variable" static="yes">
+      <type>static constexpr const char *const</type>
+      <name>failNotFound</name>
+      <anchorfile>structtext_1_1_diagnostics.html</anchorfile>
+      <anchor>a614879ccbad6f4edaf1a511bf5a2fa68</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" static="yes">
+      <type>static constexpr const char *const</type>
+      <name>failToolchain</name>
+      <anchorfile>structtext_1_1_diagnostics.html</anchorfile>
+      <anchor>af3213d85de76f5051147adf231066b11</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" static="yes">
+      <type>static constexpr const char *const</type>
+      <name>failToolchainColumn</name>
+      <anchorfile>structtext_1_1_diagnostics.html</anchorfile>
+      <anchor>acb39935ba8149723d8a1c9615271f294</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" static="yes">
+      <type>static constexpr const char *const</type>
+      <name>failOutputWrite</name>
+      <anchorfile>structtext_1_1_diagnostics.html</anchorfile>
+      <anchor>a17a0efaa59e3489e8242be054d6280f5</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" static="yes">
+      <type>static constexpr const char *const</type>
+      <name>failCommand</name>
+      <anchorfile>structtext_1_1_diagnostics.html</anchorfile>
+      <anchor>a67a3d4524798361c7272cca4ff5d19ad</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" static="yes">
+      <type>static constexpr const char *const</type>
+      <name>failFlagUnknown</name>
+      <anchorfile>structtext_1_1_diagnostics.html</anchorfile>
+      <anchor>a54030ad642dee1157d22d8255503812d</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" static="yes">
+      <type>static constexpr const char *const</type>
+      <name>done</name>
+      <anchorfile>structtext_1_1_diagnostics.html</anchorfile>
+      <anchor>a07b92fba2d678ad4a065f5ebd63d43a7</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="struct">
+    <name>Processor</name>
+    <filename>struct_processor.html</filename>
+    <member kind="function">
+      <type></type>
+      <name>Processor</name>
+      <anchorfile>struct_processor.html</anchorfile>
+      <anchor>abe5471b3c8a21dfe9bc8e7683eb4868c</anchor>
+      <arglist>(const juce::File &amp;newDocumentFile)</arglist>
+    </member>
+    <member kind="function">
+      <type>juce::Result</type>
+      <name>generate</name>
+      <anchorfile>struct_processor.html</anchorfile>
+      <anchor>ac2f8ddc17ef15f47f03fa71ce3d381c6</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="private">
+      <type>juce::Result</type>
+      <name>run</name>
+      <anchorfile>struct_processor.html</anchorfile>
+      <anchor>a6ace9660425275f32080160c0ae88b2b</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="private">
+      <type>juce::Result</type>
+      <name>runToolchainRow</name>
+      <anchorfile>struct_processor.html</anchorfile>
+      <anchor>a83804663c3ddec5019aad5fa2673bada</anchor>
+      <arglist>(const jam::ConfigDocument::Element &amp;row)</arglist>
+    </member>
+    <member kind="function" protection="private">
+      <type>juce::Result</type>
+      <name>runEpochs</name>
+      <anchorfile>struct_processor.html</anchorfile>
+      <anchor>a88ec28a8e3dd1b6e1f41fbaa315a737e</anchor>
+      <arglist>(const juce::ValueTree &amp;runTable)</arglist>
+    </member>
+    <member kind="function" protection="private">
+      <type>juce::Result</type>
+      <name>writeReport</name>
+      <anchorfile>struct_processor.html</anchorfile>
+      <anchor>aa277929ee4d6480d62fa48d2dd5f2a6c</anchor>
+      <arglist>(const juce::ValueTree &amp;runTable, const juce::ValueTree &amp;profiles)</arglist>
+    </member>
+    <member kind="variable" protection="private">
+      <type>const juce::File</type>
+      <name>documentFile</name>
+      <anchorfile>struct_processor.html</anchorfile>
+      <anchor>a8dbadccb605c3a32f0e5af688b43d652</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="private">
+      <type>const jam::ConfigDocument</type>
+      <name>manifest</name>
+      <anchorfile>struct_processor.html</anchorfile>
+      <anchor>afb131d60d600f95ce7bc382f8d9724e7</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>ProfileReport</name>
+    <filename>class_profile_report.html</filename>
+    <member kind="function" static="yes">
+      <type>static bool</type>
+      <name>toFile</name>
+      <anchorfile>class_profile_report.html</anchorfile>
+      <anchor>aeb4677445b193940dcc411da7c367505</anchor>
+      <arglist>(const juce::ValueTree &amp;profiles, const juce::File &amp;outputFile)</arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static juce::ValueTree</type>
+      <name>getProfile</name>
+      <anchorfile>class_profile_report.html</anchorfile>
+      <anchor>a3963d7e774a47639d9b3e42d41d6b8e6</anchor>
+      <arglist>(const juce::Identifier &amp;benchmarkType, const jam::HashMap&lt; juce::Identifier, juce::Array&lt; juce::var &gt; &gt; &amp;samples, const jam::HashMap&lt; juce::Identifier, int &gt; &amp;calls, const jam::HashMap&lt; juce::Identifier, juce::String &gt; &amp;units, const juce::ValueTree &amp;baselineProfile)</arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static juce::ValueTree</type>
+      <name>getProfile</name>
+      <anchorfile>class_profile_report.html</anchorfile>
+      <anchor>ab5d472be1a71894bfb4280711959ba11</anchor>
+      <arglist>(const juce::Identifier &amp;benchmarkType, const jam::HashMap&lt; juce::Identifier, jam::Array&lt; juce::int64 &gt; &gt; &amp;bins, const jam::HashMap&lt; juce::Identifier, juce::String &gt; &amp;units, const juce::ValueTree &amp;baselineProfile)</arglist>
+    </member>
+    <member kind="function" protection="private" static="yes">
+      <type>static juce::ValueTree</type>
+      <name>getZone</name>
+      <anchorfile>class_profile_report.html</anchorfile>
+      <anchor>a7b882e2ebfe719b1e06329583c2f697c</anchor>
+      <arglist>(const juce::Identifier &amp;zoneKey, const Statistics &amp;statistics, int calls, const juce::String &amp;unit)</arglist>
+    </member>
+    <member kind="function" protection="private" static="yes">
+      <type>static Statistics</type>
+      <name>getStatistics</name>
+      <anchorfile>class_profile_report.html</anchorfile>
+      <anchor>abaca06739e9b769dcea902484108b834</anchor>
+      <arglist>(const juce::ValueTree &amp;baselineZone)</arglist>
+    </member>
+    <member kind="function" protection="private" static="yes">
+      <type>static void</type>
+      <name>addComparison</name>
+      <anchorfile>class_profile_report.html</anchorfile>
+      <anchor>a9e7a7ae53d95a8e5be64b31fdbbec3a9</anchor>
+      <arglist>(juce::ValueTree &amp;zone, const Statistics &amp;statistics, const juce::ValueTree &amp;baselineZone)</arglist>
+    </member>
+    <member kind="function" protection="private" static="yes">
+      <type>static void</type>
+      <name>addChart</name>
+      <anchorfile>class_profile_report.html</anchorfile>
+      <anchor>ab4226f150edd1b0c3f1908b716323a0f</anchor>
+      <arglist>(jam::ConfigDocument &amp;document, const juce::ValueTree &amp;benchmark)</arglist>
+    </member>
+    <member kind="function" protection="private" static="yes">
+      <type>static void</type>
+      <name>addChart</name>
+      <anchorfile>class_profile_report.html</anchorfile>
+      <anchor>aaac495eb6a95882f0d63173e45c8971a</anchor>
+      <arglist>(jam::ConfigDocument &amp;document, const juce::ValueTree &amp;benchmark, const juce::Identifier &amp;unit)</arglist>
+    </member>
+    <member kind="function" protection="private" static="yes">
+      <type>static void</type>
+      <name>addChart</name>
+      <anchorfile>class_profile_report.html</anchorfile>
+      <anchor>ae35c099a06e99ee2989270e98473d4e7</anchor>
+      <arglist>(jam::ConfigDocument &amp;document, const juce::String &amp;title, const juce::Array&lt; juce::var &gt; &amp;categories, const juce::String &amp;yAxisLabel, const juce::Array&lt; juce::var &gt; &amp;values)</arglist>
+    </member>
+    <member kind="function" protection="private" static="yes">
+      <type>static void</type>
+      <name>addDistribution</name>
+      <anchorfile>class_profile_report.html</anchorfile>
+      <anchor>a996b7005c13fdd2d877931aaa1dfb223</anchor>
+      <arglist>(jam::ConfigDocument &amp;document, const juce::ValueTree &amp;zone)</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>Statistics</name>
+    <filename>class_statistics.html</filename>
+    <member kind="function">
+      <type></type>
+      <name>Statistics</name>
+      <anchorfile>class_statistics.html</anchorfile>
+      <anchor>acc8df00f61967048aa906224f5da5c70</anchor>
+      <arglist>(const juce::Array&lt; juce::var &gt; &amp;samples)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>Statistics</name>
+      <anchorfile>class_statistics.html</anchorfile>
+      <anchor>abfeb85a3ddf3d7859e0df4a9fb125644</anchor>
+      <arglist>(const jam::Array&lt; juce::int64 &gt; &amp;bins)</arglist>
+    </member>
+    <member kind="function">
+      <type>double</type>
+      <name>getMedian</name>
+      <anchorfile>class_statistics.html</anchorfile>
+      <anchor>ac4a886dcd0d268ec21c20a52a645803f</anchor>
+      <arglist>() const noexcept</arglist>
+    </member>
+    <member kind="function">
+      <type>double</type>
+      <name>getPercentile</name>
+      <anchorfile>class_statistics.html</anchorfile>
+      <anchor>a4be445f232c86acf67deba1b7bb9c738</anchor>
+      <arglist>() const noexcept</arglist>
+    </member>
+    <member kind="function">
+      <type>double</type>
+      <name>getErrorPercent</name>
+      <anchorfile>class_statistics.html</anchorfile>
+      <anchor>ae7a7695e6372fae494655e034e130670</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>juce::int64</type>
+      <name>getCount</name>
+      <anchorfile>class_statistics.html</anchorfile>
+      <anchor>a666e606366dd589b5c287875593571d3</anchor>
+      <arglist>() const noexcept</arglist>
+    </member>
+    <member kind="function">
+      <type>double</type>
+      <name>getMinimum</name>
+      <anchorfile>class_statistics.html</anchorfile>
+      <anchor>acf7d7c65ee5f370f467871c89d728690</anchor>
+      <arglist>() const noexcept</arglist>
+    </member>
+    <member kind="function">
+      <type>double</type>
+      <name>getMaximum</name>
+      <anchorfile>class_statistics.html</anchorfile>
+      <anchor>abc85d18cb8087ef0ce838baa8823185e</anchor>
+      <arglist>() const noexcept</arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static double</type>
+      <name>getProbability</name>
+      <anchorfile>class_statistics.html</anchorfile>
+      <anchor>a145cae352e7a57083eddf7c56a13efe1</anchor>
+      <arglist>(const Statistics &amp;current, const Statistics &amp;baseline)</arglist>
+    </member>
+    <member kind="variable" static="yes">
+      <type>static constexpr double</type>
+      <name>percentScale</name>
+      <anchorfile>class_statistics.html</anchorfile>
+      <anchor>ac1be2f46ec2507b9e8bf4bd2e3f677df</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" static="yes">
+      <type>static constexpr double</type>
+      <name>percentileRank</name>
+      <anchorfile>class_statistics.html</anchorfile>
+      <anchor>a6fe7b54ba75c68be1cac96cd2394f0e8</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function" protection="private" static="yes">
+      <type>static double</type>
+      <name>getPercentile</name>
+      <anchorfile>class_statistics.html</anchorfile>
+      <anchor>a76bab7c34fa8634f2bb4d9efa0efce8b</anchor>
+      <arglist>(const jam::Array&lt; double &gt; &amp;sortedValues, const jam::Array&lt; juce::int64 &gt; &amp;valueCounts, double rank) noexcept</arglist>
+    </member>
+    <member kind="variable" protection="private">
+      <type>jam::Array&lt; double &gt;</type>
+      <name>sorted</name>
+      <anchorfile>class_statistics.html</anchorfile>
+      <anchor>ad9cc4dd0882c782416f631ad7f4944e2</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="private">
+      <type>jam::Array&lt; juce::int64 &gt;</type>
+      <name>counts</name>
+      <anchorfile>class_statistics.html</anchorfile>
+      <anchor>afb462f7a6b0bf07d90d0dc41d4405639</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="private" static="yes">
+      <type>static constexpr double</type>
+      <name>half</name>
+      <anchorfile>class_statistics.html</anchorfile>
+      <anchor>a49d39c86dc7b2cf1b95992374f9b4487</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="private" static="yes">
+      <type>static constexpr double</type>
+      <name>medianRank</name>
+      <anchorfile>class_statistics.html</anchorfile>
+      <anchor>ab13d52cc86561d1087f96bb421dbeb85</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="struct">
+    <name>Toolchain</name>
+    <filename>struct_toolchain.html</filename>
+    <member kind="function" static="yes">
+      <type>static juce::StringArray</type>
+      <name>getToolchainArguments</name>
+      <anchorfile>struct_toolchain.html</anchorfile>
+      <anchor>ad96b65cacfb0e4c8d2c1cf75acd01100</anchor>
+      <arglist>(const juce::String &amp;command, const juce::String &amp;flag)</arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static juce::Result</type>
+      <name>runProcess</name>
+      <anchorfile>struct_toolchain.html</anchorfile>
+      <anchor>a99335d844ab10df762460e0d2beea4db</anchor>
+      <arglist>(const juce::StringArray &amp;arguments, const juce::String &amp;diagnosticLine)</arglist>
+    </member>
+  </compound>
+  <compound kind="struct">
+    <name>Validator</name>
+    <filename>struct_validator.html</filename>
+    <base>jam::ConfigValidator</base>
+    <member kind="function">
+      <type>const Rules &amp;</type>
+      <name>getRules</name>
+      <anchorfile>struct_validator.html</anchorfile>
+      <anchor>a394659562ffe86296738ed5a5b14f80f</anchor>
+      <arglist>() const override</arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static void</type>
+      <name>addRules</name>
+      <anchorfile>struct_validator.html</anchorfile>
+      <anchor>af387720572933d5519b0597814433c17</anchor>
+      <arglist>(Rules &amp;rules)</arglist>
+    </member>
+  </compound>
+  <compound kind="namespace">
+    <name>ProjectInfo</name>
+    <filename>namespace_project_info.html</filename>
+    <member kind="variable" static="yes">
+      <type>static constexpr const char *const</type>
+      <name>projectName</name>
+      <anchorfile>namespace_project_info.html</anchorfile>
+      <anchor>a50f49d766351ea9313f67b3f30aa014d</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" static="yes">
+      <type>static constexpr const char *const</type>
+      <name>companyName</name>
+      <anchorfile>namespace_project_info.html</anchorfile>
+      <anchor>a9b435df60395ecec1378ecbaba7ccb75</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" static="yes">
+      <type>static constexpr const char *const</type>
+      <name>legalCompanyName</name>
+      <anchorfile>namespace_project_info.html</anchorfile>
+      <anchor>a75557edf46fa8becc81d2bff04c4c24b</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" static="yes">
+      <type>static constexpr const char *const</type>
+      <name>versionString</name>
+      <anchorfile>namespace_project_info.html</anchorfile>
+      <anchor>a7e092322572cc0554d2ee7e6963b22fe</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" static="yes">
+      <type>static constexpr int</type>
+      <name>versionNumber</name>
+      <anchorfile>namespace_project_info.html</anchorfile>
+      <anchor>a3dfad1d1308874f47f13297fa6e93c49</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" static="yes">
+      <type>static constexpr const char *const</type>
+      <name>productWebsite</name>
+      <anchorfile>namespace_project_info.html</anchorfile>
+      <anchor>a53f184d022499b38a6958b0ea2e88ab9</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" static="yes">
+      <type>static constexpr const char *const</type>
+      <name>companyEmail</name>
+      <anchorfile>namespace_project_info.html</anchorfile>
+      <anchor>a9f61dfba4aab183c0a33c730776e3227</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" static="yes">
+      <type>static constexpr const char *const</type>
+      <name>presetExtension</name>
+      <anchorfile>namespace_project_info.html</anchorfile>
+      <anchor>a8bc2cb4961d15c8b81888e1dafbeca41</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" static="yes">
+      <type>static constexpr const char *const</type>
+      <name>presetDefault</name>
+      <anchorfile>namespace_project_info.html</anchorfile>
+      <anchor>aa30ca45a1228a1a11b2ecb2f3177ef06</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="namespace">
+    <name>std</name>
+    <filename>namespacestd.html</filename>
+  </compound>
+  <compound kind="dir">
+    <name>generated</name>
+    <path>generated/</path>
+    <filename>dir_84fc5dba3506812825191c0c043e3c97.html</filename>
+    <file>Files.h</file>
+    <file>Generated.cpp</file>
+    <file>Generated.h</file>
+    <file>HashMaps.h</file>
+    <file>Identifiers.h</file>
+    <file>ProjectInfo.h</file>
+    <file>Text.h</file>
+  </compound>
+</tagfile>

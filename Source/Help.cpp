@@ -1,6 +1,6 @@
 #include "Help.h"
 
-void printHelp (const juce::String& helpFile)
+void printHelp (const juce::String& helpText)
 {
     jam::SharedInstance<jam::SharedDocuments> documents { std::in_place };
     jam::Typeface typeface;
@@ -16,7 +16,7 @@ void printHelp (const juce::String& helpFile)
     jam::MarkdownComponent component;
     component.setLookAndFeel (&styleMarkdown);
     component.setBounds (0, 0, columnWidth, 0);
-    component.setDocument (jam::MarkdownDocument::parse (BinaryData::getString (helpFile), helpFile));
+    component.setDocument (jam::MarkdownDocument::parse (helpText, files::scoutHelp));
 
     const auto rows { component.getViewedComponent()->getHeight() };
 

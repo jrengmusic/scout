@@ -1,0 +1,146 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.18.0" xml:lang="en-US">
+  <compounddef id="_help_8cpp" kind="file" language="C++">
+    <compoundname>Help.cpp</compoundname>
+    <includes refid="_help_8h" local="yes">Help.h</includes>
+    <incdepgraph>
+      <node id="1">
+        <label>Help.cpp</label>
+        <link refid="_help_8cpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>Help.h</label>
+        <link refid="_help_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>Files.h</label>
+        <link refid="_files_8h"/>
+      </node>
+      <node id="4">
+        <label>generated/Generated.h</label>
+        <link refid="_generated_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>HashMaps.h</label>
+        <link refid="_hash_maps_8h"/>
+      </node>
+      <node id="6">
+        <label>Identifiers.h</label>
+        <link refid="_identifiers_8h"/>
+      </node>
+      <node id="5">
+        <label>ProjectInfo.h</label>
+        <link refid="_project_info_8h"/>
+      </node>
+      <node id="7">
+        <label>Text.h</label>
+        <link refid="_text_8h"/>
+      </node>
+      <node id="3">
+        <label>JuceHeader.h</label>
+      </node>
+    </incdepgraph>
+    <sectiondef kind="func">
+      <memberdef kind="function" id="_help_8cpp_1a3f361f138d00c42487776fb13cc5ebe6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void printHelp</definition>
+        <argsstring>(const juce::String &amp;helpText)</argsstring>
+        <name>printHelp</name>
+        <param>
+          <type>const <ref refid="classjuce_1_1String" kindref="compound" external="/Users/jreng/Documents/Poems/JUCE/docs/tagfile.xml">juce::String</ref> &amp;</type>
+          <declname>helpText</declname>
+        </param>
+        <briefdescription>
+<para>Renders the HELP.md text to stdout through the terminal graphics context. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>The function loads the markdown and mermaid stylesheets into one style manager and parses <computeroutput>helpText</computeroutput> as markdown. The width, in cells, is the column width of the markdown style: the <computeroutput>maxLineWidth</computeroutput> metric plus the <computeroutput>margin</computeroutput> metric on both sides, rounded up. The component is laid out once at that width. The row count is the height of the viewed component. The function prepares a terminal buffer for that grid, with the row count as transit room. It paints the viewed component through a terminal graphics context. The context takes the <computeroutput>Colours</computeroutput> of the style manager. <computeroutput>buffer.writeToStream (frame, styleMarkdown)</computeroutput> then writes the frame as VT bytes to a memory stream. The function writes the stream to stdout.</para>
+<para><simplesect kind="pre"><para>The JUCE GUI initialiser scope is open.</para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>helpText</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The HELP.md text, parsed as markdown. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Help.cpp" line="3" column="6" bodyfile="Help.cpp" bodystart="3" bodyend="35"/>
+        <references refid="classjam_1_1TerminalBuffer_1adaf1dc795b75b3eee7100f241134bbbb">jam::TerminalBuffer::getCellLookup</references>
+        <references refid="classjam_1_1TerminalBuffer_1aa6ae34df2c63437939c7555ced2a74f7">jam::TerminalBuffer::getCellMeasure</references>
+        <references refid="classjam_1_1StyleMarkdown_1a2c93456629f62deb63ffbe9c2d92d569">jam::StyleMarkdown::getColumnWidth</references>
+        <references refid="structjam_1_1Instance_1ad5d2bbb58e37d8d260b428b334823140">jam::Instance&lt; Colours &gt;::getInstance</references>
+        <references refid="namespacefiles_1a038e98f00fad7f60cc8815e3dbd0875f">files::markdownStyleSheet</references>
+        <references refid="namespacefiles_1a185891dbf761ee7dbe2ac83641d633f2">files::mermaidStyleSheet</references>
+        <references refid="structjam_1_1MarkdownDocument_1af46000d5b257120c18b18b7b2a05031c">jam::MarkdownDocument::parse</references>
+        <references refid="_help_8cpp_1a3f361f138d00c42487776fb13cc5ebe6" compoundref="_help_8cpp" startline="3" endline="35">printHelp</references>
+        <references refid="namespacefiles_1a4f5d1a618a82e735de711d473aa8033b" compoundref="_generated_8cpp" startline="48" endline="48">files::scoutHelp</references>
+        <referencedby refid="_main_8cpp_1a7f683cefdf7f675f09e36661ce8df7cc" compoundref="_main_8cpp" startline="137" endline="145">printBannerAndHelp</referencedby>
+        <referencedby refid="_help_8cpp_1a3f361f138d00c42487776fb13cc5ebe6" compoundref="_help_8cpp" startline="3" endline="35">printHelp</referencedby>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_help_8h" kindref="compound">Help.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3" refid="_help_8cpp_1a3f361f138d00c42487776fb13cc5ebe6" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_help_8cpp_1a3f361f138d00c42487776fb13cc5ebe6" kindref="member">printHelp</ref><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classjuce_1_1String" kindref="compound" external="/Users/jreng/Documents/Poems/JUCE/docs/tagfile.xml">juce::String</ref>&amp;<sp/>helpText)</highlight></codeline>
+<codeline lineno="4"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="5"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classjam_1_1SharedInstance" kindref="compound" external="/Users/jreng/Documents/Poems/dev/jam/docs/tagfile.xml">jam::SharedInstance&lt;jam::SharedDocuments&gt;</ref><sp/>documents<sp/>{<sp/>std::in_place<sp/>};</highlight></codeline>
+<codeline lineno="6"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="structjam_1_1Typeface" kindref="compound" external="/Users/jreng/Documents/Poems/dev/jam/docs/tagfile.xml">jam::Typeface</ref><sp/>typeface;</highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classjuce_1_1MemoryOutputStream" kindref="compound" external="/Users/jreng/Documents/Poems/JUCE/docs/tagfile.xml">juce::MemoryOutputStream</ref><sp/>frame;</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classjam_1_1TerminalBuffer" kindref="compound" external="/Users/jreng/Documents/Poems/dev/jam/docs/tagfile.xml">jam::TerminalBuffer</ref><sp/>buffer;</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classjam_1_1GlyphArrangement" kindref="compound" external="/Users/jreng/Documents/Poems/dev/jam/docs/tagfile.xml">jam::GlyphArrangement</ref><sp/>glyphArrangement<sp/>{<sp/><ref refid="classjam_1_1TerminalBuffer_1adaf1dc795b75b3eee7100f241134bbbb" kindref="member" external="/Users/jreng/Documents/Poems/dev/jam/docs/tagfile.xml">jam::TerminalBuffer::getCellLookup</ref>(),<sp/><ref refid="classjam_1_1TerminalBuffer_1aa6ae34df2c63437939c7555ced2a74f7" kindref="member" external="/Users/jreng/Documents/Poems/dev/jam/docs/tagfile.xml">jam::TerminalBuffer::getCellMeasure</ref>()<sp/>};</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classjam_1_1StyleManager" kindref="compound" external="/Users/jreng/Documents/Poems/dev/jam/docs/tagfile.xml">jam::StyleManager</ref><sp/>styleManager<sp/>{<sp/>{<sp/>BinaryData::fetcher<sp/>},<sp/><ref refid="classjam_1_1Strings" kindref="compound" external="/Users/jreng/Documents/Poems/dev/jam/docs/tagfile.xml">jam::Strings</ref><sp/>{<sp/><ref refid="namespacefiles_1a038e98f00fad7f60cc8815e3dbd0875f" kindref="member" external="/Users/jreng/Documents/Poems/dev/jam/docs/tagfile.xml">files::markdownStyleSheet</ref>,<sp/><ref refid="namespacefiles_1a185891dbf761ee7dbe2ac83641d633f2" kindref="member" external="/Users/jreng/Documents/Poems/dev/jam/docs/tagfile.xml">files::mermaidStyleSheet</ref><sp/>}<sp/>};</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classjam_1_1StyleMarkdown" kindref="compound" external="/Users/jreng/Documents/Poems/dev/jam/docs/tagfile.xml">jam::StyleMarkdown</ref><sp/>styleMarkdown;</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>columnWidth<sp/>{<sp/>styleMarkdown.<ref refid="classjam_1_1StyleMarkdown_1a2c93456629f62deb63ffbe9c2d92d569" kindref="member" external="/Users/jreng/Documents/Poems/dev/jam/docs/tagfile.xml">getColumnWidth</ref>()<sp/>};</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classjam_1_1MarkdownComponent" kindref="compound" external="/Users/jreng/Documents/Poems/dev/jam/docs/tagfile.xml">jam::MarkdownComponent</ref><sp/>component;</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/>component.setLookAndFeel<sp/>(&amp;styleMarkdown);</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/>component.setBounds<sp/>(0,<sp/>0,<sp/>columnWidth,<sp/>0);</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/>component.setDocument<sp/>(<ref refid="structjam_1_1MarkdownDocument_1af46000d5b257120c18b18b7b2a05031c" kindref="member" external="/Users/jreng/Documents/Poems/dev/jam/docs/tagfile.xml">jam::MarkdownDocument::parse</ref><sp/>(helpText,<sp/><ref refid="namespacefiles_1a4f5d1a618a82e735de711d473aa8033b" kindref="member" external="/Users/jreng/Documents/Poems/dev/jam/docs/tagfile.xml">files::scoutHelp</ref>));</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>rows<sp/>{<sp/>component.getViewedComponent()-&gt;getHeight()<sp/>};</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>buffer.prepare<sp/>(columnWidth,<sp/>rows,<sp/>rows);</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classjam_1_1TerminalGraphicsContext" kindref="compound" external="/Users/jreng/Documents/Poems/dev/jam/docs/tagfile.xml">jam::TerminalGraphicsContext</ref><sp/>context<sp/>{<sp/>buffer,<sp/>*<ref refid="structjam_1_1Instance_1ad5d2bbb58e37d8d260b428b334823140" kindref="member" external="/Users/jreng/Documents/Poems/dev/jam/docs/tagfile.xml">jam::Colours::getInstance</ref>()<sp/>};</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classjuce_1_1Graphics" kindref="compound" external="/Users/jreng/Documents/Poems/JUCE/docs/tagfile.xml">juce::Graphics</ref><sp/>g<sp/>{<sp/>context<sp/>};</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>component.getViewedComponent()-&gt;paintEntireComponent<sp/>(g,<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/>buffer.process();</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/>buffer.writeToStream<sp/>(frame,<sp/>styleMarkdown);</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/>fwrite<sp/>(frame.getData(),<sp/>sizeof<sp/>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal">),<sp/>frame.getDataSize(),<sp/>stdout);</highlight></codeline>
+<codeline lineno="35"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="Help.cpp"/>
+  </compounddef>
+</doxygen>

@@ -32,7 +32,7 @@ public:
      * It adds the wall time of the epoch, in ns, to the `epoch` samples.
      * On macOS and Linux it also adds the user and system time of the child, in ns, to the `user` and `system` samples.
      *
-     * @return  Ok when the command exits with 0. Fail with the path of the command otherwise.
+     * @return  Ok when the command exits with 0. Otherwise fail with `\<command path\>: command failed`.
      */
     juce::Result runEpoch();
 
@@ -42,8 +42,10 @@ public:
      * The function parses the file. Each table except `run` adds its rows with `addRows`.
      * The type of the last such table becomes the profile type.
      * The `run` table is kept for the report.
+     * Every row holds one sample for each epoch. A row that the file does not hold adds 0 for this epoch.
+     * A new row starts with 0 for each earlier epoch.
      *
-     * @return  Ok when the file exists. Fail with the path of the file when it is missing.
+     * @return  Ok when the file exists. Otherwise fail with `not found: \<samples path\>`.
      */
     juce::Result addEpoch();
 
@@ -57,6 +59,8 @@ public:
      * Each zone that the matching table of @p baseline also holds adds the comparison properties.
      *
      * @param baseline  Tree of an earlier report. It may hold no matching table.
+     *
+     * @return  Tree of the three tables.
      */
     juce::ValueTree getProfiles (const juce::ValueTree& baseline) const;
 

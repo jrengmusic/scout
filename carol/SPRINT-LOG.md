@@ -114,6 +114,83 @@
 <!-- The entry format is in /log (commands/log.md). It is the only source. -->
 <!-- Sprint entries go here, written by PRIMARY agents -->
 
+## Sprint 2: Profiling — scout identical to cast, one command per profile ✅
+
+**Date:** 2026-10-28
+**Duration:** not recorded
+
+### Agents Participated
+- COUNSELOR — wrote and locked `PLAN-profiling.md` with Amendments A and B, wrote each Engineer brief and each trace spec, validated every return against CONTRACT, filtered the audit, wrote the doxygen run files, and wrote this log.
+- Pathfinder — read the cast sources, the nvim locator, the whatdbg launch handler and EVE. Ran the Step 7 CLI cases, the replay run, the live 100M run with `time seq`, the Step 12 attach probe, the Where-lane epoch, and the git status reads.
+- Engineer — implemented each step and each correction, ran the cast regenerations and the builds, and ran the doxygen and coverage runs.
+- Auditor — one sweep over Steps 1–13. Dispositions are in `PLAN-profiling.md` Amendment B.
+
+### Files Modified (by repository)
+- **scout**
+  - `Source/Main.cpp`: command line only, copied from cast. Banner, `--help`, `--version`, `not found`, `printError`, `Fine.` on a terminal, and the screen erase. An extra argument fails with `failFlagUnknown`. The exits are `EXIT_SUCCESS` and `EXIT_FAILURE`.
+  - `Source/Validator.h/.cpp` (new): `Validator : jam::ConfigValidator`. `addRules` adds the `toolchain` column rule (`failToolchainColumn`).
+  - `Source/Processor.h/.cpp` (new): `generate` validates, runs the `## toolchain` rows (`run`, `runToolchainRow`), then runs the epochs (`runEpochs`) and writes the report (`writeReport`). A missing baseline fails before the first epoch.
+  - `Source/Toolchain.h/.cpp` (new): a verbatim copy of cast's Toolchain (ruling *"Copy into scout"*).
+  - `Source/Help.h/.cpp`: cast's `printHelp (helpText)`, with `files::scoutHelp`.
+  - `Source/Benchmark.h/.cpp`: the `failCommand` and `not found` texts. Each row holds one sample for each epoch, and an absent row adds 0.
+  - `Source/ProfileReport.h/.cpp`: `getText` is replaced by `toFile`, through `jam::MarkdownWriter`, which creates the folder.
+  - `Source/Statistics.h`: documentation only.
+  - `Source/HELP.md`: the guide in cast's shape.
+  - `cast/text.md`, `cast/files.md`, `cast/banner.md` (new). `cast/identifiers.md`, `cast/spell.md`: cast's generated layout. `Source/generated/`: `Identifiers.cpp` deleted. `Generated.h/.cpp`, `Text.h`, `Files.h` and `HashMaps.h` are new.
+  - `project-info.md:261`, `:308`: the `macroRedefined` rows (`-Wno-macro-redefined`, `/wd4005`). `CMakeLists.txt` is regenerated.
+  - `PLAN-live-measurement.md`, `PLAN-mermaid-writer.md` deleted. `CLAUDE.md` lost their rows. `PLAN-profiling.md` is new.
+  - `docs/` (new): the project doxygen XML.
+- **JAM**
+  - `jam_subprocess/subprocess/jam_ChildProcess.h` and `native/jam_ChildProcess_posix.cpp`, `native/jam_ChildProcess_windows.cpp` (new): a native launch with a working folder for the child only. POSIX uses fork, `chdir` and `execvp`. Windows uses `CreateProcessW` with `lpCurrentDirectory`. A child that a signal killed reports 128 plus the signal number (`getExitStatus`).
+  - `jam_subprocess/subprocess/jam_Subprocess.h/.cpp`: the Worker uses `jam::ChildProcess`. `setAsCurrentWorkingDirectory` is gone.
+  - `jam_subprocess/jam_subprocess.h/.cpp`: the platform includes.
+- **CAROL** (`~/.carol`)
+  - `skills/profile/SKILL.md`: one command, the exit table, `## toolchain`, the lanes, and `## Limits` with the live-run numbers.
+  - `skills/trace/epoch.lua`, `skills/trace/sample` (new): the scout epoch adapter and its wrapper. They write the `## SAMPLE` and `## RUN` tables last.
+  - `skills/trace/sample.lua`, `driver.lua`, `SKILL.md`: `.json` goes to `Driver.main` and `.md` goes to `Epoch.main`. `kind` is renamed to `type`. `Driver.reportSpecErrors` is shared. The `-g` note is updated.
+- **nvim** (`~/.config`)
+  - `nvim/lua/core/project/cast.lua`, `core/project.lua`: the benchmark compile databases (`benchmark/*.md`) win for clangd.
+  - `nvim/lua/core/build.lua`, `nvim/lua/dap/launch.lua`: `kind` is renamed to `type`.
+- **EVE**
+  - `benchmark/live-report.md`, `live-samples.md`, `replay-report.md`, `replay-samples.md`: rewritten by the Step 8 and Step 10 runs.
+
+### Alignment Check
+- [x] BLESSED principles followed
+  - scout reaps each child before it reads the exit code. The child gets its working folder without a change to the parent's folder.
+  - The command line, Validator, Processor and Toolchain each trace to a cast sibling (ruling 2).
+- [x] NAMES.md adhered: each new name comes from a cast or JAM family. `kind` is renamed to `type` (Rule 6).
+- [x] MANIFESTO.md principles applied
+- [x] Audit: each finding was read and named against a clause. The accepted findings are resolved, and the rejections cite the refuting read (`PLAN-profiling.md` Amendment B).
+- [x] Doxygen: the scout project build gives 0 warnings. A coverage run (`EXTRACT_ALL = NO`, `WARN_IF_UNDOCUMENTED`, `WARN_NO_PARAMDOC`) gives 0 warnings for scout. For `jam_subprocess` it gives 0 warnings in headers. The 28 remaining warnings are members defined in `.cpp` files, and CODING.md forbids doxygen there.
+
+### Problems Solved
+- **The profile needed several hand-run commands.** `scout <absolute-manifest-path>` now runs the manifest's `## toolchain` rows, then the epochs, then the report.
+- **The scout command line differed from cast's.** It is now cast's command line, with scout's texts.
+- **Sample keys lost characters in markdown.** `_` became emphasis: `-_NSApplication_run_` read back as `-NSApplicationrun`. The key alphabet is now `[A-Za-z0-9:-]`.
+- **A signal-killed child reported exit 0.** It now reports 128 plus the signal number.
+- **`jam::Subprocess` changed the parent's working folder.** The native launch sets the folder in the child only.
+- **Banner rows lost a leading space.** A CommonMark code span strips one space at each end when both ends hold a space. The trailing spaces of `highVoltage` and `star` were removed (`cast/banner.md:14`, `:17`).
+- **A doxygen tag error at `Main.cpp:118`.** The period inside `` `scout: Fine.` `` ended the auto brief. The literal moved to the detail.
+
+### State for Continuation
+- Builds: scout `--no-sign` is clean. Check `Builds/Release/scout_artefacts/Release/scout --version`.
+- The Windows file `jam_ChildProcess_windows.cpp` has not been built. Build it on a Windows machine before relying on it.
+- tit has no project-info toolchain and has not been built against the new `jam::Subprocess`.
+- `scout-banner.sh` stays at the scout root.
+- Uncommitted work from before this sprint is in the same working trees (`~/.carol/HANDOFF-profiling.md:22-24`, `:57-68`):
+  - `~/.carol`: `CAROL.md`, `agents/oracle.md`, `commands/goplan.md`, `commands/handoff.md`, `commands/rfc.md`, `skills/rfc-writer/`, `skills/handoff-writer/`, `skills/plan-writer/`.
+  - EVE: `project-info.md`, `benchmark/live.md`, `benchmark/replay.md`.
+- `~/.carol/skills/trace/trace.lua` is modified in the working tree. This log does not attribute it.
+- Uncommitted: scout, JAM, EVE, `~/.carol` and `~/.config`.
+
+### Debts Paid
+- None
+
+### Debts Deferred
+- None
+
+---
+
 ## Sprint 1: Live measurement — scout as the universal runner and statistics lane ✅
 
 **Date:** 2026-10-28

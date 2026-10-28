@@ -1,0 +1,121 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.18.0" xml:lang="en-US">
+  <compounddef id="struct_toolchain" kind="struct" language="C++" prot="public">
+    <compoundname>Toolchain</compoundname>
+    <includes refid="_toolchain_8h" local="no">Toolchain.h</includes>
+    <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="struct_toolchain_1ad96b65cacfb0e4c8d2c1cf75acd01100" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classjuce_1_1StringArray" kindref="compound" external="/Users/jreng/Documents/Poems/JUCE/docs/tagfile.xml">juce::StringArray</ref></type>
+        <definition>juce::StringArray Toolchain::getToolchainArguments</definition>
+        <argsstring>(const juce::String &amp;command, const juce::String &amp;flag)</argsstring>
+        <name>getToolchainArguments</name>
+        <qualifiedname>Toolchain::getToolchainArguments</qualifiedname>
+        <param>
+          <type>const <ref refid="classjuce_1_1String" kindref="compound" external="/Users/jreng/Documents/Poems/JUCE/docs/tagfile.xml">juce::String</ref> &amp;</type>
+          <declname>command</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classjuce_1_1String" kindref="compound" external="/Users/jreng/Documents/Poems/JUCE/docs/tagfile.xml">juce::String</ref> &amp;</type>
+          <declname>flag</declname>
+        </param>
+        <briefdescription>
+<para>Tokenizes <computeroutput>command</computeroutput> and <computeroutput>flag</computeroutput> into one argv array. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>The <computeroutput>flag</computeroutput> text splits on white space. A span in double quotes stays one argument. The function removes the quote marks and drops empty tokens. The <computeroutput>command</computeroutput> text is not split.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>command</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The toolchain row&apos;s own <computeroutput>command</computeroutput>, placed at argument index zero. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>flag</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The toolchain row&apos;s own <computeroutput>flag</computeroutput>, tokenized after <computeroutput>command</computeroutput>. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><computeroutput>command</computeroutput> followed by the arguments of <computeroutput>flag</computeroutput>. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Toolchain.h" line="27" column="30" bodyfile="Toolchain.cpp" bodystart="3" bodyend="13"/>
+        <references refid="classjuce_1_1StringArray_1af979e313d58f2feb4fb0eb4c427bf2c4">juce::StringArray::addTokens</references>
+        <references refid="classjuce_1_1String_1a128e862810bc5e3f16cb70c3c9751867">juce::String::charToString</references>
+        <references refid="structChars_1abe1c5ccbb63b51ed046fdf87b71aaf74">Chars::doubleQuote</references>
+        <references refid="classjuce_1_1StringArray_1a0b4288682d5cb4bc1a66b76d4ec3b1f1">juce::StringArray::removeEmptyStrings</references>
+        <referencedby refid="struct_processor_1a83804663c3ddec5019aad5fa2673bada" compoundref="_processor_8cpp" startline="45" endline="55">Processor::runToolchainRow</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="struct_toolchain_1a99335d844ab10df762460e0d2beea4db" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classjuce_1_1Result" kindref="compound" external="/Users/jreng/Documents/Poems/JUCE/docs/tagfile.xml">juce::Result</ref></type>
+        <definition>juce::Result Toolchain::runProcess</definition>
+        <argsstring>(const juce::StringArray &amp;arguments, const juce::String &amp;diagnosticLine)</argsstring>
+        <name>runProcess</name>
+        <qualifiedname>Toolchain::runProcess</qualifiedname>
+        <param>
+          <type>const <ref refid="classjuce_1_1StringArray" kindref="compound" external="/Users/jreng/Documents/Poems/JUCE/docs/tagfile.xml">juce::StringArray</ref> &amp;</type>
+          <declname>arguments</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classjuce_1_1String" kindref="compound" external="/Users/jreng/Documents/Poems/JUCE/docs/tagfile.xml">juce::String</ref> &amp;</type>
+          <declname>diagnosticLine</declname>
+        </param>
+        <briefdescription>
+<para>Runs <computeroutput>arguments</computeroutput> as a child process in the current working directory, streaming its output to stdout and blocking until it exits. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>arguments</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The process argv, index zero the executable. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>diagnosticLine</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The command line named in a failure, when the process exits non-zero. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><ref refid="classjuce_1_1Result_1ac2133128eeba510367bfe1b83383ae0f" kindref="member" external="/Users/jreng/Documents/Poems/JUCE/docs/tagfile.xml">juce::Result::ok()</ref> when the process exits zero, or a failure naming <computeroutput>diagnosticLine</computeroutput>. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Toolchain.h" line="40" column="25" bodyfile="Toolchain.cpp" bodystart="15" bodyend="41"/>
+        <references refid="namespaceId_1a5e729b9864fd096462b3f08ef1eb4b1a">Id::diagnosticSeparator</references>
+        <references refid="classjuce_1_1Result_1a27205a4dc7a973aebd1976270867be80">juce::Result::fail</references>
+        <references refid="structtext_1_1_diagnostics_1af3213d85de76f5051147adf231066b11" compoundref="_text_8h" startline="32" endline="32">text::Diagnostics::failToolchain</references>
+        <references refid="classjuce_1_1File_1af57a7a6e83fbd4a6b048e7d0010d7279">juce::File::getCurrentWorkingDirectory</references>
+        <references refid="classjam_1_1Subprocess_1a7670edba3c7b814c4fe3b5a406f69a61">jam::Subprocess::launch</references>
+        <references refid="classjuce_1_1Result_1ac2133128eeba510367bfe1b83383ae0f">juce::Result::ok</references>
+        <references refid="classjuce_1_1WaitableEvent_1aa3a20faa489e012718f6e23690d85a8d">juce::WaitableEvent::signal</references>
+        <references refid="classjuce_1_1WaitableEvent_1ac38aeb80078cc4f3d3b5f32e230d6988">juce::WaitableEvent::wait</references>
+        <referencedby refid="struct_processor_1a83804663c3ddec5019aad5fa2673bada" compoundref="_processor_8cpp" startline="45" endline="55">Processor::runToolchainRow</referencedby>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Tokenizes the cells of a <computeroutput>##</computeroutput> toolchain row into an argv array and runs child processes. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><ref refid="struct_toolchain" kindref="compound">Toolchain</ref> keeps no state. </para>
+    </detaileddescription>
+    <location file="Toolchain.h" line="12" column="1" bodyfile="Toolchain.h" bodystart="13" bodyend="43"/>
+    <listofallmembers>
+      <member refid="struct_toolchain_1ad96b65cacfb0e4c8d2c1cf75acd01100" prot="public" virt="non-virtual"><scope>Toolchain</scope><name>getToolchainArguments</name></member>
+      <member refid="struct_toolchain_1a99335d844ab10df762460e0d2beea4db" prot="public" virt="non-virtual"><scope>Toolchain</scope><name>runProcess</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

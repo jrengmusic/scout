@@ -1,0 +1,160 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.18.0" xml:lang="en-US">
+  <compound refid="class_benchmark" kind="class"><name>Benchmark</name>
+    <member refid="class_benchmark_1a55df5d956a4f1ed943a8b73142dcb509" kind="variable"><name>commandFile</name></member>
+    <member refid="class_benchmark_1a462aeef6e3aa34999d64fc5f7ec8443c" kind="variable"><name>samplesFile</name></member>
+    <member refid="class_benchmark_1a14f464a6bc7b395ccb9bba782a301661" kind="variable"><name>manifestFile</name></member>
+    <member refid="class_benchmark_1ab658fd8c4392653436c288005e1172a4" kind="variable"><name>epochSamples</name></member>
+    <member refid="class_benchmark_1a342b5af6c51b0dae3b47376b45f42483" kind="variable"><name>bins</name></member>
+    <member refid="class_benchmark_1a1a7f19f67b053162666235ed365861e7" kind="variable"><name>calls</name></member>
+    <member refid="class_benchmark_1a587a06d967bce6380270036d001c1f5a" kind="variable"><name>units</name></member>
+    <member refid="class_benchmark_1a17a83e311aa3aa0faff83483b67537e7" kind="variable"><name>runTable</name></member>
+    <member refid="class_benchmark_1a297f53f732ae4d2d79d474359af97fe6" kind="variable"><name>tableType</name></member>
+    <member refid="class_benchmark_1a136b7c51f05ca71e7c7595bc8ce9ac5a" kind="function"><name>Benchmark</name></member>
+    <member refid="class_benchmark_1a8b4bab8a038fba5d18366ba23e32923f" kind="function"><name>runEpoch</name></member>
+    <member refid="class_benchmark_1a54e743cd8ac66536390608cc09aa355e" kind="function"><name>addEpoch</name></member>
+    <member refid="class_benchmark_1ac2758e9667d09cca4fa1c7d0845c7413" kind="function"><name>getProfiles</name></member>
+    <member refid="class_benchmark_1a4f8bafb7b4939b3398f3ba59f198010a" kind="function"><name>runCommand</name></member>
+    <member refid="class_benchmark_1a9b9d076f0ec7ea35ca1cb50a2d280f29" kind="function"><name>addRows</name></member>
+    <member refid="class_benchmark_1a9ba969f0936909fa42373d48dccf2550" kind="function"><name>addBins</name></member>
+    <member refid="class_benchmark_1a5d20602a03271cc0aa22560a9e64aad9" kind="function"><name>addChildTime</name></member>
+  </compound>
+  <compound refid="structtext_1_1_diagnostics" kind="struct"><name>text::Diagnostics</name>
+    <member refid="structtext_1_1_diagnostics_1a614879ccbad6f4edaf1a511bf5a2fa68" kind="variable"><name>failNotFound</name></member>
+    <member refid="structtext_1_1_diagnostics_1af3213d85de76f5051147adf231066b11" kind="variable"><name>failToolchain</name></member>
+    <member refid="structtext_1_1_diagnostics_1acb39935ba8149723d8a1c9615271f294" kind="variable"><name>failToolchainColumn</name></member>
+    <member refid="structtext_1_1_diagnostics_1a17a0efaa59e3489e8242be054d6280f5" kind="variable"><name>failOutputWrite</name></member>
+    <member refid="structtext_1_1_diagnostics_1a67a3d4524798361c7272cca4ff5d19ad" kind="variable"><name>failCommand</name></member>
+    <member refid="structtext_1_1_diagnostics_1a54030ad642dee1157d22d8255503812d" kind="variable"><name>failFlagUnknown</name></member>
+    <member refid="structtext_1_1_diagnostics_1a07b92fba2d678ad4a065f5ebd63d43a7" kind="variable"><name>done</name></member>
+  </compound>
+  <compound refid="struct_processor" kind="struct"><name>Processor</name>
+    <member refid="struct_processor_1a8dbadccb605c3a32f0e5af688b43d652" kind="variable"><name>documentFile</name></member>
+    <member refid="struct_processor_1afb131d60d600f95ce7bc382f8d9724e7" kind="variable"><name>manifest</name></member>
+    <member refid="struct_processor_1abe5471b3c8a21dfe9bc8e7683eb4868c" kind="function"><name>Processor</name></member>
+    <member refid="struct_processor_1ac2f8ddc17ef15f47f03fa71ce3d381c6" kind="function"><name>generate</name></member>
+    <member refid="struct_processor_1a6ace9660425275f32080160c0ae88b2b" kind="function"><name>run</name></member>
+    <member refid="struct_processor_1a83804663c3ddec5019aad5fa2673bada" kind="function"><name>runToolchainRow</name></member>
+    <member refid="struct_processor_1a88ec28a8e3dd1b6e1f41fbaa315a737e" kind="function"><name>runEpochs</name></member>
+    <member refid="struct_processor_1aa277929ee4d6480d62fa48d2dd5f2a6c" kind="function"><name>writeReport</name></member>
+  </compound>
+  <compound refid="class_profile_report" kind="class"><name>ProfileReport</name>
+    <member refid="class_profile_report_1aeb4677445b193940dcc411da7c367505" kind="function"><name>toFile</name></member>
+    <member refid="class_profile_report_1a3963d7e774a47639d9b3e42d41d6b8e6" kind="function"><name>getProfile</name></member>
+    <member refid="class_profile_report_1ab5d472be1a71894bfb4280711959ba11" kind="function"><name>getProfile</name></member>
+    <member refid="class_profile_report_1a7b882e2ebfe719b1e06329583c2f697c" kind="function"><name>getZone</name></member>
+    <member refid="class_profile_report_1abaca06739e9b769dcea902484108b834" kind="function"><name>getStatistics</name></member>
+    <member refid="class_profile_report_1a9e7a7ae53d95a8e5be64b31fdbbec3a9" kind="function"><name>addComparison</name></member>
+    <member refid="class_profile_report_1ab4226f150edd1b0c3f1908b716323a0f" kind="function"><name>addChart</name></member>
+    <member refid="class_profile_report_1aaac495eb6a95882f0d63173e45c8971a" kind="function"><name>addChart</name></member>
+    <member refid="class_profile_report_1ae35c099a06e99ee2989270e98473d4e7" kind="function"><name>addChart</name></member>
+    <member refid="class_profile_report_1a996b7005c13fdd2d877931aaa1dfb223" kind="function"><name>addDistribution</name></member>
+  </compound>
+  <compound refid="class_statistics" kind="class"><name>Statistics</name>
+    <member refid="class_statistics_1ac1be2f46ec2507b9e8bf4bd2e3f677df" kind="variable"><name>percentScale</name></member>
+    <member refid="class_statistics_1a6fe7b54ba75c68be1cac96cd2394f0e8" kind="variable"><name>percentileRank</name></member>
+    <member refid="class_statistics_1a49d39c86dc7b2cf1b95992374f9b4487" kind="variable"><name>half</name></member>
+    <member refid="class_statistics_1ab13d52cc86561d1087f96bb421dbeb85" kind="variable"><name>medianRank</name></member>
+    <member refid="class_statistics_1ad9cc4dd0882c782416f631ad7f4944e2" kind="variable"><name>sorted</name></member>
+    <member refid="class_statistics_1afb462f7a6b0bf07d90d0dc41d4405639" kind="variable"><name>counts</name></member>
+    <member refid="class_statistics_1acc8df00f61967048aa906224f5da5c70" kind="function"><name>Statistics</name></member>
+    <member refid="class_statistics_1abfeb85a3ddf3d7859e0df4a9fb125644" kind="function"><name>Statistics</name></member>
+    <member refid="class_statistics_1ac4a886dcd0d268ec21c20a52a645803f" kind="function"><name>getMedian</name></member>
+    <member refid="class_statistics_1a4be445f232c86acf67deba1b7bb9c738" kind="function"><name>getPercentile</name></member>
+    <member refid="class_statistics_1ae7a7695e6372fae494655e034e130670" kind="function"><name>getErrorPercent</name></member>
+    <member refid="class_statistics_1a666e606366dd589b5c287875593571d3" kind="function"><name>getCount</name></member>
+    <member refid="class_statistics_1acf7d7c65ee5f370f467871c89d728690" kind="function"><name>getMinimum</name></member>
+    <member refid="class_statistics_1abc85d18cb8087ef0ce838baa8823185e" kind="function"><name>getMaximum</name></member>
+    <member refid="class_statistics_1a145cae352e7a57083eddf7c56a13efe1" kind="function"><name>getProbability</name></member>
+    <member refid="class_statistics_1a76bab7c34fa8634f2bb4d9efa0efce8b" kind="function"><name>getPercentile</name></member>
+  </compound>
+  <compound refid="struct_toolchain" kind="struct"><name>Toolchain</name>
+    <member refid="struct_toolchain_1ad96b65cacfb0e4c8d2c1cf75acd01100" kind="function"><name>getToolchainArguments</name></member>
+    <member refid="struct_toolchain_1a99335d844ab10df762460e0d2beea4db" kind="function"><name>runProcess</name></member>
+  </compound>
+  <compound refid="struct_validator" kind="struct"><name>Validator</name>
+    <member refid="struct_validator_1af387720572933d5519b0597814433c17" kind="function"><name>addRules</name></member>
+    <member refid="struct_validator_1a394659562ffe86296738ed5a5b14f80f" kind="function"><name>getRules</name></member>
+  </compound>
+  <compound refid="namespace_project_info" kind="namespace"><name>ProjectInfo</name>
+    <member refid="namespace_project_info_1a50f49d766351ea9313f67b3f30aa014d" kind="variable"><name>projectName</name></member>
+    <member refid="namespace_project_info_1a9b435df60395ecec1378ecbaba7ccb75" kind="variable"><name>companyName</name></member>
+    <member refid="namespace_project_info_1a75557edf46fa8becc81d2bff04c4c24b" kind="variable"><name>legalCompanyName</name></member>
+    <member refid="namespace_project_info_1a7e092322572cc0554d2ee7e6963b22fe" kind="variable"><name>versionString</name></member>
+    <member refid="namespace_project_info_1a3dfad1d1308874f47f13297fa6e93c49" kind="variable"><name>versionNumber</name></member>
+    <member refid="namespace_project_info_1a53f184d022499b38a6958b0ea2e88ab9" kind="variable"><name>productWebsite</name></member>
+    <member refid="namespace_project_info_1a9f61dfba4aab183c0a33c730776e3227" kind="variable"><name>companyEmail</name></member>
+    <member refid="namespace_project_info_1a8bc2cb4961d15c8b81888e1dafbeca41" kind="variable"><name>presetExtension</name></member>
+    <member refid="namespace_project_info_1aa30ca45a1228a1a11b2ecb2f3177ef06" kind="variable"><name>presetDefault</name></member>
+  </compound>
+  <compound refid="namespacestd" kind="namespace"><name>std</name>
+  </compound>
+  <compound refid="_benchmark_8cpp" kind="file"><name>Benchmark.cpp</name>
+  </compound>
+  <compound refid="_benchmark_8h" kind="file"><name>Benchmark.h</name>
+  </compound>
+  <compound refid="_files_8h" kind="file"><name>Files.h</name>
+  </compound>
+  <compound refid="_generated_8cpp" kind="file"><name>Generated.cpp</name>
+  </compound>
+  <compound refid="_generated_8h" kind="file"><name>Generated.h</name>
+  </compound>
+  <compound refid="_hash_maps_8h" kind="file"><name>HashMaps.h</name>
+  </compound>
+  <compound refid="_identifiers_8h" kind="file"><name>Identifiers.h</name>
+  </compound>
+  <compound refid="_project_info_8h" kind="file"><name>ProjectInfo.h</name>
+  </compound>
+  <compound refid="_text_8h" kind="file"><name>Text.h</name>
+  </compound>
+  <compound refid="_help_8cpp" kind="file"><name>Help.cpp</name>
+    <member refid="_help_8cpp_1a3f361f138d00c42487776fb13cc5ebe6" kind="function"><name>printHelp</name></member>
+  </compound>
+  <compound refid="_help_8h" kind="file"><name>Help.h</name>
+    <member refid="_help_8h_1a3f361f138d00c42487776fb13cc5ebe6" kind="function"><name>printHelp</name></member>
+  </compound>
+  <compound refid="_main_8cpp" kind="file"><name>Main.cpp</name>
+    <member refid="_main_8cpp_1a7eacf8422a0bf113fc72a4ecc24fac25" kind="variable"><name>flagArgIndex</name></member>
+    <member refid="_main_8cpp_1a8d15eab864d23bacb85f66408f136d42" kind="variable"><name>postFlagArgIndex</name></member>
+    <member refid="_main_8cpp_1ab112c8dd220252b8308c8882da65e1b1" kind="variable"><name>flagOnlyArgumentCount</name></member>
+    <member refid="_main_8cpp_1a70f7aa680f93db40562209fd8a608683" kind="variable"><name>postFlagArgumentCount</name></member>
+    <member refid="_main_8cpp_1a2c040b6a8eba42513dfa5b2a261f442d" kind="function"><name>printBanner</name></member>
+    <member refid="_main_8cpp_1a22583549a7d6409f6524a9c73261ba2d" kind="function"><name>printError</name></member>
+    <member refid="_main_8cpp_1a99fc9c1dfb80bb56c96c411ab9b24313" kind="function"><name>getVersionFlag</name></member>
+    <member refid="_main_8cpp_1ab90618bcc38cb8962e80a5a729a611b1" kind="function"><name>getHelpFlag</name></member>
+    <member refid="_main_8cpp_1a03053d92e25bc6f705c27356cd39d228" kind="function"><name>isVersion</name></member>
+    <member refid="_main_8cpp_1a6336581d1e8cbdb8df62474ac9e3fdbb" kind="function"><name>isHelp</name></member>
+    <member refid="_main_8cpp_1a2bbde775f6db9f0e32cf9455a2ead1b7" kind="function"><name>writeVersion</name></member>
+    <member refid="_main_8cpp_1a6f06085b02e0ad301adcc85196bbb128" kind="function"><name>isTerminalOutput</name></member>
+    <member refid="_main_8cpp_1a58cd25047b98ff06d9dc1671ab3ccbed" kind="function"><name>printDone</name></member>
+    <member refid="_main_8cpp_1a7f683cefdf7f675f09e36661ce8df7cc" kind="function"><name>printBannerAndHelp</name></member>
+    <member refid="_main_8cpp_1a739f5ce0b26b14496e6eba6d9cb92356" kind="function"><name>runDocument</name></member>
+    <member refid="_main_8cpp_1a4787e2058107a19104111d385324e45b" kind="function"><name>runDocumentNotFound</name></member>
+    <member refid="_main_8cpp_1af6dc96d8ea3eaa82f12e5f8dc0dac218" kind="function"><name>getDocumentFile</name></member>
+    <member refid="_main_8cpp_1a52f1af656d9670faf7049108bef951b9" kind="function"><name>runCommandLine</name></member>
+    <member refid="_main_8cpp_1a0ddf1224851353fc92bfbff6f499fa97" kind="function"><name>main</name></member>
+  </compound>
+  <compound refid="_processor_8cpp" kind="file"><name>Processor.cpp</name>
+    <member refid="_processor_8cpp_1a75659085307119553a8c6b4fd6ba0ac4" kind="function"><name>getBaseline</name></member>
+  </compound>
+  <compound refid="_processor_8h" kind="file"><name>Processor.h</name>
+  </compound>
+  <compound refid="_profile_report_8cpp" kind="file"><name>ProfileReport.cpp</name>
+  </compound>
+  <compound refid="_profile_report_8h" kind="file"><name>ProfileReport.h</name>
+  </compound>
+  <compound refid="_statistics_8cpp" kind="file"><name>Statistics.cpp</name>
+  </compound>
+  <compound refid="_statistics_8h" kind="file"><name>Statistics.h</name>
+  </compound>
+  <compound refid="_toolchain_8cpp" kind="file"><name>Toolchain.cpp</name>
+  </compound>
+  <compound refid="_toolchain_8h" kind="file"><name>Toolchain.h</name>
+  </compound>
+  <compound refid="_validator_8cpp" kind="file"><name>Validator.cpp</name>
+  </compound>
+  <compound refid="_validator_8h" kind="file"><name>Validator.h</name>
+  </compound>
+  <compound refid="dir_84fc5dba3506812825191c0c043e3c97" kind="dir"><name>generated</name>
+  </compound>
+</doxygenindex>

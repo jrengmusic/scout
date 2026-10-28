@@ -1,0 +1,115 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.18.0" xml:lang="en-US">
+  <compounddef id="_statistics_8h" kind="file" language="C++">
+    <compoundname>Statistics.h</compoundname>
+    <includes local="no">JuceHeader.h</includes>
+    <includedby refid="_profile_report_8h" local="yes">ProfileReport.h</includedby>
+    <includedby refid="_statistics_8cpp" local="yes">Statistics.cpp</includedby>
+    <incdepgraph>
+      <node id="1">
+        <label>Statistics.h</label>
+        <link refid="_statistics_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>JuceHeader.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="3">
+        <label>Benchmark.cpp</label>
+        <link refid="_benchmark_8cpp"/>
+      </node>
+      <node id="5">
+        <label>Main.cpp</label>
+        <link refid="_main_8cpp"/>
+      </node>
+      <node id="6">
+        <label>Processor.cpp</label>
+        <link refid="_processor_8cpp"/>
+      </node>
+      <node id="4">
+        <label>Processor.h</label>
+        <link refid="_processor_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>ProfileReport.cpp</label>
+        <link refid="_profile_report_8cpp"/>
+      </node>
+      <node id="2">
+        <label>ProfileReport.h</label>
+        <link refid="_profile_report_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>Statistics.cpp</label>
+        <link refid="_statistics_8cpp"/>
+      </node>
+      <node id="1">
+        <label>Statistics.h</label>
+        <link refid="_statistics_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="class_statistics" prot="public">Statistics</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;JuceHeader.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11" refid="class_statistics" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_statistics_1acc8df00f61967048aa906224f5da5c70" kindref="member">Statistics</ref></highlight></codeline>
+<codeline lineno="12"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="15" refid="class_statistics_1ac1be2f46ec2507b9e8bf4bd2e3f677df" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">constexpr</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_statistics_1ac1be2f46ec2507b9e8bf4bd2e3f677df" kindref="member">percentScale</ref><sp/>{<sp/>100.0<sp/>};</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18" refid="class_statistics_1a6fe7b54ba75c68be1cac96cd2394f0e8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">constexpr</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_statistics_1a6fe7b54ba75c68be1cac96cd2394f0e8" kindref="member">percentileRank</ref><sp/>{<sp/>99.9<sp/>};</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">explicit</highlight><highlight class="normal"><sp/><ref refid="class_statistics_1acc8df00f61967048aa906224f5da5c70" kindref="member">Statistics</ref><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classjuce_1_1Array" kindref="compound" external="/Users/jreng/Documents/Poems/JUCE/docs/tagfile.xml">juce::Array&lt;juce::var&gt;</ref>&amp;<sp/>samples);</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">explicit</highlight><highlight class="normal"><sp/><ref refid="class_statistics_1acc8df00f61967048aa906224f5da5c70" kindref="member">Statistics</ref><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classjam_1_1Array" kindref="compound" external="/Users/jreng/Documents/Poems/dev/jam/docs/tagfile.xml">jam::Array&lt;juce::int64&gt;</ref>&amp;<sp/>bins);</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_statistics_1ac4a886dcd0d268ec21c20a52a645803f" kindref="member">getMedian</ref>()<sp/>const<sp/>noexcept;</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_statistics_1a4be445f232c86acf67deba1b7bb9c738" kindref="member">getPercentile</ref>()<sp/>const<sp/>noexcept;</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_statistics_1ae7a7695e6372fae494655e034e130670" kindref="member">getErrorPercent</ref>()<sp/>const;</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacejuce" kindref="compound" external="/Users/jreng/Documents/Poems/JUCE/docs/tagfile.xml">juce</ref>::int64<sp/><ref refid="class_statistics_1a666e606366dd589b5c287875593571d3" kindref="member">getCount</ref>()<sp/>const<sp/>noexcept;</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_statistics_1acf7d7c65ee5f370f467871c89d728690" kindref="member">getMinimum</ref>()<sp/>const<sp/>noexcept;</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_statistics_1abc85d18cb8087ef0ce838baa8823185e" kindref="member">getMaximum</ref>()<sp/>const<sp/>noexcept;</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"></highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/>static<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_statistics_1a145cae352e7a57083eddf7c56a13efe1" kindref="member">getProbability</ref><sp/>(const<sp/><ref refid="class_statistics" kindref="compound">Statistics</ref>&amp;<sp/>current,<sp/>const<sp/><ref refid="class_statistics" kindref="compound">Statistics</ref>&amp;<sp/>baseline);</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"></highlight></codeline>
+<codeline lineno="95"><highlight class="normal">private:</highlight></codeline>
+<codeline lineno="97" refid="class_statistics_1a49d39c86dc7b2cf1b95992374f9b4487" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>static<sp/>constexpr<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_statistics_1a49d39c86dc7b2cf1b95992374f9b4487" kindref="member">half</ref><sp/>{<sp/>0.5<sp/>};</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"></highlight></codeline>
+<codeline lineno="100" refid="class_statistics_1ab13d52cc86561d1087f96bb421dbeb85" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">constexpr</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_statistics_1ab13d52cc86561d1087f96bb421dbeb85" kindref="member">medianRank</ref><sp/>{<sp/>50.0<sp/>};</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"></highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="class_statistics_1a4be445f232c86acf67deba1b7bb9c738" kindref="member">getPercentile</ref><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classjam_1_1Array" kindref="compound" external="/Users/jreng/Documents/Poems/dev/jam/docs/tagfile.xml">jam::Array&lt;double&gt;</ref>&amp;<sp/>sortedValues,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classjam_1_1Array" kindref="compound" external="/Users/jreng/Documents/Poems/dev/jam/docs/tagfile.xml">jam::Array&lt;juce::int64&gt;</ref>&amp;<sp/>valueCounts,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>rank)<sp/></highlight><highlight class="keyword">noexcept</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"></highlight></codeline>
+<codeline lineno="115" refid="class_statistics_1ad9cc4dd0882c782416f631ad7f4944e2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classjam_1_1Array" kindref="compound" external="/Users/jreng/Documents/Poems/dev/jam/docs/tagfile.xml">jam::Array&lt;double&gt;</ref><sp/><ref refid="class_statistics_1ad9cc4dd0882c782416f631ad7f4944e2" kindref="member">sorted</ref>;</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"></highlight></codeline>
+<codeline lineno="118" refid="class_statistics_1afb462f7a6b0bf07d90d0dc41d4405639" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classjam_1_1Array" kindref="compound" external="/Users/jreng/Documents/Poems/dev/jam/docs/tagfile.xml">jam::Array&lt;juce::int64&gt;</ref><sp/><ref refid="class_statistics_1afb462f7a6b0bf07d90d0dc41d4405639" kindref="member">counts</ref>;</highlight></codeline>
+<codeline lineno="119"><highlight class="normal">};</highlight></codeline>
+    </programlisting>
+    <location file="Statistics.h"/>
+  </compounddef>
+</doxygen>

@@ -1,5 +1,5 @@
 #include "Benchmark.h"
-#include "generated/Identifiers.h"
+#include "generated/Generated.h"
 #include "ProfileReport.h"
 
 Benchmark::Benchmark (const juce::File& newCommandFile, const juce::File& newSamplesFile, const juce::File& newManifestFile)
@@ -73,7 +73,7 @@ juce::Result Benchmark::runEpoch()
 #endif
 
     if (exitCode == EXIT_SUCCESS) return juce::Result::ok();
-    return juce::Result::fail (commandFile.getFullPathName());
+    return juce::Result::fail (commandFile.getFullPathName() + Id::diagnosticSeparator + text::Diagnostics::failCommand);
 }
 
 void Benchmark::addBins (const juce::Identifier& rowKey, const juce::String& binsText)
@@ -96,12 +96,20 @@ void Benchmark::addBins (const juce::Identifier& rowKey, const juce::String& bin
 
 void Benchmark::addRows (const juce::ValueTree& table)
 {
+    const auto epochCount { epochSamples[Id::epoch].size() };
+
     for (const auto& row : table)
     {
         const auto rowKey { row.getType() };
         const auto binsText { row[Id::bins].toString() };
 
-        epochSamples[rowKey].add (row[Id::value]);
+        auto [sampleEntry, isCreated] = epochSamples.try_emplace (rowKey);
+        auto& [sampleKey, rowSamples] = *sampleEntry;
+
+        if (isCreated)
+            rowSamples.insertMultiple (0, juce::var (0), epochCount - 1);
+
+        rowSamples.add (row[Id::value]);
         calls[rowKey] = static_cast<int> (row[Id::calls]);
         units[rowKey] = row[Id::unit].toString();
 
@@ -129,10 +137,16 @@ juce::Result Benchmark::addEpoch()
             }
         }
 
+        const auto epochCount { epochSamples[Id::epoch].size() };
+
+        for (auto& [rowKey, rowSamples] : epochSamples)
+            if (rowSamples.size() < epochCount)
+                rowSamples.add (juce::var (0));
+
         return juce::Result::ok();
     }
 
-    return juce::Result::fail (samplesFile.getFullPathName());
+    return juce::Result::fail (text::Diagnostics::failNotFound + Id::diagnosticSeparator + samplesFile.getFullPathName());
 }
 
 juce::ValueTree Benchmark::getProfiles (const juce::ValueTree& baseline) const

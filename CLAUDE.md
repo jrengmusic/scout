@@ -32,8 +32,6 @@
 | `cast/signing.md` | Input for the signing chain of the build. |
 | `RELEASE.md` | Release notes for scout v0.1.0. |
 | `RFC-live-measurement.md` | RFC on scout as the runner and statistics lane. |
-| `PLAN-live-measurement.md` | Plan that builds the RFC, with its amendments. |
-| `PLAN-mermaid-writer.md` | Plan of the Mermaid writer and the report charts, with Amendment D. |
 | `carol/SPRINT-LOG.md` | Sprint log, written by primary agents only. |
 | `LICENSE` | License text. |
 

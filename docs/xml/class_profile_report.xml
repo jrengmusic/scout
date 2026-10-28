@@ -1,0 +1,691 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.18.0" xml:lang="en-US">
+  <compounddef id="class_profile_report" kind="class" language="C++" prot="public">
+    <compoundname>ProfileReport</compoundname>
+    <includes refid="_profile_report_8h" local="no">ProfileReport.h</includes>
+    <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="class_profile_report_1aeb4677445b193940dcc411da7c367505" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool ProfileReport::toFile</definition>
+        <argsstring>(const juce::ValueTree &amp;profiles, const juce::File &amp;outputFile)</argsstring>
+        <name>toFile</name>
+        <qualifiedname>ProfileReport::toFile</qualifiedname>
+        <param>
+          <type>const <ref refid="classjuce_1_1ValueTree" kindref="compound" external="/Users/jreng/Documents/Poems/JUCE/docs/tagfile.xml">juce::ValueTree</ref> &amp;</type>
+          <declname>profiles</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classjuce_1_1File" kindref="compound" external="/Users/jreng/Documents/Poems/JUCE/docs/tagfile.xml">juce::File</ref> &amp;</type>
+          <declname>outputFile</declname>
+        </param>
+        <briefdescription>
+<para>Writes the report of <computeroutput>profiles</computeroutput> to <computeroutput>outputFile</computeroutput>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>The function builds the report document from <computeroutput>profiles</computeroutput> and adds the charts of each profile table. It writes the document through <computeroutput><ref refid="structjam_1_1MarkdownWriter" kindref="compound" external="/Users/jreng/Documents/Poems/dev/jam/docs/tagfile.xml">jam::MarkdownWriter</ref></computeroutput>, which creates the parent folder of <computeroutput>outputFile</computeroutput>.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>profiles</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Tree of the profile tables that <ref refid="class_benchmark_1ac2758e9667d09cca4fa1c7d0845c7413" kindref="member">Benchmark::getProfiles()</ref> returns. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>outputFile</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>File that receives the report. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><computeroutput>true</computeroutput> when the write succeeds, or <computeroutput>false</computeroutput> when it fails. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ProfileReport.h" line="25" column="17" bodyfile="ProfileReport.cpp" bodystart="4" bodyend="12"/>
+        <references refid="class_profile_report_1ab4226f150edd1b0c3f1908b716323a0f" compoundref="_profile_report_8cpp" startline="119" endline="132">addChart</references>
+        <references refid="namespaceId_1ad4f31c41ecbe018ecafe804e5ca9bd38">Id::bins</references>
+        <references refid="structjam_1_1MarkdownWriter_1ac935356326efa9be5df79224274a91a9">jam::MarkdownWriter::defaultLineWrap</references>
+        <references refid="namespaceId_1a767aceb9bc5d27527f647a9935420ee1">Id::samples</references>
+        <references refid="classjam_1_1Profiler_1a9b51f7fb5c42580f67d671843bfcab30">jam::Profiler::samplesColumnWidth</references>
+        <references refid="structjam_1_1ConfigDocument_1aedc295f3d61df70eaddef9a2f3a8a436">jam::ConfigDocument::toDocument</references>
+        <references refid="structjam_1_1Document_1_1Writer_1ae58339bdac6e59b53e090ee6d0705c2b">jam::Document::Writer::toFile</references>
+        <referencedby refid="struct_processor_1aa277929ee4d6480d62fa48d2dd5f2a6c" compoundref="_processor_8cpp" startline="90" endline="98">Processor::writeReport</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_profile_report_1a3963d7e774a47639d9b3e42d41d6b8e6" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classjuce_1_1ValueTree" kindref="compound" external="/Users/jreng/Documents/Poems/JUCE/docs/tagfile.xml">juce::ValueTree</ref></type>
+        <definition>juce::ValueTree ProfileReport::getProfile</definition>
+        <argsstring>(const juce::Identifier &amp;benchmarkType, const jam::HashMap&lt; juce::Identifier, juce::Array&lt; juce::var &gt; &gt; &amp;samples, const jam::HashMap&lt; juce::Identifier, int &gt; &amp;calls, const jam::HashMap&lt; juce::Identifier, juce::String &gt; &amp;units, const juce::ValueTree &amp;baselineProfile)</argsstring>
+        <name>getProfile</name>
+        <qualifiedname>ProfileReport::getProfile</qualifiedname>
+        <param>
+          <type>const <ref refid="classjuce_1_1Identifier" kindref="compound" external="/Users/jreng/Documents/Poems/JUCE/docs/tagfile.xml">juce::Identifier</ref> &amp;</type>
+          <declname>benchmarkType</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classjam_1_1HashMap" kindref="compound" external="/Users/jreng/Documents/Poems/dev/jam/docs/tagfile.xml">jam::HashMap</ref>&lt; <ref refid="classjuce_1_1Identifier" kindref="compound" external="/Users/jreng/Documents/Poems/JUCE/docs/tagfile.xml">juce::Identifier</ref>, <ref refid="classjuce_1_1Array" kindref="compound" external="/Users/jreng/Documents/Poems/JUCE/docs/tagfile.xml">juce::Array</ref>&lt; <ref refid="classjuce_1_1var" kindref="compound" external="/Users/jreng/Documents/Poems/JUCE/docs/tagfile.xml">juce::var</ref> &gt; &gt; &amp;</type>
+          <declname>samples</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classjam_1_1HashMap" kindref="compound" external="/Users/jreng/Documents/Poems/dev/jam/docs/tagfile.xml">jam::HashMap</ref>&lt; <ref refid="classjuce_1_1Identifier" kindref="compound" external="/Users/jreng/Documents/Poems/JUCE/docs/tagfile.xml">juce::Identifier</ref>, int &gt; &amp;</type>
+          <declname>calls</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classjam_1_1HashMap" kindref="compound" external="/Users/jreng/Documents/Poems/dev/jam/docs/tagfile.xml">jam::HashMap</ref>&lt; <ref refid="classjuce_1_1Identifier" kindref="compound" external="/Users/jreng/Documents/Poems/JUCE/docs/tagfile.xml">juce::Identifier</ref>, <ref refid="classjuce_1_1String" kindref="compound" external="/Users/jreng/Documents/Poems/JUCE/docs/tagfile.xml">juce::String</ref> &gt; &amp;</type>
+          <declname>units</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classjuce_1_1ValueTree" kindref="compound" external="/Users/jreng/Documents/Poems/JUCE/docs/tagfile.xml">juce::ValueTree</ref> &amp;</type>
+          <declname>baselineProfile</declname>
+        </param>
+        <briefdescription>
+<para>Returns one profile table with one row for each zone of <computeroutput>samples</computeroutput>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Each zone is complete when the function creates it. It holds one <ref refid="class_statistics" kindref="compound">Statistics</ref> of the samples of the zone. Each row holds <computeroutput>value</computeroutput> (the median), <computeroutput>errorPercent</computeroutput>, <computeroutput>min</computeroutput>, <computeroutput>max</computeroutput>, <computeroutput>calls</computeroutput>, <computeroutput>unit</computeroutput>, and <computeroutput>samples</computeroutput>. A row whose zone the baseline profile also holds adds the comparison with the baseline zone of the same type: <computeroutput>baseline</computeroutput>, <computeroutput>change</computeroutput> and <computeroutput>probability</computeroutput>.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>benchmarkType</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Type of the table. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>samples</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Samples of each zone. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>calls</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Number of calls of each zone. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>units</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Unit text of each zone. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>baselineProfile</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Table of an earlier report. It may be invalid. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The profile table. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ProfileReport.h" line="42" column="28" bodyfile="ProfileReport.cpp" bodystart="14" bodyend="37"/>
+        <references refid="class_profile_report_1a9e7a7ae53d95a8e5be64b31fdbbec3a9" compoundref="_profile_report_8cpp" startline="103" endline="117">addComparison</references>
+        <references refid="classjam_1_1HashMap_1a5a46d490ce023d9b1d773eccc23a7904">jam::HashMap&lt; typename Key, typename Mapped, typename HashFn, typename KeyEqual, typename AllocatorOrContainer, typename Bucket, typename BucketContainer, bool IsSegmented &gt;::at</references>
+        <references refid="classjuce_1_1ValueTree_1ac9bbcb6db4464f77b512b9bd8bbb8c3f">juce::ValueTree::getChildWithName</references>
+        <references refid="class_profile_report_1a7b882e2ebfe719b1e06329583c2f697c" compoundref="_profile_report_8cpp" startline="69" endline="80">getZone</references>
+        <references refid="namespaceId_1a767aceb9bc5d27527f647a9935420ee1">Id::samples</references>
+        <referencedby refid="class_benchmark_1ac2758e9667d09cca4fa1c7d0845c7413" compoundref="_benchmark_8cpp" startline="152" endline="164">Benchmark::getProfiles</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_profile_report_1ab5d472be1a71894bfb4280711959ba11" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classjuce_1_1ValueTree" kindref="compound" external="/Users/jreng/Documents/Poems/JUCE/docs/tagfile.xml">juce::ValueTree</ref></type>
+        <definition>juce::ValueTree ProfileReport::getProfile</definition>
+        <argsstring>(const juce::Identifier &amp;benchmarkType, const jam::HashMap&lt; juce::Identifier, jam::Array&lt; juce::int64 &gt; &gt; &amp;bins, const jam::HashMap&lt; juce::Identifier, juce::String &gt; &amp;units, const juce::ValueTree &amp;baselineProfile)</argsstring>
+        <name>getProfile</name>
+        <qualifiedname>ProfileReport::getProfile</qualifiedname>
+        <param>
+          <type>const <ref refid="classjuce_1_1Identifier" kindref="compound" external="/Users/jreng/Documents/Poems/JUCE/docs/tagfile.xml">juce::Identifier</ref> &amp;</type>
+          <declname>benchmarkType</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classjam_1_1HashMap" kindref="compound" external="/Users/jreng/Documents/Poems/dev/jam/docs/tagfile.xml">jam::HashMap</ref>&lt; <ref refid="classjuce_1_1Identifier" kindref="compound" external="/Users/jreng/Documents/Poems/JUCE/docs/tagfile.xml">juce::Identifier</ref>, <ref refid="classjam_1_1Array" kindref="compound" external="/Users/jreng/Documents/Poems/dev/jam/docs/tagfile.xml">jam::Array</ref>&lt; <ref refid="namespacejuce_1a6afa306885ea6220ef17d2a02cfa7f0a" kindref="member" external="/Users/jreng/Documents/Poems/JUCE/docs/tagfile.xml">juce::int64</ref> &gt; &gt; &amp;</type>
+          <declname>bins</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classjam_1_1HashMap" kindref="compound" external="/Users/jreng/Documents/Poems/dev/jam/docs/tagfile.xml">jam::HashMap</ref>&lt; <ref refid="classjuce_1_1Identifier" kindref="compound" external="/Users/jreng/Documents/Poems/JUCE/docs/tagfile.xml">juce::Identifier</ref>, <ref refid="classjuce_1_1String" kindref="compound" external="/Users/jreng/Documents/Poems/JUCE/docs/tagfile.xml">juce::String</ref> &gt; &amp;</type>
+          <declname>units</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classjuce_1_1ValueTree" kindref="compound" external="/Users/jreng/Documents/Poems/JUCE/docs/tagfile.xml">juce::ValueTree</ref> &amp;</type>
+          <declname>baselineProfile</declname>
+        </param>
+        <briefdescription>
+<para>Returns one profile table with one row for each zone of <computeroutput>bins</computeroutput>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Each zone is complete when the function creates it. It holds one <ref refid="class_statistics" kindref="compound">Statistics</ref> of the bins of the zone. Each row holds <computeroutput>value</computeroutput> (the median), <computeroutput>errorPercent</computeroutput>, <computeroutput>min</computeroutput>, <computeroutput>max</computeroutput>, <computeroutput>calls</computeroutput> (the sum of the bin counts), <computeroutput>unit</computeroutput>, <computeroutput>percentile</computeroutput> and <computeroutput>bins</computeroutput>. A row whose zone the baseline profile also holds adds the comparison with the baseline zone of the same type: <computeroutput>baseline</computeroutput>, <computeroutput>change</computeroutput> and <computeroutput>probability</computeroutput>.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>benchmarkType</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Type of the table. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>bins</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Bin counts of each zone. The bin centres are in ns. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>units</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Unit text of each zone. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>baselineProfile</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Table of an earlier report. It may be invalid. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The profile table. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ProfileReport.h" line="62" column="28" bodyfile="ProfileReport.cpp" bodystart="39" bodyend="67"/>
+        <references refid="classjuce_1_1Array_1a76b59834b9d3d5b654f27dbaf2d6c09f">juce::Array&lt; typename ElementType, typename TypeOfCriticalSectionToUse, int minimumAllocatedSize &gt;::add</references>
+        <references refid="class_profile_report_1a9e7a7ae53d95a8e5be64b31fdbbec3a9" compoundref="_profile_report_8cpp" startline="103" endline="117">addComparison</references>
+        <references refid="classjam_1_1HashMap_1a5a46d490ce023d9b1d773eccc23a7904">jam::HashMap&lt; typename Key, typename Mapped, typename HashFn, typename KeyEqual, typename AllocatorOrContainer, typename Bucket, typename BucketContainer, bool IsSegmented &gt;::at</references>
+        <references refid="namespaceId_1ad4f31c41ecbe018ecafe804e5ca9bd38">Id::bins</references>
+        <references refid="classjuce_1_1ValueTree_1ac9bbcb6db4464f77b512b9bd8bbb8c3f">juce::ValueTree::getChildWithName</references>
+        <references refid="class_statistics_1a666e606366dd589b5c287875593571d3" compoundref="_statistics_8cpp" startline="100" endline="103">Statistics::getCount</references>
+        <references refid="class_statistics_1a4be445f232c86acf67deba1b7bb9c738" compoundref="_statistics_8cpp" startline="67" endline="70">Statistics::getPercentile</references>
+        <references refid="class_profile_report_1a7b882e2ebfe719b1e06329583c2f697c" compoundref="_profile_report_8cpp" startline="69" endline="80">getZone</references>
+        <references refid="namespaceId_1a674faf6c4f97d82e2ccc9a9fb84d27de" compoundref="_generated_8cpp" startline="34" endline="34">Id::percentile</references>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-static-func">
+      <memberdef kind="function" id="class_profile_report_1a7b882e2ebfe719b1e06329583c2f697c" prot="private" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classjuce_1_1ValueTree" kindref="compound" external="/Users/jreng/Documents/Poems/JUCE/docs/tagfile.xml">juce::ValueTree</ref></type>
+        <definition>juce::ValueTree ProfileReport::getZone</definition>
+        <argsstring>(const juce::Identifier &amp;zoneKey, const Statistics &amp;statistics, int calls, const juce::String &amp;unit)</argsstring>
+        <name>getZone</name>
+        <qualifiedname>ProfileReport::getZone</qualifiedname>
+        <param>
+          <type>const <ref refid="classjuce_1_1Identifier" kindref="compound" external="/Users/jreng/Documents/Poems/JUCE/docs/tagfile.xml">juce::Identifier</ref> &amp;</type>
+          <declname>zoneKey</declname>
+        </param>
+        <param>
+          <type>const <ref refid="class_statistics" kindref="compound">Statistics</ref> &amp;</type>
+          <declname>statistics</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>calls</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classjuce_1_1String" kindref="compound" external="/Users/jreng/Documents/Poems/JUCE/docs/tagfile.xml">juce::String</ref> &amp;</type>
+          <declname>unit</declname>
+        </param>
+        <briefdescription>
+<para>Returns one zone row with <computeroutput>value</computeroutput>, <computeroutput>errorPercent</computeroutput>, <computeroutput>min</computeroutput>, <computeroutput>max</computeroutput>, <computeroutput>calls</computeroutput> and <computeroutput>unit</computeroutput>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>zoneKey</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Type of the zone. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>statistics</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="class_statistics" kindref="compound">Statistics</ref> of the zone. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>calls</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Number of calls of the zone. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>unit</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Unit text of the zone. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The zone row. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ProfileReport.h" line="77" column="28" bodyfile="ProfileReport.cpp" bodystart="69" bodyend="80"/>
+        <references refid="namespaceId_1aabc8e20f92a637e53d57c073ce9e006b">Id::calls</references>
+        <references refid="namespaceId_1a22c89b9587f1b0bb9bc77c17d2a9a4fa" compoundref="_generated_8cpp" startline="31" endline="31">Id::errorPercent</references>
+        <references refid="class_statistics_1ae7a7695e6372fae494655e034e130670" compoundref="_statistics_8cpp" startline="72" endline="98">Statistics::getErrorPercent</references>
+        <references refid="class_statistics_1abc85d18cb8087ef0ce838baa8823185e" compoundref="_statistics_8cpp" startline="110" endline="113">Statistics::getMaximum</references>
+        <references refid="class_statistics_1ac4a886dcd0d268ec21c20a52a645803f" compoundref="_statistics_8cpp" startline="62" endline="65">Statistics::getMedian</references>
+        <references refid="class_statistics_1acf7d7c65ee5f370f467871c89d728690" compoundref="_statistics_8cpp" startline="105" endline="108">Statistics::getMinimum</references>
+        <references refid="namespaceId_1a923cd357080495698a2988f9fe31773d">Id::max</references>
+        <references refid="namespaceId_1a54e6934b30bf418adf39faf09a0997ea">Id::min</references>
+        <references refid="classjuce_1_1ValueTree_1a86de4a6662eb049c21c30c627616fb0e">juce::ValueTree::setProperty</references>
+        <references refid="namespaceId_1a2f82ecee595c8e79d11eff33b0eb735c">Id::unit</references>
+        <references refid="namespaceId_1aa31dd51a36cc1b369f63f498441108e8">Id::value</references>
+        <referencedby refid="class_profile_report_1ab5d472be1a71894bfb4280711959ba11" compoundref="_profile_report_8cpp" startline="39" endline="67">getProfile</referencedby>
+        <referencedby refid="class_profile_report_1a3963d7e774a47639d9b3e42d41d6b8e6" compoundref="_profile_report_8cpp" startline="14" endline="37">getProfile</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_profile_report_1abaca06739e9b769dcea902484108b834" prot="private" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_statistics" kindref="compound">Statistics</ref></type>
+        <definition>Statistics ProfileReport::getStatistics</definition>
+        <argsstring>(const juce::ValueTree &amp;baselineZone)</argsstring>
+        <name>getStatistics</name>
+        <qualifiedname>ProfileReport::getStatistics</qualifiedname>
+        <param>
+          <type>const <ref refid="classjuce_1_1ValueTree" kindref="compound" external="/Users/jreng/Documents/Poems/JUCE/docs/tagfile.xml">juce::ValueTree</ref> &amp;</type>
+          <declname>baselineZone</declname>
+        </param>
+        <briefdescription>
+<para>Returns the <ref refid="class_statistics" kindref="compound">Statistics</ref> of a baseline zone. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>The function reads the <computeroutput>bins</computeroutput> property when the zone holds it. Otherwise it reads the <computeroutput>samples</computeroutput> property.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>baselineZone</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Zone of the baseline. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The <ref refid="class_statistics" kindref="compound">Statistics</ref> of <computeroutput>baselineZone</computeroutput>. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ProfileReport.h" line="87" column="23" bodyfile="ProfileReport.cpp" bodystart="82" bodyend="101"/>
+        <references refid="classjam_1_1Array_1a11f82d383b72419d9e9624cbe63f7767">jam::Array&lt; typename ElementType, typename TypeOfCriticalSectionToUse &gt;::add</references>
+        <references refid="namespaceId_1ad4f31c41ecbe018ecafe804e5ca9bd38">Id::bins</references>
+        <references refid="structjam_1_1ConfigDocument_1a6d58039bf24b93d8fbcdf01a60950011">jam::ConfigDocument::getValueTypes</references>
+        <references refid="classjam_1_1Strings_1a41bbcc9a9a93f448cd58f666a72cdd6d">jam::Strings::getView</references>
+        <references refid="classjuce_1_1ValueTree_1afa89ceabad600c371dc13c96b6167d91">juce::ValueTree::hasProperty</references>
+        <references refid="namespaceId_1a6400ea8d50b06976a79c5594a7c7c11d">Id::numbers</references>
+        <references refid="namespaceId_1a767aceb9bc5d27527f647a9935420ee1">Id::samples</references>
+        <referencedby refid="class_profile_report_1a9e7a7ae53d95a8e5be64b31fdbbec3a9" compoundref="_profile_report_8cpp" startline="103" endline="117">addComparison</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_profile_report_1a9e7a7ae53d95a8e5be64b31fdbbec3a9" prot="private" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ProfileReport::addComparison</definition>
+        <argsstring>(juce::ValueTree &amp;zone, const Statistics &amp;statistics, const juce::ValueTree &amp;baselineZone)</argsstring>
+        <name>addComparison</name>
+        <qualifiedname>ProfileReport::addComparison</qualifiedname>
+        <param>
+          <type><ref refid="classjuce_1_1ValueTree" kindref="compound" external="/Users/jreng/Documents/Poems/JUCE/docs/tagfile.xml">juce::ValueTree</ref> &amp;</type>
+          <declname>zone</declname>
+        </param>
+        <param>
+          <type>const <ref refid="class_statistics" kindref="compound">Statistics</ref> &amp;</type>
+          <declname>statistics</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classjuce_1_1ValueTree" kindref="compound" external="/Users/jreng/Documents/Poems/JUCE/docs/tagfile.xml">juce::ValueTree</ref> &amp;</type>
+          <declname>baselineZone</declname>
+        </param>
+        <briefdescription>
+<para>Adds <computeroutput>baseline</computeroutput>, <computeroutput>change</computeroutput> and <computeroutput>probability</computeroutput> to a zone. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>zone</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Zone of the current run. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>statistics</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="class_statistics" kindref="compound">Statistics</ref> of the zone. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>baselineZone</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Zone of the baseline with the same type. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ProfileReport.h" line="96" column="17" bodyfile="ProfileReport.cpp" bodystart="103" bodyend="117"/>
+        <references refid="namespaceId_1a6f000170fabbf731e725a54a1682b99e">Id::baseline</references>
+        <references refid="namespaceId_1a483df25d168ac28ba770d1f103a37065" compoundref="_generated_8cpp" startline="32" endline="32">Id::change</references>
+        <references refid="namespacejuce_1a4b6bf8164808416cb5c5639b17cb019f">juce::exactlyEqual</references>
+        <references refid="class_statistics_1a145cae352e7a57083eddf7c56a13efe1" compoundref="_statistics_8cpp" startline="115" endline="149">Statistics::getProbability</references>
+        <references refid="class_profile_report_1abaca06739e9b769dcea902484108b834" compoundref="_profile_report_8cpp" startline="82" endline="101">getStatistics</references>
+        <references refid="class_statistics_1ac1be2f46ec2507b9e8bf4bd2e3f677df" compoundref="_statistics_8h" startline="15" endline="15">Statistics::percentScale</references>
+        <references refid="namespaceId_1abdeffd71861b09b9a07a2f20b9d2d53e" compoundref="_generated_8cpp" startline="33" endline="33">Id::probability</references>
+        <references refid="classjuce_1_1ValueTree_1a86de4a6662eb049c21c30c627616fb0e">juce::ValueTree::setProperty</references>
+        <references refid="namespaceId_1aa31dd51a36cc1b369f63f498441108e8">Id::value</references>
+        <referencedby refid="class_profile_report_1ab5d472be1a71894bfb4280711959ba11" compoundref="_profile_report_8cpp" startline="39" endline="67">getProfile</referencedby>
+        <referencedby refid="class_profile_report_1a3963d7e774a47639d9b3e42d41d6b8e6" compoundref="_profile_report_8cpp" startline="14" endline="37">getProfile</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_profile_report_1ab4226f150edd1b0c3f1908b716323a0f" prot="private" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ProfileReport::addChart</definition>
+        <argsstring>(jam::ConfigDocument &amp;document, const juce::ValueTree &amp;benchmark)</argsstring>
+        <name>addChart</name>
+        <qualifiedname>ProfileReport::addChart</qualifiedname>
+        <param>
+          <type><ref refid="structjam_1_1ConfigDocument" kindref="compound" external="/Users/jreng/Documents/Poems/dev/jam/docs/tagfile.xml">jam::ConfigDocument</ref> &amp;</type>
+          <declname>document</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classjuce_1_1ValueTree" kindref="compound" external="/Users/jreng/Documents/Poems/JUCE/docs/tagfile.xml">juce::ValueTree</ref> &amp;</type>
+          <declname>benchmark</declname>
+        </param>
+        <briefdescription>
+<para>Adds the charts of one profile table. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>The function adds one median chart for each unit that the zones of <computeroutput>benchmark</computeroutput> use. It then adds one distribution chart for each zone that holds bins.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>document</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Document that receives the charts. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>benchmark</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Profile table. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ProfileReport.h" line="107" column="17" bodyfile="ProfileReport.cpp" bodystart="119" bodyend="132"/>
+        <references refid="class_profile_report_1ab4226f150edd1b0c3f1908b716323a0f" compoundref="_profile_report_8cpp" startline="119" endline="132">addChart</references>
+        <references refid="class_profile_report_1a996b7005c13fdd2d877931aaa1dfb223" compoundref="_profile_report_8cpp" startline="178" endline="202">addDistribution</references>
+        <references refid="classjuce_1_1Array_1acd07cb4a7668f73eee67b022f96cd6fb">juce::Array&lt; typename ElementType, typename TypeOfCriticalSectionToUse, int minimumAllocatedSize &gt;::addIfNotAlreadyThere</references>
+        <references refid="namespaceId_1ad4f31c41ecbe018ecafe804e5ca9bd38">Id::bins</references>
+        <references refid="namespaceId_1a2f82ecee595c8e79d11eff33b0eb735c">Id::unit</references>
+        <referencedby refid="class_profile_report_1ab4226f150edd1b0c3f1908b716323a0f" compoundref="_profile_report_8cpp" startline="119" endline="132">addChart</referencedby>
+        <referencedby refid="class_profile_report_1aaac495eb6a95882f0d63173e45c8971a" compoundref="_profile_report_8cpp" startline="134" endline="149">addChart</referencedby>
+        <referencedby refid="class_profile_report_1a996b7005c13fdd2d877931aaa1dfb223" compoundref="_profile_report_8cpp" startline="178" endline="202">addDistribution</referencedby>
+        <referencedby refid="class_profile_report_1aeb4677445b193940dcc411da7c367505" compoundref="_profile_report_8cpp" startline="4" endline="12">toFile</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_profile_report_1aaac495eb6a95882f0d63173e45c8971a" prot="private" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ProfileReport::addChart</definition>
+        <argsstring>(jam::ConfigDocument &amp;document, const juce::ValueTree &amp;benchmark, const juce::Identifier &amp;unit)</argsstring>
+        <name>addChart</name>
+        <qualifiedname>ProfileReport::addChart</qualifiedname>
+        <param>
+          <type><ref refid="structjam_1_1ConfigDocument" kindref="compound" external="/Users/jreng/Documents/Poems/dev/jam/docs/tagfile.xml">jam::ConfigDocument</ref> &amp;</type>
+          <declname>document</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classjuce_1_1ValueTree" kindref="compound" external="/Users/jreng/Documents/Poems/JUCE/docs/tagfile.xml">juce::ValueTree</ref> &amp;</type>
+          <declname>benchmark</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classjuce_1_1Identifier" kindref="compound" external="/Users/jreng/Documents/Poems/JUCE/docs/tagfile.xml">juce::Identifier</ref> &amp;</type>
+          <declname>unit</declname>
+        </param>
+        <briefdescription>
+<para>Adds one mermaid bar chart of the zones that have <computeroutput>unit</computeroutput>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>The bars are the <computeroutput>value</computeroutput> of each zone. The chart title is the type of <computeroutput>benchmark</computeroutput>. The y axis is <computeroutput>unit</computeroutput>.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>document</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Document that receives the chart. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>benchmark</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Profile table. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>unit</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Unit of the zones to chart. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ProfileReport.h" line="118" column="17" bodyfile="ProfileReport.cpp" bodystart="134" bodyend="149"/>
+        <references refid="classjuce_1_1Array_1a76b59834b9d3d5b654f27dbaf2d6c09f">juce::Array&lt; typename ElementType, typename TypeOfCriticalSectionToUse, int minimumAllocatedSize &gt;::add</references>
+        <references refid="class_profile_report_1ab4226f150edd1b0c3f1908b716323a0f" compoundref="_profile_report_8cpp" startline="119" endline="132">addChart</references>
+        <references refid="classjuce_1_1ValueTree_1ac7027d954636d660784dcf930caa89ca">juce::ValueTree::getType</references>
+        <references refid="classjuce_1_1Identifier_1ab6f0db1de2c36cacd1a9d7280f73aeeb">juce::Identifier::toString</references>
+        <references refid="namespaceId_1a2f82ecee595c8e79d11eff33b0eb735c">Id::unit</references>
+        <references refid="namespaceId_1aa31dd51a36cc1b369f63f498441108e8">Id::value</references>
+      </memberdef>
+      <memberdef kind="function" id="class_profile_report_1ae35c099a06e99ee2989270e98473d4e7" prot="private" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ProfileReport::addChart</definition>
+        <argsstring>(jam::ConfigDocument &amp;document, const juce::String &amp;title, const juce::Array&lt; juce::var &gt; &amp;categories, const juce::String &amp;yAxisLabel, const juce::Array&lt; juce::var &gt; &amp;values)</argsstring>
+        <name>addChart</name>
+        <qualifiedname>ProfileReport::addChart</qualifiedname>
+        <param>
+          <type><ref refid="structjam_1_1ConfigDocument" kindref="compound" external="/Users/jreng/Documents/Poems/dev/jam/docs/tagfile.xml">jam::ConfigDocument</ref> &amp;</type>
+          <declname>document</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classjuce_1_1String" kindref="compound" external="/Users/jreng/Documents/Poems/JUCE/docs/tagfile.xml">juce::String</ref> &amp;</type>
+          <declname>title</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classjuce_1_1Array" kindref="compound" external="/Users/jreng/Documents/Poems/JUCE/docs/tagfile.xml">juce::Array</ref>&lt; <ref refid="classjuce_1_1var" kindref="compound" external="/Users/jreng/Documents/Poems/JUCE/docs/tagfile.xml">juce::var</ref> &gt; &amp;</type>
+          <declname>categories</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classjuce_1_1String" kindref="compound" external="/Users/jreng/Documents/Poems/JUCE/docs/tagfile.xml">juce::String</ref> &amp;</type>
+          <declname>yAxisLabel</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classjuce_1_1Array" kindref="compound" external="/Users/jreng/Documents/Poems/JUCE/docs/tagfile.xml">juce::Array</ref>&lt; <ref refid="classjuce_1_1var" kindref="compound" external="/Users/jreng/Documents/Poems/JUCE/docs/tagfile.xml">juce::var</ref> &gt; &amp;</type>
+          <declname>values</declname>
+        </param>
+        <briefdescription>
+<para>Adds one mermaid bar chart. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>The chart text comes from <computeroutput><ref refid="structjam_1_1MermaidWriter" kindref="compound" external="/Users/jreng/Documents/Poems/dev/jam/docs/tagfile.xml">jam::MermaidWriter</ref></computeroutput> over <computeroutput><ref refid="structjam_1_1MermaidDiagram_1aa401634b6cfe0509898329d61549f009" kindref="member" external="/Users/jreng/Documents/Poems/dev/jam/docs/tagfile.xml">jam::MermaidDiagram::toDocument</ref></computeroutput>. The document holds the text in a mermaid code block.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>document</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Document that receives the chart. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>title</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Title of the chart. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>categories</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Label of each bar on the x axis. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>yAxisLabel</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Label of the y axis. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>values</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Height of each bar, in the order of <computeroutput>categories</computeroutput>. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ProfileReport.h" line="132" column="17" bodyfile="ProfileReport.cpp" bodystart="151" bodyend="176"/>
+        <references refid="structjam_1_1Document_1a87e5c7f223cfbd94cb3694520e71e30a">jam::Document::addChild</references>
+        <references refid="structChars_1a4a3f4b872152babe1590d69a00035da8">Chars::backtick</references>
+        <references refid="structmap_1_1MermaidXy_1_1Keyword_1aa6c87503632f98a901d172506d44e148aa52e3aa3ab7622605de4fb843cb2ee4f">map::MermaidXy::Keyword::bar</references>
+        <references refid="classjuce_1_1String_1a128e862810bc5e3f16cb70c3c9751867">juce::String::charToString</references>
+        <references refid="classjam_1_1SharedInstance_1aa40090df6ebded23ecbed9e567b6332d">jam::SharedInstance&lt; typename ObjectType &gt;::get</references>
+        <references refid="structjam_1_1Document_1afa15c06a56937a7195814a2aa2c7521d">jam::Document::getRoot</references>
+        <references refid="structjam_1_1MermaidWriter_1ae97b8a3bd3243e4b437f5d60fb8f556e">jam::MermaidWriter::getText</references>
+        <references refid="namespaceId_1a801830a930f3c05b5e4a68a1f2ae9a69">Id::info</references>
+        <references refid="namespaceId_1ac50980facff3e3b7cfd4ab89955545e2">Id::marker</references>
+        <references refid="namespaceId_1a86cb8d77a4f19d63a2fe4dc0143760cc">Id::mermaid</references>
+        <references refid="structmap_1_1BlockType_1a73b3648a394d904b71757c82b14547d7ad71bcb4c5b4690c32ee471067e73d902">map::BlockType::mermaid</references>
+        <references refid="namespaceId_1a9985ab04c0f055962466c3e765ae4513">Id::node</references>
+        <references refid="classjuce_1_1String_1a8be513249fec0835c416b63631d399dd">juce::String::repeatedString</references>
+        <references refid="namespaceId_1a287c150cdfda5a8e2deb30b6d987d638">Id::text</references>
+        <references refid="namespaceId_1a80c055f9c3035a307918e0cb1407bf9e">Id::title</references>
+        <references refid="structjam_1_1MermaidDiagram_1aa401634b6cfe0509898329d61549f009">jam::MermaidDiagram::toDocument</references>
+        <references refid="classjuce_1_1Identifier_1ab6f0db1de2c36cacd1a9d7280f73aeeb">juce::Identifier::toString</references>
+        <references refid="namespaceId_1ab4956db6d5e735af8b4e202830ac73f7">Id::type</references>
+        <references refid="namespaceId_1ac037f7b69c455c061f72f05d9c9fd663">Id::values</references>
+        <references refid="namespaceId_1a3618b79093237d61e9ae88454033c064">Id::xAxisCategories</references>
+        <references refid="structmap_1_1MermaidDiagramType_1a939f25badc9d4e475a99f8c48df30b18a8a7785a603889f1777a885d03d7a55f8">map::MermaidDiagramType::xychartBeta</references>
+        <references refid="namespaceId_1a3e5cf9ca47e997300474c6e06c0fbdd0">Id::yAxisLabel</references>
+      </memberdef>
+      <memberdef kind="function" id="class_profile_report_1a996b7005c13fdd2d877931aaa1dfb223" prot="private" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ProfileReport::addDistribution</definition>
+        <argsstring>(jam::ConfigDocument &amp;document, const juce::ValueTree &amp;zone)</argsstring>
+        <name>addDistribution</name>
+        <qualifiedname>ProfileReport::addDistribution</qualifiedname>
+        <param>
+          <type><ref refid="structjam_1_1ConfigDocument" kindref="compound" external="/Users/jreng/Documents/Poems/dev/jam/docs/tagfile.xml">jam::ConfigDocument</ref> &amp;</type>
+          <declname>document</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classjuce_1_1ValueTree" kindref="compound" external="/Users/jreng/Documents/Poems/JUCE/docs/tagfile.xml">juce::ValueTree</ref> &amp;</type>
+          <declname>zone</declname>
+        </param>
+        <briefdescription>
+<para>Adds one bar chart of the calls of a zone for each octave. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>The function sums the bins of each octave. The chart runs from the first to the last octave that holds a call. The x axis is the lower edge of each octave, in ns. The y axis is <computeroutput>calls</computeroutput>. The title is the type of <computeroutput>zone</computeroutput>.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>document</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Document that receives the chart. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>zone</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Zone of a <computeroutput>_CALLS</computeroutput> table. It holds the <computeroutput>bins</computeroutput> property. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ProfileReport.h" line="147" column="17" bodyfile="ProfileReport.cpp" bodystart="178" bodyend="202"/>
+        <references refid="classjuce_1_1Array_1a76b59834b9d3d5b654f27dbaf2d6c09f">juce::Array&lt; typename ElementType, typename TypeOfCriticalSectionToUse, int minimumAllocatedSize &gt;::add</references>
+        <references refid="class_profile_report_1ab4226f150edd1b0c3f1908b716323a0f" compoundref="_profile_report_8cpp" startline="119" endline="132">addChart</references>
+        <references refid="namespaceId_1ad4f31c41ecbe018ecafe804e5ca9bd38">Id::bins</references>
+        <references refid="classjam_1_1Profiler_1a2b9f76dda3f0fb993619304a9501b095">jam::Profiler::binsPerOctave</references>
+        <references refid="namespaceId_1aabc8e20f92a637e53d57c073ce9e006b">Id::calls</references>
+        <references refid="classjam_1_1Profiler_1a071c3a28d491048673d2fc62812c7d65">jam::Profiler::getBinNanoseconds</references>
+        <references refid="classjuce_1_1ValueTree_1ac7027d954636d660784dcf930caa89ca">juce::ValueTree::getType</references>
+        <references refid="classjuce_1_1Identifier_1ab6f0db1de2c36cacd1a9d7280f73aeeb">juce::Identifier::toString</references>
+        <referencedby refid="class_profile_report_1ab4226f150edd1b0c3f1908b716323a0f" compoundref="_profile_report_8cpp" startline="119" endline="132">addChart</referencedby>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Builds the profile trees and the report text of a scout run. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>A profile is a table. Its rows are zones. The report writes each profile as a markdown table. It adds one mermaid median chart for each unit, and one distribution chart for each zone that holds bins. The chart text comes from <computeroutput><ref refid="structjam_1_1MermaidWriter" kindref="compound" external="/Users/jreng/Documents/Poems/dev/jam/docs/tagfile.xml">jam::MermaidWriter</ref></computeroutput> over <computeroutput><ref refid="structjam_1_1MermaidDiagram_1aa401634b6cfe0509898329d61549f009" kindref="member" external="/Users/jreng/Documents/Poems/dev/jam/docs/tagfile.xml">jam::MermaidDiagram::toDocument</ref></computeroutput>. </para>
+    </detaileddescription>
+    <location file="ProfileReport.h" line="12" column="1" bodyfile="ProfileReport.h" bodystart="13" bodyend="148"/>
+    <listofallmembers>
+      <member refid="class_profile_report_1ab4226f150edd1b0c3f1908b716323a0f" prot="private" virt="non-virtual"><scope>ProfileReport</scope><name>addChart</name></member>
+      <member refid="class_profile_report_1aaac495eb6a95882f0d63173e45c8971a" prot="private" virt="non-virtual"><scope>ProfileReport</scope><name>addChart</name></member>
+      <member refid="class_profile_report_1ae35c099a06e99ee2989270e98473d4e7" prot="private" virt="non-virtual"><scope>ProfileReport</scope><name>addChart</name></member>
+      <member refid="class_profile_report_1a9e7a7ae53d95a8e5be64b31fdbbec3a9" prot="private" virt="non-virtual"><scope>ProfileReport</scope><name>addComparison</name></member>
+      <member refid="class_profile_report_1a996b7005c13fdd2d877931aaa1dfb223" prot="private" virt="non-virtual"><scope>ProfileReport</scope><name>addDistribution</name></member>
+      <member refid="class_profile_report_1a3963d7e774a47639d9b3e42d41d6b8e6" prot="public" virt="non-virtual"><scope>ProfileReport</scope><name>getProfile</name></member>
+      <member refid="class_profile_report_1ab5d472be1a71894bfb4280711959ba11" prot="public" virt="non-virtual"><scope>ProfileReport</scope><name>getProfile</name></member>
+      <member refid="class_profile_report_1abaca06739e9b769dcea902484108b834" prot="private" virt="non-virtual"><scope>ProfileReport</scope><name>getStatistics</name></member>
+      <member refid="class_profile_report_1a7b882e2ebfe719b1e06329583c2f697c" prot="private" virt="non-virtual"><scope>ProfileReport</scope><name>getZone</name></member>
+      <member refid="class_profile_report_1aeb4677445b193940dcc411da7c367505" prot="public" virt="non-virtual"><scope>ProfileReport</scope><name>toFile</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>
