@@ -25,7 +25,7 @@
         </childnode>
       </node>
       <node id="1">
-        <label>Main.cpp</label>
+        <label>Source/Main.cpp</label>
         <link refid="_main_8cpp"/>
         <childnode refid="2" relation="include">
         </childnode>
@@ -142,7 +142,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Main.cpp" line="36" column="22" bodyfile="Main.cpp" bodystart="36" bodyend="36"/>
+        <location file="Source/Main.cpp" line="36" column="22" bodyfile="Source/Main.cpp" bodystart="36" bodyend="36"/>
         <referencedby refid="_main_8cpp_1af6dc96d8ea3eaa82f12e5f8dc0dac218" compoundref="_main_8cpp" startline="200" endline="203">getDocumentFile</referencedby>
         <referencedby refid="_main_8cpp_1a6336581d1e8cbdb8df62474ac9e3fdbb" compoundref="_main_8cpp" startline="83" endline="87">isHelp</referencedby>
         <referencedby refid="_main_8cpp_1a03053d92e25bc6f705c27356cd39d228" compoundref="_main_8cpp" startline="69" endline="73">isVersion</referencedby>
@@ -160,7 +160,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Main.cpp" line="37" column="22" bodyfile="Main.cpp" bodystart="37" bodyend="37"/>
+        <location file="Source/Main.cpp" line="37" column="22" bodyfile="Source/Main.cpp" bodystart="37" bodyend="37"/>
         <referencedby refid="_main_8cpp_1a6336581d1e8cbdb8df62474ac9e3fdbb" compoundref="_main_8cpp" startline="83" endline="87">isHelp</referencedby>
         <referencedby refid="_main_8cpp_1a03053d92e25bc6f705c27356cd39d228" compoundref="_main_8cpp" startline="69" endline="73">isVersion</referencedby>
         <referencedby refid="_main_8cpp_1a52f1af656d9670faf7049108bef951b9" compoundref="_main_8cpp" startline="220" endline="252">runCommandLine</referencedby>
@@ -178,7 +178,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Main.cpp" line="38" column="22" bodyfile="Main.cpp" bodystart="38" bodyend="38"/>
+        <location file="Source/Main.cpp" line="38" column="22" bodyfile="Source/Main.cpp" bodystart="38" bodyend="38"/>
         <referencedby refid="_main_8cpp_1a6336581d1e8cbdb8df62474ac9e3fdbb" compoundref="_main_8cpp" startline="83" endline="87">isHelp</referencedby>
         <referencedby refid="_main_8cpp_1a03053d92e25bc6f705c27356cd39d228" compoundref="_main_8cpp" startline="69" endline="73">isVersion</referencedby>
         <referencedby refid="_main_8cpp_1a52f1af656d9670faf7049108bef951b9" compoundref="_main_8cpp" startline="220" endline="252">runCommandLine</referencedby>
@@ -196,7 +196,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Main.cpp" line="39" column="22" bodyfile="Main.cpp" bodystart="39" bodyend="39"/>
+        <location file="Source/Main.cpp" line="39" column="22" bodyfile="Source/Main.cpp" bodystart="39" bodyend="39"/>
         <referencedby refid="_main_8cpp_1a6336581d1e8cbdb8df62474ac9e3fdbb" compoundref="_main_8cpp" startline="83" endline="87">isHelp</referencedby>
         <referencedby refid="_main_8cpp_1a03053d92e25bc6f705c27356cd39d228" compoundref="_main_8cpp" startline="69" endline="73">isVersion</referencedby>
       </memberdef>
@@ -214,8 +214,8 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Main.cpp" line="19" column="13" bodyfile="Main.cpp" bodystart="19" bodyend="23"/>
-        <references refid="namespacemap_1a1662c21339f1c14339e65f221d7b126d" compoundref="_generated_8cpp" startline="58" endline="67">map::banner</references>
+        <location file="Source/Main.cpp" line="19" column="13" bodyfile="Source/Main.cpp" bodystart="19" bodyend="23"/>
+        <references refid="namespacemap_1a1662c21339f1c14339e65f221d7b126d" compoundref="_generated_8cpp" startline="62" endline="71">map::banner</references>
         <references refid="_main_8cpp_1a2c040b6a8eba42513dfa5b2a261f442d" compoundref="_main_8cpp" startline="19" endline="23">printBanner</references>
         <referencedby refid="_main_8cpp_1a2c040b6a8eba42513dfa5b2a261f442d" compoundref="_main_8cpp" startline="19" endline="23">printBanner</referencedby>
         <referencedby refid="_main_8cpp_1a7f683cefdf7f675f09e36661ce8df7cc" compoundref="_main_8cpp" startline="137" endline="145">printBannerAndHelp</referencedby>
@@ -226,7 +226,7 @@
         <argsstring>(const juce::String &amp;message)</argsstring>
         <name>printError</name>
         <param>
-          <type>const <ref refid="classjuce_1_1String" kindref="compound" external="/Users/jreng/Documents/Poems/JUCE/docs/tagfile.xml">juce::String</ref> &amp;</type>
+          <type>const juce::String &amp;</type>
           <declname>message</declname>
         </param>
         <briefdescription>
@@ -246,8 +246,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Main.cpp" line="31" column="13" bodyfile="Main.cpp" bodystart="31" bodyend="34"/>
-        <references refid="namespaceId_1a5e729b9864fd096462b3f08ef1eb4b1a">Id::diagnosticSeparator</references>
+        <location file="Source/Main.cpp" line="31" column="13" bodyfile="Source/Main.cpp" bodystart="31" bodyend="34"/>
         <references refid="_main_8cpp_1a22583549a7d6409f6524a9c73261ba2d" compoundref="_main_8cpp" startline="31" endline="34">printError</references>
         <referencedby refid="_main_8cpp_1a22583549a7d6409f6524a9c73261ba2d" compoundref="_main_8cpp" startline="31" endline="34">printError</referencedby>
         <referencedby refid="_main_8cpp_1a52f1af656d9670faf7049108bef951b9" compoundref="_main_8cpp" startline="220" endline="252">runCommandLine</referencedby>
@@ -255,7 +254,7 @@
         <referencedby refid="_main_8cpp_1a4787e2058107a19104111d385324e45b" compoundref="_main_8cpp" startline="181" endline="186">runDocumentNotFound</referencedby>
       </memberdef>
       <memberdef kind="function" id="_main_8cpp_1a99fc9c1dfb80bb56c96c411ab9b24313" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>const <ref refid="classjuce_1_1String" kindref="compound" external="/Users/jreng/Documents/Poems/JUCE/docs/tagfile.xml">juce::String</ref> &amp;</type>
+        <type>const juce::String &amp;</type>
         <definition>static const juce::String &amp; getVersionFlag</definition>
         <argsstring>()</argsstring>
         <name>getVersionFlag</name>
@@ -269,16 +268,13 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Main.cpp" line="45" column="27" bodyfile="Main.cpp" bodystart="45" bodyend="49"/>
-        <references refid="structChars_1a375464038832537822fff69be3285e32">Chars::doubleDash</references>
+        <location file="Source/Main.cpp" line="45" column="27" bodyfile="Source/Main.cpp" bodystart="45" bodyend="49"/>
         <references refid="_main_8cpp_1a99fc9c1dfb80bb56c96c411ab9b24313" compoundref="_main_8cpp" startline="45" endline="49">getVersionFlag</references>
-        <references refid="classjuce_1_1Identifier_1ab6f0db1de2c36cacd1a9d7280f73aeeb">juce::Identifier::toString</references>
-        <references refid="namespaceId_1a26b45dcee4122af40c4184ef577e0a0e">Id::version</references>
         <referencedby refid="_main_8cpp_1a99fc9c1dfb80bb56c96c411ab9b24313" compoundref="_main_8cpp" startline="45" endline="49">getVersionFlag</referencedby>
         <referencedby refid="_main_8cpp_1a03053d92e25bc6f705c27356cd39d228" compoundref="_main_8cpp" startline="69" endline="73">isVersion</referencedby>
       </memberdef>
       <memberdef kind="function" id="_main_8cpp_1ab90618bcc38cb8962e80a5a729a611b1" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>const <ref refid="classjuce_1_1String" kindref="compound" external="/Users/jreng/Documents/Poems/JUCE/docs/tagfile.xml">juce::String</ref> &amp;</type>
+        <type>const juce::String &amp;</type>
         <definition>static const juce::String &amp; getHelpFlag</definition>
         <argsstring>()</argsstring>
         <name>getHelpFlag</name>
@@ -292,11 +288,9 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Main.cpp" line="55" column="27" bodyfile="Main.cpp" bodystart="55" bodyend="59"/>
-        <references refid="structChars_1a375464038832537822fff69be3285e32">Chars::doubleDash</references>
+        <location file="Source/Main.cpp" line="55" column="27" bodyfile="Source/Main.cpp" bodystart="55" bodyend="59"/>
         <references refid="_main_8cpp_1ab90618bcc38cb8962e80a5a729a611b1" compoundref="_main_8cpp" startline="55" endline="59">getHelpFlag</references>
-        <references refid="namespaceId_1a7f93eafe58a56db2c54f56300c1484b9" compoundref="_generated_8cpp" startline="38" endline="38">Id::help</references>
-        <references refid="classjuce_1_1Identifier_1ab6f0db1de2c36cacd1a9d7280f73aeeb">juce::Identifier::toString</references>
+        <references refid="namespace_id_1a7f93eafe58a56db2c54f56300c1484b9" compoundref="_generated_8cpp" startline="38" endline="38">Id::help</references>
         <referencedby refid="_main_8cpp_1ab90618bcc38cb8962e80a5a729a611b1" compoundref="_main_8cpp" startline="55" endline="59">getHelpFlag</referencedby>
         <referencedby refid="_main_8cpp_1a6336581d1e8cbdb8df62474ac9e3fdbb" compoundref="_main_8cpp" startline="83" endline="87">isHelp</referencedby>
       </memberdef>
@@ -341,10 +335,9 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Main.cpp" line="69" column="13" bodyfile="Main.cpp" bodystart="69" bodyend="73"/>
+        <location file="Source/Main.cpp" line="69" column="13" bodyfile="Source/Main.cpp" bodystart="69" bodyend="73"/>
         <references refid="_main_8cpp_1a7eacf8422a0bf113fc72a4ecc24fac25" compoundref="_main_8cpp" startline="36" endline="36">flagArgIndex</references>
         <references refid="_main_8cpp_1ab112c8dd220252b8308c8882da65e1b1" compoundref="_main_8cpp" startline="38" endline="38">flagOnlyArgumentCount</references>
-        <references refid="classjuce_1_1String_1ae26e2af88f5237fd0b23de58cb168223">juce::String::fromUTF8</references>
         <references refid="_main_8cpp_1a99fc9c1dfb80bb56c96c411ab9b24313" compoundref="_main_8cpp" startline="45" endline="49">getVersionFlag</references>
         <references refid="_main_8cpp_1a03053d92e25bc6f705c27356cd39d228" compoundref="_main_8cpp" startline="69" endline="73">isVersion</references>
         <references refid="_main_8cpp_1a8d15eab864d23bacb85f66408f136d42" compoundref="_main_8cpp" startline="37" endline="37">postFlagArgIndex</references>
@@ -393,10 +386,9 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Main.cpp" line="83" column="13" bodyfile="Main.cpp" bodystart="83" bodyend="87"/>
+        <location file="Source/Main.cpp" line="83" column="13" bodyfile="Source/Main.cpp" bodystart="83" bodyend="87"/>
         <references refid="_main_8cpp_1a7eacf8422a0bf113fc72a4ecc24fac25" compoundref="_main_8cpp" startline="36" endline="36">flagArgIndex</references>
         <references refid="_main_8cpp_1ab112c8dd220252b8308c8882da65e1b1" compoundref="_main_8cpp" startline="38" endline="38">flagOnlyArgumentCount</references>
-        <references refid="classjuce_1_1String_1ae26e2af88f5237fd0b23de58cb168223">juce::String::fromUTF8</references>
         <references refid="_main_8cpp_1ab90618bcc38cb8962e80a5a729a611b1" compoundref="_main_8cpp" startline="55" endline="59">getHelpFlag</references>
         <references refid="_main_8cpp_1a6336581d1e8cbdb8df62474ac9e3fdbb" compoundref="_main_8cpp" startline="83" endline="87">isHelp</references>
         <references refid="_main_8cpp_1a8d15eab864d23bacb85f66408f136d42" compoundref="_main_8cpp" startline="37" endline="37">postFlagArgIndex</references>
@@ -416,11 +408,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Main.cpp" line="93" column="13" bodyfile="Main.cpp" bodystart="93" bodyend="102"/>
-        <references refid="classjuce_1_1String_1a128e862810bc5e3f16cb70c3c9751867">juce::String::charToString</references>
-        <references refid="structChars_1ab49a1038f17219d6f768eb1575513a0a">Chars::closeParen</references>
-        <references refid="structChars_1abd3afa51b77bcc972daf75a3a9c7edfa">Chars::openParen</references>
-        <references refid="structChars_1a04b9b7227a5cdf082413821f7a1c66de">Chars::space</references>
+        <location file="Source/Main.cpp" line="93" column="13" bodyfile="Source/Main.cpp" bodystart="93" bodyend="102"/>
         <references refid="_main_8cpp_1a2bbde775f6db9f0e32cf9455a2ead1b7" compoundref="_main_8cpp" startline="93" endline="102">writeVersion</references>
         <referencedby refid="_main_8cpp_1a52f1af656d9670faf7049108bef951b9" compoundref="_main_8cpp" startline="220" endline="252">runCommandLine</referencedby>
         <referencedby refid="_main_8cpp_1a2bbde775f6db9f0e32cf9455a2ead1b7" compoundref="_main_8cpp" startline="93" endline="102">writeVersion</referencedby>
@@ -440,7 +428,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Main.cpp" line="108" column="13" bodyfile="Main.cpp" bodystart="108" bodyend="115"/>
+        <location file="Source/Main.cpp" line="108" column="13" bodyfile="Source/Main.cpp" bodystart="108" bodyend="115"/>
         <references refid="_main_8cpp_1a6f06085b02e0ad301adcc85196bbb128" compoundref="_main_8cpp" startline="108" endline="115">isTerminalOutput</references>
         <referencedby refid="_main_8cpp_1a6f06085b02e0ad301adcc85196bbb128" compoundref="_main_8cpp" startline="108" endline="115">isTerminalOutput</referencedby>
         <referencedby refid="_main_8cpp_1a0ddf1224851353fc92bfbff6f499fa97" compoundref="_main_8cpp" startline="263" endline="278">main</referencedby>
@@ -459,9 +447,8 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Main.cpp" line="122" column="13" bodyfile="Main.cpp" bodystart="122" bodyend="129"/>
-        <references refid="namespaceId_1a5e729b9864fd096462b3f08ef1eb4b1a">Id::diagnosticSeparator</references>
-        <references refid="structtext_1_1_diagnostics_1a07b92fba2d678ad4a065f5ebd63d43a7" compoundref="_text_8h" startline="37" endline="37">text::Diagnostics::done</references>
+        <location file="Source/Main.cpp" line="122" column="13" bodyfile="Source/Main.cpp" bodystart="122" bodyend="129"/>
+        <references refid="structtext_1_1_diagnostics_1a07b92fba2d678ad4a065f5ebd63d43a7" compoundref="_text_8h" startline="38" endline="38">text::Diagnostics::done</references>
         <references refid="_main_8cpp_1a6f06085b02e0ad301adcc85196bbb128" compoundref="_main_8cpp" startline="108" endline="115">isTerminalOutput</references>
         <references refid="_main_8cpp_1a58cd25047b98ff06d9dc1671ab3ccbed" compoundref="_main_8cpp" startline="122" endline="129">printDone</references>
         <referencedby refid="_main_8cpp_1a58cd25047b98ff06d9dc1671ab3ccbed" compoundref="_main_8cpp" startline="122" endline="129">printDone</referencedby>
@@ -480,13 +467,11 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Main.cpp" line="137" column="13" bodyfile="Main.cpp" bodystart="137" bodyend="145"/>
-        <references refid="classjuce_1_1String_1a128e862810bc5e3f16cb70c3c9751867">juce::String::charToString</references>
-        <references refid="structChars_1a4691bc69052e757e7325970098922899">Chars::newline</references>
+        <location file="Source/Main.cpp" line="137" column="13" bodyfile="Source/Main.cpp" bodystart="137" bodyend="145"/>
         <references refid="_main_8cpp_1a2c040b6a8eba42513dfa5b2a261f442d" compoundref="_main_8cpp" startline="19" endline="23">printBanner</references>
         <references refid="_main_8cpp_1a7f683cefdf7f675f09e36661ce8df7cc" compoundref="_main_8cpp" startline="137" endline="145">printBannerAndHelp</references>
         <references refid="_help_8cpp_1a3f361f138d00c42487776fb13cc5ebe6" compoundref="_help_8cpp" startline="3" endline="35">printHelp</references>
-        <references refid="namespacefiles_1a4f5d1a618a82e735de711d473aa8033b" compoundref="_generated_8cpp" startline="49" endline="49">files::scoutHelp</references>
+        <references refid="namespacefiles_1a4f5d1a618a82e735de711d473aa8033b" compoundref="_generated_8cpp" startline="53" endline="53">files::scoutHelp</references>
         <referencedby refid="_main_8cpp_1a7f683cefdf7f675f09e36661ce8df7cc" compoundref="_main_8cpp" startline="137" endline="145">printBannerAndHelp</referencedby>
         <referencedby refid="_main_8cpp_1a52f1af656d9670faf7049108bef951b9" compoundref="_main_8cpp" startline="220" endline="252">runCommandLine</referencedby>
         <referencedby refid="_main_8cpp_1a4787e2058107a19104111d385324e45b" compoundref="_main_8cpp" startline="181" endline="186">runDocumentNotFound</referencedby>
@@ -497,7 +482,7 @@
         <argsstring>(const juce::File &amp;documentFile)</argsstring>
         <name>runDocument</name>
         <param>
-          <type>const <ref refid="classjuce_1_1File" kindref="compound" external="/Users/jreng/Documents/Poems/JUCE/docs/tagfile.xml">juce::File</ref> &amp;</type>
+          <type>const juce::File &amp;</type>
           <declname>documentFile</declname>
         </param>
         <briefdescription>
@@ -520,8 +505,8 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Main.cpp" line="158" column="12" bodyfile="Main.cpp" bodystart="158" bodyend="172"/>
-        <references refid="struct_processor_1ac2f8ddc17ef15f47f03fa71ce3d381c6" compoundref="_processor_8cpp" startline="17" endline="33">Processor::generate</references>
+        <location file="Source/Main.cpp" line="158" column="12" bodyfile="Source/Main.cpp" bodystart="158" bodyend="172"/>
+        <references refid="struct_processor_1ac2f8ddc17ef15f47f03fa71ce3d381c6" compoundref="_processor_8cpp" startline="17" endline="34">Processor::generate</references>
         <references refid="_main_8cpp_1a58cd25047b98ff06d9dc1671ab3ccbed" compoundref="_main_8cpp" startline="122" endline="129">printDone</references>
         <references refid="_main_8cpp_1a22583549a7d6409f6524a9c73261ba2d" compoundref="_main_8cpp" startline="31" endline="34">printError</references>
         <references refid="_main_8cpp_1a739f5ce0b26b14496e6eba6d9cb92356" compoundref="_main_8cpp" startline="158" endline="172">runDocument</references>
@@ -534,7 +519,7 @@
         <argsstring>(const juce::File &amp;documentFile)</argsstring>
         <name>runDocumentNotFound</name>
         <param>
-          <type>const <ref refid="classjuce_1_1File" kindref="compound" external="/Users/jreng/Documents/Poems/JUCE/docs/tagfile.xml">juce::File</ref> &amp;</type>
+          <type>const juce::File &amp;</type>
           <declname>documentFile</declname>
         </param>
         <briefdescription>
@@ -556,10 +541,8 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Main.cpp" line="181" column="12" bodyfile="Main.cpp" bodystart="181" bodyend="186"/>
-        <references refid="namespaceId_1a5e729b9864fd096462b3f08ef1eb4b1a">Id::diagnosticSeparator</references>
+        <location file="Source/Main.cpp" line="181" column="12" bodyfile="Source/Main.cpp" bodystart="181" bodyend="186"/>
         <references refid="structtext_1_1_diagnostics_1a614879ccbad6f4edaf1a511bf5a2fa68" compoundref="_text_8h" startline="31" endline="31">text::Diagnostics::failNotFound</references>
-        <references refid="classjuce_1_1File_1a5309789281ea7721eb832d21da99708f">juce::File::getFileName</references>
         <references refid="_main_8cpp_1a7f683cefdf7f675f09e36661ce8df7cc" compoundref="_main_8cpp" startline="137" endline="145">printBannerAndHelp</references>
         <references refid="_main_8cpp_1a22583549a7d6409f6524a9c73261ba2d" compoundref="_main_8cpp" startline="31" endline="34">printError</references>
         <references refid="_main_8cpp_1a4787e2058107a19104111d385324e45b" compoundref="_main_8cpp" startline="181" endline="186">runDocumentNotFound</references>
@@ -567,7 +550,7 @@
         <referencedby refid="_main_8cpp_1a4787e2058107a19104111d385324e45b" compoundref="_main_8cpp" startline="181" endline="186">runDocumentNotFound</referencedby>
       </memberdef>
       <memberdef kind="function" id="_main_8cpp_1af6dc96d8ea3eaa82f12e5f8dc0dac218" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type><ref refid="classjuce_1_1File" kindref="compound" external="/Users/jreng/Documents/Poems/JUCE/docs/tagfile.xml">juce::File</ref></type>
+        <type>juce::File</type>
         <definition>static juce::File getDocumentFile</definition>
         <argsstring>(char *argv[])</argsstring>
         <name>getDocumentFile</name>
@@ -577,7 +560,7 @@
           <array>[]</array>
         </param>
         <briefdescription>
-<para>Resolves the manifest argument of <computeroutput>argv</computeroutput> against the current working directory, then follows a symbolic link to its target with <ref refid="classjuce_1_1File_1ab64be7537af26a53fa61643e42538c29" kindref="member" external="/Users/jreng/Documents/Poems/JUCE/docs/tagfile.xml">juce::File::getLinkedTarget()</ref>. </para>
+<para>Resolves the manifest argument of <computeroutput>argv</computeroutput> against the current working directory, then follows a symbolic link to its target with juce::File::getLinkedTarget(). </para>
         </briefdescription>
         <detaileddescription>
 <para>A path that is not a link comes back unchanged on macOS and Linux.</para>
@@ -598,13 +581,9 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Main.cpp" line="200" column="19" bodyfile="Main.cpp" bodystart="200" bodyend="203"/>
+        <location file="Source/Main.cpp" line="200" column="19" bodyfile="Source/Main.cpp" bodystart="200" bodyend="203"/>
         <references refid="_main_8cpp_1a7eacf8422a0bf113fc72a4ecc24fac25" compoundref="_main_8cpp" startline="36" endline="36">flagArgIndex</references>
-        <references refid="classjuce_1_1String_1ae26e2af88f5237fd0b23de58cb168223">juce::String::fromUTF8</references>
-        <references refid="classjuce_1_1File_1a57b992aacb19e09ee5905cd0f0e9bb31">juce::File::getChildFile</references>
-        <references refid="classjuce_1_1File_1af57a7a6e83fbd4a6b048e7d0010d7279">juce::File::getCurrentWorkingDirectory</references>
         <references refid="_main_8cpp_1af6dc96d8ea3eaa82f12e5f8dc0dac218" compoundref="_main_8cpp" startline="200" endline="203">getDocumentFile</references>
-        <references refid="classjuce_1_1File_1ab64be7537af26a53fa61643e42538c29">juce::File::getLinkedTarget</references>
         <referencedby refid="_main_8cpp_1af6dc96d8ea3eaa82f12e5f8dc0dac218" compoundref="_main_8cpp" startline="200" endline="203">getDocumentFile</referencedby>
         <referencedby refid="_main_8cpp_1a52f1af656d9670faf7049108bef951b9" compoundref="_main_8cpp" startline="220" endline="252">runCommandLine</referencedby>
       </memberdef>
@@ -650,11 +629,9 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Main.cpp" line="220" column="12" bodyfile="Main.cpp" bodystart="220" bodyend="252"/>
-        <references refid="namespaceId_1a5e729b9864fd096462b3f08ef1eb4b1a">Id::diagnosticSeparator</references>
-        <references refid="structtext_1_1_diagnostics_1a54030ad642dee1157d22d8255503812d" compoundref="_text_8h" startline="36" endline="36">text::Diagnostics::failFlagUnknown</references>
+        <location file="Source/Main.cpp" line="220" column="12" bodyfile="Source/Main.cpp" bodystart="220" bodyend="252"/>
+        <references refid="structtext_1_1_diagnostics_1a54030ad642dee1157d22d8255503812d" compoundref="_text_8h" startline="37" endline="37">text::Diagnostics::failFlagUnknown</references>
         <references refid="_main_8cpp_1ab112c8dd220252b8308c8882da65e1b1" compoundref="_main_8cpp" startline="38" endline="38">flagOnlyArgumentCount</references>
-        <references refid="classjuce_1_1String_1ae26e2af88f5237fd0b23de58cb168223">juce::String::fromUTF8</references>
         <references refid="_main_8cpp_1af6dc96d8ea3eaa82f12e5f8dc0dac218" compoundref="_main_8cpp" startline="200" endline="203">getDocumentFile</references>
         <references refid="_main_8cpp_1a6336581d1e8cbdb8df62474ac9e3fdbb" compoundref="_main_8cpp" startline="83" endline="87">isHelp</references>
         <references refid="_main_8cpp_1a03053d92e25bc6f705c27356cd39d228" compoundref="_main_8cpp" startline="69" endline="73">isVersion</references>
@@ -709,13 +686,10 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Main.cpp" line="263" column="5" bodyfile="Main.cpp" bodystart="263" bodyend="278"/>
-        <references refid="classjuce_1_1MemoryOutputStream_1a050102f4ce6bec06a6e307434f467635">juce::MemoryOutputStream::getData</references>
-        <references refid="classjuce_1_1MemoryOutputStream_1a2ec3b7c88c8eba50d8a45f081dee0529">juce::MemoryOutputStream::getDataSize</references>
+        <location file="Source/Main.cpp" line="263" column="5" bodyfile="Source/Main.cpp" bodystart="263" bodyend="278"/>
         <references refid="_main_8cpp_1a6f06085b02e0ad301adcc85196bbb128" compoundref="_main_8cpp" startline="108" endline="115">isTerminalOutput</references>
         <references refid="_main_8cpp_1a0ddf1224851353fc92bfbff6f499fa97" compoundref="_main_8cpp" startline="263" endline="278">main</references>
         <references refid="_main_8cpp_1a52f1af656d9670faf7049108bef951b9" compoundref="_main_8cpp" startline="220" endline="252">runCommandLine</references>
-        <references refid="classjam_1_1TerminalBuffer_1abf7d4045beacb228698fd9bb7fa90930">jam::TerminalBuffer::writeEraseScreen</references>
         <referencedby refid="_main_8cpp_1a0ddf1224851353fc92bfbff6f499fa97" compoundref="_main_8cpp" startline="263" endline="278">main</referencedby>
       </memberdef>
     </sectiondef>
@@ -740,13 +714,13 @@
 <codeline lineno="17"><highlight class="normal"></highlight></codeline>
 <codeline lineno="19" refid="_main_8cpp_1a2c040b6a8eba42513dfa5b2a261f442d" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_main_8cpp_1a2c040b6a8eba42513dfa5b2a261f442d" kindref="member">printBanner</ref>()</highlight></codeline>
 <codeline lineno="20"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal">&amp;<sp/>[<ref refid="juce__UnityPluginInterface_8h_1a010e50efcb9d6d393b9414f09f368dbc" kindref="member" external="/Users/jreng/Documents/Poems/JUCE/docs/tagfile.xml">name</ref>,<sp/><ref refid="namespacetext" kindref="compound" external="/Users/jreng/Documents/Poems/dev/jam/docs/tagfile.xml">text</ref>]<sp/>:<sp/><ref refid="namespacemap_1a1662c21339f1c14339e65f221d7b126d" kindref="member" external="/Users/jreng/Documents/Poems/dev/jam/docs/tagfile.xml">map::banner</ref>)</highlight></codeline>
-<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>printf<sp/>(</highlight><highlight class="stringliteral">&quot;%s\n&quot;</highlight><highlight class="normal">,<sp/><ref refid="namespacetext" kindref="compound" external="/Users/jreng/Documents/Poems/dev/jam/docs/tagfile.xml">text</ref>.toRawUTF8());</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal">&amp;<sp/>[name,<sp/><ref refid="namespacetext" kindref="compound">text</ref>]<sp/>:<sp/><ref refid="namespacemap_1a1662c21339f1c14339e65f221d7b126d" kindref="member">map::banner</ref>)</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>printf<sp/>(</highlight><highlight class="stringliteral">&quot;%s\n&quot;</highlight><highlight class="normal">,<sp/><ref refid="namespacetext" kindref="compound">text</ref>.toRawUTF8());</highlight></codeline>
 <codeline lineno="23"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="24"><highlight class="normal"></highlight></codeline>
-<codeline lineno="31" refid="_main_8cpp_1a22583549a7d6409f6524a9c73261ba2d" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_main_8cpp_1a22583549a7d6409f6524a9c73261ba2d" kindref="member">printError</ref><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classjuce_1_1String" kindref="compound" external="/Users/jreng/Documents/Poems/JUCE/docs/tagfile.xml">juce::String</ref>&amp;<sp/>message)</highlight></codeline>
+<codeline lineno="31" refid="_main_8cpp_1a22583549a7d6409f6524a9c73261ba2d" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_main_8cpp_1a22583549a7d6409f6524a9c73261ba2d" kindref="member">printError</ref><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>juce::String&amp;<sp/>message)</highlight></codeline>
 <codeline lineno="32"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/>fprintf<sp/>(stderr,<sp/></highlight><highlight class="stringliteral">&quot;%s\n&quot;</highlight><highlight class="normal">,<sp/>(ProjectInfo::projectName<sp/>+<sp/><ref refid="namespaceId_1a5e729b9864fd096462b3f08ef1eb4b1a" kindref="member" external="/Users/jreng/Documents/Poems/dev/jam/docs/tagfile.xml">Id::diagnosticSeparator</ref><sp/>+<sp/>message).toRawUTF8());</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/>fprintf<sp/>(stderr,<sp/></highlight><highlight class="stringliteral">&quot;%s\n&quot;</highlight><highlight class="normal">,<sp/>(ProjectInfo::projectName<sp/>+<sp/>Id::diagnosticSeparator<sp/>+<sp/>message).toRawUTF8());</highlight></codeline>
 <codeline lineno="34"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="35"><highlight class="normal"></highlight></codeline>
 <codeline lineno="36" refid="_main_8cpp_1a7eacf8422a0bf113fc72a4ecc24fac25" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">constexpr</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="_main_8cpp_1a7eacf8422a0bf113fc72a4ecc24fac25" kindref="member">flagArgIndex</ref><sp/>{<sp/>1<sp/>};</highlight></codeline>
@@ -754,38 +728,38 @@
 <codeline lineno="38" refid="_main_8cpp_1ab112c8dd220252b8308c8882da65e1b1" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">constexpr</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="_main_8cpp_1ab112c8dd220252b8308c8882da65e1b1" kindref="member">flagOnlyArgumentCount</ref><sp/>{<sp/>2<sp/>};</highlight></codeline>
 <codeline lineno="39" refid="_main_8cpp_1a70f7aa680f93db40562209fd8a608683" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">constexpr</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="_main_8cpp_1a70f7aa680f93db40562209fd8a608683" kindref="member">postFlagArgumentCount</ref><sp/>{<sp/>3<sp/>};</highlight></codeline>
 <codeline lineno="40"><highlight class="normal"></highlight></codeline>
-<codeline lineno="45" refid="_main_8cpp_1a99fc9c1dfb80bb56c96c411ab9b24313" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classjuce_1_1String" kindref="compound" external="/Users/jreng/Documents/Poems/JUCE/docs/tagfile.xml">juce::String</ref>&amp;<sp/><ref refid="_main_8cpp_1a99fc9c1dfb80bb56c96c411ab9b24313" kindref="member">getVersionFlag</ref>()</highlight></codeline>
+<codeline lineno="45" refid="_main_8cpp_1a99fc9c1dfb80bb56c96c411ab9b24313" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>juce::String&amp;<sp/><ref refid="_main_8cpp_1a99fc9c1dfb80bb56c96c411ab9b24313" kindref="member">getVersionFlag</ref>()</highlight></codeline>
 <codeline lineno="46"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classjuce_1_1String" kindref="compound" external="/Users/jreng/Documents/Poems/JUCE/docs/tagfile.xml">juce::String</ref><sp/>versionFlag<sp/>{<sp/><ref refid="classjuce_1_1String" kindref="compound" external="/Users/jreng/Documents/Poems/JUCE/docs/tagfile.xml">juce::String</ref><sp/>(<ref refid="structChars_1a375464038832537822fff69be3285e32" kindref="member" external="/Users/jreng/Documents/Poems/dev/jam/docs/tagfile.xml">Chars::doubleDash</ref>)<sp/>+<sp/><ref refid="namespaceId_1a26b45dcee4122af40c4184ef577e0a0e" kindref="member" external="/Users/jreng/Documents/Poems/dev/jam/docs/tagfile.xml">Id::version</ref>.<ref refid="classjuce_1_1Identifier_1ab6f0db1de2c36cacd1a9d7280f73aeeb" kindref="member" external="/Users/jreng/Documents/Poems/JUCE/docs/tagfile.xml">toString</ref>()<sp/>};</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>juce::String<sp/>versionFlag<sp/>{<sp/>juce::String<sp/>(Chars::doubleDash)<sp/>+<sp/>Id::version.toString()<sp/>};</highlight></codeline>
 <codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>versionFlag;</highlight></codeline>
 <codeline lineno="49"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="50"><highlight class="normal"></highlight></codeline>
-<codeline lineno="55" refid="_main_8cpp_1ab90618bcc38cb8962e80a5a729a611b1" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classjuce_1_1String" kindref="compound" external="/Users/jreng/Documents/Poems/JUCE/docs/tagfile.xml">juce::String</ref>&amp;<sp/><ref refid="_main_8cpp_1ab90618bcc38cb8962e80a5a729a611b1" kindref="member">getHelpFlag</ref>()</highlight></codeline>
+<codeline lineno="55" refid="_main_8cpp_1ab90618bcc38cb8962e80a5a729a611b1" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>juce::String&amp;<sp/><ref refid="_main_8cpp_1ab90618bcc38cb8962e80a5a729a611b1" kindref="member">getHelpFlag</ref>()</highlight></codeline>
 <codeline lineno="56"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classjuce_1_1String" kindref="compound" external="/Users/jreng/Documents/Poems/JUCE/docs/tagfile.xml">juce::String</ref><sp/>helpFlag<sp/>{<sp/><ref refid="classjuce_1_1String" kindref="compound" external="/Users/jreng/Documents/Poems/JUCE/docs/tagfile.xml">juce::String</ref><sp/>(<ref refid="structChars_1a375464038832537822fff69be3285e32" kindref="member" external="/Users/jreng/Documents/Poems/dev/jam/docs/tagfile.xml">Chars::doubleDash</ref>)<sp/>+<sp/><ref refid="namespaceId_1a7f93eafe58a56db2c54f56300c1484b9" kindref="member" external="/Users/jreng/Documents/Poems/dev/jam/docs/tagfile.xml">Id::help</ref>.<ref refid="classjuce_1_1Identifier_1ab6f0db1de2c36cacd1a9d7280f73aeeb" kindref="member" external="/Users/jreng/Documents/Poems/JUCE/docs/tagfile.xml">toString</ref>()<sp/>};</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>juce::String<sp/>helpFlag<sp/>{<sp/>juce::String<sp/>(Chars::doubleDash)<sp/>+<sp/><ref refid="namespace_id_1a7f93eafe58a56db2c54f56300c1484b9" kindref="member">Id::help</ref>.toString()<sp/>};</highlight></codeline>
 <codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>helpFlag;</highlight></codeline>
 <codeline lineno="59"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="60"><highlight class="normal"></highlight></codeline>
 <codeline lineno="69" refid="_main_8cpp_1a03053d92e25bc6f705c27356cd39d228" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="_main_8cpp_1a03053d92e25bc6f705c27356cd39d228" kindref="member">isVersion</ref><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>argc,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>argv[])</highlight></codeline>
 <codeline lineno="70"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(argc<sp/>==<sp/><ref refid="_main_8cpp_1ab112c8dd220252b8308c8882da65e1b1" kindref="member">flagOnlyArgumentCount</ref><sp/>and<sp/><ref refid="classjuce_1_1String_1ae26e2af88f5237fd0b23de58cb168223" kindref="member" external="/Users/jreng/Documents/Poems/JUCE/docs/tagfile.xml">juce::String::fromUTF8</ref><sp/>(argv[<ref refid="_main_8cpp_1a7eacf8422a0bf113fc72a4ecc24fac25" kindref="member">flagArgIndex</ref>]).compare<sp/>(<ref refid="_main_8cpp_1a99fc9c1dfb80bb56c96c411ab9b24313" kindref="member">getVersionFlag</ref>())<sp/>==<sp/>0)</highlight></codeline>
-<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>or<sp/>(argc<sp/>==<sp/><ref refid="_main_8cpp_1a70f7aa680f93db40562209fd8a608683" kindref="member">postFlagArgumentCount</ref><sp/>and<sp/><ref refid="classjuce_1_1String_1ae26e2af88f5237fd0b23de58cb168223" kindref="member" external="/Users/jreng/Documents/Poems/JUCE/docs/tagfile.xml">juce::String::fromUTF8</ref><sp/>(argv[<ref refid="_main_8cpp_1a8d15eab864d23bacb85f66408f136d42" kindref="member">postFlagArgIndex</ref>]).compare<sp/>(<ref refid="_main_8cpp_1a99fc9c1dfb80bb56c96c411ab9b24313" kindref="member">getVersionFlag</ref>())<sp/>==<sp/>0);</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(argc<sp/>==<sp/><ref refid="_main_8cpp_1ab112c8dd220252b8308c8882da65e1b1" kindref="member">flagOnlyArgumentCount</ref><sp/>and<sp/>juce::String::fromUTF8<sp/>(argv[<ref refid="_main_8cpp_1a7eacf8422a0bf113fc72a4ecc24fac25" kindref="member">flagArgIndex</ref>]).compare<sp/>(<ref refid="_main_8cpp_1a99fc9c1dfb80bb56c96c411ab9b24313" kindref="member">getVersionFlag</ref>())<sp/>==<sp/>0)</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>or<sp/>(argc<sp/>==<sp/><ref refid="_main_8cpp_1a70f7aa680f93db40562209fd8a608683" kindref="member">postFlagArgumentCount</ref><sp/>and<sp/>juce::String::fromUTF8<sp/>(argv[<ref refid="_main_8cpp_1a8d15eab864d23bacb85f66408f136d42" kindref="member">postFlagArgIndex</ref>]).compare<sp/>(<ref refid="_main_8cpp_1a99fc9c1dfb80bb56c96c411ab9b24313" kindref="member">getVersionFlag</ref>())<sp/>==<sp/>0);</highlight></codeline>
 <codeline lineno="73"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="74"><highlight class="normal"></highlight></codeline>
 <codeline lineno="83" refid="_main_8cpp_1a6336581d1e8cbdb8df62474ac9e3fdbb" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="_main_8cpp_1a6336581d1e8cbdb8df62474ac9e3fdbb" kindref="member">isHelp</ref><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>argc,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>argv[])</highlight></codeline>
 <codeline lineno="84"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(argc<sp/>==<sp/><ref refid="_main_8cpp_1ab112c8dd220252b8308c8882da65e1b1" kindref="member">flagOnlyArgumentCount</ref><sp/>and<sp/><ref refid="classjuce_1_1String_1ae26e2af88f5237fd0b23de58cb168223" kindref="member" external="/Users/jreng/Documents/Poems/JUCE/docs/tagfile.xml">juce::String::fromUTF8</ref><sp/>(argv[<ref refid="_main_8cpp_1a7eacf8422a0bf113fc72a4ecc24fac25" kindref="member">flagArgIndex</ref>]).compare<sp/>(<ref refid="_main_8cpp_1ab90618bcc38cb8962e80a5a729a611b1" kindref="member">getHelpFlag</ref>())<sp/>==<sp/>0)</highlight></codeline>
-<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>or<sp/>(argc<sp/>==<sp/><ref refid="_main_8cpp_1a70f7aa680f93db40562209fd8a608683" kindref="member">postFlagArgumentCount</ref><sp/>and<sp/><ref refid="classjuce_1_1String_1ae26e2af88f5237fd0b23de58cb168223" kindref="member" external="/Users/jreng/Documents/Poems/JUCE/docs/tagfile.xml">juce::String::fromUTF8</ref><sp/>(argv[<ref refid="_main_8cpp_1a8d15eab864d23bacb85f66408f136d42" kindref="member">postFlagArgIndex</ref>]).compare<sp/>(<ref refid="_main_8cpp_1ab90618bcc38cb8962e80a5a729a611b1" kindref="member">getHelpFlag</ref>())<sp/>==<sp/>0);</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(argc<sp/>==<sp/><ref refid="_main_8cpp_1ab112c8dd220252b8308c8882da65e1b1" kindref="member">flagOnlyArgumentCount</ref><sp/>and<sp/>juce::String::fromUTF8<sp/>(argv[<ref refid="_main_8cpp_1a7eacf8422a0bf113fc72a4ecc24fac25" kindref="member">flagArgIndex</ref>]).compare<sp/>(<ref refid="_main_8cpp_1ab90618bcc38cb8962e80a5a729a611b1" kindref="member">getHelpFlag</ref>())<sp/>==<sp/>0)</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>or<sp/>(argc<sp/>==<sp/><ref refid="_main_8cpp_1a70f7aa680f93db40562209fd8a608683" kindref="member">postFlagArgumentCount</ref><sp/>and<sp/>juce::String::fromUTF8<sp/>(argv[<ref refid="_main_8cpp_1a8d15eab864d23bacb85f66408f136d42" kindref="member">postFlagArgIndex</ref>]).compare<sp/>(<ref refid="_main_8cpp_1ab90618bcc38cb8962e80a5a729a611b1" kindref="member">getHelpFlag</ref>())<sp/>==<sp/>0);</highlight></codeline>
 <codeline lineno="87"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="88"><highlight class="normal"></highlight></codeline>
 <codeline lineno="93" refid="_main_8cpp_1a2bbde775f6db9f0e32cf9455a2ead1b7" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_main_8cpp_1a2bbde775f6db9f0e32cf9455a2ead1b7" kindref="member">writeVersion</ref>()</highlight></codeline>
 <codeline lineno="94"><highlight class="normal">{</highlight></codeline>
 <codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>versionLine<sp/>{<sp/>ProjectInfo::projectName</highlight></codeline>
-<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>+<sp/><ref refid="classjuce_1_1String_1a128e862810bc5e3f16cb70c3c9751867" kindref="member" external="/Users/jreng/Documents/Poems/JUCE/docs/tagfile.xml">juce::String::charToString</ref><sp/>(<ref refid="structChars_1a04b9b7227a5cdf082413821f7a1c66de" kindref="member" external="/Users/jreng/Documents/Poems/dev/jam/docs/tagfile.xml">Chars::space</ref>)</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>+<sp/>juce::String::charToString<sp/>(Chars::space)</highlight></codeline>
 <codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>+<sp/>ProjectInfo::versionString</highlight></codeline>
-<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>+<sp/><ref refid="structChars_1a04b9b7227a5cdf082413821f7a1c66de" kindref="member" external="/Users/jreng/Documents/Poems/dev/jam/docs/tagfile.xml">Chars::space</ref></highlight></codeline>
-<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>+<sp/><ref refid="structChars_1abd3afa51b77bcc972daf75a3a9c7edfa" kindref="member" external="/Users/jreng/Documents/Poems/dev/jam/docs/tagfile.xml">Chars::openParen</ref><sp/>+<sp/>CAST_COMMIT</highlight></codeline>
-<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>+<sp/><ref refid="structChars_1ab49a1038f17219d6f768eb1575513a0a" kindref="member" external="/Users/jreng/Documents/Poems/dev/jam/docs/tagfile.xml">Chars::closeParen</ref><sp/>};</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>+<sp/>Chars::space</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>+<sp/>Chars::openParen<sp/>+<sp/>CAST_COMMIT</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>+<sp/>Chars::closeParen<sp/>};</highlight></codeline>
 <codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/>printf<sp/>(</highlight><highlight class="stringliteral">&quot;%s\n&quot;</highlight><highlight class="normal">,<sp/>versionLine.toRawUTF8());</highlight></codeline>
 <codeline lineno="102"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="103"><highlight class="normal"></highlight></codeline>
@@ -802,24 +776,24 @@
 <codeline lineno="123"><highlight class="normal">{</highlight></codeline>
 <codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="_main_8cpp_1a6f06085b02e0ad301adcc85196bbb128" kindref="member">isTerminalOutput</ref>())</highlight></codeline>
 <codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>doneLine<sp/>{<sp/>ProjectInfo::projectName<sp/>+<sp/><ref refid="namespaceId_1a5e729b9864fd096462b3f08ef1eb4b1a" kindref="member" external="/Users/jreng/Documents/Poems/dev/jam/docs/tagfile.xml">Id::diagnosticSeparator</ref><sp/>+<sp/><ref refid="structtext_1_1_diagnostics_1a07b92fba2d678ad4a065f5ebd63d43a7" kindref="member">text::Diagnostics::done</ref><sp/>};</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>doneLine<sp/>{<sp/>ProjectInfo::projectName<sp/>+<sp/>Id::diagnosticSeparator<sp/>+<sp/><ref refid="structtext_1_1_diagnostics_1a07b92fba2d678ad4a065f5ebd63d43a7" kindref="member">text::Diagnostics::done</ref><sp/>};</highlight></codeline>
 <codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>printf<sp/>(</highlight><highlight class="stringliteral">&quot;%s\n&quot;</highlight><highlight class="normal">,<sp/>doneLine.toRawUTF8());</highlight></codeline>
 <codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="129"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="130"><highlight class="normal"></highlight></codeline>
 <codeline lineno="137" refid="_main_8cpp_1a7f683cefdf7f675f09e36661ce8df7cc" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_main_8cpp_1a7f683cefdf7f675f09e36661ce8df7cc" kindref="member">printBannerAndHelp</ref>()</highlight></codeline>
 <codeline lineno="138"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>newlineText<sp/>{<sp/><ref refid="classjuce_1_1String_1a128e862810bc5e3f16cb70c3c9751867" kindref="member" external="/Users/jreng/Documents/Poems/JUCE/docs/tagfile.xml">juce::String::charToString</ref><sp/>(<ref refid="structChars_1a4691bc69052e757e7325970098922899" kindref="member" external="/Users/jreng/Documents/Poems/dev/jam/docs/tagfile.xml">Chars::newline</ref>)<sp/>};</highlight></codeline>
-<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classjuce_1_1ScopedJuceInitialiser__GUI" kindref="compound" external="/Users/jreng/Documents/Poems/JUCE/docs/tagfile.xml">juce::ScopedJuceInitialiser_GUI</ref><sp/>juceInitialiser;</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>newlineText<sp/>{<sp/>juce::String::charToString<sp/>(Chars::newline)<sp/>};</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/>juce::ScopedJuceInitialiser_GUI<sp/>juceInitialiser;</highlight></codeline>
 <codeline lineno="141"><highlight class="normal"></highlight></codeline>
 <codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_main_8cpp_1a2c040b6a8eba42513dfa5b2a261f442d" kindref="member">printBanner</ref>();</highlight></codeline>
 <codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/>printf<sp/>(</highlight><highlight class="stringliteral">&quot;%s&quot;</highlight><highlight class="normal">,<sp/>newlineText.toRawUTF8());</highlight></codeline>
-<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_help_8cpp_1a3f361f138d00c42487776fb13cc5ebe6" kindref="member">printHelp</ref><sp/>(BinaryData::getString<sp/>(<ref refid="namespacefiles_1a4f5d1a618a82e735de711d473aa8033b" kindref="member" external="/Users/jreng/Documents/Poems/dev/jam/docs/tagfile.xml">files::scoutHelp</ref>));</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_help_8cpp_1a3f361f138d00c42487776fb13cc5ebe6" kindref="member">printHelp</ref><sp/>(BinaryData::getString<sp/>(<ref refid="namespacefiles_1a4f5d1a618a82e735de711d473aa8033b" kindref="member">files::scoutHelp</ref>));</highlight></codeline>
 <codeline lineno="145"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="146"><highlight class="normal"></highlight></codeline>
-<codeline lineno="158" refid="_main_8cpp_1a739f5ce0b26b14496e6eba6d9cb92356" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="_main_8cpp_1a739f5ce0b26b14496e6eba6d9cb92356" kindref="member">runDocument</ref><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classjuce_1_1File" kindref="compound" external="/Users/jreng/Documents/Poems/JUCE/docs/tagfile.xml">juce::File</ref>&amp;<sp/>documentFile)</highlight></codeline>
+<codeline lineno="158" refid="_main_8cpp_1a739f5ce0b26b14496e6eba6d9cb92356" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="_main_8cpp_1a739f5ce0b26b14496e6eba6d9cb92356" kindref="member">runDocument</ref><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>juce::File&amp;<sp/>documentFile)</highlight></codeline>
 <codeline lineno="159"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="160"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classjuce_1_1ScopedJuceInitialiser__GUI" kindref="compound" external="/Users/jreng/Documents/Poems/JUCE/docs/tagfile.xml">juce::ScopedJuceInitialiser_GUI</ref><sp/>libraryInitialiser;</highlight></codeline>
+<codeline lineno="160"><highlight class="normal"><sp/><sp/><sp/><sp/>juce::ScopedJuceInitialiser_GUI<sp/>libraryInitialiser;</highlight></codeline>
 <codeline lineno="161"><highlight class="normal"></highlight></codeline>
 <codeline lineno="162"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>result<sp/>{<sp/><ref refid="struct_processor" kindref="compound">Processor</ref><sp/>{<sp/>documentFile<sp/>}.<ref refid="struct_processor_1ac2f8ddc17ef15f47f03fa71ce3d381c6" kindref="member">generate</ref>()<sp/>};</highlight></codeline>
 <codeline lineno="163"><highlight class="normal"></highlight></codeline>
@@ -833,16 +807,16 @@
 <codeline lineno="171"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>EXIT_FAILURE;</highlight></codeline>
 <codeline lineno="172"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="173"><highlight class="normal"></highlight></codeline>
-<codeline lineno="181" refid="_main_8cpp_1a4787e2058107a19104111d385324e45b" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="_main_8cpp_1a4787e2058107a19104111d385324e45b" kindref="member">runDocumentNotFound</ref><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classjuce_1_1File" kindref="compound" external="/Users/jreng/Documents/Poems/JUCE/docs/tagfile.xml">juce::File</ref>&amp;<sp/>documentFile)</highlight></codeline>
+<codeline lineno="181" refid="_main_8cpp_1a4787e2058107a19104111d385324e45b" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="_main_8cpp_1a4787e2058107a19104111d385324e45b" kindref="member">runDocumentNotFound</ref><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>juce::File&amp;<sp/>documentFile)</highlight></codeline>
 <codeline lineno="182"><highlight class="normal">{</highlight></codeline>
 <codeline lineno="183"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_main_8cpp_1a7f683cefdf7f675f09e36661ce8df7cc" kindref="member">printBannerAndHelp</ref>();</highlight></codeline>
-<codeline lineno="184"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_main_8cpp_1a22583549a7d6409f6524a9c73261ba2d" kindref="member">printError</ref><sp/>(<ref refid="structtext_1_1_diagnostics_1a614879ccbad6f4edaf1a511bf5a2fa68" kindref="member">text::Diagnostics::failNotFound</ref><sp/>+<sp/><ref refid="namespaceId_1a5e729b9864fd096462b3f08ef1eb4b1a" kindref="member" external="/Users/jreng/Documents/Poems/dev/jam/docs/tagfile.xml">Id::diagnosticSeparator</ref><sp/>+<sp/>documentFile.<ref refid="classjuce_1_1File_1a5309789281ea7721eb832d21da99708f" kindref="member" external="/Users/jreng/Documents/Poems/JUCE/docs/tagfile.xml">getFileName</ref>());</highlight></codeline>
+<codeline lineno="184"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_main_8cpp_1a22583549a7d6409f6524a9c73261ba2d" kindref="member">printError</ref><sp/>(<ref refid="structtext_1_1_diagnostics_1a614879ccbad6f4edaf1a511bf5a2fa68" kindref="member">text::Diagnostics::failNotFound</ref><sp/>+<sp/>Id::diagnosticSeparator<sp/>+<sp/>documentFile.getFileName());</highlight></codeline>
 <codeline lineno="185"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>EXIT_FAILURE;</highlight></codeline>
 <codeline lineno="186"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="187"><highlight class="normal"></highlight></codeline>
-<codeline lineno="200" refid="_main_8cpp_1af6dc96d8ea3eaa82f12e5f8dc0dac218" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="classjuce_1_1File" kindref="compound" external="/Users/jreng/Documents/Poems/JUCE/docs/tagfile.xml">juce::File</ref><sp/><ref refid="_main_8cpp_1af6dc96d8ea3eaa82f12e5f8dc0dac218" kindref="member">getDocumentFile</ref><sp/>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>argv[])</highlight></codeline>
+<codeline lineno="200" refid="_main_8cpp_1af6dc96d8ea3eaa82f12e5f8dc0dac218" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>juce::File<sp/><ref refid="_main_8cpp_1af6dc96d8ea3eaa82f12e5f8dc0dac218" kindref="member">getDocumentFile</ref><sp/>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>argv[])</highlight></codeline>
 <codeline lineno="201"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="202"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classjuce_1_1File_1af57a7a6e83fbd4a6b048e7d0010d7279" kindref="member" external="/Users/jreng/Documents/Poems/JUCE/docs/tagfile.xml">juce::File::getCurrentWorkingDirectory</ref>().<ref refid="classjuce_1_1File_1a57b992aacb19e09ee5905cd0f0e9bb31" kindref="member" external="/Users/jreng/Documents/Poems/JUCE/docs/tagfile.xml">getChildFile</ref><sp/>(<ref refid="classjuce_1_1String_1ae26e2af88f5237fd0b23de58cb168223" kindref="member" external="/Users/jreng/Documents/Poems/JUCE/docs/tagfile.xml">juce::String::fromUTF8</ref><sp/>(argv[<ref refid="_main_8cpp_1a7eacf8422a0bf113fc72a4ecc24fac25" kindref="member">flagArgIndex</ref>])).<ref refid="classjuce_1_1File_1ab64be7537af26a53fa61643e42538c29" kindref="member" external="/Users/jreng/Documents/Poems/JUCE/docs/tagfile.xml">getLinkedTarget</ref>();</highlight></codeline>
+<codeline lineno="202"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>juce::File::getCurrentWorkingDirectory().getChildFile<sp/>(juce::String::fromUTF8<sp/>(argv[<ref refid="_main_8cpp_1a7eacf8422a0bf113fc72a4ecc24fac25" kindref="member">flagArgIndex</ref>])).getLinkedTarget();</highlight></codeline>
 <codeline lineno="203"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="204"><highlight class="normal"></highlight></codeline>
 <codeline lineno="220" refid="_main_8cpp_1a52f1af656d9670faf7049108bef951b9" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="_main_8cpp_1a52f1af656d9670faf7049108bef951b9" kindref="member">runCommandLine</ref><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>argc,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>argv[])</highlight></codeline>
@@ -871,7 +845,7 @@
 <codeline lineno="243"><highlight class="normal"></highlight></codeline>
 <codeline lineno="244"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(argc<sp/>&gt;<sp/><ref refid="_main_8cpp_1ab112c8dd220252b8308c8882da65e1b1" kindref="member">flagOnlyArgumentCount</ref>)</highlight></codeline>
 <codeline lineno="245"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="246"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_main_8cpp_1a22583549a7d6409f6524a9c73261ba2d" kindref="member">printError</ref><sp/>(<ref refid="classjuce_1_1String_1ae26e2af88f5237fd0b23de58cb168223" kindref="member" external="/Users/jreng/Documents/Poems/JUCE/docs/tagfile.xml">juce::String::fromUTF8</ref><sp/>(argv[<ref refid="_main_8cpp_1a8d15eab864d23bacb85f66408f136d42" kindref="member">postFlagArgIndex</ref>])<sp/>+<sp/><ref refid="namespaceId_1a5e729b9864fd096462b3f08ef1eb4b1a" kindref="member" external="/Users/jreng/Documents/Poems/dev/jam/docs/tagfile.xml">Id::diagnosticSeparator</ref><sp/>+<sp/><ref refid="structtext_1_1_diagnostics_1a54030ad642dee1157d22d8255503812d" kindref="member">text::Diagnostics::failFlagUnknown</ref>);</highlight></codeline>
+<codeline lineno="246"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_main_8cpp_1a22583549a7d6409f6524a9c73261ba2d" kindref="member">printError</ref><sp/>(juce::String::fromUTF8<sp/>(argv[<ref refid="_main_8cpp_1a8d15eab864d23bacb85f66408f136d42" kindref="member">postFlagArgIndex</ref>])<sp/>+<sp/>Id::diagnosticSeparator<sp/>+<sp/><ref refid="structtext_1_1_diagnostics_1a54030ad642dee1157d22d8255503812d" kindref="member">text::Diagnostics::failFlagUnknown</ref>);</highlight></codeline>
 <codeline lineno="247"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>EXIT_FAILURE;</highlight></codeline>
 <codeline lineno="248"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="249"><highlight class="normal"></highlight></codeline>
@@ -887,15 +861,15 @@
 <codeline lineno="268"><highlight class="normal"></highlight></codeline>
 <codeline lineno="269"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="_main_8cpp_1a6f06085b02e0ad301adcc85196bbb128" kindref="member">isTerminalOutput</ref>())</highlight></codeline>
 <codeline lineno="270"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="271"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classjuce_1_1MemoryOutputStream" kindref="compound" external="/Users/jreng/Documents/Poems/JUCE/docs/tagfile.xml">juce::MemoryOutputStream</ref><sp/>erase;</highlight></codeline>
-<codeline lineno="272"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classjam_1_1TerminalBuffer_1abf7d4045beacb228698fd9bb7fa90930" kindref="member" external="/Users/jreng/Documents/Poems/dev/jam/docs/tagfile.xml">jam::TerminalBuffer::writeEraseScreen</ref><sp/>(erase);</highlight></codeline>
-<codeline lineno="273"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>fwrite<sp/>(erase.<ref refid="classjuce_1_1MemoryOutputStream_1a050102f4ce6bec06a6e307434f467635" kindref="member" external="/Users/jreng/Documents/Poems/JUCE/docs/tagfile.xml">getData</ref>(),<sp/>sizeof<sp/>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal">),<sp/>erase.<ref refid="classjuce_1_1MemoryOutputStream_1a2ec3b7c88c8eba50d8a45f081dee0529" kindref="member" external="/Users/jreng/Documents/Poems/JUCE/docs/tagfile.xml">getDataSize</ref>(),<sp/>stdout);</highlight></codeline>
+<codeline lineno="271"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>juce::MemoryOutputStream<sp/>erase;</highlight></codeline>
+<codeline lineno="272"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>jam::TerminalBuffer::writeEraseScreen<sp/>(erase);</highlight></codeline>
+<codeline lineno="273"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>fwrite<sp/>(erase.getData(),<sp/>sizeof<sp/>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal">),<sp/>erase.getDataSize(),<sp/>stdout);</highlight></codeline>
 <codeline lineno="274"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>fflush<sp/>(stdout);</highlight></codeline>
 <codeline lineno="275"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="276"><highlight class="normal"></highlight></codeline>
 <codeline lineno="277"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="_main_8cpp_1a52f1af656d9670faf7049108bef951b9" kindref="member">runCommandLine</ref><sp/>(argc,<sp/>argv);</highlight></codeline>
 <codeline lineno="278"><highlight class="normal">}</highlight></codeline>
     </programlisting>
-    <location file="Main.cpp"/>
+    <location file="Source/Main.cpp"/>
   </compounddef>
 </doxygen>

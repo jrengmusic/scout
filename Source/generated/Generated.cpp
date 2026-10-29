@@ -37,6 +37,10 @@ namespace Id
     const juce::Identifier flag         { juce::String::fromUTF8 ("flag") };
     const juce::Identifier help         { juce::String::fromUTF8 ("help") };
     const juce::Identifier date         { juce::String::fromUTF8 ("date") };
+    const juce::Identifier sample       { juce::String::fromUTF8 ("sample") };
+    const juce::Identifier cswitch      { juce::String::fromUTF8 ("cswitch") };
+    const juce::Identifier intervalMs   { juce::String::fromUTF8 ("intervalMs") };
+    const juce::Identifier stackDepth   { juce::String::fromUTF8 ("stackDepth") };
 
 /**______________________________END OF NAMESPACE______________________________*/
 }// namespace Id

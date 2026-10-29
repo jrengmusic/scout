@@ -1,0 +1,266 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.18.0" xml:lang="en-US">
+  <compounddef id="class_symbolizer" kind="class" language="C++" prot="public">
+    <compoundname>Symbolizer</compoundname>
+    <includes refid="_symbolizer_8h" local="no">Symbolizer.h</includes>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_symbolizer_1a83cce67295d5e29b117076892225ee14" prot="private" static="no" mutable="no">
+        <type>jam::HashMap&lt; int, jam::HashMap&lt; juce::uint64, juce::Identifier &gt; &gt;</type>
+        <definition>jam::HashMap&lt;int, jam::HashMap&lt;juce::uint64, juce::Identifier&gt; &gt; Symbolizer::frameKeys</definition>
+        <argsstring></argsstring>
+        <name>frameKeys</name>
+        <qualifiedname>Symbolizer::frameKeys</qualifiedname>
+        <briefdescription>
+<para>Frame key of each address, for each process. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Symbolizer.h" line="97" column="18" bodyfile="Source/Symbolizer.h" bodystart="97" bodyend="-1"/>
+        <referencedby refid="class_symbolizer_1a92eeac9f0e75cec721c3887f3c9528e4" compoundref="_symbolizer_8cpp" startline="380" endline="395">getOrCreateKernelFrameKey</referencedby>
+        <referencedby refid="class_symbolizer_1ac2636a4ed1057b823a39d1e316b7b222" compoundref="_symbolizer_8cpp" startline="190" endline="210">getOrCreateUserFrameKey</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_symbolizer_1a3a526738f15236d0bbd906f96f0ecddc" prot="private" static="no" mutable="no">
+        <type>jam::HashMap&lt; juce::String, std::map&lt; juce::uint64, juce::String &gt; &gt;</type>
+        <definition>jam::HashMap&lt;juce::String, std::map&lt;juce::uint64, juce::String&gt; &gt; Symbolizer::imageSymbols</definition>
+        <argsstring></argsstring>
+        <name>imageSymbols</name>
+        <qualifiedname>Symbolizer::imageSymbols</qualifiedname>
+        <briefdescription>
+<para>Symbol name of each image offset, for each image path. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Symbolizer.h" line="101" column="18" bodyfile="Source/Symbolizer.h" bodystart="101" bodyend="-1"/>
+        <referencedby refid="class_symbolizer_1a93cc5155003af3fb204341779e85ec0c" compoundref="_symbolizer_8cpp" startline="349" endline="376">getOrCreateImageFrameKey</referencedby>
+        <referencedby refid="class_symbolizer_1ac2636a4ed1057b823a39d1e316b7b222" compoundref="_symbolizer_8cpp" startline="190" endline="210">getOrCreateUserFrameKey</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_symbolizer_1a908dd447303d990afb471232ef7fe4d8" prot="private" static="no" mutable="no">
+        <type>jam::HashMap&lt; int, std::map&lt; juce::uint64, juce::String &gt; &gt;</type>
+        <definition>jam::HashMap&lt;int, std::map&lt;juce::uint64, juce::String&gt; &gt; Symbolizer::regions</definition>
+        <argsstring></argsstring>
+        <name>regions</name>
+        <qualifiedname>Symbolizer::regions</qualifiedname>
+        <briefdescription>
+<para>Mapped regions of each process, keyed by the start address of the region. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Each value is the maps line. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Symbolizer.h" line="118" column="18" bodyfile="Source/Symbolizer.h" bodystart="118" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_symbolizer_1a35359e7d73bfc5ce174cdb6b98a37eaf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Symbolizer::Symbolizer</definition>
+        <argsstring>()</argsstring>
+        <name>Symbolizer</name>
+        <qualifiedname>Symbolizer::Symbolizer</qualifiedname>
+        <briefdescription>
+<para>Makes an empty symbolizer. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Symbolizer.h" line="28" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="class_symbolizer_1a6b632e1592e8735f841efc54bd8f02e7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Symbolizer::~Symbolizer</definition>
+        <argsstring>()</argsstring>
+        <name>~Symbolizer</name>
+        <qualifiedname>Symbolizer::~Symbolizer</qualifiedname>
+        <briefdescription>
+<para>Releases the symbol state. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Symbolizer.h" line="31" column="5"/>
+        <references refid="class_symbolizer_1a92eeac9f0e75cec721c3887f3c9528e4" compoundref="_symbolizer_8cpp" startline="380" endline="395">getOrCreateKernelFrameKey</references>
+        <references refid="class_symbolizer_1ac2636a4ed1057b823a39d1e316b7b222" compoundref="_symbolizer_8cpp" startline="190" endline="210">getOrCreateUserFrameKey</references>
+        <references refid="_symbolizer_8cpp_1a5fb131484b9fd1322472a4ba9fc0e4ed" compoundref="_symbolizer_8cpp" startline="18" endline="18">kernelProcessId</references>
+      </memberdef>
+      <memberdef kind="function" id="class_symbolizer_1a92eeac9f0e75cec721c3887f3c9528e4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>juce::Identifier</type>
+        <definition>juce::Identifier Symbolizer::getOrCreateKernelFrameKey</definition>
+        <argsstring>(juce::uint64 address)</argsstring>
+        <name>getOrCreateKernelFrameKey</name>
+        <qualifiedname>Symbolizer::getOrCreateKernelFrameKey</qualifiedname>
+        <param>
+          <type>juce::uint64</type>
+          <declname>address</declname>
+        </param>
+        <briefdescription>
+<para>Returns the frame key of a kernel address. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>The function reads the kernel symbols one time. It makes the key when the address is new.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>address</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Address in the kernel.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Frame key of the kernel symbol, or of the kernel image name when no symbol precedes the address. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Symbolizer.h" line="43" column="22" bodyfile="Source/Symbolizer.cpp" bodystart="380" bodyend="395"/>
+        <references refid="class_symbolizer_1a83cce67295d5e29b117076892225ee14" compoundref="_symbolizer_8h" startline="97">frameKeys</references>
+        <references refid="_symbolizer_8cpp_1abfa13e4f476116d740885b6f20f226ed" compoundref="_symbolizer_8cpp" startline="3" endline="13">getFrameKey</references>
+        <references refid="_symbolizer_8cpp_1a2bbe97cab63d267bb647b78930bba995" compoundref="_symbolizer_8cpp" startline="80" endline="85">getKernelImageName</references>
+        <references refid="_symbolizer_8cpp_1adbad68e25810cc84775de2ecc3eb0459" compoundref="_symbolizer_8cpp" startline="164" endline="175">getKernelSymbols</references>
+        <references refid="_symbolizer_8cpp_1a4d24b0b7f777abf1a2d48006ad699fc5" compoundref="_symbolizer_8cpp" startline="177" endline="188">getKernelTextAddress</references>
+        <references refid="_symbolizer_8cpp_1a5fb131484b9fd1322472a4ba9fc0e4ed" compoundref="_symbolizer_8cpp" startline="18" endline="18">kernelProcessId</references>
+        <referencedby refid="class_sampler_1a1c44e35adce2ea951252ec1b8cab1891" compoundref="_sampler_8cpp" startline="668" endline="696">Sampler::addFrames</referencedby>
+        <referencedby refid="class_sampler_1a1b0c7a89bc356514777c16a32ed803b7" compoundref="_sampler_8cpp" startline="369" endline="381">Sampler::addKernelSamples</referencedby>
+        <referencedby refid="class_symbolizer_1a6b632e1592e8735f841efc54bd8f02e7">~Symbolizer</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_symbolizer_1ac2636a4ed1057b823a39d1e316b7b222" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>juce::Identifier</type>
+        <definition>juce::Identifier Symbolizer::getOrCreateUserFrameKey</definition>
+        <argsstring>(int processId, juce::uint64 address)</argsstring>
+        <name>getOrCreateUserFrameKey</name>
+        <qualifiedname>Symbolizer::getOrCreateUserFrameKey</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>processId</declname>
+        </param>
+        <param>
+          <type>juce::uint64</type>
+          <declname>address</declname>
+        </param>
+        <briefdescription>
+<para>Returns the frame key of a user address. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>The function finds the image that holds the address in the process. It reads the symbols of the image one time. It makes the key when the address is new.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>processId</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Process that holds the address. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>address</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Address in the process.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Frame key of the symbol, or of the image name when no symbol precedes the address. The key is not valid when no image holds the address. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Symbolizer.h" line="57" column="22" bodyfile="Source/Symbolizer.cpp" bodystart="190" bodyend="210"/>
+        <references refid="class_symbolizer_1a83cce67295d5e29b117076892225ee14" compoundref="_symbolizer_8h" startline="97">frameKeys</references>
+        <references refid="_symbolizer_8cpp_1abfa13e4f476116d740885b6f20f226ed" compoundref="_symbolizer_8cpp" startline="3" endline="13">getFrameKey</references>
+        <references refid="_symbolizer_8cpp_1a004465734b1e49415c062790c9bf66c4" compoundref="_symbolizer_8cpp" startline="141" endline="155">getSymbols</references>
+        <references refid="class_symbolizer_1a3a526738f15236d0bbd906f96f0ecddc" compoundref="_symbolizer_8h" startline="101">imageSymbols</references>
+        <references refid="_symbolizer_8cpp_1a733ecc0717db52fddb3f9451748ca10e" compoundref="_symbolizer_8cpp" startline="157" endline="162">isSymbolImage</references>
+        <referencedby refid="class_sampler_1a1c44e35adce2ea951252ec1b8cab1891" compoundref="_sampler_8cpp" startline="668" endline="696">Sampler::addFrames</referencedby>
+        <referencedby refid="class_sampler_1a81a879e06d0a4c952c005aa0512a41fc" compoundref="_sampler_8cpp" startline="383" endline="401">Sampler::addUserSamples</referencedby>
+        <referencedby refid="class_symbolizer_1a6b632e1592e8735f841efc54bd8f02e7">~Symbolizer</referencedby>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_symbolizer_1a93cc5155003af3fb204341779e85ec0c" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>juce::Identifier</type>
+        <definition>juce::Identifier Symbolizer::getOrCreateImageFrameKey</definition>
+        <argsstring>(const juce::String &amp;regionText, juce::uint64 regionStart, juce::uint64 address)</argsstring>
+        <name>getOrCreateImageFrameKey</name>
+        <qualifiedname>Symbolizer::getOrCreateImageFrameKey</qualifiedname>
+        <param>
+          <type>const juce::String &amp;</type>
+          <declname>regionText</declname>
+        </param>
+        <param>
+          <type>juce::uint64</type>
+          <declname>regionStart</declname>
+        </param>
+        <param>
+          <type>juce::uint64</type>
+          <declname>address</declname>
+        </param>
+        <briefdescription>
+<para>Returns the frame key of an address in a mapped region. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>regionText</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Line of the process maps that describes the region. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>regionStart</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>First address of the region. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>address</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Address to resolve.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Frame key of the symbol, or of the image name when no symbol precedes the address. The key is not valid when the region is not a file image or does not hold the address. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Symbolizer.h" line="115" column="22" bodyfile="Source/Symbolizer.cpp" bodystart="349" bodyend="376"/>
+        <references refid="_symbolizer_8cpp_1abfa13e4f476116d740885b6f20f226ed" compoundref="_symbolizer_8cpp" startline="3" endline="13">getFrameKey</references>
+        <references refid="_symbolizer_8cpp_1a004465734b1e49415c062790c9bf66c4" compoundref="_symbolizer_8cpp" startline="141" endline="155">getSymbols</references>
+        <references refid="class_symbolizer_1a3a526738f15236d0bbd906f96f0ecddc" compoundref="_symbolizer_8h" startline="101">imageSymbols</references>
+        <references refid="_symbolizer_8cpp_1a733ecc0717db52fddb3f9451748ca10e" compoundref="_symbolizer_8cpp" startline="157" endline="162">isSymbolImage</references>
+        <references refid="_symbolizer_8cpp_1a65d1ef3fbd51b10cbab2b3e3d098a1b3" compoundref="_symbolizer_8cpp" startline="216" endline="216">rangeSeparator</references>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Resolves stack frame addresses to frame keys. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>A frame key is an identifier from the name of the symbol of the address. When the image has no symbol for the address, the key comes from the name of the image. When the address has no image, the key is not valid. The object keeps each key that it made, so each address resolves one time. </para>
+    </detaileddescription>
+    <location file="Source/Symbolizer.h" line="24" column="1" bodyfile="Source/Symbolizer.h" bodystart="25" bodyend="138"/>
+    <listofallmembers>
+      <member refid="class_symbolizer_1a83cce67295d5e29b117076892225ee14" prot="private" virt="non-virtual"><scope>Symbolizer</scope><name>frameKeys</name></member>
+      <member refid="class_symbolizer_1a93cc5155003af3fb204341779e85ec0c" prot="private" virt="non-virtual"><scope>Symbolizer</scope><name>getOrCreateImageFrameKey</name></member>
+      <member refid="class_symbolizer_1a92eeac9f0e75cec721c3887f3c9528e4" prot="public" virt="non-virtual"><scope>Symbolizer</scope><name>getOrCreateKernelFrameKey</name></member>
+      <member refid="class_symbolizer_1ac2636a4ed1057b823a39d1e316b7b222" prot="public" virt="non-virtual"><scope>Symbolizer</scope><name>getOrCreateUserFrameKey</name></member>
+      <member refid="class_symbolizer_1a3a526738f15236d0bbd906f96f0ecddc" prot="private" virt="non-virtual"><scope>Symbolizer</scope><name>imageSymbols</name></member>
+      <member refid="class_symbolizer_1a908dd447303d990afb471232ef7fe4d8" prot="private" virt="non-virtual"><scope>Symbolizer</scope><name>regions</name></member>
+      <member refid="class_symbolizer_1a35359e7d73bfc5ce174cdb6b98a37eaf" prot="public" virt="non-virtual"><scope>Symbolizer</scope><name>Symbolizer</name></member>
+      <member refid="class_symbolizer_1a6b632e1592e8735f841efc54bd8f02e7" prot="public" virt="non-virtual"><scope>Symbolizer</scope><name>~Symbolizer</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

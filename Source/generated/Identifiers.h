@@ -41,6 +41,10 @@ extern const juce::Identifier toolchain;   ///< Reserved toolchain manifest tabl
 extern const juce::Identifier flag;        ///< Toolchain table flag column.
 extern const juce::Identifier help;
 extern const juce::Identifier date;
+extern const juce::Identifier sample;
+extern const juce::Identifier cswitch;
+extern const juce::Identifier intervalMs;
+extern const juce::Identifier stackDepth;
 
 /**______________________________END OF NAMESPACE______________________________*/
 }// namespace Id

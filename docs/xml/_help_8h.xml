@@ -4,11 +4,11 @@
     <compoundname>Help.h</compoundname>
     <includes local="no">JuceHeader.h</includes>
     <includes refid="_generated_8h" local="yes">generated/Generated.h</includes>
-    <includedby refid="_help_8cpp" local="yes">Help.cpp</includedby>
-    <includedby refid="_main_8cpp" local="yes">Main.cpp</includedby>
+    <includedby refid="_help_8cpp" local="yes">Source/Help.cpp</includedby>
+    <includedby refid="_main_8cpp" local="yes">Source/Main.cpp</includedby>
     <incdepgraph>
       <node id="1">
-        <label>Help.h</label>
+        <label>Source/Help.h</label>
         <link refid="_help_8h"/>
         <childnode refid="2" relation="include">
         </childnode>
@@ -55,11 +55,11 @@
     </incdepgraph>
     <invincdepgraph>
       <node id="2">
-        <label>Help.cpp</label>
+        <label>Source/Help.cpp</label>
         <link refid="_help_8cpp"/>
       </node>
       <node id="1">
-        <label>Help.h</label>
+        <label>Source/Help.h</label>
         <link refid="_help_8h"/>
         <childnode refid="2" relation="include">
         </childnode>
@@ -67,7 +67,7 @@
         </childnode>
       </node>
       <node id="3">
-        <label>Main.cpp</label>
+        <label>Source/Main.cpp</label>
         <link refid="_main_8cpp"/>
       </node>
     </invincdepgraph>
@@ -78,7 +78,7 @@
         <argsstring>(const juce::String &amp;helpText)</argsstring>
         <name>printHelp</name>
         <param>
-          <type>const <ref refid="classjuce_1_1String" kindref="compound" external="/Users/jreng/Documents/Poems/JUCE/docs/tagfile.xml">juce::String</ref> &amp;</type>
+          <type>const juce::String &amp;</type>
           <declname>helpText</declname>
         </param>
         <briefdescription>
@@ -101,16 +101,9 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Help.h" line="22" column="6" bodyfile="Help.cpp" bodystart="3" bodyend="35" declfile="Help.h" declline="22" declcolumn="6"/>
-        <references refid="classjam_1_1TerminalBuffer_1adaf1dc795b75b3eee7100f241134bbbb">jam::TerminalBuffer::getCellLookup</references>
-        <references refid="classjam_1_1TerminalBuffer_1aa6ae34df2c63437939c7555ced2a74f7">jam::TerminalBuffer::getCellMeasure</references>
-        <references refid="classjam_1_1StyleMarkdown_1a2c93456629f62deb63ffbe9c2d92d569">jam::StyleMarkdown::getColumnWidth</references>
-        <references refid="structjam_1_1Instance_1ad5d2bbb58e37d8d260b428b334823140">jam::Instance&lt; Colours &gt;::getInstance</references>
-        <references refid="namespacefiles_1a038e98f00fad7f60cc8815e3dbd0875f">files::markdownStyleSheet</references>
-        <references refid="namespacefiles_1a185891dbf761ee7dbe2ac83641d633f2">files::mermaidStyleSheet</references>
-        <references refid="structjam_1_1MarkdownDocument_1af46000d5b257120c18b18b7b2a05031c">jam::MarkdownDocument::parse</references>
+        <location file="Source/Help.h" line="22" column="6" bodyfile="Source/Help.cpp" bodystart="3" bodyend="35" declfile="Source/Help.h" declline="22" declcolumn="6"/>
         <references refid="_help_8cpp_1a3f361f138d00c42487776fb13cc5ebe6" compoundref="_help_8cpp" startline="3" endline="35">printHelp</references>
-        <references refid="namespacefiles_1a4f5d1a618a82e735de711d473aa8033b" compoundref="_generated_8cpp" startline="49" endline="49">files::scoutHelp</references>
+        <references refid="namespacefiles_1a4f5d1a618a82e735de711d473aa8033b" compoundref="_generated_8cpp" startline="53" endline="53">files::scoutHelp</references>
         <referencedby refid="_main_8cpp_1a7f683cefdf7f675f09e36661ce8df7cc" compoundref="_main_8cpp" startline="137" endline="145">printBannerAndHelp</referencedby>
         <referencedby refid="_help_8cpp_1a3f361f138d00c42487776fb13cc5ebe6" compoundref="_help_8cpp" startline="3" endline="35">printHelp</referencedby>
       </memberdef>
@@ -124,8 +117,8 @@
 <codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;JuceHeader.h&gt;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_generated_8h" kindref="compound">generated/Generated.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="4"><highlight class="normal"></highlight></codeline>
-<codeline lineno="22"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_help_8cpp_1a3f361f138d00c42487776fb13cc5ebe6" kindref="member">printHelp</ref><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classjuce_1_1String" kindref="compound" external="/Users/jreng/Documents/Poems/JUCE/docs/tagfile.xml">juce::String</ref>&amp;<sp/>helpText);</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_help_8cpp_1a3f361f138d00c42487776fb13cc5ebe6" kindref="member">printHelp</ref><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>juce::String&amp;<sp/>helpText);</highlight></codeline>
     </programlisting>
-    <location file="Help.h"/>
+    <location file="Source/Help.h"/>
   </compounddef>
 </doxygen>

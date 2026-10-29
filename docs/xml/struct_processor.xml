@@ -5,7 +5,7 @@
     <includes refid="_processor_8h" local="no">Processor.h</includes>
     <sectiondef kind="private-attrib">
       <memberdef kind="variable" id="struct_processor_1a8dbadccb605c3a32f0e5af688b43d652" prot="private" static="no" mutable="no">
-        <type>const <ref refid="classjuce_1_1File" kindref="compound" external="/Users/jreng/Documents/Poems/JUCE/docs/tagfile.xml">juce::File</ref></type>
+        <type>const juce::File</type>
         <definition>const juce::File Processor::documentFile</definition>
         <argsstring></argsstring>
         <name>documentFile</name>
@@ -18,13 +18,13 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Processor.h" line="99" column="22" bodyfile="Processor.h" bodystart="99" bodyend="-1"/>
+        <location file="Source/Processor.h" line="104" column="22" bodyfile="Source/Processor.h" bodystart="104" bodyend="-1"/>
         <referencedby refid="struct_processor_1abe5471b3c8a21dfe9bc8e7683eb4868c" compoundref="_processor_8cpp" startline="11" endline="15">Processor</referencedby>
-        <referencedby refid="struct_processor_1a88ec28a8e3dd1b6e1f41fbaa315a737e" compoundref="_processor_8cpp" startline="57" endline="88">runEpochs</referencedby>
-        <referencedby refid="struct_processor_1aa277929ee4d6480d62fa48d2dd5f2a6c" compoundref="_processor_8cpp" startline="90" endline="99">writeReport</referencedby>
+        <referencedby refid="struct_processor_1acec35c543c65ed5dc6618fe7e79ef835" compoundref="_processor_8cpp" startline="58" endline="84">runEpochs</referencedby>
+        <referencedby refid="struct_processor_1aa277929ee4d6480d62fa48d2dd5f2a6c" compoundref="_processor_8cpp" startline="86" endline="95">writeReport</referencedby>
       </memberdef>
       <memberdef kind="variable" id="struct_processor_1afb131d60d600f95ce7bc382f8d9724e7" prot="private" static="no" mutable="no">
-        <type>const <ref refid="structjam_1_1ConfigDocument" kindref="compound" external="/Users/jreng/Documents/Poems/dev/jam/docs/tagfile.xml">jam::ConfigDocument</ref></type>
+        <type>const jam::ConfigDocument</type>
         <definition>const jam::ConfigDocument Processor::manifest</definition>
         <argsstring></argsstring>
         <name>manifest</name>
@@ -36,11 +36,11 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Processor.h" line="102" column="31" bodyfile="Processor.h" bodystart="102" bodyend="-1"/>
-        <referencedby refid="struct_processor_1ac2f8ddc17ef15f47f03fa71ce3d381c6" compoundref="_processor_8cpp" startline="17" endline="33">generate</referencedby>
+        <location file="Source/Processor.h" line="107" column="31" bodyfile="Source/Processor.h" bodystart="107" bodyend="-1"/>
+        <referencedby refid="struct_processor_1ac2f8ddc17ef15f47f03fa71ce3d381c6" compoundref="_processor_8cpp" startline="17" endline="34">generate</referencedby>
         <referencedby refid="struct_processor_1abe5471b3c8a21dfe9bc8e7683eb4868c" compoundref="_processor_8cpp" startline="11" endline="15">Processor</referencedby>
-        <referencedby refid="struct_processor_1a6ace9660425275f32080160c0ae88b2b" compoundref="_processor_8cpp" startline="35" endline="43">run</referencedby>
-        <referencedby refid="struct_processor_1a83804663c3ddec5019aad5fa2673bada" compoundref="_processor_8cpp" startline="45" endline="55">runToolchainRow</referencedby>
+        <referencedby refid="struct_processor_1a6ace9660425275f32080160c0ae88b2b" compoundref="_processor_8cpp" startline="36" endline="44">run</referencedby>
+        <referencedby refid="struct_processor_1a83804663c3ddec5019aad5fa2673bada" compoundref="_processor_8cpp" startline="46" endline="56">runToolchainRow</referencedby>
       </memberdef>
     </sectiondef>
     <sectiondef kind="public-func">
@@ -51,7 +51,7 @@
         <name>Processor</name>
         <qualifiedname>Processor::Processor</qualifiedname>
         <param>
-          <type>const <ref refid="classjuce_1_1File" kindref="compound" external="/Users/jreng/Documents/Poems/JUCE/docs/tagfile.xml">juce::File</ref> &amp;</type>
+          <type>const juce::File &amp;</type>
           <declname>newDocumentFile</declname>
         </param>
         <briefdescription>
@@ -71,12 +71,12 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Processor.h" line="26" column="14" bodyfile="Processor.cpp" bodystart="11" bodyend="15"/>
-        <references refid="struct_processor_1a8dbadccb605c3a32f0e5af688b43d652" compoundref="_processor_8h" startline="99">documentFile</references>
-        <references refid="struct_processor_1afb131d60d600f95ce7bc382f8d9724e7" compoundref="_processor_8h" startline="102">manifest</references>
+        <location file="Source/Processor.h" line="28" column="14" bodyfile="Source/Processor.cpp" bodystart="11" bodyend="15"/>
+        <references refid="struct_processor_1a8dbadccb605c3a32f0e5af688b43d652" compoundref="_processor_8h" startline="104">documentFile</references>
+        <references refid="struct_processor_1afb131d60d600f95ce7bc382f8d9724e7" compoundref="_processor_8h" startline="107">manifest</references>
       </memberdef>
       <memberdef kind="function" id="struct_processor_1ac2f8ddc17ef15f47f03fa71ce3d381c6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type><ref refid="classjuce_1_1Result" kindref="compound" external="/Users/jreng/Documents/Poems/JUCE/docs/tagfile.xml">juce::Result</ref></type>
+        <type>juce::Result</type>
         <definition>juce::Result Processor::generate</definition>
         <argsstring>()</argsstring>
         <name>generate</name>
@@ -86,28 +86,23 @@
         </briefdescription>
         <detaileddescription>
 <para>The run has three steps, in this order. The function validates the manifest through <ref refid="struct_validator" kindref="compound">Validator</ref>. It runs every <computeroutput>## toolchain</computeroutput> row through <ref refid="struct_processor_1a6ace9660425275f32080160c0ae88b2b" kindref="member">run()</ref>. It then runs the epochs and writes the report, when the manifest holds a <computeroutput><ref refid="struct_processor_1a6ace9660425275f32080160c0ae88b2b" kindref="member">run</ref></computeroutput> table. Each step runs only when the earlier steps succeed.</para>
-<para><simplesect kind="return"><para><ref refid="classjuce_1_1Result_1ac2133128eeba510367bfe1b83383ae0f" kindref="member" external="/Users/jreng/Documents/Poems/JUCE/docs/tagfile.xml">juce::Result::ok()</ref> when every step succeeds, or the first failure. </para>
+<para><simplesect kind="return"><para>juce::Result::ok() when every step succeeds, or the first failure. </para>
 </simplesect>
 </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Processor.h" line="40" column="18" bodyfile="Processor.cpp" bodystart="17" bodyend="33"/>
-        <references refid="classjuce_1_1ValueTree_1ac9bbcb6db4464f77b512b9bd8bbb8c3f">juce::ValueTree::getChildWithName</references>
-        <references refid="structjam_1_1ConfigDocument_1adec16ec1ad68995d0addd3b78a442b34">jam::ConfigDocument::getValueTree</references>
-        <references refid="structjam_1_1Document_1_1Validator_1a1275a95db9c777fcceff5c574c561ae0">jam::Document::Validator::isValid</references>
-        <references refid="namespaceId_1a14ad76a66641361dbfbfc9424e6a2f3f">Id::manifest</references>
-        <references refid="struct_processor_1afb131d60d600f95ce7bc382f8d9724e7" compoundref="_processor_8h" startline="102">manifest</references>
-        <references refid="namespaceId_1ae94c00f38c99144148371d4d273c298b">Id::run</references>
-        <references refid="struct_processor_1a6ace9660425275f32080160c0ae88b2b" compoundref="_processor_8cpp" startline="35" endline="43">run</references>
-        <references refid="struct_processor_1a88ec28a8e3dd1b6e1f41fbaa315a737e" compoundref="_processor_8cpp" startline="57" endline="88">runEpochs</references>
-        <references refid="namespaceId_1a35a1e4684527426add342c518cf9af54">Id::toType</references>
+        <location file="Source/Processor.h" line="42" column="18" bodyfile="Source/Processor.cpp" bodystart="17" bodyend="34"/>
+        <references refid="struct_processor_1afb131d60d600f95ce7bc382f8d9724e7" compoundref="_processor_8h" startline="107">manifest</references>
+        <references refid="struct_processor_1a6ace9660425275f32080160c0ae88b2b" compoundref="_processor_8cpp" startline="36" endline="44">run</references>
+        <references refid="struct_processor_1acec35c543c65ed5dc6618fe7e79ef835" compoundref="_processor_8cpp" startline="58" endline="84">runEpochs</references>
+        <references refid="namespace_id_1aaa0851cf60aab0c856e3aa5b9ebabf75" compoundref="_generated_8cpp" startline="40" endline="40">Id::sample</references>
         <referencedby refid="_main_8cpp_1a739f5ce0b26b14496e6eba6d9cb92356" compoundref="_main_8cpp" startline="158" endline="172">runDocument</referencedby>
       </memberdef>
     </sectiondef>
     <sectiondef kind="private-func">
       <memberdef kind="function" id="struct_processor_1a6ace9660425275f32080160c0ae88b2b" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type><ref refid="classjuce_1_1Result" kindref="compound" external="/Users/jreng/Documents/Poems/JUCE/docs/tagfile.xml">juce::Result</ref></type>
+        <type>juce::Result</type>
         <definition>juce::Result Processor::run</definition>
         <argsstring>()</argsstring>
         <name>run</name>
@@ -117,76 +112,75 @@
         </briefdescription>
         <detaileddescription>
 <para>Each row runs in the working folder of the caller, not in the folder of the manifest. The run stops at the first row that fails.</para>
-<para><simplesect kind="return"><para><ref refid="classjuce_1_1Result_1ac2133128eeba510367bfe1b83383ae0f" kindref="member" external="/Users/jreng/Documents/Poems/JUCE/docs/tagfile.xml">juce::Result::ok()</ref> when every row exits with zero, or the first failure. </para>
+<para><simplesect kind="return"><para>juce::Result::ok() when every row exits with zero, or the first failure. </para>
 </simplesect>
 </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Processor.h" line="52" column="18" bodyfile="Processor.cpp" bodystart="35" bodyend="43"/>
-        <references refid="structjam_1_1MarkdownDocument_1ae0e1ecae86b43cd8ffa7be4594f50150">jam::MarkdownDocument::getTableRows</references>
-        <references refid="structjam_1_1MarkdownDocument_1a5f9310fc70231c79f9573fb7f9a67ed4">jam::MarkdownDocument::getTables</references>
-        <references refid="struct_processor_1afb131d60d600f95ce7bc382f8d9724e7" compoundref="_processor_8h" startline="102">manifest</references>
-        <references refid="classjuce_1_1Result_1ac2133128eeba510367bfe1b83383ae0f">juce::Result::ok</references>
-        <references refid="struct_processor_1a83804663c3ddec5019aad5fa2673bada" compoundref="_processor_8cpp" startline="45" endline="55">runToolchainRow</references>
-        <references refid="namespaceId_1a0f9647376c570f4f428258196fa64c61" compoundref="_generated_8cpp" startline="36" endline="36">Id::toolchain</references>
-        <referencedby refid="struct_processor_1ac2f8ddc17ef15f47f03fa71ce3d381c6" compoundref="_processor_8cpp" startline="17" endline="33">generate</referencedby>
+        <location file="Source/Processor.h" line="54" column="18" bodyfile="Source/Processor.cpp" bodystart="36" bodyend="44"/>
+        <references refid="struct_processor_1afb131d60d600f95ce7bc382f8d9724e7" compoundref="_processor_8h" startline="107">manifest</references>
+        <references refid="struct_processor_1a83804663c3ddec5019aad5fa2673bada" compoundref="_processor_8cpp" startline="46" endline="56">runToolchainRow</references>
+        <references refid="namespace_id_1a0f9647376c570f4f428258196fa64c61" compoundref="_generated_8cpp" startline="36" endline="36">Id::toolchain</references>
+        <referencedby refid="struct_processor_1ac2f8ddc17ef15f47f03fa71ce3d381c6" compoundref="_processor_8cpp" startline="17" endline="34">generate</referencedby>
       </memberdef>
       <memberdef kind="function" id="struct_processor_1a83804663c3ddec5019aad5fa2673bada" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type><ref refid="classjuce_1_1Result" kindref="compound" external="/Users/jreng/Documents/Poems/JUCE/docs/tagfile.xml">juce::Result</ref></type>
+        <type>juce::Result</type>
         <definition>juce::Result Processor::runToolchainRow</definition>
         <argsstring>(const jam::ConfigDocument::Element &amp;row)</argsstring>
         <name>runToolchainRow</name>
         <qualifiedname>Processor::runToolchainRow</qualifiedname>
         <param>
-          <type>const <ref refid="structjam_1_1Document_1_1Element" kindref="compound" external="/Users/jreng/Documents/Poems/dev/jam/docs/tagfile.xml">jam::ConfigDocument::Element</ref> &amp;</type>
+          <type>const jam::ConfigDocument::Element &amp;</type>
           <declname>row</declname>
         </param>
         <briefdescription>
-<para>Runs the <computeroutput><ref refid="juce__UnityPluginInterface_8h_1a485dc2a0e5ed7da3d9f826367b36ee55a6440030ae8284cee96c1c88b356c45a7" kindref="member" external="/Users/jreng/Documents/Poems/JUCE/docs/tagfile.xml">command</ref></computeroutput> of <computeroutput>row</computeroutput>, followed by its <computeroutput>flag</computeroutput>, through <ref refid="struct_toolchain_1a99335d844ab10df762460e0d2beea4db" kindref="member">Toolchain::runProcess()</ref>. </para>
+<para>Runs the <computeroutput>command</computeroutput> of <computeroutput>row</computeroutput>, followed by its <computeroutput>flag</computeroutput>, through <ref refid="struct_toolchain_1a99335d844ab10df762460e0d2beea4db" kindref="member">Toolchain::runProcess()</ref>. </para>
         </briefdescription>
         <detaileddescription>
-<para>The command line in a failure is the <computeroutput><ref refid="juce__UnityPluginInterface_8h_1a485dc2a0e5ed7da3d9f826367b36ee55a6440030ae8284cee96c1c88b356c45a7" kindref="member" external="/Users/jreng/Documents/Poems/JUCE/docs/tagfile.xml">command</ref></computeroutput>, followed by the <computeroutput>flag</computeroutput> when the row declares one.</para>
+<para>The command line in a failure is the <computeroutput>command</computeroutput>, followed by the <computeroutput>flag</computeroutput> when the row declares one.</para>
 <para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>row</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>The <computeroutput>## toolchain</computeroutput> row whose <computeroutput><ref refid="juce__UnityPluginInterface_8h_1a485dc2a0e5ed7da3d9f826367b36ee55a6440030ae8284cee96c1c88b356c45a7" kindref="member" external="/Users/jreng/Documents/Poems/JUCE/docs/tagfile.xml">command</ref></computeroutput> and <computeroutput>flag</computeroutput> run. </para>
+<para>The <computeroutput>## toolchain</computeroutput> row whose <computeroutput>command</computeroutput> and <computeroutput>flag</computeroutput> run. </para>
 </parameterdescription>
 </parameteritem>
 </parameterlist>
-<simplesect kind="return"><para><ref refid="classjuce_1_1Result_1ac2133128eeba510367bfe1b83383ae0f" kindref="member" external="/Users/jreng/Documents/Poems/JUCE/docs/tagfile.xml">juce::Result::ok()</ref> when the process starts and exits with zero, or a failure that names its command line. </para>
+<simplesect kind="return"><para>juce::Result::ok() when the process starts and exits with zero, or a failure that names its command line. </para>
 </simplesect>
 </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Processor.h" line="65" column="18" bodyfile="Processor.cpp" bodystart="45" bodyend="55"/>
-        <references refid="namespaceId_1a1538a142ed265f60c8fcf1703a106a7d" compoundref="_generated_8cpp" startline="28" endline="28">Id::command</references>
-        <references refid="namespaceId_1ac8f84d92cb02638b89abb87149be1caf" compoundref="_generated_8cpp" startline="37" endline="37">Id::flag</references>
-        <references refid="structjam_1_1MarkdownDocument_1a06a09fa79c04fe1fdd553245cb6b6d87">jam::MarkdownDocument::getTableValue</references>
+        <location file="Source/Processor.h" line="67" column="18" bodyfile="Source/Processor.cpp" bodystart="46" bodyend="56"/>
+        <references refid="namespace_id_1a1538a142ed265f60c8fcf1703a106a7d" compoundref="_generated_8cpp" startline="28" endline="28">Id::command</references>
+        <references refid="namespace_id_1ac8f84d92cb02638b89abb87149be1caf" compoundref="_generated_8cpp" startline="37" endline="37">Id::flag</references>
         <references refid="struct_toolchain_1ad96b65cacfb0e4c8d2c1cf75acd01100" compoundref="_toolchain_8cpp" startline="3" endline="13">Toolchain::getToolchainArguments</references>
-        <references refid="struct_processor_1afb131d60d600f95ce7bc382f8d9724e7" compoundref="_processor_8h" startline="102">manifest</references>
+        <references refid="struct_processor_1afb131d60d600f95ce7bc382f8d9724e7" compoundref="_processor_8h" startline="107">manifest</references>
         <references refid="struct_toolchain_1a99335d844ab10df762460e0d2beea4db" compoundref="_toolchain_8cpp" startline="15" endline="41">Toolchain::runProcess</references>
-        <references refid="structChars_1a04b9b7227a5cdf082413821f7a1c66de">Chars::space</references>
-        <referencedby refid="struct_processor_1a6ace9660425275f32080160c0ae88b2b" compoundref="_processor_8cpp" startline="35" endline="43">run</referencedby>
+        <referencedby refid="struct_processor_1a6ace9660425275f32080160c0ae88b2b" compoundref="_processor_8cpp" startline="36" endline="44">run</referencedby>
       </memberdef>
-      <memberdef kind="function" id="struct_processor_1a88ec28a8e3dd1b6e1f41fbaa315a737e" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type><ref refid="classjuce_1_1Result" kindref="compound" external="/Users/jreng/Documents/Poems/JUCE/docs/tagfile.xml">juce::Result</ref></type>
+      <memberdef kind="function" id="struct_processor_1acec35c543c65ed5dc6618fe7e79ef835" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>juce::Result</type>
         <definition>juce::Result Processor::runEpochs</definition>
-        <argsstring>(const juce::ValueTree &amp;runTable)</argsstring>
+        <argsstring>(const juce::ValueTree &amp;runTable, const juce::ValueTree &amp;sampleTable)</argsstring>
         <name>runEpochs</name>
         <qualifiedname>Processor::runEpochs</qualifiedname>
         <param>
-          <type>const <ref refid="classjuce_1_1ValueTree" kindref="compound" external="/Users/jreng/Documents/Poems/JUCE/docs/tagfile.xml">juce::ValueTree</ref> &amp;</type>
+          <type>const juce::ValueTree &amp;</type>
           <declname>runTable</declname>
+        </param>
+        <param>
+          <type>const juce::ValueTree &amp;</type>
+          <declname>sampleTable</declname>
         </param>
         <briefdescription>
 <para>Runs the epochs of <computeroutput>runTable</computeroutput> and writes the report. </para>
         </briefdescription>
         <detaileddescription>
-<para>The paths of <computeroutput>runTable</computeroutput> resolve against the folder of the manifest. When the <computeroutput>baseline</computeroutput> cell names a file that does not exist, the function fails before it runs any epoch. An empty <computeroutput>baseline</computeroutput> cell means no baseline. Each epoch runs the <computeroutput><ref refid="juce__UnityPluginInterface_8h_1a485dc2a0e5ed7da3d9f826367b36ee55a6440030ae8284cee96c1c88b356c45a7" kindref="member" external="/Users/jreng/Documents/Poems/JUCE/docs/tagfile.xml">command</ref></computeroutput> through <ref refid="class_benchmark_1a8b4bab8a038fba5d18366ba23e32923f" kindref="member">Benchmark::runEpoch()</ref> and reads the <computeroutput>samples</computeroutput> file through <ref refid="class_benchmark_1a54e743cd8ac66536390608cc09aa355e" kindref="member">Benchmark::addEpoch()</ref>. The function runs <computeroutput>epochs</computeroutput> epochs, then passes the profiles to <ref refid="struct_processor_1aa277929ee4d6480d62fa48d2dd5f2a6c" kindref="member">writeReport()</ref>.</para>
+<para>The paths of <computeroutput>runTable</computeroutput> resolve against the folder of the manifest. When the <computeroutput>baseline</computeroutput> cell names a file that does not exist, the function fails before it runs any epoch. An empty <computeroutput>baseline</computeroutput> cell means no baseline. Each epoch runs the <computeroutput>command</computeroutput> through <ref refid="class_benchmark_1a8b4bab8a038fba5d18366ba23e32923f" kindref="member">Benchmark::runEpoch()</ref>. That function also reads the <computeroutput>samples</computeroutput> file, and it runs a <ref refid="class_sampler" kindref="compound">Sampler</ref> when <computeroutput>sampleTable</computeroutput> is valid. The function runs <computeroutput>epochs</computeroutput> epochs, then passes the profiles to <ref refid="struct_processor_1aa277929ee4d6480d62fa48d2dd5f2a6c" kindref="member">writeReport()</ref>.</para>
 <para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>runTable</parametername>
@@ -195,42 +189,44 @@
 <para>The <computeroutput><ref refid="struct_processor_1a6ace9660425275f32080160c0ae88b2b" kindref="member">run</ref></computeroutput> table of the manifest. </para>
 </parameterdescription>
 </parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>sampleTable</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The <computeroutput>sample</computeroutput> table of the manifest. It is not valid when the manifest has no <computeroutput>## sample</computeroutput> table. </para>
+</parameterdescription>
+</parameteritem>
 </parameterlist>
-<simplesect kind="return"><para><ref refid="classjuce_1_1Result_1ac2133128eeba510367bfe1b83383ae0f" kindref="member" external="/Users/jreng/Documents/Poems/JUCE/docs/tagfile.xml">juce::Result::ok()</ref> when every epoch and the report succeed, or the first failure. A missing baseline gives <computeroutput>not found: \&lt;baseline path\&gt;</computeroutput>. </para>
+<simplesect kind="return"><para>juce::Result::ok() when every epoch and the report succeed, or the first failure. A missing baseline gives <computeroutput>not found: \&lt;baseline path\&gt;</computeroutput>. </para>
 </simplesect>
 </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Processor.h" line="82" column="18" bodyfile="Processor.cpp" bodystart="57" bodyend="88"/>
-        <references refid="class_benchmark_1a54e743cd8ac66536390608cc09aa355e" compoundref="_benchmark_8cpp" startline="121" endline="150">Benchmark::addEpoch</references>
-        <references refid="namespaceId_1a6f000170fabbf731e725a54a1682b99e">Id::baseline</references>
-        <references refid="namespaceId_1a1538a142ed265f60c8fcf1703a106a7d" compoundref="_generated_8cpp" startline="28" endline="28">Id::command</references>
-        <references refid="namespaceId_1a5e729b9864fd096462b3f08ef1eb4b1a">Id::diagnosticSeparator</references>
-        <references refid="struct_processor_1a8dbadccb605c3a32f0e5af688b43d652" compoundref="_processor_8h" startline="99">documentFile</references>
-        <references refid="namespaceId_1af393585104ec335510688180036ff1d6" compoundref="_generated_8cpp" startline="26" endline="26">Id::epochs</references>
-        <references refid="classjuce_1_1Result_1a27205a4dc7a973aebd1976270867be80">juce::Result::fail</references>
+        <location file="Source/Processor.h" line="87" column="18" bodyfile="Source/Processor.cpp" bodystart="58" bodyend="84"/>
+        <references refid="namespace_id_1a1538a142ed265f60c8fcf1703a106a7d" compoundref="_generated_8cpp" startline="28" endline="28">Id::command</references>
+        <references refid="struct_processor_1a8dbadccb605c3a32f0e5af688b43d652" compoundref="_processor_8h" startline="104">documentFile</references>
+        <references refid="namespace_id_1af393585104ec335510688180036ff1d6" compoundref="_generated_8cpp" startline="26" endline="26">Id::epochs</references>
         <references refid="structtext_1_1_diagnostics_1a614879ccbad6f4edaf1a511bf5a2fa68" compoundref="_text_8h" startline="31" endline="31">text::Diagnostics::failNotFound</references>
         <references refid="_processor_8cpp_1a75659085307119553a8c6b4fd6ba0ac4" compoundref="_processor_8cpp" startline="3" endline="9">getBaseline</references>
-        <references refid="classjuce_1_1File_1ab6bec65fbcf19ce10e38cf9d1015770d">juce::File::getParentDirectory</references>
-        <references refid="class_benchmark_1ac2758e9667d09cca4fa1c7d0845c7413" compoundref="_benchmark_8cpp" startline="152" endline="164">Benchmark::getProfiles</references>
-        <references refid="class_benchmark_1a8b4bab8a038fba5d18366ba23e32923f" compoundref="_benchmark_8cpp" startline="52" endline="77">Benchmark::runEpoch</references>
-        <references refid="namespaceId_1a767aceb9bc5d27527f647a9935420ee1">Id::samples</references>
-        <references refid="struct_processor_1aa277929ee4d6480d62fa48d2dd5f2a6c" compoundref="_processor_8cpp" startline="90" endline="99">writeReport</references>
-        <referencedby refid="struct_processor_1ac2f8ddc17ef15f47f03fa71ce3d381c6" compoundref="_processor_8cpp" startline="17" endline="33">generate</referencedby>
+        <references refid="class_benchmark_1ac2758e9667d09cca4fa1c7d0845c7413" compoundref="_benchmark_8cpp" startline="224" endline="243">Benchmark::getProfiles</references>
+        <references refid="class_benchmark_1a8b4bab8a038fba5d18366ba23e32923f" compoundref="_benchmark_8cpp" startline="106" endline="138">Benchmark::runEpoch</references>
+        <references refid="struct_processor_1aa277929ee4d6480d62fa48d2dd5f2a6c" compoundref="_processor_8cpp" startline="86" endline="95">writeReport</references>
+        <referencedby refid="struct_processor_1ac2f8ddc17ef15f47f03fa71ce3d381c6" compoundref="_processor_8cpp" startline="17" endline="34">generate</referencedby>
       </memberdef>
       <memberdef kind="function" id="struct_processor_1aa277929ee4d6480d62fa48d2dd5f2a6c" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type><ref refid="classjuce_1_1Result" kindref="compound" external="/Users/jreng/Documents/Poems/JUCE/docs/tagfile.xml">juce::Result</ref></type>
+        <type>juce::Result</type>
         <definition>juce::Result Processor::writeReport</definition>
         <argsstring>(const juce::ValueTree &amp;runTable, const juce::ValueTree &amp;profiles)</argsstring>
         <name>writeReport</name>
         <qualifiedname>Processor::writeReport</qualifiedname>
         <param>
-          <type>const <ref refid="classjuce_1_1ValueTree" kindref="compound" external="/Users/jreng/Documents/Poems/JUCE/docs/tagfile.xml">juce::ValueTree</ref> &amp;</type>
+          <type>const juce::ValueTree &amp;</type>
           <declname>runTable</declname>
         </param>
         <param>
-          <type>const <ref refid="classjuce_1_1ValueTree" kindref="compound" external="/Users/jreng/Documents/Poems/JUCE/docs/tagfile.xml">juce::ValueTree</ref> &amp;</type>
+          <type>const juce::ValueTree &amp;</type>
           <declname>profiles</declname>
         </param>
         <briefdescription>
@@ -255,189 +251,35 @@
 </parameterdescription>
 </parameteritem>
 </parameterlist>
-<simplesect kind="return"><para><ref refid="classjuce_1_1Result_1ac2133128eeba510367bfe1b83383ae0f" kindref="member" external="/Users/jreng/Documents/Poems/JUCE/docs/tagfile.xml">juce::Result::ok()</ref> when the write succeeds, or a failure <computeroutput>\&lt;output path\&gt;: cannot write output</computeroutput>. </para>
+<simplesect kind="return"><para>juce::Result::ok() when the write succeeds, or a failure <computeroutput>\&lt;output path\&gt;: cannot write output</computeroutput>. </para>
 </simplesect>
 </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Processor.h" line="96" column="18" bodyfile="Processor.cpp" bodystart="90" bodyend="99"/>
-        <references refid="namespaceId_1a32ffc7aee9ffe0ba992401c38b1e8243" compoundref="_generated_8cpp" startline="39" endline="39">Id::date</references>
-        <references refid="namespaceId_1a5e729b9864fd096462b3f08ef1eb4b1a">Id::diagnosticSeparator</references>
-        <references refid="struct_processor_1a8dbadccb605c3a32f0e5af688b43d652" compoundref="_processor_8h" startline="99">documentFile</references>
-        <references refid="classjuce_1_1Result_1a27205a4dc7a973aebd1976270867be80">juce::Result::fail</references>
-        <references refid="structtext_1_1_diagnostics_1a17a0efaa59e3489e8242be054d6280f5" compoundref="_text_8h" startline="34" endline="34">text::Diagnostics::failOutputWrite</references>
-        <references refid="classjuce_1_1Time_1adee636559a2f33f9e67c56fd0f9a3b2e">juce::Time::formatted</references>
-        <references refid="classjuce_1_1File_1a57b992aacb19e09ee5905cd0f0e9bb31">juce::File::getChildFile</references>
-        <references refid="classjuce_1_1Time_1ad8306070f7b89d416fe8dabaa5a2abc2">juce::Time::getCurrentTime</references>
-        <references refid="classjuce_1_1File_1ab6bec65fbcf19ce10e38cf9d1015770d">juce::File::getParentDirectory</references>
-        <references refid="classjuce_1_1Result_1ac2133128eeba510367bfe1b83383ae0f">juce::Result::ok</references>
-        <references refid="namespaceId_1a3c8da0c68c021ababf62dc69bef9488a" compoundref="_identifiers_8h" startline="31">Id::output</references>
+        <location file="Source/Processor.h" line="101" column="18" bodyfile="Source/Processor.cpp" bodystart="86" bodyend="95"/>
+        <references refid="namespace_id_1a32ffc7aee9ffe0ba992401c38b1e8243" compoundref="_generated_8cpp" startline="39" endline="39">Id::date</references>
+        <references refid="struct_processor_1a8dbadccb605c3a32f0e5af688b43d652" compoundref="_processor_8h" startline="104">documentFile</references>
+        <references refid="structtext_1_1_diagnostics_1a17a0efaa59e3489e8242be054d6280f5" compoundref="_text_8h" startline="35" endline="35">text::Diagnostics::failOutputWrite</references>
+        <references refid="namespace_id_1a3c8da0c68c021ababf62dc69bef9488a" compoundref="_generated_8cpp" startline="27" endline="27">Id::output</references>
         <references refid="class_profile_report_1a7d27ee8611bb27c7248defc82b510100" compoundref="_profile_report_8cpp" startline="4" endline="14">ProfileReport::toFile</references>
-        <referencedby refid="struct_processor_1a88ec28a8e3dd1b6e1f41fbaa315a737e" compoundref="_processor_8cpp" startline="57" endline="88">runEpochs</referencedby>
+        <referencedby refid="struct_processor_1acec35c543c65ed5dc6618fe7e79ef835" compoundref="_processor_8cpp" startline="58" endline="84">runEpochs</referencedby>
       </memberdef>
     </sectiondef>
     <briefdescription>
 <para>Owns the parsed manifest of one scout run and drives the run through it. </para>
     </briefdescription>
     <detaileddescription>
-<para><ref refid="struct_processor" kindref="compound">Processor</ref> parses the manifest file once, at construction. <ref refid="struct_processor_1ac2f8ddc17ef15f47f03fa71ce3d381c6" kindref="member">generate()</ref> then validates the manifest and runs the <computeroutput>## toolchain</computeroutput> rows. When the manifest holds a <computeroutput><ref refid="struct_processor_1a6ace9660425275f32080160c0ae88b2b" kindref="member">run</ref></computeroutput> table, <ref refid="struct_processor_1ac2f8ddc17ef15f47f03fa71ce3d381c6" kindref="member">generate()</ref> also runs the epochs and writes the report. </para>
+<para><ref refid="struct_processor" kindref="compound">Processor</ref> parses the manifest file once, at construction. <ref refid="struct_processor_1ac2f8ddc17ef15f47f03fa71ce3d381c6" kindref="member">generate()</ref> then validates the manifest and runs the <computeroutput>## toolchain</computeroutput> rows. When the manifest holds a <computeroutput><ref refid="struct_processor_1a6ace9660425275f32080160c0ae88b2b" kindref="member">run</ref></computeroutput> table, <ref refid="struct_processor_1ac2f8ddc17ef15f47f03fa71ce3d381c6" kindref="member">generate()</ref> also runs the epochs and writes the report. When the manifest also holds a <computeroutput>## sample</computeroutput> table, each epoch samples the stacks of the command. </para>
     </detaileddescription>
-    <collaborationgraph>
-      <node id="1">
-        <label>Processor</label>
-        <link refid="struct_processor"/>
-        <childnode refid="2" relation="usage">
-          <edgelabel>documentFile</edgelabel>
-        </childnode>
-        <childnode refid="3" relation="usage">
-          <edgelabel>manifest</edgelabel>
-        </childnode>
-      </node>
-      <node id="14">
-        <label>jam::Array&lt; jam::Document::Property&lt; Value &gt; &gt;</label>
-        <link refid="classjam_1_1Array" external="/Users/jreng/Documents/Poems/dev/jam/docs/tagfile.xml"/>
-        <childnode refid="8" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="19">
-        <label>jam::Array&lt; jam::Document::Token &gt;</label>
-        <link refid="classjam_1_1Array" external="/Users/jreng/Documents/Poems/dev/jam/docs/tagfile.xml"/>
-        <childnode refid="8" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="7">
-        <label>jam::Array&lt; std::unique_ptr&lt; ObjectClass &gt; &gt;</label>
-        <link refid="classjam_1_1Array" external="/Users/jreng/Documents/Poems/dev/jam/docs/tagfile.xml"/>
-        <childnode refid="8" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="11">
-        <label>jam::Array&lt; uint32_t &gt;</label>
-        <link refid="classjam_1_1Array" external="/Users/jreng/Documents/Poems/dev/jam/docs/tagfile.xml"/>
-        <childnode refid="8" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="3">
-        <label>jam::ConfigDocument</label>
-        <link refid="structjam_1_1ConfigDocument" external="/Users/jreng/Documents/Poems/dev/jam/docs/tagfile.xml"/>
-        <childnode refid="4" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="5">
-        <label>jam::Document</label>
-        <link refid="structjam_1_1Document" external="/Users/jreng/Documents/Poems/dev/jam/docs/tagfile.xml"/>
-        <childnode refid="6" relation="usage">
-          <edgelabel>elements</edgelabel>
-        </childnode>
-        <childnode refid="9" relation="usage">
-          <edgelabel>source</edgelabel>
-        </childnode>
-        <childnode refid="11" relation="usage">
-          <edgelabel>lineOffsets</edgelabel>
-        </childnode>
-        <childnode refid="12" relation="usage">
-          <edgelabel>root</edgelabel>
-        </childnode>
-      </node>
-      <node id="12">
-        <label>jam::Document::Element</label>
-        <link refid="structjam_1_1Document_1_1Element" external="/Users/jreng/Documents/Poems/dev/jam/docs/tagfile.xml"/>
-        <childnode refid="13" relation="usage">
-          <edgelabel>id</edgelabel>
-        </childnode>
-        <childnode refid="12" relation="usage">
-          <edgelabel>firstChild</edgelabel>
-          <edgelabel>lastChild</edgelabel>
-          <edgelabel>nextSibling</edgelabel>
-          <edgelabel>parent</edgelabel>
-          <edgelabel>previousSibling</edgelabel>
-        </childnode>
-        <childnode refid="14" relation="usage">
-          <edgelabel>properties</edgelabel>
-        </childnode>
-      </node>
-      <node id="4">
-        <label>jam::MarkdownDocument</label>
-        <link refid="structjam_1_1MarkdownDocument" external="/Users/jreng/Documents/Poems/dev/jam/docs/tagfile.xml"/>
-        <childnode refid="5" relation="public-inheritance">
-        </childnode>
-        <childnode refid="15" relation="usage">
-          <edgelabel>blockTag</edgelabel>
-        </childnode>
-        <childnode refid="17" relation="usage">
-          <edgelabel>headingTag</edgelabel>
-        </childnode>
-        <childnode refid="18" relation="usage">
-          <edgelabel>openBlock</edgelabel>
-        </childnode>
-        <childnode refid="19" relation="usage">
-          <edgelabel>tokens</edgelabel>
-        </childnode>
-      </node>
-      <node id="6">
-        <label>jam::Owner&lt; jam::Document::Element &gt;</label>
-        <link refid="classjam_1_1Owner" external="/Users/jreng/Documents/Poems/dev/jam/docs/tagfile.xml"/>
-        <childnode refid="7" relation="usage">
-          <edgelabel>entries</edgelabel>
-        </childnode>
-      </node>
-      <node id="15">
-        <label>jam::SharedInstance&lt; map::BlockTag &gt;</label>
-        <link refid="classjam_1_1SharedInstance" external="/Users/jreng/Documents/Poems/dev/jam/docs/tagfile.xml"/>
-        <childnode refid="16" relation="usage">
-          <edgelabel>object</edgelabel>
-        </childnode>
-      </node>
-      <node id="17">
-        <label>jam::SharedInstance&lt; map::HeadingTag &gt;</label>
-        <link refid="classjam_1_1SharedInstance" external="/Users/jreng/Documents/Poems/dev/jam/docs/tagfile.xml"/>
-        <childnode refid="16" relation="usage">
-          <edgelabel>object</edgelabel>
-        </childnode>
-      </node>
-      <node id="18">
-        <label>jam::SharedInstance&lt; map::OpenBlock &gt;</label>
-        <link refid="classjam_1_1SharedInstance" external="/Users/jreng/Documents/Poems/dev/jam/docs/tagfile.xml"/>
-        <childnode refid="16" relation="usage">
-          <edgelabel>object</edgelabel>
-        </childnode>
-      </node>
-      <node id="8">
-        <label>juce::DummyCriticalSection</label>
-        <link refid="classjuce_1_1DummyCriticalSection" external="/Users/jreng/Documents/Poems/JUCE/docs/tagfile.xml"/>
-      </node>
-      <node id="2">
-        <label>juce::File</label>
-        <link refid="classjuce_1_1File" external="/Users/jreng/Documents/Poems/JUCE/docs/tagfile.xml"/>
-      </node>
-      <node id="13">
-        <label>juce::Identifier</label>
-        <link refid="classjuce_1_1Identifier" external="/Users/jreng/Documents/Poems/JUCE/docs/tagfile.xml"/>
-        <childnode refid="13" relation="usage">
-          <edgelabel>null</edgelabel>
-        </childnode>
-      </node>
-      <node id="10">
-        <label>std::basic_string&lt; Char &gt;</label>
-      </node>
-      <node id="16">
-        <label>std::shared_ptr&lt; ObjectType &gt;</label>
-      </node>
-      <node id="9">
-        <label>std::string</label>
-        <childnode refid="10" relation="public-inheritance">
-        </childnode>
-      </node>
-    </collaborationgraph>
-    <location file="Processor.h" line="18" column="1" bodyfile="Processor.h" bodystart="19" bodyend="105"/>
+    <location file="Source/Processor.h" line="20" column="1" bodyfile="Source/Processor.h" bodystart="21" bodyend="110"/>
     <listofallmembers>
       <member refid="struct_processor_1a8dbadccb605c3a32f0e5af688b43d652" prot="private" virt="non-virtual"><scope>Processor</scope><name>documentFile</name></member>
       <member refid="struct_processor_1ac2f8ddc17ef15f47f03fa71ce3d381c6" prot="public" virt="non-virtual"><scope>Processor</scope><name>generate</name></member>
       <member refid="struct_processor_1afb131d60d600f95ce7bc382f8d9724e7" prot="private" virt="non-virtual"><scope>Processor</scope><name>manifest</name></member>
       <member refid="struct_processor_1abe5471b3c8a21dfe9bc8e7683eb4868c" prot="public" virt="non-virtual"><scope>Processor</scope><name>Processor</name></member>
       <member refid="struct_processor_1a6ace9660425275f32080160c0ae88b2b" prot="private" virt="non-virtual"><scope>Processor</scope><name>run</name></member>
-      <member refid="struct_processor_1a88ec28a8e3dd1b6e1f41fbaa315a737e" prot="private" virt="non-virtual"><scope>Processor</scope><name>runEpochs</name></member>
+      <member refid="struct_processor_1acec35c543c65ed5dc6618fe7e79ef835" prot="private" virt="non-virtual"><scope>Processor</scope><name>runEpochs</name></member>
       <member refid="struct_processor_1a83804663c3ddec5019aad5fa2673bada" prot="private" virt="non-virtual"><scope>Processor</scope><name>runToolchainRow</name></member>
       <member refid="struct_processor_1aa277929ee4d6480d62fa48d2dd5f2a6c" prot="private" virt="non-virtual"><scope>Processor</scope><name>writeReport</name></member>
     </listofallmembers>

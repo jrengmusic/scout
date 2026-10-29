@@ -4,7 +4,7 @@ Systematic Context Observer for Unit Telemetry
 
 ## What's New
 
-- First release: SCOUT runs juce::UnitTest benchmarks from one markdown manifest and writes a markdown profile report.
+- First release: SCOUT runs a command once for each epoch from one markdown manifest and writes a markdown profile report.
 
 ## Platforms
 

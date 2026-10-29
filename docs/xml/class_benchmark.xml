@@ -5,7 +5,7 @@
     <includes refid="_benchmark_8h" local="no">Benchmark.h</includes>
     <sectiondef kind="private-attrib">
       <memberdef kind="variable" id="class_benchmark_1a55df5d956a4f1ed943a8b73142dcb509" prot="private" static="no" mutable="no">
-        <type>const <ref refid="classjuce_1_1File" kindref="compound" external="/Users/jreng/Documents/Poems/JUCE/docs/tagfile.xml">juce::File</ref></type>
+        <type>const juce::File</type>
         <definition>const juce::File Benchmark::commandFile</definition>
         <argsstring></argsstring>
         <name>commandFile</name>
@@ -17,13 +17,13 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Benchmark.h" line="105" column="22" bodyfile="Benchmark.h" bodystart="105" bodyend="-1"/>
-        <referencedby refid="class_benchmark_1a136b7c51f05ca71e7c7595bc8ce9ac5a" compoundref="_benchmark_8cpp" startline="5" endline="15">Benchmark</referencedby>
-        <referencedby refid="class_benchmark_1a4f8bafb7b4939b3398f3ba59f198010a" compoundref="_benchmark_8cpp" startline="33" endline="50">runCommand</referencedby>
-        <referencedby refid="class_benchmark_1a8b4bab8a038fba5d18366ba23e32923f" compoundref="_benchmark_8cpp" startline="52" endline="77">runEpoch</referencedby>
+        <location file="Source/Benchmark.h" line="160" column="22" bodyfile="Source/Benchmark.h" bodystart="160" bodyend="-1"/>
+        <referencedby refid="class_benchmark_1ae13345fa615923b519e370921cb70a32" compoundref="_benchmark_8cpp" startline="6" endline="22">Benchmark</referencedby>
+        <referencedby refid="class_benchmark_1a4f8bafb7b4939b3398f3ba59f198010a" compoundref="_benchmark_8cpp" startline="87" endline="104">runCommand</referencedby>
+        <referencedby refid="class_benchmark_1a8b4bab8a038fba5d18366ba23e32923f" compoundref="_benchmark_8cpp" startline="106" endline="138">runEpoch</referencedby>
       </memberdef>
       <memberdef kind="variable" id="class_benchmark_1a462aeef6e3aa34999d64fc5f7ec8443c" prot="private" static="no" mutable="no">
-        <type>const <ref refid="classjuce_1_1File" kindref="compound" external="/Users/jreng/Documents/Poems/JUCE/docs/tagfile.xml">juce::File</ref></type>
+        <type>const juce::File</type>
         <definition>const juce::File Benchmark::samplesFile</definition>
         <argsstring></argsstring>
         <name>samplesFile</name>
@@ -35,13 +35,13 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Benchmark.h" line="108" column="22" bodyfile="Benchmark.h" bodystart="108" bodyend="-1"/>
-        <referencedby refid="class_benchmark_1a54e743cd8ac66536390608cc09aa355e" compoundref="_benchmark_8cpp" startline="121" endline="150">addEpoch</referencedby>
-        <referencedby refid="class_benchmark_1a136b7c51f05ca71e7c7595bc8ce9ac5a" compoundref="_benchmark_8cpp" startline="5" endline="15">Benchmark</referencedby>
-        <referencedby refid="class_benchmark_1a8b4bab8a038fba5d18366ba23e32923f" compoundref="_benchmark_8cpp" startline="52" endline="77">runEpoch</referencedby>
+        <location file="Source/Benchmark.h" line="163" column="22" bodyfile="Source/Benchmark.h" bodystart="163" bodyend="-1"/>
+        <referencedby refid="class_benchmark_1ae59eaa6c1836391353180c17526f1c16" compoundref="_benchmark_8cpp" startline="195" endline="222">addEpoch</referencedby>
+        <referencedby refid="class_benchmark_1ae13345fa615923b519e370921cb70a32" compoundref="_benchmark_8cpp" startline="6" endline="22">Benchmark</referencedby>
+        <referencedby refid="class_benchmark_1a8b4bab8a038fba5d18366ba23e32923f" compoundref="_benchmark_8cpp" startline="106" endline="138">runEpoch</referencedby>
       </memberdef>
       <memberdef kind="variable" id="class_benchmark_1a14f464a6bc7b395ccb9bba782a301661" prot="private" static="no" mutable="no">
-        <type>const <ref refid="classjuce_1_1File" kindref="compound" external="/Users/jreng/Documents/Poems/JUCE/docs/tagfile.xml">juce::File</ref></type>
+        <type>const juce::File</type>
         <definition>const juce::File Benchmark::manifestFile</definition>
         <argsstring></argsstring>
         <name>manifestFile</name>
@@ -54,85 +54,102 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Benchmark.h" line="111" column="22" bodyfile="Benchmark.h" bodystart="111" bodyend="-1"/>
-        <referencedby refid="class_benchmark_1a136b7c51f05ca71e7c7595bc8ce9ac5a" compoundref="_benchmark_8cpp" startline="5" endline="15">Benchmark</referencedby>
-        <referencedby refid="class_benchmark_1a4f8bafb7b4939b3398f3ba59f198010a" compoundref="_benchmark_8cpp" startline="33" endline="50">runCommand</referencedby>
+        <location file="Source/Benchmark.h" line="166" column="22" bodyfile="Source/Benchmark.h" bodystart="166" bodyend="-1"/>
+        <referencedby refid="class_benchmark_1ae13345fa615923b519e370921cb70a32" compoundref="_benchmark_8cpp" startline="6" endline="22">Benchmark</referencedby>
+        <referencedby refid="class_benchmark_1a4f8bafb7b4939b3398f3ba59f198010a" compoundref="_benchmark_8cpp" startline="87" endline="104">runCommand</referencedby>
       </memberdef>
-      <memberdef kind="variable" id="class_benchmark_1ab658fd8c4392653436c288005e1172a4" prot="private" static="no" mutable="no">
-        <type><ref refid="classjam_1_1HashMap" kindref="compound" external="/Users/jreng/Documents/Poems/dev/jam/docs/tagfile.xml">jam::HashMap</ref>&lt; <ref refid="classjuce_1_1Identifier" kindref="compound" external="/Users/jreng/Documents/Poems/JUCE/docs/tagfile.xml">juce::Identifier</ref>, <ref refid="classjuce_1_1Array" kindref="compound" external="/Users/jreng/Documents/Poems/JUCE/docs/tagfile.xml">juce::Array</ref>&lt; <ref refid="classjuce_1_1var" kindref="compound" external="/Users/jreng/Documents/Poems/JUCE/docs/tagfile.xml">juce::var</ref> &gt; &gt;</type>
-        <definition>jam::HashMap&lt;juce::Identifier, juce::Array&lt;juce::var&gt; &gt; Benchmark::epochSamples</definition>
+      <memberdef kind="variable" id="class_benchmark_1a49275f57b8c34e8d204a673e1bd48746" prot="private" static="no" mutable="no">
+        <type>const juce::ValueTree</type>
+        <definition>const juce::ValueTree Benchmark::sampleTable</definition>
+        <argsstring></argsstring>
+        <name>sampleTable</name>
+        <qualifiedname>Benchmark::sampleTable</qualifiedname>
+        <briefdescription>
+<para>The <computeroutput>sample</computeroutput> table of the manifest. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>When it is not valid, no epoch runs a <ref refid="class_sampler" kindref="compound">Sampler</ref>. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Benchmark.h" line="174" column="27" bodyfile="Source/Benchmark.h" bodystart="174" bodyend="-1"/>
+        <referencedby refid="class_benchmark_1ae13345fa615923b519e370921cb70a32" compoundref="_benchmark_8cpp" startline="6" endline="22">Benchmark</referencedby>
+        <referencedby refid="class_benchmark_1a8b4bab8a038fba5d18366ba23e32923f" compoundref="_benchmark_8cpp" startline="106" endline="138">runEpoch</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_benchmark_1a6dcde8e7cf962cf169f8aa7ffc01d299" prot="private" static="no" mutable="no">
+        <type>jam::HashMap&lt; juce::Identifier, jam::HashMap&lt; juce::Identifier, juce::Array&lt; juce::var &gt; &gt; &gt;</type>
+        <definition>jam::HashMap&lt;juce::Identifier, jam::HashMap&lt;juce::Identifier, juce::Array&lt;juce::var&gt; &gt; &gt; Benchmark::epochSamples</definition>
         <argsstring></argsstring>
         <name>epochSamples</name>
         <qualifiedname>Benchmark::epochSamples</qualifiedname>
         <briefdescription>
-<para>One sample for each epoch, for each row. </para>
+<para>One sample for each epoch, for each row, for each table type. </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Benchmark.h" line="114" column="18" bodyfile="Benchmark.h" bodystart="114" bodyend="-1"/>
-        <referencedby refid="class_benchmark_1a5d20602a03271cc0aa22560a9e64aad9" compoundref="_benchmark_8cpp" startline="18" endline="30">addChildTime</referencedby>
-        <referencedby refid="class_benchmark_1a54e743cd8ac66536390608cc09aa355e" compoundref="_benchmark_8cpp" startline="121" endline="150">addEpoch</referencedby>
-        <referencedby refid="class_benchmark_1a9b9d076f0ec7ea35ca1cb50a2d280f29" compoundref="_benchmark_8cpp" startline="97" endline="119">addRows</referencedby>
-        <referencedby refid="class_benchmark_1ac2758e9667d09cca4fa1c7d0845c7413" compoundref="_benchmark_8cpp" startline="152" endline="164">getProfiles</referencedby>
-        <referencedby refid="class_benchmark_1a8b4bab8a038fba5d18366ba23e32923f" compoundref="_benchmark_8cpp" startline="52" endline="77">runEpoch</referencedby>
+        <location file="Source/Benchmark.h" line="177" column="18" bodyfile="Source/Benchmark.h" bodystart="177" bodyend="-1"/>
+        <referencedby refid="class_benchmark_1a95c95a548d6bfafe6e2843a25b7a748e" compoundref="_benchmark_8cpp" startline="185" endline="193">addMissingSamples</referencedby>
+        <referencedby refid="class_benchmark_1a4000af069c3a73c0bd9b109e6cb20f24" compoundref="_benchmark_8cpp" startline="24" endline="29">addRow</referencedby>
+        <referencedby refid="class_benchmark_1a9dc60998270d40efabd9739f299bd86d" compoundref="_benchmark_8cpp" startline="158" endline="183">addRows</referencedby>
+        <referencedby refid="class_benchmark_1ac2758e9667d09cca4fa1c7d0845c7413" compoundref="_benchmark_8cpp" startline="224" endline="243">getProfiles</referencedby>
       </memberdef>
-      <memberdef kind="variable" id="class_benchmark_1a342b5af6c51b0dae3b47376b45f42483" prot="private" static="no" mutable="no">
-        <type><ref refid="classjam_1_1HashMap" kindref="compound" external="/Users/jreng/Documents/Poems/dev/jam/docs/tagfile.xml">jam::HashMap</ref>&lt; <ref refid="classjuce_1_1Identifier" kindref="compound" external="/Users/jreng/Documents/Poems/JUCE/docs/tagfile.xml">juce::Identifier</ref>, <ref refid="classjam_1_1Array" kindref="compound" external="/Users/jreng/Documents/Poems/dev/jam/docs/tagfile.xml">jam::Array</ref>&lt; <ref refid="namespacejuce_1a6afa306885ea6220ef17d2a02cfa7f0a" kindref="member" external="/Users/jreng/Documents/Poems/JUCE/docs/tagfile.xml">juce::int64</ref> &gt; &gt;</type>
-        <definition>jam::HashMap&lt;juce::Identifier, jam::Array&lt;juce::int64&gt; &gt; Benchmark::bins</definition>
+      <memberdef kind="variable" id="class_benchmark_1a4c5a8ec7ebbf0123f159d5fb3bd11e40" prot="private" static="no" mutable="no">
+        <type>jam::HashMap&lt; juce::Identifier, jam::HashMap&lt; juce::Identifier, jam::Array&lt; juce::int64 &gt; &gt; &gt;</type>
+        <definition>jam::HashMap&lt;juce::Identifier, jam::HashMap&lt;juce::Identifier, jam::Array&lt;juce::int64&gt; &gt; &gt; Benchmark::bins</definition>
         <argsstring></argsstring>
         <name>bins</name>
         <qualifiedname>Benchmark::bins</qualifiedname>
         <briefdescription>
-<para>The bin counts of the calls of all epochs, merged, for each row that holds bins. </para>
+<para>The bin counts of the calls of all epochs, merged, for each row that holds bins, for each table type. </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Benchmark.h" line="117" column="18" bodyfile="Benchmark.h" bodystart="117" bodyend="-1"/>
-        <referencedby refid="class_benchmark_1a9ba969f0936909fa42373d48dccf2550" compoundref="_benchmark_8cpp" startline="79" endline="95">addBins</referencedby>
-        <referencedby refid="class_benchmark_1ac2758e9667d09cca4fa1c7d0845c7413" compoundref="_benchmark_8cpp" startline="152" endline="164">getProfiles</referencedby>
+        <location file="Source/Benchmark.h" line="180" column="18" bodyfile="Source/Benchmark.h" bodystart="180" bodyend="-1"/>
+        <referencedby refid="class_benchmark_1a5afe24f9edd3f12d45bd6519a91081b7" compoundref="_benchmark_8cpp" startline="140" endline="156">addBins</referencedby>
+        <referencedby refid="class_benchmark_1ac2758e9667d09cca4fa1c7d0845c7413" compoundref="_benchmark_8cpp" startline="224" endline="243">getProfiles</referencedby>
       </memberdef>
-      <memberdef kind="variable" id="class_benchmark_1a1a7f19f67b053162666235ed365861e7" prot="private" static="no" mutable="no">
-        <type><ref refid="classjam_1_1HashMap" kindref="compound" external="/Users/jreng/Documents/Poems/dev/jam/docs/tagfile.xml">jam::HashMap</ref>&lt; <ref refid="classjuce_1_1Identifier" kindref="compound" external="/Users/jreng/Documents/Poems/JUCE/docs/tagfile.xml">juce::Identifier</ref>, int &gt;</type>
-        <definition>jam::HashMap&lt;juce::Identifier, int&gt; Benchmark::calls</definition>
+      <memberdef kind="variable" id="class_benchmark_1af843221703119c4195591fcaa79dd710" prot="private" static="no" mutable="no">
+        <type>jam::HashMap&lt; juce::Identifier, jam::HashMap&lt; juce::Identifier, int &gt; &gt;</type>
+        <definition>jam::HashMap&lt;juce::Identifier, jam::HashMap&lt;juce::Identifier, int&gt; &gt; Benchmark::calls</definition>
         <argsstring></argsstring>
         <name>calls</name>
         <qualifiedname>Benchmark::calls</qualifiedname>
         <briefdescription>
-<para>Number of calls of each row. </para>
+<para>Number of calls of each row, for each table type. </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Benchmark.h" line="120" column="18" bodyfile="Benchmark.h" bodystart="120" bodyend="-1"/>
-        <referencedby refid="class_benchmark_1a9b9d076f0ec7ea35ca1cb50a2d280f29" compoundref="_benchmark_8cpp" startline="97" endline="119">addRows</referencedby>
-        <referencedby refid="class_benchmark_1a136b7c51f05ca71e7c7595bc8ce9ac5a" compoundref="_benchmark_8cpp" startline="5" endline="15">Benchmark</referencedby>
-        <referencedby refid="class_benchmark_1ac2758e9667d09cca4fa1c7d0845c7413" compoundref="_benchmark_8cpp" startline="152" endline="164">getProfiles</referencedby>
+        <location file="Source/Benchmark.h" line="183" column="18" bodyfile="Source/Benchmark.h" bodystart="183" bodyend="-1"/>
+        <referencedby refid="class_benchmark_1a4000af069c3a73c0bd9b109e6cb20f24" compoundref="_benchmark_8cpp" startline="24" endline="29">addRow</referencedby>
+        <referencedby refid="class_benchmark_1a9dc60998270d40efabd9739f299bd86d" compoundref="_benchmark_8cpp" startline="158" endline="183">addRows</referencedby>
+        <referencedby refid="class_benchmark_1ac2758e9667d09cca4fa1c7d0845c7413" compoundref="_benchmark_8cpp" startline="224" endline="243">getProfiles</referencedby>
       </memberdef>
-      <memberdef kind="variable" id="class_benchmark_1a587a06d967bce6380270036d001c1f5a" prot="private" static="no" mutable="no">
-        <type><ref refid="classjam_1_1HashMap" kindref="compound" external="/Users/jreng/Documents/Poems/dev/jam/docs/tagfile.xml">jam::HashMap</ref>&lt; <ref refid="classjuce_1_1Identifier" kindref="compound" external="/Users/jreng/Documents/Poems/JUCE/docs/tagfile.xml">juce::Identifier</ref>, <ref refid="classjuce_1_1String" kindref="compound" external="/Users/jreng/Documents/Poems/JUCE/docs/tagfile.xml">juce::String</ref> &gt;</type>
-        <definition>jam::HashMap&lt;juce::Identifier, juce::String&gt; Benchmark::units</definition>
+      <memberdef kind="variable" id="class_benchmark_1a44c6335da1ecfc6c06298d0ce4ddd918" prot="private" static="no" mutable="no">
+        <type>jam::HashMap&lt; juce::Identifier, jam::HashMap&lt; juce::Identifier, juce::String &gt; &gt;</type>
+        <definition>jam::HashMap&lt;juce::Identifier, jam::HashMap&lt;juce::Identifier, juce::String&gt; &gt; Benchmark::units</definition>
         <argsstring></argsstring>
         <name>units</name>
         <qualifiedname>Benchmark::units</qualifiedname>
         <briefdescription>
-<para>Unit text of each row. </para>
+<para>Unit text of each row, for each table type. </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Benchmark.h" line="123" column="18" bodyfile="Benchmark.h" bodystart="123" bodyend="-1"/>
-        <referencedby refid="class_benchmark_1a9b9d076f0ec7ea35ca1cb50a2d280f29" compoundref="_benchmark_8cpp" startline="97" endline="119">addRows</referencedby>
-        <referencedby refid="class_benchmark_1a136b7c51f05ca71e7c7595bc8ce9ac5a" compoundref="_benchmark_8cpp" startline="5" endline="15">Benchmark</referencedby>
-        <referencedby refid="class_benchmark_1ac2758e9667d09cca4fa1c7d0845c7413" compoundref="_benchmark_8cpp" startline="152" endline="164">getProfiles</referencedby>
+        <location file="Source/Benchmark.h" line="186" column="18" bodyfile="Source/Benchmark.h" bodystart="186" bodyend="-1"/>
+        <referencedby refid="class_benchmark_1a4000af069c3a73c0bd9b109e6cb20f24" compoundref="_benchmark_8cpp" startline="24" endline="29">addRow</referencedby>
+        <referencedby refid="class_benchmark_1a9dc60998270d40efabd9739f299bd86d" compoundref="_benchmark_8cpp" startline="158" endline="183">addRows</referencedby>
+        <referencedby refid="class_benchmark_1ac2758e9667d09cca4fa1c7d0845c7413" compoundref="_benchmark_8cpp" startline="224" endline="243">getProfiles</referencedby>
       </memberdef>
       <memberdef kind="variable" id="class_benchmark_1a17a83e311aa3aa0faff83483b67537e7" prot="private" static="no" mutable="no">
-        <type><ref refid="classjuce_1_1ValueTree" kindref="compound" external="/Users/jreng/Documents/Poems/JUCE/docs/tagfile.xml">juce::ValueTree</ref></type>
+        <type>juce::ValueTree</type>
         <definition>juce::ValueTree Benchmark::runTable</definition>
         <argsstring></argsstring>
         <name>runTable</name>
@@ -144,52 +161,57 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Benchmark.h" line="126" column="21" bodyfile="Benchmark.h" bodystart="126" bodyend="-1"/>
-        <referencedby refid="class_benchmark_1a54e743cd8ac66536390608cc09aa355e" compoundref="_benchmark_8cpp" startline="121" endline="150">addEpoch</referencedby>
-        <referencedby refid="class_benchmark_1ac2758e9667d09cca4fa1c7d0845c7413" compoundref="_benchmark_8cpp" startline="152" endline="164">getProfiles</referencedby>
+        <location file="Source/Benchmark.h" line="189" column="21" bodyfile="Source/Benchmark.h" bodystart="189" bodyend="-1"/>
+        <referencedby refid="class_benchmark_1ae59eaa6c1836391353180c17526f1c16" compoundref="_benchmark_8cpp" startline="195" endline="222">addEpoch</referencedby>
+        <referencedby refid="class_benchmark_1ac2758e9667d09cca4fa1c7d0845c7413" compoundref="_benchmark_8cpp" startline="224" endline="243">getProfiles</referencedby>
       </memberdef>
       <memberdef kind="variable" id="class_benchmark_1a297f53f732ae4d2d79d474359af97fe6" prot="private" static="no" mutable="no">
-        <type><ref refid="classjuce_1_1Identifier" kindref="compound" external="/Users/jreng/Documents/Poems/JUCE/docs/tagfile.xml">juce::Identifier</ref></type>
+        <type>juce::Identifier</type>
         <definition>juce::Identifier Benchmark::tableType</definition>
         <argsstring></argsstring>
         <name>tableType</name>
         <qualifiedname>Benchmark::tableType</qualifiedname>
         <briefdescription>
-<para>Type of the table that holds the zone rows. </para>
+<para>Type of the table of the samples file that holds the zone rows. </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Benchmark.h" line="129" column="22" bodyfile="Benchmark.h" bodystart="129" bodyend="-1"/>
-        <referencedby refid="class_benchmark_1a54e743cd8ac66536390608cc09aa355e" compoundref="_benchmark_8cpp" startline="121" endline="150">addEpoch</referencedby>
-        <referencedby refid="class_benchmark_1ac2758e9667d09cca4fa1c7d0845c7413" compoundref="_benchmark_8cpp" startline="152" endline="164">getProfiles</referencedby>
+        <location file="Source/Benchmark.h" line="192" column="22" bodyfile="Source/Benchmark.h" bodystart="192" bodyend="-1"/>
+        <referencedby refid="class_benchmark_1ae59eaa6c1836391353180c17526f1c16" compoundref="_benchmark_8cpp" startline="195" endline="222">addEpoch</referencedby>
+        <referencedby refid="class_benchmark_1a95c95a548d6bfafe6e2843a25b7a748e" compoundref="_benchmark_8cpp" startline="185" endline="193">addMissingSamples</referencedby>
+        <referencedby refid="class_benchmark_1a4000af069c3a73c0bd9b109e6cb20f24" compoundref="_benchmark_8cpp" startline="24" endline="29">addRow</referencedby>
+        <referencedby refid="class_benchmark_1a9dc60998270d40efabd9739f299bd86d" compoundref="_benchmark_8cpp" startline="158" endline="183">addRows</referencedby>
       </memberdef>
     </sectiondef>
     <sectiondef kind="public-func">
-      <memberdef kind="function" id="class_benchmark_1a136b7c51f05ca71e7c7595bc8ce9ac5a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="class_benchmark_1ae13345fa615923b519e370921cb70a32" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
         <definition>Benchmark::Benchmark</definition>
-        <argsstring>(const juce::File &amp;newCommandFile, const juce::File &amp;newSamplesFile, const juce::File &amp;newManifestFile)</argsstring>
+        <argsstring>(const juce::File &amp;newCommandFile, const juce::File &amp;newSamplesFile, const juce::File &amp;newManifestFile, const juce::ValueTree &amp;newSampleTable)</argsstring>
         <name>Benchmark</name>
         <qualifiedname>Benchmark::Benchmark</qualifiedname>
         <param>
-          <type>const <ref refid="classjuce_1_1File" kindref="compound" external="/Users/jreng/Documents/Poems/JUCE/docs/tagfile.xml">juce::File</ref> &amp;</type>
+          <type>const juce::File &amp;</type>
           <declname>newCommandFile</declname>
         </param>
         <param>
-          <type>const <ref refid="classjuce_1_1File" kindref="compound" external="/Users/jreng/Documents/Poems/JUCE/docs/tagfile.xml">juce::File</ref> &amp;</type>
+          <type>const juce::File &amp;</type>
           <declname>newSamplesFile</declname>
         </param>
         <param>
-          <type>const <ref refid="classjuce_1_1File" kindref="compound" external="/Users/jreng/Documents/Poems/JUCE/docs/tagfile.xml">juce::File</ref> &amp;</type>
+          <type>const juce::File &amp;</type>
           <declname>newManifestFile</declname>
+        </param>
+        <param>
+          <type>const juce::ValueTree &amp;</type>
+          <declname>newSampleTable</declname>
         </param>
         <briefdescription>
 <para>Sets the files of the run. </para>
         </briefdescription>
         <detaileddescription>
-<para>The constructor also sets one call and the <computeroutput>ns</computeroutput> unit for the <computeroutput>epoch</computeroutput>, <computeroutput>user</computeroutput> and <computeroutput>system</computeroutput> rows.</para>
 <para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>newCommandFile</parametername>
@@ -214,26 +236,27 @@
 <para>Manifest file. It is the one argument of the command, and its folder is the working folder. </para>
 </parameterdescription>
 </parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>newSampleTable</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The <computeroutput>sample</computeroutput> table of the manifest. When it is not valid, no epoch runs a <ref refid="class_sampler" kindref="compound">Sampler</ref>. </para>
+</parameterdescription>
+</parameteritem>
 </parameterlist>
 </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Benchmark.h" line="26" column="5" bodyfile="Benchmark.cpp" bodystart="5" bodyend="15"/>
-        <references refid="class_benchmark_1a1a7f19f67b053162666235ed365861e7" compoundref="_benchmark_8h" startline="120">calls</references>
-        <references refid="classjam_1_1Profiler_1a74c72bf936fb05a35b752350d5233b30">jam::Profiler::callsPerEpoch</references>
-        <references refid="class_benchmark_1a55df5d956a4f1ed943a8b73142dcb509" compoundref="_benchmark_8h" startline="105">commandFile</references>
-        <references refid="namespaceId_1af9d54e8fed53adf7db2cd94d0fb88a08" compoundref="_generated_8cpp" startline="30" endline="30">Id::epoch</references>
-        <references refid="classjam_1_1Strings_1aca02ec79e3d857bca6f9647dce6415fc">jam::Strings::fromView</references>
-        <references refid="class_benchmark_1a14f464a6bc7b395ccb9bba782a301661" compoundref="_benchmark_8h" startline="111">manifestFile</references>
-        <references refid="classjam_1_1Profiler_1a106d11854d5fb23649243715a684286d">jam::Profiler::nanosecondUnit</references>
-        <references refid="class_benchmark_1a462aeef6e3aa34999d64fc5f7ec8443c" compoundref="_benchmark_8h" startline="108">samplesFile</references>
-        <references refid="namespaceId_1ab274a2ba05a0f74a439c1cf693818875" compoundref="_generated_8cpp" startline="35" endline="35">Id::system</references>
-        <references refid="class_benchmark_1a587a06d967bce6380270036d001c1f5a" compoundref="_benchmark_8h" startline="123">units</references>
-        <references refid="namespaceId_1a95266ab2c2716c12f3e3487cd080ad06">Id::user</references>
+        <location file="Source/Benchmark.h" line="29" column="5" bodyfile="Source/Benchmark.cpp" bodystart="6" bodyend="22"/>
+        <references refid="class_benchmark_1a55df5d956a4f1ed943a8b73142dcb509" compoundref="_benchmark_8h" startline="160">commandFile</references>
+        <references refid="class_benchmark_1a14f464a6bc7b395ccb9bba782a301661" compoundref="_benchmark_8h" startline="166">manifestFile</references>
+        <references refid="class_benchmark_1a462aeef6e3aa34999d64fc5f7ec8443c" compoundref="_benchmark_8h" startline="163">samplesFile</references>
+        <references refid="class_benchmark_1a49275f57b8c34e8d204a673e1bd48746" compoundref="_benchmark_8h" startline="174">sampleTable</references>
       </memberdef>
       <memberdef kind="function" id="class_benchmark_1a8b4bab8a038fba5d18366ba23e32923f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type><ref refid="classjuce_1_1Result" kindref="compound" external="/Users/jreng/Documents/Poems/JUCE/docs/tagfile.xml">juce::Result</ref></type>
+        <type>juce::Result</type>
         <definition>juce::Result Benchmark::runEpoch</definition>
         <argsstring>()</argsstring>
         <name>runEpoch</name>
@@ -242,83 +265,40 @@
 <para>Runs one epoch. </para>
         </briefdescription>
         <detaileddescription>
-<para>The function deletes the old samples file. It launches <computeroutput><ref refid="juce__UnityPluginInterface_8h_1a485dc2a0e5ed7da3d9f826367b36ee55a6440030ae8284cee96c1c88b356c45a7" kindref="member" external="/Users/jreng/Documents/Poems/JUCE/docs/tagfile.xml">command</ref> manifest</computeroutput> in the manifest folder and waits until the command ends. It adds the wall time of the epoch, in ns, to the <computeroutput>epoch</computeroutput> samples. On macOS and Linux it also adds the user and system time of the child, in ns, to the <computeroutput>user</computeroutput> and <computeroutput>system</computeroutput> samples.</para>
-<para><simplesect kind="return"><para>Ok when the command exits with 0. Otherwise fail with <computeroutput>\&lt;<ref refid="juce__UnityPluginInterface_8h_1a485dc2a0e5ed7da3d9f826367b36ee55a6440030ae8284cee96c1c88b356c45a7" kindref="member" external="/Users/jreng/Documents/Poems/JUCE/docs/tagfile.xml">command</ref> path\&gt;: <ref refid="juce__UnityPluginInterface_8h_1a485dc2a0e5ed7da3d9f826367b36ee55a6440030ae8284cee96c1c88b356c45a7" kindref="member" external="/Users/jreng/Documents/Poems/JUCE/docs/tagfile.xml">command</ref> failed</computeroutput>. </para>
+<para>The function deletes the old samples file. It starts a <ref refid="class_sampler" kindref="compound">Sampler</ref> when the manifest has a <computeroutput>## sample</computeroutput> table. It launches <computeroutput>command manifest</computeroutput> in the manifest folder and waits until the command ends. It then drains the <ref refid="class_sampler" kindref="compound">Sampler</ref> and reads the samples file through <computeroutput><ref refid="class_benchmark_1ae59eaa6c1836391353180c17526f1c16" kindref="member">addEpoch</ref></computeroutput>. It adds the wall time of the epoch, in ns, to the <computeroutput>epoch</computeroutput> samples. On all systems it also adds the user and system time of the child, in ns, to the <computeroutput>user</computeroutput> and <computeroutput>system</computeroutput> samples. It last pads each row that has no sample in this epoch with zero.</para>
+<para><simplesect kind="return"><para>Ok when all steps succeed. Otherwise the first failure: <computeroutput>\&lt;command path\&gt;: command failed</computeroutput> when the command does not exit with 0, the failure of the <ref refid="class_sampler" kindref="compound">Sampler</ref> when it cannot start, read or stop, or <computeroutput>not found: \&lt;samples path\&gt;</computeroutput> when the command writes no samples file. </para>
 </simplesect>
 </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Benchmark.h" line="37" column="18" bodyfile="Benchmark.cpp" bodystart="52" bodyend="77"/>
-        <references refid="class_benchmark_1a5d20602a03271cc0aa22560a9e64aad9" compoundref="_benchmark_8cpp" startline="18" endline="30">addChildTime</references>
-        <references refid="class_benchmark_1a55df5d956a4f1ed943a8b73142dcb509" compoundref="_benchmark_8h" startline="105">commandFile</references>
-        <references refid="classjuce_1_1File_1ae0058be6d755ac686b4b1becf63183ef">juce::File::deleteFile</references>
-        <references refid="namespaceId_1a5e729b9864fd096462b3f08ef1eb4b1a">Id::diagnosticSeparator</references>
-        <references refid="namespaceId_1af9d54e8fed53adf7db2cd94d0fb88a08" compoundref="_generated_8cpp" startline="30" endline="30">Id::epoch</references>
-        <references refid="class_benchmark_1ab658fd8c4392653436c288005e1172a4" compoundref="_benchmark_8h" startline="114">epochSamples</references>
-        <references refid="classjuce_1_1Result_1a27205a4dc7a973aebd1976270867be80">juce::Result::fail</references>
-        <references refid="structtext_1_1_diagnostics_1a67a3d4524798361c7272cca4ff5d19ad" compoundref="_text_8h" startline="35" endline="35">text::Diagnostics::failCommand</references>
-        <references refid="classjuce_1_1File_1a515fa016b189068f365cc875e241e2a1">juce::File::getFullPathName</references>
-        <references refid="classjuce_1_1Time_1a3d5fc9246028dc08f1be51a1caad5c5f">juce::Time::getHighResolutionTicks</references>
-        <references refid="classjam_1_1Profiler_1a3afb8f8a061437b0db67e4c7f31b1aad">jam::Profiler::getNanoseconds</references>
-        <references refid="classjuce_1_1Result_1ac2133128eeba510367bfe1b83383ae0f">juce::Result::ok</references>
-        <references refid="class_benchmark_1a4f8bafb7b4939b3398f3ba59f198010a" compoundref="_benchmark_8cpp" startline="33" endline="50">runCommand</references>
-        <references refid="class_benchmark_1a462aeef6e3aa34999d64fc5f7ec8443c" compoundref="_benchmark_8h" startline="108">samplesFile</references>
-        <referencedby refid="struct_processor_1a88ec28a8e3dd1b6e1f41fbaa315a737e" compoundref="_processor_8cpp" startline="57" endline="88">Processor::runEpochs</referencedby>
-      </memberdef>
-      <memberdef kind="function" id="class_benchmark_1a54e743cd8ac66536390608cc09aa355e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type><ref refid="classjuce_1_1Result" kindref="compound" external="/Users/jreng/Documents/Poems/JUCE/docs/tagfile.xml">juce::Result</ref></type>
-        <definition>juce::Result Benchmark::addEpoch</definition>
-        <argsstring>()</argsstring>
-        <name>addEpoch</name>
-        <qualifiedname>Benchmark::addEpoch</qualifiedname>
-        <briefdescription>
-<para>Reads the samples file of the last epoch. </para>
-        </briefdescription>
-        <detaileddescription>
-<para>The function parses the file. Each table except <computeroutput>run</computeroutput> adds its rows with <computeroutput><ref refid="class_benchmark_1a9b9d076f0ec7ea35ca1cb50a2d280f29" kindref="member">addRows</ref></computeroutput>. The type of the last such table becomes the profile type. The <computeroutput>run</computeroutput> table is kept for the report. Every row holds one sample for each epoch. A row that the file does not hold adds 0 for this epoch. A new row starts with 0 for each earlier epoch.</para>
-<para><simplesect kind="return"><para>Ok when the file exists. Otherwise fail with <computeroutput>not found: \&lt;samples path\&gt;</computeroutput>. </para>
-</simplesect>
-</para>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="Benchmark.h" line="50" column="18" bodyfile="Benchmark.cpp" bodystart="121" bodyend="150"/>
-        <references refid="class_benchmark_1a9b9d076f0ec7ea35ca1cb50a2d280f29" compoundref="_benchmark_8cpp" startline="97" endline="119">addRows</references>
-        <references refid="namespaceId_1a5e729b9864fd096462b3f08ef1eb4b1a">Id::diagnosticSeparator</references>
-        <references refid="namespaceId_1af9d54e8fed53adf7db2cd94d0fb88a08" compoundref="_generated_8cpp" startline="30" endline="30">Id::epoch</references>
-        <references refid="class_benchmark_1ab658fd8c4392653436c288005e1172a4" compoundref="_benchmark_8h" startline="114">epochSamples</references>
-        <references refid="classjuce_1_1File_1a37e88fbc390d78f3d79675974f53fa78">juce::File::existsAsFile</references>
-        <references refid="classjuce_1_1Result_1a27205a4dc7a973aebd1976270867be80">juce::Result::fail</references>
-        <references refid="structtext_1_1_diagnostics_1a614879ccbad6f4edaf1a511bf5a2fa68" compoundref="_text_8h" startline="31" endline="31">text::Diagnostics::failNotFound</references>
-        <references refid="classjuce_1_1File_1a515fa016b189068f365cc875e241e2a1">juce::File::getFullPathName</references>
-        <references refid="classjuce_1_1File_1aa65d2fa50370357bf93658d6447c296d">juce::File::loadFileAsString</references>
-        <references refid="classjuce_1_1Result_1ac2133128eeba510367bfe1b83383ae0f">juce::Result::ok</references>
-        <references refid="structjam_1_1Document_1a367d65133f164cf9421ff0c3ddf2bbf6">jam::Document::parse</references>
-        <references refid="namespaceId_1ae94c00f38c99144148371d4d273c298b">Id::run</references>
-        <references refid="class_benchmark_1a17a83e311aa3aa0faff83483b67537e7" compoundref="_benchmark_8h" startline="126">runTable</references>
-        <references refid="namespaceId_1a767aceb9bc5d27527f647a9935420ee1">Id::samples</references>
-        <references refid="class_benchmark_1a462aeef6e3aa34999d64fc5f7ec8443c" compoundref="_benchmark_8h" startline="108">samplesFile</references>
-        <references refid="classjam_1_1HashMap_1a85e610745893eb5c944cc480ed1fa719">jam::HashMap&lt; typename Key, typename Mapped, typename HashFn, typename KeyEqual, typename AllocatorOrContainer, typename Bucket, typename BucketContainer, bool IsSegmented &gt;::size</references>
-        <references refid="class_benchmark_1a297f53f732ae4d2d79d474359af97fe6" compoundref="_benchmark_8h" startline="129">tableType</references>
-        <references refid="namespaceId_1a35a1e4684527426add342c518cf9af54">Id::toType</references>
-        <referencedby refid="struct_processor_1a88ec28a8e3dd1b6e1f41fbaa315a737e" compoundref="_processor_8cpp" startline="57" endline="88">Processor::runEpochs</referencedby>
+        <location file="Source/Benchmark.h" line="46" column="18" bodyfile="Source/Benchmark.cpp" bodystart="106" bodyend="138"/>
+        <references refid="class_benchmark_1a5d20602a03271cc0aa22560a9e64aad9" compoundref="_benchmark_8cpp" startline="40" endline="52">addChildTime</references>
+        <references refid="class_benchmark_1ae59eaa6c1836391353180c17526f1c16" compoundref="_benchmark_8cpp" startline="195" endline="222">addEpoch</references>
+        <references refid="class_benchmark_1a95c95a548d6bfafe6e2843a25b7a748e" compoundref="_benchmark_8cpp" startline="185" endline="193">addMissingSamples</references>
+        <references refid="class_benchmark_1a55df5d956a4f1ed943a8b73142dcb509" compoundref="_benchmark_8h" startline="160">commandFile</references>
+        <references refid="structtext_1_1_diagnostics_1a67a3d4524798361c7272cca4ff5d19ad" compoundref="_text_8h" startline="36" endline="36">text::Diagnostics::failCommand</references>
+        <references refid="class_benchmark_1aa5aa26f8ee900c49cf276b76765c98f7" compoundref="_benchmark_8cpp" startline="32" endline="38">getChildUsage</references>
+        <references refid="class_benchmark_1a4f8bafb7b4939b3398f3ba59f198010a" compoundref="_benchmark_8cpp" startline="87" endline="104">runCommand</references>
+        <references refid="class_benchmark_1a462aeef6e3aa34999d64fc5f7ec8443c" compoundref="_benchmark_8h" startline="163">samplesFile</references>
+        <references refid="class_benchmark_1a49275f57b8c34e8d204a673e1bd48746" compoundref="_benchmark_8h" startline="174">sampleTable</references>
+        <referencedby refid="struct_processor_1acec35c543c65ed5dc6618fe7e79ef835" compoundref="_processor_8cpp" startline="58" endline="84">Processor::runEpochs</referencedby>
       </memberdef>
       <memberdef kind="function" id="class_benchmark_1ac2758e9667d09cca4fa1c7d0845c7413" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
-        <type><ref refid="classjuce_1_1ValueTree" kindref="compound" external="/Users/jreng/Documents/Poems/JUCE/docs/tagfile.xml">juce::ValueTree</ref></type>
+        <type>juce::ValueTree</type>
         <definition>juce::ValueTree Benchmark::getProfiles</definition>
         <argsstring>(const juce::ValueTree &amp;baseline) const</argsstring>
         <name>getProfiles</name>
         <qualifiedname>Benchmark::getProfiles</qualifiedname>
         <param>
-          <type>const <ref refid="classjuce_1_1ValueTree" kindref="compound" external="/Users/jreng/Documents/Poems/JUCE/docs/tagfile.xml">juce::ValueTree</ref> &amp;</type>
+          <type>const juce::ValueTree &amp;</type>
           <declname>baseline</declname>
         </param>
         <briefdescription>
 <para>Returns the profiles of all epochs. </para>
         </briefdescription>
         <detaileddescription>
-<para>The tree holds three tables in this order. The epoch table has the profile type and one row for each zone. The call table has the type <computeroutput>\&lt;TYPE\&gt;_CALLS</computeroutput> and one row for each zone that holds bins, with the <computeroutput>percentile</computeroutput> property. Its statistics come from the merged bins of all epochs. The <computeroutput>run</computeroutput> table is the one that the samples file holds. Each zone that the matching table of <computeroutput>baseline</computeroutput> also holds adds the comparison properties.</para>
+<para>The tree holds one table for each table type, with one row for each zone. For each table type that holds bins, it also holds a table of the type <computeroutput>\&lt;TYPE\&gt;_CALLS</computeroutput>. That table has one row for each zone that holds bins, with the <computeroutput>percentile</computeroutput> property. Its statistics come from the merged bins of all epochs. The last table is the <computeroutput>run</computeroutput> table that the samples file holds. Each zone that the matching table of <computeroutput>baseline</computeroutput> also holds adds the comparison properties.</para>
 <para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>baseline</parametername>
@@ -328,28 +308,21 @@
 </parameterdescription>
 </parameteritem>
 </parameterlist>
-<simplesect kind="return"><para>Tree of the three tables. </para>
+<simplesect kind="return"><para>Tree of the profile tables. </para>
 </simplesect>
 </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Benchmark.h" line="65" column="21" bodyfile="Benchmark.cpp" bodystart="152" bodyend="164"/>
-        <references refid="classjuce_1_1ValueTree_1a98d6f83140f913101a059e611b7dfade">juce::ValueTree::appendChild</references>
-        <references refid="class_benchmark_1a342b5af6c51b0dae3b47376b45f42483" compoundref="_benchmark_8h" startline="117">bins</references>
-        <references refid="class_benchmark_1a1a7f19f67b053162666235ed365861e7" compoundref="_benchmark_8h" startline="120">calls</references>
-        <references refid="namespaceId_1aabc8e20f92a637e53d57c073ce9e006b">Id::calls</references>
-        <references refid="classjuce_1_1String_1a128e862810bc5e3f16cb70c3c9751867">juce::String::charToString</references>
-        <references refid="class_benchmark_1ab658fd8c4392653436c288005e1172a4" compoundref="_benchmark_8h" startline="114">epochSamples</references>
+        <location file="Source/Benchmark.h" line="62" column="21" bodyfile="Source/Benchmark.cpp" bodystart="224" bodyend="243"/>
+        <references refid="class_benchmark_1a4c5a8ec7ebbf0123f159d5fb3bd11e40" compoundref="_benchmark_8h" startline="180">bins</references>
+        <references refid="class_benchmark_1af843221703119c4195591fcaa79dd710" compoundref="_benchmark_8h" startline="183">calls</references>
+        <references refid="class_benchmark_1a6dcde8e7cf962cf169f8aa7ffc01d299" compoundref="_benchmark_8h" startline="177">epochSamples</references>
         <references refid="class_profile_report_1a3963d7e774a47639d9b3e42d41d6b8e6" compoundref="_profile_report_8cpp" startline="16" endline="39">ProfileReport::getProfile</references>
-        <references refid="namespaceId_1ae725772eead68e70d784b84b1368bed1" compoundref="_generated_8cpp" startline="29" endline="29">Id::profile</references>
-        <references refid="class_benchmark_1a17a83e311aa3aa0faff83483b67537e7" compoundref="_benchmark_8h" startline="126">runTable</references>
-        <references refid="class_benchmark_1a297f53f732ae4d2d79d474359af97fe6" compoundref="_benchmark_8h" startline="129">tableType</references>
-        <references refid="classjuce_1_1Identifier_1ab6f0db1de2c36cacd1a9d7280f73aeeb">juce::Identifier::toString</references>
-        <references refid="namespaceId_1a35a1e4684527426add342c518cf9af54">Id::toType</references>
-        <references refid="structChars_1a1c04369be52e119101bd72baaf59ab99">Chars::underscore</references>
-        <references refid="class_benchmark_1a587a06d967bce6380270036d001c1f5a" compoundref="_benchmark_8h" startline="123">units</references>
-        <referencedby refid="struct_processor_1a88ec28a8e3dd1b6e1f41fbaa315a737e" compoundref="_processor_8cpp" startline="57" endline="88">Processor::runEpochs</referencedby>
+        <references refid="namespace_id_1ae725772eead68e70d784b84b1368bed1" compoundref="_generated_8cpp" startline="29" endline="29">Id::profile</references>
+        <references refid="class_benchmark_1a17a83e311aa3aa0faff83483b67537e7" compoundref="_benchmark_8h" startline="189">runTable</references>
+        <references refid="class_benchmark_1a44c6335da1ecfc6c06298d0ce4ddd918" compoundref="_benchmark_8h" startline="186">units</references>
+        <referencedby refid="struct_processor_1acec35c543c65ed5dc6618fe7e79ef835" compoundref="_processor_8cpp" startline="58" endline="84">Processor::runEpochs</referencedby>
       </memberdef>
     </sectiondef>
     <sectiondef kind="private-func">
@@ -360,7 +333,7 @@
         <name>runCommand</name>
         <qualifiedname>Benchmark::runCommand</qualifiedname>
         <briefdescription>
-<para>Runs <computeroutput><ref refid="juce__UnityPluginInterface_8h_1a485dc2a0e5ed7da3d9f826367b36ee55a6440030ae8284cee96c1c88b356c45a7" kindref="member" external="/Users/jreng/Documents/Poems/JUCE/docs/tagfile.xml">command</ref> manifest</computeroutput> in the manifest folder and waits until it ends. </para>
+<para>Runs <computeroutput>command manifest</computeroutput> in the manifest folder and waits until it ends. </para>
         </briefdescription>
         <detaileddescription>
 <para><simplesect kind="return"><para>Exit code of the command. </para>
@@ -369,37 +342,44 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Benchmark.h" line="73" column="9" bodyfile="Benchmark.cpp" bodystart="33" bodyend="50"/>
-        <references refid="class_benchmark_1a55df5d956a4f1ed943a8b73142dcb509" compoundref="_benchmark_8h" startline="105">commandFile</references>
-        <references refid="classjuce_1_1File_1a515fa016b189068f365cc875e241e2a1">juce::File::getFullPathName</references>
-        <references refid="classjuce_1_1File_1ab6bec65fbcf19ce10e38cf9d1015770d">juce::File::getParentDirectory</references>
-        <references refid="classjam_1_1Subprocess_1a7670edba3c7b814c4fe3b5a406f69a61">jam::Subprocess::launch</references>
-        <references refid="class_benchmark_1a14f464a6bc7b395ccb9bba782a301661" compoundref="_benchmark_8h" startline="111">manifestFile</references>
-        <references refid="classjuce_1_1WaitableEvent_1aa3a20faa489e012718f6e23690d85a8d">juce::WaitableEvent::signal</references>
-        <references refid="classjuce_1_1WaitableEvent_1ac38aeb80078cc4f3d3b5f32e230d6988">juce::WaitableEvent::wait</references>
-        <referencedby refid="class_benchmark_1a8b4bab8a038fba5d18366ba23e32923f" compoundref="_benchmark_8cpp" startline="52" endline="77">runEpoch</referencedby>
+        <location file="Source/Benchmark.h" line="70" column="9" bodyfile="Source/Benchmark.cpp" bodystart="87" bodyend="104"/>
+        <references refid="class_benchmark_1a55df5d956a4f1ed943a8b73142dcb509" compoundref="_benchmark_8h" startline="160">commandFile</references>
+        <references refid="class_benchmark_1a14f464a6bc7b395ccb9bba782a301661" compoundref="_benchmark_8h" startline="166">manifestFile</references>
+        <referencedby refid="class_benchmark_1a8b4bab8a038fba5d18366ba23e32923f" compoundref="_benchmark_8cpp" startline="106" endline="138">runEpoch</referencedby>
       </memberdef>
-      <memberdef kind="function" id="class_benchmark_1a9b9d076f0ec7ea35ca1cb50a2d280f29" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="class_benchmark_1a9dc60998270d40efabd9739f299bd86d" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
         <definition>void Benchmark::addRows</definition>
-        <argsstring>(const juce::ValueTree &amp;table)</argsstring>
+        <argsstring>(const juce::Identifier &amp;benchmarkType, const juce::ValueTree &amp;table)</argsstring>
         <name>addRows</name>
         <qualifiedname>Benchmark::addRows</qualifiedname>
         <param>
-          <type>const <ref refid="classjuce_1_1ValueTree" kindref="compound" external="/Users/jreng/Documents/Poems/JUCE/docs/tagfile.xml">juce::ValueTree</ref> &amp;</type>
+          <type>const juce::Identifier &amp;</type>
+          <declname>benchmarkType</declname>
+        </param>
+        <param>
+          <type>const juce::ValueTree &amp;</type>
           <declname>table</declname>
         </param>
         <briefdescription>
 <para>Adds the rows of a table to the epoch samples, the bins, the calls and the units. </para>
         </briefdescription>
         <detaileddescription>
-<para>A row adds its <computeroutput>value</computeroutput> to the epoch samples, and sets the calls and the unit of its zone. A row with a <computeroutput><ref refid="class_benchmark_1a342b5af6c51b0dae3b47376b45f42483" kindref="member">bins</ref></computeroutput> text also adds its bins with <computeroutput><ref refid="class_benchmark_1a9ba969f0936909fa42373d48dccf2550" kindref="member">addBins</ref></computeroutput>.</para>
+<para>A row adds its <computeroutput>value</computeroutput> to the epoch samples of its table type, and sets the calls and the unit of its zone. A row that is new in this table type first receives a zero sample for each earlier epoch. A row with a <computeroutput><ref refid="class_benchmark_1a4c5a8ec7ebbf0123f159d5fb3bd11e40" kindref="member">bins</ref></computeroutput> text also adds its bins with <computeroutput><ref refid="class_benchmark_1a5afe24f9edd3f12d45bd6519a91081b7" kindref="member">addBins</ref></computeroutput>.</para>
 <para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>benchmarkType</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Table type that receives the rows. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
 <parameternamelist>
 <parametername>table</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>Table of the samples file. </para>
+<para>Table of the samples file or of the <ref refid="class_sampler" kindref="compound">Sampler</ref>. </para>
 </parameterdescription>
 </parameteritem>
 </parameterlist>
@@ -407,41 +387,166 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Benchmark.h" line="83" column="10" bodyfile="Benchmark.cpp" bodystart="97" bodyend="119"/>
-        <references refid="class_benchmark_1a9ba969f0936909fa42373d48dccf2550" compoundref="_benchmark_8cpp" startline="79" endline="95">addBins</references>
-        <references refid="namespaceId_1ad4f31c41ecbe018ecafe804e5ca9bd38">Id::bins</references>
-        <references refid="class_benchmark_1a1a7f19f67b053162666235ed365861e7" compoundref="_benchmark_8h" startline="120">calls</references>
-        <references refid="namespaceId_1aabc8e20f92a637e53d57c073ce9e006b">Id::calls</references>
-        <references refid="namespaceId_1af9d54e8fed53adf7db2cd94d0fb88a08" compoundref="_generated_8cpp" startline="30" endline="30">Id::epoch</references>
-        <references refid="class_benchmark_1ab658fd8c4392653436c288005e1172a4" compoundref="_benchmark_8h" startline="114">epochSamples</references>
-        <references refid="classjam_1_1HashMap_1a85e610745893eb5c944cc480ed1fa719">jam::HashMap&lt; typename Key, typename Mapped, typename HashFn, typename KeyEqual, typename AllocatorOrContainer, typename Bucket, typename BucketContainer, bool IsSegmented &gt;::size</references>
-        <references refid="classjuce_1_1Identifier_1ab6f0db1de2c36cacd1a9d7280f73aeeb">juce::Identifier::toString</references>
-        <references refid="classjam_1_1HashMap_1af3ef015438ac55ee2401cb66441ae4f5">jam::HashMap&lt; typename Key, typename Mapped, typename HashFn, typename KeyEqual, typename AllocatorOrContainer, typename Bucket, typename BucketContainer, bool IsSegmented &gt;::try_emplace</references>
-        <references refid="namespaceId_1a2f82ecee595c8e79d11eff33b0eb735c">Id::unit</references>
-        <references refid="class_benchmark_1a587a06d967bce6380270036d001c1f5a" compoundref="_benchmark_8h" startline="123">units</references>
-        <references refid="namespaceId_1aa31dd51a36cc1b369f63f498441108e8">Id::value</references>
-        <referencedby refid="class_benchmark_1a54e743cd8ac66536390608cc09aa355e" compoundref="_benchmark_8cpp" startline="121" endline="150">addEpoch</referencedby>
+        <location file="Source/Benchmark.h" line="82" column="10" bodyfile="Source/Benchmark.cpp" bodystart="158" bodyend="183"/>
+        <references refid="class_benchmark_1a5afe24f9edd3f12d45bd6519a91081b7" compoundref="_benchmark_8cpp" startline="140" endline="156">addBins</references>
+        <references refid="class_benchmark_1af843221703119c4195591fcaa79dd710" compoundref="_benchmark_8h" startline="183">calls</references>
+        <references refid="namespace_id_1af9d54e8fed53adf7db2cd94d0fb88a08" compoundref="_generated_8cpp" startline="30" endline="30">Id::epoch</references>
+        <references refid="class_benchmark_1a6dcde8e7cf962cf169f8aa7ffc01d299" compoundref="_benchmark_8h" startline="177">epochSamples</references>
+        <references refid="class_benchmark_1a297f53f732ae4d2d79d474359af97fe6" compoundref="_benchmark_8h" startline="192">tableType</references>
+        <references refid="class_benchmark_1a44c6335da1ecfc6c06298d0ce4ddd918" compoundref="_benchmark_8h" startline="186">units</references>
+        <referencedby refid="class_benchmark_1ae59eaa6c1836391353180c17526f1c16" compoundref="_benchmark_8cpp" startline="195" endline="222">addEpoch</referencedby>
       </memberdef>
-      <memberdef kind="function" id="class_benchmark_1a9ba969f0936909fa42373d48dccf2550" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>void</type>
-        <definition>void Benchmark::addBins</definition>
-        <argsstring>(const juce::Identifier &amp;rowKey, const juce::String &amp;binsText)</argsstring>
-        <name>addBins</name>
-        <qualifiedname>Benchmark::addBins</qualifiedname>
+      <memberdef kind="function" id="class_benchmark_1ae59eaa6c1836391353180c17526f1c16" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>juce::Result</type>
+        <definition>juce::Result Benchmark::addEpoch</definition>
+        <argsstring>(double epochNanoseconds, const juce::ValueTree &amp;samplerSamples)</argsstring>
+        <name>addEpoch</name>
+        <qualifiedname>Benchmark::addEpoch</qualifiedname>
         <param>
-          <type>const <ref refid="classjuce_1_1Identifier" kindref="compound" external="/Users/jreng/Documents/Poems/JUCE/docs/tagfile.xml">juce::Identifier</ref> &amp;</type>
+          <type>double</type>
+          <declname>epochNanoseconds</declname>
+        </param>
+        <param>
+          <type>const juce::ValueTree &amp;</type>
+          <declname>samplerSamples</declname>
+        </param>
+        <briefdescription>
+<para>Reads the samples file and adds its rows, the <ref refid="class_sampler" kindref="compound">Sampler</ref> rows and the wall time of the epoch. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>The <computeroutput>run</computeroutput> table of the file is kept for the report. Each other table adds its rows through <computeroutput><ref refid="class_benchmark_1a9dc60998270d40efabd9739f299bd86d" kindref="member">addRows</ref></computeroutput>.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>epochNanoseconds</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Wall time of the epoch, in ns. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>samplerSamples</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Samples of the <ref refid="class_sampler" kindref="compound">Sampler</ref>. The tree is not valid when no <ref refid="class_sampler" kindref="compound">Sampler</ref> ran.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Ok when the samples file exists. Otherwise <computeroutput>not found: \&lt;samples path\&gt;</computeroutput>. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Benchmark.h" line="94" column="18" bodyfile="Source/Benchmark.cpp" bodystart="195" bodyend="222"/>
+        <references refid="class_benchmark_1a4000af069c3a73c0bd9b109e6cb20f24" compoundref="_benchmark_8cpp" startline="24" endline="29">addRow</references>
+        <references refid="class_benchmark_1a9dc60998270d40efabd9739f299bd86d" compoundref="_benchmark_8cpp" startline="158" endline="183">addRows</references>
+        <references refid="namespace_id_1af9d54e8fed53adf7db2cd94d0fb88a08" compoundref="_generated_8cpp" startline="30" endline="30">Id::epoch</references>
+        <references refid="structtext_1_1_diagnostics_1a614879ccbad6f4edaf1a511bf5a2fa68" compoundref="_text_8h" startline="31" endline="31">text::Diagnostics::failNotFound</references>
+        <references refid="class_benchmark_1a17a83e311aa3aa0faff83483b67537e7" compoundref="_benchmark_8h" startline="189">runTable</references>
+        <references refid="class_benchmark_1a462aeef6e3aa34999d64fc5f7ec8443c" compoundref="_benchmark_8h" startline="163">samplesFile</references>
+        <references refid="class_benchmark_1a297f53f732ae4d2d79d474359af97fe6" compoundref="_benchmark_8h" startline="192">tableType</references>
+        <referencedby refid="class_benchmark_1a8b4bab8a038fba5d18366ba23e32923f" compoundref="_benchmark_8cpp" startline="106" endline="138">runEpoch</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_benchmark_1a4000af069c3a73c0bd9b109e6cb20f24" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Benchmark::addRow</definition>
+        <argsstring>(const juce::Identifier &amp;rowKey, double nanoseconds)</argsstring>
+        <name>addRow</name>
+        <qualifiedname>Benchmark::addRow</qualifiedname>
+        <param>
+          <type>const juce::Identifier &amp;</type>
           <declname>rowKey</declname>
         </param>
         <param>
-          <type>const <ref refid="classjuce_1_1String" kindref="compound" external="/Users/jreng/Documents/Poems/JUCE/docs/tagfile.xml">juce::String</ref> &amp;</type>
+          <type>double</type>
+          <declname>nanoseconds</declname>
+        </param>
+        <briefdescription>
+<para>Adds one sample to a row of the table type of the samples file. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>The function also sets the calls of the row to the calls of one epoch, and its unit to <computeroutput>ns</computeroutput>.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>rowKey</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Type of the row. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>nanoseconds</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Value of the sample, in ns. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Benchmark.h" line="104" column="10" bodyfile="Source/Benchmark.cpp" bodystart="24" bodyend="29"/>
+        <references refid="class_benchmark_1af843221703119c4195591fcaa79dd710" compoundref="_benchmark_8h" startline="183">calls</references>
+        <references refid="class_benchmark_1a6dcde8e7cf962cf169f8aa7ffc01d299" compoundref="_benchmark_8h" startline="177">epochSamples</references>
+        <references refid="class_benchmark_1a297f53f732ae4d2d79d474359af97fe6" compoundref="_benchmark_8h" startline="192">tableType</references>
+        <references refid="class_benchmark_1a44c6335da1ecfc6c06298d0ce4ddd918" compoundref="_benchmark_8h" startline="186">units</references>
+        <referencedby refid="class_benchmark_1a5d20602a03271cc0aa22560a9e64aad9" compoundref="_benchmark_8cpp" startline="40" endline="52">addChildTime</referencedby>
+        <referencedby refid="class_benchmark_1ae59eaa6c1836391353180c17526f1c16" compoundref="_benchmark_8cpp" startline="195" endline="222">addEpoch</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_benchmark_1a95c95a548d6bfafe6e2843a25b7a748e" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Benchmark::addMissingSamples</definition>
+        <argsstring>()</argsstring>
+        <name>addMissingSamples</name>
+        <qualifiedname>Benchmark::addMissingSamples</qualifiedname>
+        <briefdescription>
+<para>Adds a zero sample to each row that has fewer samples than the number of epochs. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Benchmark.h" line="109" column="10" bodyfile="Source/Benchmark.cpp" bodystart="185" bodyend="193"/>
+        <references refid="namespace_id_1af9d54e8fed53adf7db2cd94d0fb88a08" compoundref="_generated_8cpp" startline="30" endline="30">Id::epoch</references>
+        <references refid="class_benchmark_1a6dcde8e7cf962cf169f8aa7ffc01d299" compoundref="_benchmark_8h" startline="177">epochSamples</references>
+        <references refid="class_benchmark_1a297f53f732ae4d2d79d474359af97fe6" compoundref="_benchmark_8h" startline="192">tableType</references>
+        <referencedby refid="class_benchmark_1a8b4bab8a038fba5d18366ba23e32923f" compoundref="_benchmark_8cpp" startline="106" endline="138">runEpoch</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_benchmark_1a5afe24f9edd3f12d45bd6519a91081b7" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Benchmark::addBins</definition>
+        <argsstring>(const juce::Identifier &amp;benchmarkType, const juce::Identifier &amp;rowKey, const juce::String &amp;binsText)</argsstring>
+        <name>addBins</name>
+        <qualifiedname>Benchmark::addBins</qualifiedname>
+        <param>
+          <type>const juce::Identifier &amp;</type>
+          <declname>benchmarkType</declname>
+        </param>
+        <param>
+          <type>const juce::Identifier &amp;</type>
+          <declname>rowKey</declname>
+        </param>
+        <param>
+          <type>const juce::String &amp;</type>
           <declname>binsText</declname>
         </param>
         <briefdescription>
 <para>Adds the bin counts of a row to the merged bins of the row. </para>
         </briefdescription>
         <detaileddescription>
-<para>The function parses the text and adds each count to the bin of the same index. The text holds <computeroutput><ref refid="classjam_1_1Profiler_1ac8f84a83b58a637ff244f7b901853202" kindref="member" external="/Users/jreng/Documents/Poems/dev/jam/docs/tagfile.xml">jam::Profiler::numBins</ref></computeroutput> counts (jassert).</para>
+<para>The function parses the text and adds each count to the bin of the same index. The text holds <computeroutput>jam::Profiler::numBins</computeroutput> counts (jassert).</para>
 <para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>benchmarkType</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Table type of the row. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
 <parameternamelist>
 <parametername>rowKey</parametername>
 </parameternamelist>
@@ -454,7 +559,7 @@
 <parametername>binsText</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>Text of the <computeroutput><ref refid="class_benchmark_1a342b5af6c51b0dae3b47376b45f42483" kindref="member">bins</ref></computeroutput> column of the row. </para>
+<para>Text of the <computeroutput><ref refid="class_benchmark_1a4c5a8ec7ebbf0123f159d5fb3bd11e40" kindref="member">bins</ref></computeroutput> column of the row. </para>
 </parameterdescription>
 </parameteritem>
 </parameterlist>
@@ -462,14 +567,28 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Benchmark.h" line="93" column="10" bodyfile="Benchmark.cpp" bodystart="79" bodyend="95"/>
-        <references refid="class_benchmark_1a342b5af6c51b0dae3b47376b45f42483" compoundref="_benchmark_8h" startline="117">bins</references>
-        <references refid="structjam_1_1ConfigDocument_1a6d58039bf24b93d8fbcdf01a60950011">jam::ConfigDocument::getValueTypes</references>
-        <references refid="classjam_1_1Strings_1a41bbcc9a9a93f448cd58f666a72cdd6d">jam::Strings::getView</references>
-        <references refid="namespaceId_1a6400ea8d50b06976a79c5594a7c7c11d">Id::numbers</references>
-        <references refid="classjam_1_1Profiler_1ac8f84a83b58a637ff244f7b901853202">jam::Profiler::numBins</references>
-        <references refid="classjam_1_1HashMap_1af3ef015438ac55ee2401cb66441ae4f5">jam::HashMap&lt; typename Key, typename Mapped, typename HashFn, typename KeyEqual, typename AllocatorOrContainer, typename Bucket, typename BucketContainer, bool IsSegmented &gt;::try_emplace</references>
-        <referencedby refid="class_benchmark_1a9b9d076f0ec7ea35ca1cb50a2d280f29" compoundref="_benchmark_8cpp" startline="97" endline="119">addRows</referencedby>
+        <location file="Source/Benchmark.h" line="120" column="10" bodyfile="Source/Benchmark.cpp" bodystart="140" bodyend="156"/>
+        <references refid="class_benchmark_1a4c5a8ec7ebbf0123f159d5fb3bd11e40" compoundref="_benchmark_8h" startline="180">bins</references>
+        <referencedby refid="class_benchmark_1a9dc60998270d40efabd9739f299bd86d" compoundref="_benchmark_8cpp" startline="158" endline="183">addRows</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_benchmark_1aa5aa26f8ee900c49cf276b76765c98f7" prot="private" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>rusage</type>
+        <definition>rusage Benchmark::getChildUsage</definition>
+        <argsstring>() const</argsstring>
+        <name>getChildUsage</name>
+        <qualifiedname>Benchmark::getChildUsage</qualifiedname>
+        <briefdescription>
+<para>Returns the resource usage of all children that ended. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Resource usage of the children. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Benchmark.h" line="127" column="12" bodyfile="Source/Benchmark.cpp" bodystart="32" bodyend="38"/>
+        <referencedby refid="class_benchmark_1a8b4bab8a038fba5d18366ba23e32923f" compoundref="_benchmark_8cpp" startline="106" endline="138">runEpoch</referencedby>
       </memberdef>
       <memberdef kind="function" id="class_benchmark_1a5d20602a03271cc0aa22560a9e64aad9" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -489,6 +608,7 @@
 <para>Adds the user and system time that the children used between two readings. </para>
         </briefdescription>
         <detaileddescription>
+<para>The function adds the <computeroutput>user</computeroutput> and <computeroutput>system</computeroutput> rows, in ns.</para>
 <para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>before</parametername>
@@ -510,99 +630,41 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Benchmark.h" line="101" column="10" bodyfile="Benchmark.cpp" bodystart="18" bodyend="30"/>
-        <references refid="class_benchmark_1ab658fd8c4392653436c288005e1172a4" compoundref="_benchmark_8h" startline="114">epochSamples</references>
-        <references refid="classjam_1_1Profiler_1aa9e891a866b8f43439334c0a2ce893b1">jam::Profiler::nanosecondsPerSecond</references>
-        <references refid="namespaceId_1ab274a2ba05a0f74a439c1cf693818875" compoundref="_generated_8cpp" startline="35" endline="35">Id::system</references>
-        <references refid="namespaceId_1a95266ab2c2716c12f3e3487cd080ad06">Id::user</references>
-        <referencedby refid="class_benchmark_1a8b4bab8a038fba5d18366ba23e32923f" compoundref="_benchmark_8cpp" startline="52" endline="77">runEpoch</referencedby>
+        <location file="Source/Benchmark.h" line="137" column="10" bodyfile="Source/Benchmark.cpp" bodystart="40" bodyend="52"/>
+        <references refid="class_benchmark_1a4000af069c3a73c0bd9b109e6cb20f24" compoundref="_benchmark_8cpp" startline="24" endline="29">addRow</references>
+        <references refid="namespace_id_1ab274a2ba05a0f74a439c1cf693818875" compoundref="_generated_8cpp" startline="35" endline="35">Id::system</references>
+        <referencedby refid="class_benchmark_1a8b4bab8a038fba5d18366ba23e32923f" compoundref="_benchmark_8cpp" startline="106" endline="138">runEpoch</referencedby>
       </memberdef>
     </sectiondef>
     <briefdescription>
 <para>Runs a command once for each epoch and collects its samples. </para>
     </briefdescription>
     <detaileddescription>
-<para>Each epoch runs the command and reads the samples file that the command writes. The object keeps the epoch samples of each row, and the merged bins of the calls of all epochs. <computeroutput><ref refid="class_benchmark_1ac2758e9667d09cca4fa1c7d0845c7413" kindref="member">getProfiles</ref></computeroutput> builds the profiles from them. </para>
+<para>Each epoch runs the command and reads the samples file that the command writes. When the manifest has a <computeroutput>## sample</computeroutput> table, each epoch also runs a <ref refid="class_sampler" kindref="compound">Sampler</ref>. The object keeps one set of data for each table type: the table type of the samples file, <computeroutput>sample</computeroutput> and <computeroutput>cswitch</computeroutput>. For each table type it keeps the epoch samples, the calls, the units and the merged bins of each row. The <computeroutput>epoch</computeroutput>, <computeroutput>user</computeroutput> and <computeroutput>system</computeroutput> rows belong to the table type of the samples file. <computeroutput><ref refid="class_benchmark_1ac2758e9667d09cca4fa1c7d0845c7413" kindref="member">getProfiles</ref></computeroutput> builds the profiles from them. </para>
     </detaileddescription>
-    <collaborationgraph>
-      <node id="1">
-        <label>Benchmark</label>
-        <link refid="class_benchmark"/>
-        <childnode refid="2" relation="usage">
-          <edgelabel>commandFile</edgelabel>
-          <edgelabel>manifestFile</edgelabel>
-          <edgelabel>samplesFile</edgelabel>
-        </childnode>
-        <childnode refid="3" relation="usage">
-          <edgelabel>epochSamples</edgelabel>
-        </childnode>
-        <childnode refid="4" relation="usage">
-          <edgelabel>bins</edgelabel>
-        </childnode>
-        <childnode refid="5" relation="usage">
-          <edgelabel>calls</edgelabel>
-        </childnode>
-        <childnode refid="6" relation="usage">
-          <edgelabel>units</edgelabel>
-        </childnode>
-        <childnode refid="7" relation="usage">
-          <edgelabel>runTable</edgelabel>
-        </childnode>
-        <childnode refid="8" relation="usage">
-          <edgelabel>tableType</edgelabel>
-        </childnode>
-      </node>
-      <node id="5">
-        <label>jam::HashMap&lt; juce::Identifier, int &gt;</label>
-        <link refid="classjam_1_1HashMap" external="/Users/jreng/Documents/Poems/dev/jam/docs/tagfile.xml"/>
-      </node>
-      <node id="4">
-        <label>jam::HashMap&lt; juce::Identifier, jam::Array&lt; juce::int64 &gt; &gt;</label>
-        <link refid="classjam_1_1HashMap" external="/Users/jreng/Documents/Poems/dev/jam/docs/tagfile.xml"/>
-      </node>
-      <node id="3">
-        <label>jam::HashMap&lt; juce::Identifier, juce::Array&lt; juce::var &gt; &gt;</label>
-        <link refid="classjam_1_1HashMap" external="/Users/jreng/Documents/Poems/dev/jam/docs/tagfile.xml"/>
-      </node>
-      <node id="6">
-        <label>jam::HashMap&lt; juce::Identifier, juce::String &gt;</label>
-        <link refid="classjam_1_1HashMap" external="/Users/jreng/Documents/Poems/dev/jam/docs/tagfile.xml"/>
-      </node>
-      <node id="2">
-        <label>juce::File</label>
-        <link refid="classjuce_1_1File" external="/Users/jreng/Documents/Poems/JUCE/docs/tagfile.xml"/>
-      </node>
-      <node id="8">
-        <label>juce::Identifier</label>
-        <link refid="classjuce_1_1Identifier" external="/Users/jreng/Documents/Poems/JUCE/docs/tagfile.xml"/>
-        <childnode refid="8" relation="usage">
-          <edgelabel>null</edgelabel>
-        </childnode>
-      </node>
-      <node id="7">
-        <label>juce::ValueTree</label>
-        <link refid="classjuce_1_1ValueTree" external="/Users/jreng/Documents/Poems/JUCE/docs/tagfile.xml"/>
-      </node>
-    </collaborationgraph>
-    <location file="Benchmark.h" line="14" column="1" bodyfile="Benchmark.h" bodystart="15" bodyend="132"/>
+    <location file="Source/Benchmark.h" line="18" column="1" bodyfile="Source/Benchmark.h" bodystart="19" bodyend="195"/>
     <listofallmembers>
-      <member refid="class_benchmark_1a9ba969f0936909fa42373d48dccf2550" prot="private" virt="non-virtual"><scope>Benchmark</scope><name>addBins</name></member>
+      <member refid="class_benchmark_1a5afe24f9edd3f12d45bd6519a91081b7" prot="private" virt="non-virtual"><scope>Benchmark</scope><name>addBins</name></member>
       <member refid="class_benchmark_1a5d20602a03271cc0aa22560a9e64aad9" prot="private" virt="non-virtual"><scope>Benchmark</scope><name>addChildTime</name></member>
-      <member refid="class_benchmark_1a54e743cd8ac66536390608cc09aa355e" prot="public" virt="non-virtual"><scope>Benchmark</scope><name>addEpoch</name></member>
-      <member refid="class_benchmark_1a9b9d076f0ec7ea35ca1cb50a2d280f29" prot="private" virt="non-virtual"><scope>Benchmark</scope><name>addRows</name></member>
-      <member refid="class_benchmark_1a136b7c51f05ca71e7c7595bc8ce9ac5a" prot="public" virt="non-virtual"><scope>Benchmark</scope><name>Benchmark</name></member>
-      <member refid="class_benchmark_1a342b5af6c51b0dae3b47376b45f42483" prot="private" virt="non-virtual"><scope>Benchmark</scope><name>bins</name></member>
-      <member refid="class_benchmark_1a1a7f19f67b053162666235ed365861e7" prot="private" virt="non-virtual"><scope>Benchmark</scope><name>calls</name></member>
+      <member refid="class_benchmark_1ae59eaa6c1836391353180c17526f1c16" prot="private" virt="non-virtual"><scope>Benchmark</scope><name>addEpoch</name></member>
+      <member refid="class_benchmark_1a95c95a548d6bfafe6e2843a25b7a748e" prot="private" virt="non-virtual"><scope>Benchmark</scope><name>addMissingSamples</name></member>
+      <member refid="class_benchmark_1a4000af069c3a73c0bd9b109e6cb20f24" prot="private" virt="non-virtual"><scope>Benchmark</scope><name>addRow</name></member>
+      <member refid="class_benchmark_1a9dc60998270d40efabd9739f299bd86d" prot="private" virt="non-virtual"><scope>Benchmark</scope><name>addRows</name></member>
+      <member refid="class_benchmark_1ae13345fa615923b519e370921cb70a32" prot="public" virt="non-virtual"><scope>Benchmark</scope><name>Benchmark</name></member>
+      <member refid="class_benchmark_1a4c5a8ec7ebbf0123f159d5fb3bd11e40" prot="private" virt="non-virtual"><scope>Benchmark</scope><name>bins</name></member>
+      <member refid="class_benchmark_1af843221703119c4195591fcaa79dd710" prot="private" virt="non-virtual"><scope>Benchmark</scope><name>calls</name></member>
       <member refid="class_benchmark_1a55df5d956a4f1ed943a8b73142dcb509" prot="private" virt="non-virtual"><scope>Benchmark</scope><name>commandFile</name></member>
-      <member refid="class_benchmark_1ab658fd8c4392653436c288005e1172a4" prot="private" virt="non-virtual"><scope>Benchmark</scope><name>epochSamples</name></member>
+      <member refid="class_benchmark_1a6dcde8e7cf962cf169f8aa7ffc01d299" prot="private" virt="non-virtual"><scope>Benchmark</scope><name>epochSamples</name></member>
+      <member refid="class_benchmark_1aa5aa26f8ee900c49cf276b76765c98f7" prot="private" virt="non-virtual"><scope>Benchmark</scope><name>getChildUsage</name></member>
       <member refid="class_benchmark_1ac2758e9667d09cca4fa1c7d0845c7413" prot="public" virt="non-virtual"><scope>Benchmark</scope><name>getProfiles</name></member>
       <member refid="class_benchmark_1a14f464a6bc7b395ccb9bba782a301661" prot="private" virt="non-virtual"><scope>Benchmark</scope><name>manifestFile</name></member>
       <member refid="class_benchmark_1a4f8bafb7b4939b3398f3ba59f198010a" prot="private" virt="non-virtual"><scope>Benchmark</scope><name>runCommand</name></member>
       <member refid="class_benchmark_1a8b4bab8a038fba5d18366ba23e32923f" prot="public" virt="non-virtual"><scope>Benchmark</scope><name>runEpoch</name></member>
       <member refid="class_benchmark_1a17a83e311aa3aa0faff83483b67537e7" prot="private" virt="non-virtual"><scope>Benchmark</scope><name>runTable</name></member>
       <member refid="class_benchmark_1a462aeef6e3aa34999d64fc5f7ec8443c" prot="private" virt="non-virtual"><scope>Benchmark</scope><name>samplesFile</name></member>
+      <member refid="class_benchmark_1a49275f57b8c34e8d204a673e1bd48746" prot="private" virt="non-virtual"><scope>Benchmark</scope><name>sampleTable</name></member>
       <member refid="class_benchmark_1a297f53f732ae4d2d79d474359af97fe6" prot="private" virt="non-virtual"><scope>Benchmark</scope><name>tableType</name></member>
-      <member refid="class_benchmark_1a587a06d967bce6380270036d001c1f5a" prot="private" virt="non-virtual"><scope>Benchmark</scope><name>units</name></member>
+      <member refid="class_benchmark_1a44c6335da1ecfc6c06298d0ce4ddd918" prot="private" virt="non-virtual"><scope>Benchmark</scope><name>units</name></member>
     </listofallmembers>
   </compounddef>
 </doxygen>

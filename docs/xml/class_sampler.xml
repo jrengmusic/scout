@@ -1,0 +1,1323 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.18.0" xml:lang="en-US">
+  <compounddef id="class_sampler" kind="class" language="C++" prot="public">
+    <compoundname>Sampler</compoundname>
+    <basecompoundref prot="private" virt="non-virtual">juce::Thread</basecompoundref>
+    <includes refid="_sampler_8h" local="no">Sampler.h</includes>
+    <sectiondef kind="public-static-attrib">
+      <memberdef kind="variable" id="class_sampler_1ae2192afc9784395ea7cb7d05270318d3" prot="public" static="yes" constexpr="yes" mutable="no">
+        <type>int</type>
+        <definition>static constexpr int Sampler::minimumStackDepth</definition>
+        <argsstring></argsstring>
+        <name>minimumStackDepth</name>
+        <qualifiedname>Sampler::minimumStackDepth</qualifiedname>
+        <initializer>{ 2 }</initializer>
+        <briefdescription>
+<para>Smallest stack depth that the macOS session accepts. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Smallest stack depth that the Linux session accepts. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Sampler.h" line="65" column="26" bodyfile="Source/Sampler.h" bodystart="65" bodyend="65"/>
+        <referencedby refid="struct_validator_1af387720572933d5519b0597814433c17" compoundref="_validator_8cpp" startline="4" endline="47">Validator::addRules</referencedby>
+        <referencedby refid="_sampler_8cpp_1abfe3a5507ce19c4a23904d1dcfa5bf00" compoundref="_sampler_8cpp" startline="460" endline="467">getClockAttributes</referencedby>
+        <referencedby refid="_sampler_8cpp_1a8896fdd24564457f248e972f7f0cb257" compoundref="_sampler_8cpp" startline="143" endline="173">startSession</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_sampler_1a7cf4f7bbc391afd66a215460984f8443" prot="public" static="yes" constexpr="yes" mutable="no">
+        <type>int</type>
+        <definition>static constexpr int Sampler::maximumStackDepth</definition>
+        <argsstring></argsstring>
+        <name>maximumStackDepth</name>
+        <qualifiedname>Sampler::maximumStackDepth</qualifiedname>
+        <initializer>{ 128 }</initializer>
+        <briefdescription>
+<para>Largest stack depth that the macOS session accepts. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Largest stack depth that the Linux session accepts. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Sampler.h" line="68" column="26" bodyfile="Source/Sampler.h" bodystart="68" bodyend="68"/>
+        <referencedby refid="struct_validator_1af387720572933d5519b0597814433c17" compoundref="_validator_8cpp" startline="4" endline="47">Validator::addRules</referencedby>
+        <referencedby refid="_sampler_8cpp_1abfe3a5507ce19c4a23904d1dcfa5bf00" compoundref="_sampler_8cpp" startline="460" endline="467">getClockAttributes</referencedby>
+        <referencedby refid="_sampler_8cpp_1a8896fdd24564457f248e972f7f0cb257" compoundref="_sampler_8cpp" startline="143" endline="173">startSession</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_sampler_1a06a006e3b2e6f8b0a67a07707ae4b70c" prot="public" static="yes" constexpr="yes" mutable="no">
+        <type>int</type>
+        <definition>int Sampler::minimumIntervalMs</definition>
+        <argsstring></argsstring>
+        <name>minimumIntervalMs</name>
+        <qualifiedname>Sampler::minimumIntervalMs</qualifiedname>
+        <initializer>{ 1 }</initializer>
+        <briefdescription>
+<para>Smallest sampling interval, in milliseconds. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Sampler.h" line="88" column="26" bodyfile="Source/Sampler.h" bodystart="88" bodyend="88"/>
+        <referencedby refid="struct_validator_1af387720572933d5519b0597814433c17" compoundref="_validator_8cpp" startline="4" endline="47">Validator::addRules</referencedby>
+        <referencedby refid="_sampler_8cpp_1abfe3a5507ce19c4a23904d1dcfa5bf00" compoundref="_sampler_8cpp" startline="460" endline="467">getClockAttributes</referencedby>
+        <referencedby refid="_sampler_8cpp_1a8896fdd24564457f248e972f7f0cb257" compoundref="_sampler_8cpp" startline="143" endline="173">startSession</referencedby>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_sampler_1ae3f391e3bfd03bcad0e434430721a832" prot="private" static="no" mutable="no">
+        <type><ref refid="class_symbolizer" kindref="compound">Symbolizer</ref></type>
+        <definition>Symbolizer Sampler::symbolizer</definition>
+        <argsstring></argsstring>
+        <name>symbolizer</name>
+        <qualifiedname>Sampler::symbolizer</qualifiedname>
+        <briefdescription>
+<para>Resolves the frame addresses to frame keys. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Sampler.h" line="143" column="16" bodyfile="Source/Sampler.h" bodystart="143" bodyend="-1"/>
+        <referencedby refid="class_sampler_1a1c44e35adce2ea951252ec1b8cab1891" compoundref="_sampler_8cpp" startline="668" endline="696">addFrames</referencedby>
+        <referencedby refid="class_sampler_1a1b0c7a89bc356514777c16a32ed803b7" compoundref="_sampler_8cpp" startline="369" endline="381">addKernelSamples</referencedby>
+        <referencedby refid="class_sampler_1a81a879e06d0a4c952c005aa0512a41fc" compoundref="_sampler_8cpp" startline="383" endline="401">addUserSamples</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_sampler_1aa07b205965331acf4c461c26d309a712" prot="private" static="no" mutable="no">
+        <type>jam::HashSet&lt; int &gt;</type>
+        <definition>jam::HashSet&lt;int&gt; Sampler::descendants</definition>
+        <argsstring></argsstring>
+        <name>descendants</name>
+        <qualifiedname>Sampler::descendants</qualifiedname>
+        <briefdescription>
+<para>Identifiers of the processes that descend from the scout process. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Sampler.h" line="147" column="18" bodyfile="Source/Sampler.h" bodystart="147" bodyend="-1"/>
+        <referencedby refid="class_sampler_1a7b82b7917ef1a3ca7587abc8ef371c10" compoundref="_sampler_8cpp" startline="351" endline="367">addSampleEnd</referencedby>
+        <referencedby refid="class_sampler_1a4f42f04f23edaa5df034fa51f3e5c2b2" compoundref="_sampler_8cpp" startline="408" endline="419">setDescendants</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_sampler_1ae3f2dd6abb219dd46c795c7edf35db8d" prot="private" static="no" mutable="no">
+        <type>jam::HashMap&lt; juce::uint32, juce::Array&lt; juce::uint64 &gt; &gt;</type>
+        <definition>jam::HashMap&lt;juce::uint32, juce::Array&lt;juce::uint64&gt; &gt; Sampler::brackets</definition>
+        <argsstring></argsstring>
+        <name>brackets</name>
+        <qualifiedname>Sampler::brackets</qualifiedname>
+        <briefdescription>
+<para>The open bracket of each CPU, keyed by the identifier of the CPU. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Sampler.h" line="248" column="18" bodyfile="Source/Sampler.h" bodystart="248" bodyend="-1"/>
+        <referencedby refid="class_sampler_1a7b82b7917ef1a3ca7587abc8ef371c10" compoundref="_sampler_8cpp" startline="351" endline="367">addSampleEnd</referencedby>
+        <referencedby refid="class_sampler_1a7e6ec11c924fea70cff7c5523d947436" compoundref="_sampler_8cpp" startline="312" endline="315">addSampleStart</referencedby>
+        <referencedby refid="class_sampler_1aa34b215d898befd15f2309ca2d816843" compoundref="_sampler_8cpp" startline="337" endline="349">addStackFrames</referencedby>
+        <referencedby refid="class_sampler_1aaba7a4bee0dcf7ecfeaddb43883fde6a" compoundref="_sampler_8cpp" startline="326" endline="335">addStackHeader</referencedby>
+        <referencedby refid="class_sampler_1a45d5d70da446de4caafc6a2b51f4d291" compoundref="_sampler_8cpp" startline="317" endline="324">addThreadInfo</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_sampler_1a4b4efc0c6090ade9a73af95f8d70f827" prot="private" static="no" mutable="no">
+        <type>jam::HashMap&lt; juce::uint64, jam::HashMap&lt; juce::uint64, int &gt; &gt;</type>
+        <definition>jam::HashMap&lt;juce::uint64, jam::HashMap&lt;juce::uint64, int&gt; &gt; Sampler::pendingUserSamples</definition>
+        <argsstring></argsstring>
+        <name>pendingUserSamples</name>
+        <qualifiedname>Sampler::pendingUserSamples</qualifiedname>
+        <briefdescription>
+<para>Count of user samples that wait for a user stack, for each thread and each action. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Sampler.h" line="251" column="18" bodyfile="Source/Sampler.h" bodystart="251" bodyend="-1"/>
+        <referencedby refid="class_sampler_1a1b0c7a89bc356514777c16a32ed803b7" compoundref="_sampler_8cpp" startline="369" endline="381">addKernelSamples</referencedby>
+        <referencedby refid="class_sampler_1a81a879e06d0a4c952c005aa0512a41fc" compoundref="_sampler_8cpp" startline="383" endline="401">addUserSamples</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_sampler_1a3a0bfdc50f13c6b25811cc422fdce419" prot="private" static="no" mutable="no">
+        <type>juce::Result</type>
+        <definition>juce::Result Sampler::reading</definition>
+        <argsstring></argsstring>
+        <name>reading</name>
+        <qualifiedname>Sampler::reading</qualifiedname>
+        <initializer>{ juce::Result::ok() }</initializer>
+        <briefdescription>
+<para>Result of the record reads. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>It holds the first read failure. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Sampler.h" line="254" column="18" bodyfile="Source/Sampler.h" bodystart="254" bodyend="254"/>
+        <referencedby refid="class_sampler_1a20473e869862e0950def74238b24bcd7" compoundref="_sampler_8cpp" startline="237" endline="254">drain</referencedby>
+        <referencedby refid="class_sampler_1a8f8bd52cb658a991b1850f19c7efddf2" compoundref="_sampler_8cpp" startline="256" endline="266">readRecords</referencedby>
+        <referencedby refid="class_sampler_1aa64c8e9afe39558efd92cab23a0d73d3" compoundref="_sampler_8cpp" startline="268" endline="286">run</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_sampler_1a56614a0afedf38a2ebe125135f016a9d" prot="private" static="no" mutable="no">
+        <type>juce::Array&lt; int &gt;</type>
+        <definition>juce::Array&lt;int&gt; Sampler::clockEvents</definition>
+        <argsstring></argsstring>
+        <name>clockEvents</name>
+        <qualifiedname>Sampler::clockEvents</qualifiedname>
+        <briefdescription>
+<para>File descriptor of the clock event of each CPU. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Sampler.h" line="410" column="17" bodyfile="Source/Sampler.h" bodystart="410" bodyend="-1"/>
+        <referencedby refid="class_sampler_1a60ebd60e1f63f4dfa7b4ba94e69a63e8" compoundref="_sampler_8cpp" startline="595" endline="606">setEnabled</referencedby>
+        <referencedby refid="class_sampler_1a67fd6d27248213e4f9bf5630703d3f18" compoundref="_sampler_8cpp" startline="564" endline="593">startSession</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_sampler_1adead0ff46c4127293def9741a9abc68d" prot="private" static="no" mutable="no">
+        <type>juce::Array&lt; int &gt;</type>
+        <definition>juce::Array&lt;int&gt; Sampler::switchEvents</definition>
+        <argsstring></argsstring>
+        <name>switchEvents</name>
+        <qualifiedname>Sampler::switchEvents</qualifiedname>
+        <briefdescription>
+<para>File descriptor of the context switch event of each CPU. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Sampler.h" line="413" column="17" bodyfile="Source/Sampler.h" bodystart="413" bodyend="-1"/>
+        <referencedby refid="class_sampler_1a60ebd60e1f63f4dfa7b4ba94e69a63e8" compoundref="_sampler_8cpp" startline="595" endline="606">setEnabled</referencedby>
+        <referencedby refid="class_sampler_1a67fd6d27248213e4f9bf5630703d3f18" compoundref="_sampler_8cpp" startline="564" endline="593">startSession</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_sampler_1a108f45bb6b7a2c1fa3204ea9a0cc25ad" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; std::unique_ptr&lt; void, void(*)(void *)&gt; &gt;</type>
+        <definition>std::vector&lt;std::unique_ptr&lt;void, void (*) (void*)&gt; &gt; Sampler::clockRings</definition>
+        <argsstring></argsstring>
+        <name>clockRings</name>
+        <qualifiedname>Sampler::clockRings</qualifiedname>
+        <briefdescription>
+<para>Ring of the clock event of each CPU. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Sampler.h" line="416" column="17" bodyfile="Source/Sampler.h" bodystart="416" bodyend="-1"/>
+        <referencedby refid="class_sampler_1a3173fc3528fe177be86ce0ce8f29cd83" compoundref="_sampler_8cpp" startline="619" endline="626">addAllRecords</referencedby>
+        <referencedby refid="class_sampler_1a67fd6d27248213e4f9bf5630703d3f18" compoundref="_sampler_8cpp" startline="564" endline="593">startSession</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_sampler_1a8072e26240c9fb945f82d2a5bf2131c4" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; std::unique_ptr&lt; void, void(*)(void *)&gt; &gt;</type>
+        <definition>std::vector&lt;std::unique_ptr&lt;void, void (*) (void*)&gt; &gt; Sampler::switchRings</definition>
+        <argsstring></argsstring>
+        <name>switchRings</name>
+        <qualifiedname>Sampler::switchRings</qualifiedname>
+        <briefdescription>
+<para>Ring of the context switch event of each CPU. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Sampler.h" line="419" column="17" bodyfile="Source/Sampler.h" bodystart="419" bodyend="-1"/>
+        <referencedby refid="class_sampler_1a3173fc3528fe177be86ce0ce8f29cd83" compoundref="_sampler_8cpp" startline="619" endline="626">addAllRecords</referencedby>
+        <referencedby refid="class_sampler_1a67fd6d27248213e4f9bf5630703d3f18" compoundref="_sampler_8cpp" startline="564" endline="593">startSession</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_sampler_1a0d033b10e47f10da0cb933a5888d8584" prot="private" static="no" mutable="no">
+        <type>const juce::Result</type>
+        <definition>const juce::Result Sampler::session</definition>
+        <argsstring></argsstring>
+        <name>session</name>
+        <qualifiedname>Sampler::session</qualifiedname>
+        <briefdescription>
+<para>Result of the session start. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Sampler.h" line="423" column="24" bodyfile="Source/Sampler.h" bodystart="423" bodyend="-1"/>
+        <referencedby refid="class_sampler_1a20473e869862e0950def74238b24bcd7" compoundref="_sampler_8cpp" startline="237" endline="254">drain</referencedby>
+        <referencedby refid="class_sampler_1ae2758b1ba8727dc22fdf5a80572e5872" compoundref="_sampler_8cpp" startline="220" endline="226">Sampler</referencedby>
+        <referencedby refid="class_sampler_1a96dcddeb6ff5f0507f11de173cab4e95" compoundref="_sampler_8cpp" startline="228" endline="235">~Sampler</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_sampler_1a5996dbf305228d55bfb3c86ced39b146" prot="private" static="no" mutable="no">
+        <type>jam::HashMap&lt; juce::Identifier, jam::HashMap&lt; juce::Identifier, int &gt; &gt;</type>
+        <definition>jam::HashMap&lt;juce::Identifier, jam::HashMap&lt;juce::Identifier, int&gt; &gt; Sampler::counts</definition>
+        <argsstring></argsstring>
+        <name>counts</name>
+        <qualifiedname>Sampler::counts</qualifiedname>
+        <initializer>{ { Id::toType (<ref refid="namespace_id_1aaa0851cf60aab0c856e3aa5b9ebabf75" kindref="member">Id::sample</ref>), {} }, { Id::toType (<ref refid="namespace_id_1a9dd3b447eb5f7e4e61f3f4264c20a2e5" kindref="member">Id::cswitch</ref>), {} } }</initializer>
+        <briefdescription>
+<para>Count of each frame key, for each table type. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Sampler.h" line="426" column="18" bodyfile="Source/Sampler.h" bodystart="426" bodyend="426"/>
+        <referencedby refid="class_sampler_1ad8520adf5251edbe4d546f16b548e3bd" compoundref="_sampler_8cpp" startline="1101" endline="1108">addCounts</referencedby>
+        <referencedby refid="class_sampler_1aa8da20ec1df14aa97e4333e217cb7e99" compoundref="_sampler_8cpp" startline="663" endline="666">addLost</referencedby>
+        <referencedby refid="class_sampler_1ab90f07a264117ea7d86e28a334e13c6b" compoundref="_sampler_8cpp" startline="403" endline="406">addLostEvents</referencedby>
+        <referencedby refid="class_sampler_1a91be2949beb7a32df2e93d205502f4e3" compoundref="_sampler_8cpp" startline="1110" endline="1131">getSamples</referencedby>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_sampler_1ae2758b1ba8727dc22fdf5a80572e5872" prot="public" static="no" const="no" explicit="yes" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Sampler::Sampler</definition>
+        <argsstring>(const juce::ValueTree &amp;sampleTable)</argsstring>
+        <name>Sampler</name>
+        <qualifiedname>Sampler::Sampler</qualifiedname>
+        <param>
+          <type>const juce::ValueTree &amp;</type>
+          <declname>sampleTable</declname>
+        </param>
+        <briefdescription>
+<para>Starts the sampling session and the thread that reads its records. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>When the session does not start, the thread does not start. The <computeroutput><ref refid="class_sampler_1a20473e869862e0950def74238b24bcd7" kindref="member">drain</ref></computeroutput> function returns the failure of the session.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>sampleTable</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The <computeroutput>sample</computeroutput> table of the manifest. It holds the <computeroutput>intervalMs</computeroutput> and <computeroutput>stackDepth</computeroutput> properties. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Sampler.h" line="98" column="14" bodyfile="Source/Sampler.cpp" bodystart="220" bodyend="226"/>
+        <references refid="class_sampler_1a0d033b10e47f10da0cb933a5888d8584" compoundref="_sampler_8h" startline="423">session</references>
+        <references refid="class_sampler_1a67fd6d27248213e4f9bf5630703d3f18" compoundref="_sampler_8cpp" startline="564" endline="593">startSession</references>
+        <references refid="_sampler_8cpp_1a22c9f046b0236a2fad1353e4c10064ed" compoundref="_sampler_8cpp" startline="6" endline="6">threadName</references>
+        <referencedby refid="class_sampler_1a5b74c691901a5a66225c5653c8a90005" compoundref="_sampler_8cpp" startline="288" endline="310">addRecords</referencedby>
+        <referencedby refid="class_sampler_1a74c644f7d95b29dfa4bd1ccbaaedd5c6" compoundref="_sampler_8cpp" startline="628" endline="653">addRecords</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_sampler_1a96dcddeb6ff5f0507f11de173cab4e95" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Sampler::~Sampler</definition>
+        <argsstring>() override</argsstring>
+        <name>~Sampler</name>
+        <qualifiedname>Sampler::~Sampler</qualifiedname>
+        <briefdescription>
+<para>Stops the thread and, when it is still active, the session. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Sampler.h" line="103" column="5" bodyfile="Source/Sampler.cpp" bodystart="228" bodyend="235"/>
+        <references refid="class_sampler_1a0d033b10e47f10da0cb933a5888d8584" compoundref="_sampler_8h" startline="423">session</references>
+        <references refid="_sampler_8cpp_1ab0ed5db778141c715359dbcf2f31d1a7" compoundref="_sampler_8cpp" startline="175" endline="190">stopSession</references>
+        <references refid="_sampler_8cpp_1a002ab303651d77b234ac524d9ed40a6f" compoundref="_sampler_8cpp" startline="3" endline="3">stopTimeoutMilliseconds</references>
+      </memberdef>
+      <memberdef kind="function" id="class_sampler_1a20473e869862e0950def74238b24bcd7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>juce::Result</type>
+        <definition>juce::Result Sampler::drain</definition>
+        <argsstring>()</argsstring>
+        <name>drain</name>
+        <qualifiedname>Sampler::drain</qualifiedname>
+        <briefdescription>
+<para>Stops the sampling and waits until the thread has read all records. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Call it once, after the command ends.</para>
+<para><simplesect kind="return"><para>Ok when the session ran and stopped without a failure. Otherwise the first failure of the session, of the stop or of the record read. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Sampler.h" line="112" column="18" bodyfile="Source/Sampler.cpp" bodystart="237" bodyend="254"/>
+        <references refid="_sampler_8cpp_1a8fd0d2db881f9e565108bbd9cc1b8838" compoundref="_sampler_8cpp" startline="31" endline="31">off</references>
+        <references refid="class_sampler_1a3a0bfdc50f13c6b25811cc422fdce419" compoundref="_sampler_8h" startline="254" endline="254">reading</references>
+        <references refid="class_sampler_1a0d033b10e47f10da0cb933a5888d8584" compoundref="_sampler_8h" startline="423">session</references>
+        <references refid="_sampler_8cpp_1a6f2b15a15c50f1e873ffd7c01c613bea" compoundref="_sampler_8cpp" startline="75" endline="83">setKdebugValue</references>
+        <references refid="_sampler_8cpp_1a4eabed153a2a0e1287b4da32b92a2553" compoundref="_sampler_8cpp" startline="57" endline="63">setKernelValue</references>
+        <references refid="_sampler_8cpp_1a002ab303651d77b234ac524d9ed40a6f" compoundref="_sampler_8cpp" startline="3" endline="3">stopTimeoutMilliseconds</references>
+      </memberdef>
+      <memberdef kind="function" id="class_sampler_1a91be2949beb7a32df2e93d205502f4e3" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>juce::ValueTree</type>
+        <definition>juce::ValueTree Sampler::getSamples</definition>
+        <argsstring>() const</argsstring>
+        <name>getSamples</name>
+        <qualifiedname>Sampler::getSamples</qualifiedname>
+        <briefdescription>
+<para>Returns the counts as a tree. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>The tree has one table for each table type. A table has one row for each frame key. A row holds the <computeroutput>value</computeroutput> count, the <computeroutput>calls</computeroutput> per epoch and the <computeroutput>count</computeroutput> unit. A <computeroutput>dropped</computeroutput> row holds the number of events that the kernel lost.</para>
+<para><simplesect kind="return"><para>Tree of the <computeroutput>samples</computeroutput> type. Call it after <computeroutput><ref refid="class_sampler_1a20473e869862e0950def74238b24bcd7" kindref="member">drain</ref></computeroutput>. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Sampler.h" line="123" column="21" bodyfile="Source/Sampler.cpp" bodystart="1110" bodyend="1131"/>
+        <references refid="class_sampler_1a5996dbf305228d55bfb3c86ced39b146" compoundref="_sampler_8h" startline="426" endline="426">counts</references>
+        <references refid="_sampler_8cpp_1a7811d54527e368f814aede2bd5947485" compoundref="_sampler_8cpp" startline="5" endline="5">countUnit</references>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_sampler_1aa64c8e9afe39558efd92cab23a0d73d3" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Sampler::run</definition>
+        <argsstring>() override</argsstring>
+        <name>run</name>
+        <qualifiedname>Sampler::run</qualifiedname>
+        <briefdescription>
+<para>Reads the records of the session until the thread must exit, then reads the rest. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Sampler.h" line="129" column="10" bodyfile="Source/Sampler.cpp" bodystart="268" bodyend="286"/>
+        <references refid="class_sampler_1a5b74c691901a5a66225c5653c8a90005" compoundref="_sampler_8cpp" startline="288" endline="310">addRecords</references>
+        <references refid="class_sampler_1a3a0bfdc50f13c6b25811cc422fdce419" compoundref="_sampler_8h" startline="254" endline="254">reading</references>
+        <references refid="_sampler_8cpp_1aad5cc39e20e0df3d5974399baf6ab867" compoundref="_sampler_8cpp" startline="25" endline="25">readIntervalMs</references>
+        <references refid="class_sampler_1a8f8bd52cb658a991b1850f19c7efddf2" compoundref="_sampler_8cpp" startline="256" endline="266">readRecords</references>
+        <references refid="_sampler_8cpp_1a285ff77b13b871bb766412fbf4945c3a" compoundref="_sampler_8cpp" startline="24" endline="24">recordCapacity</references>
+        <references refid="class_sampler_1a4f42f04f23edaa5df034fa51f3e5c2b2" compoundref="_sampler_8cpp" startline="408" endline="419">setDescendants</references>
+      </memberdef>
+      <memberdef kind="function" id="class_sampler_1ad8520adf5251edbe4d546f16b548e3bd" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Sampler::addCounts</definition>
+        <argsstring>(const juce::Identifier &amp;tableType, const jam::HashSet&lt; juce::Identifier &gt; &amp;sampleKeys, int weight)</argsstring>
+        <name>addCounts</name>
+        <qualifiedname>Sampler::addCounts</qualifiedname>
+        <param>
+          <type>const juce::Identifier &amp;</type>
+          <declname>tableType</declname>
+        </param>
+        <param>
+          <type>const jam::HashSet&lt; juce::Identifier &gt; &amp;</type>
+          <declname>sampleKeys</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>weight</declname>
+        </param>
+        <briefdescription>
+<para>Adds one to the count of each frame key, for a table type. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>The function skips each key that is not valid.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>tableType</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Table type that receives the counts. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>sampleKeys</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Frame keys of one sample. Each key counts one time. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>weight</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Value that each key adds to its count. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Sampler.h" line="140" column="10" bodyfile="Source/Sampler.cpp" bodystart="1101" bodyend="1108"/>
+        <references refid="class_sampler_1a5996dbf305228d55bfb3c86ced39b146" compoundref="_sampler_8h" startline="426" endline="426">counts</references>
+        <referencedby refid="class_sampler_1a1c44e35adce2ea951252ec1b8cab1891" compoundref="_sampler_8cpp" startline="668" endline="696">addFrames</referencedby>
+        <referencedby refid="class_sampler_1a1b0c7a89bc356514777c16a32ed803b7" compoundref="_sampler_8cpp" startline="369" endline="381">addKernelSamples</referencedby>
+        <referencedby refid="class_sampler_1a81a879e06d0a4c952c005aa0512a41fc" compoundref="_sampler_8cpp" startline="383" endline="401">addUserSamples</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_sampler_1a5b74c691901a5a66225c5653c8a90005" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Sampler::addRecords</definition>
+        <argsstring>(const kd_buf *records, int recordCount)</argsstring>
+        <name>addRecords</name>
+        <qualifiedname>Sampler::addRecords</qualifiedname>
+        <param>
+          <type>const <ref refid="structkd__buf" kindref="compound">kd_buf</ref> *</type>
+          <declname>records</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>recordCount</declname>
+        </param>
+        <briefdescription>
+<para>Passes each record to the member function that its event identifier selects. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>The function skips each record with an event that no member function handles.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>records</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The records that the read returned. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>recordCount</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Number of records. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Sampler.h" line="159" column="10" bodyfile="Source/Sampler.cpp" bodystart="288" bodyend="310"/>
+        <references refid="class_sampler_1ab90f07a264117ea7d86e28a334e13c6b" compoundref="_sampler_8cpp" startline="403" endline="406">addLostEvents</references>
+        <references refid="class_sampler_1a7b82b7917ef1a3ca7587abc8ef371c10" compoundref="_sampler_8cpp" startline="351" endline="367">addSampleEnd</references>
+        <references refid="class_sampler_1a7e6ec11c924fea70cff7c5523d947436" compoundref="_sampler_8cpp" startline="312" endline="315">addSampleStart</references>
+        <references refid="class_sampler_1aa34b215d898befd15f2309ca2d816843" compoundref="_sampler_8cpp" startline="337" endline="349">addStackFrames</references>
+        <references refid="class_sampler_1aaba7a4bee0dcf7ecfeaddb43883fde6a" compoundref="_sampler_8cpp" startline="326" endline="335">addStackHeader</references>
+        <references refid="class_sampler_1a45d5d70da446de4caafc6a2b51f4d291" compoundref="_sampler_8cpp" startline="317" endline="324">addThreadInfo</references>
+        <references refid="_sampler_8cpp_1a091d6cba2f3ecb836d0fca41083588b0" compoundref="_sampler_8cpp" startline="38" endline="38">kernelFramesEvent</references>
+        <references refid="_sampler_8cpp_1aaf2c224edf43164b6c5fbe0f857bf758" compoundref="_sampler_8cpp" startline="37" endline="37">kernelHeaderEvent</references>
+        <references refid="_sampler_8cpp_1a2be767ba38171cc9d381b20098b51b05" compoundref="_sampler_8cpp" startline="42" endline="42">lostEventsEvent</references>
+        <references refid="_sampler_8cpp_1a62b47731b5fe650cdaaa1e97ec7219b8" compoundref="_sampler_8cpp" startline="35" endline="35">sampleEndEvent</references>
+        <references refid="class_sampler_1ae2758b1ba8727dc22fdf5a80572e5872" compoundref="_sampler_8cpp" startline="220" endline="226">Sampler</references>
+        <references refid="_sampler_8cpp_1aa04ae0bbf701fe14df504894f7bb8023" compoundref="_sampler_8cpp" startline="34" endline="34">sampleStartEvent</references>
+        <references refid="_sampler_8cpp_1a303f096f59b97743fc704ccdf4ca8952" compoundref="_sampler_8cpp" startline="36" endline="36">threadInfoEvent</references>
+        <references refid="_sampler_8cpp_1a70aee0fb453a81dc647647fe1eaf9765" compoundref="_sampler_8cpp" startline="40" endline="40">userFramesEvent</references>
+        <references refid="_sampler_8cpp_1a70917d118e90dd2f3f4577a417969d20" compoundref="_sampler_8cpp" startline="39" endline="39">userHeaderEvent</references>
+        <referencedby refid="class_sampler_1a3173fc3528fe177be86ce0ce8f29cd83" compoundref="_sampler_8cpp" startline="619" endline="626">addAllRecords</referencedby>
+        <referencedby refid="class_sampler_1aa64c8e9afe39558efd92cab23a0d73d3" compoundref="_sampler_8cpp" startline="268" endline="286">run</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_sampler_1a7e6ec11c924fea70cff7c5523d947436" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Sampler::addSampleStart</definition>
+        <argsstring>(const kd_buf &amp;record)</argsstring>
+        <name>addSampleStart</name>
+        <qualifiedname>Sampler::addSampleStart</qualifiedname>
+        <param>
+          <type>const <ref refid="structkd__buf" kindref="compound">kd_buf</ref> &amp;</type>
+          <declname>record</declname>
+        </param>
+        <briefdescription>
+<para>Opens the bracket of the CPU of a record. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>The bracket holds the action and the thread of the sample start. It replaces an open bracket of the same CPU.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>record</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Record of the sample start event. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Sampler.h" line="168" column="10" bodyfile="Source/Sampler.cpp" bodystart="312" bodyend="315"/>
+        <references refid="structkd__buf_1ae8a83ef68d6dd037050d931a4033a259" compoundref="_sampler_8h" startline="26">kd_buf::arg2</references>
+        <references refid="structkd__buf_1a820024f338925839fa17492b3450299b" compoundref="_sampler_8h" startline="35">kd_buf::arg5</references>
+        <references refid="class_sampler_1ae3f2dd6abb219dd46c795c7edf35db8d" compoundref="_sampler_8h" startline="248">brackets</references>
+        <references refid="structkd__buf_1a99e5f41756c7f5a672ff0ceec370e923" compoundref="_sampler_8h" startline="41">kd_buf::cpuid</references>
+        <referencedby refid="class_sampler_1a5b74c691901a5a66225c5653c8a90005" compoundref="_sampler_8cpp" startline="288" endline="310">addRecords</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_sampler_1a45d5d70da446de4caafc6a2b51f4d291" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Sampler::addThreadInfo</definition>
+        <argsstring>(const kd_buf &amp;record)</argsstring>
+        <name>addThreadInfo</name>
+        <qualifiedname>Sampler::addThreadInfo</qualifiedname>
+        <param>
+          <type>const <ref refid="structkd__buf" kindref="compound">kd_buf</ref> &amp;</type>
+          <declname>record</declname>
+        </param>
+        <briefdescription>
+<para>Sets the process of the open bracket of the CPU of a record. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>record</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Record of the thread information event. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Sampler.h" line="175" column="10" bodyfile="Source/Sampler.cpp" bodystart="317" bodyend="324"/>
+        <references refid="structkd__buf_1a42920e35cdff86f357c5e81ebf27af2a" compoundref="_sampler_8h" startline="23">kd_buf::arg1</references>
+        <references refid="class_sampler_1ae3f2dd6abb219dd46c795c7edf35db8d" compoundref="_sampler_8h" startline="248">brackets</references>
+        <references refid="structkd__buf_1a99e5f41756c7f5a672ff0ceec370e923" compoundref="_sampler_8h" startline="41">kd_buf::cpuid</references>
+        <references refid="_sampler_8cpp_1ae33d7aad50c0ca3aa1b8529d7aecd875" compoundref="_sampler_8cpp" startline="45" endline="45">processSlot</references>
+        <referencedby refid="class_sampler_1a5b74c691901a5a66225c5653c8a90005" compoundref="_sampler_8cpp" startline="288" endline="310">addRecords</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_sampler_1aaba7a4bee0dcf7ecfeaddb43883fde6a" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Sampler::addStackHeader</definition>
+        <argsstring>(const kd_buf &amp;record)</argsstring>
+        <name>addStackHeader</name>
+        <qualifiedname>Sampler::addStackHeader</qualifiedname>
+        <param>
+          <type>const <ref refid="structkd__buf" kindref="compound">kd_buf</ref> &amp;</type>
+          <declname>record</declname>
+        </param>
+        <briefdescription>
+<para>Sets the frame count and the kernel flag of the open bracket of the CPU of a record. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>record</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Record of a kernel or user stack header event. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Sampler.h" line="182" column="10" bodyfile="Source/Sampler.cpp" bodystart="326" bodyend="335"/>
+        <references refid="structkd__buf_1a42920e35cdff86f357c5e81ebf27af2a" compoundref="_sampler_8h" startline="23">kd_buf::arg1</references>
+        <references refid="structkd__buf_1ae8a83ef68d6dd037050d931a4033a259" compoundref="_sampler_8h" startline="26">kd_buf::arg2</references>
+        <references refid="class_sampler_1ae3f2dd6abb219dd46c795c7edf35db8d" compoundref="_sampler_8h" startline="248">brackets</references>
+        <references refid="structkd__buf_1a99e5f41756c7f5a672ff0ceec370e923" compoundref="_sampler_8h" startline="41">kd_buf::cpuid</references>
+        <references refid="_sampler_8cpp_1ae82a1617d58b767556f0d2503571cbb1" compoundref="_sampler_8cpp" startline="46" endline="46">frameCountSlot</references>
+        <references refid="_sampler_8cpp_1ada088611b87ce400aa53ba9f508e0fe4" compoundref="_sampler_8cpp" startline="47" endline="47">kernelSlot</references>
+        <references refid="_sampler_8cpp_1a46ef7865aaa59d8698d448689d3e262d" compoundref="_sampler_8cpp" startline="27" endline="27">kernelStackFlag</references>
+        <referencedby refid="class_sampler_1a5b74c691901a5a66225c5653c8a90005" compoundref="_sampler_8cpp" startline="288" endline="310">addRecords</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_sampler_1aa34b215d898befd15f2309ca2d816843" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Sampler::addStackFrames</definition>
+        <argsstring>(const kd_buf &amp;record)</argsstring>
+        <name>addStackFrames</name>
+        <qualifiedname>Sampler::addStackFrames</qualifiedname>
+        <param>
+          <type>const <ref refid="structkd__buf" kindref="compound">kd_buf</ref> &amp;</type>
+          <declname>record</declname>
+        </param>
+        <briefdescription>
+<para>Adds the frame addresses of a record to the open bracket of its CPU. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>The function adds frames until the bracket holds the frame count of the header.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>record</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Record of a kernel or user stack frames event. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Sampler.h" line="191" column="10" bodyfile="Source/Sampler.cpp" bodystart="337" bodyend="349"/>
+        <references refid="structkd__buf_1a42920e35cdff86f357c5e81ebf27af2a" compoundref="_sampler_8h" startline="23">kd_buf::arg1</references>
+        <references refid="structkd__buf_1ae8a83ef68d6dd037050d931a4033a259" compoundref="_sampler_8h" startline="26">kd_buf::arg2</references>
+        <references refid="structkd__buf_1a802645e321549466ce9ed29e3841ede6" compoundref="_sampler_8h" startline="29">kd_buf::arg3</references>
+        <references refid="structkd__buf_1af3b6b23e4abdbf666662e204bb806903" compoundref="_sampler_8h" startline="32">kd_buf::arg4</references>
+        <references refid="class_sampler_1ae3f2dd6abb219dd46c795c7edf35db8d" compoundref="_sampler_8h" startline="248">brackets</references>
+        <references refid="structkd__buf_1a99e5f41756c7f5a672ff0ceec370e923" compoundref="_sampler_8h" startline="41">kd_buf::cpuid</references>
+        <references refid="_sampler_8cpp_1ad49ddd7cfd76c576006a7dc08799735c" compoundref="_sampler_8cpp" startline="49" endline="49">firstFrameSlot</references>
+        <references refid="_sampler_8cpp_1ae82a1617d58b767556f0d2503571cbb1" compoundref="_sampler_8cpp" startline="46" endline="46">frameCountSlot</references>
+        <referencedby refid="class_sampler_1a5b74c691901a5a66225c5653c8a90005" compoundref="_sampler_8cpp" startline="288" endline="310">addRecords</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_sampler_1a7b82b7917ef1a3ca7587abc8ef371c10" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Sampler::addSampleEnd</definition>
+        <argsstring>(const kd_buf &amp;record)</argsstring>
+        <name>addSampleEnd</name>
+        <qualifiedname>Sampler::addSampleEnd</qualifiedname>
+        <param>
+          <type>const <ref refid="structkd__buf" kindref="compound">kd_buf</ref> &amp;</type>
+          <declname>record</declname>
+        </param>
+        <briefdescription>
+<para>Closes the bracket of the CPU of a record and counts its sample. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>A bracket counts only when its process is a descendant. A kernel stack goes to <computeroutput><ref refid="class_sampler_1a1b0c7a89bc356514777c16a32ed803b7" kindref="member">addKernelSamples</ref></computeroutput>. A user stack goes to <computeroutput><ref refid="class_sampler_1a81a879e06d0a4c952c005aa0512a41fc" kindref="member">addUserSamples</ref></computeroutput>.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>record</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Record of the sample end event. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Sampler.h" line="201" column="10" bodyfile="Source/Sampler.cpp" bodystart="351" bodyend="367"/>
+        <references refid="class_sampler_1a1b0c7a89bc356514777c16a32ed803b7" compoundref="_sampler_8cpp" startline="369" endline="381">addKernelSamples</references>
+        <references refid="class_sampler_1a81a879e06d0a4c952c005aa0512a41fc" compoundref="_sampler_8cpp" startline="383" endline="401">addUserSamples</references>
+        <references refid="structkd__buf_1ae8a83ef68d6dd037050d931a4033a259" compoundref="_sampler_8h" startline="26">kd_buf::arg2</references>
+        <references refid="class_sampler_1ae3f2dd6abb219dd46c795c7edf35db8d" compoundref="_sampler_8h" startline="248">brackets</references>
+        <references refid="structkd__buf_1a99e5f41756c7f5a672ff0ceec370e923" compoundref="_sampler_8h" startline="41">kd_buf::cpuid</references>
+        <references refid="class_sampler_1aa07b205965331acf4c461c26d309a712" compoundref="_sampler_8h" startline="147">descendants</references>
+        <references refid="_sampler_8cpp_1ada088611b87ce400aa53ba9f508e0fe4" compoundref="_sampler_8cpp" startline="47" endline="47">kernelSlot</references>
+        <references refid="_sampler_8cpp_1ae33d7aad50c0ca3aa1b8529d7aecd875" compoundref="_sampler_8cpp" startline="45" endline="45">processSlot</references>
+        <referencedby refid="class_sampler_1a5b74c691901a5a66225c5653c8a90005" compoundref="_sampler_8cpp" startline="288" endline="310">addRecords</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_sampler_1a1b0c7a89bc356514777c16a32ed803b7" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Sampler::addKernelSamples</definition>
+        <argsstring>(const juce::Array&lt; juce::uint64 &gt; &amp;bracket, juce::uint64 metaFlags)</argsstring>
+        <name>addKernelSamples</name>
+        <qualifiedname>Sampler::addKernelSamples</qualifiedname>
+        <param>
+          <type>const juce::Array&lt; juce::uint64 &gt; &amp;</type>
+          <declname>bracket</declname>
+        </param>
+        <param>
+          <type>juce::uint64</type>
+          <declname>metaFlags</declname>
+        </param>
+        <briefdescription>
+<para>Counts the kernel stack of a bracket. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>When the meta flags show that a user stack follows, the function also notes a pending user sample for the thread.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>bracket</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Closed bracket with a kernel stack. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>metaFlags</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Flags of the sample end event. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Sampler.h" line="211" column="10" bodyfile="Source/Sampler.cpp" bodystart="369" bodyend="381"/>
+        <references refid="_sampler_8cpp_1a895a7f4cdbfdde18cd972131d0843de6" compoundref="_sampler_8cpp" startline="44" endline="44">actionSlot</references>
+        <references refid="class_sampler_1ad8520adf5251edbe4d546f16b548e3bd" compoundref="_sampler_8cpp" startline="1101" endline="1108">addCounts</references>
+        <references refid="_sampler_8cpp_1ad49ddd7cfd76c576006a7dc08799735c" compoundref="_sampler_8cpp" startline="49" endline="49">firstFrameSlot</references>
+        <references refid="_sampler_8cpp_1a4dd0c2d2ea14e3f4ebca6fc0e586054f" compoundref="_sampler_8cpp" startline="209" endline="218">getActionTable</references>
+        <references refid="class_symbolizer_1a92eeac9f0e75cec721c3887f3c9528e4" compoundref="_symbolizer_8cpp" startline="380" endline="395">Symbolizer::getOrCreateKernelFrameKey</references>
+        <references refid="class_sampler_1a4b4efc0c6090ade9a73af95f8d70f827" compoundref="_sampler_8h" startline="251">pendingUserSamples</references>
+        <references refid="class_sampler_1ae3f391e3bfd03bcad0e434430721a832" compoundref="_sampler_8h" startline="143">symbolizer</references>
+        <references refid="_sampler_8cpp_1a895cd96b2339d4263537b22fc70267fb" compoundref="_sampler_8cpp" startline="48" endline="48">threadSlot</references>
+        <references refid="_sampler_8cpp_1a49b5eb8089c4178644e271e293e9e99b" compoundref="_sampler_8cpp" startline="4" endline="4">unitWeight</references>
+        <references refid="_sampler_8cpp_1abe2fecdda84e03cf162827e025602f01" compoundref="_sampler_8cpp" startline="28" endline="28">userPendFlag</references>
+        <referencedby refid="class_sampler_1a7b82b7917ef1a3ca7587abc8ef371c10" compoundref="_sampler_8cpp" startline="351" endline="367">addSampleEnd</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_sampler_1a81a879e06d0a4c952c005aa0512a41fc" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Sampler::addUserSamples</definition>
+        <argsstring>(const juce::Array&lt; juce::uint64 &gt; &amp;bracket)</argsstring>
+        <name>addUserSamples</name>
+        <qualifiedname>Sampler::addUserSamples</qualifiedname>
+        <param>
+          <type>const juce::Array&lt; juce::uint64 &gt; &amp;</type>
+          <declname>bracket</declname>
+        </param>
+        <briefdescription>
+<para>Counts the user stack of a bracket. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>The count goes to each table type that has a pending user sample for the thread. The weight is the pending count. When the thread has no pending sample, the count goes to the table type of the bracket action.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>bracket</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Closed bracket with a user stack. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Sampler.h" line="221" column="10" bodyfile="Source/Sampler.cpp" bodystart="383" bodyend="401"/>
+        <references refid="_sampler_8cpp_1a895a7f4cdbfdde18cd972131d0843de6" compoundref="_sampler_8cpp" startline="44" endline="44">actionSlot</references>
+        <references refid="class_sampler_1ad8520adf5251edbe4d546f16b548e3bd" compoundref="_sampler_8cpp" startline="1101" endline="1108">addCounts</references>
+        <references refid="_sampler_8cpp_1ad49ddd7cfd76c576006a7dc08799735c" compoundref="_sampler_8cpp" startline="49" endline="49">firstFrameSlot</references>
+        <references refid="_sampler_8cpp_1a4dd0c2d2ea14e3f4ebca6fc0e586054f" compoundref="_sampler_8cpp" startline="209" endline="218">getActionTable</references>
+        <references refid="class_symbolizer_1ac2636a4ed1057b823a39d1e316b7b222" compoundref="_symbolizer_8cpp" startline="190" endline="210">Symbolizer::getOrCreateUserFrameKey</references>
+        <references refid="class_sampler_1a4b4efc0c6090ade9a73af95f8d70f827" compoundref="_sampler_8h" startline="251">pendingUserSamples</references>
+        <references refid="_sampler_8cpp_1ae33d7aad50c0ca3aa1b8529d7aecd875" compoundref="_sampler_8cpp" startline="45" endline="45">processSlot</references>
+        <references refid="class_sampler_1ae3f391e3bfd03bcad0e434430721a832" compoundref="_sampler_8h" startline="143">symbolizer</references>
+        <references refid="_sampler_8cpp_1a895cd96b2339d4263537b22fc70267fb" compoundref="_sampler_8cpp" startline="48" endline="48">threadSlot</references>
+        <references refid="_sampler_8cpp_1a49b5eb8089c4178644e271e293e9e99b" compoundref="_sampler_8cpp" startline="4" endline="4">unitWeight</references>
+        <referencedby refid="class_sampler_1a7b82b7917ef1a3ca7587abc8ef371c10" compoundref="_sampler_8cpp" startline="351" endline="367">addSampleEnd</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_sampler_1a8f8bd52cb658a991b1850f19c7efddf2" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int Sampler::readRecords</definition>
+        <argsstring>(kd_buf *records, int capacity)</argsstring>
+        <name>readRecords</name>
+        <qualifiedname>Sampler::readRecords</qualifiedname>
+        <param>
+          <type><ref refid="structkd__buf" kindref="compound">kd_buf</ref> *</type>
+          <declname>records</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>capacity</declname>
+        </param>
+        <briefdescription>
+<para>Reads records from the kernel trace buffer. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>When the read fails, the function stores the failure in <computeroutput><ref refid="class_sampler_1a3a0bfdc50f13c6b25811cc422fdce419" kindref="member">reading</ref></computeroutput>.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>records</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Array that receives the records. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>capacity</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Number of records that the array holds.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Number of records that the read returned. It is zero after a failure. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Sampler.h" line="233" column="9" bodyfile="Source/Sampler.cpp" bodystart="256" bodyend="266"/>
+        <references refid="_sampler_8cpp_1a89f610db753bf6699ad218d057a4d926" compoundref="_sampler_8cpp" startline="32" endline="32">kdebugName</references>
+        <references refid="class_sampler_1a3a0bfdc50f13c6b25811cc422fdce419" compoundref="_sampler_8h" startline="254" endline="254">reading</references>
+        <referencedby refid="class_sampler_1aa64c8e9afe39558efd92cab23a0d73d3" compoundref="_sampler_8cpp" startline="268" endline="286">run</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_sampler_1ab90f07a264117ea7d86e28a334e13c6b" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Sampler::addLostEvents</definition>
+        <argsstring>(const kd_buf &amp;record)</argsstring>
+        <name>addLostEvents</name>
+        <qualifiedname>Sampler::addLostEvents</qualifiedname>
+        <param>
+          <type>const <ref refid="structkd__buf" kindref="compound">kd_buf</ref> &amp;</type>
+          <declname>record</declname>
+        </param>
+        <briefdescription>
+<para>Adds one to the <computeroutput>dropped</computeroutput> count of the <computeroutput>sample</computeroutput> table. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>record</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Record of the lost events event. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Sampler.h" line="240" column="10" bodyfile="Source/Sampler.cpp" bodystart="403" bodyend="406"/>
+        <references refid="class_sampler_1a5996dbf305228d55bfb3c86ced39b146" compoundref="_sampler_8h" startline="426" endline="426">counts</references>
+        <references refid="namespace_id_1aaa0851cf60aab0c856e3aa5b9ebabf75" compoundref="_generated_8cpp" startline="40" endline="40">Id::sample</references>
+        <referencedby refid="class_sampler_1a5b74c691901a5a66225c5653c8a90005" compoundref="_sampler_8cpp" startline="288" endline="310">addRecords</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_sampler_1a4f42f04f23edaa5df034fa51f3e5c2b2" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Sampler::setDescendants</definition>
+        <argsstring>()</argsstring>
+        <name>setDescendants</name>
+        <qualifiedname>Sampler::setDescendants</qualifiedname>
+        <briefdescription>
+<para>Replaces the descendants with the processes that now descend from the scout process. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Sampler.h" line="245" column="10" bodyfile="Source/Sampler.cpp" bodystart="408" bodyend="419"/>
+        <references refid="class_sampler_1aa07b205965331acf4c461c26d309a712" compoundref="_sampler_8h" startline="147">descendants</references>
+        <references refid="_sampler_8cpp_1aadc3154af708b1ba700feb35be37f880" compoundref="_sampler_8cpp" startline="192" endline="207">isDescendant</references>
+        <referencedby refid="class_sampler_1aa64c8e9afe39558efd92cab23a0d73d3" compoundref="_sampler_8cpp" startline="268" endline="286">run</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_sampler_1a67fd6d27248213e4f9bf5630703d3f18" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>juce::Result</type>
+        <definition>juce::Result Sampler::startSession</definition>
+        <argsstring>(int intervalMs, int stackDepth)</argsstring>
+        <name>startSession</name>
+        <qualifiedname>Sampler::startSession</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>intervalMs</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>stackDepth</declname>
+        </param>
+        <briefdescription>
+<para>Opens the clock and context switch events and their rings on each CPU, then enables them. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>intervalMs</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Sampling interval, in milliseconds. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>stackDepth</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Number of frames that each sample keeps.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Ok when all events and rings open. Otherwise the first failure, or a <computeroutput>not found</computeroutput> failure when the trace file system has no context switch event. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Sampler.h" line="352" column="18" bodyfile="Source/Sampler.cpp" bodystart="564" bodyend="593"/>
+        <references refid="class_sampler_1a56614a0afedf38a2ebe125135f016a9d" compoundref="_sampler_8h" startline="410">clockEvents</references>
+        <references refid="class_sampler_1a108f45bb6b7a2c1fa3204ea9a0cc25ad" compoundref="_sampler_8h" startline="416">clockRings</references>
+        <references refid="structtext_1_1_diagnostics_1a614879ccbad6f4edaf1a511bf5a2fa68" compoundref="_text_8h" startline="31" endline="31">text::Diagnostics::failNotFound</references>
+        <references refid="_sampler_8cpp_1abfe3a5507ce19c4a23904d1dcfa5bf00" compoundref="_sampler_8cpp" startline="460" endline="467">getClockAttributes</references>
+        <references refid="_sampler_8cpp_1a2062e8a7ba127d2c5d40c7add4dd65c6" compoundref="_sampler_8cpp" startline="495" endline="503">getRing</references>
+        <references refid="_sampler_8cpp_1af359e6a00a0aa031429cc1376dce3ad0" compoundref="_sampler_8cpp" startline="478" endline="483">getSwitchAttributes</references>
+        <references refid="_sampler_8cpp_1a35091e202cad2e78f4c422680c8d3ac8" compoundref="_sampler_8cpp" startline="469" endline="476">getSwitchIdFile</references>
+        <references refid="_sampler_8cpp_1aa06d0dd958a6b0ced0c696541042c60f" compoundref="_sampler_8cpp" startline="485" endline="488">openEvent</references>
+        <references refid="class_sampler_1a60ebd60e1f63f4dfa7b4ba94e69a63e8" compoundref="_sampler_8cpp" startline="595" endline="606">setEnabled</references>
+        <references refid="class_sampler_1adead0ff46c4127293def9741a9abc68d" compoundref="_sampler_8h" startline="413">switchEvents</references>
+        <references refid="class_sampler_1a8072e26240c9fb945f82d2a5bf2131c4" compoundref="_sampler_8h" startline="419">switchRings</references>
+        <referencedby refid="class_sampler_1ae2758b1ba8727dc22fdf5a80572e5872" compoundref="_sampler_8cpp" startline="220" endline="226">Sampler</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_sampler_1a60ebd60e1f63f4dfa7b4ba94e69a63e8" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Sampler::setEnabled</definition>
+        <argsstring>(bool shouldEnable)</argsstring>
+        <name>setEnabled</name>
+        <qualifiedname>Sampler::setEnabled</qualifiedname>
+        <param>
+          <type>bool</type>
+          <declname>shouldEnable</declname>
+        </param>
+        <briefdescription>
+<para>Enables or disables all clock and context switch events. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>shouldEnable</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>True to enable the events. False to disable them. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Sampler.h" line="359" column="10" bodyfile="Source/Sampler.cpp" bodystart="595" bodyend="606"/>
+        <references refid="class_sampler_1a56614a0afedf38a2ebe125135f016a9d" compoundref="_sampler_8h" startline="410">clockEvents</references>
+        <references refid="class_sampler_1adead0ff46c4127293def9741a9abc68d" compoundref="_sampler_8h" startline="413">switchEvents</references>
+        <referencedby refid="class_sampler_1a67fd6d27248213e4f9bf5630703d3f18" compoundref="_sampler_8cpp" startline="564" endline="593">startSession</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_sampler_1a3173fc3528fe177be86ce0ce8f29cd83" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Sampler::addAllRecords</definition>
+        <argsstring>()</argsstring>
+        <name>addAllRecords</name>
+        <qualifiedname>Sampler::addAllRecords</qualifiedname>
+        <briefdescription>
+<para>Reads the new records of the rings of all CPUs. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>The clock rings fill the <computeroutput>sample</computeroutput> table type. The context switch rings fill the <computeroutput>cswitch</computeroutput> table type. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Sampler.h" line="366" column="10" bodyfile="Source/Sampler.cpp" bodystart="619" bodyend="626"/>
+        <references refid="class_sampler_1a5b74c691901a5a66225c5653c8a90005" compoundref="_sampler_8cpp" startline="288" endline="310">addRecords</references>
+        <references refid="class_sampler_1a108f45bb6b7a2c1fa3204ea9a0cc25ad" compoundref="_sampler_8h" startline="416">clockRings</references>
+        <references refid="namespace_id_1a9dd3b447eb5f7e4e61f3f4264c20a2e5" compoundref="_generated_8cpp" startline="41" endline="41">Id::cswitch</references>
+        <references refid="namespace_id_1aaa0851cf60aab0c856e3aa5b9ebabf75" compoundref="_generated_8cpp" startline="40" endline="40">Id::sample</references>
+        <references refid="class_sampler_1a8072e26240c9fb945f82d2a5bf2131c4" compoundref="_sampler_8h" startline="419">switchRings</references>
+      </memberdef>
+      <memberdef kind="function" id="class_sampler_1a74c644f7d95b29dfa4bd1ccbaaedd5c6" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Sampler::addRecords</definition>
+        <argsstring>(void *ring, const juce::Identifier &amp;tableType)</argsstring>
+        <name>addRecords</name>
+        <qualifiedname>Sampler::addRecords</qualifiedname>
+        <param>
+          <type>void *</type>
+          <declname>ring</declname>
+        </param>
+        <param>
+          <type>const juce::Identifier &amp;</type>
+          <declname>tableType</declname>
+        </param>
+        <briefdescription>
+<para>Passes each new record of a ring to the member function that its record type selects. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>The function then moves the tail of the ring to the head that it read.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ring</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Ring of one event on one CPU. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>tableType</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Table type that the ring fills. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Sampler.h" line="376" column="10" bodyfile="Source/Sampler.cpp" bodystart="628" bodyend="653"/>
+        <references refid="class_sampler_1aa8da20ec1df14aa97e4333e217cb7e99" compoundref="_sampler_8cpp" startline="663" endline="666">addLost</references>
+        <references refid="class_sampler_1ae86cd2f041fc30f659c9d4474a4d903c" compoundref="_sampler_8cpp" startline="655" endline="661">addSample</references>
+        <references refid="_sampler_8cpp_1ad938b64cbd675222d4fc77fa46b72a05" compoundref="_sampler_8cpp" startline="505" endline="508">getHead</references>
+        <references refid="_sampler_8cpp_1a218ecc09d2ee73b3a32c6ae18ad33bae" compoundref="_sampler_8cpp" startline="520" endline="525">getHeader</references>
+        <references refid="_sampler_8cpp_1a4158933959dea538ff09dc7b911820f2" compoundref="_sampler_8cpp" startline="510" endline="513">getTail</references>
+        <references refid="class_sampler_1ae2758b1ba8727dc22fdf5a80572e5872" compoundref="_sampler_8cpp" startline="220" endline="226">Sampler</references>
+        <references refid="_sampler_8cpp_1a0c153d095cd34eb163f886aa8baae9f1" compoundref="_sampler_8cpp" startline="515" endline="518">setTail</references>
+      </memberdef>
+      <memberdef kind="function" id="class_sampler_1ae86cd2f041fc30f659c9d4474a4d903c" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Sampler::addSample</definition>
+        <argsstring>(const void *ring, juce::uint64 position, const juce::Identifier &amp;tableType)</argsstring>
+        <name>addSample</name>
+        <qualifiedname>Sampler::addSample</qualifiedname>
+        <param>
+          <type>const void *</type>
+          <declname>ring</declname>
+        </param>
+        <param>
+          <type>juce::uint64</type>
+          <declname>position</declname>
+        </param>
+        <param>
+          <type>const juce::Identifier &amp;</type>
+          <declname>tableType</declname>
+        </param>
+        <briefdescription>
+<para>Counts the frames of a sample record when its process is not the scout process. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ring</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Ring that holds the record. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>position</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Position of the record in the ring. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>tableType</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Table type that receives the counts. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Sampler.h" line="385" column="10" bodyfile="Source/Sampler.cpp" bodystart="655" bodyend="661"/>
+        <references refid="class_sampler_1a1c44e35adce2ea951252ec1b8cab1891" compoundref="_sampler_8cpp" startline="668" endline="696">addFrames</references>
+        <references refid="_sampler_8cpp_1a2bea1eaa54c073588149c245378a98de" compoundref="_sampler_8cpp" startline="527" endline="532">getWord</references>
+        <references refid="_sampler_8cpp_1ae33d7aad50c0ca3aa1b8529d7aecd875" compoundref="_sampler_8cpp" startline="45" endline="45">processSlot</references>
+        <references refid="_sampler_8cpp_1a9efa99e7439c1e4bb8265f444797d8b6" compoundref="_sampler_8cpp" startline="437" endline="437">wordBytes</references>
+        <referencedby refid="class_sampler_1a74c644f7d95b29dfa4bd1ccbaaedd5c6" compoundref="_sampler_8cpp" startline="628" endline="653">addRecords</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_sampler_1aa8da20ec1df14aa97e4333e217cb7e99" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Sampler::addLost</definition>
+        <argsstring>(const void *ring, juce::uint64 position, const juce::Identifier &amp;tableType)</argsstring>
+        <name>addLost</name>
+        <qualifiedname>Sampler::addLost</qualifiedname>
+        <param>
+          <type>const void *</type>
+          <declname>ring</declname>
+        </param>
+        <param>
+          <type>juce::uint64</type>
+          <declname>position</declname>
+        </param>
+        <param>
+          <type>const juce::Identifier &amp;</type>
+          <declname>tableType</declname>
+        </param>
+        <briefdescription>
+<para>Adds the number of lost events of a record to the <computeroutput>dropped</computeroutput> count of a table type. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ring</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Ring that holds the record. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>position</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Position of the record in the ring. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>tableType</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Table type that receives the count. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Sampler.h" line="394" column="10" bodyfile="Source/Sampler.cpp" bodystart="663" bodyend="666"/>
+        <references refid="class_sampler_1a5996dbf305228d55bfb3c86ced39b146" compoundref="_sampler_8h" startline="426" endline="426">counts</references>
+        <references refid="_sampler_8cpp_1a2bea1eaa54c073588149c245378a98de" compoundref="_sampler_8cpp" startline="527" endline="532">getWord</references>
+        <references refid="_sampler_8cpp_1a6ae9456dae5e14fbec0b5256c14df111" compoundref="_sampler_8cpp" startline="436" endline="436">lostSlot</references>
+        <references refid="_sampler_8cpp_1a9efa99e7439c1e4bb8265f444797d8b6" compoundref="_sampler_8cpp" startline="437" endline="437">wordBytes</references>
+        <referencedby refid="class_sampler_1a74c644f7d95b29dfa4bd1ccbaaedd5c6" compoundref="_sampler_8cpp" startline="628" endline="653">addRecords</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_sampler_1a1c44e35adce2ea951252ec1b8cab1891" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Sampler::addFrames</definition>
+        <argsstring>(const void *ring, juce::uint64 position, int processId, const juce::Identifier &amp;tableType)</argsstring>
+        <name>addFrames</name>
+        <qualifiedname>Sampler::addFrames</qualifiedname>
+        <param>
+          <type>const void *</type>
+          <declname>ring</declname>
+        </param>
+        <param>
+          <type>juce::uint64</type>
+          <declname>position</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>processId</declname>
+        </param>
+        <param>
+          <type>const juce::Identifier &amp;</type>
+          <declname>tableType</declname>
+        </param>
+        <briefdescription>
+<para>Counts the kernel and user frames of a sample record. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>The function splits the call chain at the user marker. Kernel addresses resolve through the kernel symbols. User addresses resolve in the process of the sample.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ring</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Ring that holds the record. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>position</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Position of the record in the ring. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>processId</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Process of the sample. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>tableType</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Table type that receives the counts. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/Sampler.h" line="407" column="10" bodyfile="Source/Sampler.cpp" bodystart="668" bodyend="696"/>
+        <references refid="class_sampler_1ad8520adf5251edbe4d546f16b548e3bd" compoundref="_sampler_8cpp" startline="1101" endline="1108">addCounts</references>
+        <references refid="_sampler_8cpp_1ad49ddd7cfd76c576006a7dc08799735c" compoundref="_sampler_8cpp" startline="49" endline="49">firstFrameSlot</references>
+        <references refid="_sampler_8cpp_1ae82a1617d58b767556f0d2503571cbb1" compoundref="_sampler_8cpp" startline="46" endline="46">frameCountSlot</references>
+        <references refid="class_symbolizer_1a92eeac9f0e75cec721c3887f3c9528e4" compoundref="_symbolizer_8cpp" startline="380" endline="395">Symbolizer::getOrCreateKernelFrameKey</references>
+        <references refid="class_symbolizer_1ac2636a4ed1057b823a39d1e316b7b222" compoundref="_symbolizer_8cpp" startline="190" endline="210">Symbolizer::getOrCreateUserFrameKey</references>
+        <references refid="_sampler_8cpp_1a2bea1eaa54c073588149c245378a98de" compoundref="_sampler_8cpp" startline="527" endline="532">getWord</references>
+        <references refid="class_sampler_1ae3f391e3bfd03bcad0e434430721a832" compoundref="_sampler_8h" startline="143">symbolizer</references>
+        <references refid="_sampler_8cpp_1a49b5eb8089c4178644e271e293e9e99b" compoundref="_sampler_8cpp" startline="4" endline="4">unitWeight</references>
+        <references refid="_sampler_8cpp_1a9efa99e7439c1e4bb8265f444797d8b6" compoundref="_sampler_8cpp" startline="437" endline="437">wordBytes</references>
+        <referencedby refid="class_sampler_1ae86cd2f041fc30f659c9d4474a4d903c" compoundref="_sampler_8cpp" startline="655" endline="661">addSample</referencedby>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Samples the stacks of the processes that the scout process starts, while a command runs. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>The constructor starts a kernel sampling session and a thread that reads its records. The sampler counts, for each table type, how many samples hold each frame. The two table types are <computeroutput>sample</computeroutput> for the timer samples and <computeroutput>cswitch</computeroutput> for the context switches. The <computeroutput><ref refid="class_sampler_1a20473e869862e0950def74238b24bcd7" kindref="member">drain</ref></computeroutput> function stops the session and the thread. The <computeroutput><ref refid="class_sampler_1a91be2949beb7a32df2e93d205502f4e3" kindref="member">getSamples</ref></computeroutput> function then returns the counts as a tree. Only the descendants of the scout process contribute samples. </para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>Sampler</label>
+        <link refid="class_sampler"/>
+        <childnode refid="2" relation="private-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>juce::Thread</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>Sampler</label>
+        <link refid="class_sampler"/>
+        <childnode refid="2" relation="private-inheritance">
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>symbolizer</edgelabel>
+        </childnode>
+        <childnode refid="4" relation="usage">
+          <edgelabel>clockRings</edgelabel>
+          <edgelabel>switchRings</edgelabel>
+        </childnode>
+      </node>
+      <node id="3">
+        <label>Symbolizer</label>
+        <link refid="class_symbolizer"/>
+      </node>
+      <node id="2">
+        <label>juce::Thread</label>
+      </node>
+      <node id="5">
+        <label>std::unique_ptr&lt; void, void(*)(void *)&gt;</label>
+      </node>
+      <node id="4">
+        <label>std::vector&lt; std::unique_ptr&lt; void, void(*)(void *)&gt; &gt;</label>
+        <childnode refid="5" relation="usage">
+          <edgelabel>elements</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="Source/Sampler.h" line="60" column="1" bodyfile="Source/Sampler.h" bodystart="61" bodyend="429"/>
+    <listofallmembers>
+      <member refid="class_sampler_1a3173fc3528fe177be86ce0ce8f29cd83" prot="private" virt="non-virtual"><scope>Sampler</scope><name>addAllRecords</name></member>
+      <member refid="class_sampler_1ad8520adf5251edbe4d546f16b548e3bd" prot="private" virt="non-virtual"><scope>Sampler</scope><name>addCounts</name></member>
+      <member refid="class_sampler_1a1c44e35adce2ea951252ec1b8cab1891" prot="private" virt="non-virtual"><scope>Sampler</scope><name>addFrames</name></member>
+      <member refid="class_sampler_1a1b0c7a89bc356514777c16a32ed803b7" prot="private" virt="non-virtual"><scope>Sampler</scope><name>addKernelSamples</name></member>
+      <member refid="class_sampler_1aa8da20ec1df14aa97e4333e217cb7e99" prot="private" virt="non-virtual"><scope>Sampler</scope><name>addLost</name></member>
+      <member refid="class_sampler_1ab90f07a264117ea7d86e28a334e13c6b" prot="private" virt="non-virtual"><scope>Sampler</scope><name>addLostEvents</name></member>
+      <member refid="class_sampler_1a5b74c691901a5a66225c5653c8a90005" prot="private" virt="non-virtual"><scope>Sampler</scope><name>addRecords</name></member>
+      <member refid="class_sampler_1a74c644f7d95b29dfa4bd1ccbaaedd5c6" prot="private" virt="non-virtual"><scope>Sampler</scope><name>addRecords</name></member>
+      <member refid="class_sampler_1ae86cd2f041fc30f659c9d4474a4d903c" prot="private" virt="non-virtual"><scope>Sampler</scope><name>addSample</name></member>
+      <member refid="class_sampler_1a7b82b7917ef1a3ca7587abc8ef371c10" prot="private" virt="non-virtual"><scope>Sampler</scope><name>addSampleEnd</name></member>
+      <member refid="class_sampler_1a7e6ec11c924fea70cff7c5523d947436" prot="private" virt="non-virtual"><scope>Sampler</scope><name>addSampleStart</name></member>
+      <member refid="class_sampler_1aa34b215d898befd15f2309ca2d816843" prot="private" virt="non-virtual"><scope>Sampler</scope><name>addStackFrames</name></member>
+      <member refid="class_sampler_1aaba7a4bee0dcf7ecfeaddb43883fde6a" prot="private" virt="non-virtual"><scope>Sampler</scope><name>addStackHeader</name></member>
+      <member refid="class_sampler_1a45d5d70da446de4caafc6a2b51f4d291" prot="private" virt="non-virtual"><scope>Sampler</scope><name>addThreadInfo</name></member>
+      <member refid="class_sampler_1a81a879e06d0a4c952c005aa0512a41fc" prot="private" virt="non-virtual"><scope>Sampler</scope><name>addUserSamples</name></member>
+      <member refid="class_sampler_1ae3f2dd6abb219dd46c795c7edf35db8d" prot="private" virt="non-virtual"><scope>Sampler</scope><name>brackets</name></member>
+      <member refid="class_sampler_1a56614a0afedf38a2ebe125135f016a9d" prot="private" virt="non-virtual"><scope>Sampler</scope><name>clockEvents</name></member>
+      <member refid="class_sampler_1a108f45bb6b7a2c1fa3204ea9a0cc25ad" prot="private" virt="non-virtual"><scope>Sampler</scope><name>clockRings</name></member>
+      <member refid="class_sampler_1a5996dbf305228d55bfb3c86ced39b146" prot="private" virt="non-virtual"><scope>Sampler</scope><name>counts</name></member>
+      <member refid="class_sampler_1aa07b205965331acf4c461c26d309a712" prot="private" virt="non-virtual"><scope>Sampler</scope><name>descendants</name></member>
+      <member refid="class_sampler_1a20473e869862e0950def74238b24bcd7" prot="public" virt="non-virtual"><scope>Sampler</scope><name>drain</name></member>
+      <member refid="class_sampler_1a91be2949beb7a32df2e93d205502f4e3" prot="public" virt="non-virtual"><scope>Sampler</scope><name>getSamples</name></member>
+      <member refid="class_sampler_1a7cf4f7bbc391afd66a215460984f8443" prot="public" virt="non-virtual"><scope>Sampler</scope><name>maximumStackDepth</name></member>
+      <member refid="class_sampler_1a06a006e3b2e6f8b0a67a07707ae4b70c" prot="public" virt="non-virtual"><scope>Sampler</scope><name>minimumIntervalMs</name></member>
+      <member refid="class_sampler_1ae2192afc9784395ea7cb7d05270318d3" prot="public" virt="non-virtual"><scope>Sampler</scope><name>minimumStackDepth</name></member>
+      <member refid="class_sampler_1a4b4efc0c6090ade9a73af95f8d70f827" prot="private" virt="non-virtual"><scope>Sampler</scope><name>pendingUserSamples</name></member>
+      <member refid="class_sampler_1a3a0bfdc50f13c6b25811cc422fdce419" prot="private" virt="non-virtual"><scope>Sampler</scope><name>reading</name></member>
+      <member refid="class_sampler_1a8f8bd52cb658a991b1850f19c7efddf2" prot="private" virt="non-virtual"><scope>Sampler</scope><name>readRecords</name></member>
+      <member refid="class_sampler_1aa64c8e9afe39558efd92cab23a0d73d3" prot="private" virt="non-virtual"><scope>Sampler</scope><name>run</name></member>
+      <member refid="class_sampler_1ae2758b1ba8727dc22fdf5a80572e5872" prot="public" virt="non-virtual"><scope>Sampler</scope><name>Sampler</name></member>
+      <member refid="class_sampler_1a0d033b10e47f10da0cb933a5888d8584" prot="private" virt="non-virtual"><scope>Sampler</scope><name>session</name></member>
+      <member refid="class_sampler_1a4f42f04f23edaa5df034fa51f3e5c2b2" prot="private" virt="non-virtual"><scope>Sampler</scope><name>setDescendants</name></member>
+      <member refid="class_sampler_1a60ebd60e1f63f4dfa7b4ba94e69a63e8" prot="private" virt="non-virtual"><scope>Sampler</scope><name>setEnabled</name></member>
+      <member refid="class_sampler_1a67fd6d27248213e4f9bf5630703d3f18" prot="private" virt="non-virtual"><scope>Sampler</scope><name>startSession</name></member>
+      <member refid="class_sampler_1adead0ff46c4127293def9741a9abc68d" prot="private" virt="non-virtual"><scope>Sampler</scope><name>switchEvents</name></member>
+      <member refid="class_sampler_1a8072e26240c9fb945f82d2a5bf2131c4" prot="private" virt="non-virtual"><scope>Sampler</scope><name>switchRings</name></member>
+      <member refid="class_sampler_1ae3f391e3bfd03bcad0e434430721a832" prot="private" virt="non-virtual"><scope>Sampler</scope><name>symbolizer</name></member>
+      <member refid="class_sampler_1a96dcddeb6ff5f0507f11de173cab4e95" prot="public" virt="non-virtual"><scope>Sampler</scope><name>~Sampler</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -2,18 +2,18 @@
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.18.0" xml:lang="en-US">
   <compounddef id="_identifiers_8h" kind="file" language="C++">
     <compoundname>Identifiers.h</compoundname>
-    <includedby refid="_generated_8h" local="yes">generated/Generated.h</includedby>
+    <includedby refid="_generated_8h" local="yes">Source/generated/Generated.h</includedby>
     <invincdepgraph>
       <node id="3">
-        <label>Benchmark.cpp</label>
+        <label>Source/Benchmark.cpp</label>
         <link refid="_benchmark_8cpp"/>
       </node>
       <node id="5">
-        <label>Help.cpp</label>
+        <label>Source/Help.cpp</label>
         <link refid="_help_8cpp"/>
       </node>
       <node id="4">
-        <label>Help.h</label>
+        <label>Source/Help.h</label>
         <link refid="_help_8h"/>
         <childnode refid="5" relation="include">
         </childnode>
@@ -21,15 +21,15 @@
         </childnode>
       </node>
       <node id="6">
-        <label>Main.cpp</label>
+        <label>Source/Main.cpp</label>
         <link refid="_main_8cpp"/>
       </node>
       <node id="8">
-        <label>Processor.cpp</label>
+        <label>Source/Processor.cpp</label>
         <link refid="_processor_8cpp"/>
       </node>
       <node id="7">
-        <label>Processor.h</label>
+        <label>Source/Processor.h</label>
         <link refid="_processor_8h"/>
         <childnode refid="6" relation="include">
         </childnode>
@@ -37,39 +37,53 @@
         </childnode>
       </node>
       <node id="9">
-        <label>ProfileReport.cpp</label>
+        <label>Source/ProfileReport.cpp</label>
         <link refid="_profile_report_8cpp"/>
       </node>
       <node id="11">
-        <label>Toolchain.cpp</label>
-        <link refid="_toolchain_8cpp"/>
+        <label>Source/Sampler.cpp</label>
+        <link refid="_sampler_8cpp"/>
       </node>
       <node id="10">
-        <label>Toolchain.h</label>
-        <link refid="_toolchain_8h"/>
-        <childnode refid="7" relation="include">
+        <label>Source/Sampler.h</label>
+        <link refid="_sampler_8h"/>
+        <childnode refid="3" relation="include">
         </childnode>
         <childnode refid="11" relation="include">
         </childnode>
-      </node>
-      <node id="13">
-        <label>Validator.cpp</label>
-        <link refid="_validator_8cpp"/>
-      </node>
-      <node id="12">
-        <label>Validator.h</label>
-        <link refid="_validator_8h"/>
-        <childnode refid="7" relation="include">
-        </childnode>
-        <childnode refid="13" relation="include">
+        <childnode refid="12" relation="include">
         </childnode>
       </node>
       <node id="14">
-        <label>generated/Generated.cpp</label>
+        <label>Source/Toolchain.cpp</label>
+        <link refid="_toolchain_8cpp"/>
+      </node>
+      <node id="13">
+        <label>Source/Toolchain.h</label>
+        <link refid="_toolchain_8h"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+      </node>
+      <node id="12">
+        <label>Source/Validator.cpp</label>
+        <link refid="_validator_8cpp"/>
+      </node>
+      <node id="15">
+        <label>Source/Validator.h</label>
+        <link refid="_validator_8h"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="16">
+        <label>Source/generated/Generated.cpp</label>
         <link refid="_generated_8cpp"/>
       </node>
       <node id="2">
-        <label>generated/Generated.h</label>
+        <label>Source/generated/Generated.h</label>
         <link refid="_generated_8h"/>
         <childnode refid="3" relation="include">
         </childnode>
@@ -83,19 +97,21 @@
         </childnode>
         <childnode refid="10" relation="include">
         </childnode>
-        <childnode refid="12" relation="include">
+        <childnode refid="13" relation="include">
         </childnode>
-        <childnode refid="14" relation="include">
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
         </childnode>
       </node>
       <node id="1">
-        <label>generated/Identifiers.h</label>
+        <label>Source/generated/Identifiers.h</label>
         <link refid="_identifiers_8h"/>
         <childnode refid="2" relation="include">
         </childnode>
       </node>
     </invincdepgraph>
-    <innernamespace refid="namespaceId">Id</innernamespace>
+    <innernamespace refid="namespace_id">Id</innernamespace>
     <briefdescription>
 <para>SCOUT manifest vocabulary. </para>
     </briefdescription>
@@ -121,28 +137,32 @@
 <codeline lineno="21"><highlight class="normal"></highlight></codeline>
 <codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="23"><highlight class="normal"></highlight></codeline>
-<codeline lineno="24"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespaceId" kindref="compound" external="/Users/jreng/Documents/Poems/dev/jam/docs/tagfile.xml">Id</ref></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespace_id" kindref="compound">Id</ref></highlight></codeline>
 <codeline lineno="25"><highlight class="normal">{</highlight></codeline>
 <codeline lineno="26"><highlight class="normal"></highlight><highlight class="comment">/*_____________________________________________________________________________*/</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="27"><highlight class="normal"></highlight></codeline>
 <codeline lineno="29"><highlight class="normal"></highlight></codeline>
-<codeline lineno="30"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>juce::Identifier<sp/><ref refid="namespaceId_1af393585104ec335510688180036ff1d6" kindref="member" external="/Users/jreng/Documents/Poems/dev/jam/docs/tagfile.xml">epochs</ref>;</highlight></codeline>
-<codeline lineno="31"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>juce::Identifier<sp/><ref refid="namespaceId_1a3c8da0c68c021ababf62dc69bef9488a" kindref="member" external="/Users/jreng/Documents/Poems/dev/jam/docs/tagfile.xml">output</ref>;</highlight></codeline>
-<codeline lineno="32"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>juce::Identifier<sp/><ref refid="namespaceId_1a1538a142ed265f60c8fcf1703a106a7d" kindref="member" external="/Users/jreng/Documents/Poems/dev/jam/docs/tagfile.xml">command</ref>;</highlight></codeline>
-<codeline lineno="33"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>juce::Identifier<sp/><ref refid="namespaceId_1ae725772eead68e70d784b84b1368bed1" kindref="member" external="/Users/jreng/Documents/Poems/dev/jam/docs/tagfile.xml">profile</ref>;</highlight></codeline>
-<codeline lineno="34"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>juce::Identifier<sp/><ref refid="namespaceId_1af9d54e8fed53adf7db2cd94d0fb88a08" kindref="member" external="/Users/jreng/Documents/Poems/dev/jam/docs/tagfile.xml">epoch</ref>;</highlight></codeline>
-<codeline lineno="35"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>juce::Identifier<sp/><ref refid="namespaceId_1a22c89b9587f1b0bb9bc77c17d2a9a4fa" kindref="member" external="/Users/jreng/Documents/Poems/dev/jam/docs/tagfile.xml">errorPercent</ref>;</highlight></codeline>
-<codeline lineno="36"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>juce::Identifier<sp/><ref refid="namespaceId_1a483df25d168ac28ba770d1f103a37065" kindref="member" external="/Users/jreng/Documents/Poems/dev/jam/docs/tagfile.xml">change</ref>;</highlight></codeline>
-<codeline lineno="37"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>juce::Identifier<sp/><ref refid="namespaceId_1abdeffd71861b09b9a07a2f20b9d2d53e" kindref="member" external="/Users/jreng/Documents/Poems/dev/jam/docs/tagfile.xml">probability</ref>;</highlight></codeline>
-<codeline lineno="38"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>juce::Identifier<sp/><ref refid="namespaceId_1a674faf6c4f97d82e2ccc9a9fb84d27de" kindref="member" external="/Users/jreng/Documents/Poems/dev/jam/docs/tagfile.xml">percentile</ref>;</highlight></codeline>
-<codeline lineno="39"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>juce::Identifier<sp/><ref refid="namespaceId_1ab274a2ba05a0f74a439c1cf693818875" kindref="member" external="/Users/jreng/Documents/Poems/dev/jam/docs/tagfile.xml">system</ref>;</highlight></codeline>
-<codeline lineno="40"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>juce::Identifier<sp/><ref refid="namespaceId_1a0f9647376c570f4f428258196fa64c61" kindref="member" external="/Users/jreng/Documents/Poems/dev/jam/docs/tagfile.xml">toolchain</ref>;<sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="41"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>juce::Identifier<sp/><ref refid="namespaceId_1ac8f84d92cb02638b89abb87149be1caf" kindref="member" external="/Users/jreng/Documents/Poems/dev/jam/docs/tagfile.xml">flag</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="42"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>juce::Identifier<sp/><ref refid="namespaceId_1a7f93eafe58a56db2c54f56300c1484b9" kindref="member" external="/Users/jreng/Documents/Poems/dev/jam/docs/tagfile.xml">help</ref>;</highlight></codeline>
-<codeline lineno="43"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>juce::Identifier<sp/><ref refid="namespaceId_1a32ffc7aee9ffe0ba992401c38b1e8243" kindref="member" external="/Users/jreng/Documents/Poems/dev/jam/docs/tagfile.xml">date</ref>;</highlight></codeline>
-<codeline lineno="44"><highlight class="normal"></highlight></codeline>
-<codeline lineno="46"><highlight class="normal">}</highlight><highlight class="comment">//<sp/>namespace<sp/>Id</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>juce::Identifier<sp/><ref refid="namespace_id_1af393585104ec335510688180036ff1d6" kindref="member">epochs</ref>;</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>juce::Identifier<sp/><ref refid="namespace_id_1a3c8da0c68c021ababf62dc69bef9488a" kindref="member">output</ref>;</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>juce::Identifier<sp/><ref refid="namespace_id_1a1538a142ed265f60c8fcf1703a106a7d" kindref="member">command</ref>;</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>juce::Identifier<sp/><ref refid="namespace_id_1ae725772eead68e70d784b84b1368bed1" kindref="member">profile</ref>;</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>juce::Identifier<sp/><ref refid="namespace_id_1af9d54e8fed53adf7db2cd94d0fb88a08" kindref="member">epoch</ref>;</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>juce::Identifier<sp/><ref refid="namespace_id_1a22c89b9587f1b0bb9bc77c17d2a9a4fa" kindref="member">errorPercent</ref>;</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>juce::Identifier<sp/><ref refid="namespace_id_1a483df25d168ac28ba770d1f103a37065" kindref="member">change</ref>;</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>juce::Identifier<sp/><ref refid="namespace_id_1abdeffd71861b09b9a07a2f20b9d2d53e" kindref="member">probability</ref>;</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>juce::Identifier<sp/><ref refid="namespace_id_1a674faf6c4f97d82e2ccc9a9fb84d27de" kindref="member">percentile</ref>;</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>juce::Identifier<sp/><ref refid="namespace_id_1ab274a2ba05a0f74a439c1cf693818875" kindref="member">system</ref>;</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>juce::Identifier<sp/><ref refid="namespace_id_1a0f9647376c570f4f428258196fa64c61" kindref="member">toolchain</ref>;<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>juce::Identifier<sp/><ref refid="namespace_id_1ac8f84d92cb02638b89abb87149be1caf" kindref="member">flag</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>juce::Identifier<sp/><ref refid="namespace_id_1a7f93eafe58a56db2c54f56300c1484b9" kindref="member">help</ref>;</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>juce::Identifier<sp/><ref refid="namespace_id_1a32ffc7aee9ffe0ba992401c38b1e8243" kindref="member">date</ref>;</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>juce::Identifier<sp/><ref refid="namespace_id_1aaa0851cf60aab0c856e3aa5b9ebabf75" kindref="member">sample</ref>;</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>juce::Identifier<sp/><ref refid="namespace_id_1a9dd3b447eb5f7e4e61f3f4264c20a2e5" kindref="member">cswitch</ref>;</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>juce::Identifier<sp/><ref refid="namespace_id_1ac827a343ac5e638ec813f83a9e519d28" kindref="member">intervalMs</ref>;</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>juce::Identifier<sp/><ref refid="namespace_id_1ad3655b6ef8e8f2d60a6aaeedd27474b2" kindref="member">stackDepth</ref>;</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal">}</highlight><highlight class="comment">//<sp/>namespace<sp/>Id</highlight><highlight class="normal"></highlight></codeline>
     </programlisting>
-    <location file="generated/Identifiers.h"/>
+    <location file="Source/generated/Identifiers.h"/>
   </compounddef>
 </doxygen>

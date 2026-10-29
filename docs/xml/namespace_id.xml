@@ -1,0 +1,316 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.18.0" xml:lang="en-US">
+  <compounddef id="namespace_id" kind="namespace" language="C++">
+    <compoundname>Id</compoundname>
+    <sectiondef kind="var">
+      <memberdef kind="variable" id="namespace_id_1af393585104ec335510688180036ff1d6" prot="public" static="no" mutable="no">
+        <type>const juce::Identifier</type>
+        <definition>const juce::Identifier Id::epochs</definition>
+        <argsstring></argsstring>
+        <name>epochs</name>
+        <qualifiedname>Id::epochs</qualifiedname>
+        <initializer>{ juce::String::fromUTF8 (&quot;epochs&quot;) }</initializer>
+        <briefdescription>
+<para>SCOUT manifest vocabulary — the tables and keys of a scout manifest. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/generated/Generated.cpp" line="26" column="28" bodyfile="Source/generated/Generated.cpp" bodystart="26" bodyend="26" declfile="Source/generated/Identifiers.h" declline="30" declcolumn="31"/>
+        <referencedby refid="struct_processor_1acec35c543c65ed5dc6618fe7e79ef835" compoundref="_processor_8cpp" startline="58" endline="84">Processor::runEpochs</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="namespace_id_1a3c8da0c68c021ababf62dc69bef9488a" prot="public" static="no" mutable="no">
+        <type>const juce::Identifier</type>
+        <definition>const juce::Identifier Id::output</definition>
+        <argsstring></argsstring>
+        <name>output</name>
+        <qualifiedname>Id::output</qualifiedname>
+        <initializer>{ juce::String::fromUTF8 (&quot;output&quot;) }</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/generated/Generated.cpp" line="27" column="28" bodyfile="Source/generated/Generated.cpp" bodystart="27" bodyend="27" declfile="Source/generated/Identifiers.h" declline="31" declcolumn="31"/>
+        <referencedby refid="struct_processor_1aa277929ee4d6480d62fa48d2dd5f2a6c" compoundref="_processor_8cpp" startline="86" endline="95">Processor::writeReport</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="namespace_id_1a1538a142ed265f60c8fcf1703a106a7d" prot="public" static="no" mutable="no">
+        <type>const juce::Identifier</type>
+        <definition>const juce::Identifier Id::command</definition>
+        <argsstring></argsstring>
+        <name>command</name>
+        <qualifiedname>Id::command</qualifiedname>
+        <initializer>{ juce::String::fromUTF8 (&quot;command&quot;) }</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/generated/Generated.cpp" line="28" column="28" bodyfile="Source/generated/Generated.cpp" bodystart="28" bodyend="28" declfile="Source/generated/Identifiers.h" declline="32" declcolumn="31"/>
+        <referencedby refid="struct_validator_1af387720572933d5519b0597814433c17" compoundref="_validator_8cpp" startline="4" endline="47">Validator::addRules</referencedby>
+        <referencedby refid="struct_processor_1acec35c543c65ed5dc6618fe7e79ef835" compoundref="_processor_8cpp" startline="58" endline="84">Processor::runEpochs</referencedby>
+        <referencedby refid="struct_processor_1a83804663c3ddec5019aad5fa2673bada" compoundref="_processor_8cpp" startline="46" endline="56">Processor::runToolchainRow</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="namespace_id_1ae725772eead68e70d784b84b1368bed1" prot="public" static="no" mutable="no">
+        <type>const juce::Identifier</type>
+        <definition>const juce::Identifier Id::profile</definition>
+        <argsstring></argsstring>
+        <name>profile</name>
+        <qualifiedname>Id::profile</qualifiedname>
+        <initializer>{ juce::String::fromUTF8 (&quot;profile&quot;) }</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/generated/Generated.cpp" line="29" column="28" bodyfile="Source/generated/Generated.cpp" bodystart="29" bodyend="29" declfile="Source/generated/Identifiers.h" declline="33" declcolumn="31"/>
+        <referencedby refid="_processor_8cpp_1a75659085307119553a8c6b4fd6ba0ac4" compoundref="_processor_8cpp" startline="3" endline="9">getBaseline</referencedby>
+        <referencedby refid="class_benchmark_1ac2758e9667d09cca4fa1c7d0845c7413" compoundref="_benchmark_8cpp" startline="224" endline="243">Benchmark::getProfiles</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="namespace_id_1af9d54e8fed53adf7db2cd94d0fb88a08" prot="public" static="no" mutable="no">
+        <type>const juce::Identifier</type>
+        <definition>const juce::Identifier Id::epoch</definition>
+        <argsstring></argsstring>
+        <name>epoch</name>
+        <qualifiedname>Id::epoch</qualifiedname>
+        <initializer>{ juce::String::fromUTF8 (&quot;epoch&quot;) }</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/generated/Generated.cpp" line="30" column="28" bodyfile="Source/generated/Generated.cpp" bodystart="30" bodyend="30" declfile="Source/generated/Identifiers.h" declline="34" declcolumn="31"/>
+        <referencedby refid="class_benchmark_1ae59eaa6c1836391353180c17526f1c16" compoundref="_benchmark_8cpp" startline="195" endline="222">Benchmark::addEpoch</referencedby>
+        <referencedby refid="class_benchmark_1a95c95a548d6bfafe6e2843a25b7a748e" compoundref="_benchmark_8cpp" startline="185" endline="193">Benchmark::addMissingSamples</referencedby>
+        <referencedby refid="class_benchmark_1a9dc60998270d40efabd9739f299bd86d" compoundref="_benchmark_8cpp" startline="158" endline="183">Benchmark::addRows</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="namespace_id_1a22c89b9587f1b0bb9bc77c17d2a9a4fa" prot="public" static="no" mutable="no">
+        <type>const juce::Identifier</type>
+        <definition>const juce::Identifier Id::errorPercent</definition>
+        <argsstring></argsstring>
+        <name>errorPercent</name>
+        <qualifiedname>Id::errorPercent</qualifiedname>
+        <initializer>{ juce::String::fromUTF8 (&quot;errorPercent&quot;) }</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/generated/Generated.cpp" line="31" column="28" bodyfile="Source/generated/Generated.cpp" bodystart="31" bodyend="31" declfile="Source/generated/Identifiers.h" declline="35" declcolumn="31"/>
+        <referencedby refid="class_profile_report_1a7b882e2ebfe719b1e06329583c2f697c" compoundref="_profile_report_8cpp" startline="71" endline="82">ProfileReport::getZone</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="namespace_id_1a483df25d168ac28ba770d1f103a37065" prot="public" static="no" mutable="no">
+        <type>const juce::Identifier</type>
+        <definition>const juce::Identifier Id::change</definition>
+        <argsstring></argsstring>
+        <name>change</name>
+        <qualifiedname>Id::change</qualifiedname>
+        <initializer>{ juce::String::fromUTF8 (&quot;change&quot;) }</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/generated/Generated.cpp" line="32" column="28" bodyfile="Source/generated/Generated.cpp" bodystart="32" bodyend="32" declfile="Source/generated/Identifiers.h" declline="36" declcolumn="31"/>
+        <referencedby refid="class_profile_report_1a9e7a7ae53d95a8e5be64b31fdbbec3a9" compoundref="_profile_report_8cpp" startline="105" endline="119">ProfileReport::addComparison</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="namespace_id_1abdeffd71861b09b9a07a2f20b9d2d53e" prot="public" static="no" mutable="no">
+        <type>const juce::Identifier</type>
+        <definition>const juce::Identifier Id::probability</definition>
+        <argsstring></argsstring>
+        <name>probability</name>
+        <qualifiedname>Id::probability</qualifiedname>
+        <initializer>{ juce::String::fromUTF8 (&quot;probability&quot;) }</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/generated/Generated.cpp" line="33" column="28" bodyfile="Source/generated/Generated.cpp" bodystart="33" bodyend="33" declfile="Source/generated/Identifiers.h" declline="37" declcolumn="31"/>
+        <referencedby refid="class_profile_report_1a9e7a7ae53d95a8e5be64b31fdbbec3a9" compoundref="_profile_report_8cpp" startline="105" endline="119">ProfileReport::addComparison</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="namespace_id_1a674faf6c4f97d82e2ccc9a9fb84d27de" prot="public" static="no" mutable="no">
+        <type>const juce::Identifier</type>
+        <definition>const juce::Identifier Id::percentile</definition>
+        <argsstring></argsstring>
+        <name>percentile</name>
+        <qualifiedname>Id::percentile</qualifiedname>
+        <initializer>{ juce::String::fromUTF8 (&quot;percentile&quot;) }</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/generated/Generated.cpp" line="34" column="28" bodyfile="Source/generated/Generated.cpp" bodystart="34" bodyend="34" declfile="Source/generated/Identifiers.h" declline="38" declcolumn="31"/>
+        <referencedby refid="class_profile_report_1ab5d472be1a71894bfb4280711959ba11" compoundref="_profile_report_8cpp" startline="41" endline="69">ProfileReport::getProfile</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="namespace_id_1ab274a2ba05a0f74a439c1cf693818875" prot="public" static="no" mutable="no">
+        <type>const juce::Identifier</type>
+        <definition>const juce::Identifier Id::system</definition>
+        <argsstring></argsstring>
+        <name>system</name>
+        <qualifiedname>Id::system</qualifiedname>
+        <initializer>{ juce::String::fromUTF8 (&quot;system&quot;) }</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/generated/Generated.cpp" line="35" column="28" bodyfile="Source/generated/Generated.cpp" bodystart="35" bodyend="35" declfile="Source/generated/Identifiers.h" declline="39" declcolumn="31"/>
+        <referencedby refid="class_benchmark_1a5d20602a03271cc0aa22560a9e64aad9" compoundref="_benchmark_8cpp" startline="40" endline="52">Benchmark::addChildTime</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="namespace_id_1a0f9647376c570f4f428258196fa64c61" prot="public" static="no" mutable="no">
+        <type>const juce::Identifier</type>
+        <definition>const juce::Identifier Id::toolchain</definition>
+        <argsstring></argsstring>
+        <name>toolchain</name>
+        <qualifiedname>Id::toolchain</qualifiedname>
+        <initializer>{ juce::String::fromUTF8 (&quot;toolchain&quot;) }</initializer>
+        <briefdescription>
+<para>Reserved toolchain manifest table. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/generated/Generated.cpp" line="36" column="28" bodyfile="Source/generated/Generated.cpp" bodystart="36" bodyend="36" declfile="Source/generated/Identifiers.h" declline="40" declcolumn="31"/>
+        <referencedby refid="struct_validator_1af387720572933d5519b0597814433c17" compoundref="_validator_8cpp" startline="4" endline="47">Validator::addRules</referencedby>
+        <referencedby refid="struct_processor_1a6ace9660425275f32080160c0ae88b2b" compoundref="_processor_8cpp" startline="36" endline="44">Processor::run</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="namespace_id_1ac8f84d92cb02638b89abb87149be1caf" prot="public" static="no" mutable="no">
+        <type>const juce::Identifier</type>
+        <definition>const juce::Identifier Id::flag</definition>
+        <argsstring></argsstring>
+        <name>flag</name>
+        <qualifiedname>Id::flag</qualifiedname>
+        <initializer>{ juce::String::fromUTF8 (&quot;flag&quot;) }</initializer>
+        <briefdescription>
+<para><ref refid="struct_toolchain" kindref="compound">Toolchain</ref> table flag column. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/generated/Generated.cpp" line="37" column="28" bodyfile="Source/generated/Generated.cpp" bodystart="37" bodyend="37" declfile="Source/generated/Identifiers.h" declline="41" declcolumn="31"/>
+        <referencedby refid="struct_validator_1af387720572933d5519b0597814433c17" compoundref="_validator_8cpp" startline="4" endline="47">Validator::addRules</referencedby>
+        <referencedby refid="struct_processor_1a83804663c3ddec5019aad5fa2673bada" compoundref="_processor_8cpp" startline="46" endline="56">Processor::runToolchainRow</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="namespace_id_1a7f93eafe58a56db2c54f56300c1484b9" prot="public" static="no" mutable="no">
+        <type>const juce::Identifier</type>
+        <definition>const juce::Identifier Id::help</definition>
+        <argsstring></argsstring>
+        <name>help</name>
+        <qualifiedname>Id::help</qualifiedname>
+        <initializer>{ juce::String::fromUTF8 (&quot;help&quot;) }</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/generated/Generated.cpp" line="38" column="28" bodyfile="Source/generated/Generated.cpp" bodystart="38" bodyend="38" declfile="Source/generated/Identifiers.h" declline="42" declcolumn="31"/>
+        <referencedby refid="_main_8cpp_1ab90618bcc38cb8962e80a5a729a611b1" compoundref="_main_8cpp" startline="55" endline="59">getHelpFlag</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="namespace_id_1a32ffc7aee9ffe0ba992401c38b1e8243" prot="public" static="no" mutable="no">
+        <type>const juce::Identifier</type>
+        <definition>const juce::Identifier Id::date</definition>
+        <argsstring></argsstring>
+        <name>date</name>
+        <qualifiedname>Id::date</qualifiedname>
+        <initializer>{ juce::String::fromUTF8 (&quot;date&quot;) }</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/generated/Generated.cpp" line="39" column="28" bodyfile="Source/generated/Generated.cpp" bodystart="39" bodyend="39" declfile="Source/generated/Identifiers.h" declline="43" declcolumn="31"/>
+        <referencedby refid="struct_processor_1aa277929ee4d6480d62fa48d2dd5f2a6c" compoundref="_processor_8cpp" startline="86" endline="95">Processor::writeReport</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="namespace_id_1aaa0851cf60aab0c856e3aa5b9ebabf75" prot="public" static="no" mutable="no">
+        <type>const juce::Identifier</type>
+        <definition>const juce::Identifier Id::sample</definition>
+        <argsstring></argsstring>
+        <name>sample</name>
+        <qualifiedname>Id::sample</qualifiedname>
+        <initializer>{ juce::String::fromUTF8 (&quot;sample&quot;) }</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/generated/Generated.cpp" line="40" column="28" bodyfile="Source/generated/Generated.cpp" bodystart="40" bodyend="40" declfile="Source/generated/Identifiers.h" declline="44" declcolumn="31"/>
+        <referencedby refid="class_sampler_1a3173fc3528fe177be86ce0ce8f29cd83" compoundref="_sampler_8cpp" startline="619" endline="626">Sampler::addAllRecords</referencedby>
+        <referencedby refid="class_sampler_1ab90f07a264117ea7d86e28a334e13c6b" compoundref="_sampler_8cpp" startline="403" endline="406">Sampler::addLostEvents</referencedby>
+        <referencedby refid="struct_validator_1af387720572933d5519b0597814433c17" compoundref="_validator_8cpp" startline="4" endline="47">Validator::addRules</referencedby>
+        <referencedby refid="struct_processor_1ac2f8ddc17ef15f47f03fa71ce3d381c6" compoundref="_processor_8cpp" startline="17" endline="34">Processor::generate</referencedby>
+        <referencedby refid="_sampler_8cpp_1a4dd0c2d2ea14e3f4ebca6fc0e586054f" compoundref="_sampler_8cpp" startline="209" endline="218">getActionTable</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="namespace_id_1a9dd3b447eb5f7e4e61f3f4264c20a2e5" prot="public" static="no" mutable="no">
+        <type>const juce::Identifier</type>
+        <definition>const juce::Identifier Id::cswitch</definition>
+        <argsstring></argsstring>
+        <name>cswitch</name>
+        <qualifiedname>Id::cswitch</qualifiedname>
+        <initializer>{ juce::String::fromUTF8 (&quot;cswitch&quot;) }</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/generated/Generated.cpp" line="41" column="28" bodyfile="Source/generated/Generated.cpp" bodystart="41" bodyend="41" declfile="Source/generated/Identifiers.h" declline="45" declcolumn="31"/>
+        <referencedby refid="class_sampler_1a3173fc3528fe177be86ce0ce8f29cd83" compoundref="_sampler_8cpp" startline="619" endline="626">Sampler::addAllRecords</referencedby>
+        <referencedby refid="_sampler_8cpp_1a4dd0c2d2ea14e3f4ebca6fc0e586054f" compoundref="_sampler_8cpp" startline="209" endline="218">getActionTable</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="namespace_id_1ac827a343ac5e638ec813f83a9e519d28" prot="public" static="no" mutable="no">
+        <type>const juce::Identifier</type>
+        <definition>const juce::Identifier Id::intervalMs</definition>
+        <argsstring></argsstring>
+        <name>intervalMs</name>
+        <qualifiedname>Id::intervalMs</qualifiedname>
+        <initializer>{ juce::String::fromUTF8 (&quot;intervalMs&quot;) }</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/generated/Generated.cpp" line="42" column="28" bodyfile="Source/generated/Generated.cpp" bodystart="42" bodyend="42" declfile="Source/generated/Identifiers.h" declline="46" declcolumn="31"/>
+        <referencedby refid="struct_validator_1af387720572933d5519b0597814433c17" compoundref="_validator_8cpp" startline="4" endline="47">Validator::addRules</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="namespace_id_1ad3655b6ef8e8f2d60a6aaeedd27474b2" prot="public" static="no" mutable="no">
+        <type>const juce::Identifier</type>
+        <definition>const juce::Identifier Id::stackDepth</definition>
+        <argsstring></argsstring>
+        <name>stackDepth</name>
+        <qualifiedname>Id::stackDepth</qualifiedname>
+        <initializer>{ juce::String::fromUTF8 (&quot;stackDepth&quot;) }</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/generated/Generated.cpp" line="43" column="28" bodyfile="Source/generated/Generated.cpp" bodystart="43" bodyend="43" declfile="Source/generated/Identifiers.h" declline="47" declcolumn="31"/>
+        <referencedby refid="struct_validator_1af387720572933d5519b0597814433c17" compoundref="_validator_8cpp" startline="4" endline="47">Validator::addRules</referencedby>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="Source/generated/Generated.cpp" line="20" column="1"/>
+  </compounddef>
+</doxygen>

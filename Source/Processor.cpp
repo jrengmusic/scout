@@ -23,10 +23,11 @@ juce::Result Processor::generate()
 
     if (result.wasOk())
     {
-        const auto runTable { manifest.getValueTree (Id::manifest).getChildWithName (Id::toType (Id::run)) };
+        const auto manifestTree { manifest.getValueTree (Id::manifest) };
+        const auto runTable { manifestTree.getChildWithName (Id::toType (Id::run)) };
 
         if (runTable.isValid())
-            result = runEpochs (runTable);
+            result = runEpochs (runTable, manifestTree.getChildWithName (Id::toType (Id::sample)));
     }
 
     return result;
@@ -54,7 +55,7 @@ juce::Result Processor::runToolchainRow (const jam::ConfigDocument::Element& row
     return Toolchain::runProcess (arguments, diagnosticLine);
 }
 
-juce::Result Processor::runEpochs (const juce::ValueTree& runTable)
+juce::Result Processor::runEpochs (const juce::ValueTree& runTable, const juce::ValueTree& sampleTable)
 {
     const auto directory { documentFile.getParentDirectory() };
     const auto baselineName { runTable[Id::baseline].toString() };
@@ -68,16 +69,11 @@ juce::Result Processor::runEpochs (const juce::ValueTree& runTable)
 
         jassert (epochs > 0);
 
-        Benchmark benchmark { commandFile, samplesFile, documentFile };
+        Benchmark benchmark { commandFile, samplesFile, documentFile, sampleTable };
 
         for (int epoch { 0 }; epoch < epochs; ++epoch)
         {
-            auto result { benchmark.runEpoch() };
-
-            if (result.wasOk())
-                result = benchmark.addEpoch();
-
-            if (result.failed())
+            if (const auto result { benchmark.runEpoch() }; not result.wasOk())
                 return result;
         }
 

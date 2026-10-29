@@ -114,6 +114,86 @@
 <!-- The entry format is in /log (commands/log.md). It is the only source. -->
 <!-- Sprint entries go here, written by PRIMARY agents -->
 
+## Sprint 4: Kernel Sampling — kernel and user stacks in the scout engine, one backend for each OS ✅
+
+**Date:** 2026-10-29
+**Duration:** not recorded
+
+### Agents Participated
+- COUNSELOR — consumed `RFC-kernel-sampling.md` and settled its open questions from reads (trace and profile skills, XNU, Learn, tracy). Took the rulings R1-R9 and the audit ruling "Split by job" from ARCHITECT. Wrote and locked `PLAN-kernel-sampling.md` with Amendments A-C. Wrote each Engineer brief, validated each return with a Read, filtered the audit, and wrote this log.
+- Pathfinder — inventories of the scout engine, JAM `Subprocess`/`Profiler`, tracy ETW and perf code, the trace and profile skills, and the git state.
+- Librarian — XNU kperf/kdebug (thread info, kdebug trigger, lost events, fork and exec events, user-stack AST), Windows job objects, ETW, TDH, DbgHelp and UAC, Linux `perf_event_open`, tracefs and capabilities.
+- Engineer — Step 0 hygiene, the identifiers, the Benchmark per-table storage, `Sampler` (macOS, Linux and Windows designs and code), `Symbolizer`, the Validator rule, HELP.md, the audit fixes, the doxygen pass, and `~/.config/setup-scout.sh`.
+- Auditor — one sweep over Steps 0-10. It gave 55 findings. COUNSELOR accepted 46 and rejected 9, each against a read. ARCHITECT ruled on finding 36.
+
+### Files Modified (scout, 26 + generated)
+- **Step 0 hygiene (R1)**
+  - Deleted `RFC-live-measurement.md`, `RFC-profiling.md`, `PLAN-profiling.md`, `RFC-report-date.md`, `PLAN-report-date.md`.
+  - `CLAUDE.md:15`, `:21`, `:23` — current sprint, `Source/` list (with `Sampler` and `Symbolizer`), `cast/` list. The `RFC-live-measurement.md` row is deleted.
+  - `project-info.md` release-notes row and `RELEASE.md:7` — "runs a command once for each epoch", not `juce::UnitTest`.
+  - `RFC-kernel-sampling.md` — the citations into deleted files point to their live sources. Handoff item 4 records that Step 0 fixed it.
+- `PLAN-kernel-sampling.md` and `RFC-kernel-sampling.md` — the locked plan (rulings R1-R9, Amendments A-C) and its RFC. Both were deleted at the end of the sprint, on ARCHITECT's order "PLAN and RFC hygiene". Neither was in git. Session backups exist only in the session scratchpad. The stray root `tagfile.xml` from the doxygen run is deleted too.
+  - Rulings, verbatim answers:
+    - R1 Step 0: "Also CLAUDE/RELEASE".
+    - R2: "All three, one plan".
+    - R3: "scout/Source".
+    - R4: "sudo whole scout", then "no password".
+    - R5: "`## sample` table".
+    - R6, R7: "In this plan".
+    - Audit 36: "Split by job".
+- `cast/identifiers.md` — `sample`, `cswitch`, `intervalMs`, `stackDepth`. `cast/text.md` — `failSampleRange`. Cast regenerated `Source/generated/Identifiers.h`, `Generated.cpp`, `Text.h`.
+- `Source/Benchmark.h`, `Source/Benchmark.cpp` — storage is per table type (nested `jam::HashMap`s). `runEpoch` does the whole epoch, with no `#if`: child usage before and after, an optional `Sampler`, `drain`, `addEpoch` (samples file, sampler tables, `epoch` row), `addChildTime`, `addMissingSamples`. `getChildUsage`/`addChildTime` for each OS. On Windows, a job object owns the child accounting. `getProfiles` emits one table for each type.
+- `Source/Processor.h`, `Source/Processor.cpp` — `generate` builds the manifest tree once and passes the `## sample` table to `runEpochs`.
+- `Source/Sampler.h`, `Source/Sampler.cpp` (new) — the sampling session for each OS, the read thread, record parsing, the descendant filter, counting into `SAMPLE`/`CSWITCH`, and lost records into `dropped`.
+  - macOS: kperf and kdebug through raw `sysctl`. Action 1 is the timer, and action 2 is the kdebug trigger on `MACH_SCHED`. The user frames are weighted by the user-stack pends of each thread.
+  - Linux: per-CPU `perf_event_open`, with `inherit` on scout's thread.
+  - Windows: the NT kernel logger with SampledProfile and CSwitch stack walks, Process Start descendants, and TDH payload reads.
+- `Source/Symbolizer.h`, `Source/Symbolizer.cpp` (new, ruling "Split by job") — frame keys from Mach-O `LC_SYMTAB`, ELF, `/proc/kallsyms` and DbgHelp. The kernel symbols, text address and image name are built once for each process. Shared-cache and non-image files are not loaded.
+- `Source/Validator.h`, `Source/Validator.cpp:27-46` — the `sample` rule checks `intervalMs` and `stackDepth` against the `Sampler` bounds.
+- `Source/HELP.md` — the `## Sampling` section, the `## SAMPLE`/`## CSWITCH` tables, the rights for each OS, the macOS 100 ms look limit, `dropped`, the Windows `user`/`system` rows and the exit codes.
+- `docs/xml`, `docs/tagfile.xml` — regenerated, 0 doxygen warnings.
+- **Outside scout:** `~/.config/setup-scout.sh` (new). It installs `/opt/scout/scout` root-owned and adds a `NOPASSWD` sudoers rule for that binary only (macOS), or `setcap cap_perfmon,cap_dac_read_search` (Linux). `~/.config/bootstrap-macos.sh` calls it, and `bootstrap-windows.sh` notes that Windows needs nothing. `~/.config/.gitignore` whitelists `!setup-scout.sh`, because the repo ignores everything (`*`) except whitelisted root files.
+
+### Alignment Check
+- [x] BLESSED principles followed
+  - B: the OS sessions are acquired in the constructor and released in the destructor. A failed Windows start stops only a session it started.
+  - S: one row intake (`addRows`), one counting helper (`addCounts`), one symbol lookup.
+  - D: the Windows `EventsLost` count is added after the thread joins.
+- [x] NAMES.md adhered: names come from the `get`/`add`/`set`/`is`/`getOrCreate` families and the framework `start`/`stop`/`read`/`open` verbs (Amendment C.10). `Symbolizer` follows the ruling "Split by job".
+- [x] MANIFESTO.md principles applied
+- [x] Audit: each finding was read and named against a clause. Accepted findings are resolved. The rejections cite the refuting read:
+  - 11 (D5), 12 (Sampler.cpp start order), 13 (no source), 23 (JAM private, out of scope).
+  - 29 (B: release is destruction), 41 (S: one intake), 45 (offset keys), 47 (no fake carrier), 51 (no clause).
+- [x] Doxygen: 0 warnings for Sampler.h, Symbolizer.h, Benchmark.h, Processor.h and Validator.h (through `~/.config/nvim/doxygen/Doxyfile.project`, with `JUCE_WINDOWS` parsed in a coverage run).
+- [ ] Steps 6, 8 and 9 are not run. They are the macOS, Windows and Linux runtime checks (R9).
+
+### Problems Solved
+- **No tool showed where the kernel time inside `write` goes, cross-platform.** scout now samples kernel and user stacks of its command's process tree. It writes them through the same report path on macOS, Linux and Windows.
+- **One table type for each Benchmark.** The storage is now per table, so the sampler tables sit next to the target's table.
+- **`user`/`system` got a false 0 in every epoch after the first** (audit 1). The padding now runs after the child time.
+- **No password at run time** (ARCHITECT: "no password"). `setup-scout.sh` configures this once for each machine. Root never reaches a manifest command on Linux. On macOS, the rule names only the root-owned binary.
+
+### State for Continuation
+- `~/.config/setup-scout.sh` is NOT applied on this Mac. `sudo` rejected the password given in chat. ARCHITECT runs `bash ~/.config/setup-scout.sh` once. Then check `sudo -n /opt/scout/scout --version` (no prompt), and check that `sudo -n true` still asks for a password.
+- Step 6 (macOS) is not run. The manifest is in the session scratchpad: `kernel.md` (EVE Profile build, `seq 1 10000000`, `intervalMs` 1, `stackDepth` 64, no toolchain rows). Rewrite it if the scratchpad is gone: the EVE live manifest without `## toolchain`, `epochs` 1, and a `## sample` table. Check:
+  - `PERF_CS_*` records appear, and a kernel frame resolves.
+  - `seq` is kept as a descendant.
+  - `proc_pidinfo` works on `/usr/bin/seq`, and the user bracket carries `PERF_TI_DATA`.
+  - The kdebug trigger samples the thread that switches out.
+  - No ktrace session remains after an error.
+  - A derived XNU finding needs a check: the user-stack depth may fall to `MAX_UCALLSTACK_FRAMES` (osfmk_kern_thread.h:865-870).
+- The macOS build of ARCHITECT's machine is clean ("scout built clean"). The Windows (Step 8) and Linux (Step 9) blocks of `Sampler.cpp`, `Symbolizer.cpp` and `Benchmark.cpp` were written on macOS and never compiled. Windows run checks: delivery lag, `SymInitializeW` with a pid key, stack walk on the same CPU, kernel stacks with `DisablePagingExecutive`, `CSwitch` stack owner, and Process Start order across CPU buffers (audit 13).
+- The Step 2 check (an existing report unchanged in tables, rows and columns) is not run on `eve/benchmark/replay.md`.
+- A Windows run that crashed leaves the "NT Kernel Logger" running. The next run then fails with `StartTrace: …` until `logman stop "NT Kernel Logger" -ets` (design D5).
+- `git status` lists every `Builds/Debug/` file as deleted (` D`). No step of this sprint deleted them, and this log does not attribute the deletion.
+- `~/.carol/skills/profile/SKILL.md` and `trace/SKILL.md` do not mention the `## sample` table or the `SAMPLE`/`CSWITCH` tables. They are outside this sprint's file set.
+
+### Debts Paid
+- None
+
+### Debts Deferred
+- None
+
 ## Sprint 3: Report Date — run date as front matter through the JAM markdown API ✅
 
 **Date:** 2026-10-29

@@ -4,11 +4,11 @@
     <compoundname>Validator.h</compoundname>
     <includes local="no">JuceHeader.h</includes>
     <includes refid="_generated_8h" local="yes">generated/Generated.h</includes>
-    <includedby refid="_processor_8h" local="yes">Processor.h</includedby>
-    <includedby refid="_validator_8cpp" local="yes">Validator.cpp</includedby>
+    <includedby refid="_processor_8h" local="yes">Source/Processor.h</includedby>
+    <includedby refid="_validator_8cpp" local="yes">Source/Validator.cpp</includedby>
     <incdepgraph>
       <node id="1">
-        <label>Validator.h</label>
+        <label>Source/Validator.h</label>
         <link refid="_validator_8h"/>
         <childnode refid="2" relation="include">
         </childnode>
@@ -55,15 +55,15 @@
     </incdepgraph>
     <invincdepgraph>
       <node id="3">
-        <label>Main.cpp</label>
+        <label>Source/Main.cpp</label>
         <link refid="_main_8cpp"/>
       </node>
       <node id="4">
-        <label>Processor.cpp</label>
+        <label>Source/Processor.cpp</label>
         <link refid="_processor_8cpp"/>
       </node>
       <node id="2">
-        <label>Processor.h</label>
+        <label>Source/Processor.h</label>
         <link refid="_processor_8h"/>
         <childnode refid="3" relation="include">
         </childnode>
@@ -71,11 +71,11 @@
         </childnode>
       </node>
       <node id="5">
-        <label>Validator.cpp</label>
+        <label>Source/Validator.cpp</label>
         <link refid="_validator_8cpp"/>
       </node>
       <node id="1">
-        <label>Validator.h</label>
+        <label>Source/Validator.h</label>
         <link refid="_validator_8h"/>
         <childnode refid="2" relation="include">
         </childnode>
@@ -93,13 +93,13 @@
 <codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;JuceHeader.h&gt;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_generated_8h" kindref="compound">generated/Generated.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="4"><highlight class="normal"></highlight></codeline>
-<codeline lineno="15" refid="struct_validator" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="struct_validator" kindref="compound">Validator</ref><sp/>:<sp/><ref refid="structjam_1_1ConfigValidator" kindref="compound" external="/Users/jreng/Documents/Poems/dev/jam/docs/tagfile.xml">jam::ConfigValidator</ref></highlight></codeline>
-<codeline lineno="16"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="struct_validator_1af387720572933d5519b0597814433c17" kindref="member">addRules</ref><sp/>(<ref refid="structjam_1_1Document_1_1Validator_1a9044acc578b61d303871248373205e32" kindref="member" external="/Users/jreng/Documents/Poems/dev/jam/docs/tagfile.xml">Rules</ref>&amp;<sp/>rules);</highlight></codeline>
-<codeline lineno="22"><highlight class="normal"></highlight></codeline>
-<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structjam_1_1Document_1_1Validator_1a9044acc578b61d303871248373205e32" kindref="member" external="/Users/jreng/Documents/Poems/dev/jam/docs/tagfile.xml">Rules</ref>&amp;<sp/><ref refid="struct_validator_1a394659562ffe86296738ed5a5b14f80f" kindref="member">getRules</ref>()<sp/></highlight><highlight class="keyword">const<sp/>override</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="33"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="17" refid="struct_validator" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="struct_validator" kindref="compound">Validator</ref><sp/>:<sp/>jam::ConfigValidator</highlight></codeline>
+<codeline lineno="18"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="struct_validator_1af387720572933d5519b0597814433c17" kindref="member">addRules</ref><sp/>(Rules&amp;<sp/>rules);</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Rules&amp;<sp/><ref refid="struct_validator_1a394659562ffe86296738ed5a5b14f80f" kindref="member">getRules</ref>()<sp/></highlight><highlight class="keyword">const<sp/>override</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="37"><highlight class="normal">};</highlight></codeline>
     </programlisting>
-    <location file="Validator.h"/>
+    <location file="Source/Validator.h"/>
   </compounddef>
 </doxygen>

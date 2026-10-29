@@ -1,0 +1,115 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.18.0" xml:lang="en-US">
+  <compounddef id="_symbolizer_8h" kind="file" language="C++">
+    <compoundname>Symbolizer.h</compoundname>
+    <includes local="no">JuceHeader.h</includes>
+    <includedby refid="_sampler_8h" local="yes">Source/Sampler.h</includedby>
+    <includedby refid="_symbolizer_8cpp" local="yes">Source/Symbolizer.cpp</includedby>
+    <incdepgraph>
+      <node id="1">
+        <label>Source/Symbolizer.h</label>
+        <link refid="_symbolizer_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>JuceHeader.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="3">
+        <label>Source/Benchmark.cpp</label>
+        <link refid="_benchmark_8cpp"/>
+      </node>
+      <node id="4">
+        <label>Source/Sampler.cpp</label>
+        <link refid="_sampler_8cpp"/>
+      </node>
+      <node id="2">
+        <label>Source/Sampler.h</label>
+        <link refid="_sampler_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>Source/Symbolizer.cpp</label>
+        <link refid="_symbolizer_8cpp"/>
+      </node>
+      <node id="1">
+        <label>Source/Symbolizer.h</label>
+        <link refid="_symbolizer_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>Source/Validator.cpp</label>
+        <link refid="_validator_8cpp"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="class_symbolizer" prot="public">Symbolizer</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;JuceHeader.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>JUCE_WINDOWS</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal">juce::Result<sp/>getResult<sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>name,<sp/>ULONG<sp/>status);</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24" refid="class_symbolizer" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_symbolizer_1a35359e7d73bfc5ce174cdb6b98a37eaf" kindref="member">Symbolizer</ref></highlight></codeline>
+<codeline lineno="25"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="28" refid="class_symbolizer_1a35359e7d73bfc5ce174cdb6b98a37eaf" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_symbolizer_1a35359e7d73bfc5ce174cdb6b98a37eaf" kindref="member">Symbolizer</ref>();</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31" refid="class_symbolizer_1a6b632e1592e8735f841efc54bd8f02e7" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_symbolizer_1a6b632e1592e8735f841efc54bd8f02e7" kindref="member">~Symbolizer</ref>();</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>JUCE_MAC<sp/>or<sp/>JUCE_LINUX</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/>juce::Identifier<sp/><ref refid="class_symbolizer_1a92eeac9f0e75cec721c3887f3c9528e4" kindref="member">getOrCreateKernelFrameKey</ref><sp/>(juce::uint64<sp/>address);</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/>juce::Identifier<sp/><ref refid="class_symbolizer_1ac2636a4ed1057b823a39d1e316b7b222" kindref="member">getOrCreateUserFrameKey</ref><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>processId,<sp/>juce::uint64<sp/>address);</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>JUCE_WINDOWS</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">constexpr</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="_symbolizer_8cpp_1a5fb131484b9fd1322472a4ba9fc0e4ed" kindref="member">kernelProcessId</ref><sp/>{<sp/>4<sp/>};</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/>juce::Identifier<sp/>getOrCreateFrameKey<sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>processId,<sp/>juce::uint64<sp/>address);</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>addImage<sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>processId,<sp/>juce::uint64<sp/>imageBase,<sp/>juce::uint64<sp/>imageSize,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>juce::String&amp;<sp/>imagePath);</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"></highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/>juce::Result<sp/>addDrivers();</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="94"><highlight class="normal"></highlight></codeline>
+<codeline lineno="95"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="97" refid="class_symbolizer_1a83cce67295d5e29b117076892225ee14" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>jam::HashMap&lt;int,<sp/>jam::HashMap&lt;juce::uint64,<sp/>juce::Identifier&gt;&gt;<sp/><ref refid="class_symbolizer_1a83cce67295d5e29b117076892225ee14" kindref="member">frameKeys</ref>;</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"></highlight></codeline>
+<codeline lineno="99"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>JUCE_MAC<sp/>or<sp/>JUCE_LINUX</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="101" refid="class_symbolizer_1a3a526738f15236d0bbd906f96f0ecddc" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>jam::HashMap&lt;juce::String,<sp/>std::map&lt;juce::uint64,<sp/>juce::String&gt;&gt;<sp/><ref refid="class_symbolizer_1a3a526738f15236d0bbd906f96f0ecddc" kindref="member">imageSymbols</ref>;</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="103"><highlight class="normal"></highlight></codeline>
+<codeline lineno="104"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>JUCE_LINUX</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/>juce::Identifier<sp/><ref refid="class_symbolizer_1a93cc5155003af3fb204341779e85ec0c" kindref="member">getOrCreateImageFrameKey</ref><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>juce::String&amp;<sp/>regionText,<sp/>juce::uint64<sp/>regionStart,<sp/>juce::uint64<sp/>address);</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"></highlight></codeline>
+<codeline lineno="118" refid="class_symbolizer_1a908dd447303d990afb471232ef7fe4d8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>jam::HashMap&lt;int,<sp/>std::map&lt;juce::uint64,<sp/>juce::String&gt;&gt;<sp/><ref refid="class_symbolizer_1a908dd447303d990afb471232ef7fe4d8" kindref="member">regions</ref>;</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="120"><highlight class="normal"></highlight></codeline>
+<codeline lineno="121"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>JUCE_WINDOWS</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/>HANDLE<sp/>getOrCreateSymbolHandle<sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>processId);</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"></highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/>jam::HashMap&lt;int,<sp/>juce::ErasedScopeGuard&gt;<sp/>symbolHandles;</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="136"><highlight class="normal"></highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/>JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR<sp/>(<ref refid="class_symbolizer_1a35359e7d73bfc5ce174cdb6b98a37eaf" kindref="member">Symbolizer</ref>)</highlight></codeline>
+<codeline lineno="138"><highlight class="normal">};</highlight></codeline>
+    </programlisting>
+    <location file="Source/Symbolizer.h"/>
+  </compounddef>
+</doxygen>

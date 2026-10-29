@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.18.0" xml:lang="en-US">
+  <compounddef id="dir_74389ed8173ad57b461b9d623a1f3867" kind="dir">
+    <compoundname>Source</compoundname>
+    <innerdir refid="dir_361083900553d680a26c8fce9425de36">Source/generated</innerdir>
+    <innerfile refid="_benchmark_8cpp">Benchmark.cpp</innerfile>
+    <innerfile refid="_benchmark_8h">Benchmark.h</innerfile>
+    <innerfile refid="_help_8cpp">Help.cpp</innerfile>
+    <innerfile refid="_help_8h">Help.h</innerfile>
+    <innerfile refid="_main_8cpp">Main.cpp</innerfile>
+    <innerfile refid="_processor_8cpp">Processor.cpp</innerfile>
+    <innerfile refid="_processor_8h">Processor.h</innerfile>
+    <innerfile refid="_profile_report_8cpp">ProfileReport.cpp</innerfile>
+    <innerfile refid="_profile_report_8h">ProfileReport.h</innerfile>
+    <innerfile refid="_sampler_8cpp">Sampler.cpp</innerfile>
+    <innerfile refid="_sampler_8h">Sampler.h</innerfile>
+    <innerfile refid="_statistics_8cpp">Statistics.cpp</innerfile>
+    <innerfile refid="_statistics_8h">Statistics.h</innerfile>
+    <innerfile refid="_symbolizer_8cpp">Symbolizer.cpp</innerfile>
+    <innerfile refid="_symbolizer_8h">Symbolizer.h</innerfile>
+    <innerfile refid="_toolchain_8cpp">Toolchain.cpp</innerfile>
+    <innerfile refid="_toolchain_8h">Toolchain.h</innerfile>
+    <innerfile refid="_validator_8cpp">Validator.cpp</innerfile>
+    <innerfile refid="_validator_8h">Validator.h</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="Source/"/>
+  </compounddef>
+</doxygen>

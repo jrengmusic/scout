@@ -1,0 +1,32 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.18.0" xml:lang="en-US">
+  <compounddef id="namespacefiles" kind="namespace" language="C++">
+    <compoundname>files</compoundname>
+    <sectiondef kind="var">
+      <memberdef kind="variable" id="namespacefiles_1a4f5d1a618a82e735de711d473aa8033b" prot="public" static="no" mutable="no">
+        <type>const juce::String</type>
+        <definition>const juce::String files::scoutHelp</definition>
+        <argsstring></argsstring>
+        <name>scoutHelp</name>
+        <qualifiedname>files::scoutHelp</qualifiedname>
+        <initializer>{ juce::String::fromUTF8 (&quot;HELP.md&quot;) }</initializer>
+        <briefdescription>
+<para>File names scout reads: help. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Rendered help text. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Source/generated/Generated.cpp" line="53" column="20" bodyfile="Source/generated/Generated.cpp" bodystart="53" bodyend="53" declfile="Source/generated/Files.h" declline="30" declcolumn="27"/>
+        <referencedby refid="_main_8cpp_1a7f683cefdf7f675f09e36661ce8df7cc" compoundref="_main_8cpp" startline="137" endline="145">printBannerAndHelp</referencedby>
+        <referencedby refid="_help_8cpp_1a3f361f138d00c42487776fb13cc5ebe6" compoundref="_help_8cpp" startline="3" endline="35">printHelp</referencedby>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="Source/generated/Files.h" line="24" column="1"/>
+  </compounddef>
+</doxygen>

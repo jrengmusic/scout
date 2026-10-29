@@ -18,7 +18,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="generated/ProjectInfo.h" line="34" column="39" bodyfile="generated/ProjectInfo.h" bodystart="34" bodyend="34"/>
+        <location file="Source/generated/ProjectInfo.h" line="34" column="39" bodyfile="Source/generated/ProjectInfo.h" bodystart="34" bodyend="34"/>
       </memberdef>
       <memberdef kind="variable" id="namespace_project_info_1a9b435df60395ecec1378ecbaba7ccb75" prot="public" static="yes" constexpr="yes" mutable="no">
         <type>const char *const</type>
@@ -34,7 +34,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="generated/ProjectInfo.h" line="35" column="39" bodyfile="generated/ProjectInfo.h" bodystart="35" bodyend="35"/>
+        <location file="Source/generated/ProjectInfo.h" line="35" column="39" bodyfile="Source/generated/ProjectInfo.h" bodystart="35" bodyend="35"/>
       </memberdef>
       <memberdef kind="variable" id="namespace_project_info_1a75557edf46fa8becc81d2bff04c4c24b" prot="public" static="yes" constexpr="yes" mutable="no">
         <type>const char *const</type>
@@ -50,7 +50,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="generated/ProjectInfo.h" line="36" column="39" bodyfile="generated/ProjectInfo.h" bodystart="36" bodyend="36"/>
+        <location file="Source/generated/ProjectInfo.h" line="36" column="39" bodyfile="Source/generated/ProjectInfo.h" bodystart="36" bodyend="36"/>
       </memberdef>
       <memberdef kind="variable" id="namespace_project_info_1a7e092322572cc0554d2ee7e6963b22fe" prot="public" static="yes" constexpr="yes" mutable="no">
         <type>const char *const</type>
@@ -66,7 +66,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="generated/ProjectInfo.h" line="37" column="39" bodyfile="generated/ProjectInfo.h" bodystart="37" bodyend="37"/>
+        <location file="Source/generated/ProjectInfo.h" line="37" column="39" bodyfile="Source/generated/ProjectInfo.h" bodystart="37" bodyend="37"/>
       </memberdef>
       <memberdef kind="variable" id="namespace_project_info_1a3dfad1d1308874f47f13297fa6e93c49" prot="public" static="yes" constexpr="yes" mutable="no">
         <type>int</type>
@@ -82,7 +82,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="generated/ProjectInfo.h" line="38" column="40" bodyfile="generated/ProjectInfo.h" bodystart="38" bodyend="38"/>
+        <location file="Source/generated/ProjectInfo.h" line="38" column="40" bodyfile="Source/generated/ProjectInfo.h" bodystart="38" bodyend="38"/>
       </memberdef>
       <memberdef kind="variable" id="namespace_project_info_1a53f184d022499b38a6958b0ea2e88ab9" prot="public" static="yes" constexpr="yes" mutable="no">
         <type>const char *const</type>
@@ -98,7 +98,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="generated/ProjectInfo.h" line="39" column="39" bodyfile="generated/ProjectInfo.h" bodystart="39" bodyend="39"/>
+        <location file="Source/generated/ProjectInfo.h" line="39" column="39" bodyfile="Source/generated/ProjectInfo.h" bodystart="39" bodyend="39"/>
       </memberdef>
       <memberdef kind="variable" id="namespace_project_info_1a9f61dfba4aab183c0a33c730776e3227" prot="public" static="yes" constexpr="yes" mutable="no">
         <type>const char *const</type>
@@ -114,7 +114,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="generated/ProjectInfo.h" line="40" column="39" bodyfile="generated/ProjectInfo.h" bodystart="40" bodyend="40"/>
+        <location file="Source/generated/ProjectInfo.h" line="40" column="39" bodyfile="Source/generated/ProjectInfo.h" bodystart="40" bodyend="40"/>
       </memberdef>
       <memberdef kind="variable" id="namespace_project_info_1a8bc2cb4961d15c8b81888e1dafbeca41" prot="public" static="yes" constexpr="yes" mutable="no">
         <type>const char *const</type>
@@ -130,7 +130,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="generated/ProjectInfo.h" line="41" column="39" bodyfile="generated/ProjectInfo.h" bodystart="41" bodyend="41"/>
+        <location file="Source/generated/ProjectInfo.h" line="41" column="39" bodyfile="Source/generated/ProjectInfo.h" bodystart="41" bodyend="41"/>
       </memberdef>
       <memberdef kind="variable" id="namespace_project_info_1aa30ca45a1228a1a11b2ecb2f3177ef06" prot="public" static="yes" constexpr="yes" mutable="no">
         <type>const char *const</type>
@@ -146,13 +146,13 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="generated/ProjectInfo.h" line="42" column="39" bodyfile="generated/ProjectInfo.h" bodystart="42" bodyend="42"/>
+        <location file="Source/generated/ProjectInfo.h" line="42" column="39" bodyfile="Source/generated/ProjectInfo.h" bodystart="42" bodyend="42"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="generated/ProjectInfo.h" line="24" column="1"/>
+    <location file="Source/generated/ProjectInfo.h" line="24" column="1"/>
   </compounddef>
 </doxygen>

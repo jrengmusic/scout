@@ -6,7 +6,7 @@
   <option  id='PROJECT_BRIEF' default='yes' type='string'><value><![CDATA[]]></value></option>
   <option  id='PROJECT_LOGO' default='yes' type='string'><value><![CDATA[]]></value></option>
   <option  id='PROJECT_ICON' default='yes' type='string'><value><![CDATA[]]></value></option>
-  <option  id='OUTPUT_DIRECTORY' default='yes' type='string'><value><![CDATA[]]></value></option>
+  <option  id='OUTPUT_DIRECTORY' default='no' type='string'><value><![CDATA[/Users/jreng/Documents/Poems/dev/scout/docs]]></value></option>
   <option  id='CREATE_SUBDIRS' default='yes' type='bool'><value>NO</value></option>
   <option  id='CREATE_SUBDIRS_LEVEL' default='yes' type='int'><value>8</value></option>
   <option  id='ALLOW_UNICODE_NAMES' default='yes' type='bool'><value>NO</value></option>
@@ -30,7 +30,7 @@
   <option  id='INLINE_INHERITED_MEMB' default='yes' type='bool'><value>NO</value></option>
   <option  id='FULL_PATH_NAMES' default='yes' type='bool'><value>YES</value></option>
   <option  id='STRIP_FROM_PATH' default='no' type='stringlist'>
-    <value><![CDATA[/Users/jreng/Documents/Poems/dev/scout/Source]]></value>
+    <value><![CDATA[/Users/jreng/Documents/Poems/dev/scout]]></value>
   </option>
   <option  id='STRIP_FROM_INC_PATH' default='yes' type='stringlist'>
   </option>
@@ -130,9 +130,9 @@
   <option  id='WARN_AS_ERROR' default='yes' type='string'><value>NO</value></option>
   <option  id='WARN_FORMAT' default='yes' type='string'><value><![CDATA["$file:$line: $text"]]></value></option>
   <option  id='WARN_LINE_FORMAT' default='yes' type='string'><value><![CDATA["at line $line of file $file"]]></value></option>
-  <option  id='WARN_LOGFILE' default='yes' type='string'><value><![CDATA[]]></value></option>
+  <option  id='WARN_LOGFILE' default='no' type='string'><value><![CDATA[/private/tmp/claude-501/-Users-jreng-Documents-Poems-dev-scout/53e882e5-f8ae-42ec-82d3-6561dac76577/scratchpad/warn.docs.txt]]></value></option>
   <option  id='INPUT' default='no' type='stringlist'>
-    <value><![CDATA[/Users/jreng/Documents/Poems/dev/scout/Source]]></value>
+    <value><![CDATA[/Users/jreng/Documents/Poems/dev/scout]]></value>
   </option>
   <option  id='INPUT_ENCODING' default='yes' type='string'><value><![CDATA[UTF-8]]></value></option>
   <option  id='INPUT_FILE_ENCODING' default='yes' type='stringlist'>
@@ -338,9 +338,7 @@
   <option  id='EXPAND_AS_DEFINED' default='yes' type='stringlist'>
   </option>
   <option  id='SKIP_FUNCTION_MACROS' default='yes' type='bool'><value>YES</value></option>
-  <option  id='TAGFILES' default='no' type='stringlist'>
-    <value><![CDATA[../../jam/docs/tagfile.xml=../../jam/docs/html]]></value>
-    <value><![CDATA[../../../JUCE/docs/tagfile.xml=../../../JUCE/docs/html]]></value>
+  <option  id='TAGFILES' default='yes' type='stringlist'>
   </option>
   <option  id='GENERATE_TAGFILE' default='no' type='string'><value><![CDATA[tagfile.xml]]></value></option>
   <option  id='ALLEXTERNALS' default='yes' type='bool'><value>NO</value></option>

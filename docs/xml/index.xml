@@ -4,29 +4,45 @@
     <member refid="class_benchmark_1a55df5d956a4f1ed943a8b73142dcb509" kind="variable"><name>commandFile</name></member>
     <member refid="class_benchmark_1a462aeef6e3aa34999d64fc5f7ec8443c" kind="variable"><name>samplesFile</name></member>
     <member refid="class_benchmark_1a14f464a6bc7b395ccb9bba782a301661" kind="variable"><name>manifestFile</name></member>
-    <member refid="class_benchmark_1ab658fd8c4392653436c288005e1172a4" kind="variable"><name>epochSamples</name></member>
-    <member refid="class_benchmark_1a342b5af6c51b0dae3b47376b45f42483" kind="variable"><name>bins</name></member>
-    <member refid="class_benchmark_1a1a7f19f67b053162666235ed365861e7" kind="variable"><name>calls</name></member>
-    <member refid="class_benchmark_1a587a06d967bce6380270036d001c1f5a" kind="variable"><name>units</name></member>
+    <member refid="class_benchmark_1a49275f57b8c34e8d204a673e1bd48746" kind="variable"><name>sampleTable</name></member>
+    <member refid="class_benchmark_1a6dcde8e7cf962cf169f8aa7ffc01d299" kind="variable"><name>epochSamples</name></member>
+    <member refid="class_benchmark_1a4c5a8ec7ebbf0123f159d5fb3bd11e40" kind="variable"><name>bins</name></member>
+    <member refid="class_benchmark_1af843221703119c4195591fcaa79dd710" kind="variable"><name>calls</name></member>
+    <member refid="class_benchmark_1a44c6335da1ecfc6c06298d0ce4ddd918" kind="variable"><name>units</name></member>
     <member refid="class_benchmark_1a17a83e311aa3aa0faff83483b67537e7" kind="variable"><name>runTable</name></member>
     <member refid="class_benchmark_1a297f53f732ae4d2d79d474359af97fe6" kind="variable"><name>tableType</name></member>
-    <member refid="class_benchmark_1a136b7c51f05ca71e7c7595bc8ce9ac5a" kind="function"><name>Benchmark</name></member>
+    <member refid="class_benchmark_1ae13345fa615923b519e370921cb70a32" kind="function"><name>Benchmark</name></member>
     <member refid="class_benchmark_1a8b4bab8a038fba5d18366ba23e32923f" kind="function"><name>runEpoch</name></member>
-    <member refid="class_benchmark_1a54e743cd8ac66536390608cc09aa355e" kind="function"><name>addEpoch</name></member>
     <member refid="class_benchmark_1ac2758e9667d09cca4fa1c7d0845c7413" kind="function"><name>getProfiles</name></member>
     <member refid="class_benchmark_1a4f8bafb7b4939b3398f3ba59f198010a" kind="function"><name>runCommand</name></member>
-    <member refid="class_benchmark_1a9b9d076f0ec7ea35ca1cb50a2d280f29" kind="function"><name>addRows</name></member>
-    <member refid="class_benchmark_1a9ba969f0936909fa42373d48dccf2550" kind="function"><name>addBins</name></member>
+    <member refid="class_benchmark_1a9dc60998270d40efabd9739f299bd86d" kind="function"><name>addRows</name></member>
+    <member refid="class_benchmark_1ae59eaa6c1836391353180c17526f1c16" kind="function"><name>addEpoch</name></member>
+    <member refid="class_benchmark_1a4000af069c3a73c0bd9b109e6cb20f24" kind="function"><name>addRow</name></member>
+    <member refid="class_benchmark_1a95c95a548d6bfafe6e2843a25b7a748e" kind="function"><name>addMissingSamples</name></member>
+    <member refid="class_benchmark_1a5afe24f9edd3f12d45bd6519a91081b7" kind="function"><name>addBins</name></member>
+    <member refid="class_benchmark_1aa5aa26f8ee900c49cf276b76765c98f7" kind="function"><name>getChildUsage</name></member>
     <member refid="class_benchmark_1a5d20602a03271cc0aa22560a9e64aad9" kind="function"><name>addChildTime</name></member>
   </compound>
   <compound refid="structtext_1_1_diagnostics" kind="struct"><name>text::Diagnostics</name>
     <member refid="structtext_1_1_diagnostics_1a614879ccbad6f4edaf1a511bf5a2fa68" kind="variable"><name>failNotFound</name></member>
     <member refid="structtext_1_1_diagnostics_1af3213d85de76f5051147adf231066b11" kind="variable"><name>failToolchain</name></member>
     <member refid="structtext_1_1_diagnostics_1acb39935ba8149723d8a1c9615271f294" kind="variable"><name>failToolchainColumn</name></member>
+    <member refid="structtext_1_1_diagnostics_1a9f17a7ae5f9071429f8b8cc86e530546" kind="variable"><name>failSampleRange</name></member>
     <member refid="structtext_1_1_diagnostics_1a17a0efaa59e3489e8242be054d6280f5" kind="variable"><name>failOutputWrite</name></member>
     <member refid="structtext_1_1_diagnostics_1a67a3d4524798361c7272cca4ff5d19ad" kind="variable"><name>failCommand</name></member>
     <member refid="structtext_1_1_diagnostics_1a54030ad642dee1157d22d8255503812d" kind="variable"><name>failFlagUnknown</name></member>
     <member refid="structtext_1_1_diagnostics_1a07b92fba2d678ad4a065f5ebd63d43a7" kind="variable"><name>done</name></member>
+  </compound>
+  <compound refid="structkd__buf" kind="struct"><name>kd_buf</name>
+    <member refid="structkd__buf_1a2dd93d5803922282b046207b7a3bf28c" kind="variable"><name>timestamp</name></member>
+    <member refid="structkd__buf_1a42920e35cdff86f357c5e81ebf27af2a" kind="variable"><name>arg1</name></member>
+    <member refid="structkd__buf_1ae8a83ef68d6dd037050d931a4033a259" kind="variable"><name>arg2</name></member>
+    <member refid="structkd__buf_1a802645e321549466ce9ed29e3841ede6" kind="variable"><name>arg3</name></member>
+    <member refid="structkd__buf_1af3b6b23e4abdbf666662e204bb806903" kind="variable"><name>arg4</name></member>
+    <member refid="structkd__buf_1a820024f338925839fa17492b3450299b" kind="variable"><name>arg5</name></member>
+    <member refid="structkd__buf_1a046e1900d9792c1e4a976ee87dd7fb75" kind="variable"><name>debugid</name></member>
+    <member refid="structkd__buf_1a99e5f41756c7f5a672ff0ceec370e923" kind="variable"><name>cpuid</name></member>
+    <member refid="structkd__buf_1a27597300259175870b1f4f7eeffb519e" kind="variable"><name>unused</name></member>
   </compound>
   <compound refid="struct_processor" kind="struct"><name>Processor</name>
     <member refid="struct_processor_1a8dbadccb605c3a32f0e5af688b43d652" kind="variable"><name>documentFile</name></member>
@@ -35,7 +51,7 @@
     <member refid="struct_processor_1ac2f8ddc17ef15f47f03fa71ce3d381c6" kind="function"><name>generate</name></member>
     <member refid="struct_processor_1a6ace9660425275f32080160c0ae88b2b" kind="function"><name>run</name></member>
     <member refid="struct_processor_1a83804663c3ddec5019aad5fa2673bada" kind="function"><name>runToolchainRow</name></member>
-    <member refid="struct_processor_1a88ec28a8e3dd1b6e1f41fbaa315a737e" kind="function"><name>runEpochs</name></member>
+    <member refid="struct_processor_1acec35c543c65ed5dc6618fe7e79ef835" kind="function"><name>runEpochs</name></member>
     <member refid="struct_processor_1aa277929ee4d6480d62fa48d2dd5f2a6c" kind="function"><name>writeReport</name></member>
   </compound>
   <compound refid="class_profile_report" kind="class"><name>ProfileReport</name>
@@ -49,6 +65,46 @@
     <member refid="class_profile_report_1aaac495eb6a95882f0d63173e45c8971a" kind="function"><name>addChart</name></member>
     <member refid="class_profile_report_1ae35c099a06e99ee2989270e98473d4e7" kind="function"><name>addChart</name></member>
     <member refid="class_profile_report_1a996b7005c13fdd2d877931aaa1dfb223" kind="function"><name>addDistribution</name></member>
+  </compound>
+  <compound refid="class_sampler" kind="class"><name>Sampler</name>
+    <member refid="class_sampler_1ae2192afc9784395ea7cb7d05270318d3" kind="variable"><name>minimumStackDepth</name></member>
+    <member refid="class_sampler_1a7cf4f7bbc391afd66a215460984f8443" kind="variable"><name>maximumStackDepth</name></member>
+    <member refid="class_sampler_1a06a006e3b2e6f8b0a67a07707ae4b70c" kind="variable"><name>minimumIntervalMs</name></member>
+    <member refid="class_sampler_1ae3f391e3bfd03bcad0e434430721a832" kind="variable"><name>symbolizer</name></member>
+    <member refid="class_sampler_1aa07b205965331acf4c461c26d309a712" kind="variable"><name>descendants</name></member>
+    <member refid="class_sampler_1ae3f2dd6abb219dd46c795c7edf35db8d" kind="variable"><name>brackets</name></member>
+    <member refid="class_sampler_1a4b4efc0c6090ade9a73af95f8d70f827" kind="variable"><name>pendingUserSamples</name></member>
+    <member refid="class_sampler_1a3a0bfdc50f13c6b25811cc422fdce419" kind="variable"><name>reading</name></member>
+    <member refid="class_sampler_1a56614a0afedf38a2ebe125135f016a9d" kind="variable"><name>clockEvents</name></member>
+    <member refid="class_sampler_1adead0ff46c4127293def9741a9abc68d" kind="variable"><name>switchEvents</name></member>
+    <member refid="class_sampler_1a108f45bb6b7a2c1fa3204ea9a0cc25ad" kind="variable"><name>clockRings</name></member>
+    <member refid="class_sampler_1a8072e26240c9fb945f82d2a5bf2131c4" kind="variable"><name>switchRings</name></member>
+    <member refid="class_sampler_1a0d033b10e47f10da0cb933a5888d8584" kind="variable"><name>session</name></member>
+    <member refid="class_sampler_1a5996dbf305228d55bfb3c86ced39b146" kind="variable"><name>counts</name></member>
+    <member refid="class_sampler_1ae2758b1ba8727dc22fdf5a80572e5872" kind="function"><name>Sampler</name></member>
+    <member refid="class_sampler_1a96dcddeb6ff5f0507f11de173cab4e95" kind="function"><name>~Sampler</name></member>
+    <member refid="class_sampler_1a20473e869862e0950def74238b24bcd7" kind="function"><name>drain</name></member>
+    <member refid="class_sampler_1a91be2949beb7a32df2e93d205502f4e3" kind="function"><name>getSamples</name></member>
+    <member refid="class_sampler_1aa64c8e9afe39558efd92cab23a0d73d3" kind="function"><name>run</name></member>
+    <member refid="class_sampler_1ad8520adf5251edbe4d546f16b548e3bd" kind="function"><name>addCounts</name></member>
+    <member refid="class_sampler_1a5b74c691901a5a66225c5653c8a90005" kind="function"><name>addRecords</name></member>
+    <member refid="class_sampler_1a7e6ec11c924fea70cff7c5523d947436" kind="function"><name>addSampleStart</name></member>
+    <member refid="class_sampler_1a45d5d70da446de4caafc6a2b51f4d291" kind="function"><name>addThreadInfo</name></member>
+    <member refid="class_sampler_1aaba7a4bee0dcf7ecfeaddb43883fde6a" kind="function"><name>addStackHeader</name></member>
+    <member refid="class_sampler_1aa34b215d898befd15f2309ca2d816843" kind="function"><name>addStackFrames</name></member>
+    <member refid="class_sampler_1a7b82b7917ef1a3ca7587abc8ef371c10" kind="function"><name>addSampleEnd</name></member>
+    <member refid="class_sampler_1a1b0c7a89bc356514777c16a32ed803b7" kind="function"><name>addKernelSamples</name></member>
+    <member refid="class_sampler_1a81a879e06d0a4c952c005aa0512a41fc" kind="function"><name>addUserSamples</name></member>
+    <member refid="class_sampler_1a8f8bd52cb658a991b1850f19c7efddf2" kind="function"><name>readRecords</name></member>
+    <member refid="class_sampler_1ab90f07a264117ea7d86e28a334e13c6b" kind="function"><name>addLostEvents</name></member>
+    <member refid="class_sampler_1a4f42f04f23edaa5df034fa51f3e5c2b2" kind="function"><name>setDescendants</name></member>
+    <member refid="class_sampler_1a67fd6d27248213e4f9bf5630703d3f18" kind="function"><name>startSession</name></member>
+    <member refid="class_sampler_1a60ebd60e1f63f4dfa7b4ba94e69a63e8" kind="function"><name>setEnabled</name></member>
+    <member refid="class_sampler_1a3173fc3528fe177be86ce0ce8f29cd83" kind="function"><name>addAllRecords</name></member>
+    <member refid="class_sampler_1a74c644f7d95b29dfa4bd1ccbaaedd5c6" kind="function"><name>addRecords</name></member>
+    <member refid="class_sampler_1ae86cd2f041fc30f659c9d4474a4d903c" kind="function"><name>addSample</name></member>
+    <member refid="class_sampler_1aa8da20ec1df14aa97e4333e217cb7e99" kind="function"><name>addLost</name></member>
+    <member refid="class_sampler_1a1c44e35adce2ea951252ec1b8cab1891" kind="function"><name>addFrames</name></member>
   </compound>
   <compound refid="class_statistics" kind="class"><name>Statistics</name>
     <member refid="class_statistics_1ac1be2f46ec2507b9e8bf4bd2e3f677df" kind="variable"><name>percentScale</name></member>
@@ -68,6 +124,16 @@
     <member refid="class_statistics_1a145cae352e7a57083eddf7c56a13efe1" kind="function"><name>getProbability</name></member>
     <member refid="class_statistics_1a76bab7c34fa8634f2bb4d9efa0efce8b" kind="function"><name>getPercentile</name></member>
   </compound>
+  <compound refid="class_symbolizer" kind="class"><name>Symbolizer</name>
+    <member refid="class_symbolizer_1a83cce67295d5e29b117076892225ee14" kind="variable"><name>frameKeys</name></member>
+    <member refid="class_symbolizer_1a3a526738f15236d0bbd906f96f0ecddc" kind="variable"><name>imageSymbols</name></member>
+    <member refid="class_symbolizer_1a908dd447303d990afb471232ef7fe4d8" kind="variable"><name>regions</name></member>
+    <member refid="class_symbolizer_1a35359e7d73bfc5ce174cdb6b98a37eaf" kind="function"><name>Symbolizer</name></member>
+    <member refid="class_symbolizer_1a6b632e1592e8735f841efc54bd8f02e7" kind="function"><name>~Symbolizer</name></member>
+    <member refid="class_symbolizer_1a92eeac9f0e75cec721c3887f3c9528e4" kind="function"><name>getOrCreateKernelFrameKey</name></member>
+    <member refid="class_symbolizer_1ac2636a4ed1057b823a39d1e316b7b222" kind="function"><name>getOrCreateUserFrameKey</name></member>
+    <member refid="class_symbolizer_1a93cc5155003af3fb204341779e85ec0c" kind="function"><name>getOrCreateImageFrameKey</name></member>
+  </compound>
   <compound refid="struct_toolchain" kind="struct"><name>Toolchain</name>
     <member refid="struct_toolchain_1ad96b65cacfb0e4c8d2c1cf75acd01100" kind="function"><name>getToolchainArguments</name></member>
     <member refid="struct_toolchain_1a99335d844ab10df762460e0d2beea4db" kind="function"><name>runProcess</name></member>
@@ -75,6 +141,36 @@
   <compound refid="struct_validator" kind="struct"><name>Validator</name>
     <member refid="struct_validator_1af387720572933d5519b0597814433c17" kind="function"><name>addRules</name></member>
     <member refid="struct_validator_1a394659562ffe86296738ed5a5b14f80f" kind="function"><name>getRules</name></member>
+  </compound>
+  <compound refid="namespacefiles" kind="namespace"><name>files</name>
+    <member refid="namespacefiles_1a4f5d1a618a82e735de711d473aa8033b" kind="variable"><name>scoutHelp</name></member>
+  </compound>
+  <compound refid="namespace_id" kind="namespace"><name>Id</name>
+    <member refid="namespace_id_1af393585104ec335510688180036ff1d6" kind="variable"><name>epochs</name></member>
+    <member refid="namespace_id_1a3c8da0c68c021ababf62dc69bef9488a" kind="variable"><name>output</name></member>
+    <member refid="namespace_id_1a1538a142ed265f60c8fcf1703a106a7d" kind="variable"><name>command</name></member>
+    <member refid="namespace_id_1ae725772eead68e70d784b84b1368bed1" kind="variable"><name>profile</name></member>
+    <member refid="namespace_id_1af9d54e8fed53adf7db2cd94d0fb88a08" kind="variable"><name>epoch</name></member>
+    <member refid="namespace_id_1a22c89b9587f1b0bb9bc77c17d2a9a4fa" kind="variable"><name>errorPercent</name></member>
+    <member refid="namespace_id_1a483df25d168ac28ba770d1f103a37065" kind="variable"><name>change</name></member>
+    <member refid="namespace_id_1abdeffd71861b09b9a07a2f20b9d2d53e" kind="variable"><name>probability</name></member>
+    <member refid="namespace_id_1a674faf6c4f97d82e2ccc9a9fb84d27de" kind="variable"><name>percentile</name></member>
+    <member refid="namespace_id_1ab274a2ba05a0f74a439c1cf693818875" kind="variable"><name>system</name></member>
+    <member refid="namespace_id_1a0f9647376c570f4f428258196fa64c61" kind="variable"><name>toolchain</name></member>
+    <member refid="namespace_id_1ac8f84d92cb02638b89abb87149be1caf" kind="variable"><name>flag</name></member>
+    <member refid="namespace_id_1a7f93eafe58a56db2c54f56300c1484b9" kind="variable"><name>help</name></member>
+    <member refid="namespace_id_1a32ffc7aee9ffe0ba992401c38b1e8243" kind="variable"><name>date</name></member>
+    <member refid="namespace_id_1aaa0851cf60aab0c856e3aa5b9ebabf75" kind="variable"><name>sample</name></member>
+    <member refid="namespace_id_1a9dd3b447eb5f7e4e61f3f4264c20a2e5" kind="variable"><name>cswitch</name></member>
+    <member refid="namespace_id_1ac827a343ac5e638ec813f83a9e519d28" kind="variable"><name>intervalMs</name></member>
+    <member refid="namespace_id_1ad3655b6ef8e8f2d60a6aaeedd27474b2" kind="variable"><name>stackDepth</name></member>
+  </compound>
+  <compound refid="namespacejam" kind="namespace"><name>jam</name>
+  </compound>
+  <compound refid="namespacejuce" kind="namespace"><name>juce</name>
+  </compound>
+  <compound refid="namespacemap" kind="namespace"><name>map</name>
+    <member refid="namespacemap_1a1662c21339f1c14339e65f221d7b126d" kind="variable"><name>banner</name></member>
   </compound>
   <compound refid="namespace_project_info" kind="namespace"><name>ProjectInfo</name>
     <member refid="namespace_project_info_1a50f49d766351ea9313f67b3f30aa014d" kind="variable"><name>projectName</name></member>
@@ -88,6 +184,8 @@
     <member refid="namespace_project_info_1aa30ca45a1228a1a11b2ecb2f3177ef06" kind="variable"><name>presetDefault</name></member>
   </compound>
   <compound refid="namespacestd" kind="namespace"><name>std</name>
+  </compound>
+  <compound refid="namespacetext" kind="namespace"><name>text</name>
   </compound>
   <compound refid="_benchmark_8cpp" kind="file"><name>Benchmark.cpp</name>
   </compound>
@@ -143,9 +241,100 @@
   </compound>
   <compound refid="_profile_report_8h" kind="file"><name>ProfileReport.h</name>
   </compound>
+  <compound refid="_sampler_8cpp" kind="file"><name>Sampler.cpp</name>
+    <member refid="_sampler_8cpp_1a002ab303651d77b234ac524d9ed40a6f" kind="variable"><name>stopTimeoutMilliseconds</name></member>
+    <member refid="_sampler_8cpp_1a49b5eb8089c4178644e271e293e9e99b" kind="variable"><name>unitWeight</name></member>
+    <member refid="_sampler_8cpp_1a7811d54527e368f814aede2bd5947485" kind="variable"><name>countUnit</name></member>
+    <member refid="_sampler_8cpp_1a22c9f046b0236a2fad1353e4c10064ed" kind="variable"><name>threadName</name></member>
+    <member refid="_sampler_8cpp_1a07df8a04b63a2ca84a647e04e805e1f3" kind="variable"><name>timerAction</name></member>
+    <member refid="_sampler_8cpp_1a39929f2531d02b49c28241b50c0e49f6" kind="variable"><name>switchAction</name></member>
+    <member refid="_sampler_8cpp_1a285ff77b13b871bb766412fbf4945c3a" kind="variable"><name>recordCapacity</name></member>
+    <member refid="_sampler_8cpp_1aad5cc39e20e0df3d5974399baf6ab867" kind="variable"><name>readIntervalMs</name></member>
+    <member refid="_sampler_8cpp_1a055fa993709e1a138b433f699f6b5fb5" kind="variable"><name>framesPerRecord</name></member>
+    <member refid="_sampler_8cpp_1a46ef7865aaa59d8698d448689d3e262d" kind="variable"><name>kernelStackFlag</name></member>
+    <member refid="_sampler_8cpp_1abe2fecdda84e03cf162827e025602f01" kind="variable"><name>userPendFlag</name></member>
+    <member refid="_sampler_8cpp_1a33ab394dcf08f62d5d5e9774185584dd" kind="variable"><name>timerCount</name></member>
+    <member refid="_sampler_8cpp_1a68a04afa520d7dc2003738347e41f6a4" kind="variable"><name>on</name></member>
+    <member refid="_sampler_8cpp_1a8fd0d2db881f9e565108bbd9cc1b8838" kind="variable"><name>off</name></member>
+    <member refid="_sampler_8cpp_1a89f610db753bf6699ad218d057a4d926" kind="variable"><name>kdebugName</name></member>
+    <member refid="_sampler_8cpp_1aa04ae0bbf701fe14df504894f7bb8023" kind="variable"><name>sampleStartEvent</name></member>
+    <member refid="_sampler_8cpp_1a62b47731b5fe650cdaaa1e97ec7219b8" kind="variable"><name>sampleEndEvent</name></member>
+    <member refid="_sampler_8cpp_1a303f096f59b97743fc704ccdf4ca8952" kind="variable"><name>threadInfoEvent</name></member>
+    <member refid="_sampler_8cpp_1aaf2c224edf43164b6c5fbe0f857bf758" kind="variable"><name>kernelHeaderEvent</name></member>
+    <member refid="_sampler_8cpp_1a091d6cba2f3ecb836d0fca41083588b0" kind="variable"><name>kernelFramesEvent</name></member>
+    <member refid="_sampler_8cpp_1a70917d118e90dd2f3f4577a417969d20" kind="variable"><name>userHeaderEvent</name></member>
+    <member refid="_sampler_8cpp_1a70aee0fb453a81dc647647fe1eaf9765" kind="variable"><name>userFramesEvent</name></member>
+    <member refid="_sampler_8cpp_1af4dee88ad9cb701292850780a07ab76e" kind="variable"><name>schedulerEvent</name></member>
+    <member refid="_sampler_8cpp_1a2be767ba38171cc9d381b20098b51b05" kind="variable"><name>lostEventsEvent</name></member>
+    <member refid="_sampler_8cpp_1a895a7f4cdbfdde18cd972131d0843de6" kind="variable"><name>actionSlot</name></member>
+    <member refid="_sampler_8cpp_1ae33d7aad50c0ca3aa1b8529d7aecd875" kind="variable"><name>processSlot</name></member>
+    <member refid="_sampler_8cpp_1ae82a1617d58b767556f0d2503571cbb1" kind="variable"><name>frameCountSlot</name></member>
+    <member refid="_sampler_8cpp_1ada088611b87ce400aa53ba9f508e0fe4" kind="variable"><name>kernelSlot</name></member>
+    <member refid="_sampler_8cpp_1a895cd96b2339d4263537b22fc70267fb" kind="variable"><name>threadSlot</name></member>
+    <member refid="_sampler_8cpp_1ad49ddd7cfd76c576006a7dc08799735c" kind="variable"><name>firstFrameSlot</name></member>
+    <member refid="_sampler_8cpp_1a8e178e1d3ac3aeae5c4e08599c825834" kind="variable"><name>threadInfoSampler</name></member>
+    <member refid="_sampler_8cpp_1aaff1fc32726473d8ec0c7ae9d278196a" kind="variable"><name>kernelStackSampler</name></member>
+    <member refid="_sampler_8cpp_1ab53640ecbcd2394d6b7f17df2513b457" kind="variable"><name>userStackSampler</name></member>
+    <member refid="_sampler_8cpp_1a96fdbe4e0d2ef251815ffa3915b4ef01" kind="variable"><name>traceEnableFlag</name></member>
+    <member refid="_sampler_8cpp_1ad7600a9a7e7343ee905f0845d0500124" kind="variable"><name>debugidFilterType</name></member>
+    <member refid="_sampler_8cpp_1a6ae9456dae5e14fbec0b5256c14df111" kind="variable"><name>lostSlot</name></member>
+    <member refid="_sampler_8cpp_1a9efa99e7439c1e4bb8265f444797d8b6" kind="variable"><name>wordBytes</name></member>
+    <member refid="_sampler_8cpp_1a7c1e3b548694904ac1624326ee9ce2c2" kind="variable"><name>tracefsRoots</name></member>
+    <member refid="_sampler_8cpp_1aca12d4b61d2f99602d3cd310fa2391e6" kind="variable"><name>switchIdPath</name></member>
+    <member refid="_sampler_8cpp_1a96390e8bb83062650340e109a4480c2c" kind="variable"><name>noGroup</name></member>
+    <member refid="_sampler_8cpp_1ab22a68c962b1dedabcf4afc32bc9d088" kind="variable"><name>ringDataBytes</name></member>
+    <member refid="_sampler_8cpp_1af216e64a0220fc1d23d8c167e15c7f5a" kind="function"><name>getIntervalNanoseconds</name></member>
+    <member refid="_sampler_8cpp_1a4eabed153a2a0e1287b4da32b92a2553" kind="function"><name>setKernelValue</name></member>
+    <member refid="_sampler_8cpp_1ac3af7a124b2551881d08b1ed6319b056" kind="function"><name>setKernelValue</name></member>
+    <member refid="_sampler_8cpp_1aaa310ba6458201775f679ffb7165bc6d" kind="function"><name>setKernelValue</name></member>
+    <member refid="_sampler_8cpp_1a6f2b15a15c50f1e873ffd7c01c613bea" kind="function"><name>setKdebugValue</name></member>
+    <member refid="_sampler_8cpp_1a3aec3631c5bb7d7943a9c18f98dbc253" kind="function"><name>setTypeFilter</name></member>
+    <member refid="_sampler_8cpp_1ae4c0a549f438fc740ce89f8d21ca6f2f" kind="function"><name>setSchedulerFilter</name></member>
+    <member refid="_sampler_8cpp_1a972b0679d7f804a21e25e2328e400993" kind="function"><name>setActionValues</name></member>
+    <member refid="_sampler_8cpp_1af2adfed559dd05d21b37c72b44077c45" kind="function"><name>getTimerTicks</name></member>
+    <member refid="_sampler_8cpp_1a8896fdd24564457f248e972f7f0cb257" kind="function"><name>startSession</name></member>
+    <member refid="_sampler_8cpp_1ab0ed5db778141c715359dbcf2f31d1a7" kind="function"><name>stopSession</name></member>
+    <member refid="_sampler_8cpp_1aadc3154af708b1ba700feb35be37f880" kind="function"><name>isDescendant</name></member>
+    <member refid="_sampler_8cpp_1a4dd0c2d2ea14e3f4ebca6fc0e586054f" kind="function"><name>getActionTable</name></member>
+    <member refid="_sampler_8cpp_1a8f87a394d85308c394da32afedaf4428" kind="function"><name>getEventAttributes</name></member>
+    <member refid="_sampler_8cpp_1abfe3a5507ce19c4a23904d1dcfa5bf00" kind="function"><name>getClockAttributes</name></member>
+    <member refid="_sampler_8cpp_1a35091e202cad2e78f4c422680c8d3ac8" kind="function"><name>getSwitchIdFile</name></member>
+    <member refid="_sampler_8cpp_1af359e6a00a0aa031429cc1376dce3ad0" kind="function"><name>getSwitchAttributes</name></member>
+    <member refid="_sampler_8cpp_1aa06d0dd958a6b0ced0c696541042c60f" kind="function"><name>openEvent</name></member>
+    <member refid="_sampler_8cpp_1ac3f37a8044924fd9077e2a0578c3dacf" kind="function"><name>unmapRing</name></member>
+    <member refid="_sampler_8cpp_1a2062e8a7ba127d2c5d40c7add4dd65c6" kind="function"><name>getRing</name></member>
+    <member refid="_sampler_8cpp_1ad938b64cbd675222d4fc77fa46b72a05" kind="function"><name>getHead</name></member>
+    <member refid="_sampler_8cpp_1a4158933959dea538ff09dc7b911820f2" kind="function"><name>getTail</name></member>
+    <member refid="_sampler_8cpp_1a0c153d095cd34eb163f886aa8baae9f1" kind="function"><name>setTail</name></member>
+    <member refid="_sampler_8cpp_1a218ecc09d2ee73b3a32c6ae18ad33bae" kind="function"><name>getHeader</name></member>
+    <member refid="_sampler_8cpp_1a2bea1eaa54c073588149c245378a98de" kind="function"><name>getWord</name></member>
+  </compound>
+  <compound refid="_sampler_8h" kind="file"><name>Sampler.h</name>
+  </compound>
   <compound refid="_statistics_8cpp" kind="file"><name>Statistics.cpp</name>
   </compound>
   <compound refid="_statistics_8h" kind="file"><name>Statistics.h</name>
+  </compound>
+  <compound refid="_symbolizer_8cpp" kind="file"><name>Symbolizer.cpp</name>
+    <member refid="_symbolizer_8cpp_1a5fb131484b9fd1322472a4ba9fc0e4ed" kind="variable"><name>kernelProcessId</name></member>
+    <member refid="_symbolizer_8cpp_1a65d1ef3fbd51b10cbab2b3e3d098a1b3" kind="variable"><name>rangeSeparator</name></member>
+    <member refid="_symbolizer_8cpp_1abfa13e4f476116d740885b6f20f226ed" kind="function"><name>getFrameKey</name></member>
+    <member refid="_symbolizer_8cpp_1a145db63d17cc3de245984d895f279186" kind="function"><name>getDemangledName</name></member>
+    <member refid="_symbolizer_8cpp_1a4758107c826cb68da40a1fadcb075918" kind="function"><name>getFrameKey</name></member>
+    <member refid="_symbolizer_8cpp_1a009e27d586d41607d85756dd5b5924b5" kind="function"><name>getKernelFile</name></member>
+    <member refid="_symbolizer_8cpp_1a2bbe97cab63d267bb647b78930bba995" kind="function"><name>getKernelImageName</name></member>
+    <member refid="_symbolizer_8cpp_1a93094f14da77695f31d307333f894236" kind="function"><name>getCommand</name></member>
+    <member refid="_symbolizer_8cpp_1ae8e7ea2055cca42680f11eaa8a50355d" kind="function"><name>getTextAddress</name></member>
+    <member refid="_symbolizer_8cpp_1a9df45c8c29ec6097726c0119a32189e8" kind="function"><name>getSymbolName</name></member>
+    <member refid="_symbolizer_8cpp_1a40ae47356db463e3cae21f2dd3f19b78" kind="function"><name>getTableSymbols</name></member>
+    <member refid="_symbolizer_8cpp_1a004465734b1e49415c062790c9bf66c4" kind="function"><name>getSymbols</name></member>
+    <member refid="_symbolizer_8cpp_1a733ecc0717db52fddb3f9451748ca10e" kind="function"><name>isSymbolImage</name></member>
+    <member refid="_symbolizer_8cpp_1adbad68e25810cc84775de2ecc3eb0459" kind="function"><name>getKernelSymbols</name></member>
+    <member refid="_symbolizer_8cpp_1a4d24b0b7f777abf1a2d48006ad699fc5" kind="function"><name>getKernelTextAddress</name></member>
+    <member refid="_symbolizer_8cpp_1ae10c71e882987a11dc17095143362aec" kind="function"><name>getFileOffset</name></member>
+    <member refid="_symbolizer_8cpp_1a6afae428d2f657f0f291c71b3f2abd44" kind="function"><name>getRegions</name></member>
+  </compound>
+  <compound refid="_symbolizer_8h" kind="file"><name>Symbolizer.h</name>
   </compound>
   <compound refid="_toolchain_8cpp" kind="file"><name>Toolchain.cpp</name>
   </compound>
@@ -155,6 +344,8 @@
   </compound>
   <compound refid="_validator_8h" kind="file"><name>Validator.h</name>
   </compound>
-  <compound refid="dir_84fc5dba3506812825191c0c043e3c97" kind="dir"><name>generated</name>
+  <compound refid="dir_361083900553d680a26c8fce9425de36" kind="dir"><name>Source/generated</name>
+  </compound>
+  <compound refid="dir_74389ed8173ad57b461b9d623a1f3867" kind="dir"><name>Source</name>
   </compound>
 </doxygenindex>

@@ -7,21 +7,22 @@
     <includes refid="_text_8h" local="yes">Text.h</includes>
     <includes refid="_files_8h" local="yes">Files.h</includes>
     <includes refid="_hash_maps_8h" local="yes">HashMaps.h</includes>
-    <includedby refid="_benchmark_8cpp" local="yes">Benchmark.cpp</includedby>
-    <includedby refid="_help_8h" local="yes">Help.h</includedby>
-    <includedby refid="_main_8cpp" local="yes">Main.cpp</includedby>
-    <includedby refid="_processor_8h" local="yes">Processor.h</includedby>
-    <includedby refid="_profile_report_8cpp" local="yes">ProfileReport.cpp</includedby>
-    <includedby refid="_toolchain_8h" local="yes">Toolchain.h</includedby>
-    <includedby refid="_validator_8h" local="yes">Validator.h</includedby>
-    <includedby refid="_generated_8cpp" local="yes">generated/Generated.cpp</includedby>
+    <includedby refid="_benchmark_8cpp" local="yes">Source/Benchmark.cpp</includedby>
+    <includedby refid="_help_8h" local="yes">Source/Help.h</includedby>
+    <includedby refid="_main_8cpp" local="yes">Source/Main.cpp</includedby>
+    <includedby refid="_processor_8h" local="yes">Source/Processor.h</includedby>
+    <includedby refid="_profile_report_8cpp" local="yes">Source/ProfileReport.cpp</includedby>
+    <includedby refid="_sampler_8h" local="yes">Source/Sampler.h</includedby>
+    <includedby refid="_toolchain_8h" local="yes">Source/Toolchain.h</includedby>
+    <includedby refid="_validator_8h" local="yes">Source/Validator.h</includedby>
+    <includedby refid="_generated_8cpp" local="yes">Source/generated/Generated.cpp</includedby>
     <incdepgraph>
       <node id="5">
         <label>Files.h</label>
         <link refid="_files_8h"/>
       </node>
       <node id="1">
-        <label>generated/Generated.h</label>
+        <label>Source/generated/Generated.h</label>
         <link refid="_generated_8h"/>
         <childnode refid="2" relation="include">
         </childnode>
@@ -53,15 +54,15 @@
     </incdepgraph>
     <invincdepgraph>
       <node id="2">
-        <label>Benchmark.cpp</label>
+        <label>Source/Benchmark.cpp</label>
         <link refid="_benchmark_8cpp"/>
       </node>
       <node id="4">
-        <label>Help.cpp</label>
+        <label>Source/Help.cpp</label>
         <link refid="_help_8cpp"/>
       </node>
       <node id="3">
-        <label>Help.h</label>
+        <label>Source/Help.h</label>
         <link refid="_help_8h"/>
         <childnode refid="4" relation="include">
         </childnode>
@@ -69,15 +70,15 @@
         </childnode>
       </node>
       <node id="5">
-        <label>Main.cpp</label>
+        <label>Source/Main.cpp</label>
         <link refid="_main_8cpp"/>
       </node>
       <node id="7">
-        <label>Processor.cpp</label>
+        <label>Source/Processor.cpp</label>
         <link refid="_processor_8cpp"/>
       </node>
       <node id="6">
-        <label>Processor.h</label>
+        <label>Source/Processor.h</label>
         <link refid="_processor_8h"/>
         <childnode refid="5" relation="include">
         </childnode>
@@ -85,39 +86,53 @@
         </childnode>
       </node>
       <node id="8">
-        <label>ProfileReport.cpp</label>
+        <label>Source/ProfileReport.cpp</label>
         <link refid="_profile_report_8cpp"/>
       </node>
       <node id="10">
-        <label>Toolchain.cpp</label>
-        <link refid="_toolchain_8cpp"/>
+        <label>Source/Sampler.cpp</label>
+        <link refid="_sampler_8cpp"/>
       </node>
       <node id="9">
-        <label>Toolchain.h</label>
-        <link refid="_toolchain_8h"/>
-        <childnode refid="6" relation="include">
+        <label>Source/Sampler.h</label>
+        <link refid="_sampler_8h"/>
+        <childnode refid="2" relation="include">
         </childnode>
         <childnode refid="10" relation="include">
         </childnode>
-      </node>
-      <node id="12">
-        <label>Validator.cpp</label>
-        <link refid="_validator_8cpp"/>
-      </node>
-      <node id="11">
-        <label>Validator.h</label>
-        <link refid="_validator_8h"/>
-        <childnode refid="6" relation="include">
-        </childnode>
-        <childnode refid="12" relation="include">
+        <childnode refid="11" relation="include">
         </childnode>
       </node>
       <node id="13">
-        <label>generated/Generated.cpp</label>
+        <label>Source/Toolchain.cpp</label>
+        <link refid="_toolchain_8cpp"/>
+      </node>
+      <node id="12">
+        <label>Source/Toolchain.h</label>
+        <link refid="_toolchain_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>Source/Validator.cpp</label>
+        <link refid="_validator_8cpp"/>
+      </node>
+      <node id="14">
+        <label>Source/Validator.h</label>
+        <link refid="_validator_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="15">
+        <label>Source/generated/Generated.cpp</label>
         <link refid="_generated_8cpp"/>
       </node>
       <node id="1">
-        <label>generated/Generated.h</label>
+        <label>Source/generated/Generated.h</label>
         <link refid="_generated_8h"/>
         <childnode refid="2" relation="include">
         </childnode>
@@ -131,9 +146,11 @@
         </childnode>
         <childnode refid="9" relation="include">
         </childnode>
-        <childnode refid="11" relation="include">
+        <childnode refid="12" relation="include">
         </childnode>
-        <childnode refid="13" relation="include">
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
         </childnode>
       </node>
     </invincdepgraph>
@@ -166,6 +183,6 @@
 <codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_files_8h" kindref="compound">Files.h</ref>&quot;</highlight><highlight class="normal"><sp/></highlight></codeline>
 <codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_hash_maps_8h" kindref="compound">HashMaps.h</ref>&quot;</highlight><highlight class="normal"><sp/></highlight></codeline>
     </programlisting>
-    <location file="generated/Generated.h"/>
+    <location file="Source/generated/Generated.h"/>
   </compounddef>
 </doxygen>

@@ -4,11 +4,11 @@
     <compoundname>Toolchain.h</compoundname>
     <includes local="no">JuceHeader.h</includes>
     <includes refid="_generated_8h" local="yes">generated/Generated.h</includes>
-    <includedby refid="_processor_8h" local="yes">Processor.h</includedby>
-    <includedby refid="_toolchain_8cpp" local="yes">Toolchain.cpp</includedby>
+    <includedby refid="_processor_8h" local="yes">Source/Processor.h</includedby>
+    <includedby refid="_toolchain_8cpp" local="yes">Source/Toolchain.cpp</includedby>
     <incdepgraph>
       <node id="1">
-        <label>Toolchain.h</label>
+        <label>Source/Toolchain.h</label>
         <link refid="_toolchain_8h"/>
         <childnode refid="2" relation="include">
         </childnode>
@@ -55,15 +55,15 @@
     </incdepgraph>
     <invincdepgraph>
       <node id="3">
-        <label>Main.cpp</label>
+        <label>Source/Main.cpp</label>
         <link refid="_main_8cpp"/>
       </node>
       <node id="4">
-        <label>Processor.cpp</label>
+        <label>Source/Processor.cpp</label>
         <link refid="_processor_8cpp"/>
       </node>
       <node id="2">
-        <label>Processor.h</label>
+        <label>Source/Processor.h</label>
         <link refid="_processor_8h"/>
         <childnode refid="3" relation="include">
         </childnode>
@@ -71,11 +71,11 @@
         </childnode>
       </node>
       <node id="5">
-        <label>Toolchain.cpp</label>
+        <label>Source/Toolchain.cpp</label>
         <link refid="_toolchain_8cpp"/>
       </node>
       <node id="1">
-        <label>Toolchain.h</label>
+        <label>Source/Toolchain.h</label>
         <link refid="_toolchain_8h"/>
         <childnode refid="2" relation="include">
         </childnode>
@@ -95,13 +95,13 @@
 <codeline lineno="4"><highlight class="normal"></highlight></codeline>
 <codeline lineno="12" refid="struct_toolchain" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="struct_toolchain" kindref="compound">Toolchain</ref></highlight></codeline>
 <codeline lineno="13"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="classjuce_1_1StringArray" kindref="compound" external="/Users/jreng/Documents/Poems/JUCE/docs/tagfile.xml">juce::StringArray</ref><sp/><ref refid="struct_toolchain_1ad96b65cacfb0e4c8d2c1cf75acd01100" kindref="member">getToolchainArguments</ref><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classjuce_1_1String" kindref="compound" external="/Users/jreng/Documents/Poems/JUCE/docs/tagfile.xml">juce::String</ref>&amp;<sp/><ref refid="juce__UnityPluginInterface_8h_1a485dc2a0e5ed7da3d9f826367b36ee55a6440030ae8284cee96c1c88b356c45a7" kindref="member" external="/Users/jreng/Documents/Poems/JUCE/docs/tagfile.xml">command</ref>,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classjuce_1_1String" kindref="compound" external="/Users/jreng/Documents/Poems/JUCE/docs/tagfile.xml">juce::String</ref>&amp;<sp/>flag);</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>juce::StringArray<sp/><ref refid="struct_toolchain_1ad96b65cacfb0e4c8d2c1cf75acd01100" kindref="member">getToolchainArguments</ref><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>juce::String&amp;<sp/>command,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>juce::String&amp;<sp/>flag);</highlight></codeline>
 <codeline lineno="28"><highlight class="normal"></highlight></codeline>
-<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="classjuce_1_1Result" kindref="compound" external="/Users/jreng/Documents/Poems/JUCE/docs/tagfile.xml">juce::Result</ref><sp/><ref refid="struct_toolchain_1a99335d844ab10df762460e0d2beea4db" kindref="member">runProcess</ref><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classjuce_1_1StringArray" kindref="compound" external="/Users/jreng/Documents/Poems/JUCE/docs/tagfile.xml">juce::StringArray</ref>&amp;<sp/>arguments,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classjuce_1_1String" kindref="compound" external="/Users/jreng/Documents/Poems/JUCE/docs/tagfile.xml">juce::String</ref>&amp;<sp/>diagnosticLine);</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>juce::Result<sp/><ref refid="struct_toolchain_1a99335d844ab10df762460e0d2beea4db" kindref="member">runProcess</ref><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>juce::StringArray&amp;<sp/>arguments,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>juce::String&amp;<sp/>diagnosticLine);</highlight></codeline>
 <codeline lineno="41"><highlight class="normal"></highlight></codeline>
-<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="juce__PlatformDefs_8h_1a851b02724a8158a7f746c66b5758b3dd" kindref="member" external="/Users/jreng/Documents/Poems/JUCE/docs/tagfile.xml">JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR</ref><sp/>(<ref refid="struct_toolchain" kindref="compound">Toolchain</ref>)</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/>JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR<sp/>(<ref refid="struct_toolchain" kindref="compound">Toolchain</ref>)</highlight></codeline>
 <codeline lineno="43"><highlight class="normal">};</highlight></codeline>
     </programlisting>
-    <location file="Toolchain.h"/>
+    <location file="Source/Toolchain.h"/>
   </compounddef>
 </doxygen>

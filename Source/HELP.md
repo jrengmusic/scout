@@ -43,7 +43,34 @@ The manifest is a markdown file. The `run` table sets the epochs. Each row is on
 | baseline | string | An earlier report to compare with. Empty for none.      |
 
 Every `run` path is relative to the manifest. Scout also reads the `## toolchain` table (see
-Toolchain). The other tables of the manifest belong to the target. Scout does not read them.
+Toolchain) and the `## sample` table (see Sampling). The other tables of the manifest belong to the
+target. Scout does not read them.
+
+## Sampling
+
+The `## sample` table turns on kernel and user stack sampling for each epoch. Each row is one key.
+
+| key        | type | meaning                                                                                        |
+| :--------- | :--- | :--------------------------------------------------------------------------------------------- |
+| intervalMs | int  | The sampling period, in ms. The least value is 1.                                              |
+| stackDepth | int  | The most frames that each stack records. macOS: 2 to 128. Linux: 1 to 127. Windows: 1 to 192.  |
+
+Without a `## sample` table, scout samples nothing.
+
+Sampling needs elevated rights. Run scout with `sudo` on macOS and Linux. On Windows, run scout from
+an administrator console. When the session cannot start, the run stops with
+`scout: <name>: <reason>`. For example, on macOS the name is a sysctl name or `kdebug<number>`, on Linux `perf_event_open`, and on Windows the failed API name.
+
+Scout samples the processes that its command starts, and their children. Scout does not sample
+itself. On macOS, scout finds the processes every 100 ms. A process that starts and exits between two looks is not sampled.
+
+A sampling run is its own scout run. The sampler adds load. Thus do not read the `epoch`, `user`
+and `system` rows of a sampling run as timings.
+
+The report holds two more tables for sampling (see Report). The key of a row is the function name
+of the frame. A frame with no symbol uses the name of its image file. Each character outside
+`A-Z a-z 0-9 : -` becomes `-`. The value is the number of samples whose stack holds the frame, in
+one epoch. The unit is `count`. A frame with no image (the frame of a process that exited before its symbols were read, or of an anonymous memory region) is not counted. A `dropped` row counts the losses that the kernel reported because its buffer was full. On Linux each table counts its own losses. On macOS and Windows all losses go to `## SAMPLE`; on macOS each count is one loss report, not one record.
 
 ## Toolchain
 
@@ -121,6 +148,8 @@ The report has these tables:
 | `## <TYPE>`       | One row for each zone. The value is the median time of one epoch.                                    |
 | `## <TYPE>_CALLS` | One row for each zone. The value is the median time of one call, from the merged bins of all epochs. |
 | `## RUN`          | The `buildType` of the target.                                                                       |
+| `## SAMPLE`       | With `## sample` only. One row for each frame, from the timer samples (see Sampling).                |
+| `## CSWITCH`      | With `## sample` only. One row for each frame, from the stacks at each context switch.               |
 
 Each row of a zone table has these columns:
 
@@ -155,9 +184,11 @@ The `## <TYPE>` table also has these rows:
 | row     | meaning                                                                                        |
 | :------ | :--------------------------------------------------------------------------------------------- |
 | epoch   | The wall time of one epoch.                                                                    |
-| user    | The user CPU time of the child, in each epoch. Only on macOS and Linux.                        |
-| system  | The system CPU time of the child, in each epoch. Only on macOS and Linux.                      |
+| user    | The user CPU time of the child, in each epoch.                                                 |
+| system  | The system CPU time of the child, in each epoch.                                               |
 | dropped | The number of entries that the target lost, because a thread had no slot or its ring was full. |
+
+On Windows, `user` and `system` cover every process of scout's job, also the processes that exited.
 
 With a baseline, each row also has these columns:
 
@@ -176,7 +207,7 @@ edge of the octave, in ns.
 | code | meaning                                                                                                                                                                                 |
 | :--- | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | 0    | Help, version, or a run where every step passed.                                                                                                                                        |
-| 1    | A missing manifest, an unknown flag, a validation failure, a toolchain failure, a command failure, a missing baseline file, a missing samples file, or a report that cannot be written. |
+| 1    | A missing manifest, an unknown flag, a validation failure, a toolchain failure, a command failure, a sampling session that cannot start, a missing baseline file, a missing samples file, or a report that cannot be written. |
 
 A failure prints `scout: <message>` on stderr. A validation message can hold more than one line.
 

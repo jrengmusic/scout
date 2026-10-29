@@ -8,8 +8,8 @@
     <includes refid="_toolchain_8h" local="yes">Toolchain.h</includes>
     <includes refid="_benchmark_8h" local="yes">Benchmark.h</includes>
     <includes refid="_profile_report_8h" local="yes">ProfileReport.h</includes>
-    <includedby refid="_main_8cpp" local="yes">Main.cpp</includedby>
-    <includedby refid="_processor_8cpp" local="yes">Processor.cpp</includedby>
+    <includedby refid="_main_8cpp" local="yes">Source/Main.cpp</includedby>
+    <includedby refid="_processor_8cpp" local="yes">Source/Processor.cpp</includedby>
     <incdepgraph>
       <node id="11">
         <label>Benchmark.h</label>
@@ -20,7 +20,7 @@
         </childnode>
       </node>
       <node id="1">
-        <label>Processor.h</label>
+        <label>Source/Processor.h</label>
         <link refid="_processor_8h"/>
         <childnode refid="2" relation="include">
         </childnode>
@@ -108,15 +108,15 @@
     </incdepgraph>
     <invincdepgraph>
       <node id="2">
-        <label>Main.cpp</label>
+        <label>Source/Main.cpp</label>
         <link refid="_main_8cpp"/>
       </node>
       <node id="3">
-        <label>Processor.cpp</label>
+        <label>Source/Processor.cpp</label>
         <link refid="_processor_8cpp"/>
       </node>
       <node id="1">
-        <label>Processor.h</label>
+        <label>Source/Processor.h</label>
         <link refid="_processor_8h"/>
         <childnode refid="2" relation="include">
         </childnode>
@@ -138,28 +138,28 @@
 <codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_benchmark_8h" kindref="compound">Benchmark.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_profile_report_8h" kindref="compound">ProfileReport.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="8"><highlight class="normal"></highlight></codeline>
-<codeline lineno="18" refid="struct_processor" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="struct_processor_1abe5471b3c8a21dfe9bc8e7683eb4868c" kindref="member">Processor</ref></highlight></codeline>
-<codeline lineno="19"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">explicit</highlight><highlight class="normal"><sp/><ref refid="struct_processor_1abe5471b3c8a21dfe9bc8e7683eb4868c" kindref="member">Processor</ref><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classjuce_1_1File" kindref="compound" external="/Users/jreng/Documents/Poems/JUCE/docs/tagfile.xml">juce::File</ref>&amp;<sp/>newDocumentFile);</highlight></codeline>
-<codeline lineno="27"><highlight class="normal"></highlight></codeline>
-<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classjuce_1_1Result" kindref="compound" external="/Users/jreng/Documents/Poems/JUCE/docs/tagfile.xml">juce::Result</ref><sp/><ref refid="struct_processor_1ac2f8ddc17ef15f47f03fa71ce3d381c6" kindref="member">generate</ref>();</highlight></codeline>
-<codeline lineno="41"><highlight class="normal"></highlight></codeline>
-<codeline lineno="42"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
-<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classjuce_1_1Result" kindref="compound" external="/Users/jreng/Documents/Poems/JUCE/docs/tagfile.xml">juce::Result</ref><sp/><ref refid="struct_processor_1a6ace9660425275f32080160c0ae88b2b" kindref="member">run</ref>();</highlight></codeline>
-<codeline lineno="53"><highlight class="normal"></highlight></codeline>
-<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classjuce_1_1Result" kindref="compound" external="/Users/jreng/Documents/Poems/JUCE/docs/tagfile.xml">juce::Result</ref><sp/><ref refid="struct_processor_1a83804663c3ddec5019aad5fa2673bada" kindref="member">runToolchainRow</ref><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structjam_1_1Document_1_1Element" kindref="compound" external="/Users/jreng/Documents/Poems/dev/jam/docs/tagfile.xml">jam::ConfigDocument::Element</ref>&amp;<sp/>row);</highlight></codeline>
-<codeline lineno="66"><highlight class="normal"></highlight></codeline>
-<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classjuce_1_1Result" kindref="compound" external="/Users/jreng/Documents/Poems/JUCE/docs/tagfile.xml">juce::Result</ref><sp/><ref refid="struct_processor_1a88ec28a8e3dd1b6e1f41fbaa315a737e" kindref="member">runEpochs</ref><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classjuce_1_1ValueTree" kindref="compound" external="/Users/jreng/Documents/Poems/JUCE/docs/tagfile.xml">juce::ValueTree</ref>&amp;<sp/>runTable);</highlight></codeline>
-<codeline lineno="83"><highlight class="normal"></highlight></codeline>
-<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classjuce_1_1Result" kindref="compound" external="/Users/jreng/Documents/Poems/JUCE/docs/tagfile.xml">juce::Result</ref><sp/><ref refid="struct_processor_1aa277929ee4d6480d62fa48d2dd5f2a6c" kindref="member">writeReport</ref><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classjuce_1_1ValueTree" kindref="compound" external="/Users/jreng/Documents/Poems/JUCE/docs/tagfile.xml">juce::ValueTree</ref>&amp;<sp/>runTable,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classjuce_1_1ValueTree" kindref="compound" external="/Users/jreng/Documents/Poems/JUCE/docs/tagfile.xml">juce::ValueTree</ref>&amp;<sp/>profiles);</highlight></codeline>
-<codeline lineno="97"><highlight class="normal"></highlight></codeline>
-<codeline lineno="99" refid="struct_processor_1a8dbadccb605c3a32f0e5af688b43d652" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classjuce_1_1File" kindref="compound" external="/Users/jreng/Documents/Poems/JUCE/docs/tagfile.xml">juce::File</ref><sp/><ref refid="struct_processor_1a8dbadccb605c3a32f0e5af688b43d652" kindref="member">documentFile</ref>;</highlight></codeline>
-<codeline lineno="100"><highlight class="normal"></highlight></codeline>
-<codeline lineno="102" refid="struct_processor_1afb131d60d600f95ce7bc382f8d9724e7" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structjam_1_1ConfigDocument" kindref="compound" external="/Users/jreng/Documents/Poems/dev/jam/docs/tagfile.xml">jam::ConfigDocument</ref><sp/><ref refid="struct_processor_1afb131d60d600f95ce7bc382f8d9724e7" kindref="member">manifest</ref>;</highlight></codeline>
-<codeline lineno="103"><highlight class="normal"></highlight></codeline>
-<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="juce__PlatformDefs_8h_1a851b02724a8158a7f746c66b5758b3dd" kindref="member" external="/Users/jreng/Documents/Poems/JUCE/docs/tagfile.xml">JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR</ref><sp/>(<ref refid="struct_processor_1abe5471b3c8a21dfe9bc8e7683eb4868c" kindref="member">Processor</ref>)</highlight></codeline>
-<codeline lineno="105"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="20" refid="struct_processor" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="struct_processor_1abe5471b3c8a21dfe9bc8e7683eb4868c" kindref="member">Processor</ref></highlight></codeline>
+<codeline lineno="21"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">explicit</highlight><highlight class="normal"><sp/><ref refid="struct_processor_1abe5471b3c8a21dfe9bc8e7683eb4868c" kindref="member">Processor</ref><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>juce::File&amp;<sp/>newDocumentFile);</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/>juce::Result<sp/><ref refid="struct_processor_1ac2f8ddc17ef15f47f03fa71ce3d381c6" kindref="member">generate</ref>();</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/>juce::Result<sp/><ref refid="struct_processor_1a6ace9660425275f32080160c0ae88b2b" kindref="member">run</ref>();</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/>juce::Result<sp/><ref refid="struct_processor_1a83804663c3ddec5019aad5fa2673bada" kindref="member">runToolchainRow</ref><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>jam::ConfigDocument::Element&amp;<sp/>row);</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/>juce::Result<sp/><ref refid="struct_processor_1acec35c543c65ed5dc6618fe7e79ef835" kindref="member">runEpochs</ref><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>juce::ValueTree&amp;<sp/>runTable,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>juce::ValueTree&amp;<sp/>sampleTable);</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"></highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/>juce::Result<sp/><ref refid="struct_processor_1aa277929ee4d6480d62fa48d2dd5f2a6c" kindref="member">writeReport</ref><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>juce::ValueTree&amp;<sp/>runTable,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>juce::ValueTree&amp;<sp/>profiles);</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"></highlight></codeline>
+<codeline lineno="104" refid="struct_processor_1a8dbadccb605c3a32f0e5af688b43d652" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>juce::File<sp/><ref refid="struct_processor_1a8dbadccb605c3a32f0e5af688b43d652" kindref="member">documentFile</ref>;</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"></highlight></codeline>
+<codeline lineno="107" refid="struct_processor_1afb131d60d600f95ce7bc382f8d9724e7" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>jam::ConfigDocument<sp/><ref refid="struct_processor_1afb131d60d600f95ce7bc382f8d9724e7" kindref="member">manifest</ref>;</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"></highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/>JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR<sp/>(<ref refid="struct_processor_1abe5471b3c8a21dfe9bc8e7683eb4868c" kindref="member">Processor</ref>)</highlight></codeline>
+<codeline lineno="110"><highlight class="normal">};</highlight></codeline>
     </programlisting>
-    <location file="Processor.h"/>
+    <location file="Source/Processor.h"/>
   </compounddef>
 </doxygen>

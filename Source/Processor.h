@@ -14,6 +14,8 @@
  * Processor parses the manifest file once, at construction. generate() then
  * validates the manifest and runs the `## toolchain` rows. When the manifest
  * holds a `run` table, generate() also runs the epochs and writes the report.
+ * When the manifest also holds a `## sample` table, each epoch samples the
+ * stacks of the command.
  */
 struct Processor
 {
@@ -70,16 +72,19 @@ private:
      * The paths of @p runTable resolve against the folder of the manifest.
      * When the `baseline` cell names a file that does not exist, the function
      * fails before it runs any epoch. An empty `baseline` cell means no
-     * baseline. Each epoch runs the `command` through Benchmark::runEpoch() and
-     * reads the `samples` file through Benchmark::addEpoch(). The function runs
-     * `epochs` epochs, then passes the profiles to writeReport().
+     * baseline. Each epoch runs the `command` through Benchmark::runEpoch().
+     * That function also reads the `samples` file, and it runs a Sampler when
+     * @p sampleTable is valid. The function runs `epochs` epochs, then passes
+     * the profiles to writeReport().
      *
-     * @param runTable  The `run` table of the manifest.
+     * @param runTable     The `run` table of the manifest.
+     * @param sampleTable  The `sample` table of the manifest. It is not valid
+     *                     when the manifest has no `## sample` table.
      * @returns juce::Result::ok() when every epoch and the report succeed, or
      *          the first failure. A missing baseline gives
      *          `not found: \<baseline path\>`.
      */
-    juce::Result runEpochs (const juce::ValueTree& runTable);
+    juce::Result runEpochs (const juce::ValueTree& runTable, const juce::ValueTree& sampleTable);
 
     /**
      * @brief Writes the report of @p profiles to the `output` file of

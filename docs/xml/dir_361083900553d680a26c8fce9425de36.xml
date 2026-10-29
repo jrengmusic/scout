@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.18.0" xml:lang="en-US">
+  <compounddef id="dir_361083900553d680a26c8fce9425de36" kind="dir">
+    <compoundname>Source/generated</compoundname>
+    <innerfile refid="_files_8h">Files.h</innerfile>
+    <innerfile refid="_generated_8cpp">Generated.cpp</innerfile>
+    <innerfile refid="_generated_8h">Generated.h</innerfile>
+    <innerfile refid="_hash_maps_8h">HashMaps.h</innerfile>
+    <innerfile refid="_identifiers_8h">Identifiers.h</innerfile>
+    <innerfile refid="_project_info_8h">ProjectInfo.h</innerfile>
+    <innerfile refid="_text_8h">Text.h</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="Source/generated/"/>
+  </compounddef>
+</doxygen>
