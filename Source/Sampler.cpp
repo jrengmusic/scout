@@ -72,6 +72,16 @@ static juce::Result setKernelValue (const char* name, std::initializer_list<juce
     return setKernelValue (name, values.begin(), values.size() * sizeof (juce::uint64));
 }
 
+static int getKernelValue (const char* name)
+{
+    int value { 0 };
+    size_t size { sizeof (value) };
+    [[maybe_unused]] const auto isRead { sysctlbyname (name, &value, &size, nullptr, 0) == 0 };
+    jassert (isRead);
+
+    return value;
+}
+
 static juce::Result setKdebugValue (int operation, int value)
 {
     int mib[] { CTL_KERN, KERN_KDEBUG, operation, value };
@@ -151,7 +161,7 @@ static juce::Result startSession (int intervalMs, int stackDepth)
     const std::vector<std::function<juce::Result()>> sessionSteps
     {
         [] { return setKernelValue ("kperf.reset", on); },
-        [] { return setKernelValue ("kperf.action.count", static_cast<int> (switchAction)); },
+        [] { return setKernelValue ("kperf.action.count", getKernelValue ("kperf.limits.max_action_count")); },
         [stackDepth] { return setActionValues (stackDepth); },
         [] { return setKernelValue ("kperf.timer.count", timerCount); },
         [intervalMs] { return setKernelValue ("kperf.timer.period", { timerId, getTimerTicks (intervalMs) }); },

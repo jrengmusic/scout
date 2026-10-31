@@ -15,3 +15,6 @@
 36	4166	1793281637625889171	extras/Build/juceaide/CMakeFiles/juceaide.dir/__/__/__/modules/juce_graphics/juce_graphics.mm.o	a9460dbacb8f45c4
 34	4174	1793281637624019921	extras/Build/juceaide/CMakeFiles/juceaide.dir/__/__/__/modules/juce_graphics/juce_graphics_Harfbuzz.cpp.o	ba1684ef229910f
 4174	4300	1793281641764362847	extras/Build/juceaide/juceaide_artefacts/Custom/juceaide	c5f2fd5920278976
+2	93	1793419973190233578	/Users/jreng/Documents/Poems/dev/scout/Builds/Release/JUCE/tools/CMakeFiles/cmake.verify_globs	32d7d0fe64619b6
+108	15106	1793419973296480880	extras/Build/juceaide/CMakeFiles/juceaide.dir/__/__/__/modules/juce_gui_basics/juce_gui_basics_5.cpp.o	6a7b90954e6989e8
+15106	16028	1793419988294495929	extras/Build/juceaide/juceaide_artefacts/Custom/juceaide	c5f2fd5920278976
