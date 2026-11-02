@@ -2,26 +2,29 @@ CompileFlags:
   CompilationDatabase: /Users/jreng/Documents/Poems/dev/scout
   Remove: [--target=*]
   Add:
-    - -DCAST_COMMIT=\"c79a6cc\"
-    - -DDEBUG=1
+    - -DCAST_COMMIT=\"3e52176\"
     - -DDONT_SET_USING_JUCE_NAMESPACE=1
     - -DHAVE_FREETYPE
     - -DHAVE_UNISTD_H
-    - -DJAM_USING_PROFILER=1
     - -DJUCE_DONT_DECLARE_PROJECTINFO=1
     - -DJUCE_GLOBAL_MODULE_SETTINGS_INCLUDED=1
     - -DJUCE_IN_APP_PURCHASES=0
+    - -DJUCE_MODULE_AVAILABLE_jam_animation=1
     - -DJUCE_MODULE_AVAILABLE_jam_core=1
     - -DJUCE_MODULE_AVAILABLE_jam_data_structures=1
     - -DJUCE_MODULE_AVAILABLE_jam_document=1
     - -DJUCE_MODULE_AVAILABLE_jam_freetype=1
     - -DJUCE_MODULE_AVAILABLE_jam_graphics=1
+    - -DJUCE_MODULE_AVAILABLE_jam_gui=1
     - -DJUCE_MODULE_AVAILABLE_jam_markdown=1
+    - -DJUCE_MODULE_AVAILABLE_jam_markdown_graphics=1
+    - -DJUCE_MODULE_AVAILABLE_jam_mermaid_diagram=1
     - -DJUCE_MODULE_AVAILABLE_jam_profiler=1
     - -DJUCE_MODULE_AVAILABLE_jam_style=1
+    - -DJUCE_MODULE_AVAILABLE_jam_subprocess=1
     - -DJUCE_MODULE_AVAILABLE_jam_terminal=1
-    - -DJUCE_MODULE_AVAILABLE_jam_unit_test=1
     - -DJUCE_MODULE_AVAILABLE_jam_web=1
+    - -DJUCE_MODULE_AVAILABLE_juce_animation=1
     - -DJUCE_MODULE_AVAILABLE_juce_audio_basics=1
     - -DJUCE_MODULE_AVAILABLE_juce_audio_processors=1
     - -DJUCE_MODULE_AVAILABLE_juce_audio_processors_headless=1
@@ -36,8 +39,9 @@ CompileFlags:
     - -DJUCE_TARGET_HAS_BINARY_DATA=1
     - -DJUCE_USE_CURL=0
     - -DJUCE_WEB_BROWSER=0
-    - -D_DEBUG=1
-    - -I/Users/jreng/Documents/Poems/dev/scout/Builds/Debug/scout_artefacts/JuceLibraryCode
+    - -DNDEBUG=1
+    - -D_NDEBUG=1
+    - -I/Users/jreng/Documents/Poems/dev/scout/Builds/Release/scout_artefacts/JuceLibraryCode
     - -I/Users/jreng/Documents/Poems/dev/scout/../jam
     - -I/Users/jreng/Documents/Poems/dev/scout/Source/generated
     - -I/Users/jreng/Documents/Poems/dev/scout/../jam/jam_freetype/freetype/include
@@ -54,9 +58,11 @@ CompileFlags:
     - -I/Users/jreng/.cache/cast/juce/b9a5c30ac3c5cc43c961073d20513a40ca634c79ef0a5d59faf4fa6b19493afd/modules/juce_audio_processors_headless/format_types/LV2_SDK/lilv/src
     - -I/Users/jreng/Documents/Poems/dev/scout/../jam/jam_style/.
     - -I/Users/jreng/Documents/Poems/dev/scout/../jam/jam_web/.
-    - -I/Users/jreng/Documents/Poems/dev/scout/Builds/Debug/juce_binarydata_scout_BinaryData/JuceLibraryCode
-    - -g
+    - -I/Users/jreng/Documents/Poems/dev/scout/Builds/Release/juce_binarydata_scout_BinaryData/JuceLibraryCode
+    - -O3
+    - -DNDEBUG
     - -std=c++17
+    - -flto=thin
     - -arch
     - x86_64
     - -arch
@@ -68,7 +74,7 @@ CompileFlags:
     - -Wno-sign-conversion
     - -Wno-switch-enum
     - -Wno-implicit-float-conversion
-    - -O0
+    - -Wno-macro-redefined
 Diagnostics:
   MissingIncludes: None
   UnusedIncludes: None

@@ -70,7 +70,7 @@
     --Markdown--boldFontId: var(--textSemibold);
     --Markdown--italicFontId: var(--textItalic);
     --Markdown--boldItalicFontId: var(--textBoldItalic);
-    --Markdown--codeFontId: var(--mono);
+    --Markdown--codeFontId: var(mono);
     --Markdown--heading1FontId: var(--textBold);
     --Markdown--heading2FontId: var(--textSemibold);
     --Markdown--heading3FontId: var(--textSemibold);
@@ -176,7 +176,7 @@
 }
 
 @font-face {
-    font-family: "--mono";
+    font-family: mono;
     --typefaceName: system-ui;
     --typefaceStyle: Regular;
     --height: 16;
