@@ -15,7 +15,7 @@ namespace BinaryData
     const int            HELP_mdSize = 15604;
 
     extern const char*   markdown_css;
-    const int            markdown_cssSize = 6066;
+    const int            markdown_cssSize = 6060;
 
     // Number of elements in the namedResourceList and originalFileNames arrays.
     const int namedResourceListSize = 3;

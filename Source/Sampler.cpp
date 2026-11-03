@@ -229,7 +229,7 @@ static const juce::Identifier& getActionTable (juce::uint64 action)
 
 Sampler::Sampler (const juce::ValueTree& sampleTable)
     : juce::Thread (jam::Strings::fromView (::threadName)),
-      session { startSession (static_cast<int> (sampleTable[Id::intervalMs]), static_cast<int> (sampleTable[Id::stackDepth])) }
+      session { startSession (static_cast<int> (sampleTable[Id::toType (Id::intervalMs)]), static_cast<int> (sampleTable[Id::toType (Id::stackDepth)])) }
 {
     if (session.wasOk())
         startThread();
@@ -543,7 +543,7 @@ static juce::uint64 getWord (const void* ring, juce::uint64 position)
 
 Sampler::Sampler (const juce::ValueTree& sampleTable)
     : juce::Thread (jam::Strings::fromView (::threadName)),
-      session { startSession (static_cast<int> (sampleTable[Id::intervalMs]), static_cast<int> (sampleTable[Id::stackDepth])) }
+      session { startSession (static_cast<int> (sampleTable[Id::toType (Id::intervalMs)]), static_cast<int> (sampleTable[Id::toType (Id::stackDepth)])) }
 {
     if (session.wasOk())
         startThread();
@@ -866,8 +866,8 @@ static juce::Result setStackWalk (TRACEHANDLE sessionHandle)
 
 Sampler::Sampler (const juce::ValueTree& sampleTable)
     : juce::Thread (jam::Strings::fromView (::threadName)),
-      stackDepth { static_cast<int> (sampleTable[Id::stackDepth]) },
-      session { startSession (static_cast<int> (sampleTable[Id::intervalMs])) }
+      stackDepth { static_cast<int> (sampleTable[Id::toType (Id::stackDepth)]) },
+      session { startSession (static_cast<int> (sampleTable[Id::toType (Id::intervalMs)])) }
 {
     if (session.wasOk())
         startThread();

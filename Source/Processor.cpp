@@ -58,14 +58,14 @@ juce::Result Processor::runToolchainRow (const jam::ConfigDocument::Element& row
 juce::Result Processor::runEpochs (const juce::ValueTree& runTable, const juce::ValueTree& sampleTable)
 {
     const auto directory { documentFile.getParentDirectory() };
-    const auto baselineName { runTable[Id::baseline].toString() };
+    const auto baselineName { runTable[Id::toType (Id::baseline)].toString() };
     const auto baselineFile { directory.getChildFile (baselineName) };
 
     if (baselineName.isEmpty() or baselineFile.existsAsFile())
     {
-        const auto commandFile { directory.getChildFile (runTable[Id::command].toString()) };
-        const auto samplesFile { directory.getChildFile (runTable[Id::samples].toString()) };
-        const auto epochs { static_cast<int> (runTable[Id::epochs]) };
+        const auto commandFile { directory.getChildFile (runTable[Id::toType (Id::command)].toString()) };
+        const auto samplesFile { directory.getChildFile (runTable[Id::toType (Id::samples)].toString()) };
+        const auto epochs { static_cast<int> (runTable[Id::toType (Id::epochs)]) };
 
         jassert (epochs > 0);
 
@@ -86,7 +86,7 @@ juce::Result Processor::runEpochs (const juce::ValueTree& runTable, const juce::
 juce::Result Processor::writeReport (const juce::ValueTree& runTable, const juce::ValueTree& profiles)
 {
     static constexpr const char* const dateTimeFormat { "%d-%m-%Y %H:%M" };
-    const auto outputFile { documentFile.getParentDirectory().getChildFile (runTable[Id::output].toString()) };
+    const auto outputFile { documentFile.getParentDirectory().getChildFile (runTable[Id::toType (Id::output)].toString()) };
 
     if (ProfileReport::toFile (profiles, { { Id::date, juce::Time::getCurrentTime().formatted (dateTimeFormat) } }, outputFile))
         return juce::Result::ok();

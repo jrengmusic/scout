@@ -3,6 +3,13 @@
 #include "generated/Generated.h"
 #include "ProfileReport.h"
 
+#if JUCE_MAC or JUCE_LINUX
+static void killProcessGroup (int)
+{
+    ::kill (0, SIGKILL);
+}
+#endif
+
 Benchmark::Benchmark (const juce::File& newCommandFile, const juce::File& newSamplesFile, const juce::File& newManifestFile, const juce::ValueTree& newSampleTable)
     : commandFile { newCommandFile },
       samplesFile { newSamplesFile },
@@ -18,6 +25,16 @@ Benchmark::Benchmark (const juce::File& newCommandFile, const juce::File& newSam
     [[maybe_unused]] const auto isAssigned { AssignProcessToJobObject (job.get(), GetCurrentProcess()) };
 
     jassert (isAssigned);
+#endif
+
+#if JUCE_MAC or JUCE_LINUX
+    [[maybe_unused]] const auto isGroupLeader { setpgid (0, 0) == 0 };
+
+    jassert (isGroupLeader);
+
+    std::signal (SIGTERM, killProcessGroup);
+    std::signal (SIGINT, killProcessGroup);
+    std::signal (SIGHUP, killProcessGroup);
 #endif
 }
 

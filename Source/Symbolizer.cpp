@@ -45,6 +45,13 @@ static juce::Identifier getFrameKey (const std::map<juce::uint64, juce::String>&
 #include <sys/proc_info.h>
 #include <mach-o/loader.h>
 #include <mach-o/nlist.h>
+#include <mach-o/fat.h>
+
+#if defined (__arm64__)
+static constexpr cpu_type_t hostCpuType { CPU_TYPE_ARM64 };
+#else
+static constexpr cpu_type_t hostCpuType { CPU_TYPE_X86_64 };
+#endif
 
 static juce::File getKernelFile()
 {
@@ -138,27 +145,51 @@ static std::map<juce::uint64, juce::String> getTableSymbols (const char* base, c
     return symbols;
 }
 
-static std::map<juce::uint64, juce::String> getSymbols (const juce::MemoryBlock& image)
+static std::map<juce::uint64, juce::String> getSliceSymbols (const char* data, size_t size)
 {
-    const auto* tableCommand { getCommand (image.getData(), image.getSize(), [] (const load_command* command) { return command->cmd == LC_SYMTAB; }) };
-    const auto* textCommand { getCommand (image.getData(), image.getSize(), [] (const load_command* command) { return getTextAddress (command) != 0; }) };
+    const auto* tableCommand { getCommand (data, size, [] (const load_command* command) { return command->cmd == LC_SYMTAB; }) };
+    const auto* textCommand { getCommand (data, size, [] (const load_command* command) { return getTextAddress (command) != 0; }) };
 
     if (tableCommand != nullptr)
     {
         const void* tableLocation { tableCommand };
         const juce::uint64 textAddress { textCommand != nullptr ? getTextAddress (textCommand) : 0 };
 
-        return getTableSymbols (static_cast<const char*> (image.getData()), static_cast<const symtab_command*> (tableLocation), textAddress);
+        return getTableSymbols (data, static_cast<const symtab_command*> (tableLocation), textAddress);
     }
 
     return {};
+}
+
+static std::map<juce::uint64, juce::String> getSymbols (const juce::MemoryBlock& image)
+{
+    const auto* data { static_cast<const char*> (image.getData()) };
+    const auto* header { static_cast<const fat_header*> (image.getData()) };
+
+    if (image.getSize() > sizeof (fat_header) and OSSwapBigToHostInt32 (header->magic) == FAT_MAGIC)
+    {
+        const void* archsLocation { data + sizeof (fat_header) };
+        const auto* archs { static_cast<const fat_arch*> (archsLocation) };
+
+        for (uint32_t index { 0 }; index < OSSwapBigToHostInt32 (header->nfat_arch); ++index)
+        {
+            const auto& arch { archs[index] };
+
+            if (static_cast<cpu_type_t> (OSSwapBigToHostInt32 (static_cast<uint32_t> (arch.cputype))) == hostCpuType)
+                return getSliceSymbols (data + OSSwapBigToHostInt32 (arch.offset), OSSwapBigToHostInt32 (arch.size));
+        }
+    }
+
+    return getSliceSymbols (data, image.getSize());
 }
 
 static bool isSymbolImage (const juce::File& imageFile)
 {
     juce::FileInputStream stream { imageFile };
 
-    return static_cast<juce::uint32> (stream.readInt()) == MH_MAGIC_64;
+    const auto magic { static_cast<juce::uint32> (stream.readInt()) };
+
+    return magic == MH_MAGIC_64 or magic == FAT_CIGAM;
 }
 
 static const std::map<juce::uint64, juce::String>& getKernelSymbols()

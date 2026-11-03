@@ -295,7 +295,7 @@ JUCE_IS_TOP_LEVEL:STATIC=ON
 JUCE_MODULES_ONLY:BOOL=OFF
 
 //Value Computed by CMake
-JUCE_SOURCE_DIR:STATIC=/Users/jreng/.cache/cast/juce/b9a5c30ac3c5cc43c961073d20513a40ca634c79ef0a5d59faf4fa6b19493afd
+JUCE_SOURCE_DIR:STATIC=/Users/jreng/.cache/cast/juce/18ecdfb5512c312b05d70c09b593f4e97317c81d53211ba9975041188a04f282
 
 //Location that overrides the default directory where our FindWebView2
 // script is looking for the *Microsoft.Web.WebView2* directory
@@ -391,7 +391,7 @@ CMAKE_GENERATOR_PLATFORM:INTERNAL=
 CMAKE_GENERATOR_TOOLSET:INTERNAL=
 //Source directory with the top level CMakeLists.txt file for this
 // project
-CMAKE_HOME_DIRECTORY:INTERNAL=/Users/jreng/.cache/cast/juce/b9a5c30ac3c5cc43c961073d20513a40ca634c79ef0a5d59faf4fa6b19493afd
+CMAKE_HOME_DIRECTORY:INTERNAL=/Users/jreng/.cache/cast/juce/18ecdfb5512c312b05d70c09b593f4e97317c81d53211ba9975041188a04f282
 //ADVANCED property for variable: CMAKE_INSTALL_NAME_TOOL
 CMAKE_INSTALL_NAME_TOOL-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_LINKER
@@ -465,7 +465,7 @@ CMAKE_VERBOSE_MAKEFILE-ADVANCED:INTERNAL=1
 //Deprecated.  Use -W[no-]deprecated instead.
 CMAKE_WARN_DEPRECATED:INTERNAL=ON
 //The path to the folder holding this file and other resources
-JUCE_CMAKE_UTILS_DIR:INTERNAL=/Users/jreng/.cache/cast/juce/b9a5c30ac3c5cc43c961073d20513a40ca634c79ef0a5d59faf4fa6b19493afd/extras/Build/CMake
+JUCE_CMAKE_UTILS_DIR:INTERNAL=/Users/jreng/.cache/cast/juce/18ecdfb5512c312b05d70c09b593f4e97317c81d53211ba9975041188a04f282/extras/Build/CMake
 //The path to JUCE modules
-JUCE_MODULES_DIR:INTERNAL=/Users/jreng/.cache/cast/juce/b9a5c30ac3c5cc43c961073d20513a40ca634c79ef0a5d59faf4fa6b19493afd/modules
+JUCE_MODULES_DIR:INTERNAL=/Users/jreng/.cache/cast/juce/18ecdfb5512c312b05d70c09b593f4e97317c81d53211ba9975041188a04f282/modules
 

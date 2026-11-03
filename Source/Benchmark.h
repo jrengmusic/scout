@@ -2,6 +2,7 @@
 #include <JuceHeader.h>
 
 #if JUCE_MAC or JUCE_LINUX
+#include <csignal>
 #include <sys/resource.h>
 #endif
 

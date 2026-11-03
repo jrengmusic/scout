@@ -263,7 +263,7 @@ JUCE_IS_TOP_LEVEL:STATIC=OFF
 JUCE_MODULES_ONLY:BOOL=OFF
 
 //Value Computed by CMake
-JUCE_SOURCE_DIR:STATIC=/Users/jreng/.cache/cast/juce/b9a5c30ac3c5cc43c961073d20513a40ca634c79ef0a5d59faf4fa6b19493afd
+JUCE_SOURCE_DIR:STATIC=/Users/jreng/.cache/cast/juce/18ecdfb5512c312b05d70c09b593f4e97317c81d53211ba9975041188a04f282
 
 //The location, relative to the install prefix, where juceaide
 // will be installed
@@ -439,9 +439,9 @@ FIND_PACKAGE_MESSAGE_DETAILS_Git:INTERNAL=[/opt/homebrew/bin/git][v2.55.0()]
 //ADVANCED property for variable: GIT_EXECUTABLE
 GIT_EXECUTABLE-ADVANCED:INTERNAL=1
 //The path to the folder holding this file and other resources
-JUCE_CMAKE_UTILS_DIR:INTERNAL=/Users/jreng/.cache/cast/juce/b9a5c30ac3c5cc43c961073d20513a40ca634c79ef0a5d59faf4fa6b19493afd/extras/Build/CMake
+JUCE_CMAKE_UTILS_DIR:INTERNAL=/Users/jreng/.cache/cast/juce/18ecdfb5512c312b05d70c09b593f4e97317c81d53211ba9975041188a04f282/extras/Build/CMake
 //The name of the juceaide program
 JUCE_JUCEAIDE_NAME:INTERNAL=juceaide
 //The path to JUCE modules
-JUCE_MODULES_DIR:INTERNAL=/Users/jreng/.cache/cast/juce/b9a5c30ac3c5cc43c961073d20513a40ca634c79ef0a5d59faf4fa6b19493afd/modules
+JUCE_MODULES_DIR:INTERNAL=/Users/jreng/.cache/cast/juce/18ecdfb5512c312b05d70c09b593f4e97317c81d53211ba9975041188a04f282/modules
 

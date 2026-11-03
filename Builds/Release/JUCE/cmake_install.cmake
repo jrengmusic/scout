@@ -1,4 +1,4 @@
-# Install script for directory: /Users/jreng/.cache/cast/juce/b9a5c30ac3c5cc43c961073d20513a40ca634c79ef0a5d59faf4fa6b19493afd
+# Install script for directory: /Users/jreng/.cache/cast/juce/18ecdfb5512c312b05d70c09b593f4e97317c81d53211ba9975041188a04f282
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -51,27 +51,27 @@ if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/cmake/JUCE-8.0.14" TYPE FILE FILES
     "/Users/jreng/Documents/Poems/dev/scout/Builds/Release/JUCE/JUCEConfigVersion.cmake"
     "/Users/jreng/Documents/Poems/dev/scout/Builds/Release/JUCE/JUCEConfig.cmake"
-    "/Users/jreng/.cache/cast/juce/b9a5c30ac3c5cc43c961073d20513a40ca634c79ef0a5d59faf4fa6b19493afd/extras/Build/CMake/JUCECheckAtomic.cmake"
-    "/Users/jreng/.cache/cast/juce/b9a5c30ac3c5cc43c961073d20513a40ca634c79ef0a5d59faf4fa6b19493afd/extras/Build/CMake/JUCEHelperTargets.cmake"
-    "/Users/jreng/.cache/cast/juce/b9a5c30ac3c5cc43c961073d20513a40ca634c79ef0a5d59faf4fa6b19493afd/extras/Build/CMake/JUCEModuleSupport.cmake"
-    "/Users/jreng/.cache/cast/juce/b9a5c30ac3c5cc43c961073d20513a40ca634c79ef0a5d59faf4fa6b19493afd/extras/Build/CMake/JUCEUtils.cmake"
-    "/Users/jreng/.cache/cast/juce/b9a5c30ac3c5cc43c961073d20513a40ca634c79ef0a5d59faf4fa6b19493afd/extras/Build/CMake/JuceLV2Defines.h.in"
-    "/Users/jreng/.cache/cast/juce/b9a5c30ac3c5cc43c961073d20513a40ca634c79ef0a5d59faf4fa6b19493afd/extras/Build/CMake/LaunchScreen.storyboard"
-    "/Users/jreng/.cache/cast/juce/b9a5c30ac3c5cc43c961073d20513a40ca634c79ef0a5d59faf4fa6b19493afd/extras/Build/CMake/PIPAudioProcessor.cpp.in"
-    "/Users/jreng/.cache/cast/juce/b9a5c30ac3c5cc43c961073d20513a40ca634c79ef0a5d59faf4fa6b19493afd/extras/Build/CMake/PIPAudioProcessorWithARA.cpp.in"
-    "/Users/jreng/.cache/cast/juce/b9a5c30ac3c5cc43c961073d20513a40ca634c79ef0a5d59faf4fa6b19493afd/extras/Build/CMake/PIPComponent.cpp.in"
-    "/Users/jreng/.cache/cast/juce/b9a5c30ac3c5cc43c961073d20513a40ca634c79ef0a5d59faf4fa6b19493afd/extras/Build/CMake/PIPConsole.cpp.in"
-    "/Users/jreng/.cache/cast/juce/b9a5c30ac3c5cc43c961073d20513a40ca634c79ef0a5d59faf4fa6b19493afd/extras/Build/CMake/RecentFilesMenuTemplate.nib"
-    "/Users/jreng/.cache/cast/juce/b9a5c30ac3c5cc43c961073d20513a40ca634c79ef0a5d59faf4fa6b19493afd/extras/Build/CMake/UnityPluginGUIScript.cs.in"
-    "/Users/jreng/.cache/cast/juce/b9a5c30ac3c5cc43c961073d20513a40ca634c79ef0a5d59faf4fa6b19493afd/extras/Build/CMake/checkBundleSigning.cmake"
-    "/Users/jreng/.cache/cast/juce/b9a5c30ac3c5cc43c961073d20513a40ca634c79ef0a5d59faf4fa6b19493afd/extras/Build/CMake/copyDir.cmake"
-    "/Users/jreng/.cache/cast/juce/b9a5c30ac3c5cc43c961073d20513a40ca634c79ef0a5d59faf4fa6b19493afd/extras/Build/CMake/juce_runtime_arch_detection.cpp"
-    "/Users/jreng/.cache/cast/juce/b9a5c30ac3c5cc43c961073d20513a40ca634c79ef0a5d59faf4fa6b19493afd/extras/Build/CMake/juce_LinuxSubprocessHelper.cpp"
+    "/Users/jreng/.cache/cast/juce/18ecdfb5512c312b05d70c09b593f4e97317c81d53211ba9975041188a04f282/extras/Build/CMake/JUCECheckAtomic.cmake"
+    "/Users/jreng/.cache/cast/juce/18ecdfb5512c312b05d70c09b593f4e97317c81d53211ba9975041188a04f282/extras/Build/CMake/JUCEHelperTargets.cmake"
+    "/Users/jreng/.cache/cast/juce/18ecdfb5512c312b05d70c09b593f4e97317c81d53211ba9975041188a04f282/extras/Build/CMake/JUCEModuleSupport.cmake"
+    "/Users/jreng/.cache/cast/juce/18ecdfb5512c312b05d70c09b593f4e97317c81d53211ba9975041188a04f282/extras/Build/CMake/JUCEUtils.cmake"
+    "/Users/jreng/.cache/cast/juce/18ecdfb5512c312b05d70c09b593f4e97317c81d53211ba9975041188a04f282/extras/Build/CMake/JuceLV2Defines.h.in"
+    "/Users/jreng/.cache/cast/juce/18ecdfb5512c312b05d70c09b593f4e97317c81d53211ba9975041188a04f282/extras/Build/CMake/LaunchScreen.storyboard"
+    "/Users/jreng/.cache/cast/juce/18ecdfb5512c312b05d70c09b593f4e97317c81d53211ba9975041188a04f282/extras/Build/CMake/PIPAudioProcessor.cpp.in"
+    "/Users/jreng/.cache/cast/juce/18ecdfb5512c312b05d70c09b593f4e97317c81d53211ba9975041188a04f282/extras/Build/CMake/PIPAudioProcessorWithARA.cpp.in"
+    "/Users/jreng/.cache/cast/juce/18ecdfb5512c312b05d70c09b593f4e97317c81d53211ba9975041188a04f282/extras/Build/CMake/PIPComponent.cpp.in"
+    "/Users/jreng/.cache/cast/juce/18ecdfb5512c312b05d70c09b593f4e97317c81d53211ba9975041188a04f282/extras/Build/CMake/PIPConsole.cpp.in"
+    "/Users/jreng/.cache/cast/juce/18ecdfb5512c312b05d70c09b593f4e97317c81d53211ba9975041188a04f282/extras/Build/CMake/RecentFilesMenuTemplate.nib"
+    "/Users/jreng/.cache/cast/juce/18ecdfb5512c312b05d70c09b593f4e97317c81d53211ba9975041188a04f282/extras/Build/CMake/UnityPluginGUIScript.cs.in"
+    "/Users/jreng/.cache/cast/juce/18ecdfb5512c312b05d70c09b593f4e97317c81d53211ba9975041188a04f282/extras/Build/CMake/checkBundleSigning.cmake"
+    "/Users/jreng/.cache/cast/juce/18ecdfb5512c312b05d70c09b593f4e97317c81d53211ba9975041188a04f282/extras/Build/CMake/copyDir.cmake"
+    "/Users/jreng/.cache/cast/juce/18ecdfb5512c312b05d70c09b593f4e97317c81d53211ba9975041188a04f282/extras/Build/CMake/juce_runtime_arch_detection.cpp"
+    "/Users/jreng/.cache/cast/juce/18ecdfb5512c312b05d70c09b593f4e97317c81d53211ba9975041188a04f282/extras/Build/CMake/juce_LinuxSubprocessHelper.cpp"
     )
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/cmake/JUCE-8.0.14" TYPE DIRECTORY FILES "/Users/jreng/.cache/cast/juce/b9a5c30ac3c5cc43c961073d20513a40ca634c79ef0a5d59faf4fa6b19493afd/extras/Build/CMake/juce_vst3_helper")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/cmake/JUCE-8.0.14" TYPE DIRECTORY FILES "/Users/jreng/.cache/cast/juce/18ecdfb5512c312b05d70c09b593f4e97317c81d53211ba9975041188a04f282/extras/Build/CMake/juce_vst3_helper")
 endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
