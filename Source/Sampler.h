@@ -423,7 +423,7 @@ private:
     const juce::Result session;
 
     /** @brief Count of each frame key, for each table type. */
-    jam::HashMap<juce::Identifier, jam::HashMap<juce::Identifier, int>> counts { { Id::toType (Id::sample), {} }, { Id::toType (Id::cswitch), {} } };
+    jam::HashMap<juce::Identifier, jam::HashMap<juce::Identifier, int>> counts { { jam::Format::toType (Id::sample), {} }, { jam::Format::toType (Id::cswitch), {} } };
 
     JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR (Sampler)
 };

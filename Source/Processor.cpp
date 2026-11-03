@@ -24,10 +24,10 @@ juce::Result Processor::generate()
     if (result.wasOk())
     {
         const auto manifestTree { manifest.getValueTree (Id::manifest) };
-        const auto runTable { manifestTree.getChildWithName (Id::toType (Id::run)) };
+        const auto runTable { manifestTree.getChildWithName (jam::Format::toType (Id::run)) };
 
         if (runTable.isValid())
-            result = runEpochs (runTable, manifestTree.getChildWithName (Id::toType (Id::sample)));
+            result = runEpochs (runTable, manifestTree.getChildWithName (jam::Format::toType (Id::sample)));
     }
 
     return result;
@@ -58,14 +58,14 @@ juce::Result Processor::runToolchainRow (const jam::ConfigDocument::Element& row
 juce::Result Processor::runEpochs (const juce::ValueTree& runTable, const juce::ValueTree& sampleTable)
 {
     const auto directory { documentFile.getParentDirectory() };
-    const auto baselineName { runTable[Id::toType (Id::baseline)].toString() };
+    const auto baselineName { runTable[jam::Format::toType (Id::baseline)].toString() };
     const auto baselineFile { directory.getChildFile (baselineName) };
 
     if (baselineName.isEmpty() or baselineFile.existsAsFile())
     {
-        const auto commandFile { directory.getChildFile (runTable[Id::toType (Id::command)].toString()) };
-        const auto samplesFile { directory.getChildFile (runTable[Id::toType (Id::samples)].toString()) };
-        const auto epochs { static_cast<int> (runTable[Id::toType (Id::epochs)]) };
+        const auto commandFile { directory.getChildFile (runTable[jam::Format::toType (Id::command)].toString()) };
+        const auto samplesFile { directory.getChildFile (runTable[jam::Format::toType (Id::samples)].toString()) };
+        const auto epochs { static_cast<int> (runTable[jam::Format::toType (Id::epochs)]) };
 
         jassert (epochs > 0);
 
@@ -86,7 +86,7 @@ juce::Result Processor::runEpochs (const juce::ValueTree& runTable, const juce::
 juce::Result Processor::writeReport (const juce::ValueTree& runTable, const juce::ValueTree& profiles)
 {
     static constexpr const char* const dateTimeFormat { "%d-%m-%Y %H:%M" };
-    const auto outputFile { documentFile.getParentDirectory().getChildFile (runTable[Id::toType (Id::output)].toString()) };
+    const auto outputFile { documentFile.getParentDirectory().getChildFile (runTable[jam::Format::toType (Id::output)].toString()) };
 
     if (ProfileReport::toFile (profiles, { { Id::date, juce::Time::getCurrentTime().formatted (dateTimeFormat) } }, outputFile))
         return juce::Result::ok();

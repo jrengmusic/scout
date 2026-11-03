@@ -1,5 +1,5 @@
 # ninja log v7
-1	31	1793702801274843538	/Users/jreng/Documents/Poems/dev/scout/Builds/Release/JUCE/tools/CMakeFiles/cmake.verify_globs	32d7d0fe64619b6
+2	33	1793706236996254685	/Users/jreng/Documents/Poems/dev/scout/Builds/Release/JUCE/tools/CMakeFiles/cmake.verify_globs	32d7d0fe64619b6
 35	95	1793697757593777660	extras/Build/juceaide/CMakeFiles/juceaide.dir/__/__/__/modules/juce_core/juce_core_CompilationTime.cpp.o	fba3a503a77f30fd
 33	236	1793697757592250935	extras/Build/juceaide/CMakeFiles/juceaide.dir/__/__/__/modules/juce_graphics/juce_graphics_Sheenbidi.c.o	2591f1819cf42fa3
 237	1278	1793697757795723444	extras/Build/juceaide/CMakeFiles/juceaide.dir/__/__/__/modules/juce_data_structures/juce_data_structures.mm.o	bdeb28063520b408
@@ -15,4 +15,4 @@
 33	3991	1793697757592143144	extras/Build/juceaide/CMakeFiles/juceaide.dir/__/__/__/modules/juce_graphics/juce_graphics_Harfbuzz.cpp.o	6b61f9fc0176db3d
 34	4081	1793697757593480582	extras/Build/juceaide/CMakeFiles/juceaide.dir/__/__/__/modules/juce_graphics/juce_graphics.mm.o	2e2a1ad68cbfef4c
 4082	4223	1793697761640710631	extras/Build/juceaide/juceaide_artefacts/Custom/juceaide	c5f2fd5920278976
-2	33	1793706236996254685	/Users/jreng/Documents/Poems/dev/scout/Builds/Release/JUCE/tools/CMakeFiles/cmake.verify_globs	32d7d0fe64619b6
+1	30	1793711890040349922	/Users/jreng/Documents/Poems/dev/scout/Builds/Release/JUCE/tools/CMakeFiles/cmake.verify_globs	32d7d0fe64619b6

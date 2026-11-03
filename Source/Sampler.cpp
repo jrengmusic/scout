@@ -220,8 +220,8 @@ static const juce::Identifier& getActionTable (juce::uint64 action)
 {
     static const jam::HashMap<juce::uint64, juce::Identifier> actionTables
     {
-        { timerAction, Id::toType (Id::sample) },
-        { switchAction, Id::toType (Id::cswitch) }
+        { timerAction, jam::Format::toType (Id::sample) },
+        { switchAction, jam::Format::toType (Id::cswitch) }
     };
 
     return actionTables.at (action);
@@ -229,7 +229,7 @@ static const juce::Identifier& getActionTable (juce::uint64 action)
 
 Sampler::Sampler (const juce::ValueTree& sampleTable)
     : juce::Thread (jam::Strings::fromView (::threadName)),
-      session { startSession (static_cast<int> (sampleTable[Id::toType (Id::intervalMs)]), static_cast<int> (sampleTable[Id::toType (Id::stackDepth)])) }
+      session { startSession (static_cast<int> (sampleTable[jam::Format::toType (Id::intervalMs)]), static_cast<int> (sampleTable[jam::Format::toType (Id::stackDepth)])) }
 {
     if (session.wasOk())
         startThread();
@@ -412,7 +412,7 @@ void Sampler::addUserSamples (const juce::Array<juce::uint64>& bracket)
 
 void Sampler::addLostEvents (const kd_buf&)
 {
-    ++counts[Id::toType (Id::sample)][Id::dropped];
+    ++counts[jam::Format::toType (Id::sample)][Id::dropped];
 }
 
 void Sampler::setDescendants()
@@ -543,7 +543,7 @@ static juce::uint64 getWord (const void* ring, juce::uint64 position)
 
 Sampler::Sampler (const juce::ValueTree& sampleTable)
     : juce::Thread (jam::Strings::fromView (::threadName)),
-      session { startSession (static_cast<int> (sampleTable[Id::toType (Id::intervalMs)]), static_cast<int> (sampleTable[Id::toType (Id::stackDepth)])) }
+      session { startSession (static_cast<int> (sampleTable[jam::Format::toType (Id::intervalMs)]), static_cast<int> (sampleTable[jam::Format::toType (Id::stackDepth)])) }
 {
     if (session.wasOk())
         startThread();
@@ -629,10 +629,10 @@ void Sampler::run()
 void Sampler::addAllRecords()
 {
     for (const auto& ring : clockRings)
-        addRecords (ring.get(), Id::toType (Id::sample));
+        addRecords (ring.get(), jam::Format::toType (Id::sample));
 
     for (const auto& ring : switchRings)
-        addRecords (ring.get(), Id::toType (Id::cswitch));
+        addRecords (ring.get(), jam::Format::toType (Id::cswitch));
 }
 
 void Sampler::addRecords (void* ring, const juce::Identifier& tableType)
@@ -866,8 +866,8 @@ static juce::Result setStackWalk (TRACEHANDLE sessionHandle)
 
 Sampler::Sampler (const juce::ValueTree& sampleTable)
     : juce::Thread (jam::Strings::fromView (::threadName)),
-      stackDepth { static_cast<int> (sampleTable[Id::toType (Id::stackDepth)]) },
-      session { startSession (static_cast<int> (sampleTable[Id::toType (Id::intervalMs)])) }
+      stackDepth { static_cast<int> (sampleTable[jam::Format::toType (Id::stackDepth)]) },
+      session { startSession (static_cast<int> (sampleTable[jam::Format::toType (Id::intervalMs)])) }
 {
     if (session.wasOk())
         startThread();
@@ -898,7 +898,7 @@ juce::Result Sampler::drain()
         stopThread (stopTimeoutMilliseconds);
 
         if (eventsLost > 0)
-            counts[Id::toType (Id::sample)][Id::dropped] += eventsLost;
+            counts[jam::Format::toType (Id::sample)][Id::dropped] += eventsLost;
 
         return queried.wasOk() ? stopped : queried;
     }
@@ -1004,8 +1004,8 @@ void Sampler::addStack (const EVENT_RECORD& record)
 {
     static const jam::HashMap<juce::uint64, juce::Identifier> stackTables
     {
-        { sampledProfileEvent, Id::toType (Id::sample) },
-        { cswitchEvent, Id::toType (Id::cswitch) }
+        { sampledProfileEvent, jam::Format::toType (Id::sample) },
+        { cswitchEvent, jam::Format::toType (Id::cswitch) }
     };
 
     juce::MemoryInputStream payload { record.UserData, record.UserDataLength, false };

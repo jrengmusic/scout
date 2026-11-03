@@ -217,14 +217,14 @@ juce::Result Benchmark::addEpoch (double epochNanoseconds, const juce::ValueTree
 
         for (const auto& table : samplesTree)
         {
-            if (table.getType() == Id::toType (Id::run))
+            if (table.getType() == jam::Format::toType (Id::run))
                 runTable = table;
             else
                 tableType = table.getType();
         }
 
         for (const auto& table : samplesTree)
-            if (table.getType() != Id::toType (Id::run))
+            if (table.getType() != jam::Format::toType (Id::run))
                 addRows (tableType, table);
 
         for (const auto& table : samplerSamples)
@@ -249,7 +249,7 @@ juce::ValueTree Benchmark::getProfiles (const juce::ValueTree& baseline) const
     {
         const juce::Identifier callTableType { benchmarkType.toString()
                                              + juce::String::charToString (Chars::underscore)
-                                             + Id::toType (Id::calls).toString() };
+                                             + jam::Format::toType (Id::calls).toString() };
 
         profiles.appendChild (ProfileReport::getProfile (callTableType, benchmarkBins, units.at (benchmarkType), baseline.getChildWithName (callTableType)), nullptr);
     }
