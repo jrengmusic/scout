@@ -7,13 +7,13 @@ void printHelp (const juce::String& helpText)
 
     juce::MemoryOutputStream frame;
     jam::TerminalBuffer buffer;
-    const jam::GlyphArrangement glyphArrangement { jam::TerminalBuffer::getCellLookup(), jam::TerminalBuffer::getCellMeasure() };
-    jam::StyleManager styleManager { { BinaryData::fetcher }, jam::Strings { files::markdownStyleSheet, files::mermaidStyleSheet } };
+    const jam::GlyphArrangement glyphArrangement;
+    jam::StyleManager styleManager { { BinaryData::fetcher }, jam::Strings { files::styleSheet } };
     jam::StyleMarkdown styleMarkdown;
 
     const auto columnWidth { styleMarkdown.getColumnWidth() };
 
-    jam::MarkdownComponent component;
+    jam::TextEditor component;
     component.setLookAndFeel (&styleMarkdown);
     component.setBounds (0, 0, columnWidth, 0);
     component.setDocument (jam::MarkdownDocument::parse (helpText, files::scoutHelp));

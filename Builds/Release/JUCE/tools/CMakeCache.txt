@@ -295,7 +295,7 @@ JUCE_IS_TOP_LEVEL:STATIC=ON
 JUCE_MODULES_ONLY:BOOL=OFF
 
 //Value Computed by CMake
-JUCE_SOURCE_DIR:STATIC=/Users/jreng/.cache/cast/juce/18ecdfb5512c312b05d70c09b593f4e97317c81d53211ba9975041188a04f282
+JUCE_SOURCE_DIR:STATIC=/Users/jreng/.cache/cast/juce/8acf824d884a4e9a0d21b7099dbc5131f4df8b01ae04ada5fe310faad2b215fd
 
 //Location that overrides the default directory where our FindWebView2
 // script is looking for the *Microsoft.Web.WebView2* directory
@@ -317,7 +317,7 @@ CMAKE_CACHE_MAJOR_VERSION:INTERNAL=4
 //Minor version of cmake used to create the current loaded cache
 CMAKE_CACHE_MINOR_VERSION:INTERNAL=4
 //Patch version of cmake used to create the current loaded cache
-CMAKE_CACHE_PATCH_VERSION:INTERNAL=2
+CMAKE_CACHE_PATCH_VERSION:INTERNAL=5
 //Path to CMake executable.
 CMAKE_COMMAND:INTERNAL=/opt/homebrew/bin/cmake
 //Path to cpack program executable.
@@ -391,7 +391,7 @@ CMAKE_GENERATOR_PLATFORM:INTERNAL=
 CMAKE_GENERATOR_TOOLSET:INTERNAL=
 //Source directory with the top level CMakeLists.txt file for this
 // project
-CMAKE_HOME_DIRECTORY:INTERNAL=/Users/jreng/.cache/cast/juce/18ecdfb5512c312b05d70c09b593f4e97317c81d53211ba9975041188a04f282
+CMAKE_HOME_DIRECTORY:INTERNAL=/Users/jreng/.cache/cast/juce/8acf824d884a4e9a0d21b7099dbc5131f4df8b01ae04ada5fe310faad2b215fd
 //ADVANCED property for variable: CMAKE_INSTALL_NAME_TOOL
 CMAKE_INSTALL_NAME_TOOL-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_LINKER
@@ -465,7 +465,7 @@ CMAKE_VERBOSE_MAKEFILE-ADVANCED:INTERNAL=1
 //Deprecated.  Use -W[no-]deprecated instead.
 CMAKE_WARN_DEPRECATED:INTERNAL=ON
 //The path to the folder holding this file and other resources
-JUCE_CMAKE_UTILS_DIR:INTERNAL=/Users/jreng/.cache/cast/juce/18ecdfb5512c312b05d70c09b593f4e97317c81d53211ba9975041188a04f282/extras/Build/CMake
+JUCE_CMAKE_UTILS_DIR:INTERNAL=/Users/jreng/.cache/cast/juce/8acf824d884a4e9a0d21b7099dbc5131f4df8b01ae04ada5fe310faad2b215fd/extras/Build/CMake
 //The path to JUCE modules
-JUCE_MODULES_DIR:INTERNAL=/Users/jreng/.cache/cast/juce/18ecdfb5512c312b05d70c09b593f4e97317c81d53211ba9975041188a04f282/modules
+JUCE_MODULES_DIR:INTERNAL=/Users/jreng/.cache/cast/juce/8acf824d884a4e9a0d21b7099dbc5131f4df8b01ae04ada5fe310faad2b215fd/modules
 

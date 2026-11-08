@@ -54,11 +54,11 @@ endif()
 
 check_required_components("JUCE")
 
-set(JUCE_MODULES_DIR "/Users/jreng/.cache/cast/juce/18ecdfb5512c312b05d70c09b593f4e97317c81d53211ba9975041188a04f282/modules" CACHE INTERNAL
+set(JUCE_MODULES_DIR "/Users/jreng/.cache/cast/juce/8acf824d884a4e9a0d21b7099dbc5131f4df8b01ae04ada5fe310faad2b215fd/modules" CACHE INTERNAL
     "The path to JUCE modules")
 
-include("/Users/jreng/.cache/cast/juce/18ecdfb5512c312b05d70c09b593f4e97317c81d53211ba9975041188a04f282/extras/Build/CMake/JUCEModuleSupport.cmake")
-include("/Users/jreng/.cache/cast/juce/18ecdfb5512c312b05d70c09b593f4e97317c81d53211ba9975041188a04f282/extras/Build/CMake/JUCEUtils.cmake")
+include("/Users/jreng/.cache/cast/juce/8acf824d884a4e9a0d21b7099dbc5131f4df8b01ae04ada5fe310faad2b215fd/extras/Build/CMake/JUCEModuleSupport.cmake")
+include("/Users/jreng/.cache/cast/juce/8acf824d884a4e9a0d21b7099dbc5131f4df8b01ae04ada5fe310faad2b215fd/extras/Build/CMake/JUCEUtils.cmake")
 
 set(_juce_modules
     juce_analytics
@@ -114,7 +114,7 @@ unset(_targets_defined)
 unset(_targets_expected)
 
 foreach(_juce_module IN LISTS _juce_modules)
-    juce_add_module("/Users/jreng/.cache/cast/juce/18ecdfb5512c312b05d70c09b593f4e97317c81d53211ba9975041188a04f282/modules/${_juce_module}" ALIAS_NAMESPACE juce)
+    juce_add_module("/Users/jreng/.cache/cast/juce/8acf824d884a4e9a0d21b7099dbc5131f4df8b01ae04ada5fe310faad2b215fd/modules/${_juce_module}" ALIAS_NAMESPACE juce)
 endforeach()
 
 unset(_juce_modules)
