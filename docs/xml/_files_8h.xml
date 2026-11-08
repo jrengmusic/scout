@@ -2,18 +2,18 @@
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.18.0" xml:lang="en-US">
   <compounddef id="_files_8h" kind="file" language="C++">
     <compoundname>Files.h</compoundname>
-    <includedby refid="_generated_8h" local="yes">Source/generated/Generated.h</includedby>
+    <includedby refid="_generated_8h" local="yes">generated/Generated.h</includedby>
     <invincdepgraph>
       <node id="3">
-        <label>Source/Benchmark.cpp</label>
+        <label>Benchmark.cpp</label>
         <link refid="_benchmark_8cpp"/>
       </node>
       <node id="5">
-        <label>Source/Help.cpp</label>
+        <label>Help.cpp</label>
         <link refid="_help_8cpp"/>
       </node>
       <node id="4">
-        <label>Source/Help.h</label>
+        <label>Help.h</label>
         <link refid="_help_8h"/>
         <childnode refid="5" relation="include">
         </childnode>
@@ -21,15 +21,15 @@
         </childnode>
       </node>
       <node id="6">
-        <label>Source/Main.cpp</label>
+        <label>Main.cpp</label>
         <link refid="_main_8cpp"/>
       </node>
       <node id="8">
-        <label>Source/Processor.cpp</label>
+        <label>Processor.cpp</label>
         <link refid="_processor_8cpp"/>
       </node>
       <node id="7">
-        <label>Source/Processor.h</label>
+        <label>Processor.h</label>
         <link refid="_processor_8h"/>
         <childnode refid="6" relation="include">
         </childnode>
@@ -37,15 +37,15 @@
         </childnode>
       </node>
       <node id="9">
-        <label>Source/ProfileReport.cpp</label>
+        <label>ProfileReport.cpp</label>
         <link refid="_profile_report_8cpp"/>
       </node>
       <node id="11">
-        <label>Source/Sampler.cpp</label>
+        <label>Sampler.cpp</label>
         <link refid="_sampler_8cpp"/>
       </node>
       <node id="10">
-        <label>Source/Sampler.h</label>
+        <label>Sampler.h</label>
         <link refid="_sampler_8h"/>
         <childnode refid="3" relation="include">
         </childnode>
@@ -55,11 +55,11 @@
         </childnode>
       </node>
       <node id="14">
-        <label>Source/Toolchain.cpp</label>
+        <label>Toolchain.cpp</label>
         <link refid="_toolchain_8cpp"/>
       </node>
       <node id="13">
-        <label>Source/Toolchain.h</label>
+        <label>Toolchain.h</label>
         <link refid="_toolchain_8h"/>
         <childnode refid="7" relation="include">
         </childnode>
@@ -67,11 +67,11 @@
         </childnode>
       </node>
       <node id="12">
-        <label>Source/Validator.cpp</label>
+        <label>Validator.cpp</label>
         <link refid="_validator_8cpp"/>
       </node>
       <node id="15">
-        <label>Source/Validator.h</label>
+        <label>Validator.h</label>
         <link refid="_validator_8h"/>
         <childnode refid="7" relation="include">
         </childnode>
@@ -79,17 +79,17 @@
         </childnode>
       </node>
       <node id="1">
-        <label>Source/generated/Files.h</label>
+        <label>generated/Files.h</label>
         <link refid="_files_8h"/>
         <childnode refid="2" relation="include">
         </childnode>
       </node>
       <node id="16">
-        <label>Source/generated/Generated.cpp</label>
+        <label>generated/Generated.cpp</label>
         <link refid="_generated_8cpp"/>
       </node>
       <node id="2">
-        <label>Source/generated/Generated.h</label>
+        <label>generated/Generated.h</label>
         <link refid="_generated_8h"/>
         <childnode refid="3" relation="include">
         </childnode>
@@ -137,15 +137,15 @@
 <codeline lineno="21"><highlight class="normal"></highlight></codeline>
 <codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="23"><highlight class="normal"></highlight></codeline>
-<codeline lineno="24" refid="namespacefiles" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespacefiles" kindref="compound">files</ref></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespacefiles" kindref="compound" external="/Users/jreng/Documents/Poems/dev/jam/docs/tagfile.xml">files</ref></highlight></codeline>
 <codeline lineno="25"><highlight class="normal">{</highlight></codeline>
 <codeline lineno="26"><highlight class="normal"></highlight><highlight class="comment">/*_____________________________________________________________________________*/</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="27"><highlight class="normal"></highlight></codeline>
 <codeline lineno="29"><highlight class="normal"></highlight></codeline>
-<codeline lineno="30"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>juce::String<sp/><ref refid="namespacefiles_1a4f5d1a618a82e735de711d473aa8033b" kindref="member">scoutHelp</ref>;</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>juce::String<sp/><ref refid="namespacefiles_1a4f5d1a618a82e735de711d473aa8033b" kindref="member" external="/Users/jreng/Documents/Poems/dev/jam/docs/tagfile.xml">scoutHelp</ref>;</highlight></codeline>
 <codeline lineno="31"><highlight class="normal"></highlight></codeline>
 <codeline lineno="33"><highlight class="normal">}</highlight><highlight class="comment">//<sp/>namespace<sp/>files</highlight><highlight class="normal"></highlight></codeline>
     </programlisting>
-    <location file="Source/generated/Files.h"/>
+    <location file="generated/Files.h"/>
   </compounddef>
 </doxygen>

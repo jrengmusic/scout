@@ -5,7 +5,7 @@
     <includes refid="_symbolizer_8h" local="no">Symbolizer.h</includes>
     <sectiondef kind="private-attrib">
       <memberdef kind="variable" id="class_symbolizer_1a83cce67295d5e29b117076892225ee14" prot="private" static="no" mutable="no">
-        <type>jam::HashMap&lt; int, jam::HashMap&lt; juce::uint64, juce::Identifier &gt; &gt;</type>
+        <type><ref refid="classjam_1_1HashMap" kindref="compound" external="/Users/jreng/Documents/Poems/dev/jam/docs/tagfile.xml">jam::HashMap</ref>&lt; int, <ref refid="classjam_1_1HashMap" kindref="compound" external="/Users/jreng/Documents/Poems/dev/jam/docs/tagfile.xml">jam::HashMap</ref>&lt; <ref refid="namespacejuce_1a2a831a96019763c93ef9acd9b7d5e975" kindref="member" external="/Users/jreng/Documents/Poems/JUCE/docs/tagfile.xml">juce::uint64</ref>, <ref refid="classjuce_1_1Identifier" kindref="compound" external="/Users/jreng/Documents/Poems/JUCE/docs/tagfile.xml">juce::Identifier</ref> &gt; &gt;</type>
         <definition>jam::HashMap&lt;int, jam::HashMap&lt;juce::uint64, juce::Identifier&gt; &gt; Symbolizer::frameKeys</definition>
         <argsstring></argsstring>
         <name>frameKeys</name>
@@ -17,12 +17,12 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Source/Symbolizer.h" line="97" column="18" bodyfile="Source/Symbolizer.h" bodystart="97" bodyend="-1"/>
-        <referencedby refid="class_symbolizer_1a92eeac9f0e75cec721c3887f3c9528e4" compoundref="_symbolizer_8cpp" startline="380" endline="395">getOrCreateKernelFrameKey</referencedby>
-        <referencedby refid="class_symbolizer_1ac2636a4ed1057b823a39d1e316b7b222" compoundref="_symbolizer_8cpp" startline="190" endline="210">getOrCreateUserFrameKey</referencedby>
+        <location file="Symbolizer.h" line="97" column="18" bodyfile="Symbolizer.h" bodystart="97" bodyend="-1"/>
+        <referencedby refid="class_symbolizer_1a92eeac9f0e75cec721c3887f3c9528e4" compoundref="_symbolizer_8cpp" startline="411" endline="426">getOrCreateKernelFrameKey</referencedby>
+        <referencedby refid="class_symbolizer_1ac2636a4ed1057b823a39d1e316b7b222" compoundref="_symbolizer_8cpp" startline="221" endline="241">getOrCreateUserFrameKey</referencedby>
       </memberdef>
       <memberdef kind="variable" id="class_symbolizer_1a3a526738f15236d0bbd906f96f0ecddc" prot="private" static="no" mutable="no">
-        <type>jam::HashMap&lt; juce::String, std::map&lt; juce::uint64, juce::String &gt; &gt;</type>
+        <type><ref refid="classjam_1_1HashMap" kindref="compound" external="/Users/jreng/Documents/Poems/dev/jam/docs/tagfile.xml">jam::HashMap</ref>&lt; <ref refid="classjuce_1_1String" kindref="compound" external="/Users/jreng/Documents/Poems/JUCE/docs/tagfile.xml">juce::String</ref>, std::map&lt; <ref refid="namespacejuce_1a2a831a96019763c93ef9acd9b7d5e975" kindref="member" external="/Users/jreng/Documents/Poems/JUCE/docs/tagfile.xml">juce::uint64</ref>, <ref refid="classjuce_1_1String" kindref="compound" external="/Users/jreng/Documents/Poems/JUCE/docs/tagfile.xml">juce::String</ref> &gt; &gt;</type>
         <definition>jam::HashMap&lt;juce::String, std::map&lt;juce::uint64, juce::String&gt; &gt; Symbolizer::imageSymbols</definition>
         <argsstring></argsstring>
         <name>imageSymbols</name>
@@ -34,12 +34,12 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Source/Symbolizer.h" line="101" column="18" bodyfile="Source/Symbolizer.h" bodystart="101" bodyend="-1"/>
-        <referencedby refid="class_symbolizer_1a93cc5155003af3fb204341779e85ec0c" compoundref="_symbolizer_8cpp" startline="349" endline="376">getOrCreateImageFrameKey</referencedby>
-        <referencedby refid="class_symbolizer_1ac2636a4ed1057b823a39d1e316b7b222" compoundref="_symbolizer_8cpp" startline="190" endline="210">getOrCreateUserFrameKey</referencedby>
+        <location file="Symbolizer.h" line="101" column="18" bodyfile="Symbolizer.h" bodystart="101" bodyend="-1"/>
+        <referencedby refid="class_symbolizer_1a93cc5155003af3fb204341779e85ec0c" compoundref="_symbolizer_8cpp" startline="380" endline="407">getOrCreateImageFrameKey</referencedby>
+        <referencedby refid="class_symbolizer_1ac2636a4ed1057b823a39d1e316b7b222" compoundref="_symbolizer_8cpp" startline="221" endline="241">getOrCreateUserFrameKey</referencedby>
       </memberdef>
       <memberdef kind="variable" id="class_symbolizer_1a908dd447303d990afb471232ef7fe4d8" prot="private" static="no" mutable="no">
-        <type>jam::HashMap&lt; int, std::map&lt; juce::uint64, juce::String &gt; &gt;</type>
+        <type><ref refid="classjam_1_1HashMap" kindref="compound" external="/Users/jreng/Documents/Poems/dev/jam/docs/tagfile.xml">jam::HashMap</ref>&lt; int, std::map&lt; <ref refid="namespacejuce_1a2a831a96019763c93ef9acd9b7d5e975" kindref="member" external="/Users/jreng/Documents/Poems/JUCE/docs/tagfile.xml">juce::uint64</ref>, <ref refid="classjuce_1_1String" kindref="compound" external="/Users/jreng/Documents/Poems/JUCE/docs/tagfile.xml">juce::String</ref> &gt; &gt;</type>
         <definition>jam::HashMap&lt;int, std::map&lt;juce::uint64, juce::String&gt; &gt; Symbolizer::regions</definition>
         <argsstring></argsstring>
         <name>regions</name>
@@ -52,7 +52,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Source/Symbolizer.h" line="118" column="18" bodyfile="Source/Symbolizer.h" bodystart="118" bodyend="-1"/>
+        <location file="Symbolizer.h" line="118" column="18" bodyfile="Symbolizer.h" bodystart="118" bodyend="-1"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="public-func">
@@ -69,7 +69,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Source/Symbolizer.h" line="28" column="5"/>
+        <location file="Symbolizer.h" line="28" column="5"/>
       </memberdef>
       <memberdef kind="function" id="class_symbolizer_1a6b632e1592e8735f841efc54bd8f02e7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -84,19 +84,19 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Source/Symbolizer.h" line="31" column="5"/>
-        <references refid="class_symbolizer_1a92eeac9f0e75cec721c3887f3c9528e4" compoundref="_symbolizer_8cpp" startline="380" endline="395">getOrCreateKernelFrameKey</references>
-        <references refid="class_symbolizer_1ac2636a4ed1057b823a39d1e316b7b222" compoundref="_symbolizer_8cpp" startline="190" endline="210">getOrCreateUserFrameKey</references>
+        <location file="Symbolizer.h" line="31" column="5"/>
+        <references refid="class_symbolizer_1a92eeac9f0e75cec721c3887f3c9528e4" compoundref="_symbolizer_8cpp" startline="411" endline="426">getOrCreateKernelFrameKey</references>
+        <references refid="class_symbolizer_1ac2636a4ed1057b823a39d1e316b7b222" compoundref="_symbolizer_8cpp" startline="221" endline="241">getOrCreateUserFrameKey</references>
         <references refid="_symbolizer_8cpp_1a5fb131484b9fd1322472a4ba9fc0e4ed" compoundref="_symbolizer_8cpp" startline="18" endline="18">kernelProcessId</references>
       </memberdef>
       <memberdef kind="function" id="class_symbolizer_1a92eeac9f0e75cec721c3887f3c9528e4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>juce::Identifier</type>
+        <type><ref refid="classjuce_1_1Identifier" kindref="compound" external="/Users/jreng/Documents/Poems/JUCE/docs/tagfile.xml">juce::Identifier</ref></type>
         <definition>juce::Identifier Symbolizer::getOrCreateKernelFrameKey</definition>
         <argsstring>(juce::uint64 address)</argsstring>
         <name>getOrCreateKernelFrameKey</name>
         <qualifiedname>Symbolizer::getOrCreateKernelFrameKey</qualifiedname>
         <param>
-          <type>juce::uint64</type>
+          <type><ref refid="namespacejuce_1a2a831a96019763c93ef9acd9b7d5e975" kindref="member" external="/Users/jreng/Documents/Poems/JUCE/docs/tagfile.xml">juce::uint64</ref></type>
           <declname>address</declname>
         </param>
         <briefdescription>
@@ -119,19 +119,20 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Source/Symbolizer.h" line="43" column="22" bodyfile="Source/Symbolizer.cpp" bodystart="380" bodyend="395"/>
+        <location file="Symbolizer.h" line="43" column="22" bodyfile="Symbolizer.cpp" bodystart="411" bodyend="426"/>
         <references refid="class_symbolizer_1a83cce67295d5e29b117076892225ee14" compoundref="_symbolizer_8h" startline="97">frameKeys</references>
         <references refid="_symbolizer_8cpp_1abfa13e4f476116d740885b6f20f226ed" compoundref="_symbolizer_8cpp" startline="3" endline="13">getFrameKey</references>
-        <references refid="_symbolizer_8cpp_1a2bbe97cab63d267bb647b78930bba995" compoundref="_symbolizer_8cpp" startline="80" endline="85">getKernelImageName</references>
-        <references refid="_symbolizer_8cpp_1adbad68e25810cc84775de2ecc3eb0459" compoundref="_symbolizer_8cpp" startline="164" endline="175">getKernelSymbols</references>
-        <references refid="_symbolizer_8cpp_1a4d24b0b7f777abf1a2d48006ad699fc5" compoundref="_symbolizer_8cpp" startline="177" endline="188">getKernelTextAddress</references>
+        <references refid="_symbolizer_8cpp_1a2bbe97cab63d267bb647b78930bba995" compoundref="_symbolizer_8cpp" startline="87" endline="92">getKernelImageName</references>
+        <references refid="_symbolizer_8cpp_1adbad68e25810cc84775de2ecc3eb0459" compoundref="_symbolizer_8cpp" startline="195" endline="206">getKernelSymbols</references>
+        <references refid="_symbolizer_8cpp_1a4d24b0b7f777abf1a2d48006ad699fc5" compoundref="_symbolizer_8cpp" startline="208" endline="219">getKernelTextAddress</references>
         <references refid="_symbolizer_8cpp_1a5fb131484b9fd1322472a4ba9fc0e4ed" compoundref="_symbolizer_8cpp" startline="18" endline="18">kernelProcessId</references>
-        <referencedby refid="class_sampler_1a1c44e35adce2ea951252ec1b8cab1891" compoundref="_sampler_8cpp" startline="668" endline="696">Sampler::addFrames</referencedby>
-        <referencedby refid="class_sampler_1a1b0c7a89bc356514777c16a32ed803b7" compoundref="_sampler_8cpp" startline="369" endline="381">Sampler::addKernelSamples</referencedby>
+        <references refid="classjam_1_1HashMap_1af3ef015438ac55ee2401cb66441ae4f5">jam::HashMap&lt; typename Key, typename Mapped, typename HashFn, typename KeyEqual, typename AllocatorOrContainer, typename Bucket, typename BucketContainer, bool IsSegmented &gt;::try_emplace</references>
+        <referencedby refid="class_sampler_1a1c44e35adce2ea951252ec1b8cab1891" compoundref="_sampler_8cpp" startline="678" endline="706">Sampler::addFrames</referencedby>
+        <referencedby refid="class_sampler_1a1b0c7a89bc356514777c16a32ed803b7" compoundref="_sampler_8cpp" startline="379" endline="391">Sampler::addKernelSamples</referencedby>
         <referencedby refid="class_symbolizer_1a6b632e1592e8735f841efc54bd8f02e7">~Symbolizer</referencedby>
       </memberdef>
       <memberdef kind="function" id="class_symbolizer_1ac2636a4ed1057b823a39d1e316b7b222" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>juce::Identifier</type>
+        <type><ref refid="classjuce_1_1Identifier" kindref="compound" external="/Users/jreng/Documents/Poems/JUCE/docs/tagfile.xml">juce::Identifier</ref></type>
         <definition>juce::Identifier Symbolizer::getOrCreateUserFrameKey</definition>
         <argsstring>(int processId, juce::uint64 address)</argsstring>
         <name>getOrCreateUserFrameKey</name>
@@ -141,7 +142,7 @@
           <declname>processId</declname>
         </param>
         <param>
-          <type>juce::uint64</type>
+          <type><ref refid="namespacejuce_1a2a831a96019763c93ef9acd9b7d5e975" kindref="member" external="/Users/jreng/Documents/Poems/JUCE/docs/tagfile.xml">juce::uint64</ref></type>
           <declname>address</declname>
         </param>
         <briefdescription>
@@ -172,34 +173,39 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Source/Symbolizer.h" line="57" column="22" bodyfile="Source/Symbolizer.cpp" bodystart="190" bodyend="210"/>
+        <location file="Symbolizer.h" line="57" column="22" bodyfile="Symbolizer.cpp" bodystart="221" bodyend="241"/>
         <references refid="class_symbolizer_1a83cce67295d5e29b117076892225ee14" compoundref="_symbolizer_8h" startline="97">frameKeys</references>
+        <references refid="classjuce_1_1String_1ae26e2af88f5237fd0b23de58cb168223">juce::String::fromUTF8</references>
+        <references refid="classjuce_1_1File_1a5309789281ea7721eb832d21da99708f">juce::File::getFileName</references>
         <references refid="_symbolizer_8cpp_1abfa13e4f476116d740885b6f20f226ed" compoundref="_symbolizer_8cpp" startline="3" endline="13">getFrameKey</references>
-        <references refid="_symbolizer_8cpp_1a004465734b1e49415c062790c9bf66c4" compoundref="_symbolizer_8cpp" startline="141" endline="155">getSymbols</references>
+        <references refid="classjuce_1_1File_1a515fa016b189068f365cc875e241e2a1">juce::File::getFullPathName</references>
+        <references refid="_symbolizer_8cpp_1a004465734b1e49415c062790c9bf66c4" compoundref="_symbolizer_8cpp" startline="164" endline="184">getSymbols</references>
         <references refid="class_symbolizer_1a3a526738f15236d0bbd906f96f0ecddc" compoundref="_symbolizer_8h" startline="101">imageSymbols</references>
-        <references refid="_symbolizer_8cpp_1a733ecc0717db52fddb3f9451748ca10e" compoundref="_symbolizer_8cpp" startline="157" endline="162">isSymbolImage</references>
-        <referencedby refid="class_sampler_1a1c44e35adce2ea951252ec1b8cab1891" compoundref="_sampler_8cpp" startline="668" endline="696">Sampler::addFrames</referencedby>
-        <referencedby refid="class_sampler_1a81a879e06d0a4c952c005aa0512a41fc" compoundref="_sampler_8cpp" startline="383" endline="401">Sampler::addUserSamples</referencedby>
+        <references refid="_symbolizer_8cpp_1a733ecc0717db52fddb3f9451748ca10e" compoundref="_symbolizer_8cpp" startline="186" endline="193">isSymbolImage</references>
+        <references refid="classjuce_1_1File_1af20587b29afa0a31999e0ad2b7c24053">juce::File::loadFileAsData</references>
+        <references refid="classjam_1_1HashMap_1af3ef015438ac55ee2401cb66441ae4f5">jam::HashMap&lt; typename Key, typename Mapped, typename HashFn, typename KeyEqual, typename AllocatorOrContainer, typename Bucket, typename BucketContainer, bool IsSegmented &gt;::try_emplace</references>
+        <referencedby refid="class_sampler_1a1c44e35adce2ea951252ec1b8cab1891" compoundref="_sampler_8cpp" startline="678" endline="706">Sampler::addFrames</referencedby>
+        <referencedby refid="class_sampler_1a81a879e06d0a4c952c005aa0512a41fc" compoundref="_sampler_8cpp" startline="393" endline="411">Sampler::addUserSamples</referencedby>
         <referencedby refid="class_symbolizer_1a6b632e1592e8735f841efc54bd8f02e7">~Symbolizer</referencedby>
       </memberdef>
     </sectiondef>
     <sectiondef kind="private-func">
       <memberdef kind="function" id="class_symbolizer_1a93cc5155003af3fb204341779e85ec0c" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>juce::Identifier</type>
+        <type><ref refid="classjuce_1_1Identifier" kindref="compound" external="/Users/jreng/Documents/Poems/JUCE/docs/tagfile.xml">juce::Identifier</ref></type>
         <definition>juce::Identifier Symbolizer::getOrCreateImageFrameKey</definition>
         <argsstring>(const juce::String &amp;regionText, juce::uint64 regionStart, juce::uint64 address)</argsstring>
         <name>getOrCreateImageFrameKey</name>
         <qualifiedname>Symbolizer::getOrCreateImageFrameKey</qualifiedname>
         <param>
-          <type>const juce::String &amp;</type>
+          <type>const <ref refid="classjuce_1_1String" kindref="compound" external="/Users/jreng/Documents/Poems/JUCE/docs/tagfile.xml">juce::String</ref> &amp;</type>
           <declname>regionText</declname>
         </param>
         <param>
-          <type>juce::uint64</type>
+          <type><ref refid="namespacejuce_1a2a831a96019763c93ef9acd9b7d5e975" kindref="member" external="/Users/jreng/Documents/Poems/JUCE/docs/tagfile.xml">juce::uint64</ref></type>
           <declname>regionStart</declname>
         </param>
         <param>
-          <type>juce::uint64</type>
+          <type><ref refid="namespacejuce_1a2a831a96019763c93ef9acd9b7d5e975" kindref="member" external="/Users/jreng/Documents/Poems/JUCE/docs/tagfile.xml">juce::uint64</ref></type>
           <declname>address</declname>
         </param>
         <briefdescription>
@@ -237,12 +243,18 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Source/Symbolizer.h" line="115" column="22" bodyfile="Source/Symbolizer.cpp" bodystart="349" bodyend="376"/>
+        <location file="Symbolizer.h" line="115" column="22" bodyfile="Symbolizer.cpp" bodystart="380" bodyend="407"/>
+        <references refid="classjuce_1_1StringArray_1a9f1df0af6ebd58043c8995e9cb3e3ac5">juce::StringArray::fromTokens</references>
+        <references refid="classjam_1_1Strings_1aca02ec79e3d857bca6f9647dce6415fc">jam::Strings::fromView</references>
+        <references refid="classjuce_1_1File_1a5309789281ea7721eb832d21da99708f">juce::File::getFileName</references>
         <references refid="_symbolizer_8cpp_1abfa13e4f476116d740885b6f20f226ed" compoundref="_symbolizer_8cpp" startline="3" endline="13">getFrameKey</references>
-        <references refid="_symbolizer_8cpp_1a004465734b1e49415c062790c9bf66c4" compoundref="_symbolizer_8cpp" startline="141" endline="155">getSymbols</references>
+        <references refid="classjuce_1_1File_1a515fa016b189068f365cc875e241e2a1">juce::File::getFullPathName</references>
+        <references refid="_symbolizer_8cpp_1a004465734b1e49415c062790c9bf66c4" compoundref="_symbolizer_8cpp" startline="164" endline="184">getSymbols</references>
         <references refid="class_symbolizer_1a3a526738f15236d0bbd906f96f0ecddc" compoundref="_symbolizer_8h" startline="101">imageSymbols</references>
-        <references refid="_symbolizer_8cpp_1a733ecc0717db52fddb3f9451748ca10e" compoundref="_symbolizer_8cpp" startline="157" endline="162">isSymbolImage</references>
-        <references refid="_symbolizer_8cpp_1a65d1ef3fbd51b10cbab2b3e3d098a1b3" compoundref="_symbolizer_8cpp" startline="216" endline="216">rangeSeparator</references>
+        <references refid="_symbolizer_8cpp_1a733ecc0717db52fddb3f9451748ca10e" compoundref="_symbolizer_8cpp" startline="186" endline="193">isSymbolImage</references>
+        <references refid="classjuce_1_1File_1af20587b29afa0a31999e0ad2b7c24053">juce::File::loadFileAsData</references>
+        <references refid="_symbolizer_8cpp_1a65d1ef3fbd51b10cbab2b3e3d098a1b3" compoundref="_symbolizer_8cpp" startline="247" endline="247">rangeSeparator</references>
+        <references refid="classjam_1_1HashMap_1af3ef015438ac55ee2401cb66441ae4f5">jam::HashMap&lt; typename Key, typename Mapped, typename HashFn, typename KeyEqual, typename AllocatorOrContainer, typename Bucket, typename BucketContainer, bool IsSegmented &gt;::try_emplace</references>
       </memberdef>
     </sectiondef>
     <briefdescription>
@@ -251,7 +263,34 @@
     <detaileddescription>
 <para>A frame key is an identifier from the name of the symbol of the address. When the image has no symbol for the address, the key comes from the name of the image. When the address has no image, the key is not valid. The object keeps each key that it made, so each address resolves one time. </para>
     </detaileddescription>
-    <location file="Source/Symbolizer.h" line="24" column="1" bodyfile="Source/Symbolizer.h" bodystart="25" bodyend="138"/>
+    <collaborationgraph>
+      <node id="1">
+        <label>Symbolizer</label>
+        <link refid="class_symbolizer"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>frameKeys</edgelabel>
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>imageSymbols</edgelabel>
+        </childnode>
+        <childnode refid="4" relation="usage">
+          <edgelabel>regions</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>jam::HashMap&lt; int, jam::HashMap&lt; juce::uint64, juce::Identifier &gt; &gt;</label>
+        <link refid="classjam_1_1HashMap" external="/Users/jreng/Documents/Poems/dev/jam/docs/tagfile.xml"/>
+      </node>
+      <node id="4">
+        <label>jam::HashMap&lt; int, std::map&lt; juce::uint64, juce::String &gt; &gt;</label>
+        <link refid="classjam_1_1HashMap" external="/Users/jreng/Documents/Poems/dev/jam/docs/tagfile.xml"/>
+      </node>
+      <node id="3">
+        <label>jam::HashMap&lt; juce::String, std::map&lt; juce::uint64, juce::String &gt; &gt;</label>
+        <link refid="classjam_1_1HashMap" external="/Users/jreng/Documents/Poems/dev/jam/docs/tagfile.xml"/>
+      </node>
+    </collaborationgraph>
+    <location file="Symbolizer.h" line="24" column="1" bodyfile="Symbolizer.h" bodystart="25" bodyend="138"/>
     <listofallmembers>
       <member refid="class_symbolizer_1a83cce67295d5e29b117076892225ee14" prot="private" virt="non-virtual"><scope>Symbolizer</scope><name>frameKeys</name></member>
       <member refid="class_symbolizer_1a93cc5155003af3fb204341779e85ec0c" prot="private" virt="non-virtual"><scope>Symbolizer</scope><name>getOrCreateImageFrameKey</name></member>

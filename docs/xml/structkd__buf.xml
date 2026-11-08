@@ -17,7 +17,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Source/Sampler.h" line="20" column="14" bodyfile="Source/Sampler.h" bodystart="20" bodyend="-1"/>
+        <location file="Sampler.h" line="20" column="14" bodyfile="Sampler.h" bodystart="20" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="structkd__buf_1a42920e35cdff86f357c5e81ebf27af2a" prot="public" static="no" mutable="no">
         <type>uint64_t</type>
@@ -33,10 +33,10 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Source/Sampler.h" line="23" column="14" bodyfile="Source/Sampler.h" bodystart="23" bodyend="-1"/>
-        <referencedby refid="class_sampler_1aa34b215d898befd15f2309ca2d816843" compoundref="_sampler_8cpp" startline="337" endline="349">Sampler::addStackFrames</referencedby>
-        <referencedby refid="class_sampler_1aaba7a4bee0dcf7ecfeaddb43883fde6a" compoundref="_sampler_8cpp" startline="326" endline="335">Sampler::addStackHeader</referencedby>
-        <referencedby refid="class_sampler_1a45d5d70da446de4caafc6a2b51f4d291" compoundref="_sampler_8cpp" startline="317" endline="324">Sampler::addThreadInfo</referencedby>
+        <location file="Sampler.h" line="23" column="14" bodyfile="Sampler.h" bodystart="23" bodyend="-1"/>
+        <referencedby refid="class_sampler_1aa34b215d898befd15f2309ca2d816843" compoundref="_sampler_8cpp" startline="347" endline="359">Sampler::addStackFrames</referencedby>
+        <referencedby refid="class_sampler_1aaba7a4bee0dcf7ecfeaddb43883fde6a" compoundref="_sampler_8cpp" startline="336" endline="345">Sampler::addStackHeader</referencedby>
+        <referencedby refid="class_sampler_1a45d5d70da446de4caafc6a2b51f4d291" compoundref="_sampler_8cpp" startline="327" endline="334">Sampler::addThreadInfo</referencedby>
       </memberdef>
       <memberdef kind="variable" id="structkd__buf_1ae8a83ef68d6dd037050d931a4033a259" prot="public" static="no" mutable="no">
         <type>uint64_t</type>
@@ -52,11 +52,11 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Source/Sampler.h" line="26" column="14" bodyfile="Source/Sampler.h" bodystart="26" bodyend="-1"/>
-        <referencedby refid="class_sampler_1a7b82b7917ef1a3ca7587abc8ef371c10" compoundref="_sampler_8cpp" startline="351" endline="367">Sampler::addSampleEnd</referencedby>
-        <referencedby refid="class_sampler_1a7e6ec11c924fea70cff7c5523d947436" compoundref="_sampler_8cpp" startline="312" endline="315">Sampler::addSampleStart</referencedby>
-        <referencedby refid="class_sampler_1aa34b215d898befd15f2309ca2d816843" compoundref="_sampler_8cpp" startline="337" endline="349">Sampler::addStackFrames</referencedby>
-        <referencedby refid="class_sampler_1aaba7a4bee0dcf7ecfeaddb43883fde6a" compoundref="_sampler_8cpp" startline="326" endline="335">Sampler::addStackHeader</referencedby>
+        <location file="Sampler.h" line="26" column="14" bodyfile="Sampler.h" bodystart="26" bodyend="-1"/>
+        <referencedby refid="class_sampler_1a7b82b7917ef1a3ca7587abc8ef371c10" compoundref="_sampler_8cpp" startline="361" endline="377">Sampler::addSampleEnd</referencedby>
+        <referencedby refid="class_sampler_1a7e6ec11c924fea70cff7c5523d947436" compoundref="_sampler_8cpp" startline="322" endline="325">Sampler::addSampleStart</referencedby>
+        <referencedby refid="class_sampler_1aa34b215d898befd15f2309ca2d816843" compoundref="_sampler_8cpp" startline="347" endline="359">Sampler::addStackFrames</referencedby>
+        <referencedby refid="class_sampler_1aaba7a4bee0dcf7ecfeaddb43883fde6a" compoundref="_sampler_8cpp" startline="336" endline="345">Sampler::addStackHeader</referencedby>
       </memberdef>
       <memberdef kind="variable" id="structkd__buf_1a802645e321549466ce9ed29e3841ede6" prot="public" static="no" mutable="no">
         <type>uint64_t</type>
@@ -72,8 +72,8 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Source/Sampler.h" line="29" column="14" bodyfile="Source/Sampler.h" bodystart="29" bodyend="-1"/>
-        <referencedby refid="class_sampler_1aa34b215d898befd15f2309ca2d816843" compoundref="_sampler_8cpp" startline="337" endline="349">Sampler::addStackFrames</referencedby>
+        <location file="Sampler.h" line="29" column="14" bodyfile="Sampler.h" bodystart="29" bodyend="-1"/>
+        <referencedby refid="class_sampler_1aa34b215d898befd15f2309ca2d816843" compoundref="_sampler_8cpp" startline="347" endline="359">Sampler::addStackFrames</referencedby>
       </memberdef>
       <memberdef kind="variable" id="structkd__buf_1af3b6b23e4abdbf666662e204bb806903" prot="public" static="no" mutable="no">
         <type>uint64_t</type>
@@ -89,8 +89,8 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Source/Sampler.h" line="32" column="14" bodyfile="Source/Sampler.h" bodystart="32" bodyend="-1"/>
-        <referencedby refid="class_sampler_1aa34b215d898befd15f2309ca2d816843" compoundref="_sampler_8cpp" startline="337" endline="349">Sampler::addStackFrames</referencedby>
+        <location file="Sampler.h" line="32" column="14" bodyfile="Sampler.h" bodystart="32" bodyend="-1"/>
+        <referencedby refid="class_sampler_1aa34b215d898befd15f2309ca2d816843" compoundref="_sampler_8cpp" startline="347" endline="359">Sampler::addStackFrames</referencedby>
       </memberdef>
       <memberdef kind="variable" id="structkd__buf_1a820024f338925839fa17492b3450299b" prot="public" static="no" mutable="no">
         <type>uint64_t</type>
@@ -106,8 +106,8 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Source/Sampler.h" line="35" column="14" bodyfile="Source/Sampler.h" bodystart="35" bodyend="-1"/>
-        <referencedby refid="class_sampler_1a7e6ec11c924fea70cff7c5523d947436" compoundref="_sampler_8cpp" startline="312" endline="315">Sampler::addSampleStart</referencedby>
+        <location file="Sampler.h" line="35" column="14" bodyfile="Sampler.h" bodystart="35" bodyend="-1"/>
+        <referencedby refid="class_sampler_1a7e6ec11c924fea70cff7c5523d947436" compoundref="_sampler_8cpp" startline="322" endline="325">Sampler::addSampleStart</referencedby>
       </memberdef>
       <memberdef kind="variable" id="structkd__buf_1a046e1900d9792c1e4a976ee87dd7fb75" prot="public" static="no" mutable="no">
         <type>uint32_t</type>
@@ -122,7 +122,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Source/Sampler.h" line="38" column="14" bodyfile="Source/Sampler.h" bodystart="38" bodyend="-1"/>
+        <location file="Sampler.h" line="38" column="14" bodyfile="Sampler.h" bodystart="38" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="structkd__buf_1a99e5f41756c7f5a672ff0ceec370e923" prot="public" static="no" mutable="no">
         <type>uint32_t</type>
@@ -137,12 +137,12 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Source/Sampler.h" line="41" column="14" bodyfile="Source/Sampler.h" bodystart="41" bodyend="-1"/>
-        <referencedby refid="class_sampler_1a7b82b7917ef1a3ca7587abc8ef371c10" compoundref="_sampler_8cpp" startline="351" endline="367">Sampler::addSampleEnd</referencedby>
-        <referencedby refid="class_sampler_1a7e6ec11c924fea70cff7c5523d947436" compoundref="_sampler_8cpp" startline="312" endline="315">Sampler::addSampleStart</referencedby>
-        <referencedby refid="class_sampler_1aa34b215d898befd15f2309ca2d816843" compoundref="_sampler_8cpp" startline="337" endline="349">Sampler::addStackFrames</referencedby>
-        <referencedby refid="class_sampler_1aaba7a4bee0dcf7ecfeaddb43883fde6a" compoundref="_sampler_8cpp" startline="326" endline="335">Sampler::addStackHeader</referencedby>
-        <referencedby refid="class_sampler_1a45d5d70da446de4caafc6a2b51f4d291" compoundref="_sampler_8cpp" startline="317" endline="324">Sampler::addThreadInfo</referencedby>
+        <location file="Sampler.h" line="41" column="14" bodyfile="Sampler.h" bodystart="41" bodyend="-1"/>
+        <referencedby refid="class_sampler_1a7b82b7917ef1a3ca7587abc8ef371c10" compoundref="_sampler_8cpp" startline="361" endline="377">Sampler::addSampleEnd</referencedby>
+        <referencedby refid="class_sampler_1a7e6ec11c924fea70cff7c5523d947436" compoundref="_sampler_8cpp" startline="322" endline="325">Sampler::addSampleStart</referencedby>
+        <referencedby refid="class_sampler_1aa34b215d898befd15f2309ca2d816843" compoundref="_sampler_8cpp" startline="347" endline="359">Sampler::addStackFrames</referencedby>
+        <referencedby refid="class_sampler_1aaba7a4bee0dcf7ecfeaddb43883fde6a" compoundref="_sampler_8cpp" startline="336" endline="345">Sampler::addStackHeader</referencedby>
+        <referencedby refid="class_sampler_1a45d5d70da446de4caafc6a2b51f4d291" compoundref="_sampler_8cpp" startline="327" endline="334">Sampler::addThreadInfo</referencedby>
       </memberdef>
       <memberdef kind="variable" id="structkd__buf_1a27597300259175870b1f4f7eeffb519e" prot="public" static="no" mutable="no">
         <type>uint64_t</type>
@@ -157,7 +157,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Source/Sampler.h" line="44" column="14" bodyfile="Source/Sampler.h" bodystart="44" bodyend="-1"/>
+        <location file="Sampler.h" line="44" column="14" bodyfile="Sampler.h" bodystart="44" bodyend="-1"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
@@ -166,7 +166,7 @@
     <detaileddescription>
 <para>The size of the struct is 64 bytes. The kernel trace read fills an array of these records. </para>
     </detaileddescription>
-    <location file="Source/Sampler.h" line="17" column="1" bodyfile="Source/Sampler.h" bodystart="18" bodyend="45"/>
+    <location file="Sampler.h" line="17" column="1" bodyfile="Sampler.h" bodystart="18" bodyend="45"/>
     <listofallmembers>
       <member refid="structkd__buf_1a42920e35cdff86f357c5e81ebf27af2a" prot="public" virt="non-virtual"><scope>kd_buf</scope><name>arg1</name></member>
       <member refid="structkd__buf_1ae8a83ef68d6dd037050d931a4033a259" prot="public" virt="non-virtual"><scope>kd_buf</scope><name>arg2</name></member>

@@ -5,8 +5,16 @@
     <path></path>
     <filename>_benchmark_8cpp.html</filename>
     <includes id="_benchmark_8h" name="Benchmark.h" local="yes" import="no" module="no" objc="no">Benchmark.h</includes>
+    <includes id="_sampler_8h" name="Sampler.h" local="yes" import="no" module="no" objc="no">Sampler.h</includes>
     <includes id="_generated_8h" name="Generated.h" local="yes" import="no" module="no" objc="no">generated/Generated.h</includes>
     <includes id="_profile_report_8h" name="ProfileReport.h" local="yes" import="no" module="no" objc="no">ProfileReport.h</includes>
+    <member kind="function" static="yes">
+      <type>static void</type>
+      <name>killProcessGroup</name>
+      <anchorfile>_benchmark_8cpp.html</anchorfile>
+      <anchor>a932af7586f53f41e8cae652178da43de</anchor>
+      <arglist>(int)</arglist>
+    </member>
   </compound>
   <compound kind="file">
     <name>Benchmark.h</name>
@@ -263,6 +271,490 @@
     <class kind="class">ProfileReport</class>
   </compound>
   <compound kind="file">
+    <name>Sampler.cpp</name>
+    <path></path>
+    <filename>_sampler_8cpp.html</filename>
+    <includes id="_sampler_8h" name="Sampler.h" local="yes" import="no" module="no" objc="no">Sampler.h</includes>
+    <member kind="function" static="yes">
+      <type>static double</type>
+      <name>getIntervalNanoseconds</name>
+      <anchorfile>_sampler_8cpp.html</anchorfile>
+      <anchor>af216e64a0220fc1d23d8c167e15c7f5a</anchor>
+      <arglist>(int intervalMs)</arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static juce::Result</type>
+      <name>setKernelValue</name>
+      <anchorfile>_sampler_8cpp.html</anchorfile>
+      <anchor>a4eabed153a2a0e1287b4da32b92a2553</anchor>
+      <arglist>(const char *name, const void *value, size_t size)</arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static juce::Result</type>
+      <name>setKernelValue</name>
+      <anchorfile>_sampler_8cpp.html</anchorfile>
+      <anchor>ac3af7a124b2551881d08b1ed6319b056</anchor>
+      <arglist>(const char *name, int value)</arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static juce::Result</type>
+      <name>setKernelValue</name>
+      <anchorfile>_sampler_8cpp.html</anchorfile>
+      <anchor>aaa310ba6458201775f679ffb7165bc6d</anchor>
+      <arglist>(const char *name, std::initializer_list&lt; juce::uint64 &gt; values)</arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static int</type>
+      <name>getKernelValue</name>
+      <anchorfile>_sampler_8cpp.html</anchorfile>
+      <anchor>ab47daed42123def3b266ed00bd850ab9</anchor>
+      <arglist>(const char *name)</arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static juce::Result</type>
+      <name>setKdebugValue</name>
+      <anchorfile>_sampler_8cpp.html</anchorfile>
+      <anchor>a6f2b15a15c50f1e873ffd7c01c613bea</anchor>
+      <arglist>(int operation, int value)</arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static juce::Result</type>
+      <name>setTypeFilter</name>
+      <anchorfile>_sampler_8cpp.html</anchorfile>
+      <anchor>a3aec3631c5bb7d7943a9c18f98dbc253</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static juce::Result</type>
+      <name>setSchedulerFilter</name>
+      <anchorfile>_sampler_8cpp.html</anchorfile>
+      <anchor>ae4c0a549f438fc740ce89f8d21ca6f2f</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static juce::Result</type>
+      <name>setActionValues</name>
+      <anchorfile>_sampler_8cpp.html</anchorfile>
+      <anchor>a972b0679d7f804a21e25e2328e400993</anchor>
+      <arglist>(int stackDepth)</arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static juce::uint64</type>
+      <name>getTimerTicks</name>
+      <anchorfile>_sampler_8cpp.html</anchorfile>
+      <anchor>af2adfed559dd05d21b37c72b44077c45</anchor>
+      <arglist>(int intervalMs)</arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static juce::Result</type>
+      <name>startSession</name>
+      <anchorfile>_sampler_8cpp.html</anchorfile>
+      <anchor>a8896fdd24564457f248e972f7f0cb257</anchor>
+      <arglist>(int intervalMs, int stackDepth)</arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static juce::Result</type>
+      <name>stopSession</name>
+      <anchorfile>_sampler_8cpp.html</anchorfile>
+      <anchor>ab0ed5db778141c715359dbcf2f31d1a7</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static bool</type>
+      <name>isDescendant</name>
+      <anchorfile>_sampler_8cpp.html</anchorfile>
+      <anchor>aadc3154af708b1ba700feb35be37f880</anchor>
+      <arglist>(int processId, int ancestorId)</arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static const juce::Identifier &amp;</type>
+      <name>getActionTable</name>
+      <anchorfile>_sampler_8cpp.html</anchorfile>
+      <anchor>a4dd0c2d2ea14e3f4ebca6fc0e586054f</anchor>
+      <arglist>(juce::uint64 action)</arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static perf_event_attr</type>
+      <name>getEventAttributes</name>
+      <anchorfile>_sampler_8cpp.html</anchorfile>
+      <anchor>a8f87a394d85308c394da32afedaf4428</anchor>
+      <arglist>(juce::uint32 type, juce::uint64 config, juce::uint64 period, int stackDepth)</arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static perf_event_attr</type>
+      <name>getClockAttributes</name>
+      <anchorfile>_sampler_8cpp.html</anchorfile>
+      <anchor>abfe3a5507ce19c4a23904d1dcfa5bf00</anchor>
+      <arglist>(int intervalMs, int stackDepth)</arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static juce::File</type>
+      <name>getSwitchIdFile</name>
+      <anchorfile>_sampler_8cpp.html</anchorfile>
+      <anchor>a35091e202cad2e78f4c422680c8d3ac8</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static perf_event_attr</type>
+      <name>getSwitchAttributes</name>
+      <anchorfile>_sampler_8cpp.html</anchorfile>
+      <anchor>af359e6a00a0aa031429cc1376dce3ad0</anchor>
+      <arglist>(const juce::File &amp;switchIdFile, int stackDepth)</arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static int</type>
+      <name>openEvent</name>
+      <anchorfile>_sampler_8cpp.html</anchorfile>
+      <anchor>aa06d0dd958a6b0ced0c696541042c60f</anchor>
+      <arglist>(const perf_event_attr &amp;attributes, pid_t threadId, int cpu)</arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static void</type>
+      <name>unmapRing</name>
+      <anchorfile>_sampler_8cpp.html</anchorfile>
+      <anchor>ac3f37a8044924fd9077e2a0578c3dacf</anchor>
+      <arglist>(void *ring)</arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static std::unique_ptr&lt; void, void(*)(void *)&gt;</type>
+      <name>getRing</name>
+      <anchorfile>_sampler_8cpp.html</anchorfile>
+      <anchor>a2062e8a7ba127d2c5d40c7add4dd65c6</anchor>
+      <arglist>(int event)</arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static juce::uint64</type>
+      <name>getHead</name>
+      <anchorfile>_sampler_8cpp.html</anchorfile>
+      <anchor>ad938b64cbd675222d4fc77fa46b72a05</anchor>
+      <arglist>(const void *ring)</arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static juce::uint64</type>
+      <name>getTail</name>
+      <anchorfile>_sampler_8cpp.html</anchorfile>
+      <anchor>a4158933959dea538ff09dc7b911820f2</anchor>
+      <arglist>(const void *ring)</arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static void</type>
+      <name>setTail</name>
+      <anchorfile>_sampler_8cpp.html</anchorfile>
+      <anchor>a0c153d095cd34eb163f886aa8baae9f1</anchor>
+      <arglist>(void *ring, juce::uint64 position)</arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static perf_event_header</type>
+      <name>getHeader</name>
+      <anchorfile>_sampler_8cpp.html</anchorfile>
+      <anchor>a218ecc09d2ee73b3a32c6ae18ad33bae</anchor>
+      <arglist>(const void *ring, juce::uint64 position)</arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static juce::uint64</type>
+      <name>getWord</name>
+      <anchorfile>_sampler_8cpp.html</anchorfile>
+      <anchor>a2bea1eaa54c073588149c245378a98de</anchor>
+      <arglist>(const void *ring, juce::uint64 position)</arglist>
+    </member>
+    <member kind="variable" static="yes">
+      <type>static constexpr int</type>
+      <name>stopTimeoutMilliseconds</name>
+      <anchorfile>_sampler_8cpp.html</anchorfile>
+      <anchor>a002ab303651d77b234ac524d9ed40a6f</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" static="yes">
+      <type>static constexpr int</type>
+      <name>unitWeight</name>
+      <anchorfile>_sampler_8cpp.html</anchorfile>
+      <anchor>a49b5eb8089c4178644e271e293e9e99b</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" static="yes">
+      <type>static constexpr std::string_view</type>
+      <name>countUnit</name>
+      <anchorfile>_sampler_8cpp.html</anchorfile>
+      <anchor>a7811d54527e368f814aede2bd5947485</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" static="yes">
+      <type>static constexpr std::string_view</type>
+      <name>threadName</name>
+      <anchorfile>_sampler_8cpp.html</anchorfile>
+      <anchor>a22c9f046b0236a2fad1353e4c10064ed</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" static="yes">
+      <type>static constexpr juce::uint64</type>
+      <name>timerAction</name>
+      <anchorfile>_sampler_8cpp.html</anchorfile>
+      <anchor>a07df8a04b63a2ca84a647e04e805e1f3</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" static="yes">
+      <type>static constexpr juce::uint64</type>
+      <name>switchAction</name>
+      <anchorfile>_sampler_8cpp.html</anchorfile>
+      <anchor>a39929f2531d02b49c28241b50c0e49f6</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" static="yes">
+      <type>static constexpr int</type>
+      <name>recordCapacity</name>
+      <anchorfile>_sampler_8cpp.html</anchorfile>
+      <anchor>a285ff77b13b871bb766412fbf4945c3a</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" static="yes">
+      <type>static constexpr int</type>
+      <name>readIntervalMs</name>
+      <anchorfile>_sampler_8cpp.html</anchorfile>
+      <anchor>aad5cc39e20e0df3d5974399baf6ab867</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" static="yes">
+      <type>static constexpr int</type>
+      <name>framesPerRecord</name>
+      <anchorfile>_sampler_8cpp.html</anchorfile>
+      <anchor>a055fa993709e1a138b433f699f6b5fb5</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" static="yes">
+      <type>static constexpr int</type>
+      <name>kernelStackFlag</name>
+      <anchorfile>_sampler_8cpp.html</anchorfile>
+      <anchor>a46ef7865aaa59d8698d448689d3e262d</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" static="yes">
+      <type>static constexpr juce::uint64</type>
+      <name>userPendFlag</name>
+      <anchorfile>_sampler_8cpp.html</anchorfile>
+      <anchor>abe2fecdda84e03cf162827e025602f01</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" static="yes">
+      <type>static constexpr int</type>
+      <name>timerCount</name>
+      <anchorfile>_sampler_8cpp.html</anchorfile>
+      <anchor>a33ab394dcf08f62d5d5e9774185584dd</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" static="yes">
+      <type>static constexpr int</type>
+      <name>on</name>
+      <anchorfile>_sampler_8cpp.html</anchorfile>
+      <anchor>a68a04afa520d7dc2003738347e41f6a4</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" static="yes">
+      <type>static constexpr int</type>
+      <name>off</name>
+      <anchorfile>_sampler_8cpp.html</anchorfile>
+      <anchor>a8fd0d2db881f9e565108bbd9cc1b8838</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" static="yes">
+      <type>static constexpr std::string_view</type>
+      <name>kdebugName</name>
+      <anchorfile>_sampler_8cpp.html</anchorfile>
+      <anchor>a89f610db753bf6699ad218d057a4d926</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" static="yes">
+      <type>static constexpr juce::uint32</type>
+      <name>sampleStartEvent</name>
+      <anchorfile>_sampler_8cpp.html</anchorfile>
+      <anchor>aa04ae0bbf701fe14df504894f7bb8023</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" static="yes">
+      <type>static constexpr juce::uint32</type>
+      <name>sampleEndEvent</name>
+      <anchorfile>_sampler_8cpp.html</anchorfile>
+      <anchor>a62b47731b5fe650cdaaa1e97ec7219b8</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" static="yes">
+      <type>static constexpr juce::uint32</type>
+      <name>threadInfoEvent</name>
+      <anchorfile>_sampler_8cpp.html</anchorfile>
+      <anchor>a303f096f59b97743fc704ccdf4ca8952</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" static="yes">
+      <type>static constexpr juce::uint32</type>
+      <name>kernelHeaderEvent</name>
+      <anchorfile>_sampler_8cpp.html</anchorfile>
+      <anchor>aaf2c224edf43164b6c5fbe0f857bf758</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" static="yes">
+      <type>static constexpr juce::uint32</type>
+      <name>kernelFramesEvent</name>
+      <anchorfile>_sampler_8cpp.html</anchorfile>
+      <anchor>a091d6cba2f3ecb836d0fca41083588b0</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" static="yes">
+      <type>static constexpr juce::uint32</type>
+      <name>userHeaderEvent</name>
+      <anchorfile>_sampler_8cpp.html</anchorfile>
+      <anchor>a70917d118e90dd2f3f4577a417969d20</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" static="yes">
+      <type>static constexpr juce::uint32</type>
+      <name>userFramesEvent</name>
+      <anchorfile>_sampler_8cpp.html</anchorfile>
+      <anchor>a70aee0fb453a81dc647647fe1eaf9765</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" static="yes">
+      <type>static constexpr juce::uint32</type>
+      <name>schedulerEvent</name>
+      <anchorfile>_sampler_8cpp.html</anchorfile>
+      <anchor>af4dee88ad9cb701292850780a07ab76e</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" static="yes">
+      <type>static constexpr juce::uint32</type>
+      <name>lostEventsEvent</name>
+      <anchorfile>_sampler_8cpp.html</anchorfile>
+      <anchor>a2be767ba38171cc9d381b20098b51b05</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" static="yes">
+      <type>static constexpr int</type>
+      <name>actionSlot</name>
+      <anchorfile>_sampler_8cpp.html</anchorfile>
+      <anchor>a895a7f4cdbfdde18cd972131d0843de6</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" static="yes">
+      <type>static constexpr int</type>
+      <name>processSlot</name>
+      <anchorfile>_sampler_8cpp.html</anchorfile>
+      <anchor>ae33d7aad50c0ca3aa1b8529d7aecd875</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" static="yes">
+      <type>static constexpr int</type>
+      <name>frameCountSlot</name>
+      <anchorfile>_sampler_8cpp.html</anchorfile>
+      <anchor>ae82a1617d58b767556f0d2503571cbb1</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" static="yes">
+      <type>static constexpr int</type>
+      <name>kernelSlot</name>
+      <anchorfile>_sampler_8cpp.html</anchorfile>
+      <anchor>ada088611b87ce400aa53ba9f508e0fe4</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" static="yes">
+      <type>static constexpr int</type>
+      <name>threadSlot</name>
+      <anchorfile>_sampler_8cpp.html</anchorfile>
+      <anchor>a895cd96b2339d4263537b22fc70267fb</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" static="yes">
+      <type>static constexpr int</type>
+      <name>firstFrameSlot</name>
+      <anchorfile>_sampler_8cpp.html</anchorfile>
+      <anchor>ad49ddd7cfd76c576006a7dc08799735c</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" static="yes">
+      <type>static constexpr juce::uint64</type>
+      <name>threadInfoSampler</name>
+      <anchorfile>_sampler_8cpp.html</anchorfile>
+      <anchor>a8e178e1d3ac3aeae5c4e08599c825834</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" static="yes">
+      <type>static constexpr juce::uint64</type>
+      <name>kernelStackSampler</name>
+      <anchorfile>_sampler_8cpp.html</anchorfile>
+      <anchor>aaff1fc32726473d8ec0c7ae9d278196a</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" static="yes">
+      <type>static constexpr juce::uint64</type>
+      <name>userStackSampler</name>
+      <anchorfile>_sampler_8cpp.html</anchorfile>
+      <anchor>ab53640ecbcd2394d6b7f17df2513b457</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" static="yes">
+      <type>static constexpr int</type>
+      <name>traceEnableFlag</name>
+      <anchorfile>_sampler_8cpp.html</anchorfile>
+      <anchor>a96fdbe4e0d2ef251815ffa3915b4ef01</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" static="yes">
+      <type>static constexpr juce::int64</type>
+      <name>debugidFilterType</name>
+      <anchorfile>_sampler_8cpp.html</anchorfile>
+      <anchor>ad7600a9a7e7343ee905f0845d0500124</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" static="yes">
+      <type>static constexpr int</type>
+      <name>lostSlot</name>
+      <anchorfile>_sampler_8cpp.html</anchorfile>
+      <anchor>a6ae9456dae5e14fbec0b5256c14df111</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" static="yes">
+      <type>static constexpr size_t</type>
+      <name>wordBytes</name>
+      <anchorfile>_sampler_8cpp.html</anchorfile>
+      <anchor>a9efa99e7439c1e4bb8265f444797d8b6</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" static="yes">
+      <type>static constexpr std::array&lt; std::string_view, 2 &gt;</type>
+      <name>tracefsRoots</name>
+      <anchorfile>_sampler_8cpp.html</anchorfile>
+      <anchor>a7c1e3b548694904ac1624326ee9ce2c2</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" static="yes">
+      <type>static constexpr std::string_view</type>
+      <name>switchIdPath</name>
+      <anchorfile>_sampler_8cpp.html</anchorfile>
+      <anchor>aca12d4b61d2f99602d3cd310fa2391e6</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" static="yes">
+      <type>static constexpr int</type>
+      <name>noGroup</name>
+      <anchorfile>_sampler_8cpp.html</anchorfile>
+      <anchor>a96390e8bb83062650340e109a4480c2c</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" static="yes">
+      <type>static constexpr size_t</type>
+      <name>ringDataBytes</name>
+      <anchorfile>_sampler_8cpp.html</anchorfile>
+      <anchor>ab22a68c962b1dedabcf4afc32bc9d088</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="file">
+    <name>Sampler.h</name>
+    <path></path>
+    <filename>_sampler_8h.html</filename>
+    <includes id="_symbolizer_8h" name="Symbolizer.h" local="yes" import="no" module="no" objc="no">Symbolizer.h</includes>
+    <includes id="_generated_8h" name="Generated.h" local="yes" import="no" module="no" objc="no">generated/Generated.h</includes>
+    <class kind="struct">kd_buf</class>
+    <class kind="class">Sampler</class>
+  </compound>
+  <compound kind="file">
     <name>Statistics.cpp</name>
     <path></path>
     <filename>_statistics_8cpp.html</filename>
@@ -273,6 +765,151 @@
     <path></path>
     <filename>_statistics_8h.html</filename>
     <class kind="class">Statistics</class>
+  </compound>
+  <compound kind="file">
+    <name>Symbolizer.cpp</name>
+    <path></path>
+    <filename>_symbolizer_8cpp.html</filename>
+    <includes id="_symbolizer_8h" name="Symbolizer.h" local="yes" import="no" module="no" objc="no">Symbolizer.h</includes>
+    <member kind="function" static="yes">
+      <type>static juce::Identifier</type>
+      <name>getFrameKey</name>
+      <anchorfile>_symbolizer_8cpp.html</anchorfile>
+      <anchor>abfa13e4f476116d740885b6f20f226ed</anchor>
+      <arglist>(const juce::String &amp;frameName)</arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static juce::String</type>
+      <name>getDemangledName</name>
+      <anchorfile>_symbolizer_8cpp.html</anchorfile>
+      <anchor>a145db63d17cc3de245984d895f279186</anchor>
+      <arglist>(const juce::String &amp;symbolName)</arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static juce::Identifier</type>
+      <name>getFrameKey</name>
+      <anchorfile>_symbolizer_8cpp.html</anchorfile>
+      <anchor>a4758107c826cb68da40a1fadcb075918</anchor>
+      <arglist>(const std::map&lt; juce::uint64, juce::String &gt; &amp;symbols, juce::uint64 offset, const juce::String &amp;imageName)</arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static juce::File</type>
+      <name>getKernelFile</name>
+      <anchorfile>_symbolizer_8cpp.html</anchorfile>
+      <anchor>a009e27d586d41607d85756dd5b5924b5</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static const juce::String &amp;</type>
+      <name>getKernelImageName</name>
+      <anchorfile>_symbolizer_8cpp.html</anchorfile>
+      <anchor>a2bbe97cab63d267bb647b78930bba995</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static const load_command *</type>
+      <name>getCommand</name>
+      <anchorfile>_symbolizer_8cpp.html</anchorfile>
+      <anchor>a93094f14da77695f31d307333f894236</anchor>
+      <arglist>(const void *data, size_t size, const std::function&lt; bool(const load_command *)&gt; &amp;isMatch)</arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static juce::uint64</type>
+      <name>getTextAddress</name>
+      <anchorfile>_symbolizer_8cpp.html</anchorfile>
+      <anchor>ae8e7ea2055cca42680f11eaa8a50355d</anchor>
+      <arglist>(const load_command *command)</arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static juce::String</type>
+      <name>getSymbolName</name>
+      <anchorfile>_symbolizer_8cpp.html</anchorfile>
+      <anchor>a9df45c8c29ec6097726c0119a32189e8</anchor>
+      <arglist>(const char *text)</arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static std::map&lt; juce::uint64, juce::String &gt;</type>
+      <name>getTableSymbols</name>
+      <anchorfile>_symbolizer_8cpp.html</anchorfile>
+      <anchor>a40ae47356db463e3cae21f2dd3f19b78</anchor>
+      <arglist>(const char *base, const symtab_command *table, juce::uint64 textAddress)</arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static std::map&lt; juce::uint64, juce::String &gt;</type>
+      <name>getSliceSymbols</name>
+      <anchorfile>_symbolizer_8cpp.html</anchorfile>
+      <anchor>ac40e17ea565816288cd8804e4f203b92</anchor>
+      <arglist>(const char *data, size_t size)</arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static std::map&lt; juce::uint64, juce::String &gt;</type>
+      <name>getSymbols</name>
+      <anchorfile>_symbolizer_8cpp.html</anchorfile>
+      <anchor>a004465734b1e49415c062790c9bf66c4</anchor>
+      <arglist>(const juce::MemoryBlock &amp;image)</arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static bool</type>
+      <name>isSymbolImage</name>
+      <anchorfile>_symbolizer_8cpp.html</anchorfile>
+      <anchor>a733ecc0717db52fddb3f9451748ca10e</anchor>
+      <arglist>(const juce::File &amp;imageFile)</arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static const std::map&lt; juce::uint64, juce::String &gt; &amp;</type>
+      <name>getKernelSymbols</name>
+      <anchorfile>_symbolizer_8cpp.html</anchorfile>
+      <anchor>adbad68e25810cc84775de2ecc3eb0459</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static juce::uint64</type>
+      <name>getKernelTextAddress</name>
+      <anchorfile>_symbolizer_8cpp.html</anchorfile>
+      <anchor>a4d24b0b7f777abf1a2d48006ad699fc5</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static juce::uint64</type>
+      <name>getFileOffset</name>
+      <anchorfile>_symbolizer_8cpp.html</anchorfile>
+      <anchor>ae10c71e882987a11dc17095143362aec</anchor>
+      <arglist>(const juce::MemoryBlock &amp;image, juce::uint64 address)</arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static std::map&lt; juce::uint64, juce::String &gt;</type>
+      <name>getRegions</name>
+      <anchorfile>_symbolizer_8cpp.html</anchorfile>
+      <anchor>a6afae428d2f657f0f291c71b3f2abd44</anchor>
+      <arglist>(int processId)</arglist>
+    </member>
+    <member kind="variable" static="yes">
+      <type>static constexpr int</type>
+      <name>kernelProcessId</name>
+      <anchorfile>_symbolizer_8cpp.html</anchorfile>
+      <anchor>a5fb131484b9fd1322472a4ba9fc0e4ed</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" static="yes">
+      <type>static constexpr cpu_type_t</type>
+      <name>hostCpuType</name>
+      <anchorfile>_symbolizer_8cpp.html</anchorfile>
+      <anchor>a1177cd5524d73ea4e8182ae6898f80ba</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" static="yes">
+      <type>static constexpr std::string_view</type>
+      <name>rangeSeparator</name>
+      <anchorfile>_symbolizer_8cpp.html</anchorfile>
+      <anchor>a65d1ef3fbd51b10cbab2b3e3d098a1b3</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="file">
+    <name>Symbolizer.h</name>
+    <path></path>
+    <filename>_symbolizer_8h.html</filename>
+    <class kind="class">Symbolizer</class>
   </compound>
   <compound kind="file">
     <name>Toolchain.cpp</name>
@@ -292,6 +929,7 @@
     <path></path>
     <filename>_validator_8cpp.html</filename>
     <includes id="_validator_8h" name="Validator.h" local="yes" import="no" module="no" objc="no">Validator.h</includes>
+    <includes id="_sampler_8h" name="Sampler.h" local="yes" import="no" module="no" objc="no">Sampler.h</includes>
   </compound>
   <compound kind="file">
     <name>Validator.h</name>
@@ -307,21 +945,14 @@
       <type></type>
       <name>Benchmark</name>
       <anchorfile>class_benchmark.html</anchorfile>
-      <anchor>a136b7c51f05ca71e7c7595bc8ce9ac5a</anchor>
-      <arglist>(const juce::File &amp;newCommandFile, const juce::File &amp;newSamplesFile, const juce::File &amp;newManifestFile)</arglist>
+      <anchor>ae13345fa615923b519e370921cb70a32</anchor>
+      <arglist>(const juce::File &amp;newCommandFile, const juce::File &amp;newSamplesFile, const juce::File &amp;newManifestFile, const juce::ValueTree &amp;newSampleTable)</arglist>
     </member>
     <member kind="function">
       <type>juce::Result</type>
       <name>runEpoch</name>
       <anchorfile>class_benchmark.html</anchorfile>
       <anchor>a8b4bab8a038fba5d18366ba23e32923f</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type>juce::Result</type>
-      <name>addEpoch</name>
-      <anchorfile>class_benchmark.html</anchorfile>
-      <anchor>a54e743cd8ac66536390608cc09aa355e</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function">
@@ -342,15 +973,43 @@
       <type>void</type>
       <name>addRows</name>
       <anchorfile>class_benchmark.html</anchorfile>
-      <anchor>a9b9d076f0ec7ea35ca1cb50a2d280f29</anchor>
-      <arglist>(const juce::ValueTree &amp;table)</arglist>
+      <anchor>a9dc60998270d40efabd9739f299bd86d</anchor>
+      <arglist>(const juce::Identifier &amp;benchmarkType, const juce::ValueTree &amp;table)</arglist>
+    </member>
+    <member kind="function" protection="private">
+      <type>juce::Result</type>
+      <name>addEpoch</name>
+      <anchorfile>class_benchmark.html</anchorfile>
+      <anchor>ae59eaa6c1836391353180c17526f1c16</anchor>
+      <arglist>(double epochNanoseconds, const juce::ValueTree &amp;samplerSamples)</arglist>
+    </member>
+    <member kind="function" protection="private">
+      <type>void</type>
+      <name>addRow</name>
+      <anchorfile>class_benchmark.html</anchorfile>
+      <anchor>a4000af069c3a73c0bd9b109e6cb20f24</anchor>
+      <arglist>(const juce::Identifier &amp;rowKey, double nanoseconds)</arglist>
+    </member>
+    <member kind="function" protection="private">
+      <type>void</type>
+      <name>addMissingSamples</name>
+      <anchorfile>class_benchmark.html</anchorfile>
+      <anchor>a95c95a548d6bfafe6e2843a25b7a748e</anchor>
+      <arglist>()</arglist>
     </member>
     <member kind="function" protection="private">
       <type>void</type>
       <name>addBins</name>
       <anchorfile>class_benchmark.html</anchorfile>
-      <anchor>a9ba969f0936909fa42373d48dccf2550</anchor>
-      <arglist>(const juce::Identifier &amp;rowKey, const juce::String &amp;binsText)</arglist>
+      <anchor>a5afe24f9edd3f12d45bd6519a91081b7</anchor>
+      <arglist>(const juce::Identifier &amp;benchmarkType, const juce::Identifier &amp;rowKey, const juce::String &amp;binsText)</arglist>
+    </member>
+    <member kind="function" protection="private">
+      <type>rusage</type>
+      <name>getChildUsage</name>
+      <anchorfile>class_benchmark.html</anchorfile>
+      <anchor>aa5aa26f8ee900c49cf276b76765c98f7</anchor>
+      <arglist>() const</arglist>
     </member>
     <member kind="function" protection="private">
       <type>void</type>
@@ -381,31 +1040,38 @@
       <arglist></arglist>
     </member>
     <member kind="variable" protection="private">
-      <type>jam::HashMap&lt; juce::Identifier, juce::Array&lt; juce::var &gt; &gt;</type>
+      <type>const juce::ValueTree</type>
+      <name>sampleTable</name>
+      <anchorfile>class_benchmark.html</anchorfile>
+      <anchor>a49275f57b8c34e8d204a673e1bd48746</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="private">
+      <type>jam::HashMap&lt; juce::Identifier, jam::HashMap&lt; juce::Identifier, juce::Array&lt; juce::var &gt; &gt; &gt;</type>
       <name>epochSamples</name>
       <anchorfile>class_benchmark.html</anchorfile>
-      <anchor>ab658fd8c4392653436c288005e1172a4</anchor>
+      <anchor>a6dcde8e7cf962cf169f8aa7ffc01d299</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable" protection="private">
-      <type>jam::HashMap&lt; juce::Identifier, jam::Array&lt; juce::int64 &gt; &gt;</type>
+      <type>jam::HashMap&lt; juce::Identifier, jam::HashMap&lt; juce::Identifier, jam::Array&lt; juce::int64 &gt; &gt; &gt;</type>
       <name>bins</name>
       <anchorfile>class_benchmark.html</anchorfile>
-      <anchor>a342b5af6c51b0dae3b47376b45f42483</anchor>
+      <anchor>a4c5a8ec7ebbf0123f159d5fb3bd11e40</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable" protection="private">
-      <type>jam::HashMap&lt; juce::Identifier, int &gt;</type>
+      <type>jam::HashMap&lt; juce::Identifier, jam::HashMap&lt; juce::Identifier, int &gt; &gt;</type>
       <name>calls</name>
       <anchorfile>class_benchmark.html</anchorfile>
-      <anchor>a1a7f19f67b053162666235ed365861e7</anchor>
+      <anchor>af843221703119c4195591fcaa79dd710</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable" protection="private">
-      <type>jam::HashMap&lt; juce::Identifier, juce::String &gt;</type>
+      <type>jam::HashMap&lt; juce::Identifier, jam::HashMap&lt; juce::Identifier, juce::String &gt; &gt;</type>
       <name>units</name>
       <anchorfile>class_benchmark.html</anchorfile>
-      <anchor>a587a06d967bce6380270036d001c1f5a</anchor>
+      <anchor>a44c6335da1ecfc6c06298d0ce4ddd918</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable" protection="private">
@@ -449,6 +1115,13 @@
     </member>
     <member kind="variable" static="yes">
       <type>static constexpr const char *const</type>
+      <name>failSampleRange</name>
+      <anchorfile>structtext_1_1_diagnostics.html</anchorfile>
+      <anchor>a9f17a7ae5f9071429f8b8cc86e530546</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" static="yes">
+      <type>static constexpr const char *const</type>
       <name>failOutputWrite</name>
       <anchorfile>structtext_1_1_diagnostics.html</anchorfile>
       <anchor>a17a0efaa59e3489e8242be054d6280f5</anchor>
@@ -473,6 +1146,73 @@
       <name>done</name>
       <anchorfile>structtext_1_1_diagnostics.html</anchorfile>
       <anchor>a07b92fba2d678ad4a065f5ebd63d43a7</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="struct">
+    <name>kd_buf</name>
+    <filename>structkd__buf.html</filename>
+    <member kind="variable">
+      <type>uint64_t</type>
+      <name>timestamp</name>
+      <anchorfile>structkd__buf.html</anchorfile>
+      <anchor>a2dd93d5803922282b046207b7a3bf28c</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>uint64_t</type>
+      <name>arg1</name>
+      <anchorfile>structkd__buf.html</anchorfile>
+      <anchor>a42920e35cdff86f357c5e81ebf27af2a</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>uint64_t</type>
+      <name>arg2</name>
+      <anchorfile>structkd__buf.html</anchorfile>
+      <anchor>ae8a83ef68d6dd037050d931a4033a259</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>uint64_t</type>
+      <name>arg3</name>
+      <anchorfile>structkd__buf.html</anchorfile>
+      <anchor>a802645e321549466ce9ed29e3841ede6</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>uint64_t</type>
+      <name>arg4</name>
+      <anchorfile>structkd__buf.html</anchorfile>
+      <anchor>af3b6b23e4abdbf666662e204bb806903</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>uint64_t</type>
+      <name>arg5</name>
+      <anchorfile>structkd__buf.html</anchorfile>
+      <anchor>a820024f338925839fa17492b3450299b</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>uint32_t</type>
+      <name>debugid</name>
+      <anchorfile>structkd__buf.html</anchorfile>
+      <anchor>a046e1900d9792c1e4a976ee87dd7fb75</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>uint32_t</type>
+      <name>cpuid</name>
+      <anchorfile>structkd__buf.html</anchorfile>
+      <anchor>a99e5f41756c7f5a672ff0ceec370e923</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>uint64_t</type>
+      <name>unused</name>
+      <anchorfile>structkd__buf.html</anchorfile>
+      <anchor>a27597300259175870b1f4f7eeffb519e</anchor>
       <arglist></arglist>
     </member>
   </compound>
@@ -511,8 +1251,8 @@
       <type>juce::Result</type>
       <name>runEpochs</name>
       <anchorfile>struct_processor.html</anchorfile>
-      <anchor>a88ec28a8e3dd1b6e1f41fbaa315a737e</anchor>
-      <arglist>(const juce::ValueTree &amp;runTable)</arglist>
+      <anchor>acec35c543c65ed5dc6618fe7e79ef835</anchor>
+      <arglist>(const juce::ValueTree &amp;runTable, const juce::ValueTree &amp;sampleTable)</arglist>
     </member>
     <member kind="function" protection="private">
       <type>juce::Result</type>
@@ -608,6 +1348,277 @@
       <anchorfile>class_profile_report.html</anchorfile>
       <anchor>a996b7005c13fdd2d877931aaa1dfb223</anchor>
       <arglist>(jam::ConfigDocument &amp;document, const juce::ValueTree &amp;zone)</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>Sampler</name>
+    <filename>class_sampler.html</filename>
+    <base protection="private">juce::Thread</base>
+    <member kind="function">
+      <type></type>
+      <name>Sampler</name>
+      <anchorfile>class_sampler.html</anchorfile>
+      <anchor>ae2758b1ba8727dc22fdf5a80572e5872</anchor>
+      <arglist>(const juce::ValueTree &amp;sampleTable)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>~Sampler</name>
+      <anchorfile>class_sampler.html</anchorfile>
+      <anchor>a96dcddeb6ff5f0507f11de173cab4e95</anchor>
+      <arglist>() override</arglist>
+    </member>
+    <member kind="function">
+      <type>juce::Result</type>
+      <name>drain</name>
+      <anchorfile>class_sampler.html</anchorfile>
+      <anchor>a20473e869862e0950def74238b24bcd7</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>juce::ValueTree</type>
+      <name>getSamples</name>
+      <anchorfile>class_sampler.html</anchorfile>
+      <anchor>a91be2949beb7a32df2e93d205502f4e3</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="variable" static="yes">
+      <type>static constexpr int</type>
+      <name>minimumStackDepth</name>
+      <anchorfile>class_sampler.html</anchorfile>
+      <anchor>ae2192afc9784395ea7cb7d05270318d3</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" static="yes">
+      <type>static constexpr int</type>
+      <name>maximumStackDepth</name>
+      <anchorfile>class_sampler.html</anchorfile>
+      <anchor>a7cf4f7bbc391afd66a215460984f8443</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" static="yes">
+      <type>static constexpr int</type>
+      <name>minimumIntervalMs</name>
+      <anchorfile>class_sampler.html</anchorfile>
+      <anchor>a06a006e3b2e6f8b0a67a07707ae4b70c</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function" protection="private">
+      <type>void</type>
+      <name>run</name>
+      <anchorfile>class_sampler.html</anchorfile>
+      <anchor>aa64c8e9afe39558efd92cab23a0d73d3</anchor>
+      <arglist>() override</arglist>
+    </member>
+    <member kind="function" protection="private">
+      <type>void</type>
+      <name>addCounts</name>
+      <anchorfile>class_sampler.html</anchorfile>
+      <anchor>ad8520adf5251edbe4d546f16b548e3bd</anchor>
+      <arglist>(const juce::Identifier &amp;tableType, const jam::HashSet&lt; juce::Identifier &gt; &amp;sampleKeys, int weight)</arglist>
+    </member>
+    <member kind="function" protection="private">
+      <type>void</type>
+      <name>addRecords</name>
+      <anchorfile>class_sampler.html</anchorfile>
+      <anchor>a5b74c691901a5a66225c5653c8a90005</anchor>
+      <arglist>(const kd_buf *records, int recordCount)</arglist>
+    </member>
+    <member kind="function" protection="private">
+      <type>void</type>
+      <name>addSampleStart</name>
+      <anchorfile>class_sampler.html</anchorfile>
+      <anchor>a7e6ec11c924fea70cff7c5523d947436</anchor>
+      <arglist>(const kd_buf &amp;record)</arglist>
+    </member>
+    <member kind="function" protection="private">
+      <type>void</type>
+      <name>addThreadInfo</name>
+      <anchorfile>class_sampler.html</anchorfile>
+      <anchor>a45d5d70da446de4caafc6a2b51f4d291</anchor>
+      <arglist>(const kd_buf &amp;record)</arglist>
+    </member>
+    <member kind="function" protection="private">
+      <type>void</type>
+      <name>addStackHeader</name>
+      <anchorfile>class_sampler.html</anchorfile>
+      <anchor>aaba7a4bee0dcf7ecfeaddb43883fde6a</anchor>
+      <arglist>(const kd_buf &amp;record)</arglist>
+    </member>
+    <member kind="function" protection="private">
+      <type>void</type>
+      <name>addStackFrames</name>
+      <anchorfile>class_sampler.html</anchorfile>
+      <anchor>aa34b215d898befd15f2309ca2d816843</anchor>
+      <arglist>(const kd_buf &amp;record)</arglist>
+    </member>
+    <member kind="function" protection="private">
+      <type>void</type>
+      <name>addSampleEnd</name>
+      <anchorfile>class_sampler.html</anchorfile>
+      <anchor>a7b82b7917ef1a3ca7587abc8ef371c10</anchor>
+      <arglist>(const kd_buf &amp;record)</arglist>
+    </member>
+    <member kind="function" protection="private">
+      <type>void</type>
+      <name>addKernelSamples</name>
+      <anchorfile>class_sampler.html</anchorfile>
+      <anchor>a1b0c7a89bc356514777c16a32ed803b7</anchor>
+      <arglist>(const juce::Array&lt; juce::uint64 &gt; &amp;bracket, juce::uint64 metaFlags)</arglist>
+    </member>
+    <member kind="function" protection="private">
+      <type>void</type>
+      <name>addUserSamples</name>
+      <anchorfile>class_sampler.html</anchorfile>
+      <anchor>a81a879e06d0a4c952c005aa0512a41fc</anchor>
+      <arglist>(const juce::Array&lt; juce::uint64 &gt; &amp;bracket)</arglist>
+    </member>
+    <member kind="function" protection="private">
+      <type>int</type>
+      <name>readRecords</name>
+      <anchorfile>class_sampler.html</anchorfile>
+      <anchor>a8f8bd52cb658a991b1850f19c7efddf2</anchor>
+      <arglist>(kd_buf *records, int capacity)</arglist>
+    </member>
+    <member kind="function" protection="private">
+      <type>void</type>
+      <name>addLostEvents</name>
+      <anchorfile>class_sampler.html</anchorfile>
+      <anchor>ab90f07a264117ea7d86e28a334e13c6b</anchor>
+      <arglist>(const kd_buf &amp;record)</arglist>
+    </member>
+    <member kind="function" protection="private">
+      <type>void</type>
+      <name>setDescendants</name>
+      <anchorfile>class_sampler.html</anchorfile>
+      <anchor>a4f42f04f23edaa5df034fa51f3e5c2b2</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="private">
+      <type>juce::Result</type>
+      <name>startSession</name>
+      <anchorfile>class_sampler.html</anchorfile>
+      <anchor>a67fd6d27248213e4f9bf5630703d3f18</anchor>
+      <arglist>(int intervalMs, int stackDepth)</arglist>
+    </member>
+    <member kind="function" protection="private">
+      <type>void</type>
+      <name>setEnabled</name>
+      <anchorfile>class_sampler.html</anchorfile>
+      <anchor>a60ebd60e1f63f4dfa7b4ba94e69a63e8</anchor>
+      <arglist>(bool shouldEnable)</arglist>
+    </member>
+    <member kind="function" protection="private">
+      <type>void</type>
+      <name>addAllRecords</name>
+      <anchorfile>class_sampler.html</anchorfile>
+      <anchor>a3173fc3528fe177be86ce0ce8f29cd83</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="private">
+      <type>void</type>
+      <name>addRecords</name>
+      <anchorfile>class_sampler.html</anchorfile>
+      <anchor>a74c644f7d95b29dfa4bd1ccbaaedd5c6</anchor>
+      <arglist>(void *ring, const juce::Identifier &amp;tableType)</arglist>
+    </member>
+    <member kind="function" protection="private">
+      <type>void</type>
+      <name>addSample</name>
+      <anchorfile>class_sampler.html</anchorfile>
+      <anchor>ae86cd2f041fc30f659c9d4474a4d903c</anchor>
+      <arglist>(const void *ring, juce::uint64 position, const juce::Identifier &amp;tableType)</arglist>
+    </member>
+    <member kind="function" protection="private">
+      <type>void</type>
+      <name>addLost</name>
+      <anchorfile>class_sampler.html</anchorfile>
+      <anchor>aa8da20ec1df14aa97e4333e217cb7e99</anchor>
+      <arglist>(const void *ring, juce::uint64 position, const juce::Identifier &amp;tableType)</arglist>
+    </member>
+    <member kind="function" protection="private">
+      <type>void</type>
+      <name>addFrames</name>
+      <anchorfile>class_sampler.html</anchorfile>
+      <anchor>a1c44e35adce2ea951252ec1b8cab1891</anchor>
+      <arglist>(const void *ring, juce::uint64 position, int processId, const juce::Identifier &amp;tableType)</arglist>
+    </member>
+    <member kind="variable" protection="private">
+      <type>Symbolizer</type>
+      <name>symbolizer</name>
+      <anchorfile>class_sampler.html</anchorfile>
+      <anchor>ae3f391e3bfd03bcad0e434430721a832</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="private">
+      <type>jam::HashSet&lt; int &gt;</type>
+      <name>descendants</name>
+      <anchorfile>class_sampler.html</anchorfile>
+      <anchor>aa07b205965331acf4c461c26d309a712</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="private">
+      <type>jam::HashMap&lt; juce::uint32, juce::Array&lt; juce::uint64 &gt; &gt;</type>
+      <name>brackets</name>
+      <anchorfile>class_sampler.html</anchorfile>
+      <anchor>ae3f2dd6abb219dd46c795c7edf35db8d</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="private">
+      <type>jam::HashMap&lt; juce::uint64, jam::HashMap&lt; juce::uint64, int &gt; &gt;</type>
+      <name>pendingUserSamples</name>
+      <anchorfile>class_sampler.html</anchorfile>
+      <anchor>a4b4efc0c6090ade9a73af95f8d70f827</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="private">
+      <type>juce::Result</type>
+      <name>reading</name>
+      <anchorfile>class_sampler.html</anchorfile>
+      <anchor>a3a0bfdc50f13c6b25811cc422fdce419</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="private">
+      <type>juce::Array&lt; int &gt;</type>
+      <name>clockEvents</name>
+      <anchorfile>class_sampler.html</anchorfile>
+      <anchor>a56614a0afedf38a2ebe125135f016a9d</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="private">
+      <type>juce::Array&lt; int &gt;</type>
+      <name>switchEvents</name>
+      <anchorfile>class_sampler.html</anchorfile>
+      <anchor>adead0ff46c4127293def9741a9abc68d</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="private">
+      <type>std::vector&lt; std::unique_ptr&lt; void, void(*)(void *)&gt; &gt;</type>
+      <name>clockRings</name>
+      <anchorfile>class_sampler.html</anchorfile>
+      <anchor>a108f45bb6b7a2c1fa3204ea9a0cc25ad</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="private">
+      <type>std::vector&lt; std::unique_ptr&lt; void, void(*)(void *)&gt; &gt;</type>
+      <name>switchRings</name>
+      <anchorfile>class_sampler.html</anchorfile>
+      <anchor>a8072e26240c9fb945f82d2a5bf2131c4</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="private">
+      <type>const juce::Result</type>
+      <name>session</name>
+      <anchorfile>class_sampler.html</anchorfile>
+      <anchor>a0d033b10e47f10da0cb933a5888d8584</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="private">
+      <type>jam::HashMap&lt; juce::Identifier, jam::HashMap&lt; juce::Identifier, int &gt; &gt;</type>
+      <name>counts</name>
+      <anchorfile>class_sampler.html</anchorfile>
+      <anchor>a5996dbf305228d55bfb3c86ced39b146</anchor>
+      <arglist></arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -726,6 +1737,66 @@
       <arglist></arglist>
     </member>
   </compound>
+  <compound kind="class">
+    <name>Symbolizer</name>
+    <filename>class_symbolizer.html</filename>
+    <member kind="function">
+      <type></type>
+      <name>Symbolizer</name>
+      <anchorfile>class_symbolizer.html</anchorfile>
+      <anchor>a35359e7d73bfc5ce174cdb6b98a37eaf</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>~Symbolizer</name>
+      <anchorfile>class_symbolizer.html</anchorfile>
+      <anchor>a6b632e1592e8735f841efc54bd8f02e7</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>juce::Identifier</type>
+      <name>getOrCreateKernelFrameKey</name>
+      <anchorfile>class_symbolizer.html</anchorfile>
+      <anchor>a92eeac9f0e75cec721c3887f3c9528e4</anchor>
+      <arglist>(juce::uint64 address)</arglist>
+    </member>
+    <member kind="function">
+      <type>juce::Identifier</type>
+      <name>getOrCreateUserFrameKey</name>
+      <anchorfile>class_symbolizer.html</anchorfile>
+      <anchor>ac2636a4ed1057b823a39d1e316b7b222</anchor>
+      <arglist>(int processId, juce::uint64 address)</arglist>
+    </member>
+    <member kind="function" protection="private">
+      <type>juce::Identifier</type>
+      <name>getOrCreateImageFrameKey</name>
+      <anchorfile>class_symbolizer.html</anchorfile>
+      <anchor>a93cc5155003af3fb204341779e85ec0c</anchor>
+      <arglist>(const juce::String &amp;regionText, juce::uint64 regionStart, juce::uint64 address)</arglist>
+    </member>
+    <member kind="variable" protection="private">
+      <type>jam::HashMap&lt; int, jam::HashMap&lt; juce::uint64, juce::Identifier &gt; &gt;</type>
+      <name>frameKeys</name>
+      <anchorfile>class_symbolizer.html</anchorfile>
+      <anchor>a83cce67295d5e29b117076892225ee14</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="private">
+      <type>jam::HashMap&lt; juce::String, std::map&lt; juce::uint64, juce::String &gt; &gt;</type>
+      <name>imageSymbols</name>
+      <anchorfile>class_symbolizer.html</anchorfile>
+      <anchor>a3a526738f15236d0bbd906f96f0ecddc</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="private">
+      <type>jam::HashMap&lt; int, std::map&lt; juce::uint64, juce::String &gt; &gt;</type>
+      <name>regions</name>
+      <anchorfile>class_symbolizer.html</anchorfile>
+      <anchor>a908dd447303d990afb471232ef7fe4d8</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
   <compound kind="struct">
     <name>Toolchain</name>
     <filename>struct_toolchain.html</filename>
@@ -740,8 +1811,8 @@
       <type>static juce::Result</type>
       <name>runProcess</name>
       <anchorfile>struct_toolchain.html</anchorfile>
-      <anchor>a99335d844ab10df762460e0d2beea4db</anchor>
-      <arglist>(const juce::StringArray &amp;arguments, const juce::String &amp;diagnosticLine)</arglist>
+      <anchor>a8e82b6e8f1d8d5e72d8f8fb7f5149401</anchor>
+      <arglist>(const juce::StringArray &amp;arguments, const juce::File &amp;workingDirectory, const juce::String &amp;diagnosticLine)</arglist>
     </member>
   </compound>
   <compound kind="struct">

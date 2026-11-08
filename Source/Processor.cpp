@@ -52,7 +52,7 @@ juce::Result Processor::runToolchainRow (const jam::ConfigDocument::Element& row
                                     ? command + Chars::space + flag
                                     : command };
 
-    return Toolchain::runProcess (arguments, diagnosticLine);
+    return Toolchain::runProcess (arguments, documentFile.getParentDirectory(), diagnosticLine);
 }
 
 juce::Result Processor::runEpochs (const juce::ValueTree& runTable, const juce::ValueTree& sampleTable)

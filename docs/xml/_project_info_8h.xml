@@ -2,18 +2,18 @@
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.18.0" xml:lang="en-US">
   <compounddef id="_project_info_8h" kind="file" language="C++">
     <compoundname>ProjectInfo.h</compoundname>
-    <includedby refid="_generated_8h" local="yes">Source/generated/Generated.h</includedby>
+    <includedby refid="_generated_8h" local="yes">generated/Generated.h</includedby>
     <invincdepgraph>
       <node id="3">
-        <label>Source/Benchmark.cpp</label>
+        <label>Benchmark.cpp</label>
         <link refid="_benchmark_8cpp"/>
       </node>
       <node id="5">
-        <label>Source/Help.cpp</label>
+        <label>Help.cpp</label>
         <link refid="_help_8cpp"/>
       </node>
       <node id="4">
-        <label>Source/Help.h</label>
+        <label>Help.h</label>
         <link refid="_help_8h"/>
         <childnode refid="5" relation="include">
         </childnode>
@@ -21,15 +21,15 @@
         </childnode>
       </node>
       <node id="6">
-        <label>Source/Main.cpp</label>
+        <label>Main.cpp</label>
         <link refid="_main_8cpp"/>
       </node>
       <node id="8">
-        <label>Source/Processor.cpp</label>
+        <label>Processor.cpp</label>
         <link refid="_processor_8cpp"/>
       </node>
       <node id="7">
-        <label>Source/Processor.h</label>
+        <label>Processor.h</label>
         <link refid="_processor_8h"/>
         <childnode refid="6" relation="include">
         </childnode>
@@ -37,15 +37,15 @@
         </childnode>
       </node>
       <node id="9">
-        <label>Source/ProfileReport.cpp</label>
+        <label>ProfileReport.cpp</label>
         <link refid="_profile_report_8cpp"/>
       </node>
       <node id="11">
-        <label>Source/Sampler.cpp</label>
+        <label>Sampler.cpp</label>
         <link refid="_sampler_8cpp"/>
       </node>
       <node id="10">
-        <label>Source/Sampler.h</label>
+        <label>Sampler.h</label>
         <link refid="_sampler_8h"/>
         <childnode refid="3" relation="include">
         </childnode>
@@ -55,11 +55,11 @@
         </childnode>
       </node>
       <node id="14">
-        <label>Source/Toolchain.cpp</label>
+        <label>Toolchain.cpp</label>
         <link refid="_toolchain_8cpp"/>
       </node>
       <node id="13">
-        <label>Source/Toolchain.h</label>
+        <label>Toolchain.h</label>
         <link refid="_toolchain_8h"/>
         <childnode refid="7" relation="include">
         </childnode>
@@ -67,11 +67,11 @@
         </childnode>
       </node>
       <node id="12">
-        <label>Source/Validator.cpp</label>
+        <label>Validator.cpp</label>
         <link refid="_validator_8cpp"/>
       </node>
       <node id="15">
-        <label>Source/Validator.h</label>
+        <label>Validator.h</label>
         <link refid="_validator_8h"/>
         <childnode refid="7" relation="include">
         </childnode>
@@ -79,11 +79,11 @@
         </childnode>
       </node>
       <node id="16">
-        <label>Source/generated/Generated.cpp</label>
+        <label>generated/Generated.cpp</label>
         <link refid="_generated_8cpp"/>
       </node>
       <node id="2">
-        <label>Source/generated/Generated.h</label>
+        <label>generated/Generated.h</label>
         <link refid="_generated_8h"/>
         <childnode refid="3" relation="include">
         </childnode>
@@ -105,7 +105,7 @@
         </childnode>
       </node>
       <node id="1">
-        <label>Source/generated/ProjectInfo.h</label>
+        <label>generated/ProjectInfo.h</label>
         <link refid="_project_info_8h"/>
         <childnode refid="2" relation="include">
         </childnode>
@@ -154,6 +154,6 @@
 <codeline lineno="43"><highlight class="normal"></highlight></codeline>
 <codeline lineno="45"><highlight class="normal">}</highlight><highlight class="comment">//<sp/>namespace<sp/>ProjectInfo</highlight><highlight class="normal"></highlight></codeline>
     </programlisting>
-    <location file="Source/generated/ProjectInfo.h"/>
+    <location file="generated/ProjectInfo.h"/>
   </compounddef>
 </doxygen>

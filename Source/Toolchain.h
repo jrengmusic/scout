@@ -27,17 +27,17 @@ struct Toolchain
     static juce::StringArray getToolchainArguments (const juce::String& command, const juce::String& flag);
 
     /**
-     * @brief Runs @p arguments as a child process in the current working
-     *        directory, streaming its output to stdout and blocking until
-     *        it exits.
+     * @brief Runs @p arguments as a child process in @p workingDirectory,
+     *        streaming its output to stdout and blocking until it exits.
      *
-     * @param arguments      The process argv, index zero the executable.
-     * @param diagnosticLine The command line named in a failure, when the
-     *                       process exits non-zero.
+     * @param arguments        The process argv, index zero the executable.
+     * @param workingDirectory The folder the child process runs in.
+     * @param diagnosticLine   The command line named in a failure, when the
+     *                         process exits non-zero.
      * @returns juce::Result::ok() when the process exits zero, or a
      *          failure naming @p diagnosticLine.
      */
-    static juce::Result runProcess (const juce::StringArray& arguments, const juce::String& diagnosticLine);
+    static juce::Result runProcess (const juce::StringArray& arguments, const juce::File& workingDirectory, const juce::String& diagnosticLine);
 
     JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR (Toolchain)
 };

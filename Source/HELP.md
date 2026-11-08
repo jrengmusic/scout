@@ -86,9 +86,9 @@ A header without both columns fails:
 
 A span in double quotes stays one argument. Scout removes the quote marks.
 
-Each row runs as one child process. The row runs in the folder that you call scout from. Scout adds
-no shell and no path search of its own. The environment is yours. Thus call scout from the folder
-that the rows assume, for example the project root. The output of the row streams to stdout.
+Each row runs as one child process, in the folder of the manifest. A relative path in a cell
+resolves against that folder. Scout adds no shell and no path search of its own. The environment is
+yours. The output of the row streams to stdout.
 
 A row that cannot start, or exits with a code other than 0, stops the run:
 `scout: <command> <flag>: toolchain command failed`. No later row and no epoch runs.
@@ -242,17 +242,17 @@ A failure prints `scout: <message>` on stderr. A validation message can hold mor
 
 ## toolchain
 
-+---------+--------------------------------------------------------------------------------------------------------------+
-| command | flag                                                                                                         |
-+=========+==============================================================================================================+
-| cast    | ../jam/cast/spell.md                                                                                         |
-+---------+--------------------------------------------------------------------------------------------------------------+
-| cmake   | -S . -B Builds/Replay -G Ninja -DCMAKE_BUILD_TYPE=Release -DCAST_SIGN=OFF -DCAST_PROFILE=ON -DCAST_REPLAY=ON |
-+---------+--------------------------------------------------------------------------------------------------------------+
-| ninja   | -C Builds/Replay                                                                                             |
-+---------+--------------------------------------------------------------------------------------------------------------+
++---------+------------------------------------------------------------------------------------------------------------------+
+| command | flag                                                                                                             |
++=========+==================================================================================================================+
+| cast    | ../../jam/cast/spell.md                                                                                          |
++---------+------------------------------------------------------------------------------------------------------------------+
+| cmake   | -S .. -B ../Builds/Replay -G Ninja -DCMAKE_BUILD_TYPE=Release -DCAST_SIGN=OFF -DCAST_PROFILE=ON -DCAST_REPLAY=ON |
++---------+------------------------------------------------------------------------------------------------------------------+
+| ninja   | -C ../Builds/Replay                                                                                              |
++---------+------------------------------------------------------------------------------------------------------------------+
 ```
 
 The `profiler` table belongs to the target. EVE reads it. Scout does not read it.
 
-These rows assume that you call scout from the EVE project root.
+These rows assume that the manifest is in the `benchmark` folder of the EVE project.

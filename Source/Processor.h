@@ -23,7 +23,8 @@ struct Processor
      * @brief Parses @p newDocumentFile into the manifest.
      *
      * @param newDocumentFile  The manifest file. Its folder resolves the
-     *                         paths of the `run` table.
+     *                         paths of the `run` table, and it is the working
+     *                         folder of each `## toolchain` row.
      */
     explicit Processor (const juce::File& newDocumentFile);
 
@@ -45,8 +46,8 @@ private:
     /**
      * @brief Runs every `## toolchain` row, in table order and row order.
      *
-     * Each row runs in the working folder of the caller, not in the folder of
-     * the manifest. The run stops at the first row that fails.
+     * Each row runs in the folder of the manifest, the folder that holds
+     * `documentFile`. The run stops at the first row that fails.
      *
      * @returns juce::Result::ok() when every row exits with zero, or the
      *          first failure.
@@ -57,8 +58,9 @@ private:
      * @brief Runs the `command` of @p row, followed by its `flag`, through
      *        Toolchain::runProcess().
      *
-     * The command line in a failure is the `command`, followed by the `flag`
-     * when the row declares one.
+     * The process runs in the folder of the manifest, the folder that holds
+     * `documentFile`. The command line in a failure is the `command`, followed
+     * by the `flag` when the row declares one.
      *
      * @param row  The `## toolchain` row whose `command` and `flag` run.
      * @returns juce::Result::ok() when the process starts and exits with
@@ -100,7 +102,10 @@ private:
      */
     juce::Result writeReport (const juce::ValueTree& runTable, const juce::ValueTree& profiles);
 
-    /** @brief The manifest file. Its folder resolves the paths of the `run` table. */
+    /**
+     * @brief The manifest file. Its folder resolves the paths of the `run`
+     *        table, and it is the working folder of each `## toolchain` row.
+     */
     const juce::File documentFile;
 
     /** @brief The parsed manifest. */

@@ -12,14 +12,14 @@ juce::StringArray Toolchain::getToolchainArguments (const juce::String& command,
     return arguments;
 }
 
-juce::Result Toolchain::runProcess (const juce::StringArray& arguments, const juce::String& diagnosticLine)
+juce::Result Toolchain::runProcess (const juce::StringArray& arguments, const juce::File& workingDirectory, const juce::String& diagnosticLine)
 {
     juce::WaitableEvent finished;
-    auto exitCode { -1 };
+    int exitCode { -1 };
 
     jam::Subprocess subprocess;
     subprocess.launch (arguments,
-                       juce::File::getCurrentWorkingDirectory(),
+                       workingDirectory,
                        [&finished, &exitCode] (int processExitCode, const std::string&)
                        {
                            exitCode = processExitCode;

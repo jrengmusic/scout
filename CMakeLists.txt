@@ -291,8 +291,7 @@ target_link_options(${PROJECT_NAME} PRIVATE
 
 file(GLOB CAST_BINARY_FILES CONFIGURE_DEPENDS
 Source/HELP.md
-Source/markdown.css
-${CMAKE_CURRENT_SOURCE_DIR}/../jam/resources/mermaid.css
+Source/style.css
 )
 
 juce_add_binary_data(${PROJECT_NAME}_BinaryData

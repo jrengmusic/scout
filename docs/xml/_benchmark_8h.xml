@@ -3,32 +3,38 @@
   <compounddef id="_benchmark_8h" kind="file" language="C++">
     <compoundname>Benchmark.h</compoundname>
     <includes local="no">JuceHeader.h</includes>
+    <includes local="no">csignal</includes>
     <includes local="no">sys/resource.h</includes>
-    <includedby refid="_benchmark_8cpp" local="yes">Source/Benchmark.cpp</includedby>
-    <includedby refid="_processor_8h" local="yes">Source/Processor.h</includedby>
+    <includedby refid="_benchmark_8cpp" local="yes">Benchmark.cpp</includedby>
+    <includedby refid="_processor_8h" local="yes">Processor.h</includedby>
     <incdepgraph>
       <node id="1">
-        <label>Source/Benchmark.h</label>
+        <label>Benchmark.h</label>
         <link refid="_benchmark_8h"/>
         <childnode refid="2" relation="include">
         </childnode>
         <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
         </childnode>
       </node>
       <node id="2">
         <label>JuceHeader.h</label>
       </node>
       <node id="3">
+        <label>csignal</label>
+      </node>
+      <node id="4">
         <label>sys/resource.h</label>
       </node>
     </incdepgraph>
     <invincdepgraph>
       <node id="2">
-        <label>Source/Benchmark.cpp</label>
+        <label>Benchmark.cpp</label>
         <link refid="_benchmark_8cpp"/>
       </node>
       <node id="1">
-        <label>Source/Benchmark.h</label>
+        <label>Benchmark.h</label>
         <link refid="_benchmark_8h"/>
         <childnode refid="2" relation="include">
         </childnode>
@@ -36,15 +42,15 @@
         </childnode>
       </node>
       <node id="4">
-        <label>Source/Main.cpp</label>
+        <label>Main.cpp</label>
         <link refid="_main_8cpp"/>
       </node>
       <node id="5">
-        <label>Source/Processor.cpp</label>
+        <label>Processor.cpp</label>
         <link refid="_processor_8cpp"/>
       </node>
       <node id="3">
-        <label>Source/Processor.h</label>
+        <label>Processor.h</label>
         <link refid="_processor_8h"/>
         <childnode refid="4" relation="include">
         </childnode>
@@ -62,67 +68,68 @@
 <codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;JuceHeader.h&gt;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="3"><highlight class="normal"></highlight></codeline>
 <codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>JUCE_MAC<sp/>or<sp/>JUCE_LINUX</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;sys/resource.h&gt;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="7"><highlight class="normal"></highlight></codeline>
-<codeline lineno="18" refid="class_benchmark" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_benchmark_1ae13345fa615923b519e370921cb70a32" kindref="member">Benchmark</ref></highlight></codeline>
-<codeline lineno="19"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="20"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
-<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_benchmark_1ae13345fa615923b519e370921cb70a32" kindref="member">Benchmark</ref><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>juce::File&amp;<sp/>newCommandFile,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>juce::File&amp;<sp/>newSamplesFile,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>juce::File&amp;<sp/>newManifestFile,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>juce::ValueTree&amp;<sp/>newSampleTable);</highlight></codeline>
-<codeline lineno="30"><highlight class="normal"></highlight></codeline>
-<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/>juce::Result<sp/><ref refid="class_benchmark_1a8b4bab8a038fba5d18366ba23e32923f" kindref="member">runEpoch</ref>();</highlight></codeline>
-<codeline lineno="47"><highlight class="normal"></highlight></codeline>
-<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/>juce::ValueTree<sp/><ref refid="class_benchmark_1ac2758e9667d09cca4fa1c7d0845c7413" kindref="member">getProfiles</ref><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>juce::ValueTree&amp;<sp/>baseline)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="63"><highlight class="normal"></highlight></codeline>
-<codeline lineno="64"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
-<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_benchmark_1a4f8bafb7b4939b3398f3ba59f198010a" kindref="member">runCommand</ref>();</highlight></codeline>
-<codeline lineno="71"><highlight class="normal"></highlight></codeline>
-<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_benchmark_1a9dc60998270d40efabd9739f299bd86d" kindref="member">addRows</ref><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>juce::Identifier&amp;<sp/>benchmarkType,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>juce::ValueTree&amp;<sp/>table);</highlight></codeline>
-<codeline lineno="83"><highlight class="normal"></highlight></codeline>
-<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/>juce::Result<sp/><ref refid="class_benchmark_1ae59eaa6c1836391353180c17526f1c16" kindref="member">addEpoch</ref><sp/>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>epochNanoseconds,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>juce::ValueTree&amp;<sp/>samplerSamples);</highlight></codeline>
-<codeline lineno="95"><highlight class="normal"></highlight></codeline>
-<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_benchmark_1a4000af069c3a73c0bd9b109e6cb20f24" kindref="member">addRow</ref><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>juce::Identifier&amp;<sp/>rowKey,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>nanoseconds);</highlight></codeline>
-<codeline lineno="105"><highlight class="normal"></highlight></codeline>
-<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_benchmark_1a95c95a548d6bfafe6e2843a25b7a748e" kindref="member">addMissingSamples</ref>();</highlight></codeline>
-<codeline lineno="110"><highlight class="normal"></highlight></codeline>
-<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_benchmark_1a5afe24f9edd3f12d45bd6519a91081b7" kindref="member">addBins</ref><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>juce::Identifier&amp;<sp/>benchmarkType,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>juce::Identifier&amp;<sp/>rowKey,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>juce::String&amp;<sp/>binsText);</highlight></codeline>
-<codeline lineno="121"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>JUCE_MAC<sp/>or<sp/>JUCE_LINUX</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/>rusage<sp/><ref refid="class_benchmark_1aa5aa26f8ee900c49cf276b76765c98f7" kindref="member">getChildUsage</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="128"><highlight class="normal"></highlight></codeline>
-<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_benchmark_1a5d20602a03271cc0aa22560a9e64aad9" kindref="member">addChildTime</ref><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>rusage&amp;<sp/>before,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>rusage&amp;<sp/>after);</highlight></codeline>
-<codeline lineno="138"><highlight class="normal"></highlight><highlight class="preprocessor">#elif<sp/>JUCE_WINDOWS</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/>JOBOBJECT_BASIC_ACCOUNTING_INFORMATION<sp/><ref refid="class_benchmark_1aa5aa26f8ee900c49cf276b76765c98f7" kindref="member">getChildUsage</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="147"><highlight class="normal"></highlight></codeline>
-<codeline lineno="156"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_benchmark_1a5d20602a03271cc0aa22560a9e64aad9" kindref="member">addChildTime</ref><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>JOBOBJECT_BASIC_ACCOUNTING_INFORMATION&amp;<sp/>before,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>JOBOBJECT_BASIC_ACCOUNTING_INFORMATION&amp;<sp/>after);</highlight></codeline>
-<codeline lineno="157"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="158"><highlight class="normal"></highlight></codeline>
-<codeline lineno="160" refid="class_benchmark_1a55df5d956a4f1ed943a8b73142dcb509" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>juce::File<sp/><ref refid="class_benchmark_1a55df5d956a4f1ed943a8b73142dcb509" kindref="member">commandFile</ref>;</highlight></codeline>
-<codeline lineno="161"><highlight class="normal"></highlight></codeline>
-<codeline lineno="163" refid="class_benchmark_1a462aeef6e3aa34999d64fc5f7ec8443c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>juce::File<sp/><ref refid="class_benchmark_1a462aeef6e3aa34999d64fc5f7ec8443c" kindref="member">samplesFile</ref>;</highlight></codeline>
-<codeline lineno="164"><highlight class="normal"></highlight></codeline>
-<codeline lineno="166" refid="class_benchmark_1a14f464a6bc7b395ccb9bba782a301661" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>juce::File<sp/><ref refid="class_benchmark_1a14f464a6bc7b395ccb9bba782a301661" kindref="member">manifestFile</ref>;</highlight></codeline>
-<codeline lineno="167"><highlight class="normal"></highlight></codeline>
-<codeline lineno="168"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>JUCE_WINDOWS</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="170"><highlight class="normal"><sp/><sp/><sp/><sp/>std::unique_ptr&lt;void,<sp/>BOOL<sp/>(WINAPI*)<sp/>(HANDLE)&gt;<sp/>job;</highlight></codeline>
-<codeline lineno="171"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="172"><highlight class="normal"></highlight></codeline>
-<codeline lineno="174" refid="class_benchmark_1a49275f57b8c34e8d204a673e1bd48746" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>juce::ValueTree<sp/><ref refid="class_benchmark_1a49275f57b8c34e8d204a673e1bd48746" kindref="member">sampleTable</ref>;</highlight></codeline>
-<codeline lineno="175"><highlight class="normal"></highlight></codeline>
-<codeline lineno="177" refid="class_benchmark_1a6dcde8e7cf962cf169f8aa7ffc01d299" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>jam::HashMap&lt;juce::Identifier,<sp/>jam::HashMap&lt;juce::Identifier,<sp/>juce::Array&lt;juce::var&gt;&gt;&gt;<sp/><ref refid="class_benchmark_1a6dcde8e7cf962cf169f8aa7ffc01d299" kindref="member">epochSamples</ref>;</highlight></codeline>
-<codeline lineno="178"><highlight class="normal"></highlight></codeline>
-<codeline lineno="180" refid="class_benchmark_1a4c5a8ec7ebbf0123f159d5fb3bd11e40" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>jam::HashMap&lt;juce::Identifier,<sp/>jam::HashMap&lt;juce::Identifier,<sp/>jam::Array&lt;juce::int64&gt;&gt;&gt;<sp/><ref refid="class_benchmark_1a4c5a8ec7ebbf0123f159d5fb3bd11e40" kindref="member">bins</ref>;</highlight></codeline>
-<codeline lineno="181"><highlight class="normal"></highlight></codeline>
-<codeline lineno="183" refid="class_benchmark_1af843221703119c4195591fcaa79dd710" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>jam::HashMap&lt;juce::Identifier,<sp/>jam::HashMap&lt;juce::Identifier,<sp/>int&gt;&gt;<sp/><ref refid="class_benchmark_1af843221703119c4195591fcaa79dd710" kindref="member">calls</ref>;</highlight></codeline>
-<codeline lineno="184"><highlight class="normal"></highlight></codeline>
-<codeline lineno="186" refid="class_benchmark_1a44c6335da1ecfc6c06298d0ce4ddd918" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>jam::HashMap&lt;juce::Identifier,<sp/>jam::HashMap&lt;juce::Identifier,<sp/>juce::String&gt;&gt;<sp/><ref refid="class_benchmark_1a44c6335da1ecfc6c06298d0ce4ddd918" kindref="member">units</ref>;</highlight></codeline>
-<codeline lineno="187"><highlight class="normal"></highlight></codeline>
-<codeline lineno="189" refid="class_benchmark_1a17a83e311aa3aa0faff83483b67537e7" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>juce::ValueTree<sp/><ref refid="class_benchmark_1a17a83e311aa3aa0faff83483b67537e7" kindref="member">runTable</ref>;</highlight></codeline>
-<codeline lineno="190"><highlight class="normal"></highlight></codeline>
-<codeline lineno="192" refid="class_benchmark_1a297f53f732ae4d2d79d474359af97fe6" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>juce::Identifier<sp/><ref refid="class_benchmark_1a297f53f732ae4d2d79d474359af97fe6" kindref="member">tableType</ref>;</highlight></codeline>
-<codeline lineno="193"><highlight class="normal"></highlight></codeline>
-<codeline lineno="194"><highlight class="normal"><sp/><sp/><sp/><sp/>JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR<sp/>(<ref refid="class_benchmark_1ae13345fa615923b519e370921cb70a32" kindref="member">Benchmark</ref>)</highlight></codeline>
-<codeline lineno="195"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;csignal&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;sys/resource.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19" refid="class_benchmark" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_benchmark_1ae13345fa615923b519e370921cb70a32" kindref="member">Benchmark</ref></highlight></codeline>
+<codeline lineno="20"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_benchmark_1ae13345fa615923b519e370921cb70a32" kindref="member">Benchmark</ref><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classjuce_1_1File" kindref="compound" external="/Users/jreng/Documents/Poems/JUCE/docs/tagfile.xml">juce::File</ref>&amp;<sp/>newCommandFile,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classjuce_1_1File" kindref="compound" external="/Users/jreng/Documents/Poems/JUCE/docs/tagfile.xml">juce::File</ref>&amp;<sp/>newSamplesFile,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classjuce_1_1File" kindref="compound" external="/Users/jreng/Documents/Poems/JUCE/docs/tagfile.xml">juce::File</ref>&amp;<sp/>newManifestFile,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classjuce_1_1ValueTree" kindref="compound" external="/Users/jreng/Documents/Poems/JUCE/docs/tagfile.xml">juce::ValueTree</ref>&amp;<sp/>newSampleTable);</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classjuce_1_1Result" kindref="compound" external="/Users/jreng/Documents/Poems/JUCE/docs/tagfile.xml">juce::Result</ref><sp/><ref refid="class_benchmark_1a8b4bab8a038fba5d18366ba23e32923f" kindref="member">runEpoch</ref>();</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classjuce_1_1ValueTree" kindref="compound" external="/Users/jreng/Documents/Poems/JUCE/docs/tagfile.xml">juce::ValueTree</ref><sp/><ref refid="class_benchmark_1ac2758e9667d09cca4fa1c7d0845c7413" kindref="member">getProfiles</ref><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classjuce_1_1ValueTree" kindref="compound" external="/Users/jreng/Documents/Poems/JUCE/docs/tagfile.xml">juce::ValueTree</ref>&amp;<sp/>baseline)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_benchmark_1a4f8bafb7b4939b3398f3ba59f198010a" kindref="member">runCommand</ref>();</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_benchmark_1a9dc60998270d40efabd9739f299bd86d" kindref="member">addRows</ref><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classjuce_1_1Identifier" kindref="compound" external="/Users/jreng/Documents/Poems/JUCE/docs/tagfile.xml">juce::Identifier</ref>&amp;<sp/>benchmarkType,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classjuce_1_1ValueTree" kindref="compound" external="/Users/jreng/Documents/Poems/JUCE/docs/tagfile.xml">juce::ValueTree</ref>&amp;<sp/>table);</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"></highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classjuce_1_1Result" kindref="compound" external="/Users/jreng/Documents/Poems/JUCE/docs/tagfile.xml">juce::Result</ref><sp/><ref refid="class_benchmark_1ae59eaa6c1836391353180c17526f1c16" kindref="member">addEpoch</ref><sp/>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>epochNanoseconds,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classjuce_1_1ValueTree" kindref="compound" external="/Users/jreng/Documents/Poems/JUCE/docs/tagfile.xml">juce::ValueTree</ref>&amp;<sp/>samplerSamples);</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"></highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_benchmark_1a4000af069c3a73c0bd9b109e6cb20f24" kindref="member">addRow</ref><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classjuce_1_1Identifier" kindref="compound" external="/Users/jreng/Documents/Poems/JUCE/docs/tagfile.xml">juce::Identifier</ref>&amp;<sp/>rowKey,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>nanoseconds);</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"></highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_benchmark_1a95c95a548d6bfafe6e2843a25b7a748e" kindref="member">addMissingSamples</ref>();</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"></highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_benchmark_1a5afe24f9edd3f12d45bd6519a91081b7" kindref="member">addBins</ref><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classjuce_1_1Identifier" kindref="compound" external="/Users/jreng/Documents/Poems/JUCE/docs/tagfile.xml">juce::Identifier</ref>&amp;<sp/>benchmarkType,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classjuce_1_1Identifier" kindref="compound" external="/Users/jreng/Documents/Poems/JUCE/docs/tagfile.xml">juce::Identifier</ref>&amp;<sp/>rowKey,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classjuce_1_1String" kindref="compound" external="/Users/jreng/Documents/Poems/JUCE/docs/tagfile.xml">juce::String</ref>&amp;<sp/>binsText);</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>JUCE_MAC<sp/>or<sp/>JUCE_LINUX</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/>rusage<sp/><ref refid="class_benchmark_1aa5aa26f8ee900c49cf276b76765c98f7" kindref="member">getChildUsage</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"></highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_benchmark_1a5d20602a03271cc0aa22560a9e64aad9" kindref="member">addChildTime</ref><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>rusage&amp;<sp/>before,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>rusage&amp;<sp/>after);</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"></highlight><highlight class="preprocessor">#elif<sp/>JUCE_WINDOWS</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/>JOBOBJECT_BASIC_ACCOUNTING_INFORMATION<sp/><ref refid="class_benchmark_1aa5aa26f8ee900c49cf276b76765c98f7" kindref="member">getChildUsage</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"></highlight></codeline>
+<codeline lineno="157"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_benchmark_1a5d20602a03271cc0aa22560a9e64aad9" kindref="member">addChildTime</ref><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>JOBOBJECT_BASIC_ACCOUNTING_INFORMATION&amp;<sp/>before,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>JOBOBJECT_BASIC_ACCOUNTING_INFORMATION&amp;<sp/>after);</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="159"><highlight class="normal"></highlight></codeline>
+<codeline lineno="161" refid="class_benchmark_1a55df5d956a4f1ed943a8b73142dcb509" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classjuce_1_1File" kindref="compound" external="/Users/jreng/Documents/Poems/JUCE/docs/tagfile.xml">juce::File</ref><sp/><ref refid="class_benchmark_1a55df5d956a4f1ed943a8b73142dcb509" kindref="member">commandFile</ref>;</highlight></codeline>
+<codeline lineno="162"><highlight class="normal"></highlight></codeline>
+<codeline lineno="164" refid="class_benchmark_1a462aeef6e3aa34999d64fc5f7ec8443c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classjuce_1_1File" kindref="compound" external="/Users/jreng/Documents/Poems/JUCE/docs/tagfile.xml">juce::File</ref><sp/><ref refid="class_benchmark_1a462aeef6e3aa34999d64fc5f7ec8443c" kindref="member">samplesFile</ref>;</highlight></codeline>
+<codeline lineno="165"><highlight class="normal"></highlight></codeline>
+<codeline lineno="167" refid="class_benchmark_1a14f464a6bc7b395ccb9bba782a301661" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classjuce_1_1File" kindref="compound" external="/Users/jreng/Documents/Poems/JUCE/docs/tagfile.xml">juce::File</ref><sp/><ref refid="class_benchmark_1a14f464a6bc7b395ccb9bba782a301661" kindref="member">manifestFile</ref>;</highlight></codeline>
+<codeline lineno="168"><highlight class="normal"></highlight></codeline>
+<codeline lineno="169"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>JUCE_WINDOWS</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="171"><highlight class="normal"><sp/><sp/><sp/><sp/>std::unique_ptr&lt;void,<sp/>BOOL<sp/>(WINAPI*)<sp/>(HANDLE)&gt;<sp/>job;</highlight></codeline>
+<codeline lineno="172"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="173"><highlight class="normal"></highlight></codeline>
+<codeline lineno="175" refid="class_benchmark_1a49275f57b8c34e8d204a673e1bd48746" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classjuce_1_1ValueTree" kindref="compound" external="/Users/jreng/Documents/Poems/JUCE/docs/tagfile.xml">juce::ValueTree</ref><sp/><ref refid="class_benchmark_1a49275f57b8c34e8d204a673e1bd48746" kindref="member">sampleTable</ref>;</highlight></codeline>
+<codeline lineno="176"><highlight class="normal"></highlight></codeline>
+<codeline lineno="178" refid="class_benchmark_1a6dcde8e7cf962cf169f8aa7ffc01d299" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classjam_1_1HashMap" kindref="compound" external="/Users/jreng/Documents/Poems/dev/jam/docs/tagfile.xml">jam::HashMap&lt;juce::Identifier, jam::HashMap&lt;juce::Identifier, juce::Array&lt;juce::var&gt;</ref>&gt;&gt;<sp/><ref refid="class_benchmark_1a6dcde8e7cf962cf169f8aa7ffc01d299" kindref="member">epochSamples</ref>;</highlight></codeline>
+<codeline lineno="179"><highlight class="normal"></highlight></codeline>
+<codeline lineno="181" refid="class_benchmark_1a4c5a8ec7ebbf0123f159d5fb3bd11e40" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classjam_1_1HashMap" kindref="compound" external="/Users/jreng/Documents/Poems/dev/jam/docs/tagfile.xml">jam::HashMap&lt;juce::Identifier, jam::HashMap&lt;juce::Identifier, jam::Array&lt;juce::int64&gt;</ref>&gt;&gt;<sp/><ref refid="class_benchmark_1a4c5a8ec7ebbf0123f159d5fb3bd11e40" kindref="member">bins</ref>;</highlight></codeline>
+<codeline lineno="182"><highlight class="normal"></highlight></codeline>
+<codeline lineno="184" refid="class_benchmark_1af843221703119c4195591fcaa79dd710" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classjam_1_1HashMap" kindref="compound" external="/Users/jreng/Documents/Poems/dev/jam/docs/tagfile.xml">jam::HashMap&lt;juce::Identifier, jam::HashMap&lt;juce::Identifier, int&gt;</ref>&gt;<sp/><ref refid="class_benchmark_1af843221703119c4195591fcaa79dd710" kindref="member">calls</ref>;</highlight></codeline>
+<codeline lineno="185"><highlight class="normal"></highlight></codeline>
+<codeline lineno="187" refid="class_benchmark_1a44c6335da1ecfc6c06298d0ce4ddd918" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classjam_1_1HashMap" kindref="compound" external="/Users/jreng/Documents/Poems/dev/jam/docs/tagfile.xml">jam::HashMap&lt;juce::Identifier, jam::HashMap&lt;juce::Identifier, juce::String&gt;</ref>&gt;<sp/><ref refid="class_benchmark_1a44c6335da1ecfc6c06298d0ce4ddd918" kindref="member">units</ref>;</highlight></codeline>
+<codeline lineno="188"><highlight class="normal"></highlight></codeline>
+<codeline lineno="190" refid="class_benchmark_1a17a83e311aa3aa0faff83483b67537e7" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classjuce_1_1ValueTree" kindref="compound" external="/Users/jreng/Documents/Poems/JUCE/docs/tagfile.xml">juce::ValueTree</ref><sp/><ref refid="class_benchmark_1a17a83e311aa3aa0faff83483b67537e7" kindref="member">runTable</ref>;</highlight></codeline>
+<codeline lineno="191"><highlight class="normal"></highlight></codeline>
+<codeline lineno="193" refid="class_benchmark_1a297f53f732ae4d2d79d474359af97fe6" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classjuce_1_1Identifier" kindref="compound" external="/Users/jreng/Documents/Poems/JUCE/docs/tagfile.xml">juce::Identifier</ref><sp/><ref refid="class_benchmark_1a297f53f732ae4d2d79d474359af97fe6" kindref="member">tableType</ref>;</highlight></codeline>
+<codeline lineno="194"><highlight class="normal"></highlight></codeline>
+<codeline lineno="195"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="juce__PlatformDefs_8h_1a851b02724a8158a7f746c66b5758b3dd" kindref="member" external="/Users/jreng/Documents/Poems/JUCE/docs/tagfile.xml">JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR</ref><sp/>(<ref refid="class_benchmark_1ae13345fa615923b519e370921cb70a32" kindref="member">Benchmark</ref>)</highlight></codeline>
+<codeline lineno="196"><highlight class="normal">};</highlight></codeline>
     </programlisting>
-    <location file="Source/Benchmark.h"/>
+    <location file="Benchmark.h"/>
   </compounddef>
 </doxygen>

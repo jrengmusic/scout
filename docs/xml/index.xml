@@ -136,41 +136,11 @@
   </compound>
   <compound refid="struct_toolchain" kind="struct"><name>Toolchain</name>
     <member refid="struct_toolchain_1ad96b65cacfb0e4c8d2c1cf75acd01100" kind="function"><name>getToolchainArguments</name></member>
-    <member refid="struct_toolchain_1a99335d844ab10df762460e0d2beea4db" kind="function"><name>runProcess</name></member>
+    <member refid="struct_toolchain_1a8e82b6e8f1d8d5e72d8f8fb7f5149401" kind="function"><name>runProcess</name></member>
   </compound>
   <compound refid="struct_validator" kind="struct"><name>Validator</name>
     <member refid="struct_validator_1af387720572933d5519b0597814433c17" kind="function"><name>addRules</name></member>
     <member refid="struct_validator_1a394659562ffe86296738ed5a5b14f80f" kind="function"><name>getRules</name></member>
-  </compound>
-  <compound refid="namespacefiles" kind="namespace"><name>files</name>
-    <member refid="namespacefiles_1a4f5d1a618a82e735de711d473aa8033b" kind="variable"><name>scoutHelp</name></member>
-  </compound>
-  <compound refid="namespace_id" kind="namespace"><name>Id</name>
-    <member refid="namespace_id_1af393585104ec335510688180036ff1d6" kind="variable"><name>epochs</name></member>
-    <member refid="namespace_id_1a3c8da0c68c021ababf62dc69bef9488a" kind="variable"><name>output</name></member>
-    <member refid="namespace_id_1a1538a142ed265f60c8fcf1703a106a7d" kind="variable"><name>command</name></member>
-    <member refid="namespace_id_1ae725772eead68e70d784b84b1368bed1" kind="variable"><name>profile</name></member>
-    <member refid="namespace_id_1af9d54e8fed53adf7db2cd94d0fb88a08" kind="variable"><name>epoch</name></member>
-    <member refid="namespace_id_1a22c89b9587f1b0bb9bc77c17d2a9a4fa" kind="variable"><name>errorPercent</name></member>
-    <member refid="namespace_id_1a483df25d168ac28ba770d1f103a37065" kind="variable"><name>change</name></member>
-    <member refid="namespace_id_1abdeffd71861b09b9a07a2f20b9d2d53e" kind="variable"><name>probability</name></member>
-    <member refid="namespace_id_1a674faf6c4f97d82e2ccc9a9fb84d27de" kind="variable"><name>percentile</name></member>
-    <member refid="namespace_id_1ab274a2ba05a0f74a439c1cf693818875" kind="variable"><name>system</name></member>
-    <member refid="namespace_id_1a0f9647376c570f4f428258196fa64c61" kind="variable"><name>toolchain</name></member>
-    <member refid="namespace_id_1ac8f84d92cb02638b89abb87149be1caf" kind="variable"><name>flag</name></member>
-    <member refid="namespace_id_1a7f93eafe58a56db2c54f56300c1484b9" kind="variable"><name>help</name></member>
-    <member refid="namespace_id_1a32ffc7aee9ffe0ba992401c38b1e8243" kind="variable"><name>date</name></member>
-    <member refid="namespace_id_1aaa0851cf60aab0c856e3aa5b9ebabf75" kind="variable"><name>sample</name></member>
-    <member refid="namespace_id_1a9dd3b447eb5f7e4e61f3f4264c20a2e5" kind="variable"><name>cswitch</name></member>
-    <member refid="namespace_id_1ac827a343ac5e638ec813f83a9e519d28" kind="variable"><name>intervalMs</name></member>
-    <member refid="namespace_id_1ad3655b6ef8e8f2d60a6aaeedd27474b2" kind="variable"><name>stackDepth</name></member>
-  </compound>
-  <compound refid="namespacejam" kind="namespace"><name>jam</name>
-  </compound>
-  <compound refid="namespacejuce" kind="namespace"><name>juce</name>
-  </compound>
-  <compound refid="namespacemap" kind="namespace"><name>map</name>
-    <member refid="namespacemap_1a1662c21339f1c14339e65f221d7b126d" kind="variable"><name>banner</name></member>
   </compound>
   <compound refid="namespace_project_info" kind="namespace"><name>ProjectInfo</name>
     <member refid="namespace_project_info_1a50f49d766351ea9313f67b3f30aa014d" kind="variable"><name>projectName</name></member>
@@ -185,9 +155,8 @@
   </compound>
   <compound refid="namespacestd" kind="namespace"><name>std</name>
   </compound>
-  <compound refid="namespacetext" kind="namespace"><name>text</name>
-  </compound>
   <compound refid="_benchmark_8cpp" kind="file"><name>Benchmark.cpp</name>
+    <member refid="_benchmark_8cpp_1a932af7586f53f41e8cae652178da43de" kind="function"><name>killProcessGroup</name></member>
   </compound>
   <compound refid="_benchmark_8h" kind="file"><name>Benchmark.h</name>
   </compound>
@@ -287,6 +256,7 @@
     <member refid="_sampler_8cpp_1a4eabed153a2a0e1287b4da32b92a2553" kind="function"><name>setKernelValue</name></member>
     <member refid="_sampler_8cpp_1ac3af7a124b2551881d08b1ed6319b056" kind="function"><name>setKernelValue</name></member>
     <member refid="_sampler_8cpp_1aaa310ba6458201775f679ffb7165bc6d" kind="function"><name>setKernelValue</name></member>
+    <member refid="_sampler_8cpp_1ab47daed42123def3b266ed00bd850ab9" kind="function"><name>getKernelValue</name></member>
     <member refid="_sampler_8cpp_1a6f2b15a15c50f1e873ffd7c01c613bea" kind="function"><name>setKdebugValue</name></member>
     <member refid="_sampler_8cpp_1a3aec3631c5bb7d7943a9c18f98dbc253" kind="function"><name>setTypeFilter</name></member>
     <member refid="_sampler_8cpp_1ae4c0a549f438fc740ce89f8d21ca6f2f" kind="function"><name>setSchedulerFilter</name></member>
@@ -317,6 +287,7 @@
   </compound>
   <compound refid="_symbolizer_8cpp" kind="file"><name>Symbolizer.cpp</name>
     <member refid="_symbolizer_8cpp_1a5fb131484b9fd1322472a4ba9fc0e4ed" kind="variable"><name>kernelProcessId</name></member>
+    <member refid="_symbolizer_8cpp_1a1177cd5524d73ea4e8182ae6898f80ba" kind="variable"><name>hostCpuType</name></member>
     <member refid="_symbolizer_8cpp_1a65d1ef3fbd51b10cbab2b3e3d098a1b3" kind="variable"><name>rangeSeparator</name></member>
     <member refid="_symbolizer_8cpp_1abfa13e4f476116d740885b6f20f226ed" kind="function"><name>getFrameKey</name></member>
     <member refid="_symbolizer_8cpp_1a145db63d17cc3de245984d895f279186" kind="function"><name>getDemangledName</name></member>
@@ -327,6 +298,7 @@
     <member refid="_symbolizer_8cpp_1ae8e7ea2055cca42680f11eaa8a50355d" kind="function"><name>getTextAddress</name></member>
     <member refid="_symbolizer_8cpp_1a9df45c8c29ec6097726c0119a32189e8" kind="function"><name>getSymbolName</name></member>
     <member refid="_symbolizer_8cpp_1a40ae47356db463e3cae21f2dd3f19b78" kind="function"><name>getTableSymbols</name></member>
+    <member refid="_symbolizer_8cpp_1ac40e17ea565816288cd8804e4f203b92" kind="function"><name>getSliceSymbols</name></member>
     <member refid="_symbolizer_8cpp_1a004465734b1e49415c062790c9bf66c4" kind="function"><name>getSymbols</name></member>
     <member refid="_symbolizer_8cpp_1a733ecc0717db52fddb3f9451748ca10e" kind="function"><name>isSymbolImage</name></member>
     <member refid="_symbolizer_8cpp_1adbad68e25810cc84775de2ecc3eb0459" kind="function"><name>getKernelSymbols</name></member>
@@ -344,8 +316,6 @@
   </compound>
   <compound refid="_validator_8h" kind="file"><name>Validator.h</name>
   </compound>
-  <compound refid="dir_361083900553d680a26c8fce9425de36" kind="dir"><name>Source/generated</name>
-  </compound>
-  <compound refid="dir_74389ed8173ad57b461b9d623a1f3867" kind="dir"><name>Source</name>
+  <compound refid="dir_84fc5dba3506812825191c0c043e3c97" kind="dir"><name>generated</name>
   </compound>
 </doxygenindex>

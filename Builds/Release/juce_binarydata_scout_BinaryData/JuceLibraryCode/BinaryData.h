@@ -8,17 +8,14 @@
 
 namespace BinaryData
 {
-    extern const char*   mermaid_css;
-    const int            mermaid_cssSize = 61268;
-
     extern const char*   HELP_md;
-    const int            HELP_mdSize = 15604;
+    const int            HELP_mdSize = 15610;
 
-    extern const char*   markdown_css;
-    const int            markdown_cssSize = 6060;
+    extern const char*   style_css;
+    const int            style_cssSize = 20514;
 
     // Number of elements in the namedResourceList and originalFileNames arrays.
-    const int namedResourceListSize = 3;
+    const int namedResourceListSize = 2;
 
     // Points to the start of a list of resource names.
     extern const char* namedResourceList[];
