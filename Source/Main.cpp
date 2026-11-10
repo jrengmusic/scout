@@ -269,7 +269,7 @@ int main (int argc, char* argv[])
     if (isTerminalOutput())
     {
         juce::MemoryOutputStream erase;
-        jam::TerminalBuffer::writeEraseScreen (erase);
+        jam::TerminalEncoder::writeEraseScreen (erase);
         fwrite (erase.getData(), sizeof (char), erase.getDataSize(), stdout);
         fflush (stdout);
     }
