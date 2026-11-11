@@ -268,6 +268,7 @@ build extras/Build/juceaide/CMakeFiles/juceaide.dir/Main.cpp.o: CXX_COMPILER__ju
   DEP_FILE = extras/Build/juceaide/CMakeFiles/juceaide.dir/Main.cpp.o.d
   FLAGS = -std=c++17 -arch arm64 -mmacosx-version-min=11.0 -Wall -Wshadow-all -Wshorten-64-to-32 -Wstrict-aliasing -Wuninitialized -Wunused-parameter -Wconversion -Wsign-compare -Wint-conversion -Wconditional-uninitialized -Wconstant-conversion -Wsign-conversion -Wbool-conversion -Wextra-semi -Wunreachable-code -Wcast-align -Wshift-sign-overflow -Wmissing-prototypes -Wnullable-to-nonnull-conversion -Wno-ignored-qualifiers -Wswitch-enum -Wpedantic -Wdeprecated -Wfloat-equal -Wmissing-field-initializers -Wzero-as-null-pointer-constant -Wunused-private-field -Woverloaded-virtual -Wreorder -Winconsistent-missing-destructor-override
   INCLUDES = -I/Users/jreng/Documents/Poems/dev/scout/Builds/Release/JUCE/tools/extras/Build/juceaide/juceaide_artefacts/JuceLibraryCode -I/Users/jreng/.cache/cast/juce/8acf824d884a4e9a0d21b7099dbc5131f4df8b01ae04ada5fe310faad2b215fd/extras/Build -I/Users/jreng/.cache/cast/juce/8acf824d884a4e9a0d21b7099dbc5131f4df8b01ae04ada5fe310faad2b215fd/modules
+  LAUNCHER = /opt/homebrew/bin/ccache 
   OBJECT_DIR = extras/Build/juceaide/CMakeFiles/juceaide.dir
   OBJECT_FILE_DIR = extras/Build/juceaide/CMakeFiles/juceaide.dir
   TARGET_SUPPORT_DIR = extras/Build/juceaide/CMakeFiles/juceaide.dir
@@ -278,6 +279,7 @@ build extras/Build/juceaide/CMakeFiles/juceaide.dir/__/juce_build_tools/juce_bui
   DEP_FILE = extras/Build/juceaide/CMakeFiles/juceaide.dir/__/juce_build_tools/juce_build_tools.cpp.o.d
   FLAGS = -std=c++17 -arch arm64 -mmacosx-version-min=11.0 -Wall -Wshadow-all -Wshorten-64-to-32 -Wstrict-aliasing -Wuninitialized -Wunused-parameter -Wconversion -Wsign-compare -Wint-conversion -Wconditional-uninitialized -Wconstant-conversion -Wsign-conversion -Wbool-conversion -Wextra-semi -Wunreachable-code -Wcast-align -Wshift-sign-overflow -Wmissing-prototypes -Wnullable-to-nonnull-conversion -Wno-ignored-qualifiers -Wswitch-enum -Wpedantic -Wdeprecated -Wfloat-equal -Wmissing-field-initializers -Wzero-as-null-pointer-constant -Wunused-private-field -Woverloaded-virtual -Wreorder -Winconsistent-missing-destructor-override
   INCLUDES = -I/Users/jreng/Documents/Poems/dev/scout/Builds/Release/JUCE/tools/extras/Build/juceaide/juceaide_artefacts/JuceLibraryCode -I/Users/jreng/.cache/cast/juce/8acf824d884a4e9a0d21b7099dbc5131f4df8b01ae04ada5fe310faad2b215fd/extras/Build -I/Users/jreng/.cache/cast/juce/8acf824d884a4e9a0d21b7099dbc5131f4df8b01ae04ada5fe310faad2b215fd/modules
+  LAUNCHER = /opt/homebrew/bin/ccache 
   OBJECT_DIR = extras/Build/juceaide/CMakeFiles/juceaide.dir
   OBJECT_FILE_DIR = extras/Build/juceaide/CMakeFiles/juceaide.dir/__/juce_build_tools
   TARGET_SUPPORT_DIR = extras/Build/juceaide/CMakeFiles/juceaide.dir
@@ -288,6 +290,7 @@ build extras/Build/juceaide/CMakeFiles/juceaide.dir/__/__/__/modules/juce_gui_ba
   DEP_FILE = extras/Build/juceaide/CMakeFiles/juceaide.dir/__/__/__/modules/juce_gui_basics/juce_gui_basics_2.cpp.o.d
   FLAGS = -std=c++17 -arch arm64 -mmacosx-version-min=11.0 -Wall -Wshadow-all -Wshorten-64-to-32 -Wstrict-aliasing -Wuninitialized -Wunused-parameter -Wconversion -Wsign-compare -Wint-conversion -Wconditional-uninitialized -Wconstant-conversion -Wsign-conversion -Wbool-conversion -Wextra-semi -Wunreachable-code -Wcast-align -Wshift-sign-overflow -Wmissing-prototypes -Wnullable-to-nonnull-conversion -Wno-ignored-qualifiers -Wswitch-enum -Wpedantic -Wdeprecated -Wfloat-equal -Wmissing-field-initializers -Wzero-as-null-pointer-constant -Wunused-private-field -Woverloaded-virtual -Wreorder -Winconsistent-missing-destructor-override
   INCLUDES = -I/Users/jreng/Documents/Poems/dev/scout/Builds/Release/JUCE/tools/extras/Build/juceaide/juceaide_artefacts/JuceLibraryCode -I/Users/jreng/.cache/cast/juce/8acf824d884a4e9a0d21b7099dbc5131f4df8b01ae04ada5fe310faad2b215fd/extras/Build -I/Users/jreng/.cache/cast/juce/8acf824d884a4e9a0d21b7099dbc5131f4df8b01ae04ada5fe310faad2b215fd/modules
+  LAUNCHER = /opt/homebrew/bin/ccache 
   OBJECT_DIR = extras/Build/juceaide/CMakeFiles/juceaide.dir
   OBJECT_FILE_DIR = extras/Build/juceaide/CMakeFiles/juceaide.dir/__/__/__/modules/juce_gui_basics
   TARGET_SUPPORT_DIR = extras/Build/juceaide/CMakeFiles/juceaide.dir
@@ -298,6 +301,7 @@ build extras/Build/juceaide/CMakeFiles/juceaide.dir/__/__/__/modules/juce_gui_ba
   DEP_FILE = extras/Build/juceaide/CMakeFiles/juceaide.dir/__/__/__/modules/juce_gui_basics/juce_gui_basics_3.cpp.o.d
   FLAGS = -std=c++17 -arch arm64 -mmacosx-version-min=11.0 -Wall -Wshadow-all -Wshorten-64-to-32 -Wstrict-aliasing -Wuninitialized -Wunused-parameter -Wconversion -Wsign-compare -Wint-conversion -Wconditional-uninitialized -Wconstant-conversion -Wsign-conversion -Wbool-conversion -Wextra-semi -Wunreachable-code -Wcast-align -Wshift-sign-overflow -Wmissing-prototypes -Wnullable-to-nonnull-conversion -Wno-ignored-qualifiers -Wswitch-enum -Wpedantic -Wdeprecated -Wfloat-equal -Wmissing-field-initializers -Wzero-as-null-pointer-constant -Wunused-private-field -Woverloaded-virtual -Wreorder -Winconsistent-missing-destructor-override
   INCLUDES = -I/Users/jreng/Documents/Poems/dev/scout/Builds/Release/JUCE/tools/extras/Build/juceaide/juceaide_artefacts/JuceLibraryCode -I/Users/jreng/.cache/cast/juce/8acf824d884a4e9a0d21b7099dbc5131f4df8b01ae04ada5fe310faad2b215fd/extras/Build -I/Users/jreng/.cache/cast/juce/8acf824d884a4e9a0d21b7099dbc5131f4df8b01ae04ada5fe310faad2b215fd/modules
+  LAUNCHER = /opt/homebrew/bin/ccache 
   OBJECT_DIR = extras/Build/juceaide/CMakeFiles/juceaide.dir
   OBJECT_FILE_DIR = extras/Build/juceaide/CMakeFiles/juceaide.dir/__/__/__/modules/juce_gui_basics
   TARGET_SUPPORT_DIR = extras/Build/juceaide/CMakeFiles/juceaide.dir
@@ -308,6 +312,7 @@ build extras/Build/juceaide/CMakeFiles/juceaide.dir/__/__/__/modules/juce_gui_ba
   DEP_FILE = extras/Build/juceaide/CMakeFiles/juceaide.dir/__/__/__/modules/juce_gui_basics/juce_gui_basics_4.cpp.o.d
   FLAGS = -std=c++17 -arch arm64 -mmacosx-version-min=11.0 -Wall -Wshadow-all -Wshorten-64-to-32 -Wstrict-aliasing -Wuninitialized -Wunused-parameter -Wconversion -Wsign-compare -Wint-conversion -Wconditional-uninitialized -Wconstant-conversion -Wsign-conversion -Wbool-conversion -Wextra-semi -Wunreachable-code -Wcast-align -Wshift-sign-overflow -Wmissing-prototypes -Wnullable-to-nonnull-conversion -Wno-ignored-qualifiers -Wswitch-enum -Wpedantic -Wdeprecated -Wfloat-equal -Wmissing-field-initializers -Wzero-as-null-pointer-constant -Wunused-private-field -Woverloaded-virtual -Wreorder -Winconsistent-missing-destructor-override
   INCLUDES = -I/Users/jreng/Documents/Poems/dev/scout/Builds/Release/JUCE/tools/extras/Build/juceaide/juceaide_artefacts/JuceLibraryCode -I/Users/jreng/.cache/cast/juce/8acf824d884a4e9a0d21b7099dbc5131f4df8b01ae04ada5fe310faad2b215fd/extras/Build -I/Users/jreng/.cache/cast/juce/8acf824d884a4e9a0d21b7099dbc5131f4df8b01ae04ada5fe310faad2b215fd/modules
+  LAUNCHER = /opt/homebrew/bin/ccache 
   OBJECT_DIR = extras/Build/juceaide/CMakeFiles/juceaide.dir
   OBJECT_FILE_DIR = extras/Build/juceaide/CMakeFiles/juceaide.dir/__/__/__/modules/juce_gui_basics
   TARGET_SUPPORT_DIR = extras/Build/juceaide/CMakeFiles/juceaide.dir
@@ -318,6 +323,7 @@ build extras/Build/juceaide/CMakeFiles/juceaide.dir/__/__/__/modules/juce_gui_ba
   DEP_FILE = extras/Build/juceaide/CMakeFiles/juceaide.dir/__/__/__/modules/juce_gui_basics/juce_gui_basics_5.cpp.o.d
   FLAGS = -std=c++17 -arch arm64 -mmacosx-version-min=11.0 -Wall -Wshadow-all -Wshorten-64-to-32 -Wstrict-aliasing -Wuninitialized -Wunused-parameter -Wconversion -Wsign-compare -Wint-conversion -Wconditional-uninitialized -Wconstant-conversion -Wsign-conversion -Wbool-conversion -Wextra-semi -Wunreachable-code -Wcast-align -Wshift-sign-overflow -Wmissing-prototypes -Wnullable-to-nonnull-conversion -Wno-ignored-qualifiers -Wswitch-enum -Wpedantic -Wdeprecated -Wfloat-equal -Wmissing-field-initializers -Wzero-as-null-pointer-constant -Wunused-private-field -Woverloaded-virtual -Wreorder -Winconsistent-missing-destructor-override
   INCLUDES = -I/Users/jreng/Documents/Poems/dev/scout/Builds/Release/JUCE/tools/extras/Build/juceaide/juceaide_artefacts/JuceLibraryCode -I/Users/jreng/.cache/cast/juce/8acf824d884a4e9a0d21b7099dbc5131f4df8b01ae04ada5fe310faad2b215fd/extras/Build -I/Users/jreng/.cache/cast/juce/8acf824d884a4e9a0d21b7099dbc5131f4df8b01ae04ada5fe310faad2b215fd/modules
+  LAUNCHER = /opt/homebrew/bin/ccache 
   OBJECT_DIR = extras/Build/juceaide/CMakeFiles/juceaide.dir
   OBJECT_FILE_DIR = extras/Build/juceaide/CMakeFiles/juceaide.dir/__/__/__/modules/juce_gui_basics
   TARGET_SUPPORT_DIR = extras/Build/juceaide/CMakeFiles/juceaide.dir
@@ -328,6 +334,7 @@ build extras/Build/juceaide/CMakeFiles/juceaide.dir/__/__/__/modules/juce_gui_ba
   DEP_FILE = extras/Build/juceaide/CMakeFiles/juceaide.dir/__/__/__/modules/juce_gui_basics/juce_gui_basics.mm.o.d
   FLAGS = -std=c++17 -arch arm64 -mmacosx-version-min=11.0 -Wall -Wshadow-all -Wshorten-64-to-32 -Wstrict-aliasing -Wuninitialized -Wunused-parameter -Wconversion -Wsign-compare -Wint-conversion -Wconditional-uninitialized -Wconstant-conversion -Wsign-conversion -Wbool-conversion -Wextra-semi -Wunreachable-code -Wcast-align -Wshift-sign-overflow -Wmissing-prototypes -Wnullable-to-nonnull-conversion -Wno-ignored-qualifiers -Wswitch-enum -Wpedantic -Wdeprecated -Wfloat-equal -Wmissing-field-initializers -Wzero-as-null-pointer-constant -Wunused-private-field -Woverloaded-virtual -Wreorder -Winconsistent-missing-destructor-override
   INCLUDES = -I/Users/jreng/Documents/Poems/dev/scout/Builds/Release/JUCE/tools/extras/Build/juceaide/juceaide_artefacts/JuceLibraryCode -I/Users/jreng/.cache/cast/juce/8acf824d884a4e9a0d21b7099dbc5131f4df8b01ae04ada5fe310faad2b215fd/extras/Build -I/Users/jreng/.cache/cast/juce/8acf824d884a4e9a0d21b7099dbc5131f4df8b01ae04ada5fe310faad2b215fd/modules
+  LAUNCHER = /opt/homebrew/bin/ccache 
   OBJECT_DIR = extras/Build/juceaide/CMakeFiles/juceaide.dir
   OBJECT_FILE_DIR = extras/Build/juceaide/CMakeFiles/juceaide.dir/__/__/__/modules/juce_gui_basics
   TARGET_SUPPORT_DIR = extras/Build/juceaide/CMakeFiles/juceaide.dir
@@ -338,6 +345,7 @@ build extras/Build/juceaide/CMakeFiles/juceaide.dir/__/__/__/modules/juce_graphi
   DEP_FILE = extras/Build/juceaide/CMakeFiles/juceaide.dir/__/__/__/modules/juce_graphics/juce_graphics_Harfbuzz.cpp.o.d
   FLAGS = -std=c++17 -arch arm64 -mmacosx-version-min=11.0 -Wall -Wshadow-all -Wshorten-64-to-32 -Wstrict-aliasing -Wuninitialized -Wunused-parameter -Wconversion -Wsign-compare -Wint-conversion -Wconditional-uninitialized -Wconstant-conversion -Wsign-conversion -Wbool-conversion -Wextra-semi -Wunreachable-code -Wcast-align -Wshift-sign-overflow -Wmissing-prototypes -Wnullable-to-nonnull-conversion -Wno-ignored-qualifiers -Wswitch-enum -Wpedantic -Wdeprecated -Wfloat-equal -Wmissing-field-initializers -Wzero-as-null-pointer-constant -Wunused-private-field -Woverloaded-virtual -Wreorder -Winconsistent-missing-destructor-override
   INCLUDES = -I/Users/jreng/Documents/Poems/dev/scout/Builds/Release/JUCE/tools/extras/Build/juceaide/juceaide_artefacts/JuceLibraryCode -I/Users/jreng/.cache/cast/juce/8acf824d884a4e9a0d21b7099dbc5131f4df8b01ae04ada5fe310faad2b215fd/extras/Build -I/Users/jreng/.cache/cast/juce/8acf824d884a4e9a0d21b7099dbc5131f4df8b01ae04ada5fe310faad2b215fd/modules
+  LAUNCHER = /opt/homebrew/bin/ccache 
   OBJECT_DIR = extras/Build/juceaide/CMakeFiles/juceaide.dir
   OBJECT_FILE_DIR = extras/Build/juceaide/CMakeFiles/juceaide.dir/__/__/__/modules/juce_graphics
   TARGET_SUPPORT_DIR = extras/Build/juceaide/CMakeFiles/juceaide.dir
@@ -348,6 +356,7 @@ build extras/Build/juceaide/CMakeFiles/juceaide.dir/__/__/__/modules/juce_graphi
   DEP_FILE = extras/Build/juceaide/CMakeFiles/juceaide.dir/__/__/__/modules/juce_graphics/juce_graphics_Sheenbidi.c.o.d
   FLAGS = -arch arm64 -mmacosx-version-min=11.0 -Wall -Wshadow-all -Wshorten-64-to-32 -Wstrict-aliasing -Wuninitialized -Wunused-parameter -Wconversion -Wsign-compare -Wint-conversion -Wconditional-uninitialized -Wconstant-conversion -Wsign-conversion -Wbool-conversion -Wextra-semi -Wunreachable-code -Wcast-align -Wshift-sign-overflow -Wmissing-prototypes -Wnullable-to-nonnull-conversion -Wno-ignored-qualifiers -Wswitch-enum -Wpedantic -Wdeprecated -Wfloat-equal -Wmissing-field-initializers
   INCLUDES = -I/Users/jreng/Documents/Poems/dev/scout/Builds/Release/JUCE/tools/extras/Build/juceaide/juceaide_artefacts/JuceLibraryCode -I/Users/jreng/.cache/cast/juce/8acf824d884a4e9a0d21b7099dbc5131f4df8b01ae04ada5fe310faad2b215fd/extras/Build -I/Users/jreng/.cache/cast/juce/8acf824d884a4e9a0d21b7099dbc5131f4df8b01ae04ada5fe310faad2b215fd/modules
+  LAUNCHER = /opt/homebrew/bin/ccache 
   OBJECT_DIR = extras/Build/juceaide/CMakeFiles/juceaide.dir
   OBJECT_FILE_DIR = extras/Build/juceaide/CMakeFiles/juceaide.dir/__/__/__/modules/juce_graphics
   TARGET_SUPPORT_DIR = extras/Build/juceaide/CMakeFiles/juceaide.dir
@@ -358,6 +367,7 @@ build extras/Build/juceaide/CMakeFiles/juceaide.dir/__/__/__/modules/juce_graphi
   DEP_FILE = extras/Build/juceaide/CMakeFiles/juceaide.dir/__/__/__/modules/juce_graphics/juce_graphics.mm.o.d
   FLAGS = -std=c++17 -arch arm64 -mmacosx-version-min=11.0 -Wall -Wshadow-all -Wshorten-64-to-32 -Wstrict-aliasing -Wuninitialized -Wunused-parameter -Wconversion -Wsign-compare -Wint-conversion -Wconditional-uninitialized -Wconstant-conversion -Wsign-conversion -Wbool-conversion -Wextra-semi -Wunreachable-code -Wcast-align -Wshift-sign-overflow -Wmissing-prototypes -Wnullable-to-nonnull-conversion -Wno-ignored-qualifiers -Wswitch-enum -Wpedantic -Wdeprecated -Wfloat-equal -Wmissing-field-initializers -Wzero-as-null-pointer-constant -Wunused-private-field -Woverloaded-virtual -Wreorder -Winconsistent-missing-destructor-override
   INCLUDES = -I/Users/jreng/Documents/Poems/dev/scout/Builds/Release/JUCE/tools/extras/Build/juceaide/juceaide_artefacts/JuceLibraryCode -I/Users/jreng/.cache/cast/juce/8acf824d884a4e9a0d21b7099dbc5131f4df8b01ae04ada5fe310faad2b215fd/extras/Build -I/Users/jreng/.cache/cast/juce/8acf824d884a4e9a0d21b7099dbc5131f4df8b01ae04ada5fe310faad2b215fd/modules
+  LAUNCHER = /opt/homebrew/bin/ccache 
   OBJECT_DIR = extras/Build/juceaide/CMakeFiles/juceaide.dir
   OBJECT_FILE_DIR = extras/Build/juceaide/CMakeFiles/juceaide.dir/__/__/__/modules/juce_graphics
   TARGET_SUPPORT_DIR = extras/Build/juceaide/CMakeFiles/juceaide.dir
@@ -368,6 +378,7 @@ build extras/Build/juceaide/CMakeFiles/juceaide.dir/__/__/__/modules/juce_events
   DEP_FILE = extras/Build/juceaide/CMakeFiles/juceaide.dir/__/__/__/modules/juce_events/juce_events.mm.o.d
   FLAGS = -std=c++17 -arch arm64 -mmacosx-version-min=11.0 -Wall -Wshadow-all -Wshorten-64-to-32 -Wstrict-aliasing -Wuninitialized -Wunused-parameter -Wconversion -Wsign-compare -Wint-conversion -Wconditional-uninitialized -Wconstant-conversion -Wsign-conversion -Wbool-conversion -Wextra-semi -Wunreachable-code -Wcast-align -Wshift-sign-overflow -Wmissing-prototypes -Wnullable-to-nonnull-conversion -Wno-ignored-qualifiers -Wswitch-enum -Wpedantic -Wdeprecated -Wfloat-equal -Wmissing-field-initializers -Wzero-as-null-pointer-constant -Wunused-private-field -Woverloaded-virtual -Wreorder -Winconsistent-missing-destructor-override
   INCLUDES = -I/Users/jreng/Documents/Poems/dev/scout/Builds/Release/JUCE/tools/extras/Build/juceaide/juceaide_artefacts/JuceLibraryCode -I/Users/jreng/.cache/cast/juce/8acf824d884a4e9a0d21b7099dbc5131f4df8b01ae04ada5fe310faad2b215fd/extras/Build -I/Users/jreng/.cache/cast/juce/8acf824d884a4e9a0d21b7099dbc5131f4df8b01ae04ada5fe310faad2b215fd/modules
+  LAUNCHER = /opt/homebrew/bin/ccache 
   OBJECT_DIR = extras/Build/juceaide/CMakeFiles/juceaide.dir
   OBJECT_FILE_DIR = extras/Build/juceaide/CMakeFiles/juceaide.dir/__/__/__/modules/juce_events
   TARGET_SUPPORT_DIR = extras/Build/juceaide/CMakeFiles/juceaide.dir
@@ -378,6 +389,7 @@ build extras/Build/juceaide/CMakeFiles/juceaide.dir/__/__/__/modules/juce_core/j
   DEP_FILE = extras/Build/juceaide/CMakeFiles/juceaide.dir/__/__/__/modules/juce_core/juce_core_CompilationTime.cpp.o.d
   FLAGS = -std=c++17 -arch arm64 -mmacosx-version-min=11.0 -Wall -Wshadow-all -Wshorten-64-to-32 -Wstrict-aliasing -Wuninitialized -Wunused-parameter -Wconversion -Wsign-compare -Wint-conversion -Wconditional-uninitialized -Wconstant-conversion -Wsign-conversion -Wbool-conversion -Wextra-semi -Wunreachable-code -Wcast-align -Wshift-sign-overflow -Wmissing-prototypes -Wnullable-to-nonnull-conversion -Wno-ignored-qualifiers -Wswitch-enum -Wpedantic -Wdeprecated -Wfloat-equal -Wmissing-field-initializers -Wzero-as-null-pointer-constant -Wunused-private-field -Woverloaded-virtual -Wreorder -Winconsistent-missing-destructor-override
   INCLUDES = -I/Users/jreng/Documents/Poems/dev/scout/Builds/Release/JUCE/tools/extras/Build/juceaide/juceaide_artefacts/JuceLibraryCode -I/Users/jreng/.cache/cast/juce/8acf824d884a4e9a0d21b7099dbc5131f4df8b01ae04ada5fe310faad2b215fd/extras/Build -I/Users/jreng/.cache/cast/juce/8acf824d884a4e9a0d21b7099dbc5131f4df8b01ae04ada5fe310faad2b215fd/modules
+  LAUNCHER = /opt/homebrew/bin/ccache 
   OBJECT_DIR = extras/Build/juceaide/CMakeFiles/juceaide.dir
   OBJECT_FILE_DIR = extras/Build/juceaide/CMakeFiles/juceaide.dir/__/__/__/modules/juce_core
   TARGET_SUPPORT_DIR = extras/Build/juceaide/CMakeFiles/juceaide.dir
@@ -388,6 +400,7 @@ build extras/Build/juceaide/CMakeFiles/juceaide.dir/__/__/__/modules/juce_core/j
   DEP_FILE = extras/Build/juceaide/CMakeFiles/juceaide.dir/__/__/__/modules/juce_core/juce_core.mm.o.d
   FLAGS = -std=c++17 -arch arm64 -mmacosx-version-min=11.0 -Wall -Wshadow-all -Wshorten-64-to-32 -Wstrict-aliasing -Wuninitialized -Wunused-parameter -Wconversion -Wsign-compare -Wint-conversion -Wconditional-uninitialized -Wconstant-conversion -Wsign-conversion -Wbool-conversion -Wextra-semi -Wunreachable-code -Wcast-align -Wshift-sign-overflow -Wmissing-prototypes -Wnullable-to-nonnull-conversion -Wno-ignored-qualifiers -Wswitch-enum -Wpedantic -Wdeprecated -Wfloat-equal -Wmissing-field-initializers -Wzero-as-null-pointer-constant -Wunused-private-field -Woverloaded-virtual -Wreorder -Winconsistent-missing-destructor-override
   INCLUDES = -I/Users/jreng/Documents/Poems/dev/scout/Builds/Release/JUCE/tools/extras/Build/juceaide/juceaide_artefacts/JuceLibraryCode -I/Users/jreng/.cache/cast/juce/8acf824d884a4e9a0d21b7099dbc5131f4df8b01ae04ada5fe310faad2b215fd/extras/Build -I/Users/jreng/.cache/cast/juce/8acf824d884a4e9a0d21b7099dbc5131f4df8b01ae04ada5fe310faad2b215fd/modules
+  LAUNCHER = /opt/homebrew/bin/ccache 
   OBJECT_DIR = extras/Build/juceaide/CMakeFiles/juceaide.dir
   OBJECT_FILE_DIR = extras/Build/juceaide/CMakeFiles/juceaide.dir/__/__/__/modules/juce_core
   TARGET_SUPPORT_DIR = extras/Build/juceaide/CMakeFiles/juceaide.dir
@@ -398,6 +411,7 @@ build extras/Build/juceaide/CMakeFiles/juceaide.dir/__/__/__/modules/juce_data_s
   DEP_FILE = extras/Build/juceaide/CMakeFiles/juceaide.dir/__/__/__/modules/juce_data_structures/juce_data_structures.mm.o.d
   FLAGS = -std=c++17 -arch arm64 -mmacosx-version-min=11.0 -Wall -Wshadow-all -Wshorten-64-to-32 -Wstrict-aliasing -Wuninitialized -Wunused-parameter -Wconversion -Wsign-compare -Wint-conversion -Wconditional-uninitialized -Wconstant-conversion -Wsign-conversion -Wbool-conversion -Wextra-semi -Wunreachable-code -Wcast-align -Wshift-sign-overflow -Wmissing-prototypes -Wnullable-to-nonnull-conversion -Wno-ignored-qualifiers -Wswitch-enum -Wpedantic -Wdeprecated -Wfloat-equal -Wmissing-field-initializers -Wzero-as-null-pointer-constant -Wunused-private-field -Woverloaded-virtual -Wreorder -Winconsistent-missing-destructor-override
   INCLUDES = -I/Users/jreng/Documents/Poems/dev/scout/Builds/Release/JUCE/tools/extras/Build/juceaide/juceaide_artefacts/JuceLibraryCode -I/Users/jreng/.cache/cast/juce/8acf824d884a4e9a0d21b7099dbc5131f4df8b01ae04ada5fe310faad2b215fd/extras/Build -I/Users/jreng/.cache/cast/juce/8acf824d884a4e9a0d21b7099dbc5131f4df8b01ae04ada5fe310faad2b215fd/modules
+  LAUNCHER = /opt/homebrew/bin/ccache 
   OBJECT_DIR = extras/Build/juceaide/CMakeFiles/juceaide.dir
   OBJECT_FILE_DIR = extras/Build/juceaide/CMakeFiles/juceaide.dir/__/__/__/modules/juce_data_structures
   TARGET_SUPPORT_DIR = extras/Build/juceaide/CMakeFiles/juceaide.dir

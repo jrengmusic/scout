@@ -5,8 +5,8 @@ void Validator::addRules (Rules& rules)
 {
     jam::ConfigValidator::addRules (rules);
 
-    rules.add<const jam::Document&> (Id::toolchain.toString(),
-        [] (const jam::Document& document) -> juce::Result
+    rules.add (Id::toolchain.toString(),
+        [] (const juce::String&, const jam::Document& document) -> juce::Result
         {
             const auto& config { static_cast<const jam::ConfigDocument&> (document) };
 
@@ -24,8 +24,8 @@ void Validator::addRules (Rules& rules)
             return juce::Result::ok();
         });
 
-    rules.add<const jam::Document&> (Id::sample.toString(),
-        [] (const jam::Document& document) -> juce::Result
+    rules.add (Id::sample.toString(),
+        [] (const juce::String&, const jam::Document& document) -> juce::Result
         {
             const auto& config { static_cast<const jam::ConfigDocument&> (document) };
 

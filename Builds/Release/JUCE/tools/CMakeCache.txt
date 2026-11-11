@@ -33,6 +33,12 @@ CMAKE_CONFIGURATION_TYPES:UNINITIALIZED=Custom
 //CXX compiler
 CMAKE_CXX_COMPILER:FILEPATH=/usr/bin/c++
 
+//Default value for the <LANG>_COMPILER_LAUNCHER target property;
+// launcher tool prepended to every <LANG> compile command. Applies
+// only when <LANG> is C, CXX, Fortran, HIP, ISPC, OBJC, OBJCXX,
+// or CUDA.
+CMAKE_CXX_COMPILER_LAUNCHER:UNINITIALIZED=/opt/homebrew/bin/ccache
+
 //Flags used by the CXX compiler during all build types.
 CMAKE_CXX_FLAGS:STRING=
 
@@ -53,6 +59,12 @@ CMAKE_CXX_FLAGS_RELWITHDEBINFO:STRING=-O2 -g -DNDEBUG
 
 //C compiler
 CMAKE_C_COMPILER:FILEPATH=/usr/bin/cc
+
+//Default value for the <LANG>_COMPILER_LAUNCHER target property;
+// launcher tool prepended to every <LANG> compile command. Applies
+// only when <LANG> is C, CXX, Fortran, HIP, ISPC, OBJC, OBJCXX,
+// or CUDA.
+CMAKE_C_COMPILER_LAUNCHER:UNINITIALIZED=/opt/homebrew/bin/ccache
 
 //Flags used by the C compiler during all build types.
 CMAKE_C_FLAGS:STRING=

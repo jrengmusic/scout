@@ -3337,3 +3337,182 @@ events:
         
       exitCode: 0
 ...
+
+---
+events:
+  -
+    kind: "find-v1"
+    backtrace:
+      - "CMakeLists.txt:47 (find_program)"
+    mode: "program"
+    variable: "CAST_CCACHE"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "FIRST"
+      SearchAppBundle: "FIRST"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "ccache"
+    candidate_directories:
+      - "/Users/jreng/.opencode/bin/"
+      - "/Users/jreng/.local/bin/"
+      - "/Users/jreng/.bun/bin/"
+      - "/Applications/PACEAntiPiracy/Eden/Fusion/Versions/5/bin/"
+      - "/opt/homebrew/bin/"
+      - "/opt/homebrew/sbin/"
+      - "/Users/jreng/go/bin/"
+      - "/usr/local/bin/"
+      - "/System/Cryptexes/App/usr/bin/"
+      - "/usr/bin/"
+      - "/bin/"
+      - "/usr/sbin/"
+      - "/sbin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin/"
+      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/"
+      - "/pkg/env/global/bin/"
+      - "/Library/Apple/usr/bin/"
+      - "/Users/jreng/.config/end/shell/"
+      - "/Users/jreng/.carol/bin/"
+      - "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/bin/"
+      - "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/sbin/"
+      - "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/"
+      - "/opt/homebrew/bin/"
+      - "/opt/homebrew/sbin/"
+      - "/opt/homebrew/"
+      - "/usr/local/bin/"
+      - "/usr/local/sbin/"
+      - "/usr/local/"
+      - "/usr/bin/"
+      - "/usr/sbin/"
+      - "/usr/"
+      - "/bin/"
+      - "/sbin/"
+      - "/usr/X11R6/bin/"
+      - "/usr/X11R6/sbin/"
+      - "/usr/X11R6/"
+      - "/usr/pkg/bin/"
+      - "/usr/pkg/sbin/"
+      - "/usr/pkg/"
+      - "/opt/bin/"
+      - "/opt/sbin/"
+      - "/opt/"
+      - "/sw/bin/"
+      - "/sw/sbin/"
+      - "/sw/"
+      - "/opt/local/bin/"
+      - "/opt/local/sbin/"
+      - "/opt/local/"
+      - "/Users/jreng/Applications/"
+      - "/Applications/"
+      - "/Applications/Xcode.app/Contents/Applications/"
+      - "/Applications/Xcode.app/Contents/Developer/Applications/"
+    searched_directories:
+      - "/Users/jreng/.opencode/bin/ccache"
+      - "/Users/jreng/.local/bin/ccache"
+      - "/Users/jreng/.bun/bin/ccache"
+      - "/Applications/PACEAntiPiracy/Eden/Fusion/Versions/5/bin/ccache"
+    found: "/opt/homebrew/bin/ccache"
+    search_context:
+      ENV{PATH}:
+        - "/Users/jreng/.opencode/bin"
+        - "/Users/jreng/.local/bin"
+        - "/Users/jreng/.bun/bin"
+        - "/Applications/PACEAntiPiracy/Eden/Fusion/Versions/5/bin"
+        - "/Users/jreng/.local/bin"
+        - "/opt/homebrew/bin"
+        - "/opt/homebrew/sbin"
+        - "/Users/jreng/go/bin"
+        - "/Users/jreng/.local/bin"
+        - "/usr/local/bin"
+        - "/System/Cryptexes/App/usr/bin"
+        - "/usr/bin"
+        - "/bin"
+        - "/usr/sbin"
+        - "/sbin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin"
+        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin"
+        - "/pkg/env/global/bin"
+        - "/Library/Apple/usr/bin"
+        - "/opt/homebrew/bin"
+        - "/Users/jreng/.config/end/shell"
+        - "/Users/jreng/.carol/bin"
+      CMAKE_INSTALL_PREFIX: "/usr/local"
+      CMAKE_SYSTEM_PREFIX_PATH:
+        - "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr"
+        - "/opt/homebrew"
+        - "/usr/local"
+        - "/usr"
+        - "/"
+        - "/opt/homebrew"
+        - "/usr/local"
+        - "/usr/X11R6"
+        - "/usr/pkg"
+        - "/opt"
+        - "/sw"
+        - "/opt/local"
+      CMAKE_SYSTEM_APPBUNDLE_PATH:
+        - "/Users/jreng/Applications"
+        - "/Applications"
+        - "/Applications/Xcode.app/Contents/Applications"
+        - "/Applications/Xcode.app/Contents/Developer/Applications"
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/CheckIPOSupported.cmake:197 (try_compile)"
+      - "/opt/homebrew/share/cmake/Modules/CheckIPOSupported.cmake:319 (_ipo_run_language_check)"
+      - "CMakeLists.txt:342 (check_ipo_supported)"
+    directories:
+      source: "/Users/jreng/Documents/Poems/dev/scout/Builds/Release/CMakeFiles/_CMakeLTOTest-CXX/src"
+      binary: "/Users/jreng/Documents/Poems/dev/scout/Builds/Release/CMakeFiles/_CMakeLTOTest-CXX/bin"
+    cmakeVariables:
+      CMAKE_CXX_STDLIB_MODULES_JSON: ""
+      CMAKE_OSX_ARCHITECTURES: "x86_64;arm64"
+      CMAKE_OSX_DEPLOYMENT_TARGET: "11.0"
+      CMAKE_OSX_SYSROOT: ""
+    buildResult:
+      variable: "_IPO_LANGUAGE_CHECK_RESULT"
+      cached: false
+      stdout: |
+        Change Dir: '/Users/jreng/Documents/Poems/dev/scout/Builds/Release/CMakeFiles/_CMakeLTOTest-CXX/bin'
+        
+        Run Build Command(s): /opt/homebrew/bin/ninja -v
+        [1/4] /usr/bin/c++   -g -flto=thin -arch x86_64 -arch arm64 -mmacosx-version-min=11.0 -MD -MT CMakeFiles/foo.dir/foo.cpp.o -MF CMakeFiles/foo.dir/foo.cpp.o.d -o CMakeFiles/foo.dir/foo.cpp.o -c /Users/jreng/Documents/Poems/dev/scout/Builds/Release/CMakeFiles/_CMakeLTOTest-CXX/src/foo.cpp
+        [2/4] /usr/bin/c++   -g -flto=thin -arch x86_64 -arch arm64 -mmacosx-version-min=11.0 -MD -MT CMakeFiles/boo.dir/main.cpp.o -MF CMakeFiles/boo.dir/main.cpp.o.d -o CMakeFiles/boo.dir/main.cpp.o -c /Users/jreng/Documents/Poems/dev/scout/Builds/Release/CMakeFiles/_CMakeLTOTest-CXX/src/main.cpp
+        [3/4] : && /opt/homebrew/bin/cmake -E rm -f libfoo.a && "/usr/bin/ar" qc libfoo.a  CMakeFiles/foo.dir/foo.cpp.o && "/usr/bin/ranlib" libfoo.a && /opt/homebrew/bin/cmake -E touch libfoo.a && :
+        [4/4] : && /usr/bin/c++ -g -flto=thin -arch x86_64 -arch arm64 -mmacosx-version-min=11.0 -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/boo.dir/main.cpp.o -o boo  libfoo.a && :
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/CheckIPOSupported.cmake:197 (try_compile)"
+      - "/opt/homebrew/share/cmake/Modules/CheckIPOSupported.cmake:319 (_ipo_run_language_check)"
+      - "CMakeLists.txt:342 (check_ipo_supported)"
+    directories:
+      source: "/Users/jreng/Documents/Poems/dev/scout/Builds/Release/CMakeFiles/_CMakeLTOTest-C/src"
+      binary: "/Users/jreng/Documents/Poems/dev/scout/Builds/Release/CMakeFiles/_CMakeLTOTest-C/bin"
+    cmakeVariables:
+      CMAKE_CXX_STDLIB_MODULES_JSON: ""
+      CMAKE_OSX_ARCHITECTURES: "x86_64;arm64"
+      CMAKE_OSX_DEPLOYMENT_TARGET: "11.0"
+      CMAKE_OSX_SYSROOT: ""
+    buildResult:
+      variable: "_IPO_LANGUAGE_CHECK_RESULT"
+      cached: false
+      stdout: |
+        Change Dir: '/Users/jreng/Documents/Poems/dev/scout/Builds/Release/CMakeFiles/_CMakeLTOTest-C/bin'
+        
+        Run Build Command(s): /opt/homebrew/bin/ninja -v
+        [1/4] /usr/bin/cc   -g -flto=thin -arch x86_64 -arch arm64 -mmacosx-version-min=11.0 -MD -MT CMakeFiles/foo.dir/foo.c.o -MF CMakeFiles/foo.dir/foo.c.o.d -o CMakeFiles/foo.dir/foo.c.o -c /Users/jreng/Documents/Poems/dev/scout/Builds/Release/CMakeFiles/_CMakeLTOTest-C/src/foo.c
+        [2/4] /usr/bin/cc   -g -flto=thin -arch x86_64 -arch arm64 -mmacosx-version-min=11.0 -MD -MT CMakeFiles/boo.dir/main.c.o -MF CMakeFiles/boo.dir/main.c.o.d -o CMakeFiles/boo.dir/main.c.o -c /Users/jreng/Documents/Poems/dev/scout/Builds/Release/CMakeFiles/_CMakeLTOTest-C/src/main.c
+        [3/4] : && /opt/homebrew/bin/cmake -E rm -f libfoo.a && "/usr/bin/ar" qc libfoo.a  CMakeFiles/foo.dir/foo.c.o && "/usr/bin/ranlib" libfoo.a && /opt/homebrew/bin/cmake -E touch libfoo.a && :
+        [4/4] : && /usr/bin/cc -g -flto=thin -arch x86_64 -arch arm64 -mmacosx-version-min=11.0 -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/boo.dir/main.c.o -o boo  libfoo.a && :
+        
+      exitCode: 0
+...

@@ -292,7 +292,7 @@ const char* getNamedResource (const char* resourceNameUTF8, int& numBytes)
     switch (hash)
     {
         case 0x5ad3d755:  numBytes = 15610; return HELP_md;
-        case 0x6b9f8e75:  numBytes = 20514; return style_css;
+        case 0x6b9f8e75:  numBytes = 20661; return style_css;
         default: break;
     }
 

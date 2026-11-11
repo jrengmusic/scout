@@ -3,9 +3,10 @@
  *
  * The consumer is jam::StyleMarkdown. The file is embedded in BinaryData and
  * named files::styleSheet; printHelp() parses it into the config tree
- * under the `style` sheet. One unit is one terminal cell. The sheet declares
- * no fontSize, so the base font size takes the owner default of 1 and every em
- * metric below is a count of cells.
+ * under the `style` sheet. One unit is one terminal cell. The `fontSize: 1em` property sets
+ * the base font size to one cell. Every markdown character takes whole cells, narrow or wide
+ * by codepoint width. So every em metric below is a count of cells. Heading letter spacing
+ * is 0 because a fractional advance moves a character off its cell.
  *
  * Section index:
  *   1. :root        — palette customs
@@ -116,6 +117,7 @@
 }
 
 .metrics {
+    fontSize: 1em;
     lineHeight: 1em;
     heading1Size: 1em;
     heading2Size: 1em;
@@ -129,11 +131,11 @@
     heading4LineHeight: 1em;
     heading5LineHeight: 1em;
     heading6LineHeight: 1em;
-    heading1LetterSpacing: -0.015;
-    heading2LetterSpacing: -0.011;
-    heading3LetterSpacing: -0.008;
-    heading4LetterSpacing: -0.005;
-    heading5LetterSpacing: -0.002;
+    heading1LetterSpacing: 0;
+    heading2LetterSpacing: 0;
+    heading3LetterSpacing: 0;
+    heading4LetterSpacing: 0;
+    heading5LetterSpacing: 0;
     heading6LetterSpacing: 0;
     codeSize: 1em;
     codeLineHeight: 1em;
