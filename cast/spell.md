@@ -1,80 +1,72 @@
 ## index
 
-+------------------+-----------------------------------------+
-| alias            | symbol                                  |
-+==================+=========================================+
-| @code            | ../../jam/cast/code.cast                |
-| @modules         | ../../jam/user-modules-info.md          |
-| @juce            | ../../jam/cast/juce.cast                |
-| @cmake           | ../../archetype/cli/cast/cmake.cast     |
-| @installer       | ../../archetype/cli/cast/installer.cast |
-| @project-info    | ../project-info.md                      |
-| @signing         | signing.md                              |
-| @ProjectInfo     | ../Source/generated/ProjectInfo.h       |
-| @Entitlements    | ../entitlements.plist                   |
-| @CMakeLists      | ../CMakeLists.txt                       |
-| @semicolon       | ;                                       |
-| @Distribution    | installer/mac/distribution.xml          |
-| @Installer       | installer/win/installer.nsi             |
-| @Gh              | ../gh.cmake                             |
-| @Release         | ../RELEASE.md                           |
-| @source          | source.cast                             |
-| @identifiers     | identifiers.md                          |
-| @Identifiers     | ../Source/generated/Identifiers.h       |
-| @text            | text.md                                 |
-| @banner          | banner.md                               |
-| @binaryFiles     | files.md                                |
-| @Text            | ../Source/generated/Text.h              |
-| @Files           | ../Source/generated/Files.h             |
-| @HashMaps        | ../Source/generated/HashMaps.h          |
-| @GeneratedSource | ../Source/generated/Generated.cpp       |
-| @Generated       | ../Source/generated/Generated.h         |
-| @string          | juce::String                            |
-+------------------+-----------------------------------------+
++------------------+-----------------------------------+
+| alias            | symbol                            |
++==================+===================================+
+| @code            | ../../jam/cast/code.cast          |
+| @modules         | ../../jam/user-modules-info.md    |
+| @juce            | ../../jam/cast/juce.cast          |
+| @cmake           | cmake.cast                        |
+| @installer       | installer.cast                    |
+| @project-info    | ../project-info.md                |
+| @signing         | signing.md                        |
+| @ProjectInfo     | ../Source/generated/ProjectInfo.h |
+| @Entitlements    | ../entitlements.plist             |
+| @CMakeLists      | ../CMakeLists.txt                 |
+| @semicolon       | ;                                 |
+| @Distribution    | installer/mac/distribution.xml    |
+| @Installer       | installer/win/installer.nsi       |
+| @Gh              | ../gh.cmake                       |
+| @Release         | ../RELEASE.md                     |
+| @source          | source.cast                       |
+| @identifiers     | identifiers.md                    |
+| @Identifiers     | ../Source/generated/Identifiers.h |
+| @text            | text.md                           |
+| @banner          | banner.md                         |
+| @binaryFiles     | files.md                          |
+| @Text            | ../Source/generated/Text.h        |
+| @Files           | ../Source/generated/Files.h       |
+| @HashMaps        | ../Source/generated/HashMaps.h    |
+| @GeneratedSource | ../Source/generated/Generated.cpp |
+| @Generated       | ../Source/generated/Generated.h   |
+| @string          | juce::String                      |
++------------------+-----------------------------------+
 
 ## headers
 
-+----------------+------------------------------------------------------------------------------------------+-------------------------------------------+
-| file           | brief                                                                                    | description                               |
-+================+==========================================================================================+===========================================+
-| ProjectInfo.h  | ```                                                                                      | Product name, version, and source commit. |
-|                | @file ProjectInfo.h                                                                      |                                           |
-|                | @brief Project metadata — the generated ProjectInfo namespace.                           |                                           |
-|                | ```                                                                                      |                                           |
-+----------------+------------------------------------------------------------------------------------------+-------------------------------------------+
-| CMakeLists.txt | ```                                                                                      |                                           |
-|                | @file CMakeLists.txt                                                                     |                                           |
-|                | @brief scout build manifest — a self-sufficient JUCE console project.                    |                                           |
-|                |                                                                                          |                                           |
-|                | Generated from project-info.md and cast/signing.md; every value traces to one table row. |                                           |
-|                | Edit the table, run cast, then configure.                                                |                                           |
-|                | ```                                                                                      |                                           |
-+----------------+------------------------------------------------------------------------------------------+-------------------------------------------+
-| Identifiers.h  | ```                                                                                      | Every Id:: name.                          |
-|                | @file Identifiers.h                                                                      |                                           |
-|                | @brief SCOUT manifest vocabulary.                                                        |                                           |
-|                | ```                                                                                      |                                           |
-+----------------+------------------------------------------------------------------------------------------+-------------------------------------------+
-| Text.h         | ```                                                                                      | One string per failure, plus the success  |
-|                | @file Text.h                                                                             | line.                                     |
-|                | @brief scout message strings — one constant per failure, one for success.                |                                           |
-|                | ```                                                                                      |                                           |
-+----------------+------------------------------------------------------------------------------------------+-------------------------------------------+
-| Files.h        | ```                                                                                      | File names scout reads.                   |
-|                | @file Files.h                                                                            |                                           |
-|                | @brief scout's own file names, referenced by the program.                                |                                           |
-|                | ```                                                                                      |                                           |
-+----------------+------------------------------------------------------------------------------------------+-------------------------------------------+
-| HashMaps.h     | ```                                                                                      | Banner rows.                              |
-|                | @file HashMaps.h                                                                         |                                           |
-|                | @brief scout's banner rows.                                                              |                                           |
-|                | ```                                                                                      |                                           |
-+----------------+------------------------------------------------------------------------------------------+-------------------------------------------+
-| Generated.h    | ```                                                                                      | Include umbrella for every generated      |
-|                | @file Generated.h                                                                        | header.                                   |
-|                | @brief scout's generated-header umbrella — includes every generated header.              |                                           |
-|                | ```                                                                                      |                                           |
-+----------------+------------------------------------------------------------------------------------------+-------------------------------------------+
++---------------+-----------------------------------------------------------------------------+-------------------------------------------+
+| file          | brief                                                                       | description                               |
++===============+=============================================================================+===========================================+
+| ProjectInfo.h | ```                                                                         | Product name, version, and source commit. |
+|               | @file ProjectInfo.h                                                         |                                           |
+|               | @brief Project metadata — the generated ProjectInfo namespace.              |                                           |
+|               | ```                                                                         |                                           |
++---------------+-----------------------------------------------------------------------------+-------------------------------------------+
+| Identifiers.h | ```                                                                         | Every Id:: name.                          |
+|               | @file Identifiers.h                                                         |                                           |
+|               | @brief SCOUT manifest vocabulary.                                           |                                           |
+|               | ```                                                                         |                                           |
++---------------+-----------------------------------------------------------------------------+-------------------------------------------+
+| Text.h        | ```                                                                         | One string per failure, plus the success  |
+|               | @file Text.h                                                                | line.                                     |
+|               | @brief scout message strings — one constant per failure, one for success.   |                                           |
+|               | ```                                                                         |                                           |
++---------------+-----------------------------------------------------------------------------+-------------------------------------------+
+| Files.h       | ```                                                                         | File names scout reads.                   |
+|               | @file Files.h                                                               |                                           |
+|               | @brief scout's own file names, referenced by the program.                   |                                           |
+|               | ```                                                                         |                                           |
++---------------+-----------------------------------------------------------------------------+-------------------------------------------+
+| HashMaps.h    | ```                                                                         | Banner rows.                              |
+|               | @file HashMaps.h                                                            |                                           |
+|               | @brief scout's banner rows.                                                 |                                           |
+|               | ```                                                                         |                                           |
++---------------+-----------------------------------------------------------------------------+-------------------------------------------+
+| Generated.h   | ```                                                                         | Include umbrella for every generated      |
+|               | @file Generated.h                                                           | header.                                   |
+|               | @brief scout's generated-header umbrella — includes every generated header. |                                           |
+|               | ```                                                                         |                                           |
++---------------+-----------------------------------------------------------------------------+-------------------------------------------+
 
 ## output
 
@@ -82,22 +74,24 @@
 | list                                          | separator                 | structure                                     | file             |
 +===============================================+===========================+===============================================+==================+
 | - [list]: @project-info:cmake                 | - [list]: @semicolon      | @cmake:cmake                                  | @CMakeLists      |
-|                                               |                           | - [description]: @headers:brief               |                  |
 | - [list]: @project-info:project info          |                           |                                               |                  |
 | - [list]: @signing:signing                    |                           |                                               |                  |
-| - [list]: @project-info:architecture          | - [list]: @semicolon      | - [list]: @cmake:value                        |                  |
 | - [list]: @project-info:release:stage=        | - [list]: @semicolon      | - [list]: @cmake:mac                          |                  |
 | - [list]: @project-info:release:stage=linker  | - [list]: @semicolon      | - [list]: @cmake:mac                          |                  |
 | - [list]: @project-info:debug:stage=          | - [list]: @semicolon      | - [list]: @cmake:mac                          |                  |
 | - [list]: @project-info:release:stage=        | - [list]: @semicolon      | - [list]: @cmake:win                          |                  |
 | - [list]: @project-info:release:stage=linker  | - [list]: @semicolon      | - [list]: @cmake:win                          |                  |
 | - [list]: @project-info:debug:stage=          | - [list]: @semicolon      | - [list]: @cmake:win                          |                  |
+| - [list]: @project-info:release:stage=        | - [list]: @semicolon      | - [list]: @cmake:mac                          |                  |
+| - [list]: @project-info:release:stage=linker  | - [list]: @semicolon      | - [list]: @cmake:win                          |                  |
+| - [list]: @project-info:debug:stage=          | - [list]: @semicolon      | - [list]: @cmake:mac                          |                  |
 | - [list]: @project-info:user module           |                           | - [list]: @cmake:module                       |                  |
 | - [list]: @project-info:source glob           |                           | - [list]: @cmake:glob-pattern                 |                  |
-| - [list]: @project-info:define                |                           | - [list]: @cmake:value                        |                  |
+| - [list]: @project-info:macro                 |                           | - [list]: @cmake:value                        |                  |
 | - [list]: @project-info:include               |                           | - [list]: @cmake:value                        |                  |
 | - [list]: @project-info:juce module           |                           | - [list]: @cmake:value                        |                  |
 | - [list]: @project-info:user module           |                           | - [list]: @cmake:link                         |                  |
+| - [list]: @project-info:library               |                           | - [list]: @cmake:value                        |                  |
 | - [list]: @project-info:binary                |                           | - [list]: @cmake:value                        |                  |
 | - [list]: @project-info:pack                  |                           | - [list]: @cmake:pack-value                   |                  |
 |                                               |                           | - strip: @cmake:strip                         |                  |

@@ -29,7 +29,6 @@ namespace Id
 
 extern const juce::Identifier epochs;
 extern const juce::Identifier output;
-extern const juce::Identifier command;
 extern const juce::Identifier profile;
 extern const juce::Identifier epoch;
 extern const juce::Identifier errorPercent;

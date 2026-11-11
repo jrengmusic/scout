@@ -1,14 +1,16 @@
 CompileFlags:
-  CompilationDatabase: /Users/jreng/Documents/Poems/dev/scout
+  CompilationDatabase: C:/Users/jreng/Documents/Poems/dev/scout
   Remove: [--target=*]
   Add:
-    - -DCAST_COMMIT=\"e774dc8\"
+    - -TP
+    - -DCAST_COMMIT=\"f861e49\"
     - -DDONT_SET_USING_JUCE_NAMESPACE=1
     - -DHAVE_FREETYPE
-    - -DHAVE_UNISTD_H
+    - -DJUCE_CORE_INCLUDE_COM_SMART_PTR=1
+    - -DJUCE_CORE_INCLUDE_NATIVE_HEADERS=1
     - -DJUCE_DONT_DECLARE_PROJECTINFO=1
     - -DJUCE_GLOBAL_MODULE_SETTINGS_INCLUDED=1
-    - -DJUCE_IN_APP_PURCHASES=0
+    - -DJUCE_GRAPHICS_INCLUDE_DIRECT2D_HELPERS=1
     - -DJUCE_MODULE_AVAILABLE_jam_animation=1
     - -DJUCE_MODULE_AVAILABLE_jam_core=1
     - -DJUCE_MODULE_AVAILABLE_jam_data_structures=1
@@ -40,34 +42,33 @@ CompileFlags:
     - -DJUCE_USE_CURL=0
     - -DJUCE_WEB_BROWSER=0
     - -DNDEBUG=1
+    - -DNOMINMAX=1
+    - -DWIN32_LEAN_AND_MEAN=1
+    - -D_CONSOLE=1
     - -D_NDEBUG=1
-    - -I/Users/jreng/Documents/Poems/dev/scout/Builds/Release/scout_artefacts/JuceLibraryCode
-    - -I/Users/jreng/Documents/Poems/dev/scout/../jam
-    - -I/Users/jreng/Documents/Poems/dev/scout/Source/generated
-    - -I/Users/jreng/Documents/Poems/dev/scout/../jam/jam_freetype/freetype/include
-    - -I/Users/jreng/.cache/cast/juce/8acf824d884a4e9a0d21b7099dbc5131f4df8b01ae04ada5fe310faad2b215fd/modules/juce_graphics/fonts/harfbuzz
-    - -I/Users/jreng/.cache/cast/juce/8acf824d884a4e9a0d21b7099dbc5131f4df8b01ae04ada5fe310faad2b215fd/modules
-    - -I/Users/jreng/.cache/cast/juce/8acf824d884a4e9a0d21b7099dbc5131f4df8b01ae04ada5fe310faad2b215fd/modules/juce_audio_processors_headless/format_types/VST3_SDK
-    - -I/Users/jreng/.cache/cast/juce/8acf824d884a4e9a0d21b7099dbc5131f4df8b01ae04ada5fe310faad2b215fd/modules/juce_audio_processors_headless/format_types/LV2_SDK
-    - -I/Users/jreng/.cache/cast/juce/8acf824d884a4e9a0d21b7099dbc5131f4df8b01ae04ada5fe310faad2b215fd/modules/juce_audio_processors_headless/format_types/LV2_SDK/lv2
-    - -I/Users/jreng/.cache/cast/juce/8acf824d884a4e9a0d21b7099dbc5131f4df8b01ae04ada5fe310faad2b215fd/modules/juce_audio_processors_headless/format_types/LV2_SDK/serd
-    - -I/Users/jreng/.cache/cast/juce/8acf824d884a4e9a0d21b7099dbc5131f4df8b01ae04ada5fe310faad2b215fd/modules/juce_audio_processors_headless/format_types/LV2_SDK/sord
-    - -I/Users/jreng/.cache/cast/juce/8acf824d884a4e9a0d21b7099dbc5131f4df8b01ae04ada5fe310faad2b215fd/modules/juce_audio_processors_headless/format_types/LV2_SDK/sord/src
-    - -I/Users/jreng/.cache/cast/juce/8acf824d884a4e9a0d21b7099dbc5131f4df8b01ae04ada5fe310faad2b215fd/modules/juce_audio_processors_headless/format_types/LV2_SDK/sratom
-    - -I/Users/jreng/.cache/cast/juce/8acf824d884a4e9a0d21b7099dbc5131f4df8b01ae04ada5fe310faad2b215fd/modules/juce_audio_processors_headless/format_types/LV2_SDK/lilv
-    - -I/Users/jreng/.cache/cast/juce/8acf824d884a4e9a0d21b7099dbc5131f4df8b01ae04ada5fe310faad2b215fd/modules/juce_audio_processors_headless/format_types/LV2_SDK/lilv/src
-    - -I/Users/jreng/Documents/Poems/dev/scout/../jam/jam_style/.
-    - -I/Users/jreng/Documents/Poems/dev/scout/../jam/jam_web/.
-    - -I/Users/jreng/Documents/Poems/dev/scout/Builds/Release/juce_binarydata_scout_BinaryData/JuceLibraryCode
-    - -O3
-    - -DNDEBUG
-    - -std=c++17
+    - -D_WIN32_IE=0x0A00
+    - -IC:\Users\jreng\Documents\Poems\dev\scout\Builds\Release\scout_artefacts\JuceLibraryCode
+    - -IC:\Users\jreng\Documents\Poems\dev\scout\..\jam
+    - -IC:\Users\jreng\Documents\Poems\dev\scout\Source\generated
+    - -IC:\Users\jreng\Documents\Poems\dev\scout\..\jam\jam_freetype\freetype\include
+    - -IC:\Users\jreng\AppData\Local\cast\juce\e8246c68de308d872eda7cd6f1fed1adafbad32a3a9acd60726c9ca08e4bc1a7\modules\juce_graphics\fonts\harfbuzz
+    - -IC:\Users\jreng\AppData\Local\cast\juce\e8246c68de308d872eda7cd6f1fed1adafbad32a3a9acd60726c9ca08e4bc1a7\modules
+    - -IC:\Users\jreng\AppData\Local\cast\juce\e8246c68de308d872eda7cd6f1fed1adafbad32a3a9acd60726c9ca08e4bc1a7\modules\juce_audio_processors_headless\format_types\VST3_SDK
+    - -IC:\Users\jreng\AppData\Local\cast\juce\e8246c68de308d872eda7cd6f1fed1adafbad32a3a9acd60726c9ca08e4bc1a7\modules\juce_audio_processors_headless\format_types\LV2_SDK
+    - -IC:\Users\jreng\AppData\Local\cast\juce\e8246c68de308d872eda7cd6f1fed1adafbad32a3a9acd60726c9ca08e4bc1a7\modules\juce_audio_processors_headless\format_types\LV2_SDK\lv2
+    - -IC:\Users\jreng\AppData\Local\cast\juce\e8246c68de308d872eda7cd6f1fed1adafbad32a3a9acd60726c9ca08e4bc1a7\modules\juce_audio_processors_headless\format_types\LV2_SDK\serd
+    - -IC:\Users\jreng\AppData\Local\cast\juce\e8246c68de308d872eda7cd6f1fed1adafbad32a3a9acd60726c9ca08e4bc1a7\modules\juce_audio_processors_headless\format_types\LV2_SDK\sord
+    - -IC:\Users\jreng\AppData\Local\cast\juce\e8246c68de308d872eda7cd6f1fed1adafbad32a3a9acd60726c9ca08e4bc1a7\modules\juce_audio_processors_headless\format_types\LV2_SDK\sord\src
+    - -IC:\Users\jreng\AppData\Local\cast\juce\e8246c68de308d872eda7cd6f1fed1adafbad32a3a9acd60726c9ca08e4bc1a7\modules\juce_audio_processors_headless\format_types\LV2_SDK\sratom
+    - -IC:\Users\jreng\AppData\Local\cast\juce\e8246c68de308d872eda7cd6f1fed1adafbad32a3a9acd60726c9ca08e4bc1a7\modules\juce_audio_processors_headless\format_types\LV2_SDK\lilv
+    - -IC:\Users\jreng\AppData\Local\cast\juce\e8246c68de308d872eda7cd6f1fed1adafbad32a3a9acd60726c9ca08e4bc1a7\modules\juce_audio_processors_headless\format_types\LV2_SDK\lilv\src
+    - -IC:\Users\jreng\Documents\Poems\dev\scout\..\jam\jam_style\.
+    - -IC:\Users\jreng\Documents\Poems\dev\scout\..\jam\jam_web\.
+    - -IC:\Users\jreng\Documents\Poems\dev\scout\Builds\Release\juce_binarydata_scout_BinaryData\JuceLibraryCode
+    - /DWIN32
+    - -std:c++17
+    - -MT
     - -flto=thin
-    - -arch
-    - x86_64
-    - -arch
-    - arm64
-    - -mmacosx-version-min=11.0
     - -Wno-shadow
     - -Wno-unused-parameter
     - -Wno-float-equal
@@ -75,6 +76,8 @@ CompileFlags:
     - -Wno-switch-enum
     - -Wno-implicit-float-conversion
     - -Wno-macro-redefined
+    - --
+    - C:\Users\jreng\Documents\Poems\dev\scout\Source\Benchmark.cpp
 Diagnostics:
   MissingIncludes: None
   UnusedIncludes: None

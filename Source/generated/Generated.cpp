@@ -25,7 +25,6 @@ namespace Id
 
     const juce::Identifier epochs       { juce::String::fromUTF8 ("epochs") };
     const juce::Identifier output       { juce::String::fromUTF8 ("output") };
-    const juce::Identifier command      { juce::String::fromUTF8 ("command") };
     const juce::Identifier profile      { juce::String::fromUTF8 ("profile") };
     const juce::Identifier epoch        { juce::String::fromUTF8 ("epoch") };
     const juce::Identifier errorPercent { juce::String::fromUTF8 ("errorPercent") };

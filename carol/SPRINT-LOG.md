@@ -114,6 +114,45 @@
 <!-- The entry format is in /log (commands/log.md). It is the only source. -->
 <!-- Sprint entries go here, written by PRIMARY agents -->
 
+## Sprint 5: scout Builds with cast's Templates on Windows — No archetype, Clean Warnings ✅
+
+**Date:** 2026-11-12
+**Duration:** not measured (one session)
+**Scope:** ARCHITECT: *"there's no fucking archetype here. scout is wrong, there should not be any project use archetype as deps. cast works, why dont just make it like cast?"*; *"hygiene we dont want any warnings, if it was genuine fix it. if it was noise suppress, be careful on mac this was clean"*.
+
+### Agents Participated
+- COUNSELOR: diagnosis of each failure, wiring and identifier edits, validation of each return by read, this log.
+- Engineer (sonnet): template and artwork copies, manifest and table conformance, `## library` table and wiring.
+
+### Files Modified (9 total)
+- `cast/cmake.cast`, `cast/installer.cast`, `cast/installer/resources/*` — byte copies of cast's (with the ccache block and the `## library` lane).
+- `cast/spell.md:9-10` — `@cmake` → `cmake.cast`, `@installer` → `installer.cast` (was `../../archetype/cli/cast/…`, a directory that does not exist).
+- `cast/spell.md` CMakeLists row — no `[description]` binding, no `architecture` list row, `define` → `macro`, three more flag rows (`release` mac, `release:stage=linker` win, `debug` mac) so the clang-cl block gets cast's lists, new `library` → `value` row; CMakeLists.txt row removed from `## headers`.
+- `project-info.md` — `description` → `projectDescription`; `architecture` key; `installerResourceDirectory` → `${CMAKE_SOURCE_DIR}/cast/installer/resources`; `## architecture` deleted; `## define` → `## macro`; `## library` header-only.
+- `cast/identifiers.md` — `command` row removed. jam_terminal owns `Id::command` = `"command"` (`jam/generated/jam_Terminal.h:39`, `jam_Terminal.cpp:31`); the second definition was an `lld-link` duplicate symbol.
+
+### Alignment Check
+- [x] BLESSED principles followed (SSOT: one `Id::command`)
+- [x] NAMES.md adhered
+- [x] MANIFESTO.md principles applied
+- [ ] Engineer used Python writers without dry-run/backup (Destructive-Edit Discipline); every edited region validated by read.
+
+### Problems Solved
+- `template not found: ../../archetype/cli/cast/cmake.cast` — local templates like cast.
+- Stale macOS CMake cache in `Builds/Release` (`CMAKE_MAKE_PROGRAM=/opt/homebrew/bin/ninja`).
+- `duplicate symbol: Id::command` — SSOT to jam_terminal.
+- clang-cl `/GL` unused and JUCE `-Wunused-parameter` — the clang-cl flag block was fed the wrong lists (6 wiring rows instead of cast's 9). ARCHITECT: *"scout built clean."*
+
+### State for Continuation
+- ARCHITECT's clean build ran before the `## library` lane and ccache; rebuild to confirm the header-only `## library` table.
+- macOS: the `APPLE` flag block still takes the first three rows, unchanged; Mac build not run this session.
+
+### Debts Paid
+- None
+
+### Debts Deferred
+- None
+
 ## Sprint 4: Kernel Sampling — kernel and user stacks in the scout engine, one backend for each OS ✅
 
 **Date:** 2026-10-29
