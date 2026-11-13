@@ -107,7 +107,7 @@ int Benchmark::runCommand()
     int exitCode { EXIT_FAILURE };
 
     jam::Subprocess subprocess;
-    subprocess.launch (juce::StringArray { commandFile.getFullPathName(), manifestFile.getFullPathName() },
+    subprocess.launch (jam::Strings { commandFile.getFullPathName(), manifestFile.getFullPathName() },
                        manifestFile.getParentDirectory(),
                        [&finished, &exitCode] (int processExitCode, const std::string&)
                        {

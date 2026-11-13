@@ -18,7 +18,7 @@ juce::Result Toolchain::runProcess (const juce::StringArray& arguments, const ju
     int exitCode { -1 };
 
     jam::Subprocess subprocess;
-    subprocess.launch (arguments,
+    subprocess.launch (jam::Strings { arguments },
                        workingDirectory,
                        [&finished, &exitCode] (int processExitCode, const std::string&)
                        {
