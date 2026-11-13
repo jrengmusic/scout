@@ -109,7 +109,7 @@ private:
     const juce::File documentFile;
 
     /** @brief The parsed manifest. */
-    const jam::ConfigDocument manifest;
+    const std::unique_ptr<jam::ConfigDocument> manifest;
 
     JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR (Processor)
 };

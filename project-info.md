@@ -123,7 +123,7 @@ Every field is a complete literal; nothing downstream derives, concatenates, or 
 | @user-module | jam_markdown          | Clean-room native CommonMark + GFM markdown parsing and rendering                                |
 | @user-module | jam_freetype          | Vendored FreeType font rasterization library                                                     |
 | @user-module | jam_graphics          | Graphics utilities, blur, shadows, colours, fonts, mesh                                          |
-| @user-module | jam_data_structures   | ValueTree management and data model utilities — model, parameters, JSON conversion               |
+| @user-module | jam_data_structures   | ValueTree management and data model utilities — model, parameters                                |
 | @user-module | jam_animation         | Foundation animation classes (Animator, AnimationBase, AnimationScrollingText)                   |
 | @user-module | jam_web               | HTML authored-subset and CSS Syntax Level 3 subset tokenizers and parsers                        |
 | @user-module | jam_style             | JAM Style — LookAndFeel base + ColourScheme-backed colour registry                               |

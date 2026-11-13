@@ -213,7 +213,7 @@ juce::Result Benchmark::addEpoch (double epochNanoseconds, const juce::ValueTree
 {
     if (samplesFile.existsAsFile())
     {
-        const auto samplesTree { jam::ConfigDocument::parse (samplesFile.loadFileAsString(), samplesFile.getFullPathName()).getValueTree (Id::samples) };
+        const auto samplesTree { jam::ConfigDocument::parse (samplesFile.loadFileAsString(), samplesFile.getFullPathName())->getValueTree (Id::samples) };
 
         for (const auto& table : samplesTree)
         {

@@ -16,7 +16,7 @@ void printHelp (const juce::String& helpText)
     jam::TextEditor component;
     component.setLookAndFeel (&styleMarkdown);
     component.setBounds (0, 0, columnWidth, 0);
-    component.setDocument (jam::MarkdownDocument::parse (helpText, files::scoutHelp));
+    component.setDocument (std::move (*jam::MarkdownDocument::parse (helpText, files::scoutHelp)));
 
     const auto rows { component.getViewedComponent()->getHeight() };
 

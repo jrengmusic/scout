@@ -114,6 +114,41 @@
 <!-- The entry format is in /log (commands/log.md). It is the only source. -->
 <!-- Sprint entries go here, written by PRIMARY agents -->
 
+## Sprint 6: Build Against the jam Document Contract ✅
+
+**Date:** 2026-11-14
+**Duration:** part of one session. `jam/carol/SPRINT-LOG.md` Sprint 187 is the primary record.
+**Scope:** ARCHITECT: *"scout failed"*; *"pointer used for checking null. usage still as reference."*
+
+### Agents Participated
+- COUNSELOR: cause read, delegation, the read of each edit, this log.
+- Engineer (sonnet): the edits and the release build (`cast cast/spell.md`).
+
+### Files Modified
+- `Source/Help.cpp:19` — `setDocument (std::move (*jam::MarkdownDocument::parse (helpText, files::scoutHelp)))`, the cast form (`cast/Source/Help.cpp:19`).
+- `Source/Processor.h:112` — `const std::unique_ptr<jam::ConfigDocument> manifest`.
+- `Source/Processor.cpp:19` — `manifest != nullptr ? Validator {}.isValid (*manifest) : jam::ConfigDocument::isValid (…)`, the ling form (`ling/Source/Manifest.cpp:28-29`). `:26`, `:38`, `:39`, `:48`, `:49` — `manifest->`.
+- `Source/Processor.cpp:6`, `Source/Benchmark.cpp:216` — `ConfigDocument::parse (…)->getValueTree`, the END form (`end/Source/config/ConfigTheme.cpp:30`).
+- `project-info.md`, `CMakeLists.txt` — modified; no read this session traces them.
+
+### Alignment Check
+- [x] BLESSED principles followed
+- [x] NAMES.md adhered
+- [x] MANIFESTO.md principles applied
+
+### Problems Solved
+- `jam_TextEditor.h:200`: `setDocument` got a `std::unique_ptr<MarkdownDocument>`.
+
+### State for Continuation
+- The release build signed and notarised (Engineer report). The sign chain runs only when the binary changes (`CMakeLists.txt:419-420`).
+- The default `## toolchain` group ends with `cmake -P gh.cmake` (`project-info.md:205`), which uploads to release `v0.1.0` with `--clobber` (`gh.cmake:42-47`). No read confirms whether this run uploaded.
+
+### Debts Paid
+- None
+
+### Debts Deferred
+- None
+
 ## Sprint 5: scout Builds with cast's Templates on Windows — No archetype, Clean Warnings ✅
 
 **Date:** 2026-11-12

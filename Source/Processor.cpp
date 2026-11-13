@@ -3,7 +3,7 @@
 static juce::ValueTree getBaseline (const juce::File& baselineFile)
 {
     if (baselineFile.existsAsFile())
-        return jam::ConfigDocument::parse (baselineFile.loadFileAsString(), baselineFile.getFullPathName()).getValueTree (Id::profile);
+        return jam::ConfigDocument::parse (baselineFile.loadFileAsString(), baselineFile.getFullPathName())->getValueTree (Id::profile);
 
     return juce::ValueTree {};
 }
@@ -16,14 +16,14 @@ Processor::Processor (const juce::File& newDocumentFile)
 
 juce::Result Processor::generate()
 {
-    auto result { Validator {}.isValid (manifest) };
+    auto result { manifest != nullptr ? Validator {}.isValid (*manifest) : jam::ConfigDocument::isValid (documentFile.loadFileAsString(), documentFile.getFullPathName()) };
 
     if (result.wasOk())
         result = run();
 
     if (result.wasOk())
     {
-        const auto manifestTree { manifest.getValueTree (Id::manifest) };
+        const auto manifestTree { manifest->getValueTree (Id::manifest) };
         const auto runTable { manifestTree.getChildWithName (jam::Format::toType (Id::run)) };
 
         if (runTable.isValid())
@@ -35,8 +35,8 @@ juce::Result Processor::generate()
 
 juce::Result Processor::run()
 {
-    for (auto* table : manifest.getTables (Id::toolchain))
-        for (auto* row : manifest.getTableRows (*table))
+    for (auto* table : manifest->getTables (Id::toolchain))
+        for (auto* row : manifest->getTableRows (*table))
             if (const auto result { runToolchainRow (*row) }; not result.wasOk())
                 return result;
 
@@ -45,8 +45,8 @@ juce::Result Processor::run()
 
 juce::Result Processor::runToolchainRow (const jam::ConfigDocument::Element& row)
 {
-    const auto command { manifest.getTableValue (row, Id::command) };
-    const auto flag { manifest.getTableValue (row, Id::flag) };
+    const auto command { manifest->getTableValue (row, Id::command) };
+    const auto flag { manifest->getTableValue (row, Id::flag) };
     const auto arguments { Toolchain::getToolchainArguments (command, flag) };
     const auto diagnosticLine { flag.isNotEmpty()
                                     ? command + Chars::space + flag
