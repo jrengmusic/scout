@@ -50,6 +50,13 @@ project(scout
     DESCRIPTION "Systematic Context Observer for Unit Telemetry"
 )
 
+find_program(CAST_CCACHE ccache NO_CACHE REQUIRED)
+get_property(CAST_LANGUAGES GLOBAL PROPERTY ENABLED_LANGUAGES)
+
+foreach(CAST_LANGUAGE ${CAST_LANGUAGES})
+    set(CMAKE_${CAST_LANGUAGE}_COMPILER_LAUNCHER "${CAST_CCACHE}")
+endforeach()
+
 message(STATUS "\nscout")
 
 execute_process(
@@ -126,6 +133,7 @@ set(CAST_JUCE_PATCHES
 "${CAST_USER_MODULE_PATH}/patch/juce-plugin-window-focus-hook.patch"        # VST2 and AU host plugin windows take keyboard focus and make the plugin view first responder; applies after juce-plugin-transparency-hook.patch
 "${CAST_USER_MODULE_PATH}/patch/juce-mouse-event-hook.patch"                # Host mouse event callback before a peer's components; applies after juce-key-pressed-hook.patch
 "${CAST_USER_MODULE_PATH}/patch/juce-plugin-editor-once-hook.patch"         # VST2 plugin client opens the editor that effEditGetRect created, so the editor is built once; applies after juce-plugin-transparency-hook.patch
+"${CAST_USER_MODULE_PATH}/patch/juce-plugin-window-size-hook.patch"         # VST2 host child window takes the plugin's effEditGetRect size in physical pixels on Windows; applies after juce-plugin-transparency-hook.patch
 )
 
 if(WIN32)
