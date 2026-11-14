@@ -69,8 +69,9 @@ and `system` rows of a sampling run as timings.
 
 The report holds two more tables for sampling (see Report). The key of a row is the function name
 of the frame. A frame with no symbol uses the name of its image file. Each character outside
-`A-Z a-z 0-9 : -` becomes `-`. The value is the number of samples whose stack holds the frame, in
-one epoch. The unit is `count`. A frame with no image (the frame of a process that exited before its symbols were read, or of an anonymous memory region) is not counted. A `dropped` row counts the losses that the kernel reported because its buffer was full. On Linux each table counts its own losses. On macOS and Windows all losses go to `## SAMPLE`; on macOS each count is one loss report, not one record.
+`A-Z a-z 0-9 : -` becomes `-`. The report writes the key as words (see Report), so
+`__NSConcreteGlobalBlock` is `NS concrete global block`. The value is the number of samples whose stack holds the frame, in
+one epoch. The unit is `count`. A frame with no image (the frame of a process that exited before its symbols were read, or of an anonymous memory region) is not counted. A `dropped` row counts the losses that the kernel reported because its buffer was full. On Linux each table counts its own losses. On macOS and Windows all losses go to `## sample`; on macOS each count is one loss report, not one record.
 
 ## Toolchain
 
@@ -120,8 +121,8 @@ The file has one table of zone rows. Its columns are `key | type | value | calls
 | unit   | `ns`.                                                            |
 | bins   | One count for each bin: 64 bins for each octave, and 40 octaves. |
 
-A `dropped` row follows the zone rows. Its unit is `count`. A `run` table follows. It holds
-`buildType`, `Debug` or `Release`.
+A `dropped` row follows the zone rows. Its unit is `count`. A `## run` table follows. It holds
+`build type`, `Debug` or `Release`.
 
 ## Report
 
@@ -141,15 +142,21 @@ when it does not exist. A report that cannot be written stops the run:
 The report starts with front matter. It holds `date`, the time that scout writes the report, as
 `DD-MM-YYYY HH:MM`.
 
+Each heading and each key cell holds the words of its identifier: lower-case words joined by
+spaces. `_`, `-` and a camel-case boundary end a word. A word with no lower-case letter keeps its
+case in mixed-case text. Thus `EVE_CALLS` is `eve calls`, `buildType` is `build type`, and
+`ttyOpen` is `tty open`. Scout reads any form back to the same identifier, so a report in an older
+form still works as a baseline.
+
 The report has these tables:
 
 | table             | meaning                                                                                              |
 | :---------------- | :--------------------------------------------------------------------------------------------------- |
-| `## <TYPE>`       | One row for each zone. The value is the median time of one epoch.                                    |
-| `## <TYPE>_CALLS` | One row for each zone. The value is the median time of one call, from the merged bins of all epochs. |
-| `## RUN`          | The `buildType` of the target.                                                                       |
-| `## SAMPLE`       | With `## sample` only. One row for each frame, from the timer samples (see Sampling).                |
-| `## CSWITCH`      | With `## sample` only. One row for each frame, from the stacks at each context switch.               |
+| `## <type>`       | One row for each zone. The value is the median time of one epoch. For EVE: `## eve`.                 |
+| `## <type> calls` | One row for each zone. The value is the median time of one call, from the merged bins of all epochs. |
+| `## run`          | The `build type` of the target.                                                                      |
+| `## sample`       | With `## sample` only. One row for each frame, from the timer samples (see Sampling).                |
+| `## cswitch`      | With `## sample` only. One row for each frame, from the stacks at each context switch.               |
 
 Each row of a zone table has these columns:
 
@@ -169,17 +176,17 @@ The samples file carries `bins` in each row, not the samples of the calls. A bin
 the call time. A row has 64 bins for each octave, and 40 octaves. Each bin holds the count of the
 calls in that bin.
 
-The `_CALLS` table has a `bins` column instead of `samples`, and one more column, `percentile`:
+The `calls` table has a `bins` column instead of `samples`, and one more column, `percentile`:
 
 | column     | meaning                                                 |
 | :--------- | :------------------------------------------------------ |
 | bins       | The count of calls in each bin, merged from all epochs. |
 | percentile | The 99.9th percentile of the merged bins.               |
 
-In the `_CALLS` table, `value`, `errorPercent`, `min`, `max` and `percentile` come from the merged
+In the `calls` table, `value`, `errorPercent`, `min`, `max` and `percentile` come from the merged
 bins of all epochs. The `calls` column is the number of calls of all epochs.
 
-The `## <TYPE>` table also has these rows:
+The `## <type>` table also has these rows:
 
 | row     | meaning                                                                                        |
 | :------ | :--------------------------------------------------------------------------------------------- |
@@ -199,7 +206,7 @@ With a baseline, each row also has these columns:
 | probability | The probability that the change is noise. |
 
 The report has one median mermaid xychart for each unit. It also has one distribution xychart for
-each zone of the `_CALLS` table. The chart shows the calls in each octave. The x axis is the lower
+each zone of the `calls` table. The chart shows the calls in each octave. The x axis is the lower
 edge of the octave, in ns.
 
 ## Exit Codes
