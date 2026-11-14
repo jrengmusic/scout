@@ -17,7 +17,8 @@ Benchmark::Benchmark (const juce::File& newCommandFile, const juce::File& newSam
 #if JUCE_WINDOWS
       job { CreateJobObjectW (nullptr, nullptr), CloseHandle },
 #endif
-      sampleTable { newSampleTable }
+      sampleTable { newSampleTable },
+      tableType { jam::Format::toType (Id::epoch) }
 {
 #if JUCE_WINDOWS
     jassert (job != nullptr);

@@ -63,21 +63,28 @@ juce::Result Processor::runEpochs (const juce::ValueTree& runTable, const juce::
 
     if (baselineName.isEmpty() or baselineFile.existsAsFile())
     {
-        const auto commandFile { directory.getChildFile (runTable[jam::Format::toType (Id::command)].toString()) };
-        const auto samplesFile { directory.getChildFile (runTable[jam::Format::toType (Id::samples)].toString()) };
-        const auto epochs { static_cast<int> (runTable[jam::Format::toType (Id::epochs)]) };
+        const auto baselineResult { baselineName.isEmpty() ? juce::Result::ok() : jam::ConfigDocument::isValid (baselineFile.loadFileAsString(), baselineFile.getFullPathName()) };
 
-        jassert (epochs > 0);
-
-        Benchmark benchmark { commandFile, samplesFile, documentFile, sampleTable };
-
-        for (int epoch { 0 }; epoch < epochs; ++epoch)
+        if (baselineResult.wasOk())
         {
-            if (const auto result { benchmark.runEpoch() }; not result.wasOk())
-                return result;
+            const auto commandFile { directory.getChildFile (runTable[jam::Format::toType (Id::command)].toString()) };
+            const auto samplesFile { directory.getChildFile (runTable[jam::Format::toType (Id::samples)].toString()) };
+            const auto epochs { static_cast<int> (runTable[jam::Format::toType (Id::epochs)]) };
+
+            jassert (epochs > 0);
+
+            Benchmark benchmark { commandFile, samplesFile, documentFile, sampleTable };
+
+            for (int epoch { 0 }; epoch < epochs; ++epoch)
+            {
+                if (const auto result { benchmark.runEpoch() }; not result.wasOk())
+                    return result;
+            }
+
+            return writeReport (runTable, benchmark.getProfiles (getBaseline (baselineFile)));
         }
 
-        return writeReport (runTable, benchmark.getProfiles (getBaseline (baselineFile)));
+        return baselineResult;
     }
 
     return juce::Result::fail (text::Diagnostics::failNotFound + Id::diagnosticSeparator + baselineFile.getFullPathName());

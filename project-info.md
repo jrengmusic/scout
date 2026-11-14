@@ -26,8 +26,8 @@ Every field is a complete literal; nothing downstream derives, concatenates, or 
 | projectName      | @char | scout                                            | toLiteral | Systematic Context Observer for Unit Telemetry   |
 | companyName      | @char | JRENG                                            | toLiteral | Company name.                                    |
 | legalCompanyName | @char | Jubilant Research of Eclectic Novelty Generation | toLiteral | Full legal company name.                         |
-| versionString    | @char | 0.1.0                                            | toLiteral | Product version string.                          |
-| versionNumber    | int   | 0x100                                            |           | Product version, JUCE hex encoding.              |
+| versionString    | @char | 0.0.1                                            | toLiteral | Product version string.                          |
+| versionNumber    | int   | 0x1                                              |           | Product version, JUCE hex encoding.              |
 | productWebsite   | @char | `https://jrengmusic.com`                         |           | Product website URL.                             |
 | companyEmail     | @char | info@jrengmusic.com                              | toLiteral | Company contact email.                           |
 | presetExtension  | @char | scout                                            | toLiteral | Preset file extension, without the leading dot.  |
@@ -131,6 +131,7 @@ Every field is a complete literal; nothing downstream derives, concatenates, or 
 | @user-module | jam_mermaid_diagram   | Clean-room native mermaid diagram parsing over jam::Document producing the semantic Element tree |
 | @user-module | jam_markdown_graphics | Markdown and mermaid materialisation, layout and view component                                  |
 | @user-module | jam_terminal          | VT read-side engine, TTY, protocol vocabulary, keyboard encoding                                 |
+| @user-module | jam_tui               | Terminal user interface components, painted through the terminal graphics context                |
 | @user-module | jam_profiler          | Profiler zones — per-thread rings drained to durations per zone                                  |
 | @user-module | jam_subprocess        | JUCE-based subprocess launcher with streaming output and byte-cap truncation                     |
 +--------------+-----------------------+--------------------------------------------------------------------------------------------------+
@@ -177,12 +178,12 @@ Every field is a complete literal; nothing downstream derives, concatenates, or 
 
 ## binary
 
-+------------+------------------+------------------------------------+
-| name       | value            | description                        |
-+============+==================+====================================+
-| help       | Source/HELP.md   | Help document source               |
-| styleSheet | Source/style.css | Stylesheet, embedded as BinaryData |
-+------------+------------------+------------------------------------+
++------------+-------------------------------+------------------------------------+
+| name       | value                         | description                        |
++============+===============================+====================================+
+| help       | Source/HELP.md                | Help document source               |
+| styleSheet | ../jam/jam_tui/page/style.css | Stylesheet, embedded as BinaryData |
++------------+-------------------------------+------------------------------------+
 
 ## library
 

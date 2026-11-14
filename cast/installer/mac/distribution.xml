@@ -32,5 +32,5 @@
     <choice id="com.jrengmusic.scout" title="scout" start_selected="true">
         <pkg-ref id="com.jrengmusic.scout"/>
     </choice>
-    <pkg-ref id="com.jrengmusic.scout" version="0.1.0" onConclusion="none">scout.pkg</pkg-ref>
+    <pkg-ref id="com.jrengmusic.scout" version="0.0.1" onConclusion="none">scout.pkg</pkg-ref>
 </installer-gui-script>

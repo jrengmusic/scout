@@ -1,6 +1,6 @@
 # SCOUT: Systematic Context Observer for Unit Telemetry
 
-**Version 0.1.0**
+**Version 0.0.1**
 
 You see this guide because you ran `scout` with no manifest or `scout --help`, or because the
 manifest that you named was not found.
@@ -11,7 +11,7 @@ manifest that you named was not found.
 | :---------------------------------------------- | :----------------------------------------------------------------- | :----- |
 | `scout`                                         | Prints this guide.                                                 | 0      |
 | `scout --help`, `scout <manifest> --help`       | Prints this guide.                                                 | 0      |
-| `scout --version`, `scout <manifest> --version` | Prints `scout 0.1.0 (<commit>)`.                                   | 0      |
+| `scout --version`, `scout <manifest> --version` | Prints `scout 0.0.1 (<commit>)`.                                   | 0      |
 | `scout <manifest>`, the file does not exist     | Prints this guide, then `scout: not found: <file name>` on stderr. | 1      |
 | `scout <manifest>`                              | Runs the manifest (see The Run).                                   | 0 or 1 |
 | `scout <manifest> <other>`                      | Prints `scout: <other>: unknown flag` on stderr.                   | 1      |

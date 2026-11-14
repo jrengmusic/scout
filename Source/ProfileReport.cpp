@@ -27,7 +27,7 @@ juce::ValueTree ProfileReport::getProfile (const juce::Identifier& benchmarkType
         auto zone { getZone (zoneKey, statistics, calls.at (zoneKey), units.at (zoneKey)) };
         zone.setProperty (Id::samples, juce::var (zoneSamples), nullptr);
 
-        const auto baselineZone { baselineProfile.getChildWithName (zoneKey) };
+        const auto baselineZone { baselineProfile.getChildWithName (jam::Format::toType (zoneKey)) };
 
         if (baselineZone.isValid())
             addComparison (zone, statistics, baselineZone);
@@ -57,7 +57,7 @@ juce::ValueTree ProfileReport::getProfile (const juce::Identifier& benchmarkType
         zone.setProperty (Id::percentile, statistics.getPercentile(), nullptr);
         zone.setProperty (Id::bins, juce::var (binCounts), nullptr);
 
-        const auto baselineZone { baselineProfile.getChildWithName (zoneKey) };
+        const auto baselineZone { baselineProfile.getChildWithName (jam::Format::toType (zoneKey)) };
 
         if (baselineZone.isValid())
             addComparison (zone, statistics, baselineZone);
