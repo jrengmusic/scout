@@ -32,7 +32,6 @@ extern const juce::Identifier output;
 extern const juce::Identifier profile;
 extern const juce::Identifier epoch;
 extern const juce::Identifier errorPercent;
-extern const juce::Identifier change;
 extern const juce::Identifier probability;
 extern const juce::Identifier percentile;
 extern const juce::Identifier system;

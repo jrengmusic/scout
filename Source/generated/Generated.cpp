@@ -28,7 +28,6 @@ namespace Id
     const juce::Identifier profile      { juce::String::fromUTF8 ("profile") };
     const juce::Identifier epoch        { juce::String::fromUTF8 ("epoch") };
     const juce::Identifier errorPercent { juce::String::fromUTF8 ("errorPercent") };
-    const juce::Identifier change       { juce::String::fromUTF8 ("change") };
     const juce::Identifier probability  { juce::String::fromUTF8 ("probability") };
     const juce::Identifier percentile   { juce::String::fromUTF8 ("percentile") };
     const juce::Identifier system       { juce::String::fromUTF8 ("system") };
