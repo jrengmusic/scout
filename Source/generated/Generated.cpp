@@ -40,6 +40,8 @@ namespace Id
     const juce::Identifier cswitch      { juce::String::fromUTF8 ("cswitch") };
     const juce::Identifier intervalMs   { juce::String::fromUTF8 ("intervalMs") };
     const juce::Identifier stackDepth   { juce::String::fromUTF8 ("stackDepth") };
+    const juce::Identifier mcp          { juce::String::fromUTF8 ("mcp") };
+    const juce::Identifier exitCode     { juce::String::fromUTF8 ("exitCode") };
 
 /**______________________________END OF NAMESPACE______________________________*/
 }// namespace Id
@@ -49,7 +51,8 @@ namespace files
 
 /** @brief File names scout reads: help. */
 
-const juce::String scoutHelp { juce::String::fromUTF8 ("HELP.md") };
+const juce::String scoutHelp  { juce::String::fromUTF8 ("HELP.md") };
+const juce::String scoutTools { juce::String::fromUTF8 ("tools.json") };
 
 /**______________________________END OF NAMESPACE______________________________*/
 }// namespace files

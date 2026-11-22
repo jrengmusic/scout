@@ -66,38 +66,12 @@
     <class kind="struct">text::Diagnostics</class>
   </compound>
   <compound kind="file">
-    <name>Help.cpp</name>
-    <path></path>
-    <filename>_help_8cpp.html</filename>
-    <includes id="_help_8h" name="Help.h" local="yes" import="no" module="no" objc="no">Help.h</includes>
-    <member kind="function">
-      <type>void</type>
-      <name>printHelp</name>
-      <anchorfile>_help_8cpp.html</anchorfile>
-      <anchor>a3f361f138d00c42487776fb13cc5ebe6</anchor>
-      <arglist>(const juce::String &amp;helpText)</arglist>
-    </member>
-  </compound>
-  <compound kind="file">
-    <name>Help.h</name>
-    <path></path>
-    <filename>_help_8h.html</filename>
-    <includes id="_generated_8h" name="Generated.h" local="yes" import="no" module="no" objc="no">generated/Generated.h</includes>
-    <member kind="function">
-      <type>void</type>
-      <name>printHelp</name>
-      <anchorfile>_help_8h.html</anchorfile>
-      <anchor>a3f361f138d00c42487776fb13cc5ebe6</anchor>
-      <arglist>(const juce::String &amp;helpText)</arglist>
-    </member>
-  </compound>
-  <compound kind="file">
     <name>Main.cpp</name>
     <path></path>
     <filename>_main_8cpp.html</filename>
     <includes id="_generated_8h" name="Generated.h" local="yes" import="no" module="no" objc="no">generated/Generated.h</includes>
-    <includes id="_help_8h" name="Help.h" local="yes" import="no" module="no" objc="no">Help.h</includes>
     <includes id="_processor_8h" name="Processor.h" local="yes" import="no" module="no" objc="no">Processor.h</includes>
+    <includes id="_tool_server_8h" name="ToolServer.h" local="yes" import="no" module="no" objc="no">ToolServer.h</includes>
     <member kind="function" static="yes">
       <type>static void</type>
       <name>printBanner</name>
@@ -127,6 +101,13 @@
       <arglist>()</arglist>
     </member>
     <member kind="function" static="yes">
+      <type>static const juce::String &amp;</type>
+      <name>getMcpFlag</name>
+      <anchorfile>_main_8cpp.html</anchorfile>
+      <anchor>a01f0a17356594162023772c5302b3466</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" static="yes">
       <type>static bool</type>
       <name>isVersion</name>
       <anchorfile>_main_8cpp.html</anchorfile>
@@ -139,6 +120,27 @@
       <anchorfile>_main_8cpp.html</anchorfile>
       <anchor>a6336581d1e8cbdb8df62474ac9e3fdbb</anchor>
       <arglist>(int argc, char *argv[])</arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static bool</type>
+      <name>isMcp</name>
+      <anchorfile>_main_8cpp.html</anchorfile>
+      <anchor>a47e046c3d4a1a7bd718544de6da50726</anchor>
+      <arglist>(int argc, char *argv[])</arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static juce::JUCEApplicationBase *</type>
+      <name>createToolServer</name>
+      <anchorfile>_main_8cpp.html</anchorfile>
+      <anchor>a16fa16977fc9ba47db25e3fe2a82021e</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static int</type>
+      <name>runToolServer</name>
+      <anchorfile>_main_8cpp.html</anchorfile>
+      <anchor>a15b9b330781dca52351a68dcf0e2fbf3</anchor>
+      <arglist>(const char *programPath)</arglist>
     </member>
     <member kind="function" static="yes">
       <type>static void</type>
@@ -925,6 +927,20 @@
     <class kind="struct">Toolchain</class>
   </compound>
   <compound kind="file">
+    <name>ToolServer.cpp</name>
+    <path></path>
+    <filename>_tool_server_8cpp.html</filename>
+    <includes id="_tool_server_8h" name="ToolServer.h" local="yes" import="no" module="no" objc="no">ToolServer.h</includes>
+  </compound>
+  <compound kind="file">
+    <name>ToolServer.h</name>
+    <path></path>
+    <filename>_tool_server_8h.html</filename>
+    <includes id="_generated_8h" name="Generated.h" local="yes" import="no" module="no" objc="no">generated/Generated.h</includes>
+    <class kind="class">ToolServer</class>
+    <class kind="struct">ToolServer::Run</class>
+  </compound>
+  <compound kind="file">
     <name>Validator.cpp</name>
     <path></path>
     <filename>_validator_8cpp.html</filename>
@@ -1269,10 +1285,10 @@
       <arglist></arglist>
     </member>
     <member kind="variable" protection="private">
-      <type>const jam::ConfigDocument</type>
+      <type>const std::unique_ptr&lt; jam::ConfigDocument &gt;</type>
       <name>manifest</name>
       <anchorfile>struct_processor.html</anchorfile>
-      <anchor>afb131d60d600f95ce7bc382f8d9724e7</anchor>
+      <anchor>adf0b2fa54f5d2a239823e9661d90f9a6</anchor>
       <arglist></arglist>
     </member>
   </compound>
@@ -1348,6 +1364,66 @@
       <anchorfile>class_profile_report.html</anchorfile>
       <anchor>a996b7005c13fdd2d877931aaa1dfb223</anchor>
       <arglist>(jam::ConfigDocument &amp;document, const juce::ValueTree &amp;zone)</arglist>
+    </member>
+  </compound>
+  <compound kind="struct">
+    <name>ToolServer::Run</name>
+    <filename>struct_tool_server_1_1_run.html</filename>
+    <member kind="function">
+      <type></type>
+      <name>Run</name>
+      <anchorfile>struct_tool_server_1_1_run.html</anchorfile>
+      <anchor>a6a731af0afca8c517da6066ec63bfe5c</anchor>
+      <arglist>(jam::Model &amp;newModel, const juce::String &amp;newRequestId)</arglist>
+    </member>
+    <member kind="variable">
+      <type>juce::ValueTree</type>
+      <name>row</name>
+      <anchorfile>struct_tool_server_1_1_run.html</anchorfile>
+      <anchor>a1d64254890e9f8f54e4d6d8aca621004</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>jam::Parameter&lt; int &gt;</type>
+      <name>numMessages</name>
+      <anchorfile>struct_tool_server_1_1_run.html</anchorfile>
+      <anchor>a6ed1ddc7440147c9c5c15ccac18e0e8e</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>jam::Parameter&lt; int &gt;</type>
+      <name>exitCode</name>
+      <anchorfile>struct_tool_server_1_1_run.html</anchorfile>
+      <anchor>a555dcee1c3c480e6e51b927e6fc243bc</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>jam::Parameter&lt; int &gt;</type>
+      <name>isOpen</name>
+      <anchorfile>struct_tool_server_1_1_run.html</anchorfile>
+      <anchor>a022826a569c9bc1d60cd91a6b0e8b258</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>jam::Model::ParameterAttachment</type>
+      <name>numMessagesAttachment</name>
+      <anchorfile>struct_tool_server_1_1_run.html</anchorfile>
+      <anchor>ae5f1c2cd126cccdfe3fd8ec58a38bff7</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>jam::Model::ParameterAttachment</type>
+      <name>isOpenAttachment</name>
+      <anchorfile>struct_tool_server_1_1_run.html</anchorfile>
+      <anchor>a3d7cad0e8066af44fb44b9aa1d7521a9</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>jam::StdioClient</type>
+      <name>client</name>
+      <anchorfile>struct_tool_server_1_1_run.html</anchorfile>
+      <anchor>a2ef12c7545dac9e8208d94dad453d9a5</anchor>
+      <arglist></arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -1813,6 +1889,153 @@
       <anchorfile>struct_toolchain.html</anchorfile>
       <anchor>a8e82b6e8f1d8d5e72d8f8fb7f5149401</anchor>
       <arglist>(const juce::StringArray &amp;arguments, const juce::File &amp;workingDirectory, const juce::String &amp;diagnosticLine)</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>ToolServer</name>
+    <filename>class_tool_server.html</filename>
+    <base>juce::JUCEApplicationBase</base>
+    <base protection="private">juce::ValueTree::Listener</base>
+    <class kind="struct">ToolServer::Run</class>
+    <member kind="function">
+      <type></type>
+      <name>ToolServer</name>
+      <anchorfile>class_tool_server.html</anchorfile>
+      <anchor>a02fc10d9f623b0840a9828ab2b1034c2</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>~ToolServer</name>
+      <anchorfile>class_tool_server.html</anchorfile>
+      <anchor>a3cfbb1835d9962d3b70963a4104ed339</anchor>
+      <arglist>() override</arglist>
+    </member>
+    <member kind="function">
+      <type>const juce::String</type>
+      <name>getApplicationName</name>
+      <anchorfile>class_tool_server.html</anchorfile>
+      <anchor>a31af82354bf12fa6d3a41782429fa064</anchor>
+      <arglist>() override</arglist>
+    </member>
+    <member kind="function">
+      <type>const juce::String</type>
+      <name>getApplicationVersion</name>
+      <anchorfile>class_tool_server.html</anchorfile>
+      <anchor>a1b55a008966cef238db44bc598a9d265</anchor>
+      <arglist>() override</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>moreThanOneInstanceAllowed</name>
+      <anchorfile>class_tool_server.html</anchorfile>
+      <anchor>af43b0e57a737a5674afa04d5d9360e5f</anchor>
+      <arglist>() override</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>initialise</name>
+      <anchorfile>class_tool_server.html</anchorfile>
+      <anchor>a739700046b91b0e952eb6110b47ced73</anchor>
+      <arglist>(const juce::String &amp;) override</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>shutdown</name>
+      <anchorfile>class_tool_server.html</anchorfile>
+      <anchor>a67dfc9edb1a9f5281909593b081771fe</anchor>
+      <arglist>() override</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>anotherInstanceStarted</name>
+      <anchorfile>class_tool_server.html</anchorfile>
+      <anchor>a255ce32ecad9581b8b58ac9215b968c3</anchor>
+      <arglist>(const juce::String &amp;) override</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>systemRequestedQuit</name>
+      <anchorfile>class_tool_server.html</anchorfile>
+      <anchor>a8b5d6f747e68809ff4f242232e5294d3</anchor>
+      <arglist>() override</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>suspended</name>
+      <anchorfile>class_tool_server.html</anchorfile>
+      <anchor>a1d4d56a6a9d996a22275de87f8d2ad16</anchor>
+      <arglist>() override</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>resumed</name>
+      <anchorfile>class_tool_server.html</anchorfile>
+      <anchor>adf52b030d2835bd4b593fcad5f4b8389</anchor>
+      <arglist>() override</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>unhandledException</name>
+      <anchorfile>class_tool_server.html</anchorfile>
+      <anchor>a1ed4198ef4a64aa94d268aceb7353406</anchor>
+      <arglist>(const std::exception *, const juce::String &amp;, int) override</arglist>
+    </member>
+    <member kind="function" protection="private">
+      <type>void</type>
+      <name>runTool</name>
+      <anchorfile>class_tool_server.html</anchorfile>
+      <anchor>a5f2b9b19c86c8ca77a47154adc5e7f50</anchor>
+      <arglist>(const juce::String &amp;requestId, const jam::JsonDocument &amp;document, const jam::Document::Element &amp;arguments)</arglist>
+    </member>
+    <member kind="function" protection="private">
+      <type>void</type>
+      <name>appendOutput</name>
+      <anchorfile>class_tool_server.html</anchorfile>
+      <anchor>afb50ecb671d75e0a3ea09ec9013fcf93</anchor>
+      <arglist>(Run &amp;run)</arglist>
+    </member>
+    <member kind="function" protection="private">
+      <type>void</type>
+      <name>valueTreePropertyChanged</name>
+      <anchorfile>class_tool_server.html</anchorfile>
+      <anchor>ad3c7f1c07437d5bcb8c9dba5c37e8fcf</anchor>
+      <arglist>(juce::ValueTree &amp;tree, const juce::Identifier &amp;property) override</arglist>
+    </member>
+    <member kind="variable" protection="private">
+      <type>jam::Model</type>
+      <name>model</name>
+      <anchorfile>class_tool_server.html</anchorfile>
+      <anchor>adfc3b32dd76b39f3ea9ccf17b2f408d9</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="private">
+      <type>jam::ModelContextServer</type>
+      <name>server</name>
+      <anchorfile>class_tool_server.html</anchorfile>
+      <anchor>a8c7c8300bffeecee023693f36d7ce2e7</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="private">
+      <type>jam::HashMap&lt; juce::String, std::unique_ptr&lt; Run &gt; &gt;</type>
+      <name>runs</name>
+      <anchorfile>class_tool_server.html</anchorfile>
+      <anchor>a06a7f5f9952e514da2b3e64b9c0ca5e5</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="private" static="yes">
+      <type>static constexpr int</type>
+      <name>bufferSize</name>
+      <anchorfile>class_tool_server.html</anchorfile>
+      <anchor>ab107dbe406c52e51c34ccd3c8154b12b</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="private" static="yes">
+      <type>static constexpr double</type>
+      <name>maximumPeriodMilliseconds</name>
+      <anchorfile>class_tool_server.html</anchorfile>
+      <anchor>a07f2f7b6e590e51a8dc1d9ba78a8091c</anchor>
+      <arglist></arglist>
     </member>
   </compound>
   <compound kind="struct">

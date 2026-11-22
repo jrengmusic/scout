@@ -897,7 +897,7 @@
         <location file="Sampler.h" line="240" column="10" bodyfile="Sampler.cpp" bodystart="413" bodyend="416"/>
         <references refid="class_sampler_1a5996dbf305228d55bfb3c86ced39b146" compoundref="_sampler_8h" startline="426" endline="426">counts</references>
         <references refid="namespaceId_1adde2588094245cad94a1f732180bf49d">Id::dropped</references>
-        <references refid="namespaceId_1aaa0851cf60aab0c856e3aa5b9ebabf75" compoundref="_generated_8cpp" startline="40" endline="40">Id::sample</references>
+        <references refid="namespaceId_1aaa0851cf60aab0c856e3aa5b9ebabf75" compoundref="_generated_8cpp" startline="39" endline="39">Id::sample</references>
         <references refid="structjam_1_1Format_1ab2a4d1f99713c10e63ece15ecf38b4a7">jam::Format::toType</references>
         <referencedby refid="class_sampler_1a5b74c691901a5a66225c5653c8a90005" compoundref="_sampler_8cpp" startline="298" endline="320">addRecords</referencedby>
       </memberdef>
@@ -1029,8 +1029,8 @@
         <location file="Sampler.h" line="366" column="10" bodyfile="Sampler.cpp" bodystart="629" bodyend="636"/>
         <references refid="class_sampler_1a5b74c691901a5a66225c5653c8a90005" compoundref="_sampler_8cpp" startline="298" endline="320">addRecords</references>
         <references refid="class_sampler_1a108f45bb6b7a2c1fa3204ea9a0cc25ad" compoundref="_sampler_8h" startline="416">clockRings</references>
-        <references refid="namespaceId_1a9dd3b447eb5f7e4e61f3f4264c20a2e5" compoundref="_generated_8cpp" startline="41" endline="41">Id::cswitch</references>
-        <references refid="namespaceId_1aaa0851cf60aab0c856e3aa5b9ebabf75" compoundref="_generated_8cpp" startline="40" endline="40">Id::sample</references>
+        <references refid="namespaceId_1a9dd3b447eb5f7e4e61f3f4264c20a2e5" compoundref="_generated_8cpp" startline="40" endline="40">Id::cswitch</references>
+        <references refid="namespaceId_1aaa0851cf60aab0c856e3aa5b9ebabf75" compoundref="_generated_8cpp" startline="39" endline="39">Id::sample</references>
         <references refid="class_sampler_1a8072e26240c9fb945f82d2a5bf2131c4" compoundref="_sampler_8h" startline="419">switchRings</references>
         <references refid="structjam_1_1Format_1ab2a4d1f99713c10e63ece15ecf38b4a7">jam::Format::toType</references>
       </memberdef>

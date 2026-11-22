@@ -11,8 +11,9 @@ manifest that you named was not found.
 | :---------------------------------------------- | :----------------------------------------------------------------- | :----- |
 | `scout`                                         | Prints this guide.                                                 | 0      |
 | `scout --help`, `scout <manifest> --help`       | Prints this guide.                                                 | 0      |
-| `scout --version`, `scout <manifest> --version` | Prints `scout 0.0.1 (<commit>)`.                                   | 0      |
-| `scout <manifest>`, the file does not exist     | Prints this guide, then `scout: not found: <file name>` on stderr. | 1      |
+| `scout --version`, `scout <manifest> --version` | Prints `scout 0.0.1 (<commit>)`.                                                                 | 0      |
+| `scout --mcp`                                   | Serves the run tool as Model Context Protocol over stdin and stdout. Ends when stdin closes.     | 0      |
+| `scout <manifest>`, the file does not exist     | Prints this guide, then `scout: not found: <file name>` on stderr.                               | 1      |
 | `scout <manifest>`                              | Runs the manifest (see The Run).                                   | 0 or 1 |
 | `scout <manifest> <other>`                      | Prints `scout: <other>: unknown flag` on stderr.                   | 1      |
 

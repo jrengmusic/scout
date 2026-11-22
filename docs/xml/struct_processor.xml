@@ -19,14 +19,15 @@
         <inbodydescription>
         </inbodydescription>
         <location file="Processor.h" line="109" column="22" bodyfile="Processor.h" bodystart="109" bodyend="-1"/>
+        <referencedby refid="struct_processor_1ac2f8ddc17ef15f47f03fa71ce3d381c6" compoundref="_processor_8cpp" startline="17" endline="34">generate</referencedby>
         <referencedby refid="struct_processor_1abe5471b3c8a21dfe9bc8e7683eb4868c" compoundref="_processor_8cpp" startline="11" endline="15">Processor</referencedby>
-        <referencedby refid="struct_processor_1acec35c543c65ed5dc6618fe7e79ef835" compoundref="_processor_8cpp" startline="58" endline="84">runEpochs</referencedby>
+        <referencedby refid="struct_processor_1acec35c543c65ed5dc6618fe7e79ef835" compoundref="_processor_8cpp" startline="58" endline="91">runEpochs</referencedby>
         <referencedby refid="struct_processor_1a83804663c3ddec5019aad5fa2673bada" compoundref="_processor_8cpp" startline="46" endline="56">runToolchainRow</referencedby>
-        <referencedby refid="struct_processor_1aa277929ee4d6480d62fa48d2dd5f2a6c" compoundref="_processor_8cpp" startline="86" endline="95">writeReport</referencedby>
+        <referencedby refid="struct_processor_1aa277929ee4d6480d62fa48d2dd5f2a6c" compoundref="_processor_8cpp" startline="93" endline="102">writeReport</referencedby>
       </memberdef>
-      <memberdef kind="variable" id="struct_processor_1afb131d60d600f95ce7bc382f8d9724e7" prot="private" static="no" mutable="no">
-        <type>const <ref refid="structjam_1_1ConfigDocument" kindref="compound" external="/Users/jreng/Documents/Poems/dev/jam/docs/tagfile.xml">jam::ConfigDocument</ref></type>
-        <definition>const jam::ConfigDocument Processor::manifest</definition>
+      <memberdef kind="variable" id="struct_processor_1adf0b2fa54f5d2a239823e9661d90f9a6" prot="private" static="no" mutable="no">
+        <type>const std::unique_ptr&lt; <ref refid="structjam_1_1ConfigDocument" kindref="compound" external="/Users/jreng/Documents/Poems/dev/jam/docs/tagfile.xml">jam::ConfigDocument</ref> &gt;</type>
+        <definition>const std::unique_ptr&lt;jam::ConfigDocument&gt; Processor::manifest</definition>
         <argsstring></argsstring>
         <name>manifest</name>
         <qualifiedname>Processor::manifest</qualifiedname>
@@ -37,7 +38,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Processor.h" line="112" column="31" bodyfile="Processor.h" bodystart="112" bodyend="-1"/>
+        <location file="Processor.h" line="112" column="27" bodyfile="Processor.h" bodystart="112" bodyend="-1"/>
         <referencedby refid="struct_processor_1ac2f8ddc17ef15f47f03fa71ce3d381c6" compoundref="_processor_8cpp" startline="17" endline="34">generate</referencedby>
         <referencedby refid="struct_processor_1abe5471b3c8a21dfe9bc8e7683eb4868c" compoundref="_processor_8cpp" startline="11" endline="15">Processor</referencedby>
         <referencedby refid="struct_processor_1a6ace9660425275f32080160c0ae88b2b" compoundref="_processor_8cpp" startline="36" endline="44">run</referencedby>
@@ -74,7 +75,7 @@
         </inbodydescription>
         <location file="Processor.h" line="29" column="14" bodyfile="Processor.cpp" bodystart="11" bodyend="15"/>
         <references refid="struct_processor_1a8dbadccb605c3a32f0e5af688b43d652" compoundref="_processor_8h" startline="109">documentFile</references>
-        <references refid="struct_processor_1afb131d60d600f95ce7bc382f8d9724e7" compoundref="_processor_8h" startline="112">manifest</references>
+        <references refid="struct_processor_1adf0b2fa54f5d2a239823e9661d90f9a6" compoundref="_processor_8h" startline="112">manifest</references>
       </memberdef>
       <memberdef kind="function" id="struct_processor_1ac2f8ddc17ef15f47f03fa71ce3d381c6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classjuce_1_1Result" kindref="compound" external="/Users/jreng/Documents/Poems/JUCE/docs/tagfile.xml">juce::Result</ref></type>
@@ -94,16 +95,20 @@
         <inbodydescription>
         </inbodydescription>
         <location file="Processor.h" line="43" column="18" bodyfile="Processor.cpp" bodystart="17" bodyend="34"/>
+        <references refid="struct_processor_1a8dbadccb605c3a32f0e5af688b43d652" compoundref="_processor_8h" startline="109">documentFile</references>
+        <references refid="classjuce_1_1File_1a515fa016b189068f365cc875e241e2a1">juce::File::getFullPathName</references>
         <references refid="structjam_1_1ConfigDocument_1adec16ec1ad68995d0addd3b78a442b34">jam::ConfigDocument::getValueTree</references>
+        <references refid="structjam_1_1ConfigDocument_1ad72ea8de8809e4ee5359c9ff5e759c76">jam::ConfigDocument::isValid</references>
         <references refid="structjam_1_1Document_1_1Validator_1a1275a95db9c777fcceff5c574c561ae0">jam::Document::Validator::isValid</references>
+        <references refid="classjuce_1_1File_1aa65d2fa50370357bf93658d6447c296d">juce::File::loadFileAsString</references>
         <references refid="namespaceId_1a14ad76a66641361dbfbfc9424e6a2f3f">Id::manifest</references>
-        <references refid="struct_processor_1afb131d60d600f95ce7bc382f8d9724e7" compoundref="_processor_8h" startline="112">manifest</references>
+        <references refid="struct_processor_1adf0b2fa54f5d2a239823e9661d90f9a6" compoundref="_processor_8h" startline="112">manifest</references>
         <references refid="namespaceId_1ae94c00f38c99144148371d4d273c298b">Id::run</references>
         <references refid="struct_processor_1a6ace9660425275f32080160c0ae88b2b" compoundref="_processor_8cpp" startline="36" endline="44">run</references>
-        <references refid="struct_processor_1acec35c543c65ed5dc6618fe7e79ef835" compoundref="_processor_8cpp" startline="58" endline="84">runEpochs</references>
-        <references refid="namespaceId_1aaa0851cf60aab0c856e3aa5b9ebabf75" compoundref="_generated_8cpp" startline="40" endline="40">Id::sample</references>
+        <references refid="struct_processor_1acec35c543c65ed5dc6618fe7e79ef835" compoundref="_processor_8cpp" startline="58" endline="91">runEpochs</references>
+        <references refid="namespaceId_1aaa0851cf60aab0c856e3aa5b9ebabf75" compoundref="_generated_8cpp" startline="39" endline="39">Id::sample</references>
         <references refid="structjam_1_1Format_1ab2a4d1f99713c10e63ece15ecf38b4a7">jam::Format::toType</references>
-        <referencedby refid="_main_8cpp_1a739f5ce0b26b14496e6eba6d9cb92356" compoundref="_main_8cpp" startline="158" endline="172">runDocument</referencedby>
+        <referencedby refid="_main_8cpp_1a739f5ce0b26b14496e6eba6d9cb92356" compoundref="_main_8cpp" startline="186" endline="200">runDocument</referencedby>
       </memberdef>
     </sectiondef>
     <sectiondef kind="private-func">
@@ -127,10 +132,10 @@
         <location file="Processor.h" line="55" column="18" bodyfile="Processor.cpp" bodystart="36" bodyend="44"/>
         <references refid="structjam_1_1MarkdownDocument_1ae0e1ecae86b43cd8ffa7be4594f50150">jam::MarkdownDocument::getTableRows</references>
         <references refid="structjam_1_1MarkdownDocument_1a5f9310fc70231c79f9573fb7f9a67ed4">jam::MarkdownDocument::getTables</references>
-        <references refid="struct_processor_1afb131d60d600f95ce7bc382f8d9724e7" compoundref="_processor_8h" startline="112">manifest</references>
+        <references refid="struct_processor_1adf0b2fa54f5d2a239823e9661d90f9a6" compoundref="_processor_8h" startline="112">manifest</references>
         <references refid="classjuce_1_1Result_1ac2133128eeba510367bfe1b83383ae0f">juce::Result::ok</references>
         <references refid="struct_processor_1a83804663c3ddec5019aad5fa2673bada" compoundref="_processor_8cpp" startline="46" endline="56">runToolchainRow</references>
-        <references refid="namespaceId_1a0f9647376c570f4f428258196fa64c61" compoundref="_generated_8cpp" startline="36" endline="36">Id::toolchain</references>
+        <references refid="namespaceId_1a0f9647376c570f4f428258196fa64c61" compoundref="_generated_8cpp" startline="35" endline="35">Id::toolchain</references>
         <referencedby refid="struct_processor_1ac2f8ddc17ef15f47f03fa71ce3d381c6" compoundref="_processor_8cpp" startline="17" endline="34">generate</referencedby>
       </memberdef>
       <memberdef kind="function" id="struct_processor_1a83804663c3ddec5019aad5fa2673bada" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
@@ -164,13 +169,13 @@
         <inbodydescription>
         </inbodydescription>
         <location file="Processor.h" line="69" column="18" bodyfile="Processor.cpp" bodystart="46" bodyend="56"/>
-        <references refid="namespaceId_1a1538a142ed265f60c8fcf1703a106a7d" compoundref="_identifiers_8h" startline="32">Id::command</references>
+        <references refid="namespaceId_1a1538a142ed265f60c8fcf1703a106a7d">Id::command</references>
         <references refid="struct_processor_1a8dbadccb605c3a32f0e5af688b43d652" compoundref="_processor_8h" startline="109">documentFile</references>
-        <references refid="namespaceId_1ac8f84d92cb02638b89abb87149be1caf" compoundref="_generated_8cpp" startline="37" endline="37">Id::flag</references>
+        <references refid="namespaceId_1ac8f84d92cb02638b89abb87149be1caf" compoundref="_generated_8cpp" startline="36" endline="36">Id::flag</references>
         <references refid="classjuce_1_1File_1ab6bec65fbcf19ce10e38cf9d1015770d">juce::File::getParentDirectory</references>
         <references refid="structjam_1_1MarkdownDocument_1a06a09fa79c04fe1fdd553245cb6b6d87">jam::MarkdownDocument::getTableValue</references>
         <references refid="struct_toolchain_1ad96b65cacfb0e4c8d2c1cf75acd01100" compoundref="_toolchain_8cpp" startline="3" endline="13">Toolchain::getToolchainArguments</references>
-        <references refid="struct_processor_1afb131d60d600f95ce7bc382f8d9724e7" compoundref="_processor_8h" startline="112">manifest</references>
+        <references refid="struct_processor_1adf0b2fa54f5d2a239823e9661d90f9a6" compoundref="_processor_8h" startline="112">manifest</references>
         <references refid="struct_toolchain_1a8e82b6e8f1d8d5e72d8f8fb7f5149401" compoundref="_toolchain_8cpp" startline="15" endline="41">Toolchain::runProcess</references>
         <references refid="structChars_1a04b9b7227a5cdf082413821f7a1c66de">Chars::space</references>
         <referencedby refid="struct_processor_1a6ace9660425275f32080160c0ae88b2b" compoundref="_processor_8cpp" startline="36" endline="44">run</referencedby>
@@ -217,9 +222,9 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Processor.h" line="89" column="18" bodyfile="Processor.cpp" bodystart="58" bodyend="84"/>
+        <location file="Processor.h" line="89" column="18" bodyfile="Processor.cpp" bodystart="58" bodyend="91"/>
         <references refid="namespaceId_1a6f000170fabbf731e725a54a1682b99e">Id::baseline</references>
-        <references refid="namespaceId_1a1538a142ed265f60c8fcf1703a106a7d" compoundref="_identifiers_8h" startline="32">Id::command</references>
+        <references refid="namespaceId_1a1538a142ed265f60c8fcf1703a106a7d">Id::command</references>
         <references refid="namespaceId_1a5e729b9864fd096462b3f08ef1eb4b1a">Id::diagnosticSeparator</references>
         <references refid="struct_processor_1a8dbadccb605c3a32f0e5af688b43d652" compoundref="_processor_8h" startline="109">documentFile</references>
         <references refid="namespaceId_1af393585104ec335510688180036ff1d6" compoundref="_generated_8cpp" startline="26" endline="26">Id::epochs</references>
@@ -227,11 +232,13 @@
         <references refid="structtext_1_1_diagnostics_1a614879ccbad6f4edaf1a511bf5a2fa68" compoundref="_text_8h" startline="31" endline="31">text::Diagnostics::failNotFound</references>
         <references refid="_processor_8cpp_1a75659085307119553a8c6b4fd6ba0ac4" compoundref="_processor_8cpp" startline="3" endline="9">getBaseline</references>
         <references refid="classjuce_1_1File_1ab6bec65fbcf19ce10e38cf9d1015770d">juce::File::getParentDirectory</references>
-        <references refid="class_benchmark_1ac2758e9667d09cca4fa1c7d0845c7413" compoundref="_benchmark_8cpp" startline="241" endline="260">Benchmark::getProfiles</references>
-        <references refid="class_benchmark_1a8b4bab8a038fba5d18366ba23e32923f" compoundref="_benchmark_8cpp" startline="123" endline="155">Benchmark::runEpoch</references>
+        <references refid="class_benchmark_1ac2758e9667d09cca4fa1c7d0845c7413" compoundref="_benchmark_8cpp" startline="242" endline="261">Benchmark::getProfiles</references>
+        <references refid="structjam_1_1ConfigDocument_1ad72ea8de8809e4ee5359c9ff5e759c76">jam::ConfigDocument::isValid</references>
+        <references refid="classjuce_1_1Result_1ac2133128eeba510367bfe1b83383ae0f">juce::Result::ok</references>
+        <references refid="class_benchmark_1a8b4bab8a038fba5d18366ba23e32923f" compoundref="_benchmark_8cpp" startline="124" endline="156">Benchmark::runEpoch</references>
         <references refid="namespaceId_1a767aceb9bc5d27527f647a9935420ee1">Id::samples</references>
         <references refid="structjam_1_1Format_1ab2a4d1f99713c10e63ece15ecf38b4a7">jam::Format::toType</references>
-        <references refid="struct_processor_1aa277929ee4d6480d62fa48d2dd5f2a6c" compoundref="_processor_8cpp" startline="86" endline="95">writeReport</references>
+        <references refid="struct_processor_1aa277929ee4d6480d62fa48d2dd5f2a6c" compoundref="_processor_8cpp" startline="93" endline="102">writeReport</references>
         <referencedby refid="struct_processor_1ac2f8ddc17ef15f47f03fa71ce3d381c6" compoundref="_processor_8cpp" startline="17" endline="34">generate</referencedby>
       </memberdef>
       <memberdef kind="function" id="struct_processor_1aa277929ee4d6480d62fa48d2dd5f2a6c" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
@@ -276,8 +283,8 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="Processor.h" line="103" column="18" bodyfile="Processor.cpp" bodystart="86" bodyend="95"/>
-        <references refid="namespaceId_1a32ffc7aee9ffe0ba992401c38b1e8243" compoundref="_generated_8cpp" startline="39" endline="39">Id::date</references>
+        <location file="Processor.h" line="103" column="18" bodyfile="Processor.cpp" bodystart="93" bodyend="102"/>
+        <references refid="namespaceId_1a32ffc7aee9ffe0ba992401c38b1e8243" compoundref="_generated_8cpp" startline="38" endline="38">Id::date</references>
         <references refid="namespaceId_1a5e729b9864fd096462b3f08ef1eb4b1a">Id::diagnosticSeparator</references>
         <references refid="struct_processor_1a8dbadccb605c3a32f0e5af688b43d652" compoundref="_processor_8h" startline="109">documentFile</references>
         <references refid="classjuce_1_1Result_1a27205a4dc7a973aebd1976270867be80">juce::Result::fail</references>
@@ -290,7 +297,7 @@
         <references refid="namespaceId_1a3c8da0c68c021ababf62dc69bef9488a" compoundref="_identifiers_8h" startline="31">Id::output</references>
         <references refid="class_profile_report_1a7d27ee8611bb27c7248defc82b510100" compoundref="_profile_report_8cpp" startline="4" endline="14">ProfileReport::toFile</references>
         <references refid="structjam_1_1Format_1ab2a4d1f99713c10e63ece15ecf38b4a7">jam::Format::toType</references>
-        <referencedby refid="struct_processor_1acec35c543c65ed5dc6618fe7e79ef835" compoundref="_processor_8cpp" startline="58" endline="84">runEpochs</referencedby>
+        <referencedby refid="struct_processor_1acec35c543c65ed5dc6618fe7e79ef835" compoundref="_processor_8cpp" startline="58" endline="91">runEpochs</referencedby>
       </memberdef>
     </sectiondef>
     <briefdescription>
@@ -310,116 +317,135 @@
           <edgelabel>manifest</edgelabel>
         </childnode>
       </node>
-      <node id="14">
+      <node id="18">
         <label>jam::Array&lt; jam::Document::Property&lt; Value &gt; &gt;</label>
         <link refid="classjam_1_1Array" external="/Users/jreng/Documents/Poems/dev/jam/docs/tagfile.xml"/>
-        <childnode refid="8" relation="public-inheritance">
+        <childnode refid="9" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="24">
+        <label>jam::Array&lt; jam::Document::Token &gt;</label>
+        <link refid="classjam_1_1Array" external="/Users/jreng/Documents/Poems/dev/jam/docs/tagfile.xml"/>
+        <childnode refid="9" relation="public-inheritance">
         </childnode>
       </node>
       <node id="19">
-        <label>jam::Array&lt; jam::Document::Token &gt;</label>
+        <label>jam::Array&lt; std::tuple&lt; uint32_t, int, int &gt; &gt;</label>
         <link refid="classjam_1_1Array" external="/Users/jreng/Documents/Poems/dev/jam/docs/tagfile.xml"/>
-        <childnode refid="8" relation="public-inheritance">
+        <childnode refid="9" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7">
+      <node id="8">
         <label>jam::Array&lt; std::unique_ptr&lt; ObjectClass &gt; &gt;</label>
         <link refid="classjam_1_1Array" external="/Users/jreng/Documents/Poems/dev/jam/docs/tagfile.xml"/>
-        <childnode refid="8" relation="public-inheritance">
+        <childnode refid="9" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="11">
+      <node id="15">
         <label>jam::Array&lt; uint32_t &gt;</label>
         <link refid="classjam_1_1Array" external="/Users/jreng/Documents/Poems/dev/jam/docs/tagfile.xml"/>
-        <childnode refid="8" relation="public-inheritance">
+        <childnode refid="9" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="3">
+      <node id="4">
         <label>jam::ConfigDocument</label>
         <link refid="structjam_1_1ConfigDocument" external="/Users/jreng/Documents/Poems/dev/jam/docs/tagfile.xml"/>
-        <childnode refid="4" relation="public-inheritance">
+        <childnode refid="5" relation="public-inheritance">
+        </childnode>
+        <childnode refid="25" relation="usage">
+          <edgelabel>configRows</edgelabel>
         </childnode>
       </node>
-      <node id="5">
+      <node id="6">
         <label>jam::Document</label>
         <link refid="structjam_1_1Document" external="/Users/jreng/Documents/Poems/dev/jam/docs/tagfile.xml"/>
-        <childnode refid="6" relation="usage">
+        <childnode refid="7" relation="usage">
           <edgelabel>elements</edgelabel>
         </childnode>
-        <childnode refid="9" relation="usage">
+        <childnode refid="10" relation="usage">
+          <edgelabel>arena</edgelabel>
+        </childnode>
+        <childnode refid="13" relation="usage">
           <edgelabel>source</edgelabel>
         </childnode>
-        <childnode refid="11" relation="usage">
+        <childnode refid="15" relation="usage">
           <edgelabel>lineOffsets</edgelabel>
         </childnode>
-        <childnode refid="12" relation="usage">
+        <childnode refid="16" relation="usage">
           <edgelabel>root</edgelabel>
         </childnode>
+        <childnode refid="19" relation="usage">
+          <edgelabel>nameTokens</edgelabel>
+        </childnode>
       </node>
-      <node id="12">
+      <node id="16">
         <label>jam::Document::Element</label>
         <link refid="structjam_1_1Document_1_1Element" external="/Users/jreng/Documents/Poems/dev/jam/docs/tagfile.xml"/>
-        <childnode refid="13" relation="usage">
+        <childnode refid="17" relation="usage">
           <edgelabel>id</edgelabel>
         </childnode>
-        <childnode refid="12" relation="usage">
+        <childnode refid="16" relation="usage">
           <edgelabel>firstChild</edgelabel>
           <edgelabel>lastChild</edgelabel>
           <edgelabel>nextSibling</edgelabel>
           <edgelabel>parent</edgelabel>
           <edgelabel>previousSibling</edgelabel>
         </childnode>
-        <childnode refid="14" relation="usage">
+        <childnode refid="18" relation="usage">
           <edgelabel>properties</edgelabel>
         </childnode>
       </node>
-      <node id="4">
+      <node id="25">
+        <label>jam::HashMap&lt; juce::String, jam::Array&lt; const Element * &gt; &gt;</label>
+        <link refid="classjam_1_1HashMap" external="/Users/jreng/Documents/Poems/dev/jam/docs/tagfile.xml"/>
+      </node>
+      <node id="5">
         <label>jam::MarkdownDocument</label>
         <link refid="structjam_1_1MarkdownDocument" external="/Users/jreng/Documents/Poems/dev/jam/docs/tagfile.xml"/>
-        <childnode refid="5" relation="public-inheritance">
+        <childnode refid="6" relation="public-inheritance">
         </childnode>
-        <childnode refid="15" relation="usage">
+        <childnode refid="20" relation="usage">
           <edgelabel>blockTag</edgelabel>
         </childnode>
-        <childnode refid="17" relation="usage">
+        <childnode refid="22" relation="usage">
           <edgelabel>headingTag</edgelabel>
         </childnode>
-        <childnode refid="18" relation="usage">
+        <childnode refid="23" relation="usage">
           <edgelabel>openBlock</edgelabel>
         </childnode>
-        <childnode refid="19" relation="usage">
+        <childnode refid="24" relation="usage">
           <edgelabel>tokens</edgelabel>
         </childnode>
       </node>
-      <node id="6">
+      <node id="7">
         <label>jam::Owner&lt; jam::Document::Element &gt;</label>
         <link refid="classjam_1_1Owner" external="/Users/jreng/Documents/Poems/dev/jam/docs/tagfile.xml"/>
-        <childnode refid="7" relation="usage">
+        <childnode refid="8" relation="usage">
           <edgelabel>entries</edgelabel>
         </childnode>
       </node>
-      <node id="15">
+      <node id="20">
         <label>jam::SharedInstance&lt; map::BlockTag &gt;</label>
         <link refid="classjam_1_1SharedInstance" external="/Users/jreng/Documents/Poems/dev/jam/docs/tagfile.xml"/>
-        <childnode refid="16" relation="usage">
+        <childnode refid="21" relation="usage">
           <edgelabel>object</edgelabel>
         </childnode>
       </node>
-      <node id="17">
+      <node id="22">
         <label>jam::SharedInstance&lt; map::HeadingTag &gt;</label>
         <link refid="classjam_1_1SharedInstance" external="/Users/jreng/Documents/Poems/dev/jam/docs/tagfile.xml"/>
-        <childnode refid="16" relation="usage">
+        <childnode refid="21" relation="usage">
           <edgelabel>object</edgelabel>
         </childnode>
       </node>
-      <node id="18">
+      <node id="23">
         <label>jam::SharedInstance&lt; map::OpenBlock &gt;</label>
         <link refid="classjam_1_1SharedInstance" external="/Users/jreng/Documents/Poems/dev/jam/docs/tagfile.xml"/>
-        <childnode refid="16" relation="usage">
+        <childnode refid="21" relation="usage">
           <edgelabel>object</edgelabel>
         </childnode>
       </node>
-      <node id="8">
+      <node id="9">
         <label>juce::DummyCriticalSection</label>
         <link refid="classjuce_1_1DummyCriticalSection" external="/Users/jreng/Documents/Poems/JUCE/docs/tagfile.xml"/>
       </node>
@@ -427,22 +453,42 @@
         <label>juce::File</label>
         <link refid="classjuce_1_1File" external="/Users/jreng/Documents/Poems/JUCE/docs/tagfile.xml"/>
       </node>
-      <node id="13">
+      <node id="17">
         <label>juce::Identifier</label>
         <link refid="classjuce_1_1Identifier" external="/Users/jreng/Documents/Poems/JUCE/docs/tagfile.xml"/>
-        <childnode refid="13" relation="usage">
+        <childnode refid="17" relation="usage">
           <edgelabel>null</edgelabel>
         </childnode>
       </node>
-      <node id="10">
+      <node id="12">
         <label>std::basic_string&lt; Char &gt;</label>
       </node>
-      <node id="16">
+      <node id="14">
+        <label>std::basic_string_view&lt; Char &gt;</label>
+      </node>
+      <node id="21">
         <label>std::shared_ptr&lt; ObjectType &gt;</label>
       </node>
-      <node id="9">
+      <node id="11">
         <label>std::string</label>
-        <childnode refid="10" relation="public-inheritance">
+        <childnode refid="12" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="13">
+        <label>std::string_view</label>
+        <childnode refid="14" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>std::unique_ptr&lt; jam::ConfigDocument &gt;</label>
+        <childnode refid="4" relation="usage">
+          <edgelabel>ptr</edgelabel>
+        </childnode>
+      </node>
+      <node id="10">
+        <label>std::unique_ptr&lt; std::string &gt;</label>
+        <childnode refid="11" relation="usage">
+          <edgelabel>ptr</edgelabel>
         </childnode>
       </node>
     </collaborationgraph>
@@ -450,7 +496,7 @@
     <listofallmembers>
       <member refid="struct_processor_1a8dbadccb605c3a32f0e5af688b43d652" prot="private" virt="non-virtual"><scope>Processor</scope><name>documentFile</name></member>
       <member refid="struct_processor_1ac2f8ddc17ef15f47f03fa71ce3d381c6" prot="public" virt="non-virtual"><scope>Processor</scope><name>generate</name></member>
-      <member refid="struct_processor_1afb131d60d600f95ce7bc382f8d9724e7" prot="private" virt="non-virtual"><scope>Processor</scope><name>manifest</name></member>
+      <member refid="struct_processor_1adf0b2fa54f5d2a239823e9661d90f9a6" prot="private" virt="non-virtual"><scope>Processor</scope><name>manifest</name></member>
       <member refid="struct_processor_1abe5471b3c8a21dfe9bc8e7683eb4868c" prot="public" virt="non-virtual"><scope>Processor</scope><name>Processor</name></member>
       <member refid="struct_processor_1a6ace9660425275f32080160c0ae88b2b" prot="private" virt="non-virtual"><scope>Processor</scope><name>run</name></member>
       <member refid="struct_processor_1acec35c543c65ed5dc6618fe7e79ef835" prot="private" virt="non-virtual"><scope>Processor</scope><name>runEpochs</name></member>

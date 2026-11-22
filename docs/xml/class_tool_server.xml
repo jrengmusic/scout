@@ -1,0 +1,1080 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.18.0" xml:lang="en-US">
+  <compounddef id="class_tool_server" kind="class" language="C++" prot="public">
+    <compoundname>ToolServer</compoundname>
+    <basecompoundref refid="classjuce_1_1JUCEApplicationBase" prot="public" virt="non-virtual">juce::JUCEApplicationBase</basecompoundref>
+    <basecompoundref refid="classjuce_1_1ValueTree_1_1Listener" prot="private" virt="non-virtual">juce::ValueTree::Listener</basecompoundref>
+    <includes refid="_tool_server_8h" local="no">ToolServer.h</includes>
+    <innerclass refid="struct_tool_server_1_1_run" prot="private">ToolServer::Run</innerclass>
+    <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="class_tool_server_1ab107dbe406c52e51c34ccd3c8154b12b" prot="private" static="yes" constexpr="yes" mutable="no">
+        <type>int</type>
+        <definition>int ToolServer::bufferSize</definition>
+        <argsstring></argsstring>
+        <name>bufferSize</name>
+        <qualifiedname>ToolServer::bufferSize</qualifiedname>
+        <initializer>{ 1 &lt;&lt; 20 }</initializer>
+        <briefdescription>
+<para>FIFO buffer capacity in bytes for reading merged child stdout and stderr. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ToolServer.h" line="150" column="26" bodyfile="ToolServer.h" bodystart="150" bodyend="150"/>
+        <referencedby refid="class_tool_server_1a5f2b9b19c86c8ca77a47154adc5e7f50" compoundref="_tool_server_8cpp" startline="108" endline="144">runTool</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_tool_server_1a07f2f7b6e590e51a8dc1d9ba78a8091c" prot="private" static="yes" constexpr="yes" mutable="no">
+        <type>double</type>
+        <definition>double ToolServer::maximumPeriodMilliseconds</definition>
+        <argsstring></argsstring>
+        <name>maximumPeriodMilliseconds</name>
+        <qualifiedname>ToolServer::maximumPeriodMilliseconds</qualifiedname>
+        <initializer>{ 0.0 }</initializer>
+        <briefdescription>
+<para>Polling period limit in milliseconds; zero dispatches reads without throttling. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ToolServer.h" line="153" column="29" bodyfile="ToolServer.h" bodystart="153" bodyend="153"/>
+        <referencedby refid="class_tool_server_1a5f2b9b19c86c8ca77a47154adc5e7f50" compoundref="_tool_server_8cpp" startline="108" endline="144">runTool</referencedby>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_tool_server_1adfc3b32dd76b39f3ea9ccf17b2f408d9" prot="private" static="no" mutable="no">
+        <type><ref refid="classjam_1_1Model" kindref="compound" external="/Users/jreng/Documents/Poems/dev/jam/docs/tagfile.xml">jam::Model</ref></type>
+        <definition>jam::Model ToolServer::model</definition>
+        <argsstring></argsstring>
+        <name>model</name>
+        <qualifiedname>ToolServer::model</qualifiedname>
+        <initializer>{ <ref refid="namespaceId_1ae94c00f38c99144148371d4d273c298b" kindref="member" external="/Users/jreng/Documents/Poems/dev/jam/docs/tagfile.xml">Id::run</ref> }</initializer>
+        <briefdescription>
+<para>Shared Model owning active run ValueTree rows for message-thread dispatch. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ToolServer.h" line="156" column="16" bodyfile="ToolServer.h" bodystart="156" bodyend="156"/>
+        <referencedby refid="class_tool_server_1a5f2b9b19c86c8ca77a47154adc5e7f50" compoundref="_tool_server_8cpp" startline="108" endline="144">runTool</referencedby>
+        <referencedby refid="class_tool_server_1a02fc10d9f623b0840a9828ab2b1034c2" compoundref="_tool_server_8cpp" startline="31" endline="56">ToolServer</referencedby>
+        <referencedby refid="class_tool_server_1ad3c7f1c07437d5bcb8c9dba5c37e8fcf" compoundref="_tool_server_8cpp" startline="185" endline="230">valueTreePropertyChanged</referencedby>
+        <referencedby refid="class_tool_server_1a3cfbb1835d9962d3b70963a4104ed339" compoundref="_tool_server_8cpp" startline="58" endline="61">~ToolServer</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_tool_server_1a8c7c8300bffeecee023693f36d7ce2e7" prot="private" static="no" mutable="no">
+        <type><ref refid="classjam_1_1ModelContextServer" kindref="compound" external="/Users/jreng/Documents/Poems/dev/jam/docs/tagfile.xml">jam::ModelContextServer</ref></type>
+        <definition>jam::ModelContextServer ToolServer::server</definition>
+        <argsstring></argsstring>
+        <name>server</name>
+        <qualifiedname>ToolServer::server</qualifiedname>
+        <initializer>{ BinaryData::getString (<ref refid="namespacefiles_1a91f0a0af0d280fd92cd8c55ed092d000" kindref="member" external="/Users/jreng/Documents/Poems/dev/jam/docs/tagfile.xml">files::scoutTools</ref>).toStdString(), ProjectInfo::projectName, ProjectInfo::versionString }</initializer>
+        <briefdescription>
+<para>JSON-RPC stdio server exposing tools from embedded scoutTools metadata. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ToolServer.h" line="159" column="29" bodyfile="ToolServer.h" bodystart="159" bodyend="159"/>
+        <referencedby refid="class_tool_server_1a739700046b91b0e952eb6110b47ced73" compoundref="_tool_server_8cpp" startline="78" endline="81">initialise</referencedby>
+        <referencedby refid="class_tool_server_1a5f2b9b19c86c8ca77a47154adc5e7f50" compoundref="_tool_server_8cpp" startline="108" endline="144">runTool</referencedby>
+        <referencedby refid="class_tool_server_1a02fc10d9f623b0840a9828ab2b1034c2" compoundref="_tool_server_8cpp" startline="31" endline="56">ToolServer</referencedby>
+        <referencedby refid="class_tool_server_1ad3c7f1c07437d5bcb8c9dba5c37e8fcf" compoundref="_tool_server_8cpp" startline="185" endline="230">valueTreePropertyChanged</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_tool_server_1a06a7f5f9952e514da2b3e64b9c0ca5e5" prot="private" static="no" mutable="no">
+        <type><ref refid="classjam_1_1HashMap" kindref="compound" external="/Users/jreng/Documents/Poems/dev/jam/docs/tagfile.xml">jam::HashMap</ref>&lt; <ref refid="classjuce_1_1String" kindref="compound" external="/Users/jreng/Documents/Poems/JUCE/docs/tagfile.xml">juce::String</ref>, std::unique_ptr&lt; <ref refid="struct_tool_server_1_1_run" kindref="compound">Run</ref> &gt; &gt;</type>
+        <definition>jam::HashMap&lt;juce::String, std::unique_ptr&lt;Run&gt; &gt; ToolServer::runs</definition>
+        <argsstring></argsstring>
+        <name>runs</name>
+        <qualifiedname>ToolServer::runs</qualifiedname>
+        <briefdescription>
+<para>Active manifest runs keyed by MCP JSON-RPC request identifier. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ToolServer.h" line="162" column="18" bodyfile="ToolServer.h" bodystart="162" bodyend="-1"/>
+        <referencedby refid="class_tool_server_1a5f2b9b19c86c8ca77a47154adc5e7f50" compoundref="_tool_server_8cpp" startline="108" endline="144">runTool</referencedby>
+        <referencedby refid="class_tool_server_1a02fc10d9f623b0840a9828ab2b1034c2" compoundref="_tool_server_8cpp" startline="31" endline="56">ToolServer</referencedby>
+        <referencedby refid="class_tool_server_1ad3c7f1c07437d5bcb8c9dba5c37e8fcf" compoundref="_tool_server_8cpp" startline="185" endline="230">valueTreePropertyChanged</referencedby>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_tool_server_1a02fc10d9f623b0840a9828ab2b1034c2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>ToolServer::ToolServer</definition>
+        <argsstring>()</argsstring>
+        <name>ToolServer</name>
+        <qualifiedname>ToolServer::ToolServer</qualifiedname>
+        <briefdescription>
+<para>Registers the run tool, binds cancellation and input-close callbacks, and listens to model state. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ToolServer.h" line="23" column="5" bodyfile="ToolServer.cpp" bodystart="31" bodyend="56"/>
+        <references refid="classjuce_1_1ValueTree_1a91ef4df4f2007e83b137a65b5ea59124">juce::ValueTree::addListener</references>
+        <references refid="classjam_1_1ModelContextServer_1a6b4e0780a7e9daf249128cf7fd5d9288">jam::ModelContextServer::addTool</references>
+        <references refid="classjam_1_1Strings_1adfb32d159be94dc4a4004c50be876e3c">jam::Strings::getView</references>
+        <references refid="class_tool_server_1adfc3b32dd76b39f3ea9ccf17b2f408d9" compoundref="_tool_server_8h" startline="156" endline="156">model</references>
+        <references refid="classjam_1_1ModelContextServer_1a4a939d38220e84411e40d2bd121872ea">jam::ModelContextServer::onCancelled</references>
+        <references refid="classjam_1_1ModelContextServer_1a08a05921de93a1e2554999d3af9bc301">jam::ModelContextServer::onInputClosed</references>
+        <references refid="classjuce_1_1JUCEApplicationBase_1ae2ba9b90c02361717d997aa26861f2c4">juce::JUCEApplicationBase::quit</references>
+        <references refid="classjuce_1_1ValueTree_1a87eeb715a70137178c0b7b9a37a836dd">juce::ValueTree::removeAllChildren</references>
+        <references refid="classjuce_1_1ValueTree_1a290ee6cda9cfffd1ef393a68e8068c5b">juce::ValueTree::removeChild</references>
+        <references refid="namespaceId_1ae94c00f38c99144148371d4d273c298b">Id::run</references>
+        <references refid="class_tool_server_1a06a7f5f9952e514da2b3e64b9c0ca5e5" compoundref="_tool_server_8h" startline="162">runs</references>
+        <references refid="class_tool_server_1a5f2b9b19c86c8ca77a47154adc5e7f50" compoundref="_tool_server_8cpp" startline="108" endline="144">runTool</references>
+        <references refid="class_tool_server_1a8c7c8300bffeecee023693f36d7ce2e7" compoundref="_tool_server_8h" startline="159" endline="159">server</references>
+        <references refid="classjam_1_1Model_1aef4cd7ff33d3393980f2d12217e49857">jam::Model::state</references>
+        <referencedby refid="_main_8cpp_1a16fa16977fc9ba47db25e3fe2a82021e" compoundref="_main_8cpp" startline="100" endline="103">createToolServer</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_tool_server_1a3cfbb1835d9962d3b70963a4104ed339" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>ToolServer::~ToolServer</definition>
+        <argsstring>() override</argsstring>
+        <name>~ToolServer</name>
+        <qualifiedname>ToolServer::~ToolServer</qualifiedname>
+        <briefdescription>
+<para>Detaches this listener from model.state before destroying active runs and server. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ToolServer.h" line="28" column="5" bodyfile="ToolServer.cpp" bodystart="58" bodyend="61"/>
+        <references refid="class_tool_server_1adfc3b32dd76b39f3ea9ccf17b2f408d9" compoundref="_tool_server_8h" startline="156" endline="156">model</references>
+        <references refid="classjuce_1_1ValueTree_1adb77c358216105c3b9c695269025a909">juce::ValueTree::removeListener</references>
+        <references refid="classjam_1_1Model_1aef4cd7ff33d3393980f2d12217e49857">jam::Model::state</references>
+      </memberdef>
+      <memberdef kind="function" id="class_tool_server_1a31af82354bf12fa6d3a41782429fa064" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>const <ref refid="classjuce_1_1String" kindref="compound" external="/Users/jreng/Documents/Poems/JUCE/docs/tagfile.xml">juce::String</ref></type>
+        <definition>const juce::String ToolServer::getApplicationName</definition>
+        <argsstring>() override</argsstring>
+        <name>getApplicationName</name>
+        <qualifiedname>ToolServer::getApplicationName</qualifiedname>
+        <reimplements refid="classjuce_1_1JUCEApplicationBase_1a528b678bed5bb42b91bced35d19c4665">getApplicationName</reimplements>
+        <briefdescription>
+<para>Returns the application name from <ref refid="namespace_project_info" kindref="compound">ProjectInfo</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>The project name string. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ToolServer.h" line="35" column="24" bodyfile="ToolServer.cpp" bodystart="63" bodyend="66"/>
+      </memberdef>
+      <memberdef kind="function" id="class_tool_server_1a1b55a008966cef238db44bc598a9d265" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>const <ref refid="classjuce_1_1String" kindref="compound" external="/Users/jreng/Documents/Poems/JUCE/docs/tagfile.xml">juce::String</ref></type>
+        <definition>const juce::String ToolServer::getApplicationVersion</definition>
+        <argsstring>() override</argsstring>
+        <name>getApplicationVersion</name>
+        <qualifiedname>ToolServer::getApplicationVersion</qualifiedname>
+        <reimplements refid="classjuce_1_1JUCEApplicationBase_1ad7269020c06fd6772e64059ad6402522">getApplicationVersion</reimplements>
+        <briefdescription>
+<para>Returns the application version from <ref refid="namespace_project_info" kindref="compound">ProjectInfo</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>The project version string. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ToolServer.h" line="42" column="24" bodyfile="ToolServer.cpp" bodystart="68" bodyend="71"/>
+      </memberdef>
+      <memberdef kind="function" id="class_tool_server_1af43b0e57a737a5674afa04d5d9360e5f" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>bool ToolServer::moreThanOneInstanceAllowed</definition>
+        <argsstring>() override</argsstring>
+        <name>moreThanOneInstanceAllowed</name>
+        <qualifiedname>ToolServer::moreThanOneInstanceAllowed</qualifiedname>
+        <reimplements refid="classjuce_1_1JUCEApplicationBase_1ae0c6c491b621bd548cebb36047dd1828">moreThanOneInstanceAllowed</reimplements>
+        <briefdescription>
+<para>Permits concurrent MCP server processes for separate clients. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Always returns true. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ToolServer.h" line="49" column="10" bodyfile="ToolServer.cpp" bodystart="73" bodyend="76"/>
+      </memberdef>
+      <memberdef kind="function" id="class_tool_server_1a739700046b91b0e952eb6110b47ced73" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void ToolServer::initialise</definition>
+        <argsstring>(const juce::String &amp;) override</argsstring>
+        <name>initialise</name>
+        <qualifiedname>ToolServer::initialise</qualifiedname>
+        <reimplements refid="classjuce_1_1JUCEApplicationBase_1a2fb0e7fd4ab86c32c8e0ff663428ae1f">initialise</reimplements>
+        <param>
+          <type>const <ref refid="classjuce_1_1String" kindref="compound" external="/Users/jreng/Documents/Poems/JUCE/docs/tagfile.xml">juce::String</ref> &amp;</type>
+        </param>
+        <briefdescription>
+<para>Starts the stdio MCP server loop on application startup. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ToolServer.h" line="54" column="10" bodyfile="ToolServer.cpp" bodystart="78" bodyend="81"/>
+        <references refid="class_tool_server_1a8c7c8300bffeecee023693f36d7ce2e7" compoundref="_tool_server_8h" startline="159" endline="159">server</references>
+        <references refid="classjam_1_1ModelContextServer_1aa0eb82852771dedf50908123617f27e5">jam::ModelContextServer::start</references>
+      </memberdef>
+      <memberdef kind="function" id="class_tool_server_1a67dfc9edb1a9f5281909593b081771fe" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void ToolServer::shutdown</definition>
+        <argsstring>() override</argsstring>
+        <name>shutdown</name>
+        <qualifiedname>ToolServer::shutdown</qualifiedname>
+        <reimplements refid="classjuce_1_1JUCEApplicationBase_1a506cf94ff70285f6c6f76e5e45eaafed">shutdown</reimplements>
+        <briefdescription>
+<para>Performs no extra shutdown work; input closure and destructors release state. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ToolServer.h" line="59" column="10" bodyfile="ToolServer.cpp" bodystart="83" bodyend="85"/>
+      </memberdef>
+      <memberdef kind="function" id="class_tool_server_1a255ce32ecad9581b8b58ac9215b968c3" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void ToolServer::anotherInstanceStarted</definition>
+        <argsstring>(const juce::String &amp;) override</argsstring>
+        <name>anotherInstanceStarted</name>
+        <qualifiedname>ToolServer::anotherInstanceStarted</qualifiedname>
+        <reimplements refid="classjuce_1_1JUCEApplicationBase_1aa7ec7405480684eb465c68e93d5ba0db">anotherInstanceStarted</reimplements>
+        <param>
+          <type>const <ref refid="classjuce_1_1String" kindref="compound" external="/Users/jreng/Documents/Poems/JUCE/docs/tagfile.xml">juce::String</ref> &amp;</type>
+        </param>
+        <briefdescription>
+<para>Ignores secondary launch notices because each stdio process serves one client. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ToolServer.h" line="64" column="10" bodyfile="ToolServer.cpp" bodystart="87" bodyend="89"/>
+      </memberdef>
+      <memberdef kind="function" id="class_tool_server_1a8b5d6f747e68809ff4f242232e5294d3" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void ToolServer::systemRequestedQuit</definition>
+        <argsstring>() override</argsstring>
+        <name>systemRequestedQuit</name>
+        <qualifiedname>ToolServer::systemRequestedQuit</qualifiedname>
+        <reimplements refid="classjuce_1_1JUCEApplicationBase_1a07fe1f21a6f6226a85da12b979a8d53a">systemRequestedQuit</reimplements>
+        <briefdescription>
+<para>Quits the JUCE message loop when the host OS requests termination. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ToolServer.h" line="69" column="10" bodyfile="ToolServer.cpp" bodystart="91" bodyend="94"/>
+        <references refid="classjuce_1_1JUCEApplicationBase_1ae2ba9b90c02361717d997aa26861f2c4">juce::JUCEApplicationBase::quit</references>
+      </memberdef>
+      <memberdef kind="function" id="class_tool_server_1a1d4d56a6a9d996a22275de87f8d2ad16" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void ToolServer::suspended</definition>
+        <argsstring>() override</argsstring>
+        <name>suspended</name>
+        <qualifiedname>ToolServer::suspended</qualifiedname>
+        <reimplements refid="classjuce_1_1JUCEApplicationBase_1a637b1117ebc82518f510384c56671288">suspended</reimplements>
+        <briefdescription>
+<para>Ignores application suspend events in headless stdio mode. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ToolServer.h" line="74" column="10" bodyfile="ToolServer.cpp" bodystart="96" bodyend="98"/>
+      </memberdef>
+      <memberdef kind="function" id="class_tool_server_1adf52b030d2835bd4b593fcad5f4b8389" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void ToolServer::resumed</definition>
+        <argsstring>() override</argsstring>
+        <name>resumed</name>
+        <qualifiedname>ToolServer::resumed</qualifiedname>
+        <reimplements refid="classjuce_1_1JUCEApplicationBase_1a81adcd47029b431f40718cb1204f3d41">resumed</reimplements>
+        <briefdescription>
+<para>Ignores application resume events in headless stdio mode. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ToolServer.h" line="79" column="10" bodyfile="ToolServer.cpp" bodystart="100" bodyend="102"/>
+      </memberdef>
+      <memberdef kind="function" id="class_tool_server_1a1ed4198ef4a64aa94d268aceb7353406" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void ToolServer::unhandledException</definition>
+        <argsstring>(const std::exception *, const juce::String &amp;, int) override</argsstring>
+        <name>unhandledException</name>
+        <qualifiedname>ToolServer::unhandledException</qualifiedname>
+        <reimplements refid="classjuce_1_1JUCEApplicationBase_1adda8cfe8a8023ac4019d1728c7526169">unhandledException</reimplements>
+        <param>
+          <type>const std::exception *</type>
+        </param>
+        <param>
+          <type>const <ref refid="classjuce_1_1String" kindref="compound" external="/Users/jreng/Documents/Poems/JUCE/docs/tagfile.xml">juce::String</ref> &amp;</type>
+        </param>
+        <param>
+          <type>int</type>
+        </param>
+        <briefdescription>
+<para>Leaves unhandled exceptions unintercepted; required JUCEApplicationBase override. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ToolServer.h" line="84" column="10" bodyfile="ToolServer.cpp" bodystart="104" bodyend="106"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_tool_server_1a5f2b9b19c86c8ca77a47154adc5e7f50" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ToolServer::runTool</definition>
+        <argsstring>(const juce::String &amp;requestId, const jam::JsonDocument &amp;document, const jam::Document::Element &amp;arguments)</argsstring>
+        <name>runTool</name>
+        <qualifiedname>ToolServer::runTool</qualifiedname>
+        <param>
+          <type>const <ref refid="classjuce_1_1String" kindref="compound" external="/Users/jreng/Documents/Poems/JUCE/docs/tagfile.xml">juce::String</ref> &amp;</type>
+          <declname>requestId</declname>
+        </param>
+        <param>
+          <type>const <ref refid="structjam_1_1JsonDocument" kindref="compound" external="/Users/jreng/Documents/Poems/dev/jam/docs/tagfile.xml">jam::JsonDocument</ref> &amp;</type>
+          <declname>document</declname>
+        </param>
+        <param>
+          <type>const <ref refid="structjam_1_1Document_1_1Element" kindref="compound" external="/Users/jreng/Documents/Poems/dev/jam/docs/tagfile.xml">jam::Document::Element</ref> &amp;</type>
+          <declname>arguments</declname>
+        </param>
+        <briefdescription>
+<para>Validates the manifest path, prepends sudo for sample tables, and launches child scout. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>requestId</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>MCP JSON-RPC request identifier for the run tool call. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>document</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Parsed JSON document holding the tool call arguments. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>arguments</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>JSON object element containing the absolute manifest path. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ToolServer.h" line="132" column="10" bodyfile="ToolServer.cpp" bodystart="108" bodyend="144"/>
+        <references refid="class_tool_server_1ab107dbe406c52e51c34ccd3c8154b12b" compoundref="_tool_server_8h" startline="150" endline="150">bufferSize</references>
+        <references refid="namespaceId_1a5e729b9864fd096462b3f08ef1eb4b1a">Id::diagnosticSeparator</references>
+        <references refid="structtext_1_1_diagnostics_1a614879ccbad6f4edaf1a511bf5a2fa68" compoundref="_text_8h" startline="31" endline="31">text::Diagnostics::failNotFound</references>
+        <references refid="classjam_1_1Strings_1aca02ec79e3d857bca6f9647dce6415fc">jam::Strings::fromView</references>
+        <references refid="structjam_1_1JsonDocument_1a0dd2a6e56f40f9f1a2e8378ae1aa9f53">jam::JsonDocument::get</references>
+        <references refid="structjam_1_1JsonDocument_1abd07e9da20184aa266aa577b11a0408d">jam::JsonDocument::getString</references>
+        <references refid="classjam_1_1Strings_1adfb32d159be94dc4a4004c50be876e3c">jam::Strings::getView</references>
+        <references refid="classjuce_1_1File_1a2c0335cdfb7af1ebcc99ece94cf1e9e5">juce::File::isAbsolutePath</references>
+        <references refid="classjuce_1_1Identifier_1aa11734917f2bc61608c3bcd3e6611a6c">juce::Identifier::isValid</references>
+        <references refid="namespaceId_1a14ad76a66641361dbfbfc9424e6a2f3f">Id::manifest</references>
+        <references refid="class_tool_server_1a07f2f7b6e590e51a8dc1d9ba78a8091c" compoundref="_tool_server_8h" startline="153" endline="153">maximumPeriodMilliseconds</references>
+        <references refid="class_tool_server_1adfc3b32dd76b39f3ea9ccf17b2f408d9" compoundref="_tool_server_8h" startline="156" endline="156">model</references>
+        <references refid="structjam_1_1Document_1a367d65133f164cf9421ff0c3ddf2bbf6">jam::Document::parse</references>
+        <references refid="classjuce_1_1ValueTree_1a290ee6cda9cfffd1ef393a68e8068c5b">juce::ValueTree::removeChild</references>
+        <references refid="class_tool_server_1a06a7f5f9952e514da2b3e64b9c0ca5e5" compoundref="_tool_server_8h" startline="162">runs</references>
+        <references refid="namespaceId_1aaa0851cf60aab0c856e3aa5b9ebabf75" compoundref="_generated_8cpp" startline="39" endline="39">Id::sample</references>
+        <references refid="classjam_1_1ModelContextServer_1a156300e30079cdfca978329a5f94d008">jam::ModelContextServer::sendToolError</references>
+        <references refid="class_tool_server_1a8c7c8300bffeecee023693f36d7ce2e7" compoundref="_tool_server_8h" startline="159" endline="159">server</references>
+        <references refid="classjam_1_1Model_1aef4cd7ff33d3393980f2d12217e49857">jam::Model::state</references>
+        <references refid="classjuce_1_1Identifier_1ab6f0db1de2c36cacd1a9d7280f73aeeb">juce::Identifier::toString</references>
+        <references refid="structjam_1_1Format_1ab2a4d1f99713c10e63ece15ecf38b4a7">jam::Format::toType</references>
+        <references refid="classjam_1_1StdioClient_1ab5639d64d74c741dbc166988e76fe7b2a928cdf0ab55e53655bffd8d21b0a6dd4">jam::StdioClient::wantStdErr</references>
+        <references refid="classjam_1_1StdioClient_1ab5639d64d74c741dbc166988e76fe7b2a00078bd1104960ed3ddf11e78145b8b9">jam::StdioClient::wantStdOut</references>
+        <referencedby refid="class_tool_server_1a02fc10d9f623b0840a9828ab2b1034c2" compoundref="_tool_server_8cpp" startline="31" endline="56">ToolServer</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_tool_server_1afb50ecb671d75e0a3ea09ec9013fcf93" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ToolServer::appendOutput</definition>
+        <argsstring>(Run &amp;run)</argsstring>
+        <name>appendOutput</name>
+        <qualifiedname>ToolServer::appendOutput</qualifiedname>
+        <param>
+          <type><ref refid="struct_tool_server_1_1_run" kindref="compound">Run</ref> &amp;</type>
+          <declname>run</declname>
+        </param>
+        <briefdescription>
+<para>Drains pending output from run.client and appends it up to <ref refid="classjam_1_1Subprocess_1aec1bfb09385c234efecabc3ae1afbd79" kindref="member" external="/Users/jreng/Documents/Poems/dev/jam/docs/tagfile.xml">jam::Subprocess::byteCap</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>run</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Active run instance whose buffered child output moves into run.row. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ToolServer.h" line="139" column="10" bodyfile="ToolServer.cpp" bodystart="146" bodyend="183"/>
+        <references refid="classjuce_1_1MemoryBlock_1a431a0b89ec29239fb97827bb79efc172">juce::MemoryBlock::append</references>
+        <references refid="classjam_1_1Subprocess_1aec1bfb09385c234efecabc3ae1afbd79">jam::Subprocess::byteCap</references>
+        <references refid="classjuce_1_1MemoryBlock_1a8c25cd08391185f1237944fad5d607d8">juce::MemoryBlock::getSize</references>
+        <references refid="namespaceId_1a3c8da0c68c021ababf62dc69bef9488a" compoundref="_identifiers_8h" startline="31">Id::output</references>
+        <references refid="classjam_1_1Subprocess_1a2be7fce27537da6dd3649345f6a60fa1">jam::Subprocess::truncationNotice</references>
+        <referencedby refid="class_tool_server_1ad3c7f1c07437d5bcb8c9dba5c37e8fcf" compoundref="_tool_server_8cpp" startline="185" endline="230">valueTreePropertyChanged</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_tool_server_1ad3c7f1c07437d5bcb8c9dba5c37e8fcf" prot="private" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void ToolServer::valueTreePropertyChanged</definition>
+        <argsstring>(juce::ValueTree &amp;tree, const juce::Identifier &amp;property) override</argsstring>
+        <name>valueTreePropertyChanged</name>
+        <qualifiedname>ToolServer::valueTreePropertyChanged</qualifiedname>
+        <reimplements refid="classjuce_1_1ValueTree_1_1Listener_1a1a5481aafc0faa40aa3404a10c7b3785">valueTreePropertyChanged</reimplements>
+        <param>
+          <type><ref refid="classjuce_1_1ValueTree" kindref="compound" external="/Users/jreng/Documents/Poems/JUCE/docs/tagfile.xml">juce::ValueTree</ref> &amp;</type>
+          <declname>tree</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classjuce_1_1Identifier" kindref="compound" external="/Users/jreng/Documents/Poems/JUCE/docs/tagfile.xml">juce::Identifier</ref> &amp;</type>
+          <declname>property</declname>
+        </param>
+        <briefdescription>
+<para>Drains child output on numMessages changes and emits the final response when isOpen reaches zero. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>tree</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Modified ValueTree node inside model.state. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>property</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Identifier of the changed property on tree. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ToolServer.h" line="147" column="10" bodyfile="ToolServer.cpp" bodystart="185" bodyend="230"/>
+        <references refid="structjam_1_1Format_1a6588bb82effb3fb3138073257057463f">jam::Format::appendDecimal</references>
+        <references refid="structjam_1_1JsonWriter_1a3dd6115b3b48e6a722a2c5bcae0cd70e">jam::JsonWriter::appendKey</references>
+        <references refid="structjam_1_1JsonWriter_1af7e36be58d2d47daf877904d7c6d77e1">jam::JsonWriter::appendObject</references>
+        <references refid="class_tool_server_1afb50ecb671d75e0a3ea09ec9013fcf93" compoundref="_tool_server_8cpp" startline="146" endline="183">appendOutput</references>
+        <references refid="structjam_1_1JsonWriter_1ae7b63750554be1dd1d7bdec0545d14ec">jam::JsonWriter::appendString</references>
+        <references refid="namespaceId_1a60a61720df0f1bb8dd41cf9f90690705" compoundref="_generated_8cpp" startline="44" endline="44">Id::exitCode</references>
+        <references refid="classjuce_1_1ValueTree_1a21ae8143e7abb766a9a3b4961d74be2b">juce::ValueTree::hasType</references>
+        <references refid="namespaceId_1a3f6204ca8d39b2591e10dc6cf112e0fc">Id::id</references>
+        <references refid="namespaceId_1a6b2e6737418d84397d6a0b2f2cea31dc">Id::isOpen</references>
+        <references refid="class_tool_server_1adfc3b32dd76b39f3ea9ccf17b2f408d9" compoundref="_tool_server_8h" startline="156" endline="156">model</references>
+        <references refid="namespaceId_1abd823c98b322d39f2bd65d34d8be1513">Id::numMessages</references>
+        <references refid="namespaceId_1a3c8da0c68c021ababf62dc69bef9488a" compoundref="_identifiers_8h" startline="31">Id::output</references>
+        <references refid="classjuce_1_1ValueTree_1a290ee6cda9cfffd1ef393a68e8068c5b">juce::ValueTree::removeChild</references>
+        <references refid="namespaceId_1ae94c00f38c99144148371d4d273c298b">Id::run</references>
+        <references refid="class_tool_server_1a06a7f5f9952e514da2b3e64b9c0ca5e5" compoundref="_tool_server_8h" startline="162">runs</references>
+        <references refid="classjam_1_1ModelContextServer_1a442f5540aa0f90993529ef9ca4804bc8">jam::ModelContextServer::sendResponse</references>
+        <references refid="classjam_1_1ModelContextServer_1a156300e30079cdfca978329a5f94d008">jam::ModelContextServer::sendToolError</references>
+        <references refid="class_tool_server_1a8c7c8300bffeecee023693f36d7ce2e7" compoundref="_tool_server_8h" startline="159" endline="159">server</references>
+        <references refid="classjam_1_1Model_1aef4cd7ff33d3393980f2d12217e49857">jam::Model::state</references>
+        <references refid="structjam_1_1Format_1ab2a4d1f99713c10e63ece15ecf38b4a7">jam::Format::toType</references>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Runs the JUCE application loop for the scout MCP stdio server. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>Registers the run tool callback and collects child process output on the message thread. </para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>ToolServer</label>
+        <link refid="class_tool_server"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="3" relation="private-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>juce::JUCEApplicationBase</label>
+        <link refid="classjuce_1_1JUCEApplicationBase" external="/Users/jreng/Documents/Poems/JUCE/docs/tagfile.xml"/>
+      </node>
+      <node id="3">
+        <label>juce::ValueTree::Listener</label>
+        <link refid="classjuce_1_1ValueTree_1_1Listener" external="/Users/jreng/Documents/Poems/JUCE/docs/tagfile.xml"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>ToolServer</label>
+        <link refid="class_tool_server"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="3" relation="private-inheritance">
+        </childnode>
+        <childnode refid="4" relation="usage">
+          <edgelabel>model</edgelabel>
+        </childnode>
+        <childnode refid="13" relation="usage">
+          <edgelabel>server</edgelabel>
+        </childnode>
+        <childnode refid="64" relation="usage">
+          <edgelabel>runs</edgelabel>
+        </childnode>
+      </node>
+      <node id="6">
+        <label>jam::AnyMap&lt; typename TypeOfCriticalSectionToUse &gt;</label>
+        <link refid="classjam_1_1AnyMap" external="/Users/jreng/Documents/Poems/dev/jam/docs/tagfile.xml"/>
+        <childnode refid="7" relation="public-inheritance">
+        </childnode>
+        <childnode refid="8" relation="usage">
+          <edgelabel>entries</edgelabel>
+        </childnode>
+        <childnode refid="9" relation="usage">
+          <edgelabel>types</edgelabel>
+        </childnode>
+      </node>
+      <node id="43">
+        <label>jam::Array&lt; jam::Document::Element * &gt;</label>
+        <link refid="classjam_1_1Array" external="/Users/jreng/Documents/Poems/dev/jam/docs/tagfile.xml"/>
+        <childnode refid="7" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="38">
+        <label>jam::Array&lt; jam::Document::Property&lt; Value &gt; &gt;</label>
+        <link refid="classjam_1_1Array" external="/Users/jreng/Documents/Poems/dev/jam/docs/tagfile.xml"/>
+        <childnode refid="7" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="44">
+        <label>jam::Array&lt; jam::Document::Token &gt;</label>
+        <link refid="classjam_1_1Array" external="/Users/jreng/Documents/Poems/dev/jam/docs/tagfile.xml"/>
+        <childnode refid="7" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="21">
+        <label>jam::Array&lt; juce::String &gt;</label>
+        <link refid="classjam_1_1Array" external="/Users/jreng/Documents/Poems/dev/jam/docs/tagfile.xml"/>
+        <childnode refid="7" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="39">
+        <label>jam::Array&lt; std::tuple&lt; uint32_t, int, int &gt; &gt;</label>
+        <link refid="classjam_1_1Array" external="/Users/jreng/Documents/Poems/dev/jam/docs/tagfile.xml"/>
+        <childnode refid="7" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="31">
+        <label>jam::Array&lt; std::unique_ptr&lt; ObjectClass &gt; &gt;</label>
+        <link refid="classjam_1_1Array" external="/Users/jreng/Documents/Poems/dev/jam/docs/tagfile.xml"/>
+        <childnode refid="7" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="15">
+        <label>jam::Array&lt; std::unique_ptr&lt; jam::JsonDocument &gt; &gt;</label>
+        <link refid="classjam_1_1Array" external="/Users/jreng/Documents/Poems/dev/jam/docs/tagfile.xml"/>
+        <childnode refid="7" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="35">
+        <label>jam::Array&lt; uint32_t &gt;</label>
+        <link refid="classjam_1_1Array" external="/Users/jreng/Documents/Poems/dev/jam/docs/tagfile.xml"/>
+        <childnode refid="7" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="62">
+        <label>jam::AsyncOutputStream</label>
+        <link refid="classjam_1_1AsyncOutputStream" external="/Users/jreng/Documents/Poems/dev/jam/docs/tagfile.xml"/>
+        <childnode refid="63" relation="usage">
+          <edgelabel>native</edgelabel>
+        </childnode>
+      </node>
+      <node id="29">
+        <label>jam::Document</label>
+        <link refid="structjam_1_1Document" external="/Users/jreng/Documents/Poems/dev/jam/docs/tagfile.xml"/>
+        <childnode refid="30" relation="usage">
+          <edgelabel>elements</edgelabel>
+        </childnode>
+        <childnode refid="32" relation="usage">
+          <edgelabel>arena</edgelabel>
+        </childnode>
+        <childnode refid="25" relation="usage">
+          <edgelabel>source</edgelabel>
+        </childnode>
+        <childnode refid="35" relation="usage">
+          <edgelabel>lineOffsets</edgelabel>
+        </childnode>
+        <childnode refid="36" relation="usage">
+          <edgelabel>root</edgelabel>
+        </childnode>
+        <childnode refid="39" relation="usage">
+          <edgelabel>nameTokens</edgelabel>
+        </childnode>
+      </node>
+      <node id="36">
+        <label>jam::Document::Element</label>
+        <link refid="structjam_1_1Document_1_1Element" external="/Users/jreng/Documents/Poems/dev/jam/docs/tagfile.xml"/>
+        <childnode refid="37" relation="usage">
+          <edgelabel>id</edgelabel>
+        </childnode>
+        <childnode refid="36" relation="usage">
+          <edgelabel>firstChild</edgelabel>
+          <edgelabel>lastChild</edgelabel>
+          <edgelabel>nextSibling</edgelabel>
+          <edgelabel>parent</edgelabel>
+          <edgelabel>previousSibling</edgelabel>
+        </childnode>
+        <childnode refid="38" relation="usage">
+          <edgelabel>properties</edgelabel>
+        </childnode>
+      </node>
+      <node id="47">
+        <label>jam::Function::Map&lt; juce::Identifier, jam::Function::pointerCapacity, void(const jam::JsonDocument &amp;, const jam::Document::Element &amp;)&gt;</label>
+        <link refid="structjam_1_1Function_1_1Map" external="/Users/jreng/Documents/Poems/dev/jam/docs/tagfile.xml"/>
+        <childnode refid="23" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="46">
+        <label>jam::Function::Map&lt; juce::Identifier, jam::Function::pointerCapacity, void(const jam::JsonDocument &amp;, const jam::Document::Element &amp;, const jam::Document::Token &amp;)&gt;</label>
+        <link refid="structjam_1_1Function_1_1Map" external="/Users/jreng/Documents/Poems/dev/jam/docs/tagfile.xml"/>
+        <childnode refid="23" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="48">
+        <label>jam::Function::Map&lt; juce::Identifier, jam::Function::pointerCapacity, void(const juce::String &amp;, const jam::JsonDocument &amp;, const jam::Document::Element &amp;)&gt;</label>
+        <link refid="structjam_1_1Function_1_1Map" external="/Users/jreng/Documents/Poems/dev/jam/docs/tagfile.xml"/>
+        <childnode refid="23" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="24">
+        <label>jam::Function::Map&lt; std::string_view, jam::Function::pointerCapacity, juce::Result(int, const Document::Element &amp;, const Document::Token &amp;, const juce::String &amp;, const JsonDocument &amp;, const Document::Element &amp;, const Document::Token &amp;, const juce::String &amp;, jam::Array&lt; juce::String &gt; &amp;, EvaluationPath &amp;, Annotations &amp;)&gt;</label>
+        <link refid="structjam_1_1Function_1_1Map" external="/Users/jreng/Documents/Poems/dev/jam/docs/tagfile.xml"/>
+        <childnode refid="23" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="22">
+        <label>jam::Function::Map&lt; std::string_view, jam::Function::pointerCapacity, void(int, const Document::Element &amp;, const Document::Token &amp;, const Document::Element &amp;, const Document::Token &amp;, const juce::String &amp;)&gt;</label>
+        <link refid="structjam_1_1Function_1_1Map" external="/Users/jreng/Documents/Poems/dev/jam/docs/tagfile.xml"/>
+        <childnode refid="23" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="23">
+        <label>jam::HashMap&lt; KeyType, std::variant&lt; Overload&lt; KeyType, capacity, Signatures &gt;::Slot... &gt; &gt;</label>
+        <link refid="classjam_1_1HashMap" external="/Users/jreng/Documents/Poems/dev/jam/docs/tagfile.xml"/>
+      </node>
+      <node id="19">
+        <label>jam::HashMap&lt; const jam::Document::Token *, jam::RegExp &gt;</label>
+        <link refid="classjam_1_1HashMap" external="/Users/jreng/Documents/Poems/dev/jam/docs/tagfile.xml"/>
+      </node>
+      <node id="16">
+        <label>jam::HashMap&lt; const jam::Document::Token *, juce::String &gt;</label>
+        <link refid="classjam_1_1HashMap" external="/Users/jreng/Documents/Poems/dev/jam/docs/tagfile.xml"/>
+      </node>
+      <node id="9">
+        <label>jam::HashMap&lt; juce::Identifier, jam::AnyMap::Trait &gt;</label>
+        <link refid="classjam_1_1HashMap" external="/Users/jreng/Documents/Poems/dev/jam/docs/tagfile.xml"/>
+      </node>
+      <node id="12">
+        <label>jam::HashMap&lt; juce::Identifier, jam::HashMap&lt; juce::Identifier, std::unique_ptr&lt; ParameterAdapter &gt; &gt; &gt;</label>
+        <link refid="classjam_1_1HashMap" external="/Users/jreng/Documents/Poems/dev/jam/docs/tagfile.xml"/>
+      </node>
+      <node id="8">
+        <label>jam::HashMap&lt; juce::Identifier, std::unique_ptr&lt; void, Deleter &gt; &gt;</label>
+        <link refid="classjam_1_1HashMap" external="/Users/jreng/Documents/Poems/dev/jam/docs/tagfile.xml"/>
+      </node>
+      <node id="18">
+        <label>jam::HashMap&lt; juce::String, const jam::Document::Token * &gt;</label>
+        <link refid="classjam_1_1HashMap" external="/Users/jreng/Documents/Poems/dev/jam/docs/tagfile.xml"/>
+      </node>
+      <node id="20">
+        <label>jam::HashMap&lt; juce::String, jam::Array&lt; juce::String &gt; &gt;</label>
+        <link refid="classjam_1_1HashMap" external="/Users/jreng/Documents/Poems/dev/jam/docs/tagfile.xml"/>
+      </node>
+      <node id="17">
+        <label>jam::HashMap&lt; juce::String, std::tuple&lt; int, const jam::Document::Element *, const jam::Document::Token * &gt; &gt;</label>
+        <link refid="classjam_1_1HashMap" external="/Users/jreng/Documents/Poems/dev/jam/docs/tagfile.xml"/>
+      </node>
+      <node id="64">
+        <label>jam::HashMap&lt; juce::String, std::unique_ptr&lt; ToolServer::Run &gt; &gt;</label>
+        <link refid="classjam_1_1HashMap" external="/Users/jreng/Documents/Poems/dev/jam/docs/tagfile.xml"/>
+      </node>
+      <node id="28">
+        <label>jam::JsonDocument</label>
+        <link refid="structjam_1_1JsonDocument" external="/Users/jreng/Documents/Poems/dev/jam/docs/tagfile.xml"/>
+        <childnode refid="29" relation="public-inheritance">
+        </childnode>
+        <childnode refid="40" relation="usage">
+          <edgelabel>escapes</edgelabel>
+          <edgelabel>starts</edgelabel>
+        </childnode>
+        <childnode refid="43" relation="usage">
+          <edgelabel>containers</edgelabel>
+        </childnode>
+        <childnode refid="44" relation="usage">
+          <edgelabel>stream</edgelabel>
+        </childnode>
+      </node>
+      <node id="14">
+        <label>jam::JsonSchema</label>
+        <link refid="classjam_1_1JsonSchema" external="/Users/jreng/Documents/Poems/dev/jam/docs/tagfile.xml"/>
+        <childnode refid="15" relation="usage">
+          <edgelabel>documents</edgelabel>
+        </childnode>
+        <childnode refid="16" relation="usage">
+          <edgelabel>baseUris</edgelabel>
+        </childnode>
+        <childnode refid="17" relation="usage">
+          <edgelabel>locations</edgelabel>
+        </childnode>
+        <childnode refid="18" relation="usage">
+          <edgelabel>dynamicAnchors</edgelabel>
+        </childnode>
+        <childnode refid="19" relation="usage">
+          <edgelabel>patterns</edgelabel>
+        </childnode>
+        <childnode refid="20" relation="usage">
+          <edgelabel>vocabularies</edgelabel>
+        </childnode>
+        <childnode refid="21" relation="usage">
+          <edgelabel>unsupportedDialects</edgelabel>
+        </childnode>
+        <childnode refid="22" relation="usage">
+          <edgelabel>keywordIndexing</edgelabel>
+        </childnode>
+        <childnode refid="24" relation="usage">
+          <edgelabel>applicatorEvaluation</edgelabel>
+          <edgelabel>coreEvaluation</edgelabel>
+          <edgelabel>unevaluatedEvaluation</edgelabel>
+          <edgelabel>validationEvaluation</edgelabel>
+        </childnode>
+        <childnode refid="25" relation="usage">
+          <edgelabel>failureSeparator</edgelabel>
+        </childnode>
+      </node>
+      <node id="40">
+        <label>jam::LookupTable&lt; int, int, 256 &gt;</label>
+        <link refid="structjam_1_1LookupTable" external="/Users/jreng/Documents/Poems/dev/jam/docs/tagfile.xml"/>
+        <childnode refid="41" relation="usage">
+          <edgelabel>defaultValue</edgelabel>
+        </childnode>
+        <childnode refid="42" relation="usage">
+          <edgelabel>slots</edgelabel>
+        </childnode>
+      </node>
+      <node id="4">
+        <label>jam::Model</label>
+        <link refid="classjam_1_1Model" external="/Users/jreng/Documents/Poems/dev/jam/docs/tagfile.xml"/>
+        <childnode refid="5" relation="public-inheritance">
+        </childnode>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+        <childnode refid="6" relation="usage">
+          <edgelabel>params</edgelabel>
+        </childnode>
+        <childnode refid="10" relation="usage">
+          <edgelabel>state</edgelabel>
+        </childnode>
+        <childnode refid="11" relation="usage">
+          <edgelabel>valueTreeChanging</edgelabel>
+        </childnode>
+        <childnode refid="12" relation="usage">
+          <edgelabel>adapters</edgelabel>
+        </childnode>
+      </node>
+      <node id="49">
+        <label>jam::Model::ParameterAttachment</label>
+        <link refid="classjam_1_1Model_1_1ParameterAttachment" external="/Users/jreng/Documents/Poems/dev/jam/docs/tagfile.xml"/>
+        <childnode refid="50" relation="private-inheritance">
+        </childnode>
+        <childnode refid="51" relation="private-inheritance">
+        </childnode>
+        <childnode refid="52" relation="usage">
+          <edgelabel>parameter</edgelabel>
+        </childnode>
+        <childnode refid="55" relation="usage">
+          <edgelabel>lastValue</edgelabel>
+        </childnode>
+      </node>
+      <node id="13">
+        <label>jam::ModelContextServer</label>
+        <link refid="classjam_1_1ModelContextServer" external="/Users/jreng/Documents/Poems/dev/jam/docs/tagfile.xml"/>
+        <childnode refid="3" relation="private-inheritance">
+        </childnode>
+        <childnode refid="4" relation="usage">
+          <edgelabel>model</edgelabel>
+        </childnode>
+        <childnode refid="10" relation="usage">
+          <edgelabel>messages</edgelabel>
+          <edgelabel>requests</edgelabel>
+        </childnode>
+        <childnode refid="14" relation="usage">
+          <edgelabel>schemas</edgelabel>
+        </childnode>
+        <childnode refid="27" relation="usage">
+          <edgelabel>emptyArguments</edgelabel>
+        </childnode>
+        <childnode refid="45" relation="usage">
+          <edgelabel>serverName</edgelabel>
+          <edgelabel>serverVersion</edgelabel>
+        </childnode>
+        <childnode refid="46" relation="usage">
+          <edgelabel>requestMethods</edgelabel>
+        </childnode>
+        <childnode refid="47" relation="usage">
+          <edgelabel>notificationMethods</edgelabel>
+        </childnode>
+        <childnode refid="48" relation="usage">
+          <edgelabel>calls</edgelabel>
+        </childnode>
+        <childnode refid="49" relation="usage">
+          <edgelabel>isOpenAttachment</edgelabel>
+          <edgelabel>numMessagesAttachment</edgelabel>
+        </childnode>
+        <childnode refid="56" relation="usage">
+          <edgelabel>stdio</edgelabel>
+        </childnode>
+        <childnode refid="25" relation="usage">
+          <edgelabel>toolUriPrefix</edgelabel>
+        </childnode>
+      </node>
+      <node id="30">
+        <label>jam::Owner&lt; jam::Document::Element &gt;</label>
+        <link refid="classjam_1_1Owner" external="/Users/jreng/Documents/Poems/dev/jam/docs/tagfile.xml"/>
+        <childnode refid="31" relation="usage">
+          <edgelabel>entries</edgelabel>
+        </childnode>
+      </node>
+      <node id="52">
+        <label>jam::ParameterBase</label>
+        <link refid="structjam_1_1ParameterBase" external="/Users/jreng/Documents/Poems/dev/jam/docs/tagfile.xml"/>
+        <childnode refid="37" relation="usage">
+          <edgelabel>id</edgelabel>
+          <edgelabel>propertyId</edgelabel>
+        </childnode>
+        <childnode refid="53" relation="usage">
+          <edgelabel>needsUpdate</edgelabel>
+        </childnode>
+        <childnode refid="11" relation="usage">
+          <edgelabel>listenerLock</edgelabel>
+        </childnode>
+        <childnode refid="54" relation="usage">
+          <edgelabel>listeners</edgelabel>
+        </childnode>
+      </node>
+      <node id="50">
+        <label>jam::ParameterBase::Listener</label>
+        <link refid="structjam_1_1ParameterBase_1_1Listener" external="/Users/jreng/Documents/Poems/dev/jam/docs/tagfile.xml"/>
+      </node>
+      <node id="56">
+        <label>jam::StdioServer</label>
+        <link refid="classjam_1_1StdioServer" external="/Users/jreng/Documents/Poems/dev/jam/docs/tagfile.xml"/>
+        <childnode refid="57" relation="public-inheritance">
+        </childnode>
+        <childnode refid="58" relation="usage">
+          <edgelabel>input</edgelabel>
+          <edgelabel>output</edgelabel>
+        </childnode>
+        <childnode refid="62" relation="usage">
+          <edgelabel>reader</edgelabel>
+        </childnode>
+      </node>
+      <node id="58">
+        <label>jam::TerminalFIFO</label>
+        <link refid="classjam_1_1TerminalFIFO" external="/Users/jreng/Documents/Poems/dev/jam/docs/tagfile.xml"/>
+        <childnode refid="57" relation="public-inheritance">
+        </childnode>
+        <childnode refid="59" relation="usage">
+          <edgelabel>fifo</edgelabel>
+        </childnode>
+        <childnode refid="60" relation="usage">
+          <edgelabel>native</edgelabel>
+        </childnode>
+      </node>
+      <node id="61">
+        <label>jam::TerminalFIFO::Native</label>
+        <link refid="structjam_1_1TerminalFIFO_1_1Native" external="/Users/jreng/Documents/Poems/dev/jam/docs/tagfile.xml"/>
+      </node>
+      <node id="41">
+        <label>jam::Value</label>
+        <link refid="structjam_1_1Value" external="/Users/jreng/Documents/Poems/dev/jam/docs/tagfile.xml"/>
+      </node>
+      <node id="59">
+        <label>juce::AbstractFifo</label>
+        <link refid="classjuce_1_1AbstractFifo" external="/Users/jreng/Documents/Poems/JUCE/docs/tagfile.xml"/>
+      </node>
+      <node id="54">
+        <label>juce::Array&lt; jam::ParameterBase::Listener * &gt;</label>
+        <link refid="classjuce_1_1Array" external="/Users/jreng/Documents/Poems/JUCE/docs/tagfile.xml"/>
+      </node>
+      <node id="51">
+        <label>juce::AsyncUpdater</label>
+        <link refid="classjuce_1_1AsyncUpdater" external="/Users/jreng/Documents/Poems/JUCE/docs/tagfile.xml"/>
+      </node>
+      <node id="11">
+        <label>juce::CriticalSection</label>
+        <link refid="classjuce_1_1CriticalSection" external="/Users/jreng/Documents/Poems/JUCE/docs/tagfile.xml"/>
+      </node>
+      <node id="7">
+        <label>juce::DummyCriticalSection</label>
+        <link refid="classjuce_1_1DummyCriticalSection" external="/Users/jreng/Documents/Poems/JUCE/docs/tagfile.xml"/>
+      </node>
+      <node id="37">
+        <label>juce::Identifier</label>
+        <link refid="classjuce_1_1Identifier" external="/Users/jreng/Documents/Poems/JUCE/docs/tagfile.xml"/>
+        <childnode refid="37" relation="usage">
+          <edgelabel>null</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>juce::JUCEApplicationBase</label>
+        <link refid="classjuce_1_1JUCEApplicationBase" external="/Users/jreng/Documents/Poems/JUCE/docs/tagfile.xml"/>
+      </node>
+      <node id="57">
+        <label>juce::OutputStream</label>
+        <link refid="classjuce_1_1OutputStream" external="/Users/jreng/Documents/Poems/JUCE/docs/tagfile.xml"/>
+      </node>
+      <node id="45">
+        <label>juce::String</label>
+        <link refid="classjuce_1_1String" external="/Users/jreng/Documents/Poems/JUCE/docs/tagfile.xml"/>
+      </node>
+      <node id="5">
+        <label>juce::Timer</label>
+        <link refid="classjuce_1_1Timer" external="/Users/jreng/Documents/Poems/JUCE/docs/tagfile.xml"/>
+      </node>
+      <node id="10">
+        <label>juce::ValueTree</label>
+        <link refid="classjuce_1_1ValueTree" external="/Users/jreng/Documents/Poems/JUCE/docs/tagfile.xml"/>
+      </node>
+      <node id="3">
+        <label>juce::ValueTree::Listener</label>
+        <link refid="classjuce_1_1ValueTree_1_1Listener" external="/Users/jreng/Documents/Poems/JUCE/docs/tagfile.xml"/>
+      </node>
+      <node id="55">
+        <label>juce::var</label>
+        <link refid="classjuce_1_1var" external="/Users/jreng/Documents/Poems/JUCE/docs/tagfile.xml"/>
+      </node>
+      <node id="42">
+        <label>std::array&lt; jam::Value, static_cast&lt; size_t &gt;(Capacity)&gt;</label>
+        <childnode refid="41" relation="usage">
+          <edgelabel>elements</edgelabel>
+        </childnode>
+      </node>
+      <node id="53">
+        <label>std::atomic&lt; bool &gt;</label>
+      </node>
+      <node id="34">
+        <label>std::basic_string&lt; Char &gt;</label>
+      </node>
+      <node id="26">
+        <label>std::basic_string_view&lt; Char &gt;</label>
+      </node>
+      <node id="33">
+        <label>std::string</label>
+        <childnode refid="34" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="25">
+        <label>std::string_view</label>
+        <childnode refid="26" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="63">
+        <label>std::unique_ptr&lt; Native &gt;</label>
+      </node>
+      <node id="27">
+        <label>std::unique_ptr&lt; jam::JsonDocument &gt;</label>
+        <childnode refid="28" relation="usage">
+          <edgelabel>ptr</edgelabel>
+        </childnode>
+      </node>
+      <node id="60">
+        <label>std::unique_ptr&lt; jam::TerminalFIFO::Native &gt;</label>
+        <childnode refid="61" relation="usage">
+          <edgelabel>ptr</edgelabel>
+        </childnode>
+      </node>
+      <node id="32">
+        <label>std::unique_ptr&lt; std::string &gt;</label>
+        <childnode refid="33" relation="usage">
+          <edgelabel>ptr</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="ToolServer.h" line="16" column="1" bodyfile="ToolServer.h" bodystart="18" bodyend="165"/>
+    <listofallmembers>
+      <member refid="class_tool_server_1a255ce32ecad9581b8b58ac9215b968c3" prot="public" virt="virtual"><scope>ToolServer</scope><name>anotherInstanceStarted</name></member>
+      <member refid="class_tool_server_1afb50ecb671d75e0a3ea09ec9013fcf93" prot="private" virt="non-virtual"><scope>ToolServer</scope><name>appendOutput</name></member>
+      <member refid="classjuce_1_1JUCEApplicationBase_1ac535f3e5c5a6c783efed6e8e86b341f8" prot="public" virt="virtual"><scope>ToolServer</scope><name>backButtonPressed</name></member>
+      <member refid="class_tool_server_1ab107dbe406c52e51c34ccd3c8154b12b" prot="private" virt="non-virtual"><scope>ToolServer</scope><name>bufferSize</name></member>
+      <member refid="class_tool_server_1a31af82354bf12fa6d3a41782429fa064" prot="public" virt="virtual"><scope>ToolServer</scope><name>getApplicationName</name></member>
+      <member refid="classjuce_1_1JUCEApplicationBase_1af331db63560821279c1e44baebe9a5e6" prot="public" virt="non-virtual"><scope>ToolServer</scope><name>getApplicationReturnValue</name></member>
+      <member refid="class_tool_server_1a1b55a008966cef238db44bc598a9d265" prot="public" virt="virtual"><scope>ToolServer</scope><name>getApplicationVersion</name></member>
+      <member refid="classjuce_1_1JUCEApplicationBase_1a8a2607a3fbc79cc10e9d0feda93c4856" prot="public" virt="non-virtual"><scope>ToolServer</scope><name>getCommandLineParameterArray</name></member>
+      <member refid="classjuce_1_1JUCEApplicationBase_1ad41006a0138c86f51f10e0391494dfbf" prot="public" virt="non-virtual"><scope>ToolServer</scope><name>getCommandLineParameters</name></member>
+      <member refid="classjuce_1_1JUCEApplicationBase_1ad202ba9fc825300b11c0d768da48b52a" prot="public" virt="non-virtual"><scope>ToolServer</scope><name>getInstance</name></member>
+      <member refid="class_tool_server_1a739700046b91b0e952eb6110b47ced73" prot="public" virt="virtual"><scope>ToolServer</scope><name>initialise</name></member>
+      <member refid="classjuce_1_1JUCEApplicationBase_1a025180bd29ffeee88c2acf03bd48b4d8" prot="public" virt="non-virtual"><scope>ToolServer</scope><name>isInitialising</name></member>
+      <member refid="classjuce_1_1JUCEApplicationBase_1ad75e84c848382d012ecc7ba0c5192960" prot="public" virt="non-virtual"><scope>ToolServer</scope><name>isStandaloneApp</name></member>
+      <member refid="classjuce_1_1JUCEApplicationBase_1aa042f23227e80c180013501a027ab941" prot="protected" virt="non-virtual"><scope>ToolServer</scope><name>JUCEApplicationBase</name></member>
+      <member refid="class_tool_server_1a07f2f7b6e590e51a8dc1d9ba78a8091c" prot="private" virt="non-virtual"><scope>ToolServer</scope><name>maximumPeriodMilliseconds</name></member>
+      <member refid="classjuce_1_1JUCEApplicationBase_1a605565242eccd51d45d6bc3e6097dc9c" prot="public" virt="virtual"><scope>ToolServer</scope><name>memoryWarningReceived</name></member>
+      <member refid="class_tool_server_1adfc3b32dd76b39f3ea9ccf17b2f408d9" prot="private" virt="non-virtual"><scope>ToolServer</scope><name>model</name></member>
+      <member refid="class_tool_server_1af43b0e57a737a5674afa04d5d9360e5f" prot="public" virt="virtual"><scope>ToolServer</scope><name>moreThanOneInstanceAllowed</name></member>
+      <member refid="classjuce_1_1JUCEApplicationBase_1ae2ba9b90c02361717d997aa26861f2c4" prot="public" virt="non-virtual"><scope>ToolServer</scope><name>quit</name></member>
+      <member refid="class_tool_server_1adf52b030d2835bd4b593fcad5f4b8389" prot="public" virt="virtual"><scope>ToolServer</scope><name>resumed</name></member>
+      <member refid="class_tool_server_1a06a7f5f9952e514da2b3e64b9c0ca5e5" prot="private" virt="non-virtual"><scope>ToolServer</scope><name>runs</name></member>
+      <member refid="class_tool_server_1a5f2b9b19c86c8ca77a47154adc5e7f50" prot="private" virt="non-virtual"><scope>ToolServer</scope><name>runTool</name></member>
+      <member refid="class_tool_server_1a8c7c8300bffeecee023693f36d7ce2e7" prot="private" virt="non-virtual"><scope>ToolServer</scope><name>server</name></member>
+      <member refid="classjuce_1_1JUCEApplicationBase_1aa718d56bbc1c7d7271aedbc378eeaffe" prot="public" virt="non-virtual"><scope>ToolServer</scope><name>setApplicationReturnValue</name></member>
+      <member refid="class_tool_server_1a67dfc9edb1a9f5281909593b081771fe" prot="public" virt="virtual"><scope>ToolServer</scope><name>shutdown</name></member>
+      <member refid="class_tool_server_1a1d4d56a6a9d996a22275de87f8d2ad16" prot="public" virt="virtual"><scope>ToolServer</scope><name>suspended</name></member>
+      <member refid="class_tool_server_1a8b5d6f747e68809ff4f242232e5294d3" prot="public" virt="virtual"><scope>ToolServer</scope><name>systemRequestedQuit</name></member>
+      <member refid="class_tool_server_1a02fc10d9f623b0840a9828ab2b1034c2" prot="public" virt="non-virtual"><scope>ToolServer</scope><name>ToolServer</name></member>
+      <member refid="class_tool_server_1a1ed4198ef4a64aa94d268aceb7353406" prot="public" virt="virtual"><scope>ToolServer</scope><name>unhandledException</name></member>
+      <member refid="classjuce_1_1ValueTree_1_1Listener_1ac26fa68e6f4625f71b52ab6fe776e0dc" prot="private" virt="virtual"><scope>ToolServer</scope><name>valueTreeChildAdded</name></member>
+      <member refid="classjuce_1_1ValueTree_1_1Listener_1a5fb2f9f798c9ebb48235ba15759fd48b" prot="private" virt="virtual"><scope>ToolServer</scope><name>valueTreeChildOrderChanged</name></member>
+      <member refid="classjuce_1_1ValueTree_1_1Listener_1a09dc85f9c71389f2801c9a7bc582ae1b" prot="private" virt="virtual"><scope>ToolServer</scope><name>valueTreeChildRemoved</name></member>
+      <member refid="classjuce_1_1ValueTree_1_1Listener_1a2e39febd013de0ff7da23a5b574055db" prot="private" virt="virtual"><scope>ToolServer</scope><name>valueTreeParentChanged</name></member>
+      <member refid="class_tool_server_1ad3c7f1c07437d5bcb8c9dba5c37e8fcf" prot="private" virt="virtual"><scope>ToolServer</scope><name>valueTreePropertyChanged</name></member>
+      <member refid="classjuce_1_1ValueTree_1_1Listener_1aa46de90c3746a395792a632219e404f2" prot="private" virt="virtual"><scope>ToolServer</scope><name>valueTreeRedirected</name></member>
+      <member refid="classjuce_1_1JUCEApplicationBase_1a37106bc3cb38f2385f0c2dc0bffcd674" prot="public" virt="virtual"><scope>ToolServer</scope><name>~JUCEApplicationBase</name></member>
+      <member refid="classjuce_1_1ValueTree_1_1Listener_1ab78745617b47f3b12726c0de220e8d9b" prot="private" virt="virtual"><scope>ToolServer</scope><name>~Listener</name></member>
+      <member refid="class_tool_server_1a3cfbb1835d9962d3b70963a4104ed339" prot="public" virt="non-virtual"><scope>ToolServer</scope><name>~ToolServer</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,22 @@
+{
+  "tools": [
+    {
+      "name": "run",
+      "title": "Run a scout manifest",
+      "description": "Runs one scout manifest: the toolchain rows, then the epochs and the report when a ## run table exists. A manifest with a ## sample table runs under sudo -n. Returns {exitCode, output}. A run that fails returns an error that holds the output.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "manifest": {
+            "type": "string",
+            "description": "Absolute path of the manifest."
+          }
+        },
+        "required": [
+          "manifest"
+        ],
+        "additionalProperties": false
+      }
+    }
+  ]
+}

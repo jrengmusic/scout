@@ -19,9 +19,10 @@
         <inbodydescription>
         </inbodydescription>
         <location file="generated/Text.h" line="31" column="39" bodyfile="generated/Text.h" bodystart="31" bodyend="31"/>
-        <referencedby refid="class_benchmark_1ae59eaa6c1836391353180c17526f1c16" compoundref="_benchmark_8cpp" startline="212" endline="239">Benchmark::addEpoch</referencedby>
-        <referencedby refid="_main_8cpp_1a4787e2058107a19104111d385324e45b" compoundref="_main_8cpp" startline="181" endline="186">runDocumentNotFound</referencedby>
-        <referencedby refid="struct_processor_1acec35c543c65ed5dc6618fe7e79ef835" compoundref="_processor_8cpp" startline="58" endline="84">Processor::runEpochs</referencedby>
+        <referencedby refid="class_benchmark_1ae59eaa6c1836391353180c17526f1c16" compoundref="_benchmark_8cpp" startline="213" endline="240">Benchmark::addEpoch</referencedby>
+        <referencedby refid="_main_8cpp_1a4787e2058107a19104111d385324e45b" compoundref="_main_8cpp" startline="209" endline="214">runDocumentNotFound</referencedby>
+        <referencedby refid="struct_processor_1acec35c543c65ed5dc6618fe7e79ef835" compoundref="_processor_8cpp" startline="58" endline="91">Processor::runEpochs</referencedby>
+        <referencedby refid="class_tool_server_1a5f2b9b19c86c8ca77a47154adc5e7f50" compoundref="_tool_server_8cpp" startline="108" endline="144">ToolServer::runTool</referencedby>
         <referencedby refid="class_sampler_1a67fd6d27248213e4f9bf5630703d3f18" compoundref="_sampler_8cpp" startline="574" endline="603">Sampler::startSession</referencedby>
       </memberdef>
       <memberdef kind="variable" id="structtext_1_1_diagnostics_1af3213d85de76f5051147adf231066b11" prot="public" static="yes" constexpr="yes" mutable="no">
@@ -90,7 +91,7 @@
         <inbodydescription>
         </inbodydescription>
         <location file="generated/Text.h" line="35" column="39" bodyfile="generated/Text.h" bodystart="35" bodyend="35"/>
-        <referencedby refid="struct_processor_1aa277929ee4d6480d62fa48d2dd5f2a6c" compoundref="_processor_8cpp" startline="86" endline="95">Processor::writeReport</referencedby>
+        <referencedby refid="struct_processor_1aa277929ee4d6480d62fa48d2dd5f2a6c" compoundref="_processor_8cpp" startline="93" endline="102">Processor::writeReport</referencedby>
       </memberdef>
       <memberdef kind="variable" id="structtext_1_1_diagnostics_1a67a3d4524798361c7272cca4ff5d19ad" prot="public" static="yes" constexpr="yes" mutable="no">
         <type>const char *const</type>
@@ -107,7 +108,7 @@
         <inbodydescription>
         </inbodydescription>
         <location file="generated/Text.h" line="36" column="39" bodyfile="generated/Text.h" bodystart="36" bodyend="36"/>
-        <referencedby refid="class_benchmark_1a8b4bab8a038fba5d18366ba23e32923f" compoundref="_benchmark_8cpp" startline="123" endline="155">Benchmark::runEpoch</referencedby>
+        <referencedby refid="class_benchmark_1a8b4bab8a038fba5d18366ba23e32923f" compoundref="_benchmark_8cpp" startline="124" endline="156">Benchmark::runEpoch</referencedby>
       </memberdef>
       <memberdef kind="variable" id="structtext_1_1_diagnostics_1a54030ad642dee1157d22d8255503812d" prot="public" static="yes" constexpr="yes" mutable="no">
         <type>const char *const</type>
@@ -124,7 +125,7 @@
         <inbodydescription>
         </inbodydescription>
         <location file="generated/Text.h" line="37" column="39" bodyfile="generated/Text.h" bodystart="37" bodyend="37"/>
-        <referencedby refid="_main_8cpp_1a52f1af656d9670faf7049108bef951b9" compoundref="_main_8cpp" startline="220" endline="252">runCommandLine</referencedby>
+        <referencedby refid="_main_8cpp_1a52f1af656d9670faf7049108bef951b9" compoundref="_main_8cpp" startline="248" endline="283">runCommandLine</referencedby>
       </memberdef>
       <memberdef kind="variable" id="structtext_1_1_diagnostics_1a07b92fba2d678ad4a065f5ebd63d43a7" prot="public" static="yes" constexpr="yes" mutable="no">
         <type>const char *const</type>
@@ -141,7 +142,7 @@
         <inbodydescription>
         </inbodydescription>
         <location file="generated/Text.h" line="38" column="39" bodyfile="generated/Text.h" bodystart="38" bodyend="38"/>
-        <referencedby refid="_main_8cpp_1a58cd25047b98ff06d9dc1671ab3ccbed" compoundref="_main_8cpp" startline="122" endline="129">printDone</referencedby>
+        <referencedby refid="_main_8cpp_1a58cd25047b98ff06d9dc1671ab3ccbed" compoundref="_main_8cpp" startline="146" endline="153">printDone</referencedby>
       </memberdef>
     </sectiondef>
     <briefdescription>

@@ -7,6 +7,7 @@
 #include <JuceHeader.h>
 #include "generated/Generated.h"
 #include "Processor.h"
+#include "ToolServer.h"
 #ifdef _WIN32
 #include <io.h>
 #include <windows.h>
@@ -57,6 +58,12 @@ static const juce::String& getHelpFlag()
     return helpFlag;
 }
 
+static const juce::String& getMcpFlag()
+{
+    static const juce::String mcpFlag { juce::String (Chars::doubleDash) + Id::mcp.toString() };
+    return mcpFlag;
+}
+
 /**
  * @brief Answers whether @p argv requests the @c --version flag, either
  *        alone or after the manifest argument.
@@ -83,6 +90,24 @@ static bool isHelp (int argc, char* argv[])
 {
     return (argc == flagOnlyArgumentCount and juce::String::fromUTF8 (argv[flagArgIndex]).compare (getHelpFlag()) == 0)
            or (argc == postFlagArgumentCount and juce::String::fromUTF8 (argv[postFlagArgIndex]).compare (getHelpFlag()) == 0);
+}
+
+static bool isMcp (int argc, char* argv[])
+{
+    return argc == flagOnlyArgumentCount and juce::String::fromUTF8 (argv[flagArgIndex]).compare (getMcpFlag()) == 0;
+}
+
+static juce::JUCEApplicationBase* createToolServer()
+{
+    return new ToolServer();
+}
+
+static int runToolServer (const char* programPath)
+{
+    const char* toolArguments[] { programPath };
+
+    juce::JUCEApplicationBase::createInstance = &createToolServer;
+    return juce::JUCEApplicationBase::main (static_cast<int> (std::size (toolArguments)), toolArguments);
 }
 
 /**
@@ -233,6 +258,9 @@ static int runCommandLine (int argc, char* argv[])
         printBannerAndHelp();
         return EXIT_SUCCESS;
     }
+
+    if (isMcp (argc, argv))
+        return runToolServer (argv[0]);
 
     if (argc == flagOnlyArgumentCount)
     {

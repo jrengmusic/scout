@@ -1,0 +1,7 @@
+server/discover result supportedVersions=["2026-07-28"]
+tools/list result count=1
+tools/call run echo ok exitCode=0 output=probe
+tools/call run fail isError=true toolchain command failed
+tools/call run relative isError=true manifest is not an absolute path
+tools/call run missing isError=true not found: missing.md
+exit 0

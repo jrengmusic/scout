@@ -115,26 +115,27 @@ Every field is a complete literal; nothing downstream derives, concatenates, or 
 
 ## user module
 
-+--------------+-----------------------+--------------------------------------------------------------------------------------------------+
-| root         | name                  | description                                                                                      |
-+==============+=======================+==================================================================================================+
-| @user-module | jam_core              | JAM Core                                                                                         |
-| @user-module | jam_document          | Universal line break and reflow (UAX #14)                                                        |
-| @user-module | jam_markdown          | Clean-room native CommonMark + GFM markdown parsing and rendering                                |
-| @user-module | jam_freetype          | Vendored FreeType font rasterization library                                                     |
-| @user-module | jam_graphics          | Graphics utilities, blur, shadows, colours, fonts, mesh                                          |
-| @user-module | jam_data_structures   | ValueTree management and data model utilities — model, parameters                                |
-| @user-module | jam_animation         | Foundation animation classes (Animator, AnimationBase, AnimationScrollingText)                   |
-| @user-module | jam_web               | HTML authored-subset and CSS Syntax Level 3 subset tokenizers and parsers                        |
-| @user-module | jam_style             | JAM Style — LookAndFeel base + ColourScheme-backed colour registry                               |
-| @user-module | jam_gui               | GUI foundation — Window, Modal, Glass                                                            |
-| @user-module | jam_mermaid_diagram   | Clean-room native mermaid diagram parsing over jam::Document producing the semantic Element tree |
-| @user-module | jam_markdown_graphics | Markdown and mermaid materialisation, layout and view component                                  |
-| @user-module | jam_terminal          | VT read-side engine, TTY, protocol vocabulary, keyboard encoding                                 |
-| @user-module | jam_tui               | Terminal user interface components, painted through the terminal graphics context                |
-| @user-module | jam_profiler          | Profiler zones — per-thread rings drained to durations per zone                                  |
-| @user-module | jam_subprocess        | JUCE-based subprocess launcher with streaming output and byte-cap truncation                     |
-+--------------+-----------------------+--------------------------------------------------------------------------------------------------+
++--------------+----------------------------+-------------------------------------------------------------------------------------------------------+
+| root         | name                       | description                                                                                           |
++==============+============================+=======================================================================================================+
+| @user-module | jam_core                   | JAM Core                                                                                              |
+| @user-module | jam_document               | Universal line break and reflow (UAX #14)                                                             |
+| @user-module | jam_markdown               | Clean-room native CommonMark + GFM markdown parsing and rendering                                     |
+| @user-module | jam_freetype               | Vendored FreeType font rasterization library                                                          |
+| @user-module | jam_graphics               | Graphics utilities, blur, shadows, colours, fonts, mesh                                               |
+| @user-module | jam_data_structures        | ValueTree management and data model utilities — model, parameters                                     |
+| @user-module | jam_animation              | Foundation animation classes (Animator, AnimationBase, AnimationScrollingText)                        |
+| @user-module | jam_web                    | HTML authored-subset and CSS Syntax Level 3 subset tokenizers and parsers                             |
+| @user-module | jam_style                  | JAM Style — LookAndFeel base + ColourScheme-backed colour registry                                    |
+| @user-module | jam_gui                    | GUI foundation — Window, Modal, Glass                                                                 |
+| @user-module | jam_mermaid_diagram        | Clean-room native mermaid diagram parsing over jam::Document producing the semantic Element tree      |
+| @user-module | jam_markdown_graphics      | Markdown and mermaid materialisation, layout and view component                                       |
+| @user-module | jam_terminal               | VT read-side engine, TTY, protocol vocabulary, keyboard encoding                                      |
+| @user-module | jam_tui                    | Terminal user interface components, painted through the terminal graphics context                     |
+| @user-module | jam_profiler               | Profiler zones — per-thread rings drained to durations per zone                                       |
+| @user-module | jam_subprocess             | JUCE-based subprocess launcher with streaming output and byte-cap truncation                          |
+| @user-module | jam_model_context_protocol | Model Context Protocol server over stdio: newline framing, JSON Schema 2020-12 validation, tool calls |
++--------------+----------------------------+-------------------------------------------------------------------------------------------------------+
 
 ## source glob
 
@@ -178,12 +179,13 @@ Every field is a complete literal; nothing downstream derives, concatenates, or 
 
 ## binary
 
-+------------+-------------------------------+------------------------------------+
-| name       | value                         | description                        |
-+============+===============================+====================================+
-| help       | Source/HELP.md                | Help document source               |
-| styleSheet | ../jam/jam_tui/page/style.css | Stylesheet, embedded as BinaryData |
-+------------+-------------------------------+------------------------------------+
++------------+-------------------------------+---------------------------------------+
+| name       | value                         | description                           |
++============+===============================+=======================================+
+| help       | Source/HELP.md                | Help document source                  |
+| styleSheet | ../jam/jam_tui/page/style.css | Stylesheet, embedded as BinaryData    |
+| tools      | Source/tools.json             | MCP tool list, embedded as BinaryData |
++------------+-------------------------------+---------------------------------------+
 
 ## library
 

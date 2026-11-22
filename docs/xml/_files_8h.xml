@@ -8,48 +8,48 @@
         <label>Benchmark.cpp</label>
         <link refid="_benchmark_8cpp"/>
       </node>
-      <node id="5">
-        <label>Help.cpp</label>
-        <link refid="_help_8cpp"/>
-      </node>
       <node id="4">
-        <label>Help.h</label>
-        <link refid="_help_8h"/>
-        <childnode refid="5" relation="include">
-        </childnode>
-        <childnode refid="6" relation="include">
-        </childnode>
-      </node>
-      <node id="6">
         <label>Main.cpp</label>
         <link refid="_main_8cpp"/>
       </node>
-      <node id="8">
+      <node id="6">
         <label>Processor.cpp</label>
         <link refid="_processor_8cpp"/>
       </node>
-      <node id="7">
+      <node id="5">
         <label>Processor.h</label>
         <link refid="_processor_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
         <childnode refid="6" relation="include">
         </childnode>
-        <childnode refid="8" relation="include">
-        </childnode>
       </node>
-      <node id="9">
+      <node id="7">
         <label>ProfileReport.cpp</label>
         <link refid="_profile_report_8cpp"/>
       </node>
-      <node id="11">
+      <node id="9">
         <label>Sampler.cpp</label>
         <link refid="_sampler_8cpp"/>
       </node>
-      <node id="10">
+      <node id="8">
         <label>Sampler.h</label>
         <link refid="_sampler_8h"/>
         <childnode refid="3" relation="include">
         </childnode>
-        <childnode refid="11" relation="include">
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="12">
+        <label>ToolServer.cpp</label>
+        <link refid="_tool_server_8cpp"/>
+      </node>
+      <node id="11">
+        <label>ToolServer.h</label>
+        <link refid="_tool_server_8h"/>
+        <childnode refid="4" relation="include">
         </childnode>
         <childnode refid="12" relation="include">
         </childnode>
@@ -61,21 +61,21 @@
       <node id="13">
         <label>Toolchain.h</label>
         <link refid="_toolchain_8h"/>
-        <childnode refid="7" relation="include">
+        <childnode refid="5" relation="include">
         </childnode>
         <childnode refid="14" relation="include">
         </childnode>
       </node>
-      <node id="12">
+      <node id="10">
         <label>Validator.cpp</label>
         <link refid="_validator_8cpp"/>
       </node>
       <node id="15">
         <label>Validator.h</label>
         <link refid="_validator_8h"/>
-        <childnode refid="7" relation="include">
+        <childnode refid="5" relation="include">
         </childnode>
-        <childnode refid="12" relation="include">
+        <childnode refid="10" relation="include">
         </childnode>
       </node>
       <node id="1">
@@ -95,13 +95,13 @@
         </childnode>
         <childnode refid="4" relation="include">
         </childnode>
-        <childnode refid="6" relation="include">
+        <childnode refid="5" relation="include">
         </childnode>
         <childnode refid="7" relation="include">
         </childnode>
-        <childnode refid="9" relation="include">
+        <childnode refid="8" relation="include">
         </childnode>
-        <childnode refid="10" relation="include">
+        <childnode refid="11" relation="include">
         </childnode>
         <childnode refid="13" relation="include">
         </childnode>
@@ -142,9 +142,10 @@
 <codeline lineno="26"><highlight class="normal"></highlight><highlight class="comment">/*_____________________________________________________________________________*/</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="27"><highlight class="normal"></highlight></codeline>
 <codeline lineno="29"><highlight class="normal"></highlight></codeline>
-<codeline lineno="30"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>juce::String<sp/><ref refid="namespacefiles_1a4f5d1a618a82e735de711d473aa8033b" kindref="member" external="/Users/jreng/Documents/Poems/dev/jam/docs/tagfile.xml">scoutHelp</ref>;</highlight></codeline>
-<codeline lineno="31"><highlight class="normal"></highlight></codeline>
-<codeline lineno="33"><highlight class="normal">}</highlight><highlight class="comment">//<sp/>namespace<sp/>files</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>juce::String<sp/><ref refid="namespacefiles_1a4f5d1a618a82e735de711d473aa8033b" kindref="member" external="/Users/jreng/Documents/Poems/dev/jam/docs/tagfile.xml">scoutHelp</ref>;<sp/></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>juce::String<sp/><ref refid="namespacefiles_1a91f0a0af0d280fd92cd8c55ed092d000" kindref="member" external="/Users/jreng/Documents/Poems/dev/jam/docs/tagfile.xml">scoutTools</ref>;</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal">}</highlight><highlight class="comment">//<sp/>namespace<sp/>files</highlight><highlight class="normal"></highlight></codeline>
     </programlisting>
     <location file="generated/Files.h"/>
   </compounddef>

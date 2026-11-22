@@ -1,0 +1,339 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.18.0" xml:lang="en-US">
+  <compounddef id="struct_tool_server_1_1_run" kind="struct" language="C++" prot="private">
+    <compoundname>ToolServer::Run</compoundname>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct_tool_server_1_1_run_1a1d64254890e9f8f54e4d6d8aca621004" prot="public" static="no" mutable="no">
+        <type><ref refid="classjuce_1_1ValueTree" kindref="compound" external="/Users/jreng/Documents/Poems/JUCE/docs/tagfile.xml">juce::ValueTree</ref></type>
+        <definition>juce::ValueTree ToolServer::Run::row</definition>
+        <argsstring></argsstring>
+        <name>row</name>
+        <qualifiedname>ToolServer::Run::row</qualifiedname>
+        <initializer>{ <ref refid="structjam_1_1Format_1ab2a4d1f99713c10e63ece15ecf38b4a7" kindref="member" external="/Users/jreng/Documents/Poems/dev/jam/docs/tagfile.xml">jam::Format::toType</ref> (<ref refid="namespaceId_1ae94c00f38c99144148371d4d273c298b" kindref="member" external="/Users/jreng/Documents/Poems/dev/jam/docs/tagfile.xml">Id::run</ref>) }</initializer>
+        <briefdescription>
+<para>ValueTree row storing request id, captured output, message count, exit code, and open status. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ToolServer.h" line="102" column="25" bodyfile="ToolServer.h" bodystart="102" bodyend="102"/>
+        <referencedby refid="struct_tool_server_1_1_run_1a6a731af0afca8c517da6066ec63bfe5c" compoundref="_tool_server_8cpp" startline="3" endline="29">Run</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="struct_tool_server_1_1_run_1a6ed1ddc7440147c9c5c15ccac18e0e8e" prot="public" static="no" mutable="no">
+        <type><ref refid="structjam_1_1Parameter" kindref="compound" external="/Users/jreng/Documents/Poems/dev/jam/docs/tagfile.xml">jam::Parameter</ref>&lt; int &gt;</type>
+        <definition>jam::Parameter&lt;int&gt; ToolServer::Run::numMessages</definition>
+        <argsstring></argsstring>
+        <name>numMessages</name>
+        <qualifiedname>ToolServer::Run::numMessages</qualifiedname>
+        <initializer>{ <ref refid="namespaceId_1abd823c98b322d39f2bd65d34d8be1513" kindref="member" external="/Users/jreng/Documents/Poems/dev/jam/docs/tagfile.xml">Id::numMessages</ref>, 0, <ref refid="namespaceId_1abd823c98b322d39f2bd65d34d8be1513" kindref="member" external="/Users/jreng/Documents/Poems/dev/jam/docs/tagfile.xml">Id::numMessages</ref> }</initializer>
+        <briefdescription>
+<para>Atomic read-batch counter; client.onBytesReady increments it when bytes arrive. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ToolServer.h" line="105" column="24" bodyfile="ToolServer.h" bodystart="105" bodyend="105"/>
+        <referencedby refid="struct_tool_server_1_1_run_1a6a731af0afca8c517da6066ec63bfe5c" compoundref="_tool_server_8cpp" startline="3" endline="29">Run</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="struct_tool_server_1_1_run_1a555dcee1c3c480e6e51b927e6fc243bc" prot="public" static="no" mutable="no">
+        <type><ref refid="structjam_1_1Parameter" kindref="compound" external="/Users/jreng/Documents/Poems/dev/jam/docs/tagfile.xml">jam::Parameter</ref>&lt; int &gt;</type>
+        <definition>jam::Parameter&lt;int&gt; ToolServer::Run::exitCode</definition>
+        <argsstring></argsstring>
+        <name>exitCode</name>
+        <qualifiedname>ToolServer::Run::exitCode</qualifiedname>
+        <initializer>{ <ref refid="namespaceId_1a60a61720df0f1bb8dd41cf9f90690705" kindref="member" external="/Users/jreng/Documents/Poems/dev/jam/docs/tagfile.xml">Id::exitCode</ref>, 0, <ref refid="namespaceId_1a60a61720df0f1bb8dd41cf9f90690705" kindref="member" external="/Users/jreng/Documents/Poems/dev/jam/docs/tagfile.xml">Id::exitCode</ref> }</initializer>
+        <briefdescription>
+<para>Atomic child exit code; client.onExit stores it before setting isOpen to zero. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ToolServer.h" line="108" column="24" bodyfile="ToolServer.h" bodystart="108" bodyend="108"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_tool_server_1_1_run_1a022826a569c9bc1d60cd91a6b0e8b258" prot="public" static="no" mutable="no">
+        <type><ref refid="structjam_1_1Parameter" kindref="compound" external="/Users/jreng/Documents/Poems/dev/jam/docs/tagfile.xml">jam::Parameter</ref>&lt; int &gt;</type>
+        <definition>jam::Parameter&lt;int&gt; ToolServer::Run::isOpen</definition>
+        <argsstring></argsstring>
+        <name>isOpen</name>
+        <qualifiedname>ToolServer::Run::isOpen</qualifiedname>
+        <initializer>{ <ref refid="namespaceId_1a6b2e6737418d84397d6a0b2f2cea31dc" kindref="member" external="/Users/jreng/Documents/Poems/dev/jam/docs/tagfile.xml">Id::isOpen</ref>, 1, <ref refid="namespaceId_1a6b2e6737418d84397d6a0b2f2cea31dc" kindref="member" external="/Users/jreng/Documents/Poems/dev/jam/docs/tagfile.xml">Id::isOpen</ref> }</initializer>
+        <briefdescription>
+<para>Atomic open flag; client.onExit sets it to zero when the child process exits. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ToolServer.h" line="111" column="24" bodyfile="ToolServer.h" bodystart="111" bodyend="111"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_tool_server_1_1_run_1ae5f1c2cd126cccdfe3fd8ec58a38bff7" prot="public" static="no" mutable="no">
+        <type><ref refid="classjam_1_1Model_1_1ParameterAttachment" kindref="compound" external="/Users/jreng/Documents/Poems/dev/jam/docs/tagfile.xml">jam::Model::ParameterAttachment</ref></type>
+        <definition>jam::Model::ParameterAttachment ToolServer::Run::numMessagesAttachment</definition>
+        <argsstring></argsstring>
+        <name>numMessagesAttachment</name>
+        <qualifiedname>ToolServer::Run::numMessagesAttachment</qualifiedname>
+        <briefdescription>
+<para>Message-thread attachment syncing numMessages onto row to wake output draining. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ToolServer.h" line="114" column="41" bodyfile="ToolServer.h" bodystart="114" bodyend="-1"/>
+        <referencedby refid="struct_tool_server_1_1_run_1a6a731af0afca8c517da6066ec63bfe5c" compoundref="_tool_server_8cpp" startline="3" endline="29">Run</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="struct_tool_server_1_1_run_1a3d7cad0e8066af44fb44b9aa1d7521a9" prot="public" static="no" mutable="no">
+        <type><ref refid="classjam_1_1Model_1_1ParameterAttachment" kindref="compound" external="/Users/jreng/Documents/Poems/dev/jam/docs/tagfile.xml">jam::Model::ParameterAttachment</ref></type>
+        <definition>jam::Model::ParameterAttachment ToolServer::Run::isOpenAttachment</definition>
+        <argsstring></argsstring>
+        <name>isOpenAttachment</name>
+        <qualifiedname>ToolServer::Run::isOpenAttachment</qualifiedname>
+        <briefdescription>
+<para>Message-thread attachment writing exitCode and isOpen onto row when the child exits. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ToolServer.h" line="117" column="41" bodyfile="ToolServer.h" bodystart="117" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_tool_server_1_1_run_1a2ef12c7545dac9e8208d94dad453d9a5" prot="public" static="no" mutable="no">
+        <type><ref refid="classjam_1_1StdioClient" kindref="compound" external="/Users/jreng/Documents/Poems/dev/jam/docs/tagfile.xml">jam::StdioClient</ref></type>
+        <definition>jam::StdioClient ToolServer::Run::client</definition>
+        <argsstring></argsstring>
+        <name>client</name>
+        <qualifiedname>ToolServer::Run::client</qualifiedname>
+        <briefdescription>
+<para>Stdio subprocess client running the child scout process with merged stdout and stderr. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ToolServer.h" line="120" column="26" bodyfile="ToolServer.h" bodystart="120" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="struct_tool_server_1_1_run_1a6a731af0afca8c517da6066ec63bfe5c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>ToolServer::Run::Run</definition>
+        <argsstring>(jam::Model &amp;newModel, const juce::String &amp;newRequestId)</argsstring>
+        <name>Run</name>
+        <qualifiedname>ToolServer::Run::Run</qualifiedname>
+        <param>
+          <type><ref refid="classjam_1_1Model" kindref="compound" external="/Users/jreng/Documents/Poems/dev/jam/docs/tagfile.xml">jam::Model</ref> &amp;</type>
+          <declname>newModel</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classjuce_1_1String" kindref="compound" external="/Users/jreng/Documents/Poems/JUCE/docs/tagfile.xml">juce::String</ref> &amp;</type>
+          <declname>newRequestId</declname>
+        </param>
+        <briefdescription>
+<para>Appends a run row to newModel.state and binds stdio read and exit callbacks. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>newModel</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Shared Model whose state tree owns this run row. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>newRequestId</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>MCP JSON-RPC request identifier for this manifest run. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ToolServer.h" line="99" column="9" bodyfile="ToolServer.cpp" bodystart="3" bodyend="29"/>
+        <references refid="namespaceId_1abd823c98b322d39f2bd65d34d8be1513">Id::numMessages</references>
+        <references refid="struct_tool_server_1_1_run_1a6ed1ddc7440147c9c5c15ccac18e0e8e" compoundref="_tool_server_8h" startline="105" endline="105">numMessages</references>
+        <references refid="struct_tool_server_1_1_run_1ae5f1c2cd126cccdfe3fd8ec58a38bff7" compoundref="_tool_server_8h" startline="114">numMessagesAttachment</references>
+        <references refid="struct_tool_server_1_1_run_1a1d64254890e9f8f54e4d6d8aca621004" compoundref="_tool_server_8h" startline="102" endline="102">row</references>
+        <references refid="classjuce_1_1ValueTree_1a86de4a6662eb049c21c30c627616fb0e">juce::ValueTree::setProperty</references>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Owns the child scout process, stdio client, and Model state for one run call. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="1">
+        <label>ToolServer::Run</label>
+        <link refid="struct_tool_server_1_1_run"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>row</edgelabel>
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>exitCode</edgelabel>
+          <edgelabel>isOpen</edgelabel>
+          <edgelabel>numMessages</edgelabel>
+        </childnode>
+        <childnode refid="10" relation="usage">
+          <edgelabel>isOpenAttachment</edgelabel>
+          <edgelabel>numMessagesAttachment</edgelabel>
+        </childnode>
+        <childnode refid="14" relation="usage">
+          <edgelabel>client</edgelabel>
+        </childnode>
+      </node>
+      <node id="20">
+        <label>jam::AsyncOutputStream</label>
+        <link refid="classjam_1_1AsyncOutputStream" external="/Users/jreng/Documents/Poems/dev/jam/docs/tagfile.xml"/>
+        <childnode refid="21" relation="usage">
+          <edgelabel>native</edgelabel>
+        </childnode>
+      </node>
+      <node id="10">
+        <label>jam::Model::ParameterAttachment</label>
+        <link refid="classjam_1_1Model_1_1ParameterAttachment" external="/Users/jreng/Documents/Poems/dev/jam/docs/tagfile.xml"/>
+        <childnode refid="11" relation="private-inheritance">
+        </childnode>
+        <childnode refid="12" relation="private-inheritance">
+        </childnode>
+        <childnode refid="4" relation="usage">
+          <edgelabel>parameter</edgelabel>
+        </childnode>
+        <childnode refid="13" relation="usage">
+          <edgelabel>lastValue</edgelabel>
+        </childnode>
+      </node>
+      <node id="3">
+        <label>jam::Parameter&lt; int &gt;</label>
+        <link refid="structjam_1_1Parameter_3_01int_01_4" external="/Users/jreng/Documents/Poems/dev/jam/docs/tagfile.xml"/>
+        <childnode refid="4" relation="public-inheritance">
+        </childnode>
+        <childnode refid="4" relation="public-inheritance">
+        </childnode>
+        <childnode refid="4" relation="public-inheritance">
+        </childnode>
+        <childnode refid="9" relation="usage">
+          <edgelabel>value</edgelabel>
+        </childnode>
+      </node>
+      <node id="4">
+        <label>jam::ParameterBase</label>
+        <link refid="structjam_1_1ParameterBase" external="/Users/jreng/Documents/Poems/dev/jam/docs/tagfile.xml"/>
+        <childnode refid="5" relation="usage">
+          <edgelabel>id</edgelabel>
+          <edgelabel>propertyId</edgelabel>
+        </childnode>
+        <childnode refid="6" relation="usage">
+          <edgelabel>needsUpdate</edgelabel>
+        </childnode>
+        <childnode refid="7" relation="usage">
+          <edgelabel>listenerLock</edgelabel>
+        </childnode>
+        <childnode refid="8" relation="usage">
+          <edgelabel>listeners</edgelabel>
+        </childnode>
+      </node>
+      <node id="11">
+        <label>jam::ParameterBase::Listener</label>
+        <link refid="structjam_1_1ParameterBase_1_1Listener" external="/Users/jreng/Documents/Poems/dev/jam/docs/tagfile.xml"/>
+      </node>
+      <node id="14">
+        <label>jam::StdioClient</label>
+        <link refid="classjam_1_1StdioClient" external="/Users/jreng/Documents/Poems/dev/jam/docs/tagfile.xml"/>
+        <childnode refid="15" relation="public-inheritance">
+        </childnode>
+        <childnode refid="16" relation="usage">
+          <edgelabel>input</edgelabel>
+          <edgelabel>output</edgelabel>
+        </childnode>
+        <childnode refid="20" relation="usage">
+          <edgelabel>reader</edgelabel>
+        </childnode>
+      </node>
+      <node id="16">
+        <label>jam::TerminalFIFO</label>
+        <link refid="classjam_1_1TerminalFIFO" external="/Users/jreng/Documents/Poems/dev/jam/docs/tagfile.xml"/>
+        <childnode refid="15" relation="public-inheritance">
+        </childnode>
+        <childnode refid="17" relation="usage">
+          <edgelabel>fifo</edgelabel>
+        </childnode>
+        <childnode refid="18" relation="usage">
+          <edgelabel>native</edgelabel>
+        </childnode>
+      </node>
+      <node id="19">
+        <label>jam::TerminalFIFO::Native</label>
+        <link refid="structjam_1_1TerminalFIFO_1_1Native" external="/Users/jreng/Documents/Poems/dev/jam/docs/tagfile.xml"/>
+      </node>
+      <node id="17">
+        <label>juce::AbstractFifo</label>
+        <link refid="classjuce_1_1AbstractFifo" external="/Users/jreng/Documents/Poems/JUCE/docs/tagfile.xml"/>
+      </node>
+      <node id="8">
+        <label>juce::Array&lt; jam::ParameterBase::Listener * &gt;</label>
+        <link refid="classjuce_1_1Array" external="/Users/jreng/Documents/Poems/JUCE/docs/tagfile.xml"/>
+      </node>
+      <node id="12">
+        <label>juce::AsyncUpdater</label>
+        <link refid="classjuce_1_1AsyncUpdater" external="/Users/jreng/Documents/Poems/JUCE/docs/tagfile.xml"/>
+      </node>
+      <node id="7">
+        <label>juce::CriticalSection</label>
+        <link refid="classjuce_1_1CriticalSection" external="/Users/jreng/Documents/Poems/JUCE/docs/tagfile.xml"/>
+      </node>
+      <node id="5">
+        <label>juce::Identifier</label>
+        <link refid="classjuce_1_1Identifier" external="/Users/jreng/Documents/Poems/JUCE/docs/tagfile.xml"/>
+        <childnode refid="5" relation="usage">
+          <edgelabel>null</edgelabel>
+        </childnode>
+      </node>
+      <node id="15">
+        <label>juce::OutputStream</label>
+        <link refid="classjuce_1_1OutputStream" external="/Users/jreng/Documents/Poems/JUCE/docs/tagfile.xml"/>
+      </node>
+      <node id="2">
+        <label>juce::ValueTree</label>
+        <link refid="classjuce_1_1ValueTree" external="/Users/jreng/Documents/Poems/JUCE/docs/tagfile.xml"/>
+      </node>
+      <node id="13">
+        <label>juce::var</label>
+        <link refid="classjuce_1_1var" external="/Users/jreng/Documents/Poems/JUCE/docs/tagfile.xml"/>
+      </node>
+      <node id="6">
+        <label>std::atomic&lt; bool &gt;</label>
+      </node>
+      <node id="9">
+        <label>std::atomic&lt; int &gt;</label>
+      </node>
+      <node id="21">
+        <label>std::unique_ptr&lt; Native &gt;</label>
+      </node>
+      <node id="18">
+        <label>std::unique_ptr&lt; jam::TerminalFIFO::Native &gt;</label>
+        <childnode refid="19" relation="usage">
+          <edgelabel>ptr</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="ToolServer.h" line="91" column="5" bodyfile="ToolServer.h" bodystart="92" bodyend="123"/>
+    <listofallmembers>
+      <member refid="struct_tool_server_1_1_run_1a2ef12c7545dac9e8208d94dad453d9a5" prot="public" virt="non-virtual"><scope>ToolServer::Run</scope><name>client</name></member>
+      <member refid="struct_tool_server_1_1_run_1a555dcee1c3c480e6e51b927e6fc243bc" prot="public" virt="non-virtual"><scope>ToolServer::Run</scope><name>exitCode</name></member>
+      <member refid="struct_tool_server_1_1_run_1a022826a569c9bc1d60cd91a6b0e8b258" prot="public" virt="non-virtual"><scope>ToolServer::Run</scope><name>isOpen</name></member>
+      <member refid="struct_tool_server_1_1_run_1a3d7cad0e8066af44fb44b9aa1d7521a9" prot="public" virt="non-virtual"><scope>ToolServer::Run</scope><name>isOpenAttachment</name></member>
+      <member refid="struct_tool_server_1_1_run_1a6ed1ddc7440147c9c5c15ccac18e0e8e" prot="public" virt="non-virtual"><scope>ToolServer::Run</scope><name>numMessages</name></member>
+      <member refid="struct_tool_server_1_1_run_1ae5f1c2cd126cccdfe3fd8ec58a38bff7" prot="public" virt="non-virtual"><scope>ToolServer::Run</scope><name>numMessagesAttachment</name></member>
+      <member refid="struct_tool_server_1_1_run_1a1d64254890e9f8f54e4d6d8aca621004" prot="public" virt="non-virtual"><scope>ToolServer::Run</scope><name>row</name></member>
+      <member refid="struct_tool_server_1_1_run_1a6a731af0afca8c517da6066ec63bfe5c" prot="public" virt="non-virtual"><scope>ToolServer::Run</scope><name>Run</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

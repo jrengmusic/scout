@@ -1122,9 +1122,9 @@
         </inbodydescription>
         <location file="Sampler.cpp" line="219" column="31" bodyfile="Sampler.cpp" bodystart="219" bodyend="228"/>
         <references refid="classjam_1_1HashMap_1a5a46d490ce023d9b1d773eccc23a7904">jam::HashMap&lt; typename Key, typename Mapped, typename HashFn, typename KeyEqual, typename AllocatorOrContainer, typename Bucket, typename BucketContainer, bool IsSegmented &gt;::at</references>
-        <references refid="namespaceId_1a9dd3b447eb5f7e4e61f3f4264c20a2e5" compoundref="_generated_8cpp" startline="41" endline="41">Id::cswitch</references>
+        <references refid="namespaceId_1a9dd3b447eb5f7e4e61f3f4264c20a2e5" compoundref="_generated_8cpp" startline="40" endline="40">Id::cswitch</references>
         <references refid="_sampler_8cpp_1a4dd0c2d2ea14e3f4ebca6fc0e586054f" compoundref="_sampler_8cpp" startline="219" endline="228">getActionTable</references>
-        <references refid="namespaceId_1aaa0851cf60aab0c856e3aa5b9ebabf75" compoundref="_generated_8cpp" startline="40" endline="40">Id::sample</references>
+        <references refid="namespaceId_1aaa0851cf60aab0c856e3aa5b9ebabf75" compoundref="_generated_8cpp" startline="39" endline="39">Id::sample</references>
         <references refid="_sampler_8cpp_1a39929f2531d02b49c28241b50c0e49f6" compoundref="_sampler_8cpp" startline="23" endline="23">switchAction</references>
         <references refid="_sampler_8cpp_1a07df8a04b63a2ca84a647e04e805e1f3" compoundref="_sampler_8cpp" startline="22" endline="22">timerAction</references>
         <references refid="structjam_1_1Format_1ab2a4d1f99713c10e63ece15ecf38b4a7">jam::Format::toType</references>

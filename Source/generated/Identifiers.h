@@ -44,6 +44,8 @@ extern const juce::Identifier sample;
 extern const juce::Identifier cswitch;
 extern const juce::Identifier intervalMs;
 extern const juce::Identifier stackDepth;
+extern const juce::Identifier mcp;
+extern const juce::Identifier exitCode;
 
 /**______________________________END OF NAMESPACE______________________________*/
 }// namespace Id

@@ -27,7 +27,8 @@ namespace files
 
 /** @brief File names scout reads: help. */
 
-extern const juce::String scoutHelp;///< Rendered help text.
+extern const juce::String scoutHelp; ///< Rendered help text.
+extern const juce::String scoutTools;///< MCP tool definitions.
 
 /**______________________________END OF NAMESPACE______________________________*/
 }// namespace files

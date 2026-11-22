@@ -114,6 +114,47 @@
 <!-- The entry format is in /log (commands/log.md). It is the only source. -->
 <!-- Sprint entries go here, written by PRIMARY agents -->
 
+## Sprint 7: MCP Server Mode (`scout --mcp`) ✅
+
+**Date:** 2026-11-22
+**Duration:** 01:03 (`jam/carol/SPRINT-LOG.md` Sprint 188 is the primary record.)
+
+### Agents Participated
+- COUNSELOR: Part 8 (`PLAN-model-context-protocol-8-scout.md`) delegation, Design by Contract Filter validation, Close 1 audit resolution, Close 2 doxygen validation, this log.
+- Engineer (inherit): linked `jam_model_context_protocol`, wrote `Source/tools.json`, `ToolServer.h/.cpp`, `Main.cpp`, `HELP.md`, and `test/` + `benchmark/mcp.md`/`mcp.sh`; resolved Auditor findings 3, 5, and 6.
+- Pathfinder (flash): discovery reads, Close 2 doxygen pass on `Source/ToolServer.h`, Close 3 `scout` run (`benchmark/mcp.md`).
+- Auditor (inherit): Close 1 audit — 3 `scout` findings reported, all 3 resolved.
+
+### Files Modified (14 total)
+- `project-info.md:137,186` — added `jam_model_context_protocol` to `## user module` and `tools` (`Source/tools.json`) to `## binary`.
+- `cast/files.md:19` — added `scoutTools` (`tools.json`).
+- `cast/identifiers.md:52,54` — added `mcp`, `exitCode`.
+- `Source/tools.json` (new) — MCP `run` tool schema.
+- `Source/ToolServer.h`, `Source/ToolServer.cpp` (new) — `JUCEApplicationBase` MCP stdio server running each manifest in a child `scout` (or `sudo -n scout` when `## sample` exists) via `jam::StdioClient`, with `jam::Subprocess::byteCap` output capture and `ProjectInfo::projectName`.
+- `Source/Main.cpp:9-10,61-65,95-111,262-263` — added `getMcpFlag`, `isMcp`, `runToolServer`, and `--mcp` dispatch before manifest handling.
+- `Source/HELP.md:15` — added `scout --mcp` row to the Command Line table.
+- `test/fixture/echo.md`, `test/fixture/fail.md`, `test/mcp.lua`, `test/baseline/mcp.txt`, `benchmark/mcp.md`, `benchmark/mcp.sh` (new) — 7-scenario MCP test suite and scout manifest.
+
+### Alignment Check
+- [x] BLESSED principles followed
+- [x] NAMES.md adhered
+- [x] MANIFESTO.md principles applied
+
+### Problems Solved
+- Exposed `scout` manifest execution as an MCP `run` tool over stdio without altering the CLI or `Benchmark` process-group semantics (ruling R12).
+- Resolved Auditor findings: removed dead `exitCodeAttachment` and used `exitCode.store (code)` before `isOpen.setValue (0)` (MANIFESTO **L** / **S**); used `jam::JsonWriter::appendKey (Buffer&, const juce::Identifier&)` (CODING.md); replaced hardcoded `"scout"` literals with `ProjectInfo::projectName` (MANIFESTO **S**).
+- Verified `scout scout/benchmark/mcp.md` exits `0` (`scout: Fine.`) on macOS.
+
+### State for Continuation
+- ARCHITECT runs `scout/benchmark/mcp.md` on Windows (ruling R4).
+- Pre-existing linker warning observed during build: `ld: warning: duplicate symbol 'Id::change'` between `Generated.cpp.o` and `jam_gui.mm.o`.
+
+### Debts Paid
+- None
+
+### Debts Deferred
+- None
+
 ## Sprint 6: Build Against the jam Document Contract ✅
 
 **Date:** 2026-11-14

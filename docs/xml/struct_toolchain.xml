@@ -110,7 +110,7 @@
         <references refid="namespaceId_1a5e729b9864fd096462b3f08ef1eb4b1a">Id::diagnosticSeparator</references>
         <references refid="classjuce_1_1Result_1a27205a4dc7a973aebd1976270867be80">juce::Result::fail</references>
         <references refid="structtext_1_1_diagnostics_1af3213d85de76f5051147adf231066b11" compoundref="_text_8h" startline="32" endline="32">text::Diagnostics::failToolchain</references>
-        <references refid="classjam_1_1Subprocess_1a7670edba3c7b814c4fe3b5a406f69a61">jam::Subprocess::launch</references>
+        <references refid="classjam_1_1Subprocess_1a329264adca4e8cfc846af8aceb3713eb">jam::Subprocess::launch</references>
         <references refid="classjuce_1_1Result_1ac2133128eeba510367bfe1b83383ae0f">juce::Result::ok</references>
         <references refid="classjuce_1_1WaitableEvent_1aa3a20faa489e012718f6e23690d85a8d">juce::WaitableEvent::signal</references>
         <references refid="classjuce_1_1WaitableEvent_1ac38aeb80078cc4f3d3b5f32e230d6988">juce::WaitableEvent::wait</references>
