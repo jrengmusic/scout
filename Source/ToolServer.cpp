@@ -149,7 +149,7 @@ void ToolServer::appendOutput (Run& run)
     {
         if (size > 0)
         {
-            const auto current { run.row[Id::output] };
+            const auto& current { run.row[Id::output] };
             juce::MemoryBlock capture;
 
             if (const auto* existing { current.getBinaryData() }; existing != nullptr)
@@ -199,23 +199,17 @@ void ToolServer::valueTreePropertyChanged (juce::ValueTree& tree, const juce::Id
                 appendOutput (*runs.at (requestId));
 
                 const int code { static_cast<int> (tree[Id::exitCode]) };
-                const auto outputProperty { tree[Id::output] };
+                const auto& outputProperty { tree[Id::output] };
                 const auto* capture { outputProperty.getBinaryData() };
                 const std::string_view outputView { capture != nullptr ? std::string_view { static_cast<const char*> (capture->getData()), capture->getSize() } : std::string_view {} };
 
                 if (code == 0)
                 {
-                    std::string json;
-
-                    jam::JsonWriter::appendObject (json, [code, outputView] (std::string& members)
+                    server.sendResponse (requestId, [code, outputView] (jam::ModelContextServer::Content& content)
                     {
-                        jam::JsonWriter::appendKey (members, Id::exitCode);
-                        jam::Format::appendDecimal (members, code);
-                        jam::JsonWriter::appendKey (members, Id::output);
-                        jam::JsonWriter::appendString (members, outputView);
+                        content.setMember (jam::Strings::getView (Id::exitCode.toString()), code);
+                        content.setText (jam::Strings::getView (Id::output.toString()), [outputView] (const auto& appendText) { appendText (outputView); });
                     });
-
-                    server.sendResponse (requestId, json);
                 }
                 else
                 {
