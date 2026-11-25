@@ -115,23 +115,46 @@ Every field is a complete literal; nothing downstream derives, concatenates, or 
 
 ## user module
 
++--------------+-----------------------+--------------------------------------------------------------------------------------------------+
+| root         | name                  | description                                                                                      |
++==============+=======================+==================================================================================================+
+| @user-module | jam_core              | JAM Core                                                                                         |
+| @user-module | jam_document          | Universal line break and reflow (UAX #14)                                                        |
+| @user-module | jam_markdown          | Clean-room native CommonMark + GFM markdown parsing and rendering                                |
+| @user-module | jam_freetype          | Vendored FreeType font rasterization library                                                     |
+| @user-module | jam_graphics          | Graphics utilities, blur, shadows, colours, fonts, mesh                                          |
+| @user-module | jam_data_structures   | ValueTree management and data model utilities — model, parameters                                |
+| @user-module | jam_animation         | Foundation animation classes (Animator, AnimationBase, AnimationScrollingText)                   |
+| @user-module | jam_web               | HTML authored-subset and CSS Syntax Level 3 subset tokenizers and parsers                        |
+| @user-module | jam_style             | JAM Style — LookAndFeel base + ColourScheme-backed colour registry                               |
+| @user-module | jam_gui               | GUI foundation — Window, Modal, Glass                                                            |
+| @user-module | jam_mermaid_diagram   | Clean-room native mermaid diagram parsing over jam::Document producing the semantic Element tree |
+| @user-module | jam_markdown_graphics | Markdown and mermaid materialisation, layout and view component                                  |
+| @user-module | jam_terminal          | VT read-side engine, TTY, protocol vocabulary, keyboard encoding                                 |
+| @user-module | jam_tui               | Terminal user interface components, painted through the terminal graphics context                |
++--------------+-----------------------+--------------------------------------------------------------------------------------------------+
+
+## program module
+
++-------------------------+----------------------------+
+| name                    | value                      |
++=========================+============================+
+| core                    | juce_core                  |
+| dataStructures          | juce_data_structures       |
+| events                  | juce_events                |
+| jamCore                 | jam_core                   |
+| jamDataStructures       | jam_data_structures        |
+| jamTerminal             | jam_terminal               |
+| jamProfiler             | jam_profiler               |
+| jamSubprocess           | jam_subprocess             |
+| jamModelContextProtocol | jam_model_context_protocol |
++-------------------------+----------------------------+
+
+## program user module
+
 +--------------+----------------------------+-------------------------------------------------------------------------------------------------------+
 | root         | name                       | description                                                                                           |
 +==============+============================+=======================================================================================================+
-| @user-module | jam_core                   | JAM Core                                                                                              |
-| @user-module | jam_document               | Universal line break and reflow (UAX #14)                                                             |
-| @user-module | jam_markdown               | Clean-room native CommonMark + GFM markdown parsing and rendering                                     |
-| @user-module | jam_freetype               | Vendored FreeType font rasterization library                                                          |
-| @user-module | jam_graphics               | Graphics utilities, blur, shadows, colours, fonts, mesh                                               |
-| @user-module | jam_data_structures        | ValueTree management and data model utilities — model, parameters                                     |
-| @user-module | jam_animation              | Foundation animation classes (Animator, AnimationBase, AnimationScrollingText)                        |
-| @user-module | jam_web                    | HTML authored-subset and CSS Syntax Level 3 subset tokenizers and parsers                             |
-| @user-module | jam_style                  | JAM Style — LookAndFeel base + ColourScheme-backed colour registry                                    |
-| @user-module | jam_gui                    | GUI foundation — Window, Modal, Glass                                                                 |
-| @user-module | jam_mermaid_diagram        | Clean-room native mermaid diagram parsing over jam::Document producing the semantic Element tree      |
-| @user-module | jam_markdown_graphics      | Markdown and mermaid materialisation, layout and view component                                       |
-| @user-module | jam_terminal               | VT read-side engine, TTY, protocol vocabulary, keyboard encoding                                      |
-| @user-module | jam_tui                    | Terminal user interface components, painted through the terminal graphics context                     |
 | @user-module | jam_profiler               | Profiler zones — per-thread rings drained to durations per zone                                       |
 | @user-module | jam_subprocess             | JUCE-based subprocess launcher with streaming output and byte-cap truncation                          |
 | @user-module | jam_model_context_protocol | Model Context Protocol server over stdio: newline framing, JSON Schema 2020-12 validation, tool calls |
@@ -156,6 +179,8 @@ Every field is a complete literal; nothing downstream derives, concatenates, or 
 | juceStrictRefCountedPointer        | JUCE_STRICT_REFCOUNTEDPOINTER=1                                      | Strict ReferenceCountedObjectPtr casting                      |
 | juceWebBrowser                     | JUCE_WEB_BROWSER=0                                                   | WebBrowserComponent support                                   |
 | juceUseCurl                        | JUCE_USE_CURL=0                                                      | libcurl for http on Linux                                     |
+| juceUseFoundation                  | JUCE_USE_FOUNDATION=0                                                | POSIX file and system functions on macOS, no Foundation       |
+| juceUseResilientMapping            | JUCE_USE_RESILIENT_MAPPING=1                                         | A read-only map of a file that becomes shorter gives no fault |
 | win32LeanAndMean                   | `$<$<PLATFORM_ID:Windows>:WIN32_LEAN_AND_MEAN=1>`                    | Exclude rarely used Windows headers                           |
 | nominmax                           | `$<$<PLATFORM_ID:Windows>:NOMINMAX=1>`                               | No Windows min/max macros                                     |
 | win32Ie                            | `$<$<PLATFORM_ID:Windows>:_WIN32_IE=0x0A00>`                         | Windows IE platform version                                   |
@@ -177,15 +202,22 @@ Every field is a complete literal; nothing downstream derives, concatenates, or 
 | harfbuzz   | `${CAST_JUCE_PATH}/modules/juce_graphics/fonts/harfbuzz` |                                           |
 +------------+----------------------------------------------------------+-------------------------------------------+
 
+## help
+
++------------+-------------------------------+------------------------------------+
+| name       | value                         | description                        |
++============+===============================+====================================+
+| help       | Source/HELP.md                | Help document source               |
+| styleSheet | ../jam/jam_tui/page/style.css | Stylesheet, embedded as BinaryData |
++------------+-------------------------------+------------------------------------+
+
 ## binary
 
-+------------+-------------------------------+---------------------------------------+
-| name       | value                         | description                           |
-+============+===============================+=======================================+
-| help       | Source/HELP.md                | Help document source                  |
-| styleSheet | ../jam/jam_tui/page/style.css | Stylesheet, embedded as BinaryData    |
-| tools      | Source/tools.json             | MCP tool list, embedded as BinaryData |
-+------------+-------------------------------+---------------------------------------+
++-------+-------------------+---------------------------------------+
+| name  | value             | description                           |
++=======+===================+=======================================+
+| tools | Source/tools.json | MCP tool list, embedded as BinaryData |
++-------+-------------------+---------------------------------------+
 
 ## library
 
@@ -240,50 +272,54 @@ Every field is a complete literal; nothing downstream derives, concatenates, or 
 
 ## release
 
-+-------------------------+--------------------------------+----------------+--------+------------------------------------------+
-| name                    | mac                            | win            | stage  | description                              |
-+=========================+================================+================+========+==========================================+
-| shadow                  | -Wno-shadow                    | /wd4456        |        | Lambda captures / declarations mayshadow |
-|                         |                                |                |        |  intentionally                           |
-+-------------------------+--------------------------------+----------------+--------+------------------------------------------+
-| unusedParameter         | -Wno-unused-parameter          | /wd4100        |        | Debug/template code may not use          |
-|                         |                                |                |        |  allparameters                           |
-+-------------------------+--------------------------------+----------------+--------+------------------------------------------+
-| floatEqual              | -Wno-float-equal               |                |        | DSP exact float comparisons for          |
-|                         |                                |                |        |  bypassdetection                         |
-+-------------------------+--------------------------------+----------------+--------+------------------------------------------+
-| signConversion          | -Wno-sign-conversion           |                |        | Array indexing, safe in this context     |
-+-------------------------+--------------------------------+----------------+--------+------------------------------------------+
-| switchEnum              | -Wno-switch-enum               |                |        | Not every filter type needs every        |
-|                         |                                |                |        |  casehandled                             |
-+-------------------------+--------------------------------+----------------+--------+------------------------------------------+
-| floatToDoubleConversion | -Wno-implicit-float-conversion | /wd4244        |        | DSP double/float conversions             |
-+-------------------------+--------------------------------+----------------+--------+------------------------------------------+
-| macroRedefined          | -Wno-macro-redefined           | /wd4005        |        | Macro redefinition                       |
-+-------------------------+--------------------------------+----------------+--------+------------------------------------------+
-| permissiveMinus         |                                | /permissive-   |        | Standards conformance matching clang —   |
-|                         |                                |                |        | Function::Map identity-cast              |
-|                         |                                |                |        |  deductionneeds it                       |
-+-------------------------+--------------------------------+----------------+--------+------------------------------------------+
-| rvalueCast              |                                | /Zc:rvalueCast |        | Off by default, not implied by /         |
-|                         |                                |                |        | permissive- — needed for correct         |
-|                         |                                |                |        |  Tdeduction                              |
-+-------------------------+--------------------------------+----------------+--------+------------------------------------------+
-| warningLevel4           |                                | /W4            |        | Warning level 4                          |
-+-------------------------+--------------------------------+----------------+--------+------------------------------------------+
-| fullPathInPdb           |                                | /FC            |        | Full path in PDB, required for           |
-|                         |                                |                |        |  debuggersource-line resolution          |
-+-------------------------+--------------------------------+----------------+--------+------------------------------------------+
-| optimization            | -O3                            | /O2            |        | Full optimization                        |
-+-------------------------+--------------------------------+----------------+--------+------------------------------------------+
-| linkTimeOptimization    | -flto=thin                     | /GL            |        | Link-time optimization codegen           |
-+-------------------------+--------------------------------+----------------+--------+------------------------------------------+
-| linkTimeCodegen         |                                | /LTCG          | linker | MSVC whole-program link-time codegen     |
-+-------------------------+--------------------------------+----------------+--------+------------------------------------------+
-| deadCodeStripping       | -dead_strip                    | /OPT:REF       | linker | Strip unreferenced functions and data    |
-+-------------------------+--------------------------------+----------------+--------+------------------------------------------+
-| identicalCodeFolding    |                                | /OPT:ICF       | linker | Fold identical COMDATs                   |
-+-------------------------+--------------------------------+----------------+--------+------------------------------------------+
++-------------------------+--------------------------------+----------------+--------+--------------------------------------------------+
+| name                    | mac                            | win            | stage  | description                                      |
++=========================+================================+================+========+==================================================+
+| shadow                  | -Wno-shadow                    | /wd4456        |        | Lambda captures / declarations mayshadow         |
+|                         |                                |                |        |  intentionally                                   |
++-------------------------+--------------------------------+----------------+--------+--------------------------------------------------+
+| unusedParameter         | -Wno-unused-parameter          | /wd4100        |        | Debug/template code may not use                  |
+|                         |                                |                |        |  allparameters                                   |
++-------------------------+--------------------------------+----------------+--------+--------------------------------------------------+
+| floatEqual              | -Wno-float-equal               |                |        | DSP exact float comparisons for                  |
+|                         |                                |                |        |  bypassdetection                                 |
++-------------------------+--------------------------------+----------------+--------+--------------------------------------------------+
+| signConversion          | -Wno-sign-conversion           |                |        | Array indexing, safe in this context             |
++-------------------------+--------------------------------+----------------+--------+--------------------------------------------------+
+| switchEnum              | -Wno-switch-enum               |                |        | Not every filter type needs every                |
+|                         |                                |                |        |  casehandled                                     |
++-------------------------+--------------------------------+----------------+--------+--------------------------------------------------+
+| floatToDoubleConversion | -Wno-implicit-float-conversion | /wd4244        |        | DSP double/float conversions                     |
++-------------------------+--------------------------------+----------------+--------+--------------------------------------------------+
+| macroRedefined          | -Wno-macro-redefined           | /wd4005        |        | Macro redefinition                               |
++-------------------------+--------------------------------+----------------+--------+--------------------------------------------------+
+| permissiveMinus         |                                | /permissive-   |        | Standards conformance matching clang —           |
+|                         |                                |                |        | Function::Map identity-cast                      |
+|                         |                                |                |        |  deductionneeds it                               |
++-------------------------+--------------------------------+----------------+--------+--------------------------------------------------+
+| rvalueCast              |                                | /Zc:rvalueCast |        | Off by default, not implied by /                 |
+|                         |                                |                |        | permissive- — needed for correct                 |
+|                         |                                |                |        |  Tdeduction                                      |
++-------------------------+--------------------------------+----------------+--------+--------------------------------------------------+
+| warningLevel4           |                                | /W4            |        | Warning level 4                                  |
++-------------------------+--------------------------------+----------------+--------+--------------------------------------------------+
+| fullPathInPdb           |                                | /FC            |        | Full path in PDB, required for                   |
+|                         |                                |                |        |  debuggersource-line resolution                  |
++-------------------------+--------------------------------+----------------+--------+--------------------------------------------------+
+| optimization            | -O3                            | /O2            |        | Full optimization                                |
++-------------------------+--------------------------------+----------------+--------+--------------------------------------------------+
+| linkTimeOptimization    | -flto=thin                     | /GL            |        | Link-time optimization codegen                   |
++-------------------------+--------------------------------+----------------+--------+--------------------------------------------------+
+| linkTimeCodegen         |                                | /LTCG          | linker | MSVC whole-program link-time codegen             |
++-------------------------+--------------------------------+----------------+--------+--------------------------------------------------+
+| deadCodeStripping       | -dead_strip                    | /OPT:REF       | linker | Strip unreferenced functions and data            |
++-------------------------+--------------------------------+----------------+--------+--------------------------------------------------+
+| deadDylibStripping      | -Wl,-dead_strip_dylibs         |                | linker | Drop the libraries that no live code references. |
++-------------------------+--------------------------------+----------------+--------+--------------------------------------------------+
+| exportedSymbols         | -Wl,-exported_symbol,_main     |                | linker | Export the entry point only.                     |
++-------------------------+--------------------------------+----------------+--------+--------------------------------------------------+
+| identicalCodeFolding    |                                | /OPT:ICF       | linker | Fold identical COMDATs                           |
++-------------------------+--------------------------------+----------------+--------+--------------------------------------------------+
 
 ## debug
 
