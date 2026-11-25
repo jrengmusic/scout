@@ -4,6 +4,7 @@
 #include "ProfileReport.h"
 
 #if JUCE_MAC or JUCE_LINUX
+#include <unistd.h>
 static void killProcessGroup (int)
 {
     ::kill (0, SIGKILL);

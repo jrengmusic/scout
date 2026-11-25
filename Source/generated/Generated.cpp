@@ -50,8 +50,9 @@ namespace files
 
 /** @brief File names scout reads: help. */
 
-const juce::String scoutHelp  { juce::String::fromUTF8 ("HELP.md") };
-const juce::String scoutTools { juce::String::fromUTF8 ("tools.json") };
+const juce::String scoutHelp   { juce::String::fromUTF8 ("HELP.frame") };
+const juce::String screenErase { juce::String::fromUTF8 ("erase.frame") };
+const juce::String scoutTools  { juce::String::fromUTF8 ("tools.json") };
 
 /**______________________________END OF NAMESPACE______________________________*/
 }// namespace files

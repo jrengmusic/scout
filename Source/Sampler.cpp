@@ -6,6 +6,7 @@ static constexpr std::string_view countUnit { "count" };
 static constexpr std::string_view threadName { "scout::Sampler" };
 
 #if JUCE_MAC or JUCE_LINUX
+#include <unistd.h>
 static double getIntervalNanoseconds (int intervalMs)
 {
     return juce::RelativeTime::milliseconds (intervalMs).inSeconds() * jam::Profiler::nanosecondsPerSecond;
